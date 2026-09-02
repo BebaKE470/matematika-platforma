@@ -179,9 +179,10 @@
         $('#endLive').disabled=true;
       };
     }catch(e){
-      $('#connect').className='notice bad';
-      $('#connect').innerHTML='<strong>Realtime ešte nie je nastavený.</strong> Doplň dva údaje do config.js. Presný postup je v README.';
-    }
+  console.error('Realtime chyba:', e);
+  $('#connect').className='notice bad';
+  $('#connect').innerHTML='<strong>Realtime chyba.</strong> Otvor konzolu prehliadača cez F12 a pozri presnú chybu.';
+}
   }
   function drawStudents(s){let a=Object.values(s);$('#summary').innerHTML=a.length?`Pripojení: <strong>${a.length}</strong> · dokončili: <strong>${a.filter(x=>x.stage==='done').length}</strong>`:'Zatiaľ bez výsledkov.';$('#students').innerHTML=a.sort((x,y)=>x.nick.localeCompare(y.nick)).map(x=>`<div class="student"><strong>${x.nick}</strong><span>${x.stage==='done'?'Hotovo':x.stage==='joined'?'Pripojený':`${x.question||0}/${x.total||0}`}</span><span>${x.score||0}${x.maxScore?` / ${x.maxScore}`:''} XP${Number.isFinite(x.percent)?` · ${x.percent}%`:''}</span></div>`).join('')}
 
