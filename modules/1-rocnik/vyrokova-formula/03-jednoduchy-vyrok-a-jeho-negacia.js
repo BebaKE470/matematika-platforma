@@ -1,203 +1,166 @@
 MathPlatform.registerModule({
-  "id": "1-u01-h003",
-  "teacher": {
-    "placement": "1. ročník · Výroková formula · 3. hodina: Jednoduchý výrok a jeho negácia",
-    "prerequisites": [
-      "výrok a pravdivostná hodnota z predchádzajúcej hodiny"
+  id: "1-u01-h003",
+  teacher: {
+    placement: "1. ročník · Výroková formula · 3. hodina: Jednoduchý výrok a jeho negácia",
+    prerequisites: [
+      "výrok a pravdivostná hodnota z predchádzajúcej hodiny",
+      "rozlíšenie výroku od otázky, príkazu a otvorenej vety",
+      "symbol ¬A sa zavádza s učiteľom pred spustením platformy"
     ],
-    "planContent": [
-      "Relevantný obsah aktuálneho tematického plánu: Výroky a ich pravdivostná hodnota; jednoduchý výrok a jeho negácia; logické spojky; negácia zložených výrokov a de Morganove zákony; tautológie, kontradikcie a kontingencie; obmena, obrátenie a negácia implikácie; všeobecný a existenčný kvantifikátor; negácia kvantifikovaných výrokov; priamy, nepriamy dôkaz a dôkaz sporom; aplikácie výrokovej logiky; opakovanie a kontrolná písomná práca."
+    planContent: [
+      "Aktuálny tematický plán: Výroková formula, 3. hodina – Jednoduchý výrok a jeho negácia.",
+      "Relevantný obsah: výroky a ich pravdivostná hodnota; jednoduchý výrok a jeho negácia.",
+      "Logické spojky, negácia zložených výrokov, de Morganove zákony a negácia kvantifikovaných výrokov patria do neskorších hodín a tento modul ich nepredbieha."
     ],
-    "planPerformance": [
-      "Určiť, či daná vetná konštrukcia je výrokom (vrátane všeobecného výroku vyjadreného bez použitia všeobecných kvantifikátorov).",
-      "Na konkrétnych príkladoch vysvetliť rozdiel medzi vylučovacím a nevylučovacím chápaním spojky alebo.",
-      "Vysvetliť rozdiel medzi implikáciou a ekvivalenciou.",
-      "Vysvetliť de Morganove pravidlá pre negáciu výrokov A ∧ B a A ∨ B.",
-      "Správne vnímať logické spojky v rôznych prostrediach.",
-      "Tvoriť zložené výroky a zistiť štruktúru a pravdivosť výrokov zložených z malého počtu jednoduchých výrokov pomocou logických spojok.",
-      "Utvoriť negáciu výroku pomocou pravidiel pre negáciu základných zložených výrokov a negáciu jednoduchých kvantifikátorov.",
-      "Vysvetliť, kedy na dôkaz nepravdivosti tvrdenia možno použiť protipríklad.",
-      "V jednoduchých prípadoch vysloviť kontrapríklad všeobecných tvrdení.",
-      "Opísať základné druhy dôkazov (priamy, sporom) a dokumentovať ich príkladmi."
+    planPerformance: [
+      "Určiť, či daná vetná konštrukcia je výrokom.",
+      "Utvoriť negáciu jednoduchého výroku a posúdiť pravdivostnú hodnotu výroku a jeho negácie.",
+      "Presne formulovať popretie jednoduchého tvrdenia a rozlíšiť negáciu od iného, iba protikladne znejúceho tvrdenia."
     ],
-    "goals": [
-      "určiť pravdivostnú hodnotu jednoduchého výroku",
-      "vytvoriť správnu negáciu jednoduchého výroku",
-      "rozlíšiť negáciu od vety s iným významom",
-      "zapísať A a ¬A a vysvetliť vzťah ich pravdivosti"
+    goals: [
+      "zopakovať pojem výrok a pravdivostná hodnota",
+      "vysvetliť vlastnými slovami, čo znamená negovať jednoduchý výrok",
+      "vytvoriť správnu negáciu jednoduchého výroku bez zmeny vecného obsahu",
+      "zapísať negáciu symbolicky ako ¬A",
+      "určiť pravdivostnú hodnotu A a ¬A a vysvetliť, že sú opačné",
+      "rozlíšiť správnu negáciu od iného alebo iba protikladne znejúceho tvrdenia",
+      "z jednoduchej známej negácie spätne sformulovať pôvodný výrok"
     ],
-    "competencies": [
-      "presné matematické vyjadrovanie",
-      "argumentácia a zdôvodňovanie",
-      "kritické posudzovanie tvrdení",
-      "práca so symbolickým a slovným zápisom",
-      "prehľadný pracovný a čistý zápis v zošite"
+    competencies: [
+      "matematická komunikácia a presné používanie pojmov výrok, negácia a pravdivostná hodnota",
+      "logické a kritické myslenie",
+      "formulovanie, posudzovanie a zdôvodňovanie matematických tvrdení",
+      "prechod medzi slovným a symbolickým zápisom A a ¬A",
+      "digitálna kompetencia; samostatnosť, spolupráca a kultivovaná argumentácia"
     ],
-    "enrichment": [
-      "Návrh štandardu uvádza negáciu a pravdivosť negácie; modul navyše rozvíja presný prepis medzi slovným a symbolickým zápisom."
+    enrichment: [
+      "Maturitný presah je iba v spôsobe práce: presná formulácia, posudzovanie tvrdení a zdôvodnenie voľby.",
+      "Testový výber z možností slúži ako formát precvičenia už prebraného učiva; náročnosť zostáva na úrovni tejto hodiny.",
+      "Negácia zložených ani kvantifikovaných výrokov sa nezaraďuje, pretože patrí do neskoršieho učiva."
     ],
-    "flow": [
-      "5 min: opakovanie pojmu výrok",
-      "15–20 min: digitálny modul",
-      "10 min: ručná tvorba negácií v zošite",
-      "5 min: spoločná kontrola formulácií"
+    flow: [
+      "0–3 min: opakovanie pojmov výrok a pravdivostná hodnota.",
+      "3–8 min: problémový vstup s výrokom o Bratislave; porovnanie presnej negácie s vetami, ktoré hovoria niečo iné.",
+      "8–13 min: zavedenie negácie a symbolu ¬A; pravdivostné hodnoty A a ¬A.",
+      "13–22 min: dvojice – úloha 1.2.3; pri každej položke A: P/N → ¬A → P/N.",
+      "22–27 min: typické chyby; bezpečný postup „Nie je pravda, že A“ a jazykové zjednodušenie.",
+      "27–36 min: INTERAKTÍVNA PLATFORMA – presná negácia, P/N dvojica a oprava chyby.",
+      "36–40 min: mimo platformy – jednoduché položky a)–c) z 1.2.10, opačný smer ¬A → A.",
+      "40–43 min: systematizácia A | ¬A | pravdivostná hodnota; zložené výroky až neskôr.",
+      "43–45 min: exit ticket, vyhodnotenie a domáca úloha."
     ],
-    "diagnostics": [
-      "nevytvára príliš silnú alebo príliš slabú negáciu",
-      "chápe, že A a ¬A majú opačnú pravdivostnú hodnotu"
+    diagnostics: [
+      "zo 6 jednoduchých výrokov správne vytvorí aspoň 5 negácií",
+      "pri A a ¬A určí opačné pravdivostné hodnoty",
+      "pri aspoň jednom nesprávnom návrhu vysvetlí, prečo nejde o negáciu",
+      "nevytvára iba iné tvrdenie namiesto presného popretia",
+      "vie použiť opornú formuláciu „Nie je pravda, že...“"
     ],
-    "partialUse": [
-      "Modul je možné použiť celý alebo len vybrané kroky podľa priebehu hodiny.",
-      "Digitálna aktivita nenahrádza ručný zápis, diskusiu pri tabuli ani zdôvodnenie vlastnými slovami."
+    partialUse: [
+      "Platforma je určená primárne na fázu 27–36 min a nenahrádza objavenie pojmu ani prácu s učebnicou.",
+      "Pri nedostatku času použiť blok Nájdi negáciu + P/N dvojica.",
+      "Pri potrebe podpory možno ponechať opornú formuláciu „Nie je pravda, že A“ a znížiť počet položiek.",
+      "Opačný smer ¬A → A, systematizácia a exit ticket zostávajú podľa prípravy mimo platformy."
     ]
   },
-  "student": {
-    "title": "Negácia bez hádania",
-    "subtitle": "Téma 03 · Jednoduchý výrok a jeho negácia",
-    "intro": "Negácia nie je „veta, ktorá znie opačne“. Musí presne poprieť pôvodné tvrdenie.",
-    "estimatedTime": "15–18 min",
-    "activities": [
+  student: {
+    title: "Nájdi negáciu",
+    subtitle: "3. hodina · Jednoduchý výrok a jeho negácia",
+    intro: "Pojem negácie aj zápis ¬A už poznáš z dnešnej hodiny. Teraz si precvičíš: vybrať presnú negáciu, určiť P/N pre A a ¬A a odhaliť nesprávnu „negáciu“.",
+    estimatedTime: "8–10 min",
+    activities: [
       {
-        "id": "visual",
-        "type": "info",
-        "phase": "POCHOP",
-        "title": "Negácia preklápa pravdivosť",
-        "html": "<div class=\"logic-visual\"><svg viewBox=\"0 0 650 180\" role=\"img\" aria-label=\"Negácia mení pravdivostnú hodnotu\"><g font-family=\"system-ui\" text-anchor=\"middle\"><rect x=\"35\" y=\"40\" width=\"220\" height=\"90\" rx=\"18\" fill=\"currentColor\" opacity=\".08\"/><text x=\"145\" y=\"76\" font-size=\"20\" font-weight=\"700\">A</text><text x=\"145\" y=\"105\" font-size=\"17\">P</text><path d=\"M275 85 H375\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"325\" y=\"65\" font-size=\"17\">negácia</text><rect x=\"395\" y=\"40\" width=\"220\" height=\"90\" rx=\"18\" fill=\"currentColor\" opacity=\".08\"/><text x=\"505\" y=\"76\" font-size=\"20\" font-weight=\"700\">¬A</text><text x=\"505\" y=\"105\" font-size=\"17\">N</text></g></svg></div>",
-        "continueLabel": "Ako sa negácia zapisuje?"
+        id:"start", type:"info", phase:"PRIPOMEŇ SI", title:"Bezpečný postup",
+        html:"<p>Ak si nie si istý, začni vetou <strong>„Nie je pravda, že A.“</strong> Potom ju môžeš jazykovo upraviť, ale <strong>nesmieš zmeniť význam</strong>.</p><p class=\"keyidea\">Negácia musí poprieť presne pôvodné tvrdenie.</p>",
+        continueLabel:"Idem na úlohy"
       },
       {
-        "id": "symbol",
-        "type": "explain",
-        "phase": "NOVÝ ZÁPIS",
-        "title": "Značka ¬ znamená negáciu",
-        "html": "<p>Ak pôvodný výrok označíme písmenom <strong>A</strong>, jeho negáciu zapisujeme <strong>¬A</strong> a čítame <strong>negácia výroku A</strong> alebo <strong>nie A</strong>.</p><p>Symbol <strong>¬</strong> od tejto chvíle používame vždy iba v tomto význame.</p>",
-        "remember": "A = pôvodný výrok; ¬A = jeho negácia."
+        id:"neg-13", type:"choice", phase:"1 · NÁJDI NEGÁCIU", skill:"Presná negácia",
+        prompt:"A: Číslo 13 je prvočíslo.", question:"Ktorá veta je presnou negáciou ¬A?",
+        options:["Číslo 13 nie je prvočíslo.","Číslo 13 je zložené číslo.","Číslo 13 je nepárne.","Číslo 13 je väčšie ako 10."],
+        answer:0, correct:"Správne. ¬A: Číslo 13 nie je prvočíslo.", hint:"Popri presne pôvodné tvrdenie."
       },
       {
-        "id": "n1",
-        "type": "choice",
-        "phase": "OBJAVUJ",
-        "skill": "Negácia",
-        "question": "Ktorá veta je negáciou výroku „Číslo 18 je párne.“?",
-        "options": [
-          "Číslo 18 je nepárne.",
-          "Číslo 18 nie je párne.",
-          "Číslo 18 je prvočíslo."
+        id:"pn-13", type:"choice", phase:"2 · P/N DVOJICA", skill:"Pravdivostná hodnota",
+        promptHtml:"<strong>A:</strong> Číslo 13 je prvočíslo.<br><strong>¬A:</strong> Číslo 13 nie je prvočíslo.",
+        question:"Ktorá dvojica pravdivostných hodnôt je správna?",
+        options:["A: P, ¬A: N","A: N, ¬A: P","A: P, ¬A: P","A: N, ¬A: N"],
+        answer:0, correct:"Áno. A je P, preto ¬A je N.", hint:"A a ¬A majú opačné pravdivostné hodnoty."
+      },
+      {
+        id:"neg-year", type:"choice", phase:"1 · NÁJDI NEGÁCIU", skill:"Presná negácia",
+        prompt:"A: Rok má 360 dní.", question:"Ktorá veta je presnou negáciou ¬A?",
+        options:["Rok má 365 dní.","Rok nemá 360 dní.","Rok má viac ako 360 dní.","Rok nemá 365 dní."],
+        answer:1, correct:"Správne. „Rok nemá 360 dní.“ presne popiera A. „Rok má 365 dní.“ je iné tvrdenie.", hint:"Použi: „Nie je pravda, že rok má 360 dní.“"
+      },
+      {
+        id:"pn-year", type:"choice", phase:"2 · P/N DVOJICA", skill:"Pravdivostná hodnota",
+        promptHtml:"<strong>A:</strong> Rok má 360 dní.<br><strong>¬A:</strong> Rok nemá 360 dní.",
+        question:"Ktorá dvojica P/N je správna?",
+        options:["A: P, ¬A: N","A: N, ¬A: P","A: P, ¬A: P","A: N, ¬A: N"],
+        answer:1, correct:"Správne. A je N a ¬A je P.", hint:"Najprv rozhodni o A, potom obráť hodnotu."
+      },
+      {
+        id:"neg-real", type:"choice", phase:"1 · NÁJDI NEGÁCIU", skill:"Presná negácia",
+        prompt:"A: Množina reálnych čísel je nekonečná.", question:"Ktorá veta je presnou negáciou ¬A?",
+        options:["Množina reálnych čísel nie je nekonečná.","Množina reálnych čísel je veľká.","Množina prirodzených čísel je nekonečná.","Reálne čísla obsahujú záporné čísla."],
+        answer:0, correct:"Áno. Táto veta priamo popiera pôvodné tvrdenie.", hint:"Negácia nemení predmet tvrdenia."
+      },
+      {
+        id:"pn-real", type:"choice", phase:"2 · P/N DVOJICA", skill:"Pravdivostná hodnota",
+        promptHtml:"<strong>A:</strong> Množina reálnych čísel je nekonečná.<br><strong>¬A:</strong> Množina reálnych čísel nie je nekonečná.",
+        question:"Ktorá dvojica P/N je správna?",
+        options:["A: P, ¬A: N","A: N, ¬A: P","A: P, ¬A: P","A: N, ¬A: N"],
+        answer:0, correct:"Správne. A je P a ¬A je N.", hint:"A a ¬A nemôžu mať rovnakú hodnotu."
+      },
+      {
+        id:"neg-equation", type:"choice", phase:"1 · NÁJDI NEGÁCIU", skill:"Presná negácia",
+        prompt:"A: Rovnica x − 6 = 8 má v ℝ práve jedno riešenie.", question:"Ktorá veta je bezpečnou presnou negáciou ¬A?",
+        options:["Rovnica x − 6 = 8 nemá riešenie.","Rovnica x − 6 = 8 má dve riešenia.","Nie je pravda, že rovnica x − 6 = 8 má v ℝ práve jedno riešenie.","Rovnica x − 6 = 8 má riešenie x = 14."],
+        answer:2, correct:"Presne. Bezpečný tvar „Nie je pravda, že A“ pokrýva všetky prípady, keď A neplatí.", hint:"Nevyberaj svojvoľne iba jednu možnosť, prečo by A neplatilo."
+      },
+      {
+        id:"pn-equation", type:"choice", phase:"2 · P/N DVOJICA", skill:"Pravdivostná hodnota",
+        promptHtml:"<strong>A:</strong> Rovnica x − 6 = 8 má v ℝ práve jedno riešenie.<br><strong>¬A:</strong> Nie je pravda, že rovnica x − 6 = 8 má v ℝ práve jedno riešenie.",
+        question:"Ktorá dvojica P/N je správna?",
+        options:["A: P, ¬A: N","A: N, ¬A: P","A: P, ¬A: P","A: N, ¬A: N"],
+        answer:0, correct:"Áno. Rovnica má jediné riešenie x = 14, teda A je P a ¬A je N.", hint:"Vyrieš krátko rovnicu."
+      },
+      {
+        id:"error-year", type:"choice", phase:"3 · OPRAV CHYBU", skill:"Analýza chyby",
+        promptHtml:"<strong>A:</strong> Rok má 360 dní.<br><strong>Návrh ¬A:</strong> Rok má 365 dní.",
+        question:"Čo je na návrhu problém?",
+        options:["Nič, je to presná negácia.","Je to iné konkrétne tvrdenie; nepopiera presne vetu „Rok má 360 dní“.","Negácia nesmie obsahovať číslo.","Negovať možno iba pravdivé výroky."],
+        answer:1, correct:"Správne. Presná negácia: „Rok nemá 360 dní.“", hint:"Použi bezpečný tvar „Nie je pravda, že...“"
+      },
+      {
+        id:"error-prime", type:"choice", phase:"3 · OPRAV CHYBU", skill:"Analýza chyby",
+        promptHtml:"<strong>A:</strong> Číslo 13 je prvočíslo.<br><strong>Návrh ¬A:</strong> Číslo 13 je nepárne.",
+        question:"Je návrh presnou negáciou?", options:["Áno","Nie"], answer:1,
+        correct:"Nie. Veta hovorí o párnosti, nie o popretí toho, že 13 je prvočíslo.", hint:"Negácia musí zostať pri tom istom tvrdení."
+      },
+      {
+        id:"error-write", type:"selfWrite", phase:"3 · OPRAV CHYBU", skill:"Matematická komunikácia",
+        title:"Sformuluj opravu",
+        promptHtml:"Sformuluj správnu negáciu k výroku <strong>A: Rok má 360 dní.</strong> Potom jednou vetou vysvetli, prečo „Rok má 365 dní“ nie je presná negácia.",
+        model:"<strong>¬A:</strong> Rok nemá 360 dní. Veta „Rok má 365 dní“ je iné konkrétne tvrdenie; presná negácia musí poprieť práve pôvodný výrok."
+      },
+      {
+        id:"final-check", type:"choice", phase:"RÝCHLA KONTROLA", skill:"Negácia a pravdivosť",
+        prompt:"A: Množina reálnych čísel je nekonečná.",
+        question:"Ktorá možnosť obsahuje správnu negáciu aj pravdivostné hodnoty?",
+        options:[
+          "¬A: Množina reálnych čísel nie je nekonečná; A: P, ¬A: N",
+          "¬A: Množina reálnych čísel je konečná; A: N, ¬A: P",
+          "¬A: Množina prirodzených čísel je konečná; A: P, ¬A: N",
+          "¬A: Množina reálnych čísel nie je nekonečná; A: P, ¬A: P"
         ],
-        "answer": 1,
-        "correct": "Presne. Negácia priamo popiera pôvodné tvrdenie.",
-        "hint": "Hľadaj vetu, ktorá je pravdivá práve vtedy, keď pôvodná veta nie je."
+        answer:0, correct:"Správne. Presná negácia popiera A a má opačnú pravdivostnú hodnotu.", hint:"Kontroluj význam aj P/N."
       },
       {
-        "id": "n2",
-        "type": "choice",
-        "phase": "PREMÝŠĽAJ",
-        "skill": "Negácia",
-        "question": "Negáciou výroku „Peter má viac ako 170 cm“ je:",
-        "options": [
-          "Peter má menej ako 170 cm.",
-          "Peter má najviac 170 cm.",
-          "Peter má presne 170 cm."
-        ],
-        "answer": 1,
-        "correct": "Áno. „Nie viac ako 170“ znamená najviac 170 cm.",
-        "hint": "Nezabudni zahrnúť aj hraničný prípad 170 cm."
-      },
-      {
-        "id": "rule",
-        "type": "explain",
-        "phase": "POCHOP",
-        "title": "Negácia musí pokryť všetky ostatné možnosti",
-        "html": "<p>Ak <strong>A</strong> znamená „x &gt; 5“, potom <strong>¬A</strong> znamená „x ≤ 5“.</p><p>Všimni si hranicu. Veta „x &lt; 5“ by vynechala prípad x = 5, preto nie je presnou negáciou.</p>",
-        "remember": "Pri nerovnostiach kontroluj aj hraničný bod."
-      },
-      {
-        "id": "sort",
-        "type": "sortChoice",
-        "phase": "OVER SI",
-        "skill": "Negácia",
-        "title": "Je druhá veta presnou negáciou prvej?",
-        "items": [
-          {
-            "text": "A: x > 2; druhá veta: x ≤ 2",
-            "answer": true,
-            "why": "Áno, pokrýva všetky prípady, keď x > 2 neplatí."
-          },
-          {
-            "text": "A: n je párne; druhá veta: n je nepárne (pre celé n)",
-            "answer": true,
-            "why": "Pre celé číslo sú tieto možnosti navzájom doplnkové."
-          },
-          {
-            "text": "A: teplota je aspoň 10 °C; druhá veta: teplota je pod 9 °C",
-            "answer": false,
-            "why": "Chýbajú hodnoty od 9 °C vrátane do 10 °C."
-          }
-        ],
-        "labels": [
-          "ÁNO",
-          "NIE"
-        ]
-      },
-      {
-        "id": "nb",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Presný zápis negácie",
-        "html": "<p><span class=\"mini-label\">ČISTÝ ZÁPIS – TEÓRIA</span><br>Zapíš symbol <strong>¬A</strong> a vetu, čo znamená negácia výroku.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Neguj: a) x ≥ 7, b) n je deliteľné 3, c) úsečka AB má dĺžku 5 cm.</p>",
-        "model": "<strong>ČISTÝ ZÁPIS:</strong> Negácia ¬A je výrok, ktorý je pravdivý práve vtedy, keď A je nepravdivý. Príklady: a) x &lt; 7; b) n nie je deliteľné 3; c) úsečka AB nemá dĺžku 5 cm."
-      },
-      {
-        "id": "transfer",
-        "type": "choice",
-        "phase": "PRENOS",
-        "skill": "Testový formát",
-        "question": "Výrok A: „x < 4“. Ktorý zápis vyjadruje ¬A?",
-        "options": [
-          "x > 4",
-          "x ≥ 4",
-          "x ≤ 4",
-          "x = 4"
-        ],
-        "answer": 1,
-        "correct": "Správne: negáciou x < 4 je x ≥ 4.",
-        "hint": "Mysli aj na x = 4."
-      },
-      {
-        "id": "extra-a",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "Negácia",
-        "question": "Negáciou výroku „a ≤ 6“ je:",
-        "options": [
-          "a < 6",
-          "a > 6",
-          "a ≥ 6"
-        ],
-        "answer": 1,
-        "correct": "Správne. Neplatí a ≤ 6 práve vtedy, keď a > 6.",
-        "hint": "Skontroluj hraničnú hodnotu 6."
-      },
-      {
-        "id": "extra-b",
-        "type": "selfWrite",
-        "phase": "VYSVETLI",
-        "skill": "Matematická komunikácia",
-        "title": "Prečo nestačí iba zmeniť znamienko?",
-        "prompt": "Vysvetli na príklade x > 3, prečo veta x < 3 nie je jeho presnou negáciou.",
-        "model": "Veta x < 3 vynecháva možnosť x = 3. Presná negácia výroku x > 3 je x ≤ 3."
-      },
-      {
-        "id": "reflection",
-        "type": "reflection",
-        "phase": "ZÁVER",
-        "title": "Čo už viem",
-        "skills": [
-          "určiť pravdivosť jednoduchého výroku",
-          "vytvoriť presnú negáciu",
-          "správne negovať nerovnosť"
-        ],
-        "prompt": "Pri každej položke vyber, ako dobre jej teraz rozumieš. Toto nie je známka; je to spätná väzba pre tvoje ďalšie učenie."
+        id:"reflection", type:"reflection", phase:"ZÁVER PLATFORMY", title:"Ako sa ti darilo?",
+        skills:["vybrať presnú negáciu jednoduchého výroku","určiť P/N pre A a ¬A","odhaliť vetu, ktorá nie je presnou negáciou"],
+        prompt:"Označ, ako isto sa cítiš. Toto nie je známka."
       }
     ]
   }
