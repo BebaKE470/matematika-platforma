@@ -124,9 +124,45 @@
     app.innerHTML=`<article class="card result-card"><div class="eyebrow">MISIA SPLNENÁ</div><h1>Ako sa ti darilo?</h1><div class="result-score"><strong>${state.score} XP</strong><span>z ${maxScore} XP</span></div><div class="result-progress" role="progressbar" aria-valuenow="${percent}" aria-valuemin="0" aria-valuemax="100"><div style="width:${Math.min(100,percent)}%"></div></div><p class="result-percent">Zvládol/a si približne <strong>${percent} %</strong> bodovanej práce v module.</p><div class="result-message"><strong>${feedback.level}.</strong> ${feedback.text}</div><p class="muted small-note"><strong>XP nie sú známka.</strong> Sú spätnou väzbou o tvojej práci v tomto module.</p>${Object.keys(skills).length?`<h2>Tvoja mapa práce</h2><div class="skill-summary">${Object.entries(skills).map(([k,v])=>`<div class="skill-row"><strong>${k}</strong><span>${v.ok}/${v.n}</span></div>`).join('')}</div>`:''}${reflectionSummary(state.reflection)}<div class="notice"><strong>Teraz mobil odlož.</strong> Skús jednou vetou pomenovať, čo je hlavná myšlienka dnešnej témy. Presný matematický zápis patrí do zošita a k spoločnej práci pri tabuli.</div><button class="btn" data-go="catalog/unit/${m?.year||1}/${unitKey(m?.unit||'Výroková formula')}">Späť k témam</button></article>`;
   }
 
+  let qrLibPromise=null;
+  async function ensureQrLib(){
+    if(window.QRCode)return window.QRCode;
+    if(!qrLibPromise)qrLibPromise=new Promise((resolve,reject)=>{
+      const s=document.createElement('script');
+      s.src='https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
+      s.onload=()=>resolve(window.QRCode);
+      s.onerror=()=>reject(Error('QR knižnicu sa nepodarilo načítať'));
+      document.head.appendChild(s);
+    });
+    return qrLibPromise;
+  }
+  async function drawJoinQr(targetId,url){
+    const QR=await ensureQrLib(), el=document.getElementById(targetId);
+    if(!el)return;
+    el.innerHTML='';
+    new QR(el,{text:url,width:220,height:220,correctLevel:QR.CorrectLevel.M});
+  }
+
   async function setupRealtime(channelName,onMsg){let c=window.APP_CONFIG||{};if(!c.supabaseUrl||!c.supabaseAnonKey)throw Error('Realtime nie je nastavený');let {createClient}=await import('https://esm.sh/@supabase/supabase-js@2');let client=createClient(c.supabaseUrl,c.supabaseAnonKey,{auth:{persistSession:false}});let ch=client.channel('math-'+channelName,{config:{broadcast:{self:false}}});if(onMsg)ch.on('broadcast',{event:'progress'},p=>onMsg(p.payload)).on('broadcast',{event:'teacher'},p=>onMsg({...p.payload,_teacher:true}));await new Promise((res,rej)=>ch.subscribe(s=>s==='SUBSCRIBED'?res():s==='CHANNEL_ERROR'?rej(Error('Spojenie zlyhalo')):0));return ch}
 
-  async function join(id){const selected=id&&meta(id)?.status==='ready'?id:'1-logika-01';app.innerHTML=`<div class="card"><div class="eyebrow">ŽIVÁ HODINA</div><h1>Pripojiť sa k učiteľovi</h1><p class="muted">Modul: ${meta(selected).topic}</p><div class="field"><label>Nick alebo kód žiaka</label><input id="nick" placeholder="napr. 1C-07" maxlength="20"></div><div class="field"><label>Kód hodiny</label><input id="code" placeholder="napr. K7M4Q2" maxlength="8" style="text-transform:uppercase"></div><div id="joinInfo" class="notice">Výsledky sa používajú iba počas prebiehajúcej hodiny. Platforma nevytvára dlhodobý profil žiaka.</div><button class="btn" id="joinBtn">Pripojiť</button></div>`;$('#joinBtn').onclick=async()=>{let nick=$('#nick').value.trim(),code=$('#code').value.trim().toUpperCase();if(!nick||code.length<4)return $('#joinInfo').textContent='Vyplň nick aj kód hodiny.';try{live=await setupRealtime(code,msg=>{if(msg._teacher&&msg.action==='ended'){alert('Učiteľ ukončil živú hodinu. Pokračovať môžeš samostatne.');state.mode='solo';live=null}});await startModule(selected,{mode:'live',nick,session:code});await live.send({type:'broadcast',event:'progress',payload:{nick,moduleId:selected,stage:'joined',score:0,ts:Date.now()}})}catch(e){$('#joinInfo').innerHTML='<strong>Živá hodina nie je technicky nastavená.</strong> Samostatný režim funguje bez nej. Postup je v README.'}}}
+  async function join(id,presetCode=''){
+    const selected=id&&meta(id)?.status==='ready'?id:'1-logika-01';
+    const qrCode=(presetCode||'').trim().toUpperCase();
+    app.innerHTML=`<div class="card"><div class="eyebrow">ŽIVÁ HODINA</div><h1>Pripojiť sa k učiteľovi</h1><p class="muted">Modul: ${meta(selected).topic}</p><div class="field"><label>Nick alebo kód žiaka</label><input id="nick" placeholder="napr. 1C-07" maxlength="20" autocomplete="off"></div>${qrCode?`<div class="notice good"><strong>QR kód hodiny načítaný.</strong> Stačí zadať nick a pripojiť sa.</div><input id="code" type="hidden" value="${qrCode}">`:`<div class="field"><label>Kód hodiny</label><input id="code" placeholder="napr. K7M4Q2" maxlength="8" style="text-transform:uppercase"></div>`}<div id="joinInfo" class="notice">Výsledky sa používajú iba počas prebiehajúcej hodiny. Platforma nevytvára dlhodobý profil žiaka.</div><button class="btn" id="joinBtn">Pripojiť</button></div>`;
+    $('#nick')?.focus();
+    $('#joinBtn').onclick=async()=>{
+      let nick=$('#nick').value.trim(),code=$('#code').value.trim().toUpperCase();
+      if(!nick||code.length<4)return $('#joinInfo').textContent='Vyplň nick aj kód hodiny.';
+      try{
+        live=await setupRealtime(code,msg=>{if(msg._teacher&&msg.action==='ended'){alert('Učiteľ ukončil živú hodinu. Pokračovať môžeš samostatne.');state.mode='solo';live=null}});
+        await startModule(selected,{mode:'live',nick,session:code});
+        await live.send({type:'broadcast',event:'progress',payload:{nick,moduleId:selected,stage:'joined',score:0,ts:Date.now()}});
+      }catch(e){
+        console.error('Realtime chyba pri pripájaní žiaka:',e);
+        $('#joinInfo').innerHTML='<strong>Nepodarilo sa pripojiť k živej hodine.</strong> Skontroluj pripojenie a skús to znova.';
+      }
+    };
+  }
 
   async function sendProgress(done=false){if(state.mode!=='live'||!live)return;const skill={};state.answers.forEach(a=>{if(!a.skill)return;skill[a.skill]??={ok:0,n:0};skill[a.skill].n++;if(a.correct)skill[a.skill].ok++});const maxScore=moduleMaxPoints();const percent=maxScore?Math.round(100*state.score/maxScore):0;try{await live.send({type:'broadcast',event:'progress',payload:{nick:state.nick,moduleId:state.moduleId,stage:done?'done':'working',score:state.score,maxScore,percent,question:Math.min(state.index+1,currentModule?.student.activities.length||0),total:currentModule?.student.activities.length||0,skill,self:state.reflection,ts:Date.now()}})}catch(_){} }
 
@@ -158,36 +194,27 @@
     if(!teacherUnlocked()){ go('teacher'); return; }
     id=id&&meta(id)?.status==='ready'?id:'1-logika-01';
     const m=meta(id), c=code();
-    app.innerHTML=`<div class="card"><div class="eyebrow"><span class="live-dot"></span> ŽIVÁ HODINA</div><h1>${m.topic}</h1><p>Kód pre žiakov:</p><div class="bigcode">${c}</div><p class="muted">Žiaci otvoria platformu → „Mám kód hodiny“ → zadajú nick a tento kód.</p><div id="connect" class="notice">Pripájam živý kanál…</div><div class="row"><button class="btn" id="endLive" disabled>Ukončiť hodinu</button><button class="ghost" onclick="location.hash='method/${id}'">Metodická karta</button><button class="ghost" data-go="teacher-unit/${m.year}/${unitKey(m.unit)}">Späť k témam</button></div></div><div class="card" style="margin-top:16px"><h2>Živá diagnostika</h2><div id="summary" class="muted">Zatiaľ bez výsledkov.</div><div id="students" class="live-list"></div></div>`;
+    const joinUrl=`${location.origin}${location.pathname}#join/${encodeURIComponent(id)}/${encodeURIComponent(c)}`;
+    app.innerHTML=`<div class="card"><div class="eyebrow"><span class="live-dot"></span> ŽIVÁ HODINA</div><h1>${m.topic}</h1><div style="display:flex;gap:28px;align-items:center;flex-wrap:wrap;margin:18px 0"><div><p><strong>Naskenuj QR kód:</strong></p><div id="joinQr" style="background:#fff;padding:12px;border-radius:12px;display:inline-block;min-width:220px;min-height:220px"></div></div><div><p class="muted">Po naskenovaní sa otvorí správny modul aj táto hodina. Žiak zadá už iba nick.</p><p>Kód pre ručné pripojenie:</p><div class="bigcode">${c}</div><p class="muted">Záloha: žiak môže otvoriť platformu → „Mám kód hodiny“ → zadať nick a tento kód.</p></div></div><div id="connect" class="notice">Pripájam živý kanál…</div><div class="row"><button class="btn" id="endLive" disabled>Ukončiť hodinu</button><button class="ghost" onclick="location.hash='method/${id}'">Metodická karta</button><button class="ghost" data-go="teacher-unit/${m.year}/${unitKey(m.unit)}">Späť k témam</button></div></div><div class="card" style="margin-top:16px"><h2>Živá diagnostika</h2><div id="summary" class="muted">Zatiaľ bez výsledkov.</div><div id="students" class="live-list"></div></div>`;
+    drawJoinQr('joinQr',joinUrl).catch(e=>{console.error('QR chyba:',e);const el=$('#joinQr');if(el)el.innerHTML='<span class="muted">QR kód sa nepodarilo načítať. Použi textový kód vedľa.</span>';});
     let students={};
     try{
-      const ch=await setupRealtime(c,msg=>{
-        if(msg._teacher)return;
-        students[msg.nick]=msg;
-        drawStudents(students);
-      });
+      const ch=await setupRealtime(c,msg=>{if(msg._teacher)return;students[msg.nick]=msg;drawStudents(students);});
       live=ch;
       $('#connect').className='notice good';
       $('#connect').innerHTML='<strong>Kanál je aktívny.</strong> Výsledky sa neukladajú do databázy.';
       $('#endLive').disabled=false;
-      $('#endLive').onclick=async()=>{
-        await ch.send({type:'broadcast',event:'teacher',payload:{action:'ended'}});
-        await ch.unsubscribe();
-        live=null;
-        $('#connect').className='notice';
-        $('#connect').textContent='Hodina ukončená. Živé údaje sa po odchode zo stránky zahodia.';
-        $('#endLive').disabled=true;
-      };
+      $('#endLive').onclick=async()=>{await ch.send({type:'broadcast',event:'teacher',payload:{action:'ended'}});await ch.unsubscribe();live=null;$('#connect').className='notice';$('#connect').textContent='Hodina ukončená. Živé údaje sa po odchode zo stránky zahodia.';$('#endLive').disabled=true;};
     }catch(e){
-  console.error('Realtime chyba:', e);
-  $('#connect').className='notice bad';
-  $('#connect').innerHTML='<strong>Realtime chyba.</strong> Otvor konzolu prehliadača cez F12 a pozri presnú chybu.';
-}
+      console.error('Realtime chyba:',e);
+      $('#connect').className='notice bad';
+      $('#connect').innerHTML='<strong>Nepodarilo sa pripojiť živý kanál.</strong> Obnov stránku a skús to znova.';
+    }
   }
   function drawStudents(s){let a=Object.values(s);$('#summary').innerHTML=a.length?`Pripojení: <strong>${a.length}</strong> · dokončili: <strong>${a.filter(x=>x.stage==='done').length}</strong>`:'Zatiaľ bez výsledkov.';$('#students').innerHTML=a.sort((x,y)=>x.nick.localeCompare(y.nick)).map(x=>`<div class="student"><strong>${x.nick}</strong><span>${x.stage==='done'?'Hotovo':x.stage==='joined'?'Pripojený':`${x.question||0}/${x.total||0}`}</span><span>${x.score||0}${x.maxScore?` / ${x.maxScore}`:''} XP${Number.isFinite(x.percent)?` · ${x.percent}%`:''}</span></div>`).join('')}
 
   function showError(e){app.innerHTML=`<div class="card"><h2>Nepodarilo sa načítať modul</h2><p>${e.message}</p><p class="muted">Ak stránku otváraš dvojklikom, skontroluj, že si rozbalila celý priečinok a nie iba samotný index.html.</p><button class="btn" data-go="catalog">Späť</button></div>`}
 
-  async function render(){const h=location.hash.slice(1)||'home',p=h.split('/');if(p[0]==='home')home();else if(p[0]==='catalog'&&!p[1])catalog();else if(p[0]==='catalog'&&p[1]==='year')catalogYear(p[2]);else if(p[0]==='catalog'&&p[1]==='unit')catalogUnit(p[2],p.slice(3).join('/'));else if(p[0]==='method')await method(p[1]);else if(p[0]==='module')await moduleStart(p[1]);else if(p[0]==='play')play();else if(p[0]==='join')await join(p[1]);else if(p[0]==='teacher')teacher();else if(p[0]==='teacher-year')teacherYear(p[1]);else if(p[0]==='teacher-unit')teacherUnit(p[1],p.slice(2).join('/'));else if(p[0]==='teacher-live')await teacherLive(p[1]);else home()}
+  async function render(){const h=location.hash.slice(1)||'home',p=h.split('/');if(p[0]==='home')home();else if(p[0]==='catalog'&&!p[1])catalog();else if(p[0]==='catalog'&&p[1]==='year')catalogYear(p[2]);else if(p[0]==='catalog'&&p[1]==='unit')catalogUnit(p[2],p.slice(3).join('/'));else if(p[0]==='method')await method(p[1]);else if(p[0]==='module')await moduleStart(p[1]);else if(p[0]==='play')play();else if(p[0]==='join')await join(p[1],p[2]);else if(p[0]==='teacher')teacher();else if(p[0]==='teacher-year')teacherYear(p[1]);else if(p[0]==='teacher-unit')teacherUnit(p[1],p.slice(2).join('/'));else if(p[0]==='teacher-live')await teacherLive(p[1]);else home()}
   render();
 })();
