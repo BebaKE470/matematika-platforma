@@ -1,7 +1,7 @@
 MathPlatform.registerModule({
   id: "1-u01-h004",
   teacher: {
-    placement: "1. ročník · Výroková formula · 4. hodina: Zložené výroky, logické spojky, tabuľky",
+    placement: "1. ročník · Výroková formula · 4.–5. hodina: Zložené výroky, logické spojky, tabuľky",
     prerequisites: [
       "jednoduchý výrok, pravdivostná hodnota a negácia",
       "symbol ¬A bol zavedený na 3. hodine",
@@ -68,14 +68,17 @@ MathPlatform.registerModule({
       "Žiacka platforma pokrýva iba aplikačnú fázu 37–41 min. Nenahrádza výklad, spoločné vytvorenie pravdivostnej tabuľky ani učebnicové úlohy.",
       "Pred spustením platformy musia byť symboly ∧, ∨, ⇒, ⇔ už zavedené, prečítané a použité v spoločných príkladoch.",
       "Pri potrebe podpory možno nechať žiakovi k dispozícii ručne vytvorenú pravdivostnú tabuľku; cieľom digitálnej časti je správne ju použiť.",
-      "Rýchle otázky 1.2.13–1.2.14 a exit ticket zostávajú mimo platformy podľa prípravy."
+      "Rýchle otázky 1.2.13–1.2.14 a exit ticket 4. hodiny zostávajú mimo platformy podľa prípravy.",
+      "5. hodina je fixačno-aplikačná: 0–5 min možno prvú, jednoduchšiu časť modulu použiť ako rýchle opakovanie; hlavná digitálna fáza 36–41 min používa druhú časť s negáciou a medzikrokmi.",
+      "Ak učiteľ nechce platformu spúšťať dvakrát, úvodný kvíz 5. hodiny môže urobiť ústne a digitálne použiť iba upevňovaciu časť podľa organizácie hodiny.",
+      "Analýza chyby 41–43 min a exit ticket 43–45 min 5. hodiny zostávajú podľa prípravy mimo platformy."
     ]
   },
   student: {
-    title: "Aká spojka? Aká hodnota?",
-    subtitle: "4. hodina · Zložené výroky, logické spojky, tabuľky",
-    intro: "Spojky ∧, ∨, ⇒, ⇔ aj ich pravdivostné tabuľky už poznáš z dnešnej hodiny. Teraz si ich krátko precvičíš.",
-    estimatedTime: "4–6 min",
+    title: "Zložené výroky · 4.–5. hodina",
+    subtitle: "Logické spojky, pravdivostné hodnoty a postup pri výrazoch s negáciou",
+    intro: "Modul patrí k dvojhodinovému bloku. Prvá časť upevňuje základné spojky zo 4. hodiny; druhá časť nadväzuje na 5. hodine a precvičuje postup pri výrazoch s negáciou.",
+    estimatedTime: "4–6 min (4. hodina) + 6–8 min (5. hodina)",
     activities: [
       {
         id: "spojka-and",
@@ -211,16 +214,158 @@ MathPlatform.registerModule({
         ]
       },
       {
+        id: "prechod-5",
+        type: "info",
+        phase: "5. HODINA · UPEVNENIE",
+        title: "Teraz pracujeme po krokoch",
+        html: "<p>Na 5. hodine už spojky poznáš. Pri výraze s negáciou postupuj systematicky:</p><ol><li>urči hodnoty A a B,</li><li>vyhodnoť negáciu,</li><li>nájdi hlavnú spojku,</li><li>až potom urči P/N celého výroku.</li></ol><p class=\"keyidea\">Najprv medzikrok, potom výsledok.</p>",
+        continueLabel: "Pokračujem"
+      },
+      {
+        id: "5-prvy-krok-1",
+        type: "choice",
+        phase: "5. HODINA · ČO UROBÍM PRVÉ?",
+        skill: "Poradie krokov",
+        question: "A = P, B = N. Máš určiť hodnotu ¬A ∨ B. Čo musíš vyhodnotiť ako prvé?",
+        options: ["¬A", "A ∨ B", "¬B", "celý výraz ¬A ∨ B bez medzikroku"],
+        answer: 0,
+        correct: "Správne. Najprv ¬A. Keď A = P, potom ¬A = N.",
+        hint: "Negácia sa musí vyhodnotiť skôr než hlavná spojka ∨."
+      },
+      {
+        id: "5-vysledok-1",
+        type: "choice",
+        phase: "5. HODINA · MEDZIKROK → VÝSLEDOK",
+        skill: "Negácia a disjunkcia",
+        question: "A = P, B = N. Najprv ¬A = N. Akú hodnotu má potom ¬A ∨ B, teda N ∨ N?",
+        options: ["P", "N"],
+        answer: 1,
+        correct: "Správne. N ∨ N = N.",
+        hint: "Disjunkcia je pravdivá, ak je pravdivý aspoň jeden z výrokov."
+      },
+      {
+        id: "5-prvy-krok-2",
+        type: "choice",
+        phase: "5. HODINA · ČO UROBÍM PRVÉ?",
+        skill: "Poradie krokov",
+        question: "A = N, B = P. Máš určiť hodnotu ¬B ⇒ A. Čo musíš vyhodnotiť ako prvé?",
+        options: ["¬B", "B ⇒ A", "¬A", "A ⇒ B"],
+        answer: 0,
+        correct: "Správne. Najprv ¬B. Keď B = P, potom ¬B = N.",
+        hint: "Najprv spracuj negáciu."
+      },
+      {
+        id: "5-vysledok-2",
+        type: "choice",
+        phase: "5. HODINA · MEDZIKROK → VÝSLEDOK",
+        skill: "Negácia a implikácia",
+        question: "A = N, B = P. Vieš, že ¬B = N. Akú hodnotu má ¬B ⇒ A, teda N ⇒ N?",
+        options: ["P", "N"],
+        answer: 0,
+        correct: "Správne. Implikácia je nepravdivá iba v prípade P ⇒ N; N ⇒ N je pravdivá.",
+        hint: "Skontroluj jediný nepravdivý prípad implikácie."
+      },
+      {
+        id: "5-prvy-krok-3",
+        type: "choice",
+        phase: "5. HODINA · ČO UROBÍM PRVÉ?",
+        skill: "Poradie krokov",
+        question: "A = N, B = N. Máš určiť hodnotu ¬A ∧ ¬B. Ktorý postup je správny?",
+        options: [
+          "Najprv určím ¬A a ¬B, potom vyhodnotím konjunkciu.",
+          "Najprv vyhodnotím A ∧ B a výsledok znegujem.",
+          "Stačí znegovať iba A.",
+          "Stačí znegovať iba B."
+        ],
+        answer: 0,
+        correct: "Správne. Najprv ¬A = P a ¬B = P, potom P ∧ P = P.",
+        hint: "V zadaní sú dve samostatné negácie."
+      },
+      {
+        id: "5-vysledok-3",
+        type: "choice",
+        phase: "5. HODINA · MEDZIKROK → VÝSLEDOK",
+        skill: "Negácie a konjunkcia",
+        question: "A = N, B = N. Platí ¬A = P a ¬B = P. Akú hodnotu má ¬A ∧ ¬B?",
+        options: ["P", "N"],
+        answer: 0,
+        correct: "Správne. P ∧ P = P.",
+        hint: "Konjunkcia je pravdivá iba vtedy, keď sú pravdivé obe časti."
+      },
+      {
+        id: "5-vysledok-4",
+        type: "choice",
+        phase: "5. HODINA · MEDZIKROK → VÝSLEDOK",
+        skill: "Negácia a ekvivalencia",
+        question: "A = P, B = N. Najprv ¬B = P. Akú hodnotu má A ⇔ ¬B, teda P ⇔ P?",
+        options: ["P", "N"],
+        answer: 0,
+        correct: "Správne. Ekvivalencia je pravdivá, keď majú obe časti rovnakú pravdivostnú hodnotu.",
+        hint: "Porovnaj P a P."
+      },
+      {
+        id: "5-vysledok-5",
+        type: "choice",
+        phase: "5. HODINA · MEDZIKROK → VÝSLEDOK",
+        skill: "Negácia a implikácia",
+        question: "A = N, B = P. Najprv ¬A = P. Akú hodnotu má ¬A ⇒ B, teda P ⇒ P?",
+        options: ["P", "N"],
+        answer: 0,
+        correct: "Správne. P ⇒ P je pravdivá implikácia.",
+        hint: "Implikácia je nepravdivá iba pri P ⇒ N."
+      },
+      {
+        id: "5-riadok",
+        type: "matrix",
+        phase: "5. HODINA · DOPLŇ HODNOTY",
+        skill: "Systematický postup",
+        title: "A = P, B = N. Doplň medzikroky a výsledky.",
+        labels: ["P", "N"],
+        items: [
+          { text: "¬A", answer: "N" },
+          { text: "¬B", answer: "P" },
+          { text: "¬A ∨ B", answer: "N" },
+          { text: "¬B ⇒ A", answer: "P" },
+          { text: "A ⇔ ¬B", answer: "P" }
+        ]
+      },
+      {
+        id: "5-chyba",
+        type: "choice",
+        phase: "5. HODINA · NÁJDI CHYBU",
+        skill: "Analýza chyby",
+        question: "Žiak riešil: A = P, B = N; ¬A ∨ B = P. Ktorý krok je prvý chybný?",
+        options: [
+          "Určil ¬A ako P; správne má byť ¬A = N.",
+          "Určil B ako N.",
+          "Použil spojku ∨.",
+          "Žiadny krok nie je chybný."
+        ],
+        answer: 0,
+        correct: "Správne. A = P, preto ¬A = N. Potom N ∨ N = N.",
+        hint: "Skontroluj najprv negáciu A, nie konečný výsledok."
+      },
+      {
+        id: "5-zdovodni",
+        type: "selfWrite",
+        phase: "5. HODINA · VYSVETLI POSTUP",
+        skill: "Matematická komunikácia",
+        title: "Prečo je výsledok taký?",
+        promptHtml: "A = N, B = P. Vysvetli stručne postup pri výraze <strong>¬A ⇒ B</strong>: čo vyhodnotíš ako prvé a prečo je celý výrok pravdivý?",
+        model: "Najprv určím ¬A. Keď A = N, potom ¬A = P. Dostanem P ⇒ P. Implikácia je nepravdivá iba pri P ⇒ N, preto je P ⇒ P pravdivá."
+      },
+      {
         id: "reflection",
         type: "reflection",
-        phase: "ZÁVER PLATFORMY",
-        title: "Ako sa orientujem v spojkách?",
+        phase: "ZÁVER DVOJHODINOVÉHO BLOKU",
+        title: "Ako sa orientujem v zložených výrokoch?",
         skills: [
           "pomenovať a slovne prečítať ∧, ∨, ⇒, ⇔",
           "určiť P/N z hodnôt A a B",
-          "doplniť jeden riadok pravdivostnej tabuľky"
+          "pri výraze s negáciou urobiť najprv správny medzikrok",
+          "nájsť prvý chybný krok v riešení"
         ],
-        prompt: "Označ, ako isto sa cítiš. Toto nie je známka; je to krátka spätná väzba."
+        prompt: "Označ, ako isto sa cítiš. Toto nie je známka; je to spätná väzba."
       }
     ]
   }
