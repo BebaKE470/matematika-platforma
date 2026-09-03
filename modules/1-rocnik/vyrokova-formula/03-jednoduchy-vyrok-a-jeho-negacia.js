@@ -82,8 +82,7 @@ MathPlatform.registerModule({
       },
       {
         id:"pn-13", type:"choice", phase:"2 · P/N DVOJICA", skill:"Pravdivostná hodnota",
-        promptHtml:"<strong>A:</strong> Číslo 13 je prvočíslo.<br><strong>¬A:</strong> Číslo 13 nie je prvočíslo.",
-        question:"Ktorá dvojica pravdivostných hodnôt je správna?",
+        question:"A: Číslo 13 je prvočíslo.  ¬A: Číslo 13 nie je prvočíslo.  Ktorá dvojica pravdivostných hodnôt je správna?",
         options:["A: P, ¬A: N","A: N, ¬A: P","A: P, ¬A: P","A: N, ¬A: N"],
         answer:0, correct:"Áno. A je P, preto ¬A je N.", hint:"A a ¬A majú opačné pravdivostné hodnoty."
       },
@@ -95,8 +94,7 @@ MathPlatform.registerModule({
       },
       {
         id:"pn-year", type:"choice", phase:"2 · P/N DVOJICA", skill:"Pravdivostná hodnota",
-        promptHtml:"<strong>A:</strong> Rok má 360 dní.<br><strong>¬A:</strong> Rok nemá 360 dní.",
-        question:"Ktorá dvojica P/N je správna?",
+        question:"A: Rok má 360 dní.  ¬A: Rok nemá 360 dní.  Ktorá dvojica P/N je správna?",
         options:["A: P, ¬A: N","A: N, ¬A: P","A: P, ¬A: P","A: N, ¬A: N"],
         answer:1, correct:"Správne. A je N a ¬A je P.", hint:"Najprv rozhodni o A, potom obráť hodnotu."
       },
@@ -108,8 +106,7 @@ MathPlatform.registerModule({
       },
       {
         id:"pn-real", type:"choice", phase:"2 · P/N DVOJICA", skill:"Pravdivostná hodnota",
-        promptHtml:"<strong>A:</strong> Množina reálnych čísel je nekonečná.<br><strong>¬A:</strong> Množina reálnych čísel nie je nekonečná.",
-        question:"Ktorá dvojica P/N je správna?",
+        question:"A: Množina reálnych čísel je nekonečná.  ¬A: Množina reálnych čísel nie je nekonečná.  Ktorá dvojica P/N je správna?",
         options:["A: P, ¬A: N","A: N, ¬A: P","A: P, ¬A: P","A: N, ¬A: N"],
         answer:0, correct:"Správne. A je P a ¬A je N.", hint:"A a ¬A nemôžu mať rovnakú hodnotu."
       },
@@ -121,22 +118,19 @@ MathPlatform.registerModule({
       },
       {
         id:"pn-equation", type:"choice", phase:"2 · P/N DVOJICA", skill:"Pravdivostná hodnota",
-        promptHtml:"<strong>A:</strong> Rovnica x − 6 = 8 má v ℝ práve jedno riešenie.<br><strong>¬A:</strong> Nie je pravda, že rovnica x − 6 = 8 má v ℝ práve jedno riešenie.",
-        question:"Ktorá dvojica P/N je správna?",
+        question:"A: Rovnica x − 6 = 8 má v ℝ práve jedno riešenie.  ¬A: Nie je pravda, že rovnica x − 6 = 8 má v ℝ práve jedno riešenie.  Ktorá dvojica P/N je správna?",
         options:["A: P, ¬A: N","A: N, ¬A: P","A: P, ¬A: P","A: N, ¬A: N"],
         answer:0, correct:"Áno. Rovnica má jediné riešenie x = 14, teda A je P a ¬A je N.", hint:"Vyrieš krátko rovnicu."
       },
       {
         id:"error-year", type:"choice", phase:"3 · OPRAV CHYBU", skill:"Analýza chyby",
-        promptHtml:"<strong>A:</strong> Rok má 360 dní.<br><strong>Návrh ¬A:</strong> Rok má 365 dní.",
-        question:"Čo je na návrhu problém?",
+        question:"A: Rok má 360 dní.  Návrh ¬A: Rok má 365 dní.  Čo je na návrhu problém?",
         options:["Nič, je to presná negácia.","Je to iné konkrétne tvrdenie; nepopiera presne vetu „Rok má 360 dní“.","Negácia nesmie obsahovať číslo.","Negovať možno iba pravdivé výroky."],
         answer:1, correct:"Správne. Presná negácia: „Rok nemá 360 dní.“", hint:"Použi bezpečný tvar „Nie je pravda, že...“"
       },
       {
         id:"error-prime", type:"choice", phase:"3 · OPRAV CHYBU", skill:"Analýza chyby",
-        promptHtml:"<strong>A:</strong> Číslo 13 je prvočíslo.<br><strong>Návrh ¬A:</strong> Číslo 13 je nepárne.",
-        question:"Je návrh presnou negáciou?", options:["Áno","Nie"], answer:1,
+        question:"A: Číslo 13 je prvočíslo.  Návrh ¬A: Číslo 13 je nepárne.  Je návrh presnou negáciou?", options:["Áno","Nie"], answer:1,
         correct:"Nie. Veta hovorí o párnosti, nie o popretí toho, že 13 je prvočíslo.", hint:"Negácia musí zostať pri tom istom tvrdení."
       },
       {
@@ -147,8 +141,7 @@ MathPlatform.registerModule({
       },
       {
         id:"final-check", type:"choice", phase:"RÝCHLA KONTROLA", skill:"Negácia a pravdivosť",
-        prompt:"A: Množina reálnych čísel je nekonečná.",
-        question:"Ktorá možnosť obsahuje správnu negáciu aj pravdivostné hodnoty?",
+        question:"A: Množina reálnych čísel je nekonečná. Ktorá možnosť obsahuje správnu negáciu aj pravdivostné hodnoty?",
         options:[
           "¬A: Množina reálnych čísel nie je nekonečná; A: P, ¬A: N",
           "¬A: Množina reálnych čísel je konečná; A: N, ¬A: P",
