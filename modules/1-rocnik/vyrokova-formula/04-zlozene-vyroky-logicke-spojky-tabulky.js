@@ -1,14 +1,18 @@
 MathPlatform.registerModule({
-  "id": "1-u01-h004",
-  "teacher": {
-    "placement": "1. ročník · Výroková formula · 4.–5. hodina: Zložené výroky, logické spojky, tabuľky",
-    "prerequisites": [
-      "jednoduchý výrok, pravdivostná hodnota a negácia"
+  id: "1-u01-h004",
+  teacher: {
+    placement: "1. ročník · Výroková formula · 4. hodina: Zložené výroky, logické spojky, tabuľky",
+    prerequisites: [
+      "jednoduchý výrok, pravdivostná hodnota a negácia",
+      "symbol ¬A bol zavedený na 3. hodine",
+      "symboly ∧, ∨, ⇒, ⇔, ich názvy, slovné čítanie a základné pravdivostné tabuľky učiteľ zavedie pred použitím platformy"
     ],
-    "planContent": [
-      "Relevantný obsah aktuálneho tematického plánu: Výroky a ich pravdivostná hodnota; jednoduchý výrok a jeho negácia; logické spojky; negácia zložených výrokov a de Morganove zákony; tautológie, kontradikcie a kontingencie; obmena, obrátenie a negácia implikácie; všeobecný a existenčný kvantifikátor; negácia kvantifikovaných výrokov; priamy, nepriamy dôkaz a dôkaz sporom; aplikácie výrokovej logiky; opakovanie a kontrolná písomná práca."
+    planContent: [
+      "Relevantný obsah aktuálneho tematického plánu: Výroky a ich pravdivostná hodnota; jednoduchý výrok a jeho negácia; logické spojky; negácia zložených výrokov a de Morganove zákony; tautológie, kontradikcie a kontingencie; obmena, obrátenie a negácia implikácie; všeobecný a existenčný kvantifikátor; negácia kvantifikovaných výrokov; priamy, nepriamy dôkaz a dôkaz sporom; aplikácie výrokovej logiky; opakovanie a kontrolná písomná práca.",
+      "Táto 4. hodina je prvou hodinou dvojhodinového bloku 4.–5. hodina „Zložené výroky, logické spojky, tabuľky“.",
+      "Modul nepredbieha negáciu zložených výrokov, de Morganove zákony, tautológie, kontradikcie, kvantifikátory ani dôkazy; tie patria do neskoršieho priebehu tematického celku."
     ],
-    "planPerformance": [
+    planPerformance: [
       "Určiť, či daná vetná konštrukcia je výrokom (vrátane všeobecného výroku vyjadreného bez použitia všeobecných kvantifikátorov).",
       "Na konkrétnych príkladoch vysvetliť rozdiel medzi vylučovacím a nevylučovacím chápaním spojky alebo.",
       "Vysvetliť rozdiel medzi implikáciou a ekvivalenciou.",
@@ -20,222 +24,203 @@ MathPlatform.registerModule({
       "V jednoduchých prípadoch vysloviť kontrapríklad všeobecných tvrdení.",
       "Opísať základné druhy dôkazov (priamy, sporom) a dokumentovať ich príkladmi."
     ],
-    "goals": [
+    goals: [
+      "zopakovať jednoduchý výrok, negáciu a pravdivostnú hodnotu",
+      "vysvetliť, čo je zložený výrok a z ktorých jednoduchých výrokov vzniká",
       "rozpoznať konjunkciu, disjunkciu, implikáciu a ekvivalenciu",
-      "rozlíšiť vylučovacie a nevylučovacie „alebo“ v konkrétnom kontexte",
-      "určiť pravdivosť zloženého výroku s najviac dvoma spojkami",
-      "zostaviť a čítať jednoduchú pravdivostnú tabuľku"
+      "priradiť spojkám symboly ∧, ∨, ⇒, ⇔ a správne ich slovne prečítať",
+      "určiť pravdivostnú hodnotu jednoduchej konjunkcie, disjunkcie, implikácie a ekvivalencie z hodnôt A a B",
+      "systematicky doplniť základnú pravdivostnú tabuľku",
+      "pri aspoň jednom príklade slovne zdôvodniť výsledok"
     ],
-    "competencies": [
-      "presné matematické vyjadrovanie",
-      "argumentácia a zdôvodňovanie",
-      "kritické posudzovanie tvrdení",
-      "práca so symbolickým a slovným zápisom",
-      "prehľadný pracovný a čistý zápis v zošite"
+    competencies: [
+      "matematická komunikácia a presné používanie symbolického jazyka",
+      "logické a kritické myslenie",
+      "systematické posudzovanie pravdivosti zložených tvrdení",
+      "prechod medzi slovným a symbolickým zápisom",
+      "digitálna kompetencia",
+      "samostatnosť, spolupráca a vecná argumentácia"
     ],
-    "enrichment": [
-      "Návrh štandardu uvádza spojky, pravdivosť zložených výrokov, symbolický zápis a pravdivostné tabuľky; modul ich využíva ako prirodzené obohatenie aktuálnej témy."
+    enrichment: [
+      "Maturitný presah je iba v spôsobe práce: presný symbolický zápis, čítanie tvrdení, práca s pravdivostnou tabuľkou a stručné zdôvodnenie.",
+      "Výber z možností pripomína testový formát, ale obsah aj náročnosť zostávajú na úrovni aktuálne prebraného učiva.",
+      "Dôraz je na porozumení významu spojok a zdôvodnení výsledku, nie na mechanickom memorovaní tabuľky."
     ],
-    "flow": [
-      "1. hodina: význam spojok a jazykové situácie",
-      "2. hodina: pravdivostné tabuľky a prenos do úloh",
-      "v každej hodine 8–10 min ručný zápis/tabuľka v zošite"
+    flow: [
+      "0–4 min: opakovanie výroku, pravdivostnej hodnoty a negácie na výroku „Číslo 8 je párne.“",
+      "4–9 min: problémový vstup s A: „Číslo 8 je párne.“ a B: „Číslo 8 je väčšie ako 5.“; intuitívne spojenie pomocou „a“, „alebo“, „ak..., tak...“, „práve vtedy, keď...“.",
+      "9–16 min: zavedenie pojmu zložený výrok a symbolov ∧, ∨, ⇒, ⇔; názvy, slovné čítanie a jednoduché príklady. Negácia ¬A sa iba pripomenie.",
+      "16–25 min: spoločné vytvorenie základných pravdivostných tabuliek pre PP, PN, NP, NN; pri implikácii zdôrazniť jediný nepravdivý prípad P ⇒ N.",
+      "25–31 min: dvojice – učebnicová úloha 1.2.4; dopĺňanie po stĺpcoch: najprv ¬A, ¬B, potom zložené výroky; pomenovanie hlavnej spojky.",
+      "31–37 min: učebnicová úloha 1.2.6; povinne a), c), e), podľa času ďalšie. Najprv hodnoty častí, potom celý výrok a pomenovanie hlavnej spojky.",
+      "37–41 min: INTERAKTÍVNA PLATFORMA – krátke kolo „Aká spojka? / Aká hodnota? / Doplň riadok“.",
+      "41–43 min: mimo platformy – rýchle učebnicové otázky 1.2.13 a 1.2.14 s krátkym zdôvodnením.",
+      "43–45 min: mimo platformy – exit ticket: pomenovať a prečítať ⇔, určiť P/N pre A ⇒ B pri P,N a pre A ∨ B pri N,P."
     ],
-    "diagnostics": [
-      "nepletie si implikáciu s ekvivalenciou",
-      "vie, kedy je konjunkcia/disjunkcia pravdivá",
-      "rozumie rôznym významom „alebo“"
+    diagnostics: [
+      "správne pomenuje a zapíše aspoň 4 zo 4 binárnych logických spojok",
+      "zo 6 jednoduchých zložených výrokov správne určí pravdivostnú hodnotu aspoň pri 5",
+      "v pravdivostnej tabuľke správne doplní aspoň 80 % polí",
+      "pri aspoň jednom príklade slovne zdôvodní, prečo je zložený výrok pravdivý alebo nepravdivý",
+      "pri implikácii vie identifikovať prípad P ⇒ N ako jediný nepravdivý"
     ],
-    "partialUse": [
-      "Modul je možné použiť celý alebo len vybrané kroky podľa priebehu hodiny.",
-      "Digitálna aktivita nenahrádza ručný zápis, diskusiu pri tabuli ani zdôvodnenie vlastnými slovami."
+    partialUse: [
+      "Žiacka platforma pokrýva iba aplikačnú fázu 37–41 min. Nenahrádza výklad, spoločné vytvorenie pravdivostnej tabuľky ani učebnicové úlohy.",
+      "Pred spustením platformy musia byť symboly ∧, ∨, ⇒, ⇔ už zavedené, prečítané a použité v spoločných príkladoch.",
+      "Pri potrebe podpory možno nechať žiakovi k dispozícii ručne vytvorenú pravdivostnú tabuľku; cieľom digitálnej časti je správne ju použiť.",
+      "Rýchle otázky 1.2.13–1.2.14 a exit ticket zostávajú mimo platformy podľa prípravy."
     ]
   },
-  "student": {
-    "title": "Spojky pod kontrolou",
-    "subtitle": "Téma 04–05 · Zložené výroky a pravdivostné tabuľky",
-    "intro": "Dva jednoduché výroky môžeme spojiť do nového tvrdenia. Rozhodujúce je nielen slovo medzi nimi, ale jeho presný logický význam.",
-    "estimatedTime": "18–22 min",
-    "activities": [
+  student: {
+    title: "Aká spojka? Aká hodnota?",
+    subtitle: "4. hodina · Zložené výroky, logické spojky, tabuľky",
+    intro: "Spojky ∧, ∨, ⇒, ⇔ aj ich pravdivostné tabuľky už poznáš z dnešnej hodiny. Teraz si ich krátko precvičíš.",
+    estimatedTime: "4–6 min",
+    activities: [
       {
-        "id": "map",
-        "type": "info",
-        "phase": "ZAČÍNAME",
-        "title": "Nové značky pre štyri logické spojenia",
-        "html": "<p>Najprv si zaveďme značky a ich čítanie. <strong>∧</strong> znamená „a zároveň“, <strong>∨</strong> znamená nevylučovacie „alebo“, <strong>⇒</strong> čítame „ak..., tak...“ a <strong>⇔</strong> čítame „práve vtedy, keď“.</p><p class=\"muted\">Značky ešte nepočítajú za nás. Pri každej sa postupne naučíme, kedy je celý zložený výrok pravdivý.</p><div class=\"logic-visual\"><svg viewBox=\"0 0 780 245\" role=\"img\" aria-label=\"Štyri logické spojky\"><g font-family=\"system-ui\" text-anchor=\"middle\"><g><rect x=\"25\" y=\"30\" width=\"160\" height=\"78\" rx=\"16\" fill=\"currentColor\" opacity=\".08\"/><text x=\"105\" y=\"60\" font-size=\"24\" font-weight=\"700\">A ∧ B</text><text x=\"105\" y=\"86\" font-size=\"14\">A a zároveň B</text></g><g><rect x=\"215\" y=\"30\" width=\"160\" height=\"78\" rx=\"16\" fill=\"currentColor\" opacity=\".08\"/><text x=\"295\" y=\"60\" font-size=\"24\" font-weight=\"700\">A ∨ B</text><text x=\"295\" y=\"86\" font-size=\"14\">A alebo B</text></g><g><rect x=\"405\" y=\"30\" width=\"160\" height=\"78\" rx=\"16\" fill=\"currentColor\" opacity=\".08\"/><text x=\"485\" y=\"60\" font-size=\"24\" font-weight=\"700\">A ⇒ B</text><text x=\"485\" y=\"86\" font-size=\"14\">ak A, tak B</text></g><g><rect x=\"595\" y=\"30\" width=\"160\" height=\"78\" rx=\"16\" fill=\"currentColor\" opacity=\".08\"/><text x=\"675\" y=\"60\" font-size=\"24\" font-weight=\"700\">A ⇔ B</text><text x=\"675\" y=\"86\" font-size=\"14\">práve vtedy, keď</text></g><text x=\"390\" y=\"165\" font-size=\"18\" font-weight=\"700\">Najprv urči pravdivosť A a B. Potom použi pravidlo spojky.</text><text x=\"390\" y=\"197\" font-size=\"15\">Tabuľka pravdivostných hodnôt je prehľadný spôsob, ako skontrolovať všetky prípady.</text></g></svg></div>",
-        "continueLabel": "Pokračovať"
-      },
-      {
-        "id": "and",
-        "type": "choice",
-        "phase": "OBJAVUJ",
-        "skill": "Konjunkcia",
-        "question": "A: „12 je párne.“ B: „12 je deliteľné tromi.“ Je A ∧ B pravdivé?",
-        "options": [
-          "Áno",
-          "Nie"
+        id: "spojka-and",
+        type: "choice",
+        phase: "1 · AKÁ SPOJKA?",
+        skill: "Konjunkcia",
+        question: "Ako sa nazýva spojka ∧ a ako ju čítame v zápise A ∧ B?",
+        options: [
+          "konjunkcia – „A a B“",
+          "disjunkcia – „A alebo B“",
+          "implikácia – „ak A, tak B“",
+          "ekvivalencia – „A práve vtedy, keď B“"
         ],
-        "answer": 0,
-        "correct": "Áno. Obe časti sú pravdivé, preto je konjunkcia pravdivá.",
-        "hint": "Pri „a zároveň“ musia platiť obe časti."
+        answer: 0,
+        correct: "Správne. ∧ je konjunkcia a A ∧ B čítame „A a B“.",
+        hint: "Spomeň si na spojku „a“."
       },
       {
-        "id": "or",
-        "type": "choice",
-        "phase": "OBJAVUJ",
-        "skill": "Disjunkcia",
-        "question": "A: „15 je párne.“ B: „15 je deliteľné tromi.“ Je A ∨ B pravdivé pri nevylučovacom „alebo“?",
-        "options": [
-          "Áno",
-          "Nie"
+        id: "spojka-or",
+        type: "choice",
+        phase: "1 · AKÁ SPOJKA?",
+        skill: "Disjunkcia",
+        question: "Ako sa nazýva spojka ∨ a ako ju čítame v zápise A ∨ B?",
+        options: [
+          "konjunkcia – „A a B“",
+          "disjunkcia – „A alebo B“",
+          "implikácia – „ak A, tak B“",
+          "ekvivalencia – „A práve vtedy, keď B“"
         ],
-        "answer": 0,
-        "correct": "Áno. Pri nevylučovacom „alebo“ stačí, aby platila aspoň jedna časť.",
-        "hint": "Stačí jedna pravdivá časť."
+        answer: 1,
+        correct: "Správne. ∨ je disjunkcia a A ∨ B čítame „A alebo B“.",
+        hint: "Ide o nevylučovacie „alebo“."
       },
       {
-        "id": "eitheror",
-        "type": "choice",
-        "phase": "PREMÝŠĽAJ",
-        "skill": "Vylučovacie alebo",
-        "question": "Veta „Číslo je kladné alebo záporné“ (pri nenulovom reálnom čísle) používa „alebo“ skôr ako:",
-        "options": [
-          "nevylučovacie – môžu platiť obe možnosti",
-          "vylučovacie – platí práve jedna možnosť"
+        id: "spojka-imp",
+        type: "choice",
+        phase: "1 · AKÁ SPOJKA?",
+        skill: "Implikácia",
+        question: "Ako sa nazýva spojka ⇒ a ako ju čítame v zápise A ⇒ B?",
+        options: [
+          "konjunkcia – „A a B“",
+          "disjunkcia – „A alebo B“",
+          "implikácia – „ak A, tak B“",
+          "ekvivalencia – „A práve vtedy, keď B“"
         ],
-        "answer": 1,
-        "correct": "Správne. Nenulové reálne číslo nemôže byť súčasne kladné aj záporné.",
-        "hint": "Môžu obe možnosti platiť naraz?"
+        answer: 2,
+        correct: "Správne. ⇒ je implikácia a A ⇒ B čítame „ak A, tak B“.",
+        hint: "Hľadaj podmienku „ak..., tak...“."
       },
       {
-        "id": "imp",
-        "type": "explain",
-        "phase": "POCHOP",
-        "title": "Implikácia nie je obojstranné tvrdenie",
-        "html": "<p><strong>A ⇒ B</strong> čítame „ak A, tak B“. Nehovorí automaticky, že z B vyplýva A.</p><p>Príklad: „Ak je číslo deliteľné 4, potom je párne.“ je pravdivé. Obrátená veta „Ak je číslo párne, potom je deliteľné 4“ pravdivá nie je.</p>",
-        "remember": "Implikácia A ⇒ B a obrátená implikácia B ⇒ A sú dve rôzne tvrdenia."
-      },
-      {
-        "id": "eq",
-        "type": "choice",
-        "phase": "POCHOP",
-        "skill": "Ekvivalencia",
-        "question": "Ktorý opis najlepšie vystihuje A ⇔ B?",
-        "options": [
-          "Platí iba A ⇒ B.",
-          "Platia obe implikácie A ⇒ B aj B ⇒ A.",
-          "A a B musia byť vždy nepravdivé."
+        id: "spojka-eq",
+        type: "choice",
+        phase: "1 · AKÁ SPOJKA?",
+        skill: "Ekvivalencia",
+        question: "Ako sa nazýva spojka ⇔ a ako ju čítame v zápise A ⇔ B?",
+        options: [
+          "konjunkcia – „A a B“",
+          "disjunkcia – „A alebo B“",
+          "implikácia – „ak A, tak B“",
+          "ekvivalencia – „A práve vtedy, keď B“"
         ],
-        "answer": 1,
-        "correct": "Áno. Ekvivalencia znamená obojstrannú podmienku.",
-        "hint": "„Práve vtedy, keď“ znamená dva smery."
+        answer: 3,
+        correct: "Správne. ⇔ je ekvivalencia a A ⇔ B čítame „A práve vtedy, keď B“.",
+        hint: "Táto spojka vyjadruje obojstrannú podmienku."
       },
       {
-        "id": "table",
-        "type": "info",
-        "phase": "TABUĽKA",
-        "title": "Ako čítať pravdivostnú tabuľku",
-        "html": "<div class=\"table-wrap\"><table class=\"truth\"><tr><th>A</th><th>B</th><th>A ∧ B</th><th>A ∨ B</th><th>A ⇒ B</th><th>A ⇔ B</th></tr><tr><td>P</td><td>P</td><td>P</td><td>P</td><td>P</td><td>P</td></tr><tr><td>P</td><td>N</td><td>N</td><td>P</td><td>N</td><td>N</td></tr><tr><td>N</td><td>P</td><td>N</td><td>P</td><td>P</td><td>N</td></tr><tr><td>N</td><td>N</td><td>N</td><td>N</td><td>P</td><td>P</td></tr></table></div><p class=\"muted\">Najviac pozornosti si vyžaduje implikácia: nepravdivá je iba v prípade P ⇒ N.</p>",
-        "continueLabel": "Pokračovať"
+        id: "hodnota-and",
+        type: "choice",
+        phase: "2 · AKÁ HODNOTA?",
+        skill: "Konjunkcia",
+        question: "A = P, B = N. Akú pravdivostnú hodnotu má A ∧ B?",
+        options: ["P", "N"],
+        answer: 1,
+        correct: "Správne. Konjunkcia je pravdivá iba vtedy, keď sú pravdivé oba výroky.",
+        hint: "Pri ∧ musia byť pravdivé A aj B."
       },
       {
-        "id": "nb",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Tabuľku si vytvor ručne",
-        "html": "<p><span class=\"mini-label\">ČISTÝ ZÁPIS</span><br>Do zošita vytvor tabuľku pre A, B, A ∧ B, A ∨ B, A ⇒ B, A ⇔ B. Neprepisuj obrazovku mechanicky – skús stĺpce najprv doplniť bez pozerania.</p>",
-        "model": "<strong>KONTROLA:</strong> poradie riadkov PP, PN, NP, NN. Konjunkcia P iba pri PP; disjunkcia N iba pri NN; implikácia N iba pri PN; ekvivalencia P pri rovnakých pravdivostných hodnotách."
+        id: "hodnota-or",
+        type: "choice",
+        phase: "2 · AKÁ HODNOTA?",
+        skill: "Disjunkcia",
+        question: "A = P, B = N. Akú pravdivostnú hodnotu má A ∨ B?",
+        options: ["P", "N"],
+        answer: 0,
+        correct: "Správne. Pri nevylučovacom „alebo“ stačí, aby bol pravdivý aspoň jeden výrok.",
+        hint: "Pri ∨ stačí aspoň jedna pravdivá časť."
       },
       {
-        "id": "mix",
-        "type": "matrix",
-        "phase": "OVER SI",
-        "skill": "Spojky",
-        "title": "Ktorá spojka je použitá?",
-        "labels": [
-          "konjunkcia",
-          "disjunkcia",
-          "implikácia",
-          "ekvivalencia"
-        ],
-        "items": [
-          {
-            "text": "x > 0 a zároveň x < 5",
-            "answer": "konjunkcia"
-          },
-          {
-            "text": "ak n je deliteľné 6, potom je deliteľné 3",
-            "answer": "implikácia"
-          },
-          {
-            "text": "n je párne práve vtedy, keď n = 2k pre nejaké celé k",
-            "answer": "ekvivalencia"
-          },
-          {
-            "text": "x ≤ 0 alebo x ≥ 10",
-            "answer": "disjunkcia"
-          }
+        id: "hodnota-imp",
+        type: "choice",
+        phase: "2 · AKÁ HODNOTA?",
+        skill: "Implikácia",
+        question: "A = P, B = N. Akú pravdivostnú hodnotu má A ⇒ B?",
+        options: ["P", "N"],
+        answer: 1,
+        correct: "Správne. Implikácia je nepravdivá práve v prípade P ⇒ N.",
+        hint: "Toto je jediný nepravdivý riadok implikácie."
+      },
+      {
+        id: "hodnota-eq",
+        type: "choice",
+        phase: "2 · AKÁ HODNOTA?",
+        skill: "Ekvivalencia",
+        question: "A = N, B = N. Akú pravdivostnú hodnotu má A ⇔ B?",
+        options: ["P", "N"],
+        answer: 0,
+        correct: "Správne. Ekvivalencia je pravdivá, keď A a B majú rovnakú pravdivostnú hodnotu.",
+        hint: "Porovnaj hodnoty A a B."
+      },
+      {
+        id: "hodnota-imp2",
+        type: "choice",
+        phase: "2 · AKÁ HODNOTA?",
+        skill: "Implikácia",
+        question: "A = N, B = P. Akú pravdivostnú hodnotu má A ⇒ B?",
+        options: ["P", "N"],
+        answer: 0,
+        correct: "Správne. Implikácia je nepravdivá iba pri P ⇒ N; pri N ⇒ P je pravdivá.",
+        hint: "Skontroluj, či ide o jediný nepravdivý prípad P ⇒ N."
+      },
+      {
+        id: "riadok",
+        type: "matrix",
+        phase: "3 · DOPLŇ RIADOK",
+        skill: "Pravdivostná tabuľka",
+        title: "A = P, B = N. Doplň hodnoty v tomto riadku.",
+        labels: ["P", "N"],
+        items: [
+          { text: "A ∧ B", answer: "N" },
+          { text: "A ∨ B", answer: "P" },
+          { text: "A ⇒ B", answer: "N" },
+          { text: "A ⇔ B", answer: "N" }
         ]
       },
       {
-        "id": "transfer",
-        "type": "choice",
-        "phase": "PRENOS",
-        "skill": "Testový formát",
-        "question": "A je pravdivý, B je nepravdivý. Ktorý z výrokov je pravdivý?",
-        "options": [
-          "A ∧ B",
-          "A ⇒ B",
-          "A ∨ B",
-          "A ⇔ B"
+        id: "reflection",
+        type: "reflection",
+        phase: "ZÁVER PLATFORMY",
+        title: "Ako sa orientujem v spojkách?",
+        skills: [
+          "pomenovať a slovne prečítať ∧, ∨, ⇒, ⇔",
+          "určiť P/N z hodnôt A a B",
+          "doplniť jeden riadok pravdivostnej tabuľky"
         ],
-        "answer": 2,
-        "correct": "Pri P, N je disjunkcia pravdivá, ostatné uvedené možnosti nie.",
-        "hint": "Pozri riadok P, N."
-      },
-      {
-        "id": "extra-a",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "Logické spojky",
-        "question": "Kedy je výrok A ∧ B pravdivý?",
-        "options": [
-          "Keď je pravdivý aspoň jeden",
-          "Iba keď sú pravdivé oba",
-          "Keď majú rôznu pravdivosť"
-        ],
-        "answer": 1,
-        "correct": "Konjunkcia je pravdivá iba v prípade P, P.",
-        "hint": "Spomeň si na význam spojky „a“."
-      },
-      {
-        "id": "extra-b",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "Logické spojky",
-        "question": "Pri nevylučovacom „alebo“ je A ∨ B nepravdivé práve vtedy, keď:",
-        "options": [
-          "A aj B sú nepravdivé",
-          "A aj B sú pravdivé",
-          "presne jeden je pravdivý"
-        ],
-        "answer": 0,
-        "correct": "Áno. Nevylučovacie „alebo“ pripúšťa aj pravdivosť oboch výrokov.",
-        "hint": "Hľadaj jediný prípad, keď neplatí ani jedna možnosť."
-      },
-      {
-        "id": "reflection",
-        "type": "reflection",
-        "phase": "ZÁVER",
-        "title": "Ako sa orientujem v spojkách",
-        "skills": [
-          "konjunkcia",
-          "disjunkcia",
-          "implikácia",
-          "ekvivalencia",
-          "pravdivostná tabuľka"
-        ],
-        "prompt": "Pri každej položke vyber, ako dobre jej teraz rozumieš. Toto nie je známka; je to spätná väzba pre tvoje ďalšie učenie."
+        prompt: "Označ, ako isto sa cítiš. Toto nie je známka; je to krátka spätná väzba."
       }
     ]
   }
