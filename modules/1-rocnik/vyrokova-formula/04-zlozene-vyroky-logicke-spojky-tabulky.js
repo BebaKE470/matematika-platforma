@@ -83,7 +83,7 @@ MathPlatform.registerModule({
       {
         id: "spojka-and",
         type: "choice",
-        phase: "1 · AKÁ SPOJKA?",
+        phase: "4. HODINA · AKÁ SPOJKA?",
         skill: "Konjunkcia",
         question: "Ako sa nazýva spojka ∧ a ako ju čítame v zápise A ∧ B?",
         options: [
@@ -99,7 +99,7 @@ MathPlatform.registerModule({
       {
         id: "spojka-or",
         type: "choice",
-        phase: "1 · AKÁ SPOJKA?",
+        phase: "4. HODINA · AKÁ SPOJKA?",
         skill: "Disjunkcia",
         question: "Ako sa nazýva spojka ∨ a ako ju čítame v zápise A ∨ B?",
         options: [
@@ -115,7 +115,7 @@ MathPlatform.registerModule({
       {
         id: "spojka-imp",
         type: "choice",
-        phase: "1 · AKÁ SPOJKA?",
+        phase: "4. HODINA · AKÁ SPOJKA?",
         skill: "Implikácia",
         question: "Ako sa nazýva spojka ⇒ a ako ju čítame v zápise A ⇒ B?",
         options: [
@@ -131,7 +131,7 @@ MathPlatform.registerModule({
       {
         id: "spojka-eq",
         type: "choice",
-        phase: "1 · AKÁ SPOJKA?",
+        phase: "4. HODINA · AKÁ SPOJKA?",
         skill: "Ekvivalencia",
         question: "Ako sa nazýva spojka ⇔ a ako ju čítame v zápise A ⇔ B?",
         options: [
@@ -147,7 +147,7 @@ MathPlatform.registerModule({
       {
         id: "hodnota-and",
         type: "choice",
-        phase: "2 · AKÁ HODNOTA?",
+        phase: "4. HODINA · AKÁ HODNOTA?",
         skill: "Konjunkcia",
         question: "A = P, B = N. Akú pravdivostnú hodnotu má A ∧ B?",
         options: ["P", "N"],
@@ -158,7 +158,7 @@ MathPlatform.registerModule({
       {
         id: "hodnota-or",
         type: "choice",
-        phase: "2 · AKÁ HODNOTA?",
+        phase: "4. HODINA · AKÁ HODNOTA?",
         skill: "Disjunkcia",
         question: "A = P, B = N. Akú pravdivostnú hodnotu má A ∨ B?",
         options: ["P", "N"],
@@ -169,7 +169,7 @@ MathPlatform.registerModule({
       {
         id: "hodnota-imp",
         type: "choice",
-        phase: "2 · AKÁ HODNOTA?",
+        phase: "4. HODINA · AKÁ HODNOTA?",
         skill: "Implikácia",
         question: "A = P, B = N. Akú pravdivostnú hodnotu má A ⇒ B?",
         options: ["P", "N"],
@@ -180,7 +180,7 @@ MathPlatform.registerModule({
       {
         id: "hodnota-eq",
         type: "choice",
-        phase: "2 · AKÁ HODNOTA?",
+        phase: "4. HODINA · AKÁ HODNOTA?",
         skill: "Ekvivalencia",
         question: "A = N, B = N. Akú pravdivostnú hodnotu má A ⇔ B?",
         options: ["P", "N"],
@@ -191,7 +191,7 @@ MathPlatform.registerModule({
       {
         id: "hodnota-imp2",
         type: "choice",
-        phase: "2 · AKÁ HODNOTA?",
+        phase: "4. HODINA · AKÁ HODNOTA?",
         skill: "Implikácia",
         question: "A = N, B = P. Akú pravdivostnú hodnotu má A ⇒ B?",
         options: ["P", "N"],
@@ -202,7 +202,7 @@ MathPlatform.registerModule({
       {
         id: "riadok",
         type: "matrix",
-        phase: "3 · DOPLŇ RIADOK",
+        phase: "4. HODINA · DOPLŇ RIADOK",
         skill: "Pravdivostná tabuľka",
         title: "A = P, B = N. Doplň hodnoty v tomto riadku.",
         labels: ["P", "N"],
@@ -214,10 +214,30 @@ MathPlatform.registerModule({
         ]
       },
       {
+        id: "reflection-4",
+        type: "reflection",
+        phase: "4. HODINA · SEBAHODNOTENIE",
+        title: "4. hodina – ako sa mi darilo?",
+        skills: [
+          "pomenovať a slovne prečítať ∧, ∨, ⇒, ⇔",
+          "určiť P/N z hodnôt A a B",
+          "doplniť jeden riadok pravdivostnej tabuľky"
+        ],
+        prompt: "Zhodnoť sa po 4. hodine. Toto nie je známka; je to spätná väzba pre teba a učiteľa."
+      },
+      {
+        id: "koniec-4",
+        type: "info",
+        phase: "KONIEC 4. HODINY",
+        title: "4. hodinu máš ukončenú",
+        html: "<p>Precvičil/a si názvy a čítanie spojok <strong>∧, ∨, ⇒, ⇔</strong> aj základné pravdivostné hodnoty.</p><p class=\"keyidea\"><strong>Ak pracuješ na 4. hodine, tu skonči.</strong></p><p>Na 5. hodine spustíš tento istý modul znova. Úlohy zo 4. hodiny ti poslúžia ako krátke opakovanie a potom budeš pokračovať ďalej.</p>",
+        continueLabel: "Som na 5. hodine – pokračujem"
+      },
+      {
         id: "prechod-5",
         type: "info",
         phase: "5. HODINA · UPEVNENIE",
-        title: "Teraz pracujeme po krokoch",
+        title: "5. hodina – pokračujeme po krokoch",
         html: "<p>Na 5. hodine už spojky poznáš. Pri výraze s negáciou postupuj systematicky:</p><ol><li>urči hodnoty A a B,</li><li>vyhodnoť negáciu,</li><li>nájdi hlavnú spojku,</li><li>až potom urči P/N celého výroku.</li></ol><p class=\"keyidea\">Najprv medzikrok, potom výsledok.</p>",
         continueLabel: "Pokračujem"
       },
@@ -355,17 +375,17 @@ MathPlatform.registerModule({
         model: "Najprv určím ¬A. Keď A = N, potom ¬A = P. Dostanem P ⇒ P. Implikácia je nepravdivá iba pri P ⇒ N, preto je P ⇒ P pravdivá."
       },
       {
-        id: "reflection",
+        id: "reflection-5",
         type: "reflection",
-        phase: "ZÁVER DVOJHODINOVÉHO BLOKU",
-        title: "Ako sa orientujem v zložených výrokoch?",
+        phase: "5. HODINA · ZÁVEREČNÉ SEBAHODNOTENIE",
+        title: "5. hodina – ako sa mi darilo?",
         skills: [
           "pomenovať a slovne prečítať ∧, ∨, ⇒, ⇔",
           "určiť P/N z hodnôt A a B",
           "pri výraze s negáciou urobiť najprv správny medzikrok",
           "nájsť prvý chybný krok v riešení"
         ],
-        prompt: "Označ, ako isto sa cítiš. Toto nie je známka; je to spätná väzba."
+        prompt: "Zhodnoť sa po 5. hodine. Toto nie je známka; uzatváraš tým celý blok 4.–5. hodiny."
       }
     ]
   }
