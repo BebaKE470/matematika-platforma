@@ -243,7 +243,7 @@
       grading=s;saveGradingSettings(grading);const el=$('#gradingInfo');el.className='notice good';el.innerHTML=`<strong>Nastavenie uložené.</strong> ${grading.enabled?gradingScaleText(grading):'Známkovanie je vypnuté.'}`;drawStudents(students,grading);
     };
     $('#exportResults').onclick=()=>{
-      const s=readSettings();
+      const s=readGradingFromForm();
       if(!validGradingThresholds(s.thresholds)){alert('Pred exportom oprav hranice známok.');return}
       grading=s;
       const arr=Object.values(students).sort((a,b)=>a.nick.localeCompare(b.nick,'sk'));
