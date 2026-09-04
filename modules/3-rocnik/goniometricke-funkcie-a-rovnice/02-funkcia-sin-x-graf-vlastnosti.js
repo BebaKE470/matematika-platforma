@@ -34,7 +34,7 @@ MathPlatform.registerModule({
     "flow": [
       "4–5 min aktivácia predchádzajúcich vedomostí",
       "15–22 min vybraná digitálna časť",
-      "8–12 min zápis do zošita a ručné riešenie",
+      "8–12 min pracovný/čistý zápis a ručné riešenie",
       "5 min spoločná syntéza"
     ],
     "diagnostics": [
@@ -109,7 +109,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "PRACOVNÝ ZÁPIS",
         "title": "Načrtni graf sin x",
         "html": "<p>V zošite vyznač základné body/asymptoty podľa potreby a načrtni graf na intervale od −2π do 2π. Potom pod graf zapíš tri vlastnosti, ktoré z neho vieš prečítať.</p>",
         "model": "Skontroluj základné hodnoty, periodicitu a symetriu. Pri tg/cotg nezabudni na body, v ktorých funkcia nie je definovaná."
@@ -127,8 +127,8 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "sin x – definícia a vlastnosti",
-        "html": "<p><strong>TEÓRIA:</strong> Zapíš definíciu sin x, definičný obor, obor hodnôt, periódu, nuly a symetriu podľa spoločnej kontroly s učiteľom.</p>",
-        "model": "Zápis do zošita má byť presný a má obsahovať aj malý náčrt grafu."
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>FUNKCIA y = sin x</strong></p><p>Na jednotkovej kružnici je <strong>sin x</strong> y-ová súradnica bodu, ktorý zodpovedá číslu x.</p><p><strong>Definičný obor:</strong> D(sin) = ℝ<br><strong>Obor hodnôt:</strong> H(sin) = ⟨−1; 1⟩<br><strong>Perióda:</strong> 2π, teda sin(x + 2kπ) = sin x, k ∈ ℤ.<br><strong>Nuly:</strong> x = kπ, k ∈ ℤ.<br><strong>Nepárnosť:</strong> sin(−x) = −sin x.</p><p>Maximum funkcie je 1 pre x = π/2 + 2kπ a minimum je −1 pre x = 3π/2 + 2kπ, k ∈ ℤ.</p>",
+        "model": "Teoretický zápis je zobrazený celý v poli html; model sa v zjednodušenom notebook rendereri nezobrazuje."
       },
       {
         "id": "reflection",

@@ -1,0 +1,546 @@
+Pravidlá tvorby obsahu matematických modulov
+1. Základom je tematický plán
+
+Každý modul vzniká podľa aktuálneho tematického plánu školy.
+
+Tematický plán určuje:
+
+ročník,
+tematický celok,
+konkrétnu tému hodiny,
+poradie učiva,
+obsahový štandard, ak je v pláne uvedený,
+výkonový štandard, ak je v pláne uvedený.
+
+Nič, čo v tematickom pláne nie je uvedené ako oficiálny štandard, nevymýšľame.
+
+Ak je bunka obsahového alebo výkonového štandardu v pláne prázdna, zostáva prázdna alebo sa jasne označí, že v zdrojovom pláne nie je uvedená.
+
+Ciele konkrétnej vyučovacej hodiny nie sú automaticky oficiálnym výkonovým štandardom.
+
+2. Rešpektujeme, čo už žiak môže vedieť
+
+Pri každom module uvažujeme kumulatívne:
+
+vedomosti zo ZŠ + predchádzajúce ročníky SŠ + všetko, čo už bolo v aktuálnom ročníku odučené.
+
+Modul nesmie vyžadovať učivo, ktoré ešte nebolo zavedené.
+
+To platí zvlášť pre:
+
+pojmy,
+symboly,
+matematické zápisy,
+vzorce,
+metódy riešenia,
+typy argumentácie.
+Absolútne pravidlo
+
+Žiak nikdy nedostane úlohu s novým symbolom, pojmom alebo zápisom skôr, než bol tento pojem alebo symbol vysvetlený.
+
+Preferované poradie je:
+
+situácia/myšlienka → nový pojem → symbol a jeho čítanie → názorné znázornenie → jednoduché overenie → použitie
+
+Až potom môže nasledovať náročnejšia úloha.
+
+Keď už bol pojem v predchádzajúcej hodine riadne zavedený, nemusíme ho zakaždým vyučovať odznova. Stačí krátke pripomenutie, ak je potrebné.
+
+3. Príprava učiteľa a žiacky modul nie sú to isté
+
+Toto je jedno z najdôležitejších pravidiel.
+
+Ak máme k hodine učiteľskú prípravu, časť teacher vychádza z celej vyučovacej hodiny.
+
+Má učiteľovi ukázať:
+
+čo sa deje pred použitím aplikácie,
+čo robí učiteľ,
+čo robia žiaci,
+kde je práca vo dvojiciach,
+kde sa používa učebnica alebo pracovný list,
+kedy prichádza aplikácia,
+čo nasleduje po aplikácii,
+ako sa hodina uzatvára.
+Student časť však nekopíruje celú hodinu.
+
+student obsahuje iba tú časť hodiny, v ktorej sa podľa prípravy skutočne používa platforma.
+
+Ak je napríklad aplikácia naplánovaná od 27. do 36. minúty, digitálny modul spracúva práve túto fázu.
+
+Neprenášame do aplikácie mechanicky:
+
+výklad učiteľa,
+prácu vo dvojiciach,
+úlohy z učebnice,
+ručné počítanie, ktoré má zostať na papieri,
+záverečný exit ticket, ak je v príprave mimo aplikácie.
+
+Platforma nie je celá vyučovacia hodina. Je jedným z nástrojov hodiny.
+
+4. Mobil nesmie nahradiť matematické myslenie
+
+Platí naše základné pravidlo:
+
+Mobil nemá robiť to, čo žiak potrebuje vedieť urobiť hlavou, ceruzkou alebo matematickým argumentom.
+
+Preto do digitálnej časti dávame najmä to, v čom platforma prináša výhodu:
+
+okamžitú spätnú väzbu,
+rozlišovanie možností,
+klasifikáciu,
+rozhodovanie,
+interpretáciu,
+prácu s reprezentáciami,
+odhaľovanie chýb,
+krátke overovanie,
+sebahodnotenie,
+diagnostiku pre učiteľa.
+
+Na papieri/zošite zostáva to, čo má žiak vedieť vykonať sám:
+
+výpočty,
+algebraické úpravy,
+konštrukcie,
+náčrty,
+postup riešenia,
+dlhšie matematické argumenty podľa charakteru témy.
+5. Rozlišujeme štyri úrovne matematickej práce
+
+Pri návrhu úloh sa snažíme neostať iba pri kliknutí na správny výsledok.
+
+Postupne rozvíjame:
+
+pochopiť → vypočítať → matematicky zapísať → vysvetliť/zdôvodniť
+
+Nie každý modul musí obsahovať všetky štyri vrstvy rovnako silno. Musia zodpovedať téme a fáze učenia.
+
+6. Zápis do zošita má nové jednoduché pravidlo
+
+Toto sme po skúšaní platformy výrazne zjednodušili.
+
+Už nepoužívame systém:
+
+pracovný zápis → čistý zápis → porovnaj so vzorom.
+
+Teoretický zápis
+
+Ak má žiak niečo zapísať ako učivo, platforma zobrazí presne hotový text.
+
+Napríklad:
+
+TOTO SI ZAPÍŠ DO ZOŠITA
+
+Výrok je oznamovacia veta, o ktorej možno jednoznačne rozhodnúť, či je pravdivá alebo nepravdivá.
+P – pravdivý výrok
+N – nepravdivý výrok
+
+Žiak to jednoducho prepíše a klikne „Mám zapísané“.
+
+Nesmie tam byť iba:
+
+„Zapíš si definíciu výroku, pravdivostné hodnoty a jeden príklad.“
+
+To núti žiaka znovu vytvárať text, ktorý má byť jeho učebným zápisom.
+
+Úloha do zošita je niečo iné
+
+Ak má žiak niečo samostatne vypočítať alebo vyriešiť, dostane presné zadanie úlohy, nie hotové riešenie.
+
+Teda:
+
+ZOŠIT = presne vidím, čo mám prepísať.
+
+ÚLOHA DO ZOŠITA = presne vidím, čo mám samostatne vyriešiť.
+
+7. selfWrite nie je zápis do zošita
+
+selfWrite používame tam, kde chceme, aby žiak sám formuloval matematickú myšlienku.
+
+Napríklad:
+
+vysvetli vlastnými slovami,
+zdôvodni rozhodnutie,
+opíš chybu,
+vysvetli, prečo tvrdenie neplatí,
+interpretuj výsledok.
+
+Tu má vlastná formulácia pedagogický význam.
+
+Preto nerozmýšľame:
+
+„Má si to žiak zapísať?“
+
+ale:
+
+„Chcem, aby si túto vetu zapamätal, alebo chcem zistiť, či ju dokáže sám matematicky sformulovať?“
+
+V prvom prípade → notebook.
+
+V druhom → selfWrite.
+
+8. Každá digitálna otázka musí byť samostatne zrozumiteľná
+
+Toto je veľmi dôležité technicko-didaktické pravidlo, ktoré vzniklo pri reálnom testovaní.
+
+Pri choice renderer momentálne spoľahlivo vidíme obsah question, ale nie všetok obsah uložený v prompt alebo promptHtml.
+
+Preto:
+
+Všetky údaje potrebné na vyriešenie choice úlohy musia byť priamo v question.
+
+Napríklad nie:
+
+prompt: Adam povedal... Beáta povedala... Cyril povedal...
+question: Kto vyslovil výrok?
+
+ale priamo:
+
+Adam: „Koľko je 6 + 7?“
+Beáta: „Číslo 15 je párne.“
+Cyril: „Vypočítaj 6 + 7!“
+Kto z nich vyslovil výrok?
+
+Pri audite modulu sa preto kontroluje aj:
+
+Dokázal by žiak odpovedať, keby som videla iba question a možnosti?
+
+Ak nie, otázka je chybná.
+
+9. Možnosti odpovedí nesmú byť mechanické
+
+Správna odpoveď nemá byť stále:
+
+prvá,
+druhá,
+tretia,
+v opakujúcom sa vzore.
+
+Možnosti sa majú vhodne premiešať.
+
+Zároveň však nestačí technicky premiešať pole odpovedí. Distraktory musia byť matematicky jednoznačné.
+
+Kontrolujeme preto:
+
+existuje presne jedna správna odpoveď?
+nie je niektorý distraktor matematicky ekvivalentný správnej odpovedi?
+nie je odpoveď správna iba pri inom chápaní zadania?
+nie je možné uhádnuť správnu odpoveď podľa formy?
+neprezrádza jedna možnosť odpoveď svojou dĺžkou alebo formuláciou?
+
+Napríklad pri tvrdení „13 je prvočíslo“ nemá byť medzi možnosťami zároveň „13 nie je prvočíslo“ a „13 je zložené číslo“, ak by v konkrétnej otázke obe možnosti reprezentovali ten istý požadovaný význam.
+
+10. Spätná väzba má učiť, nie iba oznamovať skóre
+
+Pri nesprávnej odpovedi nemá byť jedinou informáciou:
+
+Nesprávne.
+
+Spätná väzba má podľa možnosti upozorniť na podstatnú matematickú myšlienku.
+
+Napríklad:
+
+Implikácia je nepravdivá iba v prípade, keď je predpoklad pravdivý a záver nepravdivý.
+
+Nie však tak, aby spätná väzba bez premýšľania prezradila riešenie ešte pred ďalším pokusom.
+
+11. Sebahodnotenie má modul uzatvárať
+
+Na konci vhodného digitálneho modulu používame krátku reflexiu/sebahodnotenie.
+
+Nie ako známku, ale ako informáciu:
+
+🟢 rozumiem,
+🟡 ešte si nie som istý/istá,
+🔴 potrebujem pomoc.
+
+Táto informácia je užitočná aj učiteľovi a má byť súčasťou exportu výsledkov.
+
+Ak však jeden digitálny modul zámerne pokračuje cez dve vyučovacie hodiny, koniec prvej hodiny musí pôsobiť ako uzavretý medzikrok, nie ako náhodne prerušený modul. Na začiatku ďalšej hodiny môže nasledovať krátke zopakovanie pred pokračovaním.
+
+12. Dĺžku digitálnej časti určuje hodina, nie platforma
+
+Pôvodný orientačný cieľ približne 15 minút aktívnej digitálnej práce nie je povinná norma.
+
+Ak príprava hovorí, že aplikácia sa používa iba 4–6 minút, modul má mať 4–6 minút.
+
+Ak je platforma jadrom objavovacej aktivity, môže byť dlhšia.
+
+Nevyrábame aktivity iba preto, aby bol modul dlhší.
+
+13. Vizuály používame iba tam, kde matematicky pomáhajú
+
+Používame napríklad:
+
+graf,
+číselnú os,
+jednotkovú kružnicu,
+geometrický náčrt,
+označené body,
+diagram,
+tabuľku,
+zvýraznenie časti matematického objektu.
+
+Nepoužívame dekorácie len preto, aby bola obrazovka „krajšia“.
+
+Platforma má pôsobiť ako prostredie pre strednú odbornú školu, nie ako aplikácia pre malé deti.
+
+14. Nový návrh maturitného štandardu je iba obohatenie
+
+Návrh nového maturitného štandardu neurčuje poradie učiva platformy.
+
+Nikdy netvrdíme, že podľa neho už teraz vyučujeme nové maturitné kurikulum.
+
+Používame ho iba ako inšpiráciu tam, kde prirodzene podporuje aktuálne učivo, napríklad:
+
+matematická komunikácia,
+presnosť zápisu,
+argumentácia,
+interpretácia,
+práca s reprezentáciami,
+modelovanie,
+kritické posudzovanie tvrdení,
+hľadanie chyby,
+obhajoba alebo spochybnenie záveru.
+15. Originálne maturitné úlohy používame až v správnom okamihu
+
+Platí:
+
+Originálna maturitná úloha hneď, ako na ňu žiak vedomosťami dorastie.
+
+Originálnu maturitnú úlohu môžeme zaradiť iba vtedy, keď ju žiak dokáže vyriešiť pomocou:
+
+ZŠ vedomostí + všetkého, čo už bolo dovtedy odučené.
+
+Ak maturitná úloha potrebuje učivo, ktoré príde až neskôr, originál nepoužijeme.
+
+Môžeme však použiť maturitný/testový spôsob zadania s primeraným obsahom.
+
+Naše pravidlo:
+
+Formát maturity teraz, náročnosť maturity neskôr.
+
+16. Úlohy z pracovného listu neprepisujeme svojvoľne
+
+Ak učiteľ dodá:
+
+pôvodný JS modul,
+prípravu na hodinu,
+pracovný list alebo súbor úloh,
+
+potom majú zdroje rozdielne úlohy.
+
+Tematický plán → oficiálne zaradenie a štandardy.
+
+Príprava učiteľa → celý didaktický priebeh hodiny.
+
+Pracovný list / materiál k hodine → konkrétne zadania a matematický obsah úloh.
+
+Pôvodný JS → technická identita modulu, ID, cesta a existujúca architektúra.
+
+Ak sa zdroje nezhodujú, nemáme potichu vytvoriť vlastnú verziu. Rozpor treba identifikovať.
+
+17. Pri prerábaní existujúceho modulu nemeníme jeho identitu
+
+Pri náhrade hotového/TODO modulu zachovávame:
+
+presné id,
+presnú cestu súboru,
+zaradenie v registri,
+ročník,
+tematický celok,
+tému.
+
+Mení sa obsah, nie identita modulu.
+
+Tak môžeme modul vymeniť bez rozbitia platformy.
+
+18. Teacher časť musí byť skutočne metodická
+
+Teacher karta nemá iba opakovať obsah žiackych obrazoviek.
+
+Má učiteľovi povedať:
+
+cieľ hodiny,
+čo majú žiaci už vedieť,
+čo je nové,
+ako tému otvoriť,
+na čo si dať pozor,
+typické chyby,
+ktoré časti sú manuálne,
+ktoré sú párové,
+kde sa používa aplikácia,
+približný čas,
+čo má učiteľ sledovať,
+ako hodinu uzavrieť,
+čo pokračuje na ďalšej hodine.
+
+Pri dvojhodinovom alebo nadväzujúcom module musí byť jasné, kde končí prvá hodina a ako začína druhá.
+
+19. Teacher časť a student časť môžu mať rozdielny rozsah
+
+Napríklad:
+
+Teacher: metodika celej 45-minútovej hodiny.
+
+Student: iba 8 minút aplikácie.
+
+To nie je chyba. To je zámer.
+
+Platforma má učiteľovi pomôcť viesť celú hodinu, ale žiaka digitálne zamestnáva iba tam, kde je digitálny nástroj pedagogicky vhodný.
+
+20. Technický audit je povinný
+
+Pred odovzdaním modulu kontrolujeme minimálne:
+
+JS syntax (node --check),
+správne ID,
+správnu cestu,
+žiadne duplicitné ID,
+choice.answer ukazuje na existujúcu možnosť,
+choice má celý kontext v question,
+presne jednu matematicky správnu odpoveď,
+možnosti nie sú mechanicky zoradené,
+sortChoice má korektné hodnoty,
+matrix má správne položky a označenia,
+selfWrite má potrebný model,
+notebook je kompatibilný s rendererom,
+žiadny nový symbol nie je použitý pred zavedením,
+reflexia je na vhodnom mieste,
+modul sa dá prejsť od začiatku do konca.
+
+Ale samotné node --check nestačí.
+
+Modul môže byť technicky bezchybný a didakticky zlý. Preto robíme aj obsahový audit.
+
+21. Obsahový audit je rovnako dôležitý ako technický
+
+Pred odovzdaním si pri každej aktivite kladieme otázky:
+
+Čo presne žiak na obrazovke vidí?
+
+Má všetky informácie potrebné na odpoveď?
+
+Pozná už všetky použité pojmy a symboly?
+
+Je matematika správna?
+
+Existuje iba jedna správna odpoveď?
+
+Je úloha v tejto chvíli hodiny primeraná?
+
+Má digitálna forma zmysel?
+
+Nerobí mobil niečo, čo má robiť žiak sám?
+
+Ak ide o zápis do zošita, vidí presne text, ktorý má prepísať?
+
+Ak ide o vlastné vysvetlenie, je jasné, že má odpoveď vytvoriť sám?
+
+Toto je presne typ kontroly, ktorý by bol odhalil aj chybnú obrazovku:
+
+„Kto vyslovil výrok?“
+Adam / Beáta / Cyril
+
+bez toho, aby boli zobrazené ich výroky.
+
+22. XP nie je známka
+
+XP je motivačný a priebežný prvok platformy.
+
+Nie je to školská známka.
+
+Známka sa môže vypočítať z percent iba vtedy, keď si učiteľ známkovanie zapne. Učiteľ si zároveň nastavuje vlastné percentuálne hranice.
+
+Preto obsah modulu nemáme konštruovať tak, aby „naháňal XP“.
+
+23. Výsledok žiaka má byť diagnostický
+
+Pri živej hodine chceme učiteľovi poskytnúť viac než konečné percento.
+
+Výstup môže obsahovať:
+
+nick,
+stav,
+body,
+maximum,
+percentá,
+orientačnú známku, ak je zapnutá,
+postup modulom,
+výsledky podľa zručností,
+jednotlivé bodované aktivity,
+počet pokusov,
+sebahodnotenie.
+
+Keďže výsledky živej hodiny neukladáme do databázy, učiteľ si ich môže exportovať do CSV.
+
+To má spätný vplyv aj na tvorbu obsahu: aktivity a zručnosti pomenúvame tak, aby export dával učiteľovi pedagogický zmysel.
+
+24. Modul nevytvárame podľa šablóny za každú cenu
+
+Nie každá hodina potrebuje:
+
+info → choice → notebook → choice → selfWrite → reflection
+
+Typy aktivít volíme podľa didaktického zámeru.
+
+Niekedy môže mať modul 5 krátkych rozhodovacích úloh. Inokedy graf, jednu ručnú úlohu a vysvetlenie. Inokedy iba krátke opakovanie pred pokračovaním.
+
+Didaktický cieľ určuje štruktúru; renderer je iba nástroj.
+
+25. Finálne pravidlo pre tvorbu každého nového modulu
+
+Celý postup by som zhrnula takto:
+
+1. Kde sme v tematickom pláne?
+→ Čo je témou tejto konkrétnej hodiny?
+
+2. Čo už žiak vie?
+→ ZŠ + predchádzajúce učivo.
+
+3. Čo je dnes nové?
+→ Žiadny nový pojem alebo symbol nesmie byť použitý pred vysvetlením.
+
+4. Čo sa podľa prípravy deje počas celej hodiny?
+→ Z toho vzniká teacher.
+
+5. V ktorej časti má byť použitá platforma?
+→ Iba z toho vzniká student.
+
+6. Čo má žiak robiť hlavou a na papieri?
+→ To mu aplikácia nesmie zobrať.
+
+7. Kde digitálna forma skutočne pomáha?
+→ Tam vytvoríme interaktivitu a okamžitú spätnú väzbu.
+
+8. Má niečo vedieť presne zapísané?
+→ Zobrazíme hotový text: „TOTO SI ZAPÍŠ DO ZOŠITA.“
+
+9. Má niečo sám formulovať?
+→ selfWrite.
+
+10. Má niečo samostatne vypočítať?
+→ Presné zadanie úlohy do zošita/papiera.
+
+11. Je vhodná maturitná úloha?
+→ Originál iba vtedy, ak naň už vedomosťami dorástol; inak iba maturitný formát.
+
+12. Funguje každá obrazovka sama osebe?
+→ Najmä choice: celý kontext priamo v question.
+
+13. Je každá odpoveď matematicky jednoznačná?
+→ Presne jedna správna možnosť, kvalitné distraktory, žiadny mechanický vzor.
+
+14. Dostáva učiteľ z výsledkov užitočnú diagnostiku?
+
+15. Až potom technický a didaktický audit a odovzdanie modulu.
+
+Za úplne najdôležitejšiu vetu pre ďalšiu prácu považujem:
+
+Nevytvárame digitálnu učebnicu, ktorou nahradíme hodinu. Vytvárame matematický nástroj, ktorý vstúpi do hodiny presne tam, kde žiakovi pomôže pochopiť, precvičiť, overiť alebo vysvetliť matematiku — a potom zase ustúpi učiteľovi, zošitu, ceruzke a matematickému premýšľaniu.
+
+A k tomu naše tri praktické pravidlá:
+
+Nový pojem najprv vysvetli, až potom ho skúšaj.
+ZOŠIT = ukáž presne, čo má žiak prepísať.
+Formát maturity teraz, náročnosť maturity neskôr.
