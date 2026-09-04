@@ -169,8 +169,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "2. KROK",
         "skill": "Pravdivostná hodnota",
-        "prompt": "Číslo 13 je prvočíslo.",
-        "question": "Akú pravdivostnú hodnotu má tento výrok?",
+        "question": "Výrok: „Číslo 13 je prvočíslo.“ Akú pravdivostnú hodnotu má tento výrok?",
         "options": [
           "P – pravdivý",
           "N – nepravdivý"
@@ -184,8 +183,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "2. KROK",
         "skill": "Pravdivostná hodnota",
-        "prompt": "Číslo 7 nie je prvočíslo.",
-        "question": "Akú pravdivostnú hodnotu má tento výrok?",
+        "question": "Výrok: „Číslo 7 nie je prvočíslo.“ Akú pravdivostnú hodnotu má tento výrok?",
         "options": [
           "P – pravdivý",
           "N – nepravdivý"
@@ -199,8 +197,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "2. KROK",
         "skill": "Pravdivostná hodnota",
-        "prompt": "Rovnica 3x = 0 má jeden reálny koreň.",
-        "question": "Akú pravdivostnú hodnotu má tento výrok?",
+        "question": "Výrok: „Rovnica 3x = 0 má jeden reálny koreň.“ Akú pravdivostnú hodnotu má tento výrok?",
         "options": [
           "P – pravdivý",
           "N – nepravdivý"
@@ -214,8 +211,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "2. KROK",
         "skill": "Pravdivostná hodnota",
-        "prompt": "Mesiac je planéta Slnečnej sústavy.",
-        "question": "Akú pravdivostnú hodnotu má tento výrok?",
+        "question": "Výrok: „Mesiac je planéta Slnečnej sústavy.“ Akú pravdivostnú hodnotu má tento výrok?",
         "options": [
           "P – pravdivý",
           "N – nepravdivý"
@@ -229,8 +225,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "2. KROK",
         "skill": "Pravdivostná hodnota",
-        "prompt": "x + 8 = 5, ak x = −3.",
-        "question": "Akú pravdivostnú hodnotu má tento výrok?",
+        "question": "Výrok: „x + 8 = 5, ak x = −3.“ Akú pravdivostnú hodnotu má tento výrok?",
         "options": [
           "P – pravdivý",
           "N – nepravdivý"
@@ -283,8 +278,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "PREMÝŠĽAJ",
         "skill": "Argumentácia",
-        "prompt": "Overili sme tvrdenie „Súčet dvoch párnych čísel je párny.“ na troch príkladoch: 2 + 4 = 6, 4 + 6 = 10, 8 + 12 = 20.",
-        "question": "Predstavujú tieto tri príklady už dôkaz všeobecnej platnosti?",
+        "question": "Overili sme tvrdenie „Súčet dvoch párnych čísel je párny.“ na troch príkladoch: 2 + 4 = 6, 4 + 6 = 10, 8 + 12 = 20. Predstavujú tieto tri príklady už dôkaz všeobecnej platnosti?",
         "options": [
           "Áno",
           "Nie"
@@ -298,8 +292,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "DETEKTÍV VÝROKOV",
         "skill": "Výrok",
-        "promptHtml": "<strong>Adam:</strong> „Koľko je 6 + 7?“<br><strong>Beáta:</strong> „Číslo 15 je párne.“<br><strong>Cyril:</strong> „Vypočítaj 6 + 7!“",
-        "question": "Kto vyslovil výrok?",
+        "question": "Adam: „Koľko je 6 + 7?“ · Beáta: „Číslo 15 je párne.“ · Cyril: „Vypočítaj 6 + 7!“ Kto z nich vyslovil výrok?",
         "options": [
           "Adam",
           "Beáta",
@@ -331,8 +324,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "EXIT TICKET",
         "skill": "Výrok a P/N",
-        "prompt": "Číslo 7 nie je prvočíslo.",
-        "question": "Ktorá odpoveď je správna?",
+        "question": "Veta „Číslo 7 nie je prvočíslo.“ – ktorá odpoveď je správna?",
         "options": [
           "Nie je to výrok.",
           "Je to pravdivý výrok – P.",
@@ -347,8 +339,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "EXIT TICKET",
         "skill": "Otvorená veta",
-        "prompt": "7x − 3 = 18.",
-        "question": "Je to výrok?",
+        "question": "Je veta „7x − 3 = 18.“ bez určenej hodnoty x výrokom?",
         "options": [
           "Áno",
           "Nie"
@@ -362,8 +353,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "EXIT TICKET",
         "skill": "Výrok a P/N",
-        "prompt": "Rovnica 3x = 0 má jeden reálny koreň.",
-        "question": "Ktorá odpoveď je správna?",
+        "question": "Veta „Rovnica 3x = 0 má jeden reálny koreň.“ – ktorá odpoveď je správna?",
         "options": [
           "Nie je to výrok.",
           "Je to pravdivý výrok – P.",
