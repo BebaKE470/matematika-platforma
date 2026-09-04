@@ -197,7 +197,7 @@
     };
   }
 
-  async function sendProgress(done=false){if(state.mode!=='live'||!live)return;const skill={};state.answers.forEach(a=>{if(!a.skill)return;skill[a.skill]??={ok:0,n:0};skill[a.skill].n++;if(a.correct)skill[a.skill].ok++});const maxScore=moduleMaxPoints();const percent=maxScore?Math.round(100*state.score/maxScore):0;try{await live.send({type:'broadcast',event:'progress',payload:{nick:state.nick,moduleId:state.moduleId,stage:done?'done':'working',score:state.score,maxScore,percent,question:Math.min(state.index+1,currentModule?.student.activities.length||0),total:currentModule?.student.activities.length||0,skill,self:state.reflection,ts:Date.now()}})}catch(_){} }
+  async function sendProgress(done=false){if(state.mode!=='live'||!live)return;const skill={};state.answers.forEach(a=>{if(!a.skill)return;skill[a.skill]??={ok:0,n:0};skill[a.skill].n++;if(a.correct)skill[a.skill].ok++});const maxScore=moduleMaxPoints();const percent=maxScore?Math.round(100*state.score/maxScore):0;try{await live.send({type:'broadcast',event:'progress',payload:{nick:state.nick,moduleId:state.moduleId,stage:done?'done':'working',score:state.score,maxScore,percent,question:Math.min(state.index+1,currentModule?.student.activities.length||0),total:currentModule?.student.activities.length||0,skill,self:state.reflection,answers:state.answers.map(a=>({id:a.id,skill:a.skill,correct:!!a.correct,attempts:a.attempts||0,points:a.points||0})),ts:Date.now()}})}catch(_){} }
 
   function teacher(){
     if(!teacherUnlocked()){
@@ -227,10 +227,11 @@
     if(!teacherUnlocked()){ go('teacher'); return; }
     id=id&&meta(id)?.status==='ready'?id:'1-logika-01';
     const m=meta(id), c=code();
+    try{ currentModule=await load(id); }catch(_){ currentModule=null; }
     let grading=loadGradingSettings();
     const joinUrl=`${location.origin}${location.pathname}#join/${encodeURIComponent(id)}/${encodeURIComponent(c)}`;
     app.innerHTML=`<div class="card"><div class="eyebrow"><span class="live-dot"></span> ŽIVÁ HODINA</div><h1>${m.topic}</h1><div style="display:flex;gap:28px;align-items:center;flex-wrap:wrap;margin:18px 0"><div><p><strong>Naskenuj QR kód:</strong></p><div id="joinQr" style="background:#fff;padding:12px;border-radius:12px;display:inline-block;min-width:220px;min-height:220px"></div></div><div><p class="muted">Po naskenovaní sa otvorí správny modul aj táto hodina. Žiak zadá už iba nick.</p><p>Kód pre ručné pripojenie:</p><div class="bigcode">${c}</div><p class="muted">Záloha: žiak môže otvoriť platformu → „Mám kód hodiny“ → zadať nick a tento kód.</p></div></div><div id="connect" class="notice">Pripájam živý kanál…</div><div class="row"><button class="btn" id="endLive" disabled>Ukončiť hodinu</button><button class="ghost" onclick="location.hash='method/${id}'">Metodická karta</button><button class="ghost" data-go="teacher-unit/${m.year}/${unitKey(m.unit)}">Späť k témam</button></div></div>
-    <div class="card" style="margin-top:16px"><div class="eyebrow">HODNOTENIE A EXPORT</div><h2>Nastavenie známkovania</h2><label style="display:flex;gap:10px;align-items:center;margin:10px 0 14px"><input id="gradingEnabled" type="checkbox" ${grading.enabled?'checked':''}> <strong>Počítať aj orientačné známky z percent</strong></label><div id="gradingFields" style="${grading.enabled?'':'display:none'}"><p class="muted">Zadaj najnižšie percento pre danú známku. Hranice musia klesať.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;max-width:650px">${[1,2,3,4].map(g=>`<div class="field"><label>Známka ${g} od</label><input id="grade${g}" type="number" min="0" max="100" step="1" value="${grading.thresholds[g]}"></div>`).join('')}</div><div id="gradingInfo" class="notice" style="margin-top:10px">${gradingScaleText(grading)}</div></div><div class="row" style="margin-top:14px"><button class="ghost" id="saveGrading">Uložiť nastavenie</button><button class="btn" id="exportResults">Exportovať výsledky CSV</button></div><p class="muted small-note">Nastavenie sa uloží iba v tomto prehliadači. Export obsahuje aktuálne výsledky tejto živej hodiny a zostáva dostupný aj po jej ukončení, kým túto stránku neopustíš.</p></div>
+    <div class="card" style="margin-top:16px"><div class="eyebrow">HODNOTENIE A EXPORT</div><h2>Nastavenie známkovania</h2><div style="display:flex;align-items:center;gap:10px;justify-content:flex-start;margin:14px 0 18px"><input id="gradingEnabled" type="checkbox" ${grading.enabled?'checked':''} style="width:20px;height:20px;margin:0;flex:0 0 auto"><label for="gradingEnabled" style="margin:0;cursor:pointer"><strong>Počítať aj orientačné známky z percent</strong></label></div><div id="gradingFields" style="${grading.enabled?'':'display:none'}"><p class="muted">Zadaj najnižšie percento pre danú známku. Hranice musia klesať.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;max-width:650px">${[1,2,3,4].map(g=>`<div class="field"><label>Známka ${g} od</label><input id="grade${g}" type="number" min="0" max="100" step="1" value="${grading.thresholds[g]}"></div>`).join('')}</div><div id="gradingInfo" class="notice" style="margin-top:10px">${gradingScaleText(grading)}</div></div><div class="row" style="margin-top:14px"><button class="ghost" id="saveGrading">Uložiť nastavenie</button><button class="btn" id="exportResults">Exportovať kompletné výsledky CSV</button></div><p class="muted small-note">Nastavenie sa uloží iba v tomto prehliadači. Export obsahuje súhrn, sebahodnotenie, výsledky podľa zručností aj jednotlivé bodované aktivity žiakov. Zostáva dostupný aj po ukončení hodiny, kým túto stránku neopustíš.</p></div>
     <div class="card" style="margin-top:16px"><h2>Živá diagnostika</h2><div id="summary" class="muted">Zatiaľ bez výsledkov.</div><div id="students" class="live-list"></div></div>`;
     drawJoinQr('joinQr',joinUrl).catch(e=>{console.error('QR chyba:',e);const el=$('#joinQr');if(el)el.innerHTML='<span class="muted">QR kód sa nepodarilo načítať. Použi textový kód vedľa.</span>';});
     let students={};
@@ -242,14 +243,49 @@
       grading=s;saveGradingSettings(grading);const el=$('#gradingInfo');el.className='notice good';el.innerHTML=`<strong>Nastavenie uložené.</strong> ${grading.enabled?gradingScaleText(grading):'Známkovanie je vypnuté.'}`;drawStudents(students,grading);
     };
     $('#exportResults').onclick=()=>{
-      const s=readGradingFromForm();
-      if(!validGradingThresholds(s.thresholds)){alert('Pred exportom oprav hranice známok.');return;}
+      const s=readSettings();
+      if(!validGradingThresholds(s.thresholds)){alert('Pred exportom oprav hranice známok.');return}
       grading=s;
       const arr=Object.values(students).sort((a,b)=>a.nick.localeCompare(b.nick,'sk'));
-      if(!arr.length){alert('Zatiaľ nie sú žiadne výsledky na export.');return;}
-      const rows=[['Téma',m.topic],['Kód hodiny',c],['Dátum a čas exportu',new Date().toLocaleString('sk-SK')],['Známkovanie',grading.enabled?'zapnuté':'vypnuté'],...(grading.enabled?[['Stupnica',gradingScaleText(grading)]]:[]),[],['Žiak / nick','Stav','Body (XP)','Maximum','Percentá',...(grading.enabled?['Známka']:[]),'Postup']];
-      arr.forEach(x=>rows.push([x.nick||'',x.stage==='done'?'Hotovo':x.stage==='joined'?'Pripojený':'Pracuje',Number(x.score)||0,Number(x.maxScore)||0,Number.isFinite(Number(x.percent))?`${Number(x.percent)} %`:'',...(grading.enabled?[gradeForPercent(Number(x.percent),grading)||'']:[]),`${x.question||0}/${x.total||0}`]));
-      const safe=(m.topic||'vysledky').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,50),d=new Date(),stamp=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+      if(!arr.length){alert('Zatiaľ nie sú žiadne výsledky na export.');return}
+
+      const activityMap=new Map((currentModule?.student?.activities||[]).map((a,i)=>[a.id,{order:i+1,title:a.title||a.skill||a.phase||a.id,type:a.type||''}]));
+      const answerIds=[];
+      arr.forEach(x=>(x.answers||[]).forEach(a=>{if(!answerIds.includes(a.id))answerIds.push(a.id)}));
+      answerIds.sort((a,b)=>(activityMap.get(a)?.order??999)-(activityMap.get(b)?.order??999));
+      const skillNames=[];
+      arr.forEach(x=>Object.keys(x.skill||{}).forEach(k=>{if(!skillNames.includes(k))skillNames.push(k)}));
+      const selfKeys=[];
+      arr.forEach(x=>Object.keys(x.self||{}).forEach(k=>{if(!selfKeys.includes(k))selfKeys.push(k)}));
+
+      const rows=[
+        ['Téma',m.topic],
+        ['Kód hodiny',c],
+        ['Dátum a čas exportu',new Date().toLocaleString('sk-SK')],
+        ['Známkovanie',grading.enabled?'zapnuté':'vypnuté'],
+        ...(grading.enabled?[['Stupnica',gradingScaleText(grading)]]:[]),
+        [],
+        ['Žiak / nick','Stav','Body (XP)','Maximum','Percentá',...(grading.enabled?['Známka']:[]),'Postup',
+          ...skillNames.map(k=>`Zručnosť: ${k}`),
+          ...selfKeys.map(k=>`Sebahodnotenie: ${k}`),
+          ...answerIds.map(id=>{const a=activityMap.get(id);return `Úloha ${a?.order??''}: ${a?.title||id}`;})
+        ]
+      ];
+      arr.forEach(x=>{
+        const answerById=new Map((x.answers||[]).map(a=>[a.id,a]));
+        rows.push([
+          x.nick||'',x.stage==='done'?'Hotovo':x.stage==='joined'?'Pripojený':'Pracuje',
+          Number(x.score)||0,Number(x.maxScore)||0,
+          Number.isFinite(Number(x.percent))?`${Number(x.percent)} %`:'',
+          ...(grading.enabled?[gradeForPercent(Number(x.percent),grading)||'']:[]),
+          `${x.question||0}/${x.total||0}`,
+          ...skillNames.map(k=>{const v=x.skill?.[k];return v?`${v.ok||0}/${v.n||0}`:'';}),
+          ...selfKeys.map(k=>{const v=x.self?.[k];return v==='green'?'zelená – rozumiem':v==='yellow'?'žltá – ešte si nie som istý/istá':v==='red'?'červená – potrebujem pomoc':String(v??'');}),
+          ...answerIds.map(id=>{const a=answerById.get(id);return a?`${a.correct?'správne':'nesprávne'}; pokusy: ${a.attempts||0}; body: ${a.points||0}`:'';})
+        ]);
+      });
+      const safe=(m.topic||'vysledky').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-zA-Z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,50);
+      const d=new Date(),stamp=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
       downloadCsv(`${stamp}-${safe||'vysledky-triedy'}.csv`,rows);
     };
     try{
