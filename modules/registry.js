@@ -14,6 +14,13 @@ const planned = (id, year, unit, unitOrder, topic, lesson, lessonOrder, file) =>
   time: 'TODO', status: 'placeholder', type: 'TODO – zástupný modul', skills: [], file
 });
 
+const ready = (id, year, unit, unitOrder, topic, lesson, lessonOrder, file) => ({
+  id, year, unit, unitOrder, topic, lesson, lessonOrder,
+  time: '≈ 15 min', status: 'ready',
+  type: 'Interaktívne precvičovanie → spätná väzba → argumentácia',
+  skills: ['porozumenie', 'presný zápis', 'argumentácia'], file
+});
+
 window.MATH_MODULE_INDEX = [
   // ==================== 1. ROČNÍK ====================
 
@@ -354,12 +361,12 @@ window.MATH_MODULE_INDEX = [
   {"id": "1-u03-h037", "year": 1, "unit": "Čísla, premenné, výrazy", "unitOrder": 3, "topic": "Kontrolná písomná práca", "lesson": "Hodina 37", "lessonOrder": 37, "time": "5–7 min digitálne + písomka", "status": "ready", "type": "Názornosť → aktivita → zápis → argumentácia → ručná kontrola", "skills": ["porozumenie", "modelovanie", "presný zápis", "argumentácia"], "file": "modules/1-rocnik/cisla-premenne-vyrazy/37-kontrolna-pisomna-praca.js"},
 
   // 1.04 · Absolútna hodnota a intervaly
-  planned('1-u04-h038', 1, "Absolútna hodnota a intervaly", 4, "Absolútna hodnota reálnych čísel", "Hodina 38", 38, "modules/1-rocnik/absolutna-hodnota-a-intervaly/38-absolutna-hodnota-realnych-cisel.js"),
-  planned('1-u04-h039', 1, "Absolútna hodnota a intervaly", 4, "Intervaly", "Hodina 39", 39, "modules/1-rocnik/absolutna-hodnota-a-intervaly/39-intervaly.js"),
-  planned('1-u04-h040', 1, "Absolútna hodnota a intervaly", 4, "Zjednotenie a prienik intervalov", "Hodina 40", 40, "modules/1-rocnik/absolutna-hodnota-a-intervaly/40-zjednotenie-a-prienik-intervalov.js"),
-  planned('1-u04-h041', 1, "Absolútna hodnota a intervaly", 4, "Aplikácia intervalov", "Hodina 41", 41, "modules/1-rocnik/absolutna-hodnota-a-intervaly/41-aplikacia-intervalov.js"),
-  planned('1-u04-h042', 1, "Absolútna hodnota a intervaly", 4, "Riešenie úloh", "Hodina 42", 42, "modules/1-rocnik/absolutna-hodnota-a-intervaly/42-riesenie-uloh.js"),
-  planned('1-u04-h043', 1, "Absolútna hodnota a intervaly", 4, "Previerka", "Hodina 43", 43, "modules/1-rocnik/absolutna-hodnota-a-intervaly/43-previerka.js"),
+  ready('1-u04-h038', 1, "Absolútna hodnota a intervaly", 4, "Absolútna hodnota reálnych čísel", "Hodina 38", 38, "modules/1-rocnik/absolutna-hodnota-a-intervaly/38-absolutna-hodnota-realnych-cisel.js"),
+  ready('1-u04-h039', 1, "Absolútna hodnota a intervaly", 4, "Intervaly", "Hodina 39", 39, "modules/1-rocnik/absolutna-hodnota-a-intervaly/39-intervaly.js"),
+  ready('1-u04-h040', 1, "Absolútna hodnota a intervaly", 4, "Zjednotenie a prienik intervalov", "Hodina 40", 40, "modules/1-rocnik/absolutna-hodnota-a-intervaly/40-zjednotenie-a-prienik-intervalov.js"),
+  ready('1-u04-h041', 1, "Absolútna hodnota a intervaly", 4, "Aplikácia intervalov", "Hodina 41", 41, "modules/1-rocnik/absolutna-hodnota-a-intervaly/41-aplikacia-intervalov.js"),
+  ready('1-u04-h042', 1, "Absolútna hodnota a intervaly", 4, "Riešenie úloh", "Hodina 42", 42, "modules/1-rocnik/absolutna-hodnota-a-intervaly/42-riesenie-uloh.js"),
+  ready('1-u04-h043', 1, "Absolútna hodnota a intervaly", 4, "Previerka", "Hodina 43", 43, "modules/1-rocnik/absolutna-hodnota-a-intervaly/43-previerka.js"),
 
   // 1.05 · Mocniny a odmocniny
   planned('1-u05-h044', 1, "Mocniny a odmocniny", 5, "Definícia mocniny, zápis, príklady na kladné prirodzené mocnitele", "Hodina 44", 44, "modules/1-rocnik/mocniny-a-odmocniny/44-definicia-mocniny-zapis-priklady-na-kladne-prirodzene-mocnitele.js"),
@@ -517,15 +524,15 @@ window.MATH_MODULE_INDEX = [
   {"id": "2-u03-h022", "year": 2, "unit": "Lineárne rovnice", "unitOrder": 3, "topic": "Systematizácia učiva", "lesson": "Hodina 22", "lessonOrder": 22, "time": "15–18 min", "status": "ready", "type": "Názornosť → aktivita → zápis → argumentácia → ručná kontrola", "skills": ["porozumenie", "modelovanie", "presný zápis", "argumentácia"], "file": "modules/2-rocnik/linearne-rovnice/22-systematizacia-uciva.js"},
 
   // 2.04 · Lineárne nerovnice
-  planned('2-u04-h024', 2, "Lineárne nerovnice", 4, "Lineárne nerovnice a ekvivalentné úpravy pri jej riešení", "Hodina 24", 24, "modules/2-rocnik/linearne-nerovnice/24-linearne-nerovnice-a-ekvivalentne-upravy-pri-jej-rieseni.js"),
-  planned('2-u04-h025', 2, "Lineárne nerovnice", 4, "Lineárne nerovnice s neznámou v menovateli", "Hodina 25", 25, "modules/2-rocnik/linearne-nerovnice/25-linearne-nerovnice-s-neznamou-v-menovateli.js"),
-  planned('2-u04-h026', 2, "Lineárne nerovnice", 4, "Riešenie úloh", "Hodina 26", 26, "modules/2-rocnik/linearne-nerovnice/26-riesenie-uloh.js"),
-  planned('2-u04-h027', 2, "Lineárne nerovnice", 4, "Lineárne nerovnice s absolútnou hodnotou", "Hodina 27", 27, "modules/2-rocnik/linearne-nerovnice/27-linearne-nerovnice-s-absolutnou-hodnotou.js"),
-  planned('2-u04-h028', 2, "Lineárne nerovnice", 4, "Riešenie úloh", "Hodina 28", 28, "modules/2-rocnik/linearne-nerovnice/28-riesenie-uloh.js"),
-  planned('2-u04-h029', 2, "Lineárne nerovnice", 4, "Sústava lineárnych nerovníc s jednou neznámou", "Hodina 29", 29, "modules/2-rocnik/linearne-nerovnice/29-sustava-linearnych-nerovnic-s-jednou-neznamou.js"),
-  planned('2-u04-h030', 2, "Lineárne nerovnice", 4, "Riešenie úloh", "Hodina 30", 30, "modules/2-rocnik/linearne-nerovnice/30-riesenie-uloh.js"),
-  planned('2-u04-h031', 2, "Lineárne nerovnice", 4, "Systematizácia učiva", "Hodina 31", 31, "modules/2-rocnik/linearne-nerovnice/31-systematizacia-uciva.js"),
-  planned('2-u04-h032', 2, "Lineárne nerovnice", 4, "Kontrolná písomná práca", "Hodina 32", 32, "modules/2-rocnik/linearne-nerovnice/32-kontrolna-pisomna-praca.js"),
+  ready('2-u04-h024', 2, "Lineárne nerovnice", 4, "Lineárne nerovnice a ekvivalentné úpravy pri jej riešení", "Hodina 24", 24, "modules/2-rocnik/linearne-nerovnice/24-linearne-nerovnice-a-ekvivalentne-upravy-pri-jej-rieseni.js"),
+  ready('2-u04-h025', 2, "Lineárne nerovnice", 4, "Lineárne nerovnice s neznámou v menovateli", "Hodina 25", 25, "modules/2-rocnik/linearne-nerovnice/25-linearne-nerovnice-s-neznamou-v-menovateli.js"),
+  ready('2-u04-h026', 2, "Lineárne nerovnice", 4, "Riešenie úloh", "Hodina 26", 26, "modules/2-rocnik/linearne-nerovnice/26-riesenie-uloh.js"),
+  ready('2-u04-h027', 2, "Lineárne nerovnice", 4, "Lineárne nerovnice s absolútnou hodnotou", "Hodina 27", 27, "modules/2-rocnik/linearne-nerovnice/27-linearne-nerovnice-s-absolutnou-hodnotou.js"),
+  ready('2-u04-h028', 2, "Lineárne nerovnice", 4, "Riešenie úloh", "Hodina 28", 28, "modules/2-rocnik/linearne-nerovnice/28-riesenie-uloh.js"),
+  ready('2-u04-h029', 2, "Lineárne nerovnice", 4, "Sústava lineárnych nerovníc s jednou neznámou", "Hodina 29", 29, "modules/2-rocnik/linearne-nerovnice/29-sustava-linearnych-nerovnic-s-jednou-neznamou.js"),
+  ready('2-u04-h030', 2, "Lineárne nerovnice", 4, "Riešenie úloh", "Hodina 30", 30, "modules/2-rocnik/linearne-nerovnice/30-riesenie-uloh.js"),
+  ready('2-u04-h031', 2, "Lineárne nerovnice", 4, "Systematizácia učiva", "Hodina 31", 31, "modules/2-rocnik/linearne-nerovnice/31-systematizacia-uciva.js"),
+  ready('2-u04-h032', 2, "Lineárne nerovnice", 4, "Kontrolná písomná práca", "Hodina 32", 32, "modules/2-rocnik/linearne-nerovnice/32-kontrolna-pisomna-praca.js"),
 
   // 2.05 · Základy geometrie trojuholníkov
   planned('2-u05-h033', 2, "Základy geometrie trojuholníkov", 5, "Zhodnosť a podobnosť trojuholníkov,", "Hodina 33", 33, "modules/2-rocnik/zaklady-geometrie-trojuholnikov/33-zhodnost-a-podobnost-trojuholnikov.js"),
