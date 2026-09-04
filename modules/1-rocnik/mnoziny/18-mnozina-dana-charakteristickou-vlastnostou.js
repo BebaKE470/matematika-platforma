@@ -30,7 +30,7 @@ MathPlatform.registerModule({
     "flow": [
       "4–5 min: krátky problém pri tabuli",
       "15–20 min: vybrané digitálne aktivity",
-      "8–10 min: čistý zápis a ručná úloha",
+      "8–10 min: zápis do zošita a ručná úloha",
       "5 min: spoločné zdôvodnenie"
     ],
     "diagnostics": [
@@ -102,8 +102,8 @@ MathPlatform.registerModule({
         "id": "notebook",
         "type": "notebook",
         "phase": "ZOŠIT",
-        "title": "Čistý zápis až po porozumení",
-        "html": "<p><span class=\"mini-label\">ČISTÝ ZÁPIS – TEÓRIA</span><br>Zapíš význam charakteristickej vlastnosti a schému <strong>{x ∈ U; podmienka}</strong>.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Pre U={1,2,3,4,5,6,7,8,9,10} zapíš charakteristickou vlastnosťou množinu {3,6,9}.</p>",
+        "title": "Zápis do zošita až po porozumení",
+        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Zapíš význam charakteristickej vlastnosti a schému <strong>{x ∈ U; podmienka}</strong>.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Pre U={1,2,3,4,5,6,7,8,9,10} zapíš charakteristickou vlastnosťou množinu {3,6,9}.</p>",
         "model": "<strong>VZOR:</strong> Charakteristická vlastnosť opisuje spoločnú podmienku, ktorú spĺňajú práve prvky množiny. Jedna možnosť úlohy: {x ∈ U; x je deliteľné 3}."
       },
       {

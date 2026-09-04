@@ -118,7 +118,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "PRACOVNÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Zostroj graf ručne",
         "html": "<p>Pre <strong>g(x)=−2x+4</strong> si zvoľ aspoň tri hodnoty x, vypočítaj g(x), zapíš body a zostroj graf v zošite.</p>",
         "model": "Jedna možnosť: [0;4], [1;2], [2;0]. Všetky tri body ležia na jednej priamke."
@@ -138,7 +138,7 @@ MathPlatform.registerModule({
       {
         "id": "clean",
         "type": "notebook",
-        "phase": "ČISTÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Lineárna funkcia a jej graf",
         "html": "<p><strong>TEÓRIA:</strong> Lineárna funkcia má predpis f(x)=ax+b. Jej grafom je priamka. Číslo b je f(0), takže graf pretína os y v bode [0;b].</p>",
         "model": "<strong>POSTUP:</strong> zvolím x → vypočítam f(x) → zapíšem body [x;f(x)] → zostrojím priamku."

@@ -30,7 +30,7 @@ MathPlatform.registerModule({
       "argumentácia a zdôvodňovanie",
       "kritické posudzovanie tvrdení",
       "práca so symbolickým a slovným zápisom",
-      "prehľadný pracovný a čistý zápis v zošite"
+      "prehľadný zápis do zošita v zošite"
     ],
     "enrichment": [
       "Návrh štandardu zdôrazňuje kritické posudzovanie tvrdení, odhaľovanie nesprávnej negácie a zámeny implikácie za ekvivalenciu; tieto prvky sú použité ako forma precvičovania."
@@ -163,7 +163,7 @@ MathPlatform.registerModule({
         "phase": "VYJADRI SA",
         "skill": "Argumentácia",
         "title": "Oprav chybnú vetu",
-        "promptHtml": "<span class=\"mini-label\">PRACOVNÝ ZÁPIS</span><br>„Ak je číslo deliteľné 4, je párne. Číslo 18 je párne. Preto je deliteľné 4.“ Vysvetli chybu.",
+        "promptHtml": "<span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>„Ak je číslo deliteľné 4, je párne. Číslo 18 je párne. Preto je deliteľné 4.“ Vysvetli chybu.",
         "model": "<strong>MOŽNÁ FORMULÁCIA:</strong> Argument používa obrátenú implikáciu, ktorá z pôvodnej implikácie nevyplýva. Protipríklad je 18: je párne, ale nie je deliteľné 4."
       },
       {

@@ -31,7 +31,7 @@ MathPlatform.registerModule({
       "argumentácia a zdôvodňovanie",
       "kritické posudzovanie tvrdení",
       "práca so symbolickým a slovným zápisom",
-      "prehľadný pracovný a čistý zápis v zošite"
+      "prehľadný zápis do zošita v zošite"
     ],
     "enrichment": [
       "Návrh štandardu explicitne uvádza všeobecný a existenčný kvantifikátor a ich symbolický zápis; modul zdôrazňuje preklad medzi reprezentáciami."
@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Prelož medzi jazykmi",
-        "html": "<p><span class=\"mini-label\">ČISTÝ ZÁPIS</span><br>Zapíš význam symbolov ∀ a ∃.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Prepíš symbolicky: a) Každé reálne číslo má nezápornú druhú mocninu. b) Existuje prirodzené číslo väčšie ako 100.</p>",
+        "html": "<p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš význam symbolov ∀ a ∃.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Prepíš symbolicky: a) Každé reálne číslo má nezápornú druhú mocninu. b) Existuje prirodzené číslo väčšie ako 100.</p>",
         "model": "<strong>VZOR:</strong> ∀ = pre každý; ∃ = existuje aspoň jeden. a) ∀ x (x je reálne číslo): x² ≥ 0. b) ∃ n (n je prirodzené číslo): n &gt; 100."
       },
       {

@@ -30,7 +30,7 @@ MathPlatform.registerModule({
       "argumentácia a zdôvodňovanie",
       "kritické posudzovanie tvrdení",
       "práca so symbolickým a slovným zápisom",
-      "prehľadný pracovný a čistý zápis v zošite"
+      "prehľadný zápis do zošita v zošite"
     ],
     "enrichment": [
       "Návrh štandardu pracuje s pravdivosťou zložených výrokov a reprezentáciou v tabuľke; aktuálny plán navyše explicitne obsahuje tautológie, kontradikcie a kontingencie."
@@ -123,7 +123,7 @@ MathPlatform.registerModule({
         "phase": "VYJADRI SA",
         "skill": "Argumentácia",
         "title": "Nie iba názov, ale dôvod",
-        "promptHtml": "<span class=\"mini-label\">PRACOVNÝ ZÁPIS</span><br>Vysvetli jednou až dvoma vetami, prečo A ∨ ¬A musí byť vždy pravdivé.",
+        "promptHtml": "<span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vysvetli jednou až dvoma vetami, prečo A ∨ ¬A musí byť vždy pravdivé.",
         "model": "<strong>MOŽNÁ FORMULÁCIA:</strong> Výrok A má vždy jednu z dvoch pravdivostných hodnôt. Ak je A pravdivý, disjunkcia platí cez A; ak je A nepravdivý, ¬A je pravdivý, takže disjunkcia opäť platí."
       },
       {

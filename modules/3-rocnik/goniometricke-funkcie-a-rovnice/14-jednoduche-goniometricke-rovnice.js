@@ -35,7 +35,7 @@ MathPlatform.registerModule({
     "flow": [
       "4–5 min aktivácia predchádzajúcich vedomostí",
       "15–22 min vybraná digitálna časť",
-      "8–12 min pracovný/čistý zápis a ručné riešenie",
+      "8–12 min zápis do zošita a ručné riešenie",
       "5 min spoločná syntéza"
     ],
     "diagnostics": [
@@ -102,10 +102,10 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "PRACOVNÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Rieš ručne",
         "html": "<p>Vytvor v zošite jeden vlastný príklad k téme <strong>Jednoduché goniometrické rovnice</strong>. Každý krok označ vzťahom alebo dôvodom, ktorý používaš.</p>",
-        "model": "Pracovný zápis môže obsahovať opravu. Dôležité je, aby bolo vidieť, prečo jednotlivé kroky platia."
+        "model": "Zápis do zošita môže obsahovať opravu. Dôležité je, aby bolo vidieť, prečo jednotlivé kroky platia."
       },
       {
         "id": "arg",
@@ -134,10 +134,10 @@ MathPlatform.registerModule({
       {
         "id": "clean",
         "type": "notebook",
-        "phase": "ČISTÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Jednoduché goniometrické rovnice",
-        "html": "<p><strong>TEÓRIA:</strong> Po spoločnej kontrole zapíš iba presné vzťahy/postup, ktoré patria k dnešnej téme. Pridaj jeden vzorový príklad.</p>",
-        "model": "Čistý zápis musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
+        "html": "<p><strong>TEÓRIA:</strong> Zapíš si do zošita dôležité vzťahy alebo postup z dnešnej témy a jeden vzorový príklad.</p>",
+        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {
         "id": "reflection",

@@ -149,7 +149,7 @@ MathPlatform.registerModule({
       {
         "id": "workflow",
         "type": "notebook",
-        "phase": "ČISTÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Algoritmus čítania vlastností z grafu",
         "html": "<p><strong>1.</strong> D(f) podľa osi x. <strong>2.</strong> H(f) podľa osi y. <strong>3.</strong> rast/klesanie. <strong>4.</strong> maximum/minimum. <strong>5.</strong> symetria. <strong>6.</strong> prostosť. <strong>7.</strong> ohraničenosť.</p>",
         "model": "Pri každej odpovedi sa snaž odkázať na konkrétnu vlastnosť grafu, nie iba napísať názov."

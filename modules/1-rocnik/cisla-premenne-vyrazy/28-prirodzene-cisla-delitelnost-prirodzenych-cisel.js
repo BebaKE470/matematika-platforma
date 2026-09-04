@@ -29,7 +29,7 @@ MathPlatform.registerModule({
     "flow": [
       "2–3 min: problém alebo názorný podnet",
       "cca 15 min: vybrané digitálne aktivity",
-      "8–10 min: ručné riešenie a čistý zápis",
+      "8–10 min: ručné riešenie a zápis do zošita",
       "3–5 min: spoločná kontrola"
     ],
     "diagnostics": [
@@ -91,8 +91,8 @@ MathPlatform.registerModule({
         "id": "notebook",
         "type": "notebook",
         "phase": "ZOŠIT",
-        "title": "Od pokusu k čistému zápisu",
-        "html": "<p><span class=\"mini-label\">PRACOVNÝ ZÁPIS</span><br>Over 234 pomocou kritérií deliteľnosti 2, 3 a 6.</p><p><span class=\"mini-label\">ČISTÝ ZÁPIS</span><br>Po kontrole zapíš pravidlo, význam symbolov a jeden vlastný príklad.</p>",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Over 234 pomocou kritérií deliteľnosti 2, 3 a 6.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
         "model": "<strong>KONTROLA:</strong> Číslo je deliteľné 6 práve vtedy, keď je deliteľné 2 aj 3. Kritériá treba použiť obe."
       },
       {

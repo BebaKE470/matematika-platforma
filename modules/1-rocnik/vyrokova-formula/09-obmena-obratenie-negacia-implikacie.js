@@ -32,7 +32,7 @@ MathPlatform.registerModule({
       "argumentácia a zdôvodňovanie",
       "kritické posudzovanie tvrdení",
       "práca so symbolickým a slovným zápisom",
-      "prehľadný pracovný a čistý zápis v zošite"
+      "prehľadný zápis do zošita v zošite"
     ],
     "enrichment": [
       "Návrh štandardu uvádza obmenu a obrátenú implikáciu aj ekvivalenciu A⇒B s ¬B⇒¬A; modul túto väzbu používa bez posúvania poradia učiva."
@@ -141,7 +141,7 @@ MathPlatform.registerModule({
         "phase": "VYJADRI SA",
         "skill": "Argumentácia",
         "title": "Prečo obrátená veta nemusí platiť?",
-        "promptHtml": "<span class=\"mini-label\">PRACOVNÝ ZÁPIS</span><br>Vysvetli na príklade s deliteľnosťou 4 a párnosťou, prečo pravdivosť A ⇒ B nestačí na pravdivosť B ⇒ A.",
+        "promptHtml": "<span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vysvetli na príklade s deliteľnosťou 4 a párnosťou, prečo pravdivosť A ⇒ B nestačí na pravdivosť B ⇒ A.",
         "model": "<strong>MOŽNÁ FORMULÁCIA:</strong> Každé číslo deliteľné 4 je párne, ale párnosť je slabšia podmienka. Napríklad 6 je párne, no nie je deliteľné 4, takže obrátená implikácia neplatí."
       },
       {

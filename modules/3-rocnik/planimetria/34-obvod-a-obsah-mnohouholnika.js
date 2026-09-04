@@ -33,7 +33,7 @@ MathPlatform.registerModule({
     "flow": [
       "4–5 min aktivácia predchádzajúcich vedomostí",
       "15–22 min vybraná digitálna časť",
-      "8–12 min pracovný/čistý zápis a ručné riešenie",
+      "8–12 min zápis do zošita a ručné riešenie",
       "5 min spoločná syntéza"
     ],
     "diagnostics": [
@@ -84,7 +84,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "PRACOVNÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Náčrt a riešenie",
         "html": "<p>Do zošita si načrtni situáciu k téme <strong>Obvod a obsah mnohouholníka</strong>, označ známe a hľadané veličiny a vyrieš jeden číselný príklad. Jednotky zapisuj pri medzivýsledkoch aj výsledku.</p>",
         "model": "Kontrola: náčrt → údaje → vzťah → dosadenie → výpočet → jednotka → odpoveď."
@@ -116,10 +116,10 @@ MathPlatform.registerModule({
       {
         "id": "clean",
         "type": "notebook",
-        "phase": "ČISTÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Obvod a obsah mnohouholníka",
         "html": "<p><strong>TEÓRIA:</strong> Mnohouholník často rozdelíme na jednoduchšie útvary a obsahy sčítame/odčítame.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
-        "model": "Čistý zápis: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
+        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
       },
       {
         "id": "reflection",

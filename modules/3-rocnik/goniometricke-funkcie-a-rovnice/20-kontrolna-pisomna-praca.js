@@ -33,7 +33,7 @@ MathPlatform.registerModule({
     "flow": [
       "4–5 min aktivácia predchádzajúcich vedomostí",
       "15–22 min vybraná digitálna časť",
-      "8–12 min pracovný/čistý zápis a ručné riešenie",
+      "8–12 min zápis do zošita a ručné riešenie",
       "5 min spoločná syntéza"
     ],
     "diagnostics": [

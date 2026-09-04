@@ -140,7 +140,7 @@ MathPlatform.registerModule({
       {
         "id": "clean",
         "type": "notebook",
-        "phase": "ČISTÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Vlastnosti lineárnej funkcie",
         "html": "<p><strong>TEÓRIA:</strong> Pre f(x)=ax+b: a&gt;0 rastúca, a&lt;0 klesajúca, a=0 konštantná. Bod [0;b] je priesečník s osou y. Nulový bod spĺňa f(x)=0.</p>",
         "model": "<strong>PRÍKLAD:</strong> f(x)=−2x+6 je klesajúca, pretína os y v [0;6] a os x v [3;0]."

@@ -29,7 +29,7 @@ MathPlatform.registerModule({
     "flow": [
       "4–5 min: krátky problém pri tabuli",
       "15–20 min: vybrané digitálne aktivity",
-      "8–10 min: čistý zápis a ručná úloha",
+      "8–10 min: zápis do zošita a ručná úloha",
       "5 min: spoločné zdôvodnenie"
     ],
     "diagnostics": [
@@ -99,7 +99,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Upevni si podstatu",
-        "html": "<p><span class=\"mini-label\">ČISTÝ ZÁPIS</span><br>Zapíš názov témy: <strong>Kardinalita množiny</strong>. Pridaj definíciu alebo pravidlo vlastnými slovami a jeden správny príklad.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor vlastný príklad a vyrieš ho bez aplikácie.</p>",
+        "html": "<p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš názov témy: <strong>Kardinalita množiny</strong>. Pridaj definíciu alebo pravidlo vlastnými slovami a jeden správny príklad.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor vlastný príklad a vyrieš ho bez aplikácie.</p>",
         "model": "<strong>KONTROLA:</strong> Zápis musí používať presné symboly a musí byť z neho jasné, prečo výsledok platí."
       },
       {

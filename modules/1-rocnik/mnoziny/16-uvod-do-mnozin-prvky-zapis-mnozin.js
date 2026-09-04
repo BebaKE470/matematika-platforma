@@ -30,7 +30,7 @@ MathPlatform.registerModule({
     "flow": [
       "4–5 min: krátky problém pri tabuli",
       "15–20 min: vybrané digitálne aktivity",
-      "8–10 min: čistý zápis a ručná úloha",
+      "8–10 min: zápis do zošita a ručná úloha",
       "5 min: spoločné zdôvodnenie"
     ],
     "diagnostics": [
@@ -116,16 +116,16 @@ MathPlatform.registerModule({
         "id": "working",
         "type": "notebook",
         "phase": "ZOŠIT",
-        "title": "PRACOVNÝ ZÁPIS – skús sám/sama",
-        "html": "<p><span class=\"mini-label\">PRACOVNÝ ZÁPIS</span></p><p>Nech B = {1, 3, 5, 7}. Bez aplikácie zapíš pomocou ∈ alebo ∉:</p><p>a) číslo 5 a množina B &nbsp;&nbsp; b) číslo 4 a množina B.</p><p>Potom oba zápisy prečítaj slovami.</p>",
+        "title": "ÚLOHA DO ZOŠITA – skús sám/sama",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span></p><p>Nech B = {1, 3, 5, 7}. Bez aplikácie zapíš pomocou ∈ alebo ∉:</p><p>a) číslo 5 a množina B &nbsp;&nbsp; b) číslo 4 a množina B.</p><p>Potom oba zápisy prečítaj slovami.</p>",
         "model": "<strong>KONTROLA:</strong> 5 ∈ B, pretože 5 je prvkom B. 4 ∉ B, pretože 4 medzi prvkami B nie je."
       },
       {
         "id": "clean",
         "type": "notebook",
-        "phase": "ČISTÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Čo si z dneška odnesiem",
-        "html": "<p><span class=\"mini-label\">ČISTÝ ZÁPIS</span></p><p><strong>NADPIS:</strong> Množina, prvok množiny, zápis množiny</p><p><strong>TEÓRIA:</strong> Množina je súbor objektov, pri ktorom vieme jednoznačne rozhodnúť, či objekt do množiny patrí. Objekty množiny nazývame prvky.</p><p><strong>SYMBOLY:</strong> x ∈ A – x patrí do A; &nbsp; x ∉ A – x nepatrí do A.</p><p><strong>PRÍKLAD:</strong> A = {2, 4, 6}; 4 ∈ A; 5 ∉ A.</p>",
+        "html": "<p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span></p><p><strong>NADPIS:</strong> Množina, prvok množiny, zápis množiny</p><p><strong>TEÓRIA:</strong> Množina je súbor objektov, pri ktorom vieme jednoznačne rozhodnúť, či objekt do množiny patrí. Objekty množiny nazývame prvky.</p><p><strong>SYMBOLY:</strong> x ∈ A – x patrí do A; &nbsp; x ∉ A – x nepatrí do A.</p><p><strong>PRÍKLAD:</strong> A = {2, 4, 6}; 4 ∈ A; 5 ∉ A.</p>",
         "model": "Toto je presný zápis, ku ktorému sa môžeš pri ďalších témach vrátiť."
       },
       {

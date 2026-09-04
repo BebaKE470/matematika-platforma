@@ -30,7 +30,7 @@ MathPlatform.registerModule({
     "flow": [
       "2–3 min: problém alebo názorný podnet",
       "cca 15 min: vybrané digitálne aktivity",
-      "8–10 min: ručné riešenie a čistý zápis",
+      "8–10 min: ručné riešenie a zápis do zošita",
       "3–5 min: spoločná kontrola"
     ],
     "diagnostics": [
@@ -92,8 +92,8 @@ MathPlatform.registerModule({
         "id": "notebook",
         "type": "notebook",
         "phase": "ZOŠIT",
-        "title": "Od pokusu k čistému zápisu",
-        "html": "<p><span class=\"mini-label\">PRACOVNÝ ZÁPIS</span><br>Pri každej úlohe podčiarkni základ. Potom zapíš, či percentovú hodnotu pripočítavaš alebo odpočítavaš.</p><p><span class=\"mini-label\">ČISTÝ ZÁPIS</span><br>Po kontrole zapíš pravidlo, význam symbolov a jeden vlastný príklad.</p>",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pri každej úlohe podčiarkni základ. Potom zapíš, či percentovú hodnotu pripočítavaš alebo odpočítavaš.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
         "model": "<strong>KONTROLA:</strong> Pri zľave o 20 % násobíme pôvodnú cenu číslom 0,80; pri zvýšení o 20 % číslom 1,20."
       },
       {

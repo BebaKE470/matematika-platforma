@@ -130,7 +130,7 @@ MathPlatform.registerModule({
       {
         "id": "paper",
         "type": "notebook",
-        "phase": "PRACOVNÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Ručný tréning",
         "html": "<p>Bez mobilu vyrieš pre <strong>g(x)=0,5x−2</strong>: g(6), priesečník s osou y, nulový bod, monotónnosť. Potom načrtni graf.</p>",
         "model": "g(6)=1; os y: [0;−2]; nulový bod x=4; funkcia je rastúca."

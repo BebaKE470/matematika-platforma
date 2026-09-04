@@ -32,7 +32,7 @@ MathPlatform.registerModule({
       "argumentácia a zdôvodňovanie",
       "kritické posudzovanie tvrdení",
       "práca so symbolickým a slovným zápisom",
-      "prehľadný pracovný a čistý zápis v zošite"
+      "prehľadný zápis do zošita v zošite"
     ],
     "enrichment": [
       "Návrh štandardu explicitne uvádza negáciu všeobecného a existenčného výroku a protipríklad; modul to využíva priamo v rámci aktuálneho plánu."

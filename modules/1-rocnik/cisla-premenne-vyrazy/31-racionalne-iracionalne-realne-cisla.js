@@ -29,7 +29,7 @@ MathPlatform.registerModule({
     "flow": [
       "2–3 min: problém alebo názorný podnet",
       "cca 15 min: vybrané digitálne aktivity",
-      "8–10 min: ručné riešenie a čistý zápis",
+      "8–10 min: ručné riešenie a zápis do zošita",
       "3–5 min: spoločná kontrola"
     ],
     "diagnostics": [
@@ -91,8 +91,8 @@ MathPlatform.registerModule({
         "id": "notebook",
         "type": "notebook",
         "phase": "ZOŠIT",
-        "title": "Od pokusu k čistému zápisu",
-        "html": "<p><span class=\"mini-label\">PRACOVNÝ ZÁPIS</span><br>Na číselnú os približne umiestni 1/2, √2 a 3/2.</p><p><span class=\"mini-label\">ČISTÝ ZÁPIS</span><br>Po kontrole zapíš pravidlo, význam symbolov a jeden vlastný príklad.</p>",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Na číselnú os približne umiestni 1/2, √2 a 3/2.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
         "model": "<strong>KONTROLA:</strong> Racionálne číslo možno zapísať ako zlomok celých čísel s nenulovým menovateľom. Iracionálne číslo takto zapísať nemožno; obe skupiny patria medzi reálne čísla."
       },
       {

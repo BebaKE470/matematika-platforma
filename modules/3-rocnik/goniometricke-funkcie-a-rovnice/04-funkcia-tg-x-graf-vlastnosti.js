@@ -34,7 +34,7 @@ MathPlatform.registerModule({
     "flow": [
       "4–5 min aktivácia predchádzajúcich vedomostí",
       "15–22 min vybraná digitálna časť",
-      "8–12 min pracovný/čistý zápis a ručné riešenie",
+      "8–12 min zápis do zošita a ručné riešenie",
       "5 min spoločná syntéza"
     ],
     "diagnostics": [
@@ -109,7 +109,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "PRACOVNÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Načrtni graf tg x",
         "html": "<p>V zošite vyznač základné body/asymptoty podľa potreby a načrtni graf na intervale od −2π do 2π. Potom pod graf zapíš tri vlastnosti, ktoré z neho vieš prečítať.</p>",
         "model": "Skontroluj základné hodnoty, periodicitu a symetriu. Pri tg/cotg nezabudni na body, v ktorých funkcia nie je definovaná."
@@ -125,10 +125,10 @@ MathPlatform.registerModule({
       {
         "id": "clean",
         "type": "notebook",
-        "phase": "ČISTÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "tg x – definícia a vlastnosti",
         "html": "<p><strong>TEÓRIA:</strong> Zapíš definíciu tg x, definičný obor, obor hodnôt, periódu, nuly a symetriu podľa spoločnej kontroly s učiteľom.</p>",
-        "model": "Čistý zápis má byť presný a má obsahovať aj malý náčrt grafu."
+        "model": "Zápis do zošita má byť presný a má obsahovať aj malý náčrt grafu."
       },
       {
         "id": "reflection",

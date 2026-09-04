@@ -33,7 +33,7 @@ MathPlatform.registerModule({
       "argumentácia a zdôvodňovanie",
       "kritické posudzovanie tvrdení",
       "práca so symbolickým a slovným zápisom",
-      "prehľadný pracovný a čistý zápis v zošite"
+      "prehľadný zápis do zošita v zošite"
     ],
     "enrichment": [
       "Návrh štandardu 4.3 uvádza priamy, nepriamy dôkaz a dôkaz sporom, rozlíšenie overenia od dôkazu a identifikáciu chýb v argumentácii. Modul používa len jednoduché prípady prístupné po doterajšom učive."
@@ -151,7 +151,7 @@ MathPlatform.registerModule({
         "phase": "VYJADRI SA",
         "skill": "Kritické posúdenie",
         "title": "Nájdi problém v argumente",
-        "promptHtml": "<span class=\"mini-label\">PRACOVNÝ ZÁPIS</span><br>„1+3=4, 3+5=8, 5+7=12. Preto sme dokázali, že súčet každých dvoch nepárnych čísel je párny.“ Čo je na tomto závere nesprávne?",
+        "promptHtml": "<span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>„1+3=4, 3+5=8, 5+7=12. Preto sme dokázali, že súčet každých dvoch nepárnych čísel je párny.“ Čo je na tomto závere nesprávne?",
         "model": "<strong>MOŽNÁ FORMULÁCIA:</strong> Uvedené príklady tvrdenie podporujú, ale dokazujú iba tri konkrétne prípady. Všeobecný dôkaz musí vysvetliť, prečo tvrdenie platí pre ľubovoľné dve nepárne celé čísla."
       },
       {

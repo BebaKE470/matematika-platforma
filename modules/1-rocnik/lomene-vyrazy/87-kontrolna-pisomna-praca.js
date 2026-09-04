@@ -14,7 +14,7 @@ MathPlatform.registerModule({
     competencies: ["TODO – doplniť pri spracovaní modulu."],
     enrichment: ["TODO – návrh maturitného štandardu použiť iba ako prirodzené obohatenie, nie ako určujúce učivo."],
     estimatedTime: "TODO – cieľ približne 15 minút aktívnej práce, ak charakter hodiny nevyžaduje inak.",
-    notebook: "TODO – zachovať pracovný zápis → kontrola/vysvetlenie → čistý zápis.",
+    notebook: "TODO – zachovať zápis do zošita → kontrola/vysvetlenie → zápis do zošita.",
     diagnostics: ["TODO – doplniť diagnostické body pri spracovaní modulu."],
     flow: ["TODO – vytvoriť názorný, vekovo primeraný a obsahovo presný priebeh hodiny."],
     partialUse: ["TODO – určiť, ktoré časti sa dajú použiť samostatne."]

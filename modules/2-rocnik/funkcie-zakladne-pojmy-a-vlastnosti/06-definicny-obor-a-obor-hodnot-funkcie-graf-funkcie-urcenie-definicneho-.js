@@ -101,7 +101,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "PRACOVNÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Čítaj graf ručne",
         "html": "<p>Prekresli si jednoduchý graf z obrazovky a farebne alebo šípkami vyznač jeho „tieň“ na osi x a na osi y. Vedľa zapíš D(f) a H(f).</p>",
         "model": "D(f)=⟨−3;4⟩, H(f)=⟨−2;4⟩."
@@ -121,7 +121,7 @@ MathPlatform.registerModule({
       {
         "id": "clean",
         "type": "notebook",
-        "phase": "ČISTÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Definičný obor a obor hodnôt",
         "html": "<p><strong>TEÓRIA:</strong> D(f) – všetky dovolené vstupy x. H(f) – všetky dosiahnuté funkčné hodnoty y=f(x). Z grafu čítame D(f) podľa osi x a H(f) podľa osi y.</p>",
         "model": "Pri uzavretom krajnom bode hodnotu zahŕňame; pri otvorenom bode ju nezahŕňame."

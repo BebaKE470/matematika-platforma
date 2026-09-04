@@ -22,7 +22,7 @@ MathPlatform.registerModule({
     ],
     "goals": [
       "pochopiť spôsob práce v tematickom celku",
-      "rozlíšiť pracovný a čistý zápis",
+      "rozlíšiť zápis do zošita",
       "vedieť, kedy aplikáciu použiť a kedy ju odložiť",
       "vytvoriť si mapu pojmov, ktoré sa budú postupne budovať"
     ],
@@ -31,7 +31,7 @@ MathPlatform.registerModule({
       "argumentácia a zdôvodňovanie",
       "kritické posudzovanie tvrdení",
       "práca so symbolickým a slovným zápisom",
-      "prehľadný pracovný a čistý zápis v zošite"
+      "prehľadný zápis do zošita v zošite"
     ],
     "enrichment": [
       "Návrh maturitného štandardu zdôrazňuje matematickú komunikáciu, argumentáciu a kritické posudzovanie tvrdení; tu sa používa iba ako metodické obohatenie spôsobu práce."
@@ -39,11 +39,11 @@ MathPlatform.registerModule({
     "flow": [
       "5 min: spoločné predstavenie pravidiel práce",
       "10–12 min: krátky digitálny úvod",
-      "10 min: zošit – ukážka pracovného a čistého zápisu",
+      "10 min: zošit – ukážka zápisu do zošita",
       "zvyšok hodiny: učiteľské organizačné pokyny a krátke diagnostické úlohy"
     ],
     "diagnostics": [
-      "rozumie rozdielu medzi pracovným a čistým zápisom",
+      "rozumie rozdielu medzi zápisom do zošita",
       "vie, že XP nie sú známka",
       "vie, že nie každá hodina musí byť digitálna"
     ],
@@ -79,8 +79,8 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Dva typy zápisu",
-        "html": "<p><span class=\"mini-label\">PRACOVNÝ ZÁPIS</span><br>Skús vlastnými slovami napísať, na čo by ti mohla byť logika v matematike užitočná. Pokojne nepresne.</p><p><span class=\"mini-label\">NADPIS – ČISTÝ ZÁPIS</span><br><strong>Výroková logika</strong></p>",
-        "model": "<strong>ČISTÝ ZÁPIS:</strong> PRACOVNÝ ZÁPIS = môžem sa mýliť. ČISTÝ ZÁPIS = presná formulácia, ktorú si mám odniesť z hodiny."
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Skús vlastnými slovami napísať, na čo by ti mohla byť logika v matematike užitočná. Pokojne nepresne.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br><strong>Výroková logika</strong></p>",
+        "model": "<strong>ZAPÍŠ SI DO ZOŠITA:</strong> ÚLOHA DO ZOŠITA = môžem sa mýliť. ZAPÍŠ SI DO ZOŠITA = presná formulácia, ktorú si mám odniesť z hodiny."
       },
       {
         "id": "xp",
@@ -103,8 +103,8 @@ MathPlatform.registerModule({
         "phase": "ZÁVER",
         "title": "Na štart sme pripravení",
         "skills": [
-          "viem, čo patrí do pracovného zápisu",
-          "viem, čo patrí do čistého zápisu",
+          "viem, čo patrí do zápisu do zošita",
+          "viem, čo patrí do zápisu do zošita",
           "viem, kedy má zmysel aplikáciu odložiť"
         ],
         "prompt": "Pri každej položke vyber, ako dobre jej teraz rozumieš. Toto nie je známka; je to spätná väzba pre tvoje ďalšie učenie."

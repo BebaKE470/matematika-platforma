@@ -34,7 +34,7 @@ MathPlatform.registerModule({
     "flow": [
       "4–5 min aktivácia predchádzajúcich vedomostí",
       "15–22 min vybraná digitálna časť",
-      "8–12 min pracovný/čistý zápis a ručné riešenie",
+      "8–12 min zápis do zošita a ručné riešenie",
       "5 min spoločná syntéza"
     ],
     "diagnostics": [
@@ -109,7 +109,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "PRACOVNÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Nakresli vlastnú jednotkovú kružnicu",
         "html": "<p>Nakresli osi, kružnicu so stredom O a r=1. Vyznač 0, π/2, π, 3π/2, 2π a −π/2. Šípkou označ kladný smer.</p>",
         "model": "Skontroluj najmä: 0 a 2π sú v bode [1;0]; π/2 hore; π vľavo; 3π/2 dole; −π/2 dole."
@@ -125,7 +125,7 @@ MathPlatform.registerModule({
       {
         "id": "clean",
         "type": "notebook",
-        "phase": "ČISTÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Jednotková kružnica",
         "html": "<p><strong>TEÓRIA:</strong> Jednotková kružnica má stred O=[0;0] a polomer 1. Reálne číslo x zobrazujeme od bodu [1;0] ako orientovaný oblúk dĺžky |x|. Kladný smer je proti smeru hodinových ručičiek.</p>",
         "model": "Doplň: celý obeh = 2π rad; x a x+2kπ určujú ten istý bod."

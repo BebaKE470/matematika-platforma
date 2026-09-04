@@ -32,7 +32,7 @@ MathPlatform.registerModule({
       "argumentácia a zdôvodňovanie",
       "kritické posudzovanie tvrdení",
       "práca so symbolickým a slovným zápisom",
-      "prehľadný pracovný a čistý zápis v zošite"
+      "prehľadný zápis do zošita v zošite"
     ],
     "enrichment": [
       "Návrh štandardu explicitne uvádza negáciu konjunkcie, disjunkcie (de Morganove pravidlá) a implikácie; obohatenie je najmä v argumentácii, prečo pravidlo funguje."
@@ -124,8 +124,8 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Tri pravidlá, ktoré majú zmysel",
-        "html": "<p><span class=\"mini-label\">PRACOVNÝ ZÁPIS</span><br>Skús bez pozerania zapísať negácie: ¬(A ∧ B), ¬(A ∨ B), ¬(A ⇒ B).</p><p>Potom odkry kontrolu.</p>",
-        "model": "<strong>ČISTÝ ZÁPIS – TEÓRIA:</strong><br>¬(A ∧ B) ⇔ ¬A ∨ ¬B<br>¬(A ∨ B) ⇔ ¬A ∧ ¬B<br>¬(A ⇒ B) ⇔ A ∧ ¬B"
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Skús bez pozerania zapísať negácie: ¬(A ∧ B), ¬(A ∨ B), ¬(A ⇒ B).</p><p>Potom odkry kontrolu.</p>",
+        "model": "<strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong><br>¬(A ∧ B) ⇔ ¬A ∨ ¬B<br>¬(A ∨ B) ⇔ ¬A ∧ ¬B<br>¬(A ⇒ B) ⇔ A ∧ ¬B"
       },
       {
         "id": "check",
@@ -161,7 +161,7 @@ MathPlatform.registerModule({
         "phase": "VYJADRI SA",
         "skill": "Argumentácia",
         "title": "Vysvetli De Morganovo pravidlo",
-        "promptHtml": "<span class=\"mini-label\">PRACOVNÝ ZÁPIS</span><br>Vlastnými slovami vysvetli, prečo negácia vety „Mám ceruzku a pravítko“ znie „Nemám ceruzku alebo nemám pravítko“.",
+        "promptHtml": "<span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vlastnými slovami vysvetli, prečo negácia vety „Mám ceruzku a pravítko“ znie „Nemám ceruzku alebo nemám pravítko“.",
         "model": "<strong>MOŽNÁ PRESNÁ FORMULÁCIA:</strong> Pôvodná veta tvrdí, že mám obe veci. Je nepravdivá už vtedy, keď mi chýba aspoň jedna z nich, preto sa pri negácii spojka „a“ mení na „alebo“."
       },
       {

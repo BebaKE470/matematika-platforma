@@ -31,7 +31,7 @@ MathPlatform.registerModule({
       "argumentácia a zdôvodňovanie",
       "kritické posudzovanie tvrdení",
       "práca so symbolickým a slovným zápisom",
-      "prehľadný pracovný a čistý zápis v zošite"
+      "prehľadný zápis do zošita v zošite"
     ],
     "enrichment": [
       "Formát niektorých úloh pripomína maturitný test, ale obsah a náročnosť ostávajú na úrovni aktuálne prebraného učiva."

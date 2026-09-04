@@ -73,11 +73,9 @@
   };
 
   R.notebook = (a, ctx) => {
-    let shown = false;
-    ctx.app.innerHTML = `<article class="card notebook learning-card">${cardHeader(a,ctx)}<div class="eyebrow">MOBIL NA CHVÍĽU ODLOŽ</div><h1>✍️ ${esc(a.title)}</h1>${a.html || ''}<div class="actions"><button class="ghost" id="model">Keď mám napísané, ukáž vzor</button><button class="btn" id="continue">Mám zapísané</button></div><div id="modelbox"></div></article>`;
+    ctx.app.innerHTML = `<article class="card notebook learning-card">${cardHeader(a,ctx)}<div class="eyebrow">ZOŠIT</div><h1>✍️ ${esc(a.title || 'Zapíš si do zošita')}</h1>${a.html || ''}<div class="actions"><button class="btn" id="continue">${esc(a.continueLabel || 'Mám zapísané')}</button></div></article>`;
     wireBack(ctx);
-    document.querySelector('#model').onclick = () => {shown=true; document.querySelector('#modelbox').innerHTML=`<div class="remember">${a.model}</div>`; document.querySelector('#model').disabled=true};
-    document.querySelector('#continue').onclick = () => { if (!shown && a.model) { document.querySelector('#modelbox').innerHTML=`<div class="notice">Pred pokračovaním si porovnaj svoj zápis so vzorom.<br><br>${a.model}</div>`; shown=true; document.querySelector('#continue').textContent='Porovnal/a som, pokračovať'; return;} ctx.record(a,true,1,20); ctx.next(); };
+    document.querySelector('#continue').onclick = () => { ctx.record(a,true,1,20); ctx.next(); };
   };
 
   R.selfWrite = (a, ctx) => {

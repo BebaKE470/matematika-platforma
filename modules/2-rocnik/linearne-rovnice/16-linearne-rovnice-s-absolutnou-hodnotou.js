@@ -243,7 +243,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Čistý algoritmus do zošita',
-        html: '<p><span class="mini-label">PRACOVNÝ ZÁPIS</span><br>Rieš v zošite <strong>|x−2| + |x+4| = 10</strong>. Najprv bez pomoci nájdi kritické body, urob číselnú os a rozdeľ riešenie na intervaly.</p><p><span class="mini-label">ČISTÝ ZÁPIS</span><br>Po kontrole si zapíš deväťkrokový postup z predchádzajúcej obrazovky a pod neho svoje opravené riešenie.</p>',
+        html: '<p><span class="mini-label">ÚLOHA DO ZOŠITA</span><br>Rieš v zošite <strong>|x−2| + |x+4| = 10</strong>. Najprv bez pomoci nájdi kritické body, urob číselnú os a rozdeľ riešenie na intervaly.</p><p><span class="mini-label">ZAPÍŠ SI DO ZOŠITA</span><br>Po kontrole si zapíš deväťkrokový postup z predchádzajúcej obrazovky a pod neho svoje opravené riešenie.</p>',
         model: '<strong>KONTROLA:</strong> Kritické body sú x=2 a x=−4. Intervaly: x&lt;−4, −4≤x&lt;2, x≥2. V strednom intervale je súčet vzdialeností medzi bodmi −4 a 2 stále 6, takže tam riešenie nevznikne. V krajných intervaloch vyjdú x=−6 a x=4. Obe hodnoty po dosadení dávajú 10.'
       },
       {

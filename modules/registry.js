@@ -23,7 +23,7 @@ window.MATH_MODULE_INDEX = [
     topic: "Úvodné pokyny", lesson: "Hodina 1", lessonOrder: 1,
     time: "10–12 min", status: 'ready',
     type: "Orientácia → pravidlá práce → zošit → reflexia",
-    skills: ["pracovný a čistý zápis", "samostatnosť", "matematická komunikácia"],
+    skills: ["zápis do zošita", "samostatnosť", "matematická komunikácia"],
     file: 'modules/1-rocnik/vyrokova-formula/01-uvodne-pokyny.js'
   },
   {
@@ -615,7 +615,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h001', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Zobrazenie množiny reálnych čísel do jednotkovej kružnice", lesson: 'Hodina 1', lessonOrder: 1,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/01-zobrazenie-mnoziny-realnych-cisel-do-jednotkovej-kruznice.js"
   },
@@ -623,7 +623,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h002', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Funkcia sin x, graf, vlastnosti", lesson: 'Hodina 2', lessonOrder: 2,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/02-funkcia-sin-x-graf-vlastnosti.js"
   },
@@ -631,7 +631,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h003', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Funkcia cos x, graf, vlastnosti", lesson: 'Hodina 3', lessonOrder: 3,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/03-funkcia-cos-x-graf-vlastnosti.js"
   },
@@ -639,7 +639,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h004', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Funkcia tg x, graf, vlastnosti", lesson: 'Hodina 4', lessonOrder: 4,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/04-funkcia-tg-x-graf-vlastnosti.js"
   },
@@ -647,7 +647,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h005', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Funkcia cotg x, graf, vlastnosti", lesson: 'Hodina 5', lessonOrder: 5,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/05-funkcia-cotg-x-graf-vlastnosti.js"
   },
@@ -655,7 +655,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h006', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Zložené goniometrické funkcie sin x a cos x", lesson: 'Hodina 6', lessonOrder: 6,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/06-zlozene-goniometricke-funkcie-sin-x-a-cos-x.js"
   },
@@ -663,7 +663,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h007', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Grafy goniometrických funkcií – precvičovanie", lesson: 'Hodina 7', lessonOrder: 7,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/07-grafy-goniometrickych-funkcii-precvicovanie.js"
   },
@@ -671,7 +671,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h008', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Kontrolná písomná práca", lesson: 'Hodina 8', lessonOrder: 8,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/08-kontrolna-pisomna-praca.js"
   },
@@ -679,7 +679,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h009', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Základné goniometrické vzorce", lesson: 'Hodina 9', lessonOrder: 9,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/09-zakladne-goniometricke-vzorce.js"
   },
@@ -687,7 +687,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h010', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Súčtové vzorce", lesson: 'Hodina 10', lessonOrder: 10,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/10-suctove-vzorce.js"
   },
@@ -695,7 +695,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h011', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Vzorce pre dvojnásobný uhol", lesson: 'Hodina 11', lessonOrder: 11,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/11-vzorce-pre-dvojnasobny-uhol.js"
   },
@@ -703,7 +703,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h012', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Súčet a rozdiel funkcií rôznych hodnôt", lesson: 'Hodina 12', lessonOrder: 12,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/12-sucet-a-rozdiel-funkcii-roznych-hodnot.js"
   },
@@ -711,7 +711,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h013', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Úprava goniometrických výrazov", lesson: 'Hodina 13', lessonOrder: 13,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/13-uprava-goniometrickych-vyrazov.js"
   },
@@ -719,7 +719,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h014', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Jednoduché goniometrické rovnice", lesson: 'Hodina 14', lessonOrder: 14,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/14-jednoduche-goniometricke-rovnice.js"
   },
@@ -727,7 +727,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h015', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Riešenie úloh", lesson: 'Hodina 15', lessonOrder: 15,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/15-riesenie-uloh.js"
   },
@@ -735,7 +735,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h016', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Goniometrické rovnice", lesson: 'Hodina 16', lessonOrder: 16,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/16-goniometricke-rovnice.js"
   },
@@ -743,7 +743,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h017', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Riešenie goniometrických rovníc", lesson: 'Hodina 17', lessonOrder: 17,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/17-riesenie-goniometrickych-rovnic.js"
   },
@@ -751,7 +751,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h018', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Riešenie goniometrických rovníc", lesson: 'Hodina 18', lessonOrder: 18,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/18-riesenie-goniometrickych-rovnic.js"
   },
@@ -759,7 +759,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h019', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Opakovanie", lesson: 'Hodina 19', lessonOrder: 19,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/19-opakovanie.js"
   },
@@ -767,7 +767,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u01-h020', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Kontrolná písomná práca", lesson: 'Hodina 20', lessonOrder: 20,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/20-kontrolna-pisomna-praca.js"
   },
@@ -777,7 +777,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h022', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Trojuholník", lesson: 'Hodina 22', lessonOrder: 22,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/22-trojuholnik.js"
   },
@@ -785,7 +785,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h023', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah trojuholníka", lesson: 'Hodina 23', lessonOrder: 23,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/23-obvod-a-obsah-trojuholnika.js"
   },
@@ -793,7 +793,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h024', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Riešenie úloh", lesson: 'Hodina 24', lessonOrder: 24,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/24-riesenie-uloh.js"
   },
@@ -801,7 +801,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h025', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Štvoruholníky", lesson: 'Hodina 25', lessonOrder: 25,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/25-stvoruholniky.js"
   },
@@ -809,7 +809,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h026', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah štvorca", lesson: 'Hodina 26', lessonOrder: 26,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/26-obvod-a-obsah-stvorca.js"
   },
@@ -817,7 +817,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h027', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah obdĺžnika", lesson: 'Hodina 27', lessonOrder: 27,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/27-obvod-a-obsah-obdlznika.js"
   },
@@ -825,7 +825,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h028', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Riešenie úloh", lesson: 'Hodina 28', lessonOrder: 28,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/28-riesenie-uloh.js"
   },
@@ -833,7 +833,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h029', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah lichobežníka", lesson: 'Hodina 29', lessonOrder: 29,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/29-obvod-a-obsah-lichobeznika.js"
   },
@@ -841,7 +841,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h030', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Riešenie úloh", lesson: 'Hodina 30', lessonOrder: 30,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/30-riesenie-uloh.js"
   },
@@ -849,7 +849,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h031', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah kosoštvorca", lesson: 'Hodina 31', lessonOrder: 31,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/31-obvod-a-obsah-kosostvorca.js"
   },
@@ -857,7 +857,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h032', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah kosodĺžnika", lesson: 'Hodina 32', lessonOrder: 32,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/32-obvod-a-obsah-kosodlznika.js"
   },
@@ -865,7 +865,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h033', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Riešenie úloh", lesson: 'Hodina 33', lessonOrder: 33,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/33-riesenie-uloh.js"
   },
@@ -873,7 +873,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h034', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah mnohouholníka", lesson: 'Hodina 34', lessonOrder: 34,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/34-obvod-a-obsah-mnohouholnika.js"
   },
@@ -881,7 +881,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h035', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Riešenie úloh", lesson: 'Hodina 35', lessonOrder: 35,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/35-riesenie-uloh.js"
   },
@@ -889,7 +889,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h036', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah kruhu a jeho častí", lesson: 'Hodina 36', lessonOrder: 36,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/36-obvod-a-obsah-kruhu-a-jeho-casti.js"
   },
@@ -897,7 +897,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h037', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Riešenie úloh", lesson: 'Hodina 37', lessonOrder: 37,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/37-riesenie-uloh.js"
   },
@@ -905,7 +905,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h038', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Riešenie praktických úloh", lesson: 'Hodina 38', lessonOrder: 38,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/38-riesenie-praktickych-uloh.js"
   },
@@ -913,7 +913,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h039', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Systematizácia učiva", lesson: 'Hodina 39', lessonOrder: 39,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/39-systematizacia-uciva.js"
   },
@@ -921,7 +921,7 @@ window.MATH_MODULE_INDEX = [
     id: '3-u02-h040', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Kontrolná písomná práca", lesson: 'Hodina 40', lessonOrder: 40,
     time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
+    type: 'Význam → vizualizácia → zápis do zošita → overenie',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/40-kontrolna-pisomna-praca.js"
   },

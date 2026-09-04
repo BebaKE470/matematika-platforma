@@ -30,7 +30,7 @@ MathPlatform.registerModule({
     "flow": [
       "2–3 min: problém alebo názorný podnet",
       "cca 15 min: vybrané digitálne aktivity",
-      "8–10 min: ručné riešenie a čistý zápis",
+      "8–10 min: ručné riešenie a zápis do zošita",
       "3–5 min: spoločná kontrola"
     ],
     "diagnostics": [
@@ -92,8 +92,8 @@ MathPlatform.registerModule({
         "id": "notebook",
         "type": "notebook",
         "phase": "ZOŠIT",
-        "title": "Od pokusu k čistému zápisu",
-        "html": "<p><span class=\"mini-label\">PRACOVNÝ ZÁPIS</span><br>Nakresli veľký kruh ako rez gule a označ polomer r; vedľa zapíš jednotky S a V.</p><p><span class=\"mini-label\">ČISTÝ ZÁPIS</span><br>Po kontrole zapíš pravidlo, význam symbolov a jeden vlastný príklad.</p>",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli veľký kruh ako rez gule a označ polomer r; vedľa zapíš jednotky S a V.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
         "model": "<strong>KONTROLA:</strong> Pre guľu S=4πr² a V=(4/3)πr³. Zdvojnásobenie r zväčší povrch 4-krát a objem 8-krát."
       },
       {

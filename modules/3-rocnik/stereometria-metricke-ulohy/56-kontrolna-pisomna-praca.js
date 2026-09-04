@@ -29,7 +29,7 @@ MathPlatform.registerModule({
     "flow": [
       "2–3 min: problém alebo názorný podnet",
       "cca 15 min: vybrané digitálne aktivity",
-      "8–10 min: ručné riešenie a čistý zápis",
+      "8–10 min: ručné riešenie a zápis do zošita",
       "3–5 min: spoločná kontrola"
     ],
     "diagnostics": [

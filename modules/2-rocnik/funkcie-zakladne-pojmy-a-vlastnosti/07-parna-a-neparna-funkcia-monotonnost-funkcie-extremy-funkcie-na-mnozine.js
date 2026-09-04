@@ -31,7 +31,7 @@ MathPlatform.registerModule({
     "flow": [
       "5 min mapa pojmov",
       "15–18 min modul",
-      "10 min čistý zápis",
+      "10 min zápis do zošita",
       "5 min ústne príklady"
     ],
     "diagnostics": [
@@ -163,7 +163,7 @@ MathPlatform.registerModule({
       {
         "id": "clean",
         "type": "notebook",
-        "phase": "ČISTÝ ZÁPIS",
+        "phase": "ZOŠIT",
         "title": "Slovník vlastností funkcie",
         "html": "<p>Do zošita stručne zapíš definície: párna, nepárna, rastúca/klesajúca, maximum/minimum, prostá, zhora/zdola ohraničená. Ku každej pridaj jednu grafickú alebo slovnú pomôcku.</p>",
         "model": "Príklad pomôcky: prostá → vodorovná priamka pretne graf najviac raz."

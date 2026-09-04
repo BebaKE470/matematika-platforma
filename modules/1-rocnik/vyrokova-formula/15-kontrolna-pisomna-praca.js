@@ -30,7 +30,7 @@ MathPlatform.registerModule({
       "argumentácia a zdôvodňovanie",
       "kritické posudzovanie tvrdení",
       "práca so symbolickým a slovným zápisom",
-      "prehľadný pracovný a čistý zápis v zošite"
+      "prehľadný zápis do zošita v zošite"
     ],
     "enrichment": [
       "Digitálny modul tu nie je náhradou písomnej práce. Zásada platformy: nie každá hodina musí byť digitálna; hodnotenie má overiť aj samostatný ručný zápis a argumentáciu."
