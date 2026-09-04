@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pri použitom vzorci skontroluj jednotky a jeden hraničný prípad.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pri použitom vzorci skontroluj jednotky a jeden hraničný prípad.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Hraničný prípad je silná kontrola: zložitejší vzorec sa má v špeciálnej situácii zmeniť na známy jednoduchší vzorec.</p>",
         "model": "<strong>KONTROLA:</strong> Hraničný prípad je silná kontrola: zložitejší vzorec sa má v špeciálnej situácii zmeniť na známy jednoduchší vzorec."
       },
       {

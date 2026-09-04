@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Riešenie úloh",
-        "html": "<p><strong>TEÓRIA:</strong> Zapíš si do zošita dôležité vzťahy alebo postup z dnešnej témy a jeden vzorový príklad.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Postup pri goniometrickej úlohe</strong></p><p>1. Urči, čo je dané a čo hľadáš.</p><p>2. Vyber vhodný goniometrický vzťah.</p><p>3. Uprav výraz alebo rovnicu.</p><p>4. Skontroluj podmienky a interval.</p><p>5. Over výsledok v pôvodnom zadaní.</p>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {

@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vyrieš y=x+2 a 2x+y=11 dosadením.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vyrieš y=x+2 a 2x+y=11 dosadením.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Sčítacia, dosadzovacia aj porovnávacia metóda vedú pri správnom použití k rovnakému riešeniu; výber ovplyvňuje efektívnosť.</p>",
         "model": "<strong>KONTROLA:</strong> Sčítacia, dosadzovacia aj porovnávacia metóda vedú pri správnom použití k rovnakému riešeniu; výber ovplyvňuje efektívnosť."
       },
       {

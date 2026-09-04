@@ -93,7 +93,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Rozlož 36 a 48 na prvočinitele a vyznač spoločné faktory.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Rozlož 36 a 48 na prvočinitele a vyznač spoločné faktory.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>NSD je najväčší spoločný deliteľ; NSN najmenší kladný spoločný násobok. Prvočíselný rozklad pomáha oba určiť.</p>",
         "model": "<strong>KONTROLA:</strong> NSD je najväčší spoločný deliteľ; NSN najmenší kladný spoločný násobok. Prvočíselný rozklad pomáha oba určiť."
       },
       {

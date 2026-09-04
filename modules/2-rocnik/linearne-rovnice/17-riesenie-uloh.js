@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vyrieš |3x−6|=9 dvoma vetvami a skontroluj obe riešenia.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vyrieš |3x−6|=9 dvoma vetvami a skontroluj obe riešenia.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pri |výraz|=kladné číslo riešime dve vetvy; pri pravej strane 0 jednu a pri zápornej žiadnu.</p>",
         "model": "<strong>KONTROLA:</strong> Pri |výraz|=kladné číslo riešime dve vetvy; pri pravej strane 0 jednu a pri zápornej žiadnu."
       },
       {

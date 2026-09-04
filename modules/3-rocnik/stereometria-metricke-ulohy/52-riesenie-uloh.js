@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli veľký ihlan a vyznač odrezanú hornú časť; zapíš Vzrez=Vveľký−Vmalý.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli veľký ihlan a vyznač odrezanú hornú časť; zapíš Vzrez=Vveľký−Vmalý.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Rozklad telesa na jednoduchšie časti je legitímna stratégia, ak sa objemy neprekrývajú a spolu tvoria pôvodné teleso.</p>",
         "model": "<strong>KONTROLA:</strong> Rozklad telesa na jednoduchšie časti je legitímna stratégia, ak sa objemy neprekrývajú a spolu tvoria pôvodné teleso."
       },
       {

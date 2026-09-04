@@ -93,7 +93,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pri každej úlohe podčiarkni základ. Potom zapíš, či percentovú hodnotu pripočítavaš alebo odpočítavaš.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pri každej úlohe podčiarkni základ. Potom zapíš, či percentovú hodnotu pripočítavaš alebo odpočítavaš.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pri zľave o 20 % násobíme pôvodnú cenu číslom 0,80; pri zvýšení o 20 % číslom 1,20.</p>",
         "model": "<strong>KONTROLA:</strong> Pri zľave o 20 % násobíme pôvodnú cenu číslom 0,80; pri zvýšení o 20 % číslom 1,20."
       },
       {

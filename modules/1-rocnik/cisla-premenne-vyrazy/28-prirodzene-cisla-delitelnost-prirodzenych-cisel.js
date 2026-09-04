@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Over 234 pomocou kritérií deliteľnosti 2, 3 a 6.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Over 234 pomocou kritérií deliteľnosti 2, 3 a 6.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Číslo je deliteľné 6 práve vtedy, keď je deliteľné 2 aj 3. Kritériá treba použiť obe.</p>",
         "model": "<strong>KONTROLA:</strong> Číslo je deliteľné 6 práve vtedy, keď je deliteľné 2 aj 3. Kritériá treba použiť obe."
       },
       {

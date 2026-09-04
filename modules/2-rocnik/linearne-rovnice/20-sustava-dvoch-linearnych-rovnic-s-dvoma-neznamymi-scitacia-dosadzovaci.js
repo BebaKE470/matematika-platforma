@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vyrieš x+y=10, x−y=4 sčítacou metódou a urob skúšku v oboch rovniciach.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vyrieš x+y=10, x−y=4 sčítacou metódou a urob skúšku v oboch rovniciach.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Riešením sústavy je usporiadaná dvojica, ktorá spĺňa obe rovnice. Metódu volíme podľa tvaru rovníc.</p>",
         "model": "<strong>KONTROLA:</strong> Riešením sústavy je usporiadaná dvojica, ktorá spĺňa obe rovnice. Metódu volíme podľa tvaru rovníc."
       },
       {

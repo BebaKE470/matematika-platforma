@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Napíš pri každej slovnej úlohe najprv: „hľadám spoločný deliteľ/násobok, pretože...“</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Napíš pri každej slovnej úlohe najprv: „hľadám spoločný deliteľ/násobok, pretože...“</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pri delení na čo najväčšie rovnaké časti typicky používame NSD; pri opakujúcich sa cykloch a prvom spoločnom termíne NSN.</p>",
         "model": "<strong>KONTROLA:</strong> Pri delení na čo najväčšie rovnaké časti typicky používame NSD; pri opakujúcich sa cykloch a prvom spoločnom termíne NSN."
       },
       {

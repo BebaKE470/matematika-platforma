@@ -137,7 +137,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zložené goniometrické funkcie sin x a cos x",
-        "html": "<p><strong>TEÓRIA:</strong> Zapíš si do zošita dôležité vzťahy alebo postup z dnešnej témy a jeden vzorový príklad.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Zložené goniometrické funkcie</strong></p><p>Pri funkciách tvaru <strong>y = a·sin(bx + c) + d</strong> a <strong>y = a·cos(bx + c) + d</strong> čísla a, b, c, d menia graf základnej funkcie.</p><p>|a| mení amplitúdu, b mení periódu, c spôsobuje vodorovný posun a d zvislý posun.</p><p>Pre b ≠ 0 je perióda <strong>T = 2π/|b|</strong>.</p>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {

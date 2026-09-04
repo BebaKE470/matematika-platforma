@@ -93,7 +93,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli veľký kruh ako rez gule a označ polomer r; vedľa zapíš jednotky S a V.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli veľký kruh ako rez gule a označ polomer r; vedľa zapíš jednotky S a V.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pre guľu S=4πr² a V=(4/3)πr³. Zdvojnásobenie r zväčší povrch 4-krát a objem 8-krát.</p>",
         "model": "<strong>KONTROLA:</strong> Pre guľu S=4πr² a V=(4/3)πr³. Zdvojnásobenie r zväčší povrch 4-krát a objem 8-krát."
       },
       {

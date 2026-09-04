@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Goniometrické rovnice",
-        "html": "<p><strong>TEÓRIA:</strong> Zapíš si do zošita dôležité vzťahy alebo postup z dnešnej témy a jeden vzorový príklad.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Goniometrická rovnica</strong></p><p>Goniometrická rovnica je rovnica, v ktorej sa neznáma nachádza v argumente goniometrickej funkcie.</p><p>Riešenie využíva periodicitu goniometrických funkcií. Po úprave na základný tvar zapíšeme všeobecné riešenia a potom ich obmedzíme na zadaný interval.</p>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {

@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Zapíš 12 % ako zlomok aj desatinné číslo a vypočítaj 12 % z 350.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Zapíš 12 % ako zlomok aj desatinné číslo a vypočítaj 12 % z 350.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>p % znamená p stotín zo základu. Pred výpočtom treba určiť základ, počet percent a percentovú hodnotu.</p>",
         "model": "<strong>KONTROLA:</strong> p % znamená p stotín zo základu. Pred výpočtom treba určiť základ, počet percent a percentovú hodnotu."
       },
       {

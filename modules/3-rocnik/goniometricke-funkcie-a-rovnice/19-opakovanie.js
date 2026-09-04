@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Opakovanie",
-        "html": "<p><strong>TEÓRIA:</strong> Zapíš si do zošita dôležité vzťahy alebo postup z dnešnej témy a jeden vzorový príklad.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Opakovanie – goniometria</strong></p><p>Pri riešení úloh prepájame grafy goniometrických funkcií, základné vzorce, súčtové vzorce, vzorce pre dvojnásobný uhol a goniometrické rovnice.</p><p>Vždy kontrolujeme definičné podmienky, znamienka, periodicitu a zadaný interval.</p>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {

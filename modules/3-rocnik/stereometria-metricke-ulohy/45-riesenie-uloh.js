@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pri troch situáciách (náter, naplnenie, obal) napíš, či potrebuješ S alebo V.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pri troch situáciách (náter, naplnenie, obal) napíš, či potrebuješ S alebo V.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Povrch modeluje množstvo materiálu na pokrytie; objem kapacitu alebo priestor vo vnútri.</p>",
         "model": "<strong>KONTROLA:</strong> Povrch modeluje množstvo materiálu na pokrytie; objem kapacitu alebo priestor vo vnútri."
       },
       {

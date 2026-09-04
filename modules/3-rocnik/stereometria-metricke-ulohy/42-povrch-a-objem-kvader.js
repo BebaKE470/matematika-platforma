@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli kváder s rozmermi a,b,c a farebne/šrafovaním spáruj zhodné steny.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli kváder s rozmermi a,b,c a farebne/šrafovaním spáruj zhodné steny.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pre kváder V=abc a S=2(ab+ac+bc). Každý typ obdĺžnikovej steny sa vyskytuje dvakrát.</p>",
         "model": "<strong>KONTROLA:</strong> Pre kváder V=abc a S=2(ab+ac+bc). Každý typ obdĺžnikovej steny sa vyskytuje dvakrát."
       },
       {

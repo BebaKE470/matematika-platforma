@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli zrezaný štvorboký ihlan a označ obe podstavy a výšku.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli zrezaný štvorboký ihlan a označ obe podstavy a výšku.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Zrezaný ihlan má dve podobné rovnobežné podstavy. Pri výpočtoch treba presne určiť obsahy oboch podstáv a kolmú výšku.</p>",
         "model": "<strong>KONTROLA:</strong> Zrezaný ihlan má dve podobné rovnobežné podstavy. Pri výpočtoch treba presne určiť obsahy oboch podstáv a kolmú výšku."
       },
       {

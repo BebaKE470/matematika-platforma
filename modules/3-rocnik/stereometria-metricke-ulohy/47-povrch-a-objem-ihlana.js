@@ -93,7 +93,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli ihlan, označ podstavu a kolmú výšku telesa; odlíš ju od bočnej hrany.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli ihlan, označ podstavu a kolmú výšku telesa; odlíš ju od bočnej hrany.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Ihlan má jednu podstavu a trojuholníkové bočné steny. Objem je tretina Sp·v; povrch S=Sp+Q.</p>",
         "model": "<strong>KONTROLA:</strong> Ihlan má jednu podstavu a trojuholníkové bočné steny. Objem je tretina Sp·v; povrch S=Sp+Q."
       },
       {

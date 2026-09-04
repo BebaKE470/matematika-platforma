@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Úprava goniometrických výrazov",
-        "html": "<p><strong>TEÓRIA:</strong> Zapíš si do zošita dôležité vzťahy alebo postup z dnešnej témy a jeden vzorový príklad.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Úprava goniometrických výrazov</strong></p><p>Pri úprave najprv rozpoznaj vhodný vzorec, potom upravuj algebraicky.</p><p>Najčastejšie používame: <strong>sin²x + cos²x = 1</strong>, súčtové vzorce a vzorce pre dvojnásobný uhol.</p><p>Pri delení výrazom vždy skontroluj, kedy je deliteľ nenulový.</p>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {

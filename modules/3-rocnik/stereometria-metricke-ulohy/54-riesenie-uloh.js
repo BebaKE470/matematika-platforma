@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vymysli dve praktické situácie s guľou: jednu na povrch a jednu na objem.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vymysli dve praktické situácie s guľou: jednu na povrch a jednu na objem.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Kontext rozhoduje o veličine: obal/náter → povrch, kapacita/množstvo vnútri → objem.</p>",
         "model": "<strong>KONTROLA:</strong> Kontext rozhoduje o veličine: obal/náter → povrch, kapacita/množstvo vnútri → objem."
       },
       {

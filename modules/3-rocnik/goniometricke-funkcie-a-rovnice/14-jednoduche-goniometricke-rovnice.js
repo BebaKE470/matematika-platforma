@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Jednoduché goniometrické rovnice",
-        "html": "<p><strong>TEÓRIA:</strong> Zapíš si do zošita dôležité vzťahy alebo postup z dnešnej témy a jeden vzorový príklad.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Jednoduché goniometrické rovnice</strong></p><p>sin x = 0 ⇔ x = kπ, k ∈ ℤ.</p><p>cos x = 0 ⇔ x = π/2 + kπ, k ∈ ℤ.</p><p>tg x = 0 ⇔ x = kπ, k ∈ ℤ.</p><p>Pri riešení na zadanom intervale z všeobecných riešení vyberieme iba tie, ktoré do intervalu patria.</p>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {

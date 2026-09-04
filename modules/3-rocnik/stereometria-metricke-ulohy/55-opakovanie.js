@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vytvor tabuľku: teleso – Sp – Q – S – V – potrebné rozmery.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vytvor tabuľku: teleso – Sp – Q – S – V – potrebné rozmery.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Namiesto izolovaného memorovania vzorcov hľadaj štruktúru: hranol/valec Sp·v, ihlan/kužeľ tretina Sp·v, povrch = podstavy + plášť.</p>",
         "model": "<strong>KONTROLA:</strong> Namiesto izolovaného memorovania vzorcov hľadaj štruktúru: hranol/valec Sp·v, ihlan/kužeľ tretina Sp·v, povrch = podstavy + plášť."
       },
       {

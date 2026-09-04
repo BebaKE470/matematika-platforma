@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli sieť valca: dva kruhy a obdĺžnik s rozmermi 2πr a v.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli sieť valca: dva kruhy a obdĺžnik s rozmermi 2πr a v.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Valec má V=πr²v a S=2πr²+2πrv. Rozvinutý plášť je obdĺžnik s jednou stranou 2πr.</p>",
         "model": "<strong>KONTROLA:</strong> Valec má V=πr²v a S=2πr²+2πrv. Rozvinutý plášť je obdĺžnik s jednou stranou 2πr."
       },
       {

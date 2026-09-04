@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Súčtové vzorce",
-        "html": "<p><strong>TEÓRIA:</strong> Zapíš si do zošita dôležité vzťahy alebo postup z dnešnej témy a jeden vzorový príklad.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Súčtové vzorce</strong></p><p>sin(α + β) = sin α·cos β + cos α·sin β</p><p>sin(α − β) = sin α·cos β − cos α·sin β</p><p>cos(α + β) = cos α·cos β − sin α·sin β</p><p>cos(α − β) = cos α·cos β + sin α·sin β</p>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {

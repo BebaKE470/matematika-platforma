@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli hranol, označ podstavu, výšku a plášť.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli hranol, označ podstavu, výšku a plášť.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Objem hranola je V=Sp·v. Povrch tvorí dvojica podstáv a plášť: S=2Sp+Q.</p>",
         "model": "<strong>KONTROLA:</strong> Objem hranola je V=Sp·v. Povrch tvorí dvojica podstáv a plášť: S=2Sp+Q."
       },
       {

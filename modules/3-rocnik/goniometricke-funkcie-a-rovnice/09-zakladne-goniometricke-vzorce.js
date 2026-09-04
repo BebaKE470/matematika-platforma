@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Základné goniometrické vzorce",
-        "html": "<p><strong>TEÓRIA:</strong> Zapíš si do zošita dôležité vzťahy alebo postup z dnešnej témy a jeden vzorový príklad.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Základné goniometrické vzorce</strong></p><p><strong>sin²x + cos²x = 1</strong></p><p><strong>tg x = sin x / cos x</strong>, ak cos x ≠ 0.</p><p>Z prvého vzorca: sin²x = 1 − cos²x a cos²x = 1 − sin²x.</p>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {

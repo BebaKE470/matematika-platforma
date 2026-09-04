@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Na číselnú os približne umiestni 1/2, √2 a 3/2.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Na číselnú os približne umiestni 1/2, √2 a 3/2.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Racionálne číslo možno zapísať ako zlomok celých čísel s nenulovým menovateľom. Iracionálne číslo takto zapísať nemožno; obe skupiny patria medzi reálne čísla.</p>",
         "model": "<strong>KONTROLA:</strong> Racionálne číslo možno zapísať ako zlomok celých čísel s nenulovým menovateľom. Iracionálne číslo takto zapísať nemožno; obe skupiny patria medzi reálne čísla."
       },
       {

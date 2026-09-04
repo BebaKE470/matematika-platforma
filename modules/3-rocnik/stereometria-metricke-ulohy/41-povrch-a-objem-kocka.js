@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli sieť kocky a odvoď S=6a².</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli sieť kocky a odvoď S=6a².</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Kocka má 6 zhodných štvorcových stien: S=6a². Objem je V=a³. Jednotky povrchu sú štvorcové, objemu kubické.</p>",
         "model": "<strong>KONTROLA:</strong> Kocka má 6 zhodných štvorcových stien: S=6a². Objem je V=a³. Jednotky povrchu sú štvorcové, objemu kubické."
       },
       {

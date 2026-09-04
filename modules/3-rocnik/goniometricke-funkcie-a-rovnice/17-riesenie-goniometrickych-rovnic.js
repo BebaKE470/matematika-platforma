@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Riešenie goniometrických rovníc",
-        "html": "<p><strong>TEÓRIA:</strong> Zapíš si do zošita dôležité vzťahy alebo postup z dnešnej témy a jeden vzorový príklad.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Riešenie goniometrických rovníc</strong></p><p>Rovnicu sa snažíme upraviť na základný tvar <strong>sin x = a</strong>, <strong>cos x = a</strong> alebo <strong>tg x = a</strong>.</p><p>Pri úpravách používame goniometrické vzorce a algebraické úpravy. Každé získané riešenie musí spĺňať podmienky pôvodnej rovnice.</p>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {

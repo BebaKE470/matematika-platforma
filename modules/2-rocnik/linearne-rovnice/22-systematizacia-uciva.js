@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Urob si mapu: bežná lineárna rovnica – menovateľ – absolútna hodnota – parameter – sústava. Ku každej napíš jednu kontrolnú otázku.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Urob si mapu: bežná lineárna rovnica – menovateľ – absolútna hodnota – parameter – sústava. Ku každej napíš jednu kontrolnú otázku.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Systematizácia znamená rozpoznať typ úlohy, zvoliť prípustnú metódu, zapísať podmienky a interpretovať počet riešení.</p>",
         "model": "<strong>KONTROLA:</strong> Systematizácia znamená rozpoznať typ úlohy, zvoliť prípustnú metódu, zapísať podmienky a interpretovať počet riešení."
       },
       {

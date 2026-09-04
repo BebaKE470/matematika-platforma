@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Súčet a rozdiel funkcií rôznych hodnôt",
-        "html": "<p><strong>TEÓRIA:</strong> Zapíš si do zošita dôležité vzťahy alebo postup z dnešnej témy a jeden vzorový príklad.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Súčet a rozdiel sínusov a kosínusov</strong></p><p>sin α + sin β = 2 sin((α+β)/2) cos((α−β)/2)</p><p>sin α − sin β = 2 cos((α+β)/2) sin((α−β)/2)</p><p>cos α + cos β = 2 cos((α+β)/2) cos((α−β)/2)</p><p>cos α − cos β = −2 sin((α+β)/2) sin((α−β)/2)</p>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {

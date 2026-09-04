@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Preskúmaj ax=6 osobitne pre a=0 a a≠0.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Preskúmaj ax=6 osobitne pre a=0 a a≠0.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Parameter je pevná, ale bližšie neurčená hodnota. Pri delení výrazom s parametrom musíme rozlíšiť prípad, keď je nulový.</p>",
         "model": "<strong>KONTROLA:</strong> Parameter je pevná, ale bližšie neurčená hodnota. Pri delení výrazom s parametrom musíme rozlíšiť prípad, keď je nulový."
       },
       {

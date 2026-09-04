@@ -92,7 +92,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vytvor tabuľku prípadov pre (a−1)x=a−1.</p><p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš si do zošita hlavné pravidlo alebo postup a jeden vlastný príklad.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vytvor tabuľku prípadov pre (a−1)x=a−1.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pri parametri najprv hľadáme hodnoty, pri ktorých koeficient, ktorým chceme deliť, môže byť nula; tie riešime osobitne.</p>",
         "model": "<strong>KONTROLA:</strong> Pri parametri najprv hľadáme hodnoty, pri ktorých koeficient, ktorým chceme deliť, môže byť nula; tie riešime osobitne."
       },
       {
