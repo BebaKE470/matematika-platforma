@@ -421,7 +421,14 @@ window.MATH_MODULE_INDEX = [
   planned('1-u08-h087', 1, "Lomené výrazy", 8, "Kontrolná písomná práca", "Hodina 87", 87, "modules/1-rocnik/lomene-vyrazy/87-kontrolna-pisomna-praca.js"),
 
   // 1.09 · Funkcie- základné vlastnosti
-  planned('1-u09-h088', 1, "Funkcie- základné vlastnosti", 9, "Pojem funkcie, definičný obor funkcie, obor hodnôt funkcie", "Hodina 88", 88, "modules/1-rocnik/funkcie-zakladne-vlastnosti/88-pojem-funkcie-definicny-obor-funkcie-obor-hodnot-funkcie.js"),
+  {
+    id: "1-u09-h088", year: 1, unit: 'Funkcie- základné vlastnosti', unitOrder: 9,
+    topic: "Pojem funkcie, definičný obor funkcie, obor hodnôt funkcie", lesson: "Hodina 88", lessonOrder: 88,
+    time: "≈ 15 min", status: 'ready',
+    type: "Objavovanie → pojem funkcie → D(f) a H(f) → zdôvodnenie",
+    skills: ["funkcia", "definičný obor D(f)", "obor hodnôt H(f)"],
+    file: 'modules/1-rocnik/funkcie-zakladne-vlastnosti/88-pojem-funkcie-definicny-obor-funkcie-obor-hodnot-funkcie.js'
+  },
   planned('1-u09-h089', 1, "Funkcie- základné vlastnosti", 9, "Graf funkcie, určovanie D(f) a H(f) z grafu", "Hodina 89", 89, "modules/1-rocnik/funkcie-zakladne-vlastnosti/89-graf-funkcie-urcovanie-d-f-a-h-f-z-grafu.js"),
   planned('1-u09-h090', 1, "Funkcie- základné vlastnosti", 9, "Riešenie úloh", "Hodina 90", 90, "modules/1-rocnik/funkcie-zakladne-vlastnosti/90-riesenie-uloh.js"),
   planned('1-u09-h091', 1, "Funkcie- základné vlastnosti", 9, "Párna a nepárna funkcia", "Hodina 91", 91, "modules/1-rocnik/funkcie-zakladne-vlastnosti/91-parna-a-neparna-funkcia.js"),
