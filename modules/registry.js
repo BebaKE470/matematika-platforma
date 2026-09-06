@@ -28,9 +28,9 @@ window.MATH_MODULE_INDEX = [
   {
     id: "1-u01-h001", year: 1, unit: 'Výroková formula', unitOrder: 1,
     topic: "Úvodné pokyny", lesson: "Hodina 1", lessonOrder: 1,
-    time: "10–12 min", status: 'ready',
-    type: "Orientácia → pravidlá práce → zošit → reflexia",
-    skills: ["pracovný a čistý zápis", "samostatnosť", "matematická komunikácia"],
+    time: "18–22 min", status: 'ready',
+    type: "Orientácia → pravidlá práce → rozcvička zo ZŠ → reflexia",
+    skills: ["pracovný a čistý zápis", "samostatnosť", "matematická komunikácia", "opakovanie zručností zo ZŠ"],
     file: 'modules/1-rocnik/vyrokova-formula/01-uvodne-pokyny.js'
   },
   {

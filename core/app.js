@@ -4,8 +4,7 @@
   let currentModule = null;
   let live = null;
   let state = freshState();
-  const TEACHER_PASSWORD = '1234';
-  const TEACHER_SESSION_KEY = 'mathTeacherAccess';
+  const TEACHER_TOKEN_KEY = 'mathTeacherToken';
   const GRADING_SETTINGS_KEY = 'mathTeacherGradingSettingsV1';
   const DEFAULT_GRADING_SETTINGS = { enabled:false, thresholds:{1:90,2:75,3:50,4:30} };
 
@@ -40,8 +39,36 @@
     a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
   }
 
-  function teacherUnlocked(){ return sessionStorage.getItem(TEACHER_SESSION_KEY) === 'ok'; }
-  function unlockTeacher(){ sessionStorage.setItem(TEACHER_SESSION_KEY, 'ok'); }
+  // Heslo sa overuje na serveri (api/teacher-auth.js) – appka drží iba podpísaný token,
+  // ktorého platnosť si nevie sama vyrobiť ani predĺžiť. Nejde teda o dôveryhodnosť klienta,
+  // ale o skutočné server-side overenie pri každom vstupe do učiteľskej časti.
+  let teacherAuthCache = { token: '', ok: false, checkedAt: 0 };
+  const TEACHER_AUTH_CACHE_MS = 60 * 1000; // aby sa pri rýchlom prekliku nepýtal server na každý krok
+
+  function storedTeacherToken(){ return sessionStorage.getItem(TEACHER_TOKEN_KEY) || ''; }
+  function setTeacherToken(t){ sessionStorage.setItem(TEACHER_TOKEN_KEY, t); }
+  function clearTeacherToken(){ sessionStorage.removeItem(TEACHER_TOKEN_KEY); teacherAuthCache = { token:'', ok:false, checkedAt:0 }; }
+
+  async function teacherAuthCall(body){
+    try{
+      const r = await fetch('/api/teacher-auth', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body) });
+      const data = await r.json().catch(()=>({}));
+      return { status:r.status, ...data };
+    }catch(_){
+      return { status:0, ok:false, error:'Server nie je dostupný. Skontroluj pripojenie a skús to znova.' };
+    }
+  }
+
+  async function teacherUnlocked(){
+    const token = storedTeacherToken();
+    if(!token) return false;
+    const now = Date.now();
+    if(teacherAuthCache.token === token && teacherAuthCache.ok && (now - teacherAuthCache.checkedAt) < TEACHER_AUTH_CACHE_MS) return true;
+    const r = await teacherAuthCall({ token });
+    teacherAuthCache = { token, ok: !!r.ok, checkedAt: now };
+    if(!r.ok) clearTeacherToken();
+    return !!r.ok;
+  }
 
   function freshState(extra={}) { return { mode:'solo', nick:'', session:'', moduleId:'', index:0, score:0, answers:[], reflection:{}, ...extra }; }
   function go(hash){ location.hash=hash; }
@@ -129,7 +156,7 @@
 
   async function load(id){ currentModule=await MathPlatform.loadModule(id); return currentModule; }
 
-  async function method(id){ if(!teacherUnlocked()){ go('teacher'); return; } const m=meta(id); if(!m){home();return} if(!openable(m)){app.innerHTML=`<div class="card"><h2>${m.topic}</h2><p>Metodická karta bude doplnená pri tvorbe samostatného obsahového modulu podľa tematického plánu.</p><button class="btn" data-go="teacher">Späť</button></div>`;return} try{const mod=await load(id),p=mod.teacher;app.innerHTML=`<div class="row"><button class="ghost" data-go="teacher-unit/${m.year}/${unitKey(m.unit)}">← ${m.unit}</button></div><article class="card method"><div class="eyebrow">METODICKÁ KARTA UČITEĽA</div><h1>${m.topic}</h1><div>${m.skills.map(s=>`<span class="tag">${s}</span>`).join('')}</div><dl><dt>Zaradenie v tematickom pláne</dt><dd>${p.placement}</dd><dt>Predpokladané vedomosti</dt><dd><ul>${p.prerequisites.map(li=>`<li>${li}</li>`).join('')}</ul></dd><dt>Ciele hodiny</dt><dd><ul>${p.goals.map(li=>`<li>${li}</li>`).join('')}</ul></dd><dt>Obsahový štandard / obsah podľa plánu</dt><dd><ul>${p.planContent.map(li=>`<li>${li}</li>`).join('')}</ul></dd><dt>Výkonový štandard podľa plánu</dt><dd><ul>${p.planPerformance.map(li=>`<li>${li}</li>`).join('')}</ul></dd><dt>Rozvíjané kompetencie</dt><dd><ul>${p.competencies.map(li=>`<li>${li}</li>`).join('')}</ul></dd><dt>Obohatenie podľa návrhu nového maturitného štandardu</dt><dd><ul>${p.enrichment.map(li=>`<li>${li}</li>`).join('')}</ul></dd><dt>Odporúčaný priebeh</dt><dd><ol>${p.flow.map(li=>`<li>${li}</li>`).join('')}</ol></dd><dt>Čo modul diagnostikuje</dt><dd><ul>${p.diagnostics.map(li=>`<li>${li}</li>`).join('')}</ul></dd><dt>Možno použiť iba časť</dt><dd><ul>${p.partialUse.map(li=>`<li>${li}</li>`).join('')}</ul></dd></dl><div class="notice"><strong>Pravidlo platformy:</strong> aktuálny tematický plán určuje obsah a poradie. Návrh maturitného štandardu obohacuje spôsob práce iba tam, kde to prirodzene pasuje.</div></article>`}catch(e){showError(e)} }
+  async function method(id){ if(!(await teacherUnlocked())){ go('teacher'); return; } const m=meta(id); if(!m){home();return} if(!openable(m)){app.innerHTML=`<div class="card"><h2>${m.topic}</h2><p>Metodická karta bude doplnená pri tvorbe samostatného obsahového modulu podľa tematického plánu.</p><button class="btn" data-go="teacher">Späť</button></div>`;return} try{const mod=await load(id),p=mod.teacher;app.innerHTML=`<div class="row"><button class="ghost" data-go="teacher-unit/${m.year}/${unitKey(m.unit)}">← ${m.unit}</button></div><article class="card method"><div class="eyebrow">METODICKÁ KARTA UČITEĽA</div><h1>${m.topic}</h1><div>${m.skills.map(s=>`<span class="tag">${s}</span>`).join('')}</div><dl><dt>Zaradenie v tematickom pláne</dt><dd>${p.placement}</dd><dt>Predpokladané vedomosti</dt><dd><ul>${p.prerequisites.map(li=>`<li>${li}</li>`).join('')}</ul></dd><dt>Ciele hodiny</dt><dd><ul>${p.goals.map(li=>`<li>${li}</li>`).join('')}</ul></dd><dt>Obsahový štandard / obsah podľa plánu</dt><dd><ul>${p.planContent.map(li=>`<li>${li}</li>`).join('')}</ul></dd><dt>Výkonový štandard podľa plánu</dt><dd><ul>${p.planPerformance.map(li=>`<li>${li}</li>`).join('')}</ul></dd><dt>Rozvíjané kompetencie</dt><dd><ul>${p.competencies.map(li=>`<li>${li}</li>`).join('')}</ul></dd><dt>Obohatenie podľa návrhu nového maturitného štandardu</dt><dd><ul>${p.enrichment.map(li=>`<li>${li}</li>`).join('')}</ul></dd><dt>Odporúčaný priebeh</dt><dd><ol>${p.flow.map(li=>`<li>${li}</li>`).join('')}</ol></dd><dt>Čo modul diagnostikuje</dt><dd><ul>${p.diagnostics.map(li=>`<li>${li}</li>`).join('')}</ul></dd><dt>Možno použiť iba časť</dt><dd><ul>${p.partialUse.map(li=>`<li>${li}</li>`).join('')}</ul></dd></dl><div class="notice"><strong>Pravidlo platformy:</strong> aktuálny tematický plán určuje obsah a poradie. Návrh maturitného štandardu obohacuje spôsob práce iba tam, kde to prirodzene pasuje.</div></article>`}catch(e){showError(e)} }
 
   async function moduleStart(id){ try{const mod=await load(id),m=meta(id);if(m.status==='placeholder'){app.innerHTML=`<div class="row"><button class="ghost" data-go="catalog/unit/${m.year}/${unitKey(m.unit)}">← ${m.unit}</button></div><div class="card"><div class="eyebrow">TODO PLACEHOLDER · ${m.unit} · ${m.lesson}</div><h1>${mod.student.title}</h1><h2>${mod.student.subtitle}</h2><p>${mod.student.intro}</p><div class="notice"><strong>Technické prepojenie je hotové.</strong> Súbor má správne ID aj cestu v registry.js. Pri ďalšom spracovaní sa nahradí jeho obsah plnohodnotným modulom.</div><button class="btn" data-go="catalog/unit/${m.year}/${unitKey(m.unit)}">Späť k témam</button></div>`;return;}app.innerHTML=`<div class="row"><button class="ghost" data-go="catalog/unit/${m.year}/${unitKey(m.unit)}">← ${m.unit}</button></div><div class="card"><div class="eyebrow">${m.unit} · ${m.lesson} · ${mod.student.estimatedTime}</div><h1>${mod.student.title}</h1><h2>${mod.student.subtitle}</h2><p>${mod.student.intro}</p><div class="notice"><strong>Samostatný režim:</strong> nič sa neposiela učiteľovi a výsledok sa nearchivuje.</div><div class="actions"><button class="btn" id="startSolo">Začať samostatne</button><button class="ghost" data-go="join/${id}">Mám kód hodiny</button></div></div>`;$('#startSolo').onclick=()=>startModule(id,{mode:'solo'});}catch(e){showError(e)} }
 
@@ -199,24 +226,36 @@
 
   async function sendProgress(done=false){if(state.mode!=='live'||!live)return;const skill={};state.answers.forEach(a=>{if(!a.skill)return;skill[a.skill]??={ok:0,n:0};skill[a.skill].n++;if(a.correct)skill[a.skill].ok++});const maxScore=moduleMaxPoints();const percent=maxScore?Math.round(100*state.score/maxScore):0;try{await live.send({type:'broadcast',event:'progress',payload:{nick:state.nick,moduleId:state.moduleId,stage:done?'done':'working',score:state.score,maxScore,percent,question:Math.min(state.index+1,currentModule?.student.activities.length||0),total:currentModule?.student.activities.length||0,skill,self:state.reflection,answers:state.answers.map(a=>({id:a.id,skill:a.skill,correct:!!a.correct,attempts:a.attempts||0,points:a.points||0})),ts:Date.now()}})}catch(_){} }
 
-  function teacher(){
-    if(!teacherUnlocked()){
-      app.innerHTML=`<div class="card teacher-login"><div class="eyebrow">UČITEĽSKÁ ČASŤ</div><h1>Prihlásenie učiteľa</h1><p class="muted">Metodické karty a živá diagnostika sú oddelené od žiackeho katalógu.</p><div class="field"><label>Heslo</label><input id="teacherPassword" type="password" inputmode="numeric" autocomplete="current-password" placeholder="Zadaj heslo"></div><div id="teacherLoginInfo"></div><button class="btn" id="teacherLoginBtn">Prihlásiť sa</button><p class="muted small-note">Toto je jednoduché lokálne uzamknutie rozhrania, nie plnohodnotné používateľské konto.</p></div>`;
-      const submit=()=>{ if($('#teacherPassword').value===TEACHER_PASSWORD){unlockTeacher();teacher()} else $('#teacherLoginInfo').innerHTML='<div class="feedback bad"><strong>Nesprávne heslo.</strong></div>'; };
+  async function teacher(){
+    if(!(await teacherUnlocked())){
+      app.innerHTML=`<div class="card teacher-login"><div class="eyebrow">UČITEĽSKÁ ČASŤ</div><h1>Prihlásenie učiteľa</h1><p class="muted">Metodické karty a živá diagnostika sú oddelené od žiackeho katalógu.</p><div class="field"><label>Heslo</label><input id="teacherPassword" type="password" autocomplete="current-password" placeholder="Zadaj heslo"></div><div id="teacherLoginInfo"></div><button class="btn" id="teacherLoginBtn">Prihlásiť sa</button><p class="muted small-note">Heslo overuje server, appka si ho nikdy neukladá ani neposiela nikam inam.</p></div>`;
+      const submit=async()=>{
+        const pwd=$('#teacherPassword').value;
+        if(!pwd) return;
+        $('#teacherLoginBtn').disabled=true;
+        $('#teacherLoginInfo').innerHTML='<div class="notice">Overujem…</div>';
+        const r=await teacherAuthCall({ password: pwd });
+        $('#teacherLoginBtn').disabled=false;
+        if(r.ok && r.token){ setTeacherToken(r.token); teacher(); }
+        else{
+          const msg = r.status===429 ? (r.error||'Príliš veľa pokusov, skús to o chvíľu.') : (r.error||'Nesprávne heslo.');
+          $('#teacherLoginInfo').innerHTML=`<div class="feedback bad"><strong>${msg}</strong></div>`;
+        }
+      };
       $('#teacherLoginBtn').onclick=submit; $('#teacherPassword').addEventListener('keydown',e=>{if(e.key==='Enter')submit()}); return;
     }
     const years=[1,2,3];
     app.innerHTML=`<div class="breadcrumbs"><strong>Učiteľská časť</strong></div><h1>Vyber ročník</h1><p class="muted">Metodické karty sú usporiadané rovnakým spôsobom ako učivo: ročník → tematický celok → téma.</p><div class="year-grid">${years.map(y=>{const mods=yearModules(y),units=unitsForYear(y);return `<button class="year-card" data-go="teacher-year/${y}"><span class="year-number">${y}.</span><span><strong>ročník</strong><small>${units.length} ${units.length===1?'tematický celok':'tematické celky'} · ${readyCount(mods)} hotové · ${placeholderCount(mods)} TODO</small></span><span class="chevron">→</span></button>`}).join('')}</div><div class="card" style="margin-top:20px"><h2>Živá hodina</h2><p>Živú hodinu spustíš pri konkrétnej hotovej téme v učiteľskom katalógu.</p></div>`;
   }
 
-  function teacherYear(year){
-    if(!teacherUnlocked()){go('teacher');return}
+  async function teacherYear(year){
+    if(!(await teacherUnlocked())){go('teacher');return}
     year=Number(year); const units=unitsForYear(year);
     app.innerHTML=`<div class="breadcrumbs"><button class="crumb" data-go="teacher">Učiteľ</button><span>›</span><strong>${year}. ročník</strong></div><h1>${year}. ročník</h1><p class="muted">Vyber tematický celok.</p><div class="unit-list">${units.map((u,i)=>`<button class="unit-card" data-go="teacher-unit/${year}/${unitKey(u.name)}"><span class="unit-order">${String(i+1).padStart(2,'0')}</span><span class="unit-main"><strong>${u.name}</strong><small>${u.modules.length} ${u.modules.length===1?'téma':'témy'} · ${readyCount(u.modules)} hotové · ${placeholderCount(u.modules)} TODO</small></span><span class="chevron">→</span></button>`).join('')}</div>`;
   }
 
-  function teacherUnit(year,key){
-    if(!teacherUnlocked()){go('teacher');return}
+  async function teacherUnit(year,key){
+    if(!(await teacherUnlocked())){go('teacher');return}
     const unit=unitFromKey(key),mods=modulesForUnit(year,unit);
     if(!mods.length){teacherYear(year);return}
     app.innerHTML=`<div class="breadcrumbs"><button class="crumb" data-go="teacher">Učiteľ</button><span>›</span><button class="crumb" data-go="teacher-year/${year}">${year}. ročník</button><span>›</span><strong>${unit}</strong></div><div class="unit-heading"><div><div class="eyebrow">UČITEĽSKÝ KATALÓG · ${year}. ROČNÍK</div><h1>${unit}</h1></div><span class="unit-count">${readyCount(mods)} hotové</span></div><div class="topic-list">${mods.map(m=>{const canOpen=openable(m),isTodo=m.status==='placeholder';return `<article class="topic-row ${canOpen?'':'locked'}"><div class="topic-number">${String(m.lessonOrder??'').padStart(2,'0')}</div><div class="topic-main"><div class="topic-status"><span class="tag ${statusClass(m)}">${statusText(m)}</span> ${m.lesson?`<span class="muted">${m.lesson}</span>`:''}</div><h3>${m.topic}</h3><div class="meta">${m.type} · ${m.time}</div></div><div class="topic-actions">${canOpen?`<button class="ghost" onclick="location.hash='method/${m.id}'">Metodická karta</button>${m.status==='ready'?`<button class="btn" onclick="location.hash='teacher-live/${m.id}'">Živá hodina</button>`:''}<button class="ghost" onclick="location.hash='module/${m.id}'">${isTodo?'Zobraziť TODO':'Otvoriť modul'}</button>`:''}</div></article>`}).join('')}</div>`;
@@ -224,7 +263,7 @@
 
   function code(){return Math.random().toString(36).slice(2,8).toUpperCase()}
   async function teacherLive(id){
-    if(!teacherUnlocked()){ go('teacher'); return; }
+    if(!(await teacherUnlocked())){ go('teacher'); return; }
     id=id&&meta(id)?.status==='ready'?id:'1-logika-01';
     const m=meta(id), c=code();
     try{ currentModule=await load(id); }catch(_){ currentModule=null; }
@@ -304,6 +343,6 @@
 
   function showError(e){app.innerHTML=`<div class="card"><h2>Nepodarilo sa načítať modul</h2><p>${e.message}</p><p class="muted">Ak stránku otváraš dvojklikom, skontroluj, že si rozbalila celý priečinok a nie iba samotný index.html.</p><button class="btn" data-go="catalog">Späť</button></div>`}
 
-  async function render(){const h=location.hash.slice(1)||'home',p=h.split('/');if(p[0]==='home')home();else if(p[0]==='catalog'&&!p[1])catalog();else if(p[0]==='catalog'&&p[1]==='year')catalogYear(p[2]);else if(p[0]==='catalog'&&p[1]==='unit')catalogUnit(p[2],p.slice(3).join('/'));else if(p[0]==='method')await method(p[1]);else if(p[0]==='module')await moduleStart(p[1]);else if(p[0]==='play')play();else if(p[0]==='join')await join(p[1],p[2]);else if(p[0]==='teacher')teacher();else if(p[0]==='teacher-year')teacherYear(p[1]);else if(p[0]==='teacher-unit')teacherUnit(p[1],p.slice(2).join('/'));else if(p[0]==='teacher-live')await teacherLive(p[1]);else home()}
+  async function render(){const h=location.hash.slice(1)||'home',p=h.split('/');if(p[0]==='home')home();else if(p[0]==='catalog'&&!p[1])catalog();else if(p[0]==='catalog'&&p[1]==='year')catalogYear(p[2]);else if(p[0]==='catalog'&&p[1]==='unit')catalogUnit(p[2],p.slice(3).join('/'));else if(p[0]==='method')await method(p[1]);else if(p[0]==='module')await moduleStart(p[1]);else if(p[0]==='play')play();else if(p[0]==='join')await join(p[1],p[2]);else if(p[0]==='teacher')await teacher();else if(p[0]==='teacher-year')await teacherYear(p[1]);else if(p[0]==='teacher-unit')await teacherUnit(p[1],p.slice(2).join('/'));else if(p[0]==='teacher-live')await teacherLive(p[1]);else home()}
   render();
 })();
