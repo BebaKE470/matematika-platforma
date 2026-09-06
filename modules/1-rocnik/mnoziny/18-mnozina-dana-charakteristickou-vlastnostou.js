@@ -80,11 +80,11 @@ MathPlatform.registerModule({
         "skill": "charakteristická vlastnosť",
         "question": "Máme U={1,2,3,4,5,6,7,8}. Ktorá množina je určená zápisom A={x∈U; x<5}?",
         "options": [
-          "{1,2,3,4}",
           "{1,2,3,4,5}",
+          "{1,2,3,4}",
           "{5,6,7,8}"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Správne. Z U vyberieme práve prvky, ktoré spĺňajú podmienku x<5.",
         "hint": "Najprv sa pozri, z akej množiny x vyberáme, potom použi podmienku."
       },
@@ -123,10 +123,10 @@ MathPlatform.registerModule({
         "question": "Nech U={1,2,3,4,5,6}. Zápis A={x ∈ U; x je párne} určuje množinu:",
         "options": [
           "{1,3,5}",
-          "{2,4,6}",
-          "{2,6}"
+          "{2,6}",
+          "{2,4,6}"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Vyberieme práve tie prvky U, ktoré spĺňajú vlastnosť „je párne“.",
         "hint": "Najprv čítaj: x patrí do U a spĺňa uvedenú vlastnosť."
       },

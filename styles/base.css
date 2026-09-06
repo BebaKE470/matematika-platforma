@@ -1,0 +1,180 @@
+/* styles/base.css
+   Design tokens, reset, typography, and the small set of generic building
+   blocks (buttons, cards, tags, forms, tables) reused across every screen.
+   Component-specific styles live in catalog.css / activity.css / teacher.css.
+
+   Breakpoints used throughout styles/: 520px (phone), 720px (tablet/narrow
+   card layouts), 860px (wide two-column layouts collapsing, e.g. the home
+   hero). Pick one of these three rather than a new one-off value.
+*/
+
+:root {
+  --ink: #173d35;
+  --muted: #66766f;
+  --bg: #f4f6f1;
+  --paper: #fff;
+  --line: #dce4de;
+  --soft: #e8f1ec;
+  --warn: #fff4d8;
+  --bad: #fde9e6;
+  --good: #e5f4e9;
+  --shadow: 0 14px 40px rgba(20, 55, 46, .08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #1c2c27;
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+/* --- Header / page shell --- */
+
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 14px max(18px, calc((100vw - 1080px) / 2));
+  background: rgba(244, 246, 241, .94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.brand { font-weight: 850; color: var(--ink); text-decoration: none; letter-spacing: .03em; }
+.brand span { font-weight: 600; color: var(--muted); }
+nav { display: flex; gap: 6px; }
+.shell { max-width: 1080px; margin: 0 auto; padding: 28px 18px 70px; }
+footer { max-width: 1080px; margin: auto; padding: 20px 18px 35px; color: var(--muted); font-size: 13px; }
+
+@media (max-width: 720px) {
+  .top nav button:first-child { display: none; }
+}
+
+/* --- Typography helpers --- */
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .8;
+}
+.muted { color: var(--muted); }
+.small-note { font-size: 13px; }
+
+/* --- Layout helpers --- */
+
+.row, .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.actions { margin-top: 22px; }
+.row.gap-sm { gap: .55rem; }
+.row.items-center { align-items: center; }
+.spaced { margin-top: 16px; }
+
+/* --- Buttons --- */
+
+.btn, .ghost, .choice {
+  border: 0;
+  border-radius: 13px;
+  padding: 12px 16px;
+  font: inherit;
+  font-weight: 750;
+  cursor: pointer;
+}
+.btn { background: var(--ink); color: white; }
+.ghost { background: transparent; color: var(--ink); }
+.btn:disabled, .ghost:disabled { cursor: default; opacity: .6; }
+.choice { width: 100%; text-align: left; background: #f7f9f6; border: 1px solid var(--line); font-weight: 650; }
+.choice:hover { border-color: #9bb2a8; }
+.choice.selected { outline: 2px solid var(--ink); }
+
+/* --- Cards / tags / notices --- */
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.card h2, .card h3 { margin-top: 0; }
+
+.tag {
+  display: inline-block;
+  border-radius: 999px;
+  background: var(--soft);
+  padding: 5px 9px;
+  margin: 2px;
+  font-size: 12px;
+  font-weight: 750;
+  color: var(--ink);
+}
+.tag.off { background: #eee; color: #777; }
+
+.notice { padding: 13px 15px; border-radius: 13px; background: var(--warn); margin: 12px 0; }
+.notice.good { background: var(--good); }
+.notice.bad { background: var(--bad); }
+/* Historical bare .good/.bad (feedback boxes, etc. reuse the same tokens). */
+.good { background: var(--good); }
+.bad { background: var(--bad); }
+
+/* --- Forms / tables (generic) --- */
+
+input, textarea, select {
+  width: 100%;
+  border: 1px solid #bdcbc4;
+  border-radius: 12px;
+  padding: 12px;
+  font: inherit;
+  background: white;
+}
+/* Native checkboxes/radios keep the browser's own box (a hand-built one adds
+   real complexity for one settings toggle) but should at least match the
+   app's ink colour instead of the platform-default blue. */
+input[type="checkbox"], input[type="radio"] {
+  width: auto;
+  accent-color: var(--ink);
+}
+label { font-weight: 750; }
+.field { margin: 12px 0; }
+.uppercase-input { text-transform: uppercase; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 9px; border-bottom: 1px solid var(--line); vertical-align: top; }
+/* Row labels (first column, whether th or td) stay left-aligned; every other
+   cell is assumed to hold a data value (a number, most often) and reads
+   better centred under its column header than left-hanging. */
+th:not(:first-child), td:not(:first-child) { text-align: center; }
+
+/* --- Authoring utilities for module `html` content ---
+   Not used by any shipped module yet — kept and documented (see
+   docs/AUTHORING.md) as building blocks for future modules that show a
+   side-by-side comparison or example pair inside an activity's `html`. */
+.example-grid, .compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 16px 0;
+}
+.example-grid > div, .compare > div {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fafbf9;
+}
+.mini-label { font-size: 11px; font-weight: 850; letter-spacing: .08em; color: var(--muted); }
+.math-list { display: grid; gap: 8px; margin: 14px 0; }
+.math-list code { font-size: 20px; padding: 10px 12px; border-radius: 10px; background: #f3f5f2; }
+.table-wrap { overflow-x: auto; margin: 1rem 0; }
+
+@media (max-width: 720px) {
+  .example-grid, .compare { grid-template-columns: 1fr; }
+}

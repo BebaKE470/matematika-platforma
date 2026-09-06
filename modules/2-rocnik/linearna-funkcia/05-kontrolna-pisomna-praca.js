@@ -61,11 +61,11 @@ MathPlatform.registerModule({
         "question": "Ktorý údaj vieš vyčítať okamžite?",
         "options": [
           "nulový bod je −2",
-          "graf pretína os y v [0;4]",
           "funkcia je rastúca",
+          "graf pretína os y v [0;4]",
           "f(0)=−2"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "b=4, preto f(0)=4.",
         "hint": "Pozri na samostatný člen b."
       },
@@ -77,11 +77,11 @@ MathPlatform.registerModule({
         "question": "Čo znamená, že bod [3;5] leží na grafe funkcie f?",
         "options": [
           "f(5)=3",
-          "f(3)=5",
+          "nulový bod je 3",
           "f(x)=15",
-          "nulový bod je 3"
+          "f(3)=5"
         ],
-        "answer": 1,
+        "answer": 3,
         "correct": "x-ová súradnica je vstup a y-ová súradnica je funkčná hodnota.",
         "hint": "Bod na grafe má tvar [x; f(x)]."
       },

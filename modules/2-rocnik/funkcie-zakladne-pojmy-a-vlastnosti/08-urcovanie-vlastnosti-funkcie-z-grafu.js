@@ -63,12 +63,12 @@ MathPlatform.registerModule({
         "skill": "D a H",
         "question": "Aké sú D(f) a H(f) zobrazeného grafu?",
         "options": [
-          "D=⟨−4;4⟩, H=⟨−2;4⟩",
+          "D=⟨−4;4⟩, H=⟨−4;4⟩",
           "D=⟨−2;4⟩, H=⟨−4;4⟩",
           "D=ℝ, H=ℝ",
-          "D=⟨−4;4⟩, H=⟨−4;4⟩"
+          "D=⟨−4;4⟩, H=⟨−2;4⟩"
         ],
-        "answer": 0,
+        "answer": 3,
         "correct": "Graf existuje pre x od −4 do 4 a jeho y-hodnoty siahajú od −2 do 4.",
         "hint": "D čítaj po osi x, H po osi y."
       },
@@ -79,12 +79,12 @@ MathPlatform.registerModule({
         "skill": "extrémy",
         "question": "Ktoré tvrdenie je správne?",
         "options": [
-          "maximum je −2",
-          "minimum je 2",
           "maximum je 4 a minimum −2",
+          "minimum je 2",
+          "maximum je −2",
           "graf nemá extrémy"
         ],
-        "answer": 2,
+        "answer": 0,
         "correct": "Najvyššia funkčná hodnota je 4 a najnižšia −2.",
         "hint": "Hľadaj najvyšší a najnižší bod grafu a čítaj ich y-ové súradnice."
       },
@@ -138,11 +138,11 @@ MathPlatform.registerModule({
         "question": "Ako je funkcia na zobrazenom D(f) ohraničená?",
         "options": [
           "iba zhora",
-          "iba zdola",
           "zhora aj zdola",
+          "iba zdola",
           "nie je ohraničená"
         ],
-        "answer": 2,
+        "answer": 1,
         "correct": "Všetky hodnoty ležia medzi −2 a 4.",
         "hint": "Pozri na H(f)."
       },
@@ -171,17 +171,17 @@ MathPlatform.registerModule({
         "question": "Ak graf funkcie má D(f)=⟨−3;5⟩ a H(f)=⟨1;7⟩, ktoré tvrdenie musí platiť?",
         "options": [
           "f(0)=1",
-          "funkcia nadobúda hodnotu 7",
           "funkcia je rastúca",
+          "funkcia nadobúda hodnotu 7",
           "funkcia je prostá"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Hodnota 7 patrí do H(f), takže ju funkcia musí aspoň raz nadobudnúť. O ostatných vlastnostiach nemáme dosť informácií.",
         "hint": "Čo presne znamená, že 7 patrí do H(f)?"
       },
 
-      {"id":"read-order","type":"choice","phase":"STRATÉGIA","skill":"graf","question":"Čo je rozumné urobiť ako prvé pri systematickom čítaní vlastností z grafu?","options":["Odhadnúť predpis za každú cenu.","Určiť, pre ktoré x graf existuje a aké y dosahuje.","Hneď hľadať párnosť.","Vypočítať diskriminant."],"answer":1,"correct":"Najprv D(f) a H(f) vytvoria rámec, v ktorom potom skúmame ďalšie vlastnosti.","hint":"Začni od rozsahu grafu."},
-      {"id":"horizontal-test","type":"choice","phase":"OVER PROSTOSŤ","skill":"prostosť","question":"Vodorovná priamka pretne graf v troch rôznych bodoch. Čo môžeme povedať?","options":["Funkcia je prostá.","Funkcia nie je prostá.","Funkcia je nepárna.","Funkcia nemá definičný obor."],"answer":1,"correct":"Rovnaká hodnota y patrí trom rôznym vstupom, preto funkcia nie je prostá.","hint":"Prostosť = rôzne vstupy majú rôzne výstupy."},
+      {"id":"read-order","type":"choice","phase":"STRATÉGIA","skill":"graf","question":"Čo je rozumné urobiť ako prvé pri systematickom čítaní vlastností z grafu?","options":["Odhadnúť predpis za každú cenu.","Vypočítať diskriminant.","Hneď hľadať párnosť.","Určiť, pre ktoré x graf existuje a aké y dosahuje."],"answer":3,"correct":"Najprv D(f) a H(f) vytvoria rámec, v ktorom potom skúmame ďalšie vlastnosti.","hint":"Začni od rozsahu grafu."},
+      {"id":"horizontal-test","type":"choice","phase":"OVER PROSTOSŤ","skill":"prostosť","question":"Vodorovná priamka pretne graf v troch rôznych bodoch. Čo môžeme povedať?","options":["Funkcia nie je prostá.","Funkcia je prostá.","Funkcia je nepárna.","Funkcia nemá definičný obor."],"answer":0,"correct":"Rovnaká hodnota y patrí trom rôznym vstupom, preto funkcia nie je prostá.","hint":"Prostosť = rôzne vstupy majú rôzne výstupy."},
       {"id":"graph-claim","type":"selfWrite","phase":"ARGUMENTUJ","title":"Tvrdenie podopri grafom","promptHtml":"Napíš, čo musíš na grafe vidieť, aby si mohol tvrdiť, že funkcia má na skúmanom intervale <strong>minimum</strong>.","model":"Musím vidieť najnižšiu funkčnú hodnotu, ktorú graf na danom intervale skutočne dosiahne. Nestačí iba to, že sa k nej graf približuje."},
       {
         "id": "reflection",

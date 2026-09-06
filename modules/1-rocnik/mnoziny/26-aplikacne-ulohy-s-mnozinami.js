@@ -115,10 +115,10 @@ MathPlatform.registerModule({
         "question": "V triede 12 žiakov hrá futbal, 8 volejbal a 3 oba športy. Koľko žiakov hrá aspoň jeden z týchto športov?",
         "options": [
           "20",
-          "17",
-          "23"
+          "23",
+          "17"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Pri súčte 12+8 sme troch žiakov započítali dvakrát, preto 12+8−3=17.",
         "hint": "Spoločnú časť treba odpočítať raz."
       },

@@ -163,8 +163,8 @@ MathPlatform.registerModule({
         phase: "D(f) A H(f)",
         skill: "Definičný obor D(f)",
         question: "Funkcia je zadaná tabuľkou: x = 1 → y = 4; x = 2 → y = 6; x = 3 → y = 4; x = 5 → y = 9. Aký je definičný obor D(f) tejto funkcie?",
-        options: ["D(f) = {4, 6, 9}", "D(f) = {1, 2, 3, 4, 5, 6, 9}", "D(f) = {1, 2, 3, 4, 5}", "D(f) = {1, 2, 3, 5}"],
-        answer: 3,
+        options: ["D(f) = {4, 6, 9}", "D(f) = {1, 2, 3, 5}", "D(f) = {1, 2, 3, 4, 5}", "D(f) = {1, 2, 3, 4, 5, 6, 9}"],
+        answer: 1,
         correct: "Definičný obor tvoria hodnoty premennej x, teda D(f) = {1, 2, 3, 5}. Číslo 4 sa medzi zadanými hodnotami x nenachádza.",
         hint: "Definičný obor tvoria hodnoty x, nie hodnoty y."
       },
@@ -188,10 +188,10 @@ MathPlatform.registerModule({
         options: [
           "Nie, lebo 6 nie je hodnota x.",
           "Nie, lebo funkcia f(x) = x + 5 nemôže nadobúdať hodnotu 6.",
-          "Áno, lebo 6 = f(1) a hodnota 1 patrí do D(f).",
-          "Áno, lebo 6 patrí aj do definičného oboru D(f)."
+          "Áno, lebo 6 patrí aj do definičného oboru D(f).",
+          "Áno, lebo 6 = f(1) a hodnota 1 patrí do D(f)."
         ],
-        answer: 2,
+        answer: 3,
         correct: "Áno. Keďže 1 ∈ D(f) a f(1) = 1 + 5 = 6, číslo 6 je funkčná hodnota, teda patrí do H(f).",
         hint: "Over, či existuje hodnota x z D(f), pre ktorú platí f(x) = 6."
       },
@@ -202,12 +202,12 @@ MathPlatform.registerModule({
         skill: "Definičný obor D(f)",
         question: "Tá istá funkcia f(x) = x + 5 má D(f) = {1, 2, 3, 4}. Patrí číslo 6 aj do definičného oboru D(f) tejto funkcie?",
         options: [
-          "Áno, lebo 6 = f(1).",
+          "Nie, lebo D(f) obsahuje iba čísla 1, 2, 3, 4.",
           "Nie, lebo číslo 6 je párne.",
           "Áno, lebo 6 je prirodzené číslo.",
-          "Nie, lebo D(f) obsahuje iba čísla 1, 2, 3, 4."
+          "Áno, lebo 6 = f(1)."
         ],
-        answer: 3,
+        answer: 0,
         correct: "Nie. Definičný obor je vopred daná množina {1, 2, 3, 4}; to, že 6 je funkčná hodnota, neznamená, že je aj hodnotou x.",
         hint: "Nezamieňaj funkčnú hodnotu f(x) s hodnotou argumentu x."
       },

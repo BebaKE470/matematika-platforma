@@ -70,11 +70,11 @@ MathPlatform.registerModule({
         "skill": "porozumenie",
         "question": "Riešenie 3x+5=20 je",
         "options": [
-          "x=5",
+          "x=25/3",
           "x=15",
-          "x=25/3"
+          "x=5"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "3x=15, teda x=5.",
         "hint": "Najprv si pomenuj, čo je dané a čo hľadáš."
       },
@@ -117,11 +117,11 @@ MathPlatform.registerModule({
         "skill": "kritické myslenie",
         "question": "Ktorý postup je pri tejto téme najspoľahlivejší?",
         "options": [
-          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Zapamätať si iba posledný výsledok.",
+          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Preskočiť zápis a tipnúť odpoveď."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Áno. Postup musí byť kontrolovateľný a výsledok interpretovaný.",
         "hint": "Matematika nie je tipovanie."
       },

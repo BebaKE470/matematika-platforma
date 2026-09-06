@@ -78,11 +78,11 @@ MathPlatform.registerModule({
         "question": "Ktorý test z grafu používame na prostosť?",
         "options": [
           "zvislá priamka pretne graf najviac raz",
-          "vodorovná priamka pretne graf najviac raz",
           "graf je súmerný podľa osi y",
+          "vodorovná priamka pretne graf najviac raz",
           "graf prechádza začiatkom"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Vodorovný test zisťuje, či sa rovnaká hodnota y neopakuje pri rôznych vstupoch.",
         "hint": "Prostosť rieši rovnaký výstup pre rôzne vstupy."
       },

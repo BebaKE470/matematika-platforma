@@ -67,11 +67,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Rieš |x+2| ≤ 3. Ktorý interval je správny?",
         "options": [
-          "⟨−5;1⟩",
+          "(−∞;−5⟩ ∪ ⟨1;∞)",
           "(−5;1)",
-          "(−∞;−5⟩ ∪ ⟨1;∞)"
+          "⟨−5;1⟩"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne. Vzdialenosť od −2 je najviac 3.",
         "hint": "Stred je −2."
       },
@@ -97,11 +97,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Z |x−2| < 3 vyplýva:",
         "options": [
-          "−1 < x < 5",
           "x < −1 alebo x > 5",
+          "−1 < x < 5",
           "−5 < x < 1"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Správne. 2−3=−1 a 2+3=5.",
         "hint": "Ide o vnútorný interval."
       },

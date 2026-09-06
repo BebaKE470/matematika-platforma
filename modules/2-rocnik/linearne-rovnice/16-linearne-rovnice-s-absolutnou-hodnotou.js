@@ -69,11 +69,11 @@ MathPlatform.registerModule({
         skill: 'porozumenie',
         question: 'Čo presne vyjadruje zápis |x − 7|?',
         options: [
-          'Vzdialenosť čísla x od čísla 7.',
           'Vždy súčet x + 7.',
+          'Vzdialenosť čísla x od čísla 7.',
           'Číslo x bez znamienka.'
         ],
-        answer: 0,
+        answer: 1,
         correct: 'Presne. Absolútna hodnota rozdielu vyjadruje vzdialenosť dvoch čísel na číselnej osi.',
         hint: 'Spomeň si na tvar |x − a|.'
       },
@@ -87,15 +87,15 @@ MathPlatform.registerModule({
       {
         id: 'basic-example',
         type: 'choice',
-        phase: 'POUZÍ',
+        phase: 'POUŽI',
         skill: 'postup',
         question: 'Rieš |2x − 5| = 7. Ktorá dvojica rovníc vznikne správne?',
         options: [
-          '2x − 5 = 7 alebo 2x − 5 = −7',
+          '2x − 5 = 7 a zároveň 2x − 5 = −7',
           '2x − 5 = 7 alebo 2x + 5 = 7',
-          '2x − 5 = 7 a zároveň 2x − 5 = −7'
+          '2x − 5 = 7 alebo 2x − 5 = −7'
         ],
-        answer: 0,
+        answer: 2,
         correct: 'Áno. Dostaneš x = 6 alebo x = −1. Obe hodnoty po dosadení spĺňajú pôvodnú rovnicu.',
         hint: 'Pri kladnom čísle k má |L(x)| = k dve vetvy: L(x)=k alebo L(x)=−k.'
       },
@@ -135,11 +135,11 @@ MathPlatform.registerModule({
         skill: 'kritické myslenie',
         question: 'Žiak rieši |x − 5| = 2x − 8 a hneď vytvorí dve vetvy x − 5 = 2x − 8 alebo x − 5 = −(2x − 8). Čo mu v postupe chýba?',
         options: [
-          'Podmienka 2x − 8 ≥ 0.',
           'Podmienka x − 5 ≥ 0.',
+          'Podmienka 2x − 8 ≥ 0.',
           'Nič, absolútna hodnota podmienku nepotrebuje.'
         ],
-        answer: 0,
+        answer: 1,
         correct: 'Áno. Pravá strana musí byť nezáporná, teda x ≥ 4. Kandidát mimo tejto podmienky nemôže byť riešením.',
         hint: 'Ktorá strana rovnice je automaticky nezáporná?'
       },
@@ -164,11 +164,11 @@ MathPlatform.registerModule({
         skill: 'postup',
         question: 'Aké sú kritické body rovnice |2x−3| + |x+1| = 7?',
         options: [
-          'x = 3/2 a x = −1',
+          'x = −3/2 a x = 1',
           'x = 3 a x = 1',
-          'x = −3/2 a x = 1'
+          'x = 3/2 a x = −1'
         ],
-        answer: 0,
+        answer: 2,
         correct: 'Správne. 2x−3=0 dá x=3/2 a x+1=0 dá x=−1.',
         hint: 'Každý výraz vo vnútri absolútnej hodnoty polož rovný nule.'
       },
@@ -208,11 +208,11 @@ MathPlatform.registerModule({
         skill: 'kontrola',
         question: 'V intervale −1 ≤ x < 3/2 vyjde po úprave kandidát x = −3. Čo s ním?',
         options: [
-          'Vyradíme ho, pretože x=−3 nepatrí do riešeného intervalu.',
           'Prijmeme ho, lebo vyšiel z lineárnej rovnice.',
+          'Vyradíme ho, pretože x=−3 nepatrí do riešeného intervalu.',
           'Zmeníme mu znamienko na x=3.'
         ],
-        answer: 0,
+        answer: 1,
         correct: 'Presne. Riešenie čiastkovej rovnice platí iba v intervale, pre ktorý sme zvolili dané znamienka.',
         hint: 'Každá čiastková rovnica bola odvodená iba za určitej podmienky na x.'
       },
@@ -223,11 +223,11 @@ MathPlatform.registerModule({
         skill: 'výpočet',
         question: 'V intervale x ≥ 3/2 je rovnica (2x−3)+(x+1)=7. Aký výsledok zostane?',
         options: [
-          'x = 3',
+          'x = 5/3',
           'x = −3',
-          'x = 5/3'
+          'x = 3'
         ],
-        answer: 0,
+        answer: 2,
         correct: 'Správne. 3x−2=7 ⇒ x=3 a tento kandidát patrí do intervalu x≥3/2.',
         hint: 'Na tomto intervale sú oba vnútorné výrazy nezáporné.'
       },

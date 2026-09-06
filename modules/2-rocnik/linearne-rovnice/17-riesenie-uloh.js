@@ -102,11 +102,11 @@ MathPlatform.registerModule({
         "skill": "prenos",
         "question": "|x−5|=7 má riešenia",
         "options": [
-          "12 a −2",
           "12 a 2",
+          "12 a −2",
           "−12 a 2"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "x−5=7 alebo x−5=−7.",
         "hint": "Skús náčrt, odhad alebo spätnú kontrolu."
       },
@@ -117,11 +117,11 @@ MathPlatform.registerModule({
         "skill": "kritické myslenie",
         "question": "Ktorý postup je pri tejto téme najspoľahlivejší?",
         "options": [
-          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
+          "Preskočiť zápis a tipnúť odpoveď.",
           "Zapamätať si iba posledný výsledok.",
-          "Preskočiť zápis a tipnúť odpoveď."
+          "Použiť pravidlo a skontrolovať podmienky aj jednotky."
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Áno. Postup musí byť kontrolovateľný a výsledok interpretovaný.",
         "hint": "Matematika nie je tipovanie."
       },

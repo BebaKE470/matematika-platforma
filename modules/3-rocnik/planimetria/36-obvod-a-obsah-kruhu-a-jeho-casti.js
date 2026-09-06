@@ -72,12 +72,12 @@ MathPlatform.registerModule({
         "skill": "planimetria",
         "question": "Čo má byť pred dosadením do vzorca?",
         "options": [
-          "náčrt, označenie údajov a voľba vhodného vzťahu",
-          "iba kalkulačka",
           "zaokrúhlenie výsledku",
+          "iba kalkulačka",
+          "náčrt, označenie údajov a voľba vhodného vzťahu",
           "výber jednotky bez výpočtu"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Náčrt a označenie údajov znižujú riziko zámeny veličín.",
         "hint": "Najprv matematický model."
       },
@@ -102,14 +102,14 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "ORIGINÁLNA MATURITNÁ ÚLOHA",
         "skill": "kruhový výsek",
-        "prompt": "Maturita 2023, úloha 13. Dva výseky majú rovnaký stredový uhol a polomery v pomere 2:5. Väčší má obsah 18 cm². Aký je obsah menšieho?",
+        "question": "Maturita 2023, úloha 13. Dva výseky majú rovnaký stredový uhol a polomery v pomere 2:5. Väčší má obsah 18 cm². Aký je obsah menšieho?",
         "options": [
-          "2,88 cm²",
+          "45 cm²",
           "7,2 cm²",
           "11,25 cm²",
-          "45 cm²"
+          "2,88 cm²"
         ],
-        "answer": 0,
+        "answer": 3,
         "correct": "Pri rovnakom uhle sa obsahy menia so štvorcom polomeru: 18·(2/5)²=18·4/25=2,88 cm².",
         "hint": "Obsah výseku je úmerný r²."
       },

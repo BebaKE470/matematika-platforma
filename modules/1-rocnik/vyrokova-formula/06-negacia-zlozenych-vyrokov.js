@@ -89,10 +89,10 @@ MathPlatform.registerModule({
         "question": "Neguj vetu: „x < 0 alebo x > 10“.",
         "options": [
           "x ≥ 0 alebo x ≤ 10",
-          "x ≥ 0 a zároveň x ≤ 10",
-          "x < 0 a zároveň x > 10"
+          "x < 0 a zároveň x > 10",
+          "x ≥ 0 a zároveň x ≤ 10"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Správne. Aby neplatila ani jedna z možností, musia súčasne platiť obe negácie.",
         "hint": "Pri negácii disjunkcie sa „alebo“ mení na „a zároveň“."
       },
@@ -111,11 +111,11 @@ MathPlatform.registerModule({
         "skill": "Negácia implikácie",
         "question": "Kedy je veta „Ak A, tak B“ nepravdivá?",
         "options": [
-          "Keď A neplatí a B platí.",
           "Keď A platí a B neplatí.",
+          "Keď A neplatí a B platí.",
           "Keď neplatia A ani B."
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Presne. Preto ¬(A ⇒ B) je A ∧ ¬B.",
         "hint": "Pozri jediný nepravdivý riadok implikácie v pravdivostnej tabuľke."
       },

@@ -67,11 +67,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Technický parameter musí byť najmenej 12 mm a menej ako 18 mm. Ktorý zápis je správny?",
         "options": [
-          "12 ≤ x < 18",
           "12 < x ≤ 18",
+          "12 ≤ x < 18",
           "x < 12 alebo x ≥ 18"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Správne. „Najmenej“ zahŕňa 12, „menej ako“ nezahŕňa 18.",
         "hint": "Prelož každé slovné spojenie zvlášť."
       },
@@ -82,11 +82,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Ktorý interval zodpovedá 12 ≤ x < 18?",
         "options": [
-          "⟨12;18)",
+          "(−∞;12⟩",
           "(12;18⟩",
-          "(−∞;12⟩"
+          "⟨12;18)"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Áno. Ľavý bod patrí, pravý nie.",
         "hint": "Sleduj ≤ a <."
       },
@@ -113,10 +113,10 @@ MathPlatform.registerModule({
         "question": "Ktorá hodnota NEVYHOVUJE podmienke −2 < x ≤ 6?",
         "options": [
           "−1",
-          "6",
-          "−2"
+          "−2",
+          "6"
         ],
-        "answer": 2,
+        "answer": 1,
         "correct": "Správne. −2 je vylúčený krajný bod.",
         "hint": "Ostrá nerovnosť −2 < x."
       },

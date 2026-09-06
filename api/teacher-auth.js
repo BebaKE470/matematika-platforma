@@ -20,6 +20,10 @@ const RATE_MAX_ATTEMPTS = 5;
 // Best-effort spomalenie hrubej sily. Žije len v pamäti jednej "teplej" inštancie
 // funkcie a pri studenom štarte sa vynuluje – nie je to náhrada za silné heslo,
 // len ďalšia prekážka pre niekoho, kto skúša heslá naklikaním cez formulár.
+// Počítajú sa iba NESPRÁVNE pokusy (viď recordFailedAttempt/clearAttempts nižšie) –
+// opakované správne prihlásenia z jednej IP (napr. celá trieda za školským NAT-om)
+// si limit nevyčerpajú. Záznamy staršie ako RATE_WINDOW_MS sa priebežne mažú
+// (pruneExpired), aby Map nerástla donekonečna počas života teplej inštancie.
 const attempts = new Map();
 
 function clientIp(req) {
@@ -28,13 +32,26 @@ function clientIp(req) {
   return req.socket?.remoteAddress || 'unknown';
 }
 
-function tooManyAttempts(ip) {
+function pruneExpired() {
+  const now = Date.now();
+  for (const [ip, rec] of attempts) {
+    if (now > rec.resetAt) attempts.delete(ip);
+  }
+}
+
+function isRateLimited(ip) {
+  const rec = attempts.get(ip);
+  return !!rec && rec.count >= RATE_MAX_ATTEMPTS;
+}
+
+function recordFailedAttempt(ip) {
   const now = Date.now();
   const rec = attempts.get(ip);
-  if (!rec || now > rec.resetAt) { attempts.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS }); return false; }
+  if (!rec || now > rec.resetAt) { attempts.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS }); return; }
   rec.count++;
-  return rec.count > RATE_MAX_ATTEMPTS;
 }
+
+function clearAttempts(ip) { attempts.delete(ip); }
 
 function teacherPassword() {
   const v = process.env.TEACHER_PASSWORD;
@@ -94,7 +111,8 @@ module.exports = async function handler(req, res) {
   // Prihlásenie heslom.
   if (typeof body.password === 'string') {
     const ip = clientIp(req);
-    if (tooManyAttempts(ip)) {
+    pruneExpired();
+    if (isRateLimited(ip)) {
       res.status(429).json({ ok: false, error: 'Príliš veľa pokusov. Skús to o minútu.' });
       return;
     }
@@ -104,10 +122,12 @@ module.exports = async function handler(req, res) {
     catch (_) { res.status(500).json({ ok: false, error: 'Heslo nie je na serveri nastavené (TEACHER_PASSWORD).' }); return; }
 
     if (!safeEqual(body.password, expected)) {
+      recordFailedAttempt(ip);
       res.status(401).json({ ok: false, error: 'Nesprávne heslo.' });
       return;
     }
 
+    clearAttempts(ip);
     res.status(200).json({ ok: true, token: issueToken(), expiresIn: TOKEN_TTL_MS });
     return;
   }

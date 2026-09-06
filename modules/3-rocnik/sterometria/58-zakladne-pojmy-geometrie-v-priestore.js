@@ -84,11 +84,11 @@ MathPlatform.registerModule({
         "skill": "pojmy",
         "question": "Ktorá možnosť vždy jednoznačne určí rovinu?",
         "options": [
-          "tri body, ktoré neležia na jednej priamke",
           "dva ľubovoľné body",
+          "tri body, ktoré neležia na jednej priamke",
           "jeden bod a ľubovoľné číslo"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Tri nekolineárne body určujú práve jednu rovinu."
       },
       {
@@ -99,11 +99,11 @@ MathPlatform.registerModule({
         "skill": "orientácia",
         "question": "V kocke ABCDEFGH ležia body A, B, E, F na jednej stene. Ktorý zápis môže pomenovať rovinu tejto steny?",
         "options": [
-          "rovina ABE",
+          "priamka ABE",
           "rovina ACG",
-          "priamka ABE"
+          "rovina ABE"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Tri nekolineárne body A, B, E určujú rovinu prednej steny."
       },
       {
@@ -161,19 +161,20 @@ MathPlatform.registerModule({
         "skill": "pojmy",
         "question": "Ktorá veta je správna?",
         "options": [
-          "Cez jednu priamku možno viesť viac rovín.",
           "Dva body určujú práve jednu rovinu.",
+          "Cez jednu priamku možno viesť viac rovín.",
           "Každé štyri body ležia v jednej rovine."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Jedna priamka sama rovinu neurčuje."
       },
       {
         "id": "r",
         "type": "reflection",
-        "phase": "PRECVIČ",
+        "phase": "ZÁVER",
         "title": "Ako sa orientuješ?",
-        "items": [
+        "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka.",
+        "skills": [
           "Rozlíšim bod, priamku a rovinu.",
           "Viem, čo určuje priamku a rovinu.",
           "Viem čítať označenie kocky."

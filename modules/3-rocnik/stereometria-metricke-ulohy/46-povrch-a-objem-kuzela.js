@@ -71,10 +71,10 @@ MathPlatform.registerModule({
         "question": "Objem kužeľa je",
         "options": [
           "πr²v",
-          "(1/3)πr²v",
-          "2πrv"
+          "2πrv",
+          "(1/3)πr²v"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Kužeľ s rovnakou podstavou a výškou má tretinu objemu príslušného valca.",
         "hint": "Najprv si pomenuj, čo je dané a čo hľadáš."
       },
@@ -117,11 +117,11 @@ MathPlatform.registerModule({
         "skill": "kritické myslenie",
         "question": "Ktorý postup je pri tejto téme najspoľahlivejší?",
         "options": [
-          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Zapamätať si iba posledný výsledok.",
+          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Preskočiť zápis a tipnúť odpoveď."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Áno. Postup musí byť kontrolovateľný a výsledok interpretovaný.",
         "hint": "Matematika nie je tipovanie."
       },

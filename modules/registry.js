@@ -9,19 +9,16 @@
   Zostávajúce témy majú vytvorený TODO placeholder na presnej ceste.
   Pri spracovaní témy sa nahradí obsah súboru a status sa zmení na 'ready'.
 */
-const planned = (id, year, unit, unitOrder, topic, lesson, lessonOrder, file) => ({
-  id, year, unit, unitOrder, topic, lesson, lessonOrder,
-  time: 'TODO', status: 'placeholder', type: 'TODO – zástupný modul', skills: [], file
-});
 
-const ready = (id, year, unit, unitOrder, topic, lesson, lessonOrder, file) => ({
-  id, year, unit, unitOrder, topic, lesson, lessonOrder,
-  time: '≈ 15 min', status: 'ready',
-  type: 'Interaktívne precvičovanie → spätná väzba → argumentácia',
-  skills: ['porozumenie', 'presný zápis', 'argumentácia'], file
-});
+(function () {
+  function placeholder({ id, year, unit, unitOrder, topic, lesson, lessonOrder, file }) {
+    return {
+      id, year, unit, unitOrder, topic, lesson, lessonOrder,
+      time: 'TODO', status: 'placeholder', type: 'TODO – zástupný modul', skills: [], file,
+    };
+  }
 
-window.MATH_MODULE_INDEX = [
+  window.MATH_MODULE_INDEX = [
   // ==================== 1. ROČNÍK ====================
 
   // 1.01 · Výroková formula
@@ -361,64 +358,106 @@ window.MATH_MODULE_INDEX = [
   {"id": "1-u03-h037", "year": 1, "unit": "Čísla, premenné, výrazy", "unitOrder": 3, "topic": "Kontrolná písomná práca", "lesson": "Hodina 37", "lessonOrder": 37, "time": "5–7 min digitálne + písomka", "status": "ready", "type": "Názornosť → aktivita → zápis → argumentácia → ručná kontrola", "skills": ["porozumenie", "modelovanie", "presný zápis", "argumentácia"], "file": "modules/1-rocnik/cisla-premenne-vyrazy/37-kontrolna-pisomna-praca.js"},
 
   // 1.04 · Absolútna hodnota a intervaly
-  ready('1-u04-h038', 1, "Absolútna hodnota a intervaly", 4, "Absolútna hodnota reálnych čísel", "Hodina 38", 38, "modules/1-rocnik/absolutna-hodnota-a-intervaly/38-absolutna-hodnota-realnych-cisel.js"),
-  ready('1-u04-h039', 1, "Absolútna hodnota a intervaly", 4, "Intervaly", "Hodina 39", 39, "modules/1-rocnik/absolutna-hodnota-a-intervaly/39-intervaly.js"),
-  ready('1-u04-h040', 1, "Absolútna hodnota a intervaly", 4, "Zjednotenie a prienik intervalov", "Hodina 40", 40, "modules/1-rocnik/absolutna-hodnota-a-intervaly/40-zjednotenie-a-prienik-intervalov.js"),
-  ready('1-u04-h041', 1, "Absolútna hodnota a intervaly", 4, "Aplikácia intervalov", "Hodina 41", 41, "modules/1-rocnik/absolutna-hodnota-a-intervaly/41-aplikacia-intervalov.js"),
-  ready('1-u04-h042', 1, "Absolútna hodnota a intervaly", 4, "Riešenie úloh", "Hodina 42", 42, "modules/1-rocnik/absolutna-hodnota-a-intervaly/42-riesenie-uloh.js"),
-  ready('1-u04-h043', 1, "Absolútna hodnota a intervaly", 4, "Previerka", "Hodina 43", 43, "modules/1-rocnik/absolutna-hodnota-a-intervaly/43-previerka.js"),
+  {
+    id: '1-u04-h038', year: 1, unit: "Absolútna hodnota a intervaly", unitOrder: 4,
+    topic: "Absolútna hodnota reálnych čísel", lesson: "Hodina 38", lessonOrder: 38,
+    time: "15–18 min", status: 'ready',
+    type: "Pochopenie → nový pojem → overenie → prepojenie → zápis do zošita → hľadanie chyby → vysvetlenie → záver",
+    skills: ["porozumenie","reprezentácie","kritické myslenie","matematická komunikácia"],
+    file: "modules/1-rocnik/absolutna-hodnota-a-intervaly/38-absolutna-hodnota-realnych-cisel.js"
+  },
+  {
+    id: '1-u04-h039', year: 1, unit: "Absolútna hodnota a intervaly", unitOrder: 4,
+    topic: "Intervaly", lesson: "Hodina 39", lessonOrder: 39,
+    time: "15–18 min", status: 'ready',
+    type: "Pochopenie → nový pojem → overenie → hľadanie chyby → zápis do zošita → vysvetlenie → záver",
+    skills: ["presný zápis","kritické myslenie","matematická komunikácia"],
+    file: "modules/1-rocnik/absolutna-hodnota-a-intervaly/39-intervaly.js"
+  },
+  {
+    id: '1-u04-h040', year: 1, unit: "Absolútna hodnota a intervaly", unitOrder: 4,
+    topic: "Zjednotenie a prienik intervalov", lesson: "Hodina 40", lessonOrder: 40,
+    time: "15–18 min", status: 'ready',
+    type: "Pochopenie → nový pojem → overenie → prenos → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["prienik","zjednotenie","kritické myslenie","argumentácia"],
+    file: "modules/1-rocnik/absolutna-hodnota-a-intervaly/40-zjednotenie-a-prienik-intervalov.js"
+  },
+  {
+    id: '1-u04-h041', year: 1, unit: "Absolútna hodnota a intervaly", unitOrder: 4,
+    topic: "Aplikácia intervalov", lesson: "Hodina 41", lessonOrder: 41,
+    time: "15–18 min", status: 'ready',
+    type: "Pochopenie → aplikácia → prepojenie → rozhodovanie → zápis do zošita → vysvetlenie → záver",
+    skills: ["modelovanie","interpretácia","kritické myslenie"],
+    file: "modules/1-rocnik/absolutna-hodnota-a-intervaly/41-aplikacia-intervalov.js"
+  },
+  {
+    id: '1-u04-h042', year: 1, unit: "Absolútna hodnota a intervaly", unitOrder: 4,
+    topic: "Riešenie úloh", lesson: "Hodina 42", lessonOrder: 42,
+    time: "16–20 min", status: 'ready',
+    type: "Pochopenie → nový pojem → prepojenie → prenos → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["reprezentácie","kritické myslenie","argumentácia"],
+    file: "modules/1-rocnik/absolutna-hodnota-a-intervaly/42-riesenie-uloh.js"
+  },
+  {
+    id: '1-u04-h043', year: 1, unit: "Absolútna hodnota a intervaly", unitOrder: 4,
+    topic: "Previerka", lesson: "Hodina 43", lessonOrder: 43,
+    time: "15–20 min", status: 'ready',
+    type: "Pochopenie → previerka → zdôvodnenie → záver",
+    skills: ["absolútna hodnota","intervaly","prienik","zjednotenie","praktická interpretácia","reprezentácie","kritické myslenie","argumentácia"],
+    file: "modules/1-rocnik/absolutna-hodnota-a-intervaly/43-previerka.js"
+  },
 
   // 1.05 · Mocniny a odmocniny
-  planned('1-u05-h044', 1, "Mocniny a odmocniny", 5, "Definícia mocniny, zápis, príklady na kladné prirodzené mocnitele", "Hodina 44", 44, "modules/1-rocnik/mocniny-a-odmocniny/44-definicia-mocniny-zapis-priklady-na-kladne-prirodzene-mocnitele.js"),
-  planned('1-u05-h045', 1, "Mocniny a odmocniny", 5, "Vlastnosti mocnín (násobenie, delenie, mocnina mocniny), príklady", "Hodina 45", 45, "modules/1-rocnik/mocniny-a-odmocniny/45-vlastnosti-mocnin-nasobenie-delenie-mocnina-mocniny-priklady.js"),
-  planned('1-u05-h046', 1, "Mocniny a odmocniny", 5, "Definícia mocniny so záporným mocniteľom, príklady", "Hodina 46", 46, "modules/1-rocnik/mocniny-a-odmocniny/46-definicia-mocniny-so-zapornym-mocnitelom-priklady.js"),
-  planned('1-u05-h047', 1, "Mocniny a odmocniny", 5, "Precvičovanie, typické úlohy, aplikácia vo výpočtoch", "Hodina 47", 47, "modules/1-rocnik/mocniny-a-odmocniny/47-precvicovanie-typicke-ulohy-aplikacia-vo-vypoctoch.js"),
-  planned('1-u05-h048', 1, "Mocniny a odmocniny", 5, "Príklady zo stavebníctva, fyziky, chémie (plochy, objemy, hustota, tlak)", "Hodina 48", 48, "modules/1-rocnik/mocniny-a-odmocniny/48-priklady-zo-stavebnictva-fyziky-chemie-plochy-objemy-hustota-tlak.js"),
-  planned('1-u05-h049', 1, "Mocniny a odmocniny", 5, "Vlastnosti mocnín so základom 10, zápis veľkých a malých čísel", "Hodina 49", 49, "modules/1-rocnik/mocniny-a-odmocniny/49-vlastnosti-mocnin-so-zakladom-10-zapis-velkych-a-malych-cisel.js"),
-  planned('1-u05-h050', 1, "Mocniny a odmocniny", 5, "Používanie v technike a prírodných vedách, prevody jednotiek, cvičenia", "Hodina 50", 50, "modules/1-rocnik/mocniny-a-odmocniny/50-pouzivanie-v-technike-a-prirodnych-vedach-prevody-jednotiek-cvicenia.js"),
-  planned('1-u05-h051', 1, "Mocniny a odmocniny", 5, "Druhá odmocnina", "Hodina 51", 51, "modules/1-rocnik/mocniny-a-odmocniny/51-druha-odmocnina.js"),
-  planned('1-u05-h052', 1, "Mocniny a odmocniny", 5, "Tretia odmocnina", "Hodina 52", 52, "modules/1-rocnik/mocniny-a-odmocniny/52-tretia-odmocnina.js"),
-  planned('1-u05-h053', 1, "Mocniny a odmocniny", 5, "Vety o odmocninách", "Hodina 53", 53, "modules/1-rocnik/mocniny-a-odmocniny/53-vety-o-odmocninach.js"),
-  planned('1-u05-h054', 1, "Mocniny a odmocniny", 5, "Použitie odmocnín", "Hodina 54", 54, "modules/1-rocnik/mocniny-a-odmocniny/54-pouzitie-odmocnin.js"),
-  planned('1-u05-h055', 1, "Mocniny a odmocniny", 5, "Definícia, prechod od odmocnín k mocninám s racionálnym mocniteľom", "Hodina 55", 55, "modules/1-rocnik/mocniny-a-odmocniny/55-definicia-prechod-od-odmocnin-k-mocninam-s-racionalnym-mocnitelom.js"),
-  planned('1-u05-h056', 1, "Mocniny a odmocniny", 5, "Vlastnosti, príklady, riešenie úloh", "Hodina 56", 56, "modules/1-rocnik/mocniny-a-odmocniny/56-vlastnosti-priklady-riesenie-uloh.js"),
-  planned('1-u05-h057', 1, "Mocniny a odmocniny", 5, "Kombinácie mocnín a odmocnín", "Hodina 57", 57, "modules/1-rocnik/mocniny-a-odmocniny/57-kombinacie-mocnin-a-odmocnin.js"),
-  planned('1-u05-h058', 1, "Mocniny a odmocniny", 5, "Kontrolná písomná práca", "Hodina 58", 58, "modules/1-rocnik/mocniny-a-odmocniny/58-kontrolna-pisomna-praca.js"),
+  placeholder({ id: '1-u05-h044', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Definícia mocniny, zápis, príklady na kladné prirodzené mocnitele", lesson: "Hodina 44", lessonOrder: 44, file: "modules/1-rocnik/mocniny-a-odmocniny/44-definicia-mocniny-zapis-priklady-na-kladne-prirodzene-mocnitele.js" }),
+  placeholder({ id: '1-u05-h045', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Vlastnosti mocnín (násobenie, delenie, mocnina mocniny), príklady", lesson: "Hodina 45", lessonOrder: 45, file: "modules/1-rocnik/mocniny-a-odmocniny/45-vlastnosti-mocnin-nasobenie-delenie-mocnina-mocniny-priklady.js" }),
+  placeholder({ id: '1-u05-h046', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Definícia mocniny so záporným mocniteľom, príklady", lesson: "Hodina 46", lessonOrder: 46, file: "modules/1-rocnik/mocniny-a-odmocniny/46-definicia-mocniny-so-zapornym-mocnitelom-priklady.js" }),
+  placeholder({ id: '1-u05-h047', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Precvičovanie, typické úlohy, aplikácia vo výpočtoch", lesson: "Hodina 47", lessonOrder: 47, file: "modules/1-rocnik/mocniny-a-odmocniny/47-precvicovanie-typicke-ulohy-aplikacia-vo-vypoctoch.js" }),
+  placeholder({ id: '1-u05-h048', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Príklady zo stavebníctva, fyziky, chémie (plochy, objemy, hustota, tlak)", lesson: "Hodina 48", lessonOrder: 48, file: "modules/1-rocnik/mocniny-a-odmocniny/48-priklady-zo-stavebnictva-fyziky-chemie-plochy-objemy-hustota-tlak.js" }),
+  placeholder({ id: '1-u05-h049', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Vlastnosti mocnín so základom 10, zápis veľkých a malých čísel", lesson: "Hodina 49", lessonOrder: 49, file: "modules/1-rocnik/mocniny-a-odmocniny/49-vlastnosti-mocnin-so-zakladom-10-zapis-velkych-a-malych-cisel.js" }),
+  placeholder({ id: '1-u05-h050', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Používanie v technike a prírodných vedách, prevody jednotiek, cvičenia", lesson: "Hodina 50", lessonOrder: 50, file: "modules/1-rocnik/mocniny-a-odmocniny/50-pouzivanie-v-technike-a-prirodnych-vedach-prevody-jednotiek-cvicenia.js" }),
+  placeholder({ id: '1-u05-h051', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Druhá odmocnina", lesson: "Hodina 51", lessonOrder: 51, file: "modules/1-rocnik/mocniny-a-odmocniny/51-druha-odmocnina.js" }),
+  placeholder({ id: '1-u05-h052', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Tretia odmocnina", lesson: "Hodina 52", lessonOrder: 52, file: "modules/1-rocnik/mocniny-a-odmocniny/52-tretia-odmocnina.js" }),
+  placeholder({ id: '1-u05-h053', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Vety o odmocninách", lesson: "Hodina 53", lessonOrder: 53, file: "modules/1-rocnik/mocniny-a-odmocniny/53-vety-o-odmocninach.js" }),
+  placeholder({ id: '1-u05-h054', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Použitie odmocnín", lesson: "Hodina 54", lessonOrder: 54, file: "modules/1-rocnik/mocniny-a-odmocniny/54-pouzitie-odmocnin.js" }),
+  placeholder({ id: '1-u05-h055', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Definícia, prechod od odmocnín k mocninám s racionálnym mocniteľom", lesson: "Hodina 55", lessonOrder: 55, file: "modules/1-rocnik/mocniny-a-odmocniny/55-definicia-prechod-od-odmocnin-k-mocninam-s-racionalnym-mocnitelom.js" }),
+  placeholder({ id: '1-u05-h056', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Vlastnosti, príklady, riešenie úloh", lesson: "Hodina 56", lessonOrder: 56, file: "modules/1-rocnik/mocniny-a-odmocniny/56-vlastnosti-priklady-riesenie-uloh.js" }),
+  placeholder({ id: '1-u05-h057', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Kombinácie mocnín a odmocnín", lesson: "Hodina 57", lessonOrder: 57, file: "modules/1-rocnik/mocniny-a-odmocniny/57-kombinacie-mocnin-a-odmocnin.js" }),
+  placeholder({ id: '1-u05-h058', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Kontrolná písomná práca", lesson: "Hodina 58", lessonOrder: 58, file: "modules/1-rocnik/mocniny-a-odmocniny/58-kontrolna-pisomna-praca.js" }),
 
   // 1.06 · Výrazy a mnohočleny
-  planned('1-u06-h059', 1, "Výrazy a mnohočleny", 6, "Konštanta, premenná, výraz, mnohočlen", "Hodina 59", 59, "modules/1-rocnik/vyrazy-a-mnohocleny/59-konstanta-premenna-vyraz-mnohoclen.js"),
-  planned('1-u06-h060', 1, "Výrazy a mnohočleny", 6, "Sčítanie a odčítanie mnohočlenov, jednoduché príklady, násobenie jednočlenom, pravidlá a príklady", "Hodina 60", 60, "modules/1-rocnik/vyrazy-a-mnohocleny/60-scitanie-a-odcitanie-mnohoclenov-jednoduche-priklady-nasobenie-jednocl.js"),
-  planned('1-u06-h061', 1, "Výrazy a mnohočleny", 6, "Násobenie mnohočlenov", "Hodina 61", 61, "modules/1-rocnik/vyrazy-a-mnohocleny/61-nasobenie-mnohoclenov.js"),
-  planned('1-u06-h062', 1, "Výrazy a mnohočleny", 6, "Delenie mnohočlenov", "Hodina 62", 62, "modules/1-rocnik/vyrazy-a-mnohocleny/62-delenie-mnohoclenov.js"),
-  planned('1-u06-h063', 1, "Výrazy a mnohočleny", 6, "Tvorba výrazov zo slovného zadania, príklady", "Hodina 63", 63, "modules/1-rocnik/vyrazy-a-mnohocleny/63-tvorba-vyrazov-zo-slovneho-zadania-priklady.js"),
-  planned('1-u06-h064', 1, "Výrazy a mnohočleny", 6, "Riešenie a diskusia úloh z technickej praxe", "Hodina 64", 64, "modules/1-rocnik/vyrazy-a-mnohocleny/64-riesenie-a-diskusia-uloh-z-technickej-praxe.js"),
-  planned('1-u06-h065', 1, "Výrazy a mnohočleny", 6, "Úpravy mnohočlenov", "Hodina 65", 65, "modules/1-rocnik/vyrazy-a-mnohocleny/65-upravy-mnohoclenov.js"),
-  planned('1-u06-h066', 1, "Výrazy a mnohočleny", 6, "Previerka", "Hodina 66", 66, "modules/1-rocnik/vyrazy-a-mnohocleny/66-previerka.js"),
+  placeholder({ id: '1-u06-h059', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Konštanta, premenná, výraz, mnohočlen", lesson: "Hodina 59", lessonOrder: 59, file: "modules/1-rocnik/vyrazy-a-mnohocleny/59-konstanta-premenna-vyraz-mnohoclen.js" }),
+  placeholder({ id: '1-u06-h060', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Sčítanie a odčítanie mnohočlenov, jednoduché príklady, násobenie jednočlenom, pravidlá a príklady", lesson: "Hodina 60", lessonOrder: 60, file: "modules/1-rocnik/vyrazy-a-mnohocleny/60-scitanie-a-odcitanie-mnohoclenov-jednoduche-priklady-nasobenie-jednocl.js" }),
+  placeholder({ id: '1-u06-h061', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Násobenie mnohočlenov", lesson: "Hodina 61", lessonOrder: 61, file: "modules/1-rocnik/vyrazy-a-mnohocleny/61-nasobenie-mnohoclenov.js" }),
+  placeholder({ id: '1-u06-h062', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Delenie mnohočlenov", lesson: "Hodina 62", lessonOrder: 62, file: "modules/1-rocnik/vyrazy-a-mnohocleny/62-delenie-mnohoclenov.js" }),
+  placeholder({ id: '1-u06-h063', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Tvorba výrazov zo slovného zadania, príklady", lesson: "Hodina 63", lessonOrder: 63, file: "modules/1-rocnik/vyrazy-a-mnohocleny/63-tvorba-vyrazov-zo-slovneho-zadania-priklady.js" }),
+  placeholder({ id: '1-u06-h064', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Riešenie a diskusia úloh z technickej praxe", lesson: "Hodina 64", lessonOrder: 64, file: "modules/1-rocnik/vyrazy-a-mnohocleny/64-riesenie-a-diskusia-uloh-z-technickej-praxe.js" }),
+  placeholder({ id: '1-u06-h065', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Úpravy mnohočlenov", lesson: "Hodina 65", lessonOrder: 65, file: "modules/1-rocnik/vyrazy-a-mnohocleny/65-upravy-mnohoclenov.js" }),
+  placeholder({ id: '1-u06-h066', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Previerka", lesson: "Hodina 66", lessonOrder: 66, file: "modules/1-rocnik/vyrazy-a-mnohocleny/66-previerka.js" }),
 
   // 1.07 · Rozklad výrazov a dosadzovanie vo vzorcoch
-  planned('1-u07-h067', 1, "Rozklad výrazov a dosadzovanie vo vzorcoch", 7, "Dosadzovanie do výrazov", "Hodina 67", 67, "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/67-dosadzovanie-do-vyrazov.js"),
-  planned('1-u07-h068', 1, "Rozklad výrazov a dosadzovanie vo vzorcoch", 7, "Úpravy vzorcov", "Hodina 68", 68, "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/68-upravy-vzorcov.js"),
-  planned('1-u07-h069', 1, "Rozklad výrazov a dosadzovanie vo vzorcoch", 7, "Rozklad výrazov pomocou vynímania pred zátvorku", "Hodina 69", 69, "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/69-rozklad-vyrazov-pomocou-vynimania-pred-zatvorku.js"),
-  planned('1-u07-h070', 1, "Rozklad výrazov a dosadzovanie vo vzorcoch", 7, "Riešenie úloh", "Hodina 70", 70, "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/70-riesenie-uloh.js"),
-  planned('1-u07-h071', 1, "Rozklad výrazov a dosadzovanie vo vzorcoch", 7, "Rozklad výrazov podľa vzorcov", "Hodina 71", 71, "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/71-rozklad-vyrazov-podla-vzorcov.js"),
-  planned('1-u07-h072', 1, "Rozklad výrazov a dosadzovanie vo vzorcoch", 7, "Rozklad výrazov pomocou vzorcov", "Hodina 72", 72, "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/72-rozklad-vyrazov-pomocou-vzorcov.js"),
-  planned('1-u07-h073', 1, "Rozklad výrazov a dosadzovanie vo vzorcoch", 7, "Riešenie úloh", "Hodina 73", 73, "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/73-riesenie-uloh.js"),
-  planned('1-u07-h074', 1, "Rozklad výrazov a dosadzovanie vo vzorcoch", 7, "Zložitejšie úpravy", "Hodina 74", 74, "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/74-zlozitejsie-upravy.js"),
-  planned('1-u07-h075', 1, "Rozklad výrazov a dosadzovanie vo vzorcoch", 7, "Riešenie úloh", "Hodina 75", 75, "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/75-riesenie-uloh.js"),
-  planned('1-u07-h076', 1, "Rozklad výrazov a dosadzovanie vo vzorcoch", 7, "Kontrolná písomná práca", "Hodina 76", 76, "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/76-kontrolna-pisomna-praca.js"),
+  placeholder({ id: '1-u07-h067', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Dosadzovanie do výrazov", lesson: "Hodina 67", lessonOrder: 67, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/67-dosadzovanie-do-vyrazov.js" }),
+  placeholder({ id: '1-u07-h068', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Úpravy vzorcov", lesson: "Hodina 68", lessonOrder: 68, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/68-upravy-vzorcov.js" }),
+  placeholder({ id: '1-u07-h069', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Rozklad výrazov pomocou vynímania pred zátvorku", lesson: "Hodina 69", lessonOrder: 69, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/69-rozklad-vyrazov-pomocou-vynimania-pred-zatvorku.js" }),
+  placeholder({ id: '1-u07-h070', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Riešenie úloh", lesson: "Hodina 70", lessonOrder: 70, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/70-riesenie-uloh.js" }),
+  placeholder({ id: '1-u07-h071', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Rozklad výrazov podľa vzorcov", lesson: "Hodina 71", lessonOrder: 71, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/71-rozklad-vyrazov-podla-vzorcov.js" }),
+  placeholder({ id: '1-u07-h072', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Rozklad výrazov pomocou vzorcov", lesson: "Hodina 72", lessonOrder: 72, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/72-rozklad-vyrazov-pomocou-vzorcov.js" }),
+  placeholder({ id: '1-u07-h073', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Riešenie úloh", lesson: "Hodina 73", lessonOrder: 73, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/73-riesenie-uloh.js" }),
+  placeholder({ id: '1-u07-h074', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Zložitejšie úpravy", lesson: "Hodina 74", lessonOrder: 74, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/74-zlozitejsie-upravy.js" }),
+  placeholder({ id: '1-u07-h075', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Riešenie úloh", lesson: "Hodina 75", lessonOrder: 75, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/75-riesenie-uloh.js" }),
+  placeholder({ id: '1-u07-h076', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Kontrolná písomná práca", lesson: "Hodina 76", lessonOrder: 76, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/76-kontrolna-pisomna-praca.js" }),
 
   // 1.08 · Lomené výrazy
-  planned('1-u08-h077', 1, "Lomené výrazy", 8, "Úpravy lomených výrazov", "Hodina 77", 77, "modules/1-rocnik/lomene-vyrazy/77-upravy-lomenych-vyrazov.js"),
-  planned('1-u08-h078', 1, "Lomené výrazy", 8, "Úpravy lomených výrazov-ščítanie lomených výrazov", "Hodina 78", 78, "modules/1-rocnik/lomene-vyrazy/78-upravy-lomenych-vyrazov-scitanie-lomenych-vyrazov.js"),
-  planned('1-u08-h079', 1, "Lomené výrazy", 8, "Úpravy lomených výrazov-odčítanie lomených výrazov", "Hodina 79", 79, "modules/1-rocnik/lomene-vyrazy/79-upravy-lomenych-vyrazov-odcitanie-lomenych-vyrazov.js"),
-  planned('1-u08-h080', 1, "Lomené výrazy", 8, "Riešenie úloh", "Hodina 80", 80, "modules/1-rocnik/lomene-vyrazy/80-riesenie-uloh.js"),
-  planned('1-u08-h081', 1, "Lomené výrazy", 8, "Úpravy lomených výrazov-násobenie lomených výrazov", "Hodina 81", 81, "modules/1-rocnik/lomene-vyrazy/81-upravy-lomenych-vyrazov-nasobenie-lomenych-vyrazov.js"),
-  planned('1-u08-h082', 1, "Lomené výrazy", 8, "Úpravy lomených výrazov-delenie lomených výrazov", "Hodina 82", 82, "modules/1-rocnik/lomene-vyrazy/82-upravy-lomenych-vyrazov-delenie-lomenych-vyrazov.js"),
-  planned('1-u08-h083', 1, "Lomené výrazy", 8, "Riešenie úloh", "Hodina 83", 83, "modules/1-rocnik/lomene-vyrazy/83-riesenie-uloh.js"),
-  planned('1-u08-h084', 1, "Lomené výrazy", 8, "Zložitejšie úpravy lomených výrazov", "Hodina 84", 84, "modules/1-rocnik/lomene-vyrazy/84-zlozitejsie-upravy-lomenych-vyrazov.js"),
-  planned('1-u08-h085', 1, "Lomené výrazy", 8, "Riešenie úloh", "Hodina 85", 85, "modules/1-rocnik/lomene-vyrazy/85-riesenie-uloh.js"),
-  planned('1-u08-h086', 1, "Lomené výrazy", 8, "Systematizácia učiva", "Hodina 86", 86, "modules/1-rocnik/lomene-vyrazy/86-systematizacia-uciva.js"),
-  planned('1-u08-h087', 1, "Lomené výrazy", 8, "Kontrolná písomná práca", "Hodina 87", 87, "modules/1-rocnik/lomene-vyrazy/87-kontrolna-pisomna-praca.js"),
+  placeholder({ id: '1-u08-h077', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Úpravy lomených výrazov", lesson: "Hodina 77", lessonOrder: 77, file: "modules/1-rocnik/lomene-vyrazy/77-upravy-lomenych-vyrazov.js" }),
+  placeholder({ id: '1-u08-h078', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Úpravy lomených výrazov-ščítanie lomených výrazov", lesson: "Hodina 78", lessonOrder: 78, file: "modules/1-rocnik/lomene-vyrazy/78-upravy-lomenych-vyrazov-scitanie-lomenych-vyrazov.js" }),
+  placeholder({ id: '1-u08-h079', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Úpravy lomených výrazov-odčítanie lomených výrazov", lesson: "Hodina 79", lessonOrder: 79, file: "modules/1-rocnik/lomene-vyrazy/79-upravy-lomenych-vyrazov-odcitanie-lomenych-vyrazov.js" }),
+  placeholder({ id: '1-u08-h080', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Riešenie úloh", lesson: "Hodina 80", lessonOrder: 80, file: "modules/1-rocnik/lomene-vyrazy/80-riesenie-uloh.js" }),
+  placeholder({ id: '1-u08-h081', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Úpravy lomených výrazov-násobenie lomených výrazov", lesson: "Hodina 81", lessonOrder: 81, file: "modules/1-rocnik/lomene-vyrazy/81-upravy-lomenych-vyrazov-nasobenie-lomenych-vyrazov.js" }),
+  placeholder({ id: '1-u08-h082', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Úpravy lomených výrazov-delenie lomených výrazov", lesson: "Hodina 82", lessonOrder: 82, file: "modules/1-rocnik/lomene-vyrazy/82-upravy-lomenych-vyrazov-delenie-lomenych-vyrazov.js" }),
+  placeholder({ id: '1-u08-h083', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Riešenie úloh", lesson: "Hodina 83", lessonOrder: 83, file: "modules/1-rocnik/lomene-vyrazy/83-riesenie-uloh.js" }),
+  placeholder({ id: '1-u08-h084', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Zložitejšie úpravy lomených výrazov", lesson: "Hodina 84", lessonOrder: 84, file: "modules/1-rocnik/lomene-vyrazy/84-zlozitejsie-upravy-lomenych-vyrazov.js" }),
+  placeholder({ id: '1-u08-h085', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Riešenie úloh", lesson: "Hodina 85", lessonOrder: 85, file: "modules/1-rocnik/lomene-vyrazy/85-riesenie-uloh.js" }),
+  placeholder({ id: '1-u08-h086', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Systematizácia učiva", lesson: "Hodina 86", lessonOrder: 86, file: "modules/1-rocnik/lomene-vyrazy/86-systematizacia-uciva.js" }),
+  placeholder({ id: '1-u08-h087', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Kontrolná písomná práca", lesson: "Hodina 87", lessonOrder: 87, file: "modules/1-rocnik/lomene-vyrazy/87-kontrolna-pisomna-praca.js" }),
 
   // 1.09 · Funkcie- základné vlastnosti
   {
@@ -429,17 +468,17 @@ window.MATH_MODULE_INDEX = [
     skills: ["funkcia", "definičný obor D(f)", "obor hodnôt H(f)"],
     file: 'modules/1-rocnik/funkcie-zakladne-vlastnosti/88-pojem-funkcie-definicny-obor-funkcie-obor-hodnot-funkcie.js'
   },
-  planned('1-u09-h089', 1, "Funkcie- základné vlastnosti", 9, "Graf funkcie, určovanie D(f) a H(f) z grafu", "Hodina 89", 89, "modules/1-rocnik/funkcie-zakladne-vlastnosti/89-graf-funkcie-urcovanie-d-f-a-h-f-z-grafu.js"),
-  planned('1-u09-h090', 1, "Funkcie- základné vlastnosti", 9, "Riešenie úloh", "Hodina 90", 90, "modules/1-rocnik/funkcie-zakladne-vlastnosti/90-riesenie-uloh.js"),
-  planned('1-u09-h091', 1, "Funkcie- základné vlastnosti", 9, "Párna a nepárna funkcia", "Hodina 91", 91, "modules/1-rocnik/funkcie-zakladne-vlastnosti/91-parna-a-neparna-funkcia.js"),
-  planned('1-u09-h092', 1, "Funkcie- základné vlastnosti", 9, "Rastúca a klesajúca funkci", "Hodina 92", 92, "modules/1-rocnik/funkcie-zakladne-vlastnosti/92-rastuca-a-klesajuca-funkci.js"),
-  planned('1-u09-h093', 1, "Funkcie- základné vlastnosti", 9, "Maximum a minimum funkcie na množine", "Hodina 93", 93, "modules/1-rocnik/funkcie-zakladne-vlastnosti/93-maximum-a-minimum-funkcie-na-mnozine.js"),
-  planned('1-u09-h094', 1, "Funkcie- základné vlastnosti", 9, "Prostá funkcia", "Hodina 94", 94, "modules/1-rocnik/funkcie-zakladne-vlastnosti/94-prosta-funkcia.js"),
-  planned('1-u09-h095', 1, "Funkcie- základné vlastnosti", 9, "Funkcia ohraničená na množine", "Hodina 95", 95, "modules/1-rocnik/funkcie-zakladne-vlastnosti/95-funkcia-ohranicena-na-mnozine.js"),
-  planned('1-u09-h096', 1, "Funkcie- základné vlastnosti", 9, "Riešenie úloh", "Hodina 96", 96, "modules/1-rocnik/funkcie-zakladne-vlastnosti/96-riesenie-uloh.js"),
-  planned('1-u09-h097', 1, "Funkcie- základné vlastnosti", 9, "Určovanie vlastnosti funkcie z grafu", "Hodina 97", 97, "modules/1-rocnik/funkcie-zakladne-vlastnosti/97-urcovanie-vlastnosti-funkcie-z-grafu.js"),
-  planned('1-u09-h098', 1, "Funkcie- základné vlastnosti", 9, "Riešenie úloh", "Hodina 98", 98, "modules/1-rocnik/funkcie-zakladne-vlastnosti/98-riesenie-uloh.js"),
-  planned('1-u09-h099', 1, "Funkcie- základné vlastnosti", 9, "Kontrolná písomná práca", "Hodina 99", 99, "modules/1-rocnik/funkcie-zakladne-vlastnosti/99-kontrolna-pisomna-praca.js"),
+  placeholder({ id: '1-u09-h089', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Graf funkcie, určovanie D(f) a H(f) z grafu", lesson: "Hodina 89", lessonOrder: 89, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/89-graf-funkcie-urcovanie-d-f-a-h-f-z-grafu.js" }),
+  placeholder({ id: '1-u09-h090', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Riešenie úloh", lesson: "Hodina 90", lessonOrder: 90, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/90-riesenie-uloh.js" }),
+  placeholder({ id: '1-u09-h091', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Párna a nepárna funkcia", lesson: "Hodina 91", lessonOrder: 91, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/91-parna-a-neparna-funkcia.js" }),
+  placeholder({ id: '1-u09-h092', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Rastúca a klesajúca funkci", lesson: "Hodina 92", lessonOrder: 92, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/92-rastuca-a-klesajuca-funkci.js" }),
+  placeholder({ id: '1-u09-h093', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Maximum a minimum funkcie na množine", lesson: "Hodina 93", lessonOrder: 93, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/93-maximum-a-minimum-funkcie-na-mnozine.js" }),
+  placeholder({ id: '1-u09-h094', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Prostá funkcia", lesson: "Hodina 94", lessonOrder: 94, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/94-prosta-funkcia.js" }),
+  placeholder({ id: '1-u09-h095', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Funkcia ohraničená na množine", lesson: "Hodina 95", lessonOrder: 95, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/95-funkcia-ohranicena-na-mnozine.js" }),
+  placeholder({ id: '1-u09-h096', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Riešenie úloh", lesson: "Hodina 96", lessonOrder: 96, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/96-riesenie-uloh.js" }),
+  placeholder({ id: '1-u09-h097', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Určovanie vlastnosti funkcie z grafu", lesson: "Hodina 97", lessonOrder: 97, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/97-urcovanie-vlastnosti-funkcie-z-grafu.js" }),
+  placeholder({ id: '1-u09-h098', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Riešenie úloh", lesson: "Hodina 98", lessonOrder: 98, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/98-riesenie-uloh.js" }),
+  placeholder({ id: '1-u09-h099', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Kontrolná písomná práca", lesson: "Hodina 99", lessonOrder: 99, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/99-kontrolna-pisomna-praca.js" }),
   // ==================== 2. ROČNÍK ====================
 
   // 2.01 · Lineárna funkcia
@@ -531,97 +570,160 @@ window.MATH_MODULE_INDEX = [
   {"id": "2-u03-h022", "year": 2, "unit": "Lineárne rovnice", "unitOrder": 3, "topic": "Systematizácia učiva", "lesson": "Hodina 22", "lessonOrder": 22, "time": "15–18 min", "status": "ready", "type": "Názornosť → aktivita → zápis → argumentácia → ručná kontrola", "skills": ["porozumenie", "modelovanie", "presný zápis", "argumentácia"], "file": "modules/2-rocnik/linearne-rovnice/22-systematizacia-uciva.js"},
 
   // 2.04 · Lineárne nerovnice
-  ready('2-u04-h024', 2, "Lineárne nerovnice", 4, "Lineárne nerovnice a ekvivalentné úpravy pri jej riešení", "Hodina 24", 24, "modules/2-rocnik/linearne-nerovnice/24-linearne-nerovnice-a-ekvivalentne-upravy-pri-jej-rieseni.js"),
-  ready('2-u04-h025', 2, "Lineárne nerovnice", 4, "Lineárne nerovnice s neznámou v menovateli", "Hodina 25", 25, "modules/2-rocnik/linearne-nerovnice/25-linearne-nerovnice-s-neznamou-v-menovateli.js"),
-  ready('2-u04-h026', 2, "Lineárne nerovnice", 4, "Riešenie úloh", "Hodina 26", 26, "modules/2-rocnik/linearne-nerovnice/26-riesenie-uloh.js"),
-  ready('2-u04-h027', 2, "Lineárne nerovnice", 4, "Lineárne nerovnice s absolútnou hodnotou", "Hodina 27", 27, "modules/2-rocnik/linearne-nerovnice/27-linearne-nerovnice-s-absolutnou-hodnotou.js"),
-  ready('2-u04-h028', 2, "Lineárne nerovnice", 4, "Riešenie úloh", "Hodina 28", 28, "modules/2-rocnik/linearne-nerovnice/28-riesenie-uloh.js"),
-  ready('2-u04-h029', 2, "Lineárne nerovnice", 4, "Sústava lineárnych nerovníc s jednou neznámou", "Hodina 29", 29, "modules/2-rocnik/linearne-nerovnice/29-sustava-linearnych-nerovnic-s-jednou-neznamou.js"),
-  ready('2-u04-h030', 2, "Lineárne nerovnice", 4, "Riešenie úloh", "Hodina 30", 30, "modules/2-rocnik/linearne-nerovnice/30-riesenie-uloh.js"),
-  ready('2-u04-h031', 2, "Lineárne nerovnice", 4, "Systematizácia učiva", "Hodina 31", 31, "modules/2-rocnik/linearne-nerovnice/31-systematizacia-uciva.js"),
-  ready('2-u04-h032', 2, "Lineárne nerovnice", 4, "Kontrolná písomná práca", "Hodina 32", 32, "modules/2-rocnik/linearne-nerovnice/32-kontrolna-pisomna-praca.js"),
+  {
+    id: '2-u04-h024', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
+    topic: "Lineárne nerovnice a ekvivalentné úpravy pri jej riešení", lesson: "Hodina 24", lessonOrder: 24,
+    time: "cca 15 min", status: 'ready',
+    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    skills: ["riešenie","matematická komunikácia"],
+    file: "modules/2-rocnik/linearne-nerovnice/24-linearne-nerovnice-a-ekvivalentne-upravy-pri-jej-rieseni.js"
+  },
+  {
+    id: '2-u04-h025', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
+    topic: "Lineárne nerovnice s neznámou v menovateli", lesson: "Hodina 25", lessonOrder: 25,
+    time: "cca 15 min", status: 'ready',
+    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    skills: ["riešenie","matematická komunikácia"],
+    file: "modules/2-rocnik/linearne-nerovnice/25-linearne-nerovnice-s-neznamou-v-menovateli.js"
+  },
+  {
+    id: '2-u04-h026', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
+    topic: "Riešenie úloh", lesson: "Hodina 26", lessonOrder: 26,
+    time: "cca 15 min", status: 'ready',
+    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    skills: ["riešenie","matematická komunikácia"],
+    file: "modules/2-rocnik/linearne-nerovnice/26-riesenie-uloh.js"
+  },
+  {
+    id: '2-u04-h027', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
+    topic: "Lineárne nerovnice s absolútnou hodnotou", lesson: "Hodina 27", lessonOrder: 27,
+    time: "cca 15 min", status: 'ready',
+    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    skills: ["riešenie","matematická komunikácia"],
+    file: "modules/2-rocnik/linearne-nerovnice/27-linearne-nerovnice-s-absolutnou-hodnotou.js"
+  },
+  {
+    id: '2-u04-h028', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
+    topic: "Riešenie úloh", lesson: "Hodina 28", lessonOrder: 28,
+    time: "cca 15 min", status: 'ready',
+    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    skills: ["riešenie","matematická komunikácia"],
+    file: "modules/2-rocnik/linearne-nerovnice/28-riesenie-uloh.js"
+  },
+  {
+    id: '2-u04-h029', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
+    topic: "Sústava lineárnych nerovníc s jednou neznámou", lesson: "Hodina 29", lessonOrder: 29,
+    time: "cca 15 min", status: 'ready',
+    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    skills: ["riešenie","matematická komunikácia"],
+    file: "modules/2-rocnik/linearne-nerovnice/29-sustava-linearnych-nerovnic-s-jednou-neznamou.js"
+  },
+  {
+    id: '2-u04-h030', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
+    topic: "Riešenie úloh", lesson: "Hodina 30", lessonOrder: 30,
+    time: "cca 15 min", status: 'ready',
+    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    skills: ["riešenie","matematická komunikácia"],
+    file: "modules/2-rocnik/linearne-nerovnice/30-riesenie-uloh.js"
+  },
+  {
+    id: '2-u04-h031', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
+    topic: "Systematizácia učiva", lesson: "Hodina 31", lessonOrder: 31,
+    time: "cca 15 min", status: 'ready',
+    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    skills: ["riešenie","matematická komunikácia"],
+    file: "modules/2-rocnik/linearne-nerovnice/31-systematizacia-uciva.js"
+  },
+  {
+    id: '2-u04-h032', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
+    topic: "Kontrolná písomná práca", lesson: "Hodina 32", lessonOrder: 32,
+    time: "cca 15 min", status: 'ready',
+    type: "Pochopenie → overenie → vysvetlenie → záver",
+    skills: ["riešenie","matematická komunikácia"],
+    file: "modules/2-rocnik/linearne-nerovnice/32-kontrolna-pisomna-praca.js"
+  },
 
   // 2.05 · Základy geometrie trojuholníkov
-  planned('2-u05-h033', 2, "Základy geometrie trojuholníkov", 5, "Zhodnosť a podobnosť trojuholníkov,", "Hodina 33", 33, "modules/2-rocnik/zaklady-geometrie-trojuholnikov/33-zhodnost-a-podobnost-trojuholnikov.js"),
-  planned('2-u05-h034', 2, "Základy geometrie trojuholníkov", 5, "Klasifikácia a vlastnosti trojuholníkov", "Hodina 34", 34, "modules/2-rocnik/zaklady-geometrie-trojuholnikov/34-klasifikacia-a-vlastnosti-trojuholnikov.js"),
-  planned('2-u05-h035', 2, "Základy geometrie trojuholníkov", 5, "Uhol a jeho veľkosť, Uhlová a oblúková miera", "Hodina 35", 35, "modules/2-rocnik/zaklady-geometrie-trojuholnikov/35-uhol-a-jeho-velkost-uhlova-a-oblukova-miera.js"),
-  planned('2-u05-h036', 2, "Základy geometrie trojuholníkov", 5, "Prevody uhlov", "Hodina 36", 36, "modules/2-rocnik/zaklady-geometrie-trojuholnikov/36-prevody-uhlov.js"),
-  planned('2-u05-h037', 2, "Základy geometrie trojuholníkov", 5, "Systematizácia učiva, previerka", "Hodina 37", 37, "modules/2-rocnik/zaklady-geometrie-trojuholnikov/37-systematizacia-uciva-previerka.js"),
+  placeholder({ id: '2-u05-h033', year: 2, unit: "Základy geometrie trojuholníkov", unitOrder: 5, topic: "Zhodnosť a podobnosť trojuholníkov,", lesson: "Hodina 33", lessonOrder: 33, file: "modules/2-rocnik/zaklady-geometrie-trojuholnikov/33-zhodnost-a-podobnost-trojuholnikov.js" }),
+  placeholder({ id: '2-u05-h034', year: 2, unit: "Základy geometrie trojuholníkov", unitOrder: 5, topic: "Klasifikácia a vlastnosti trojuholníkov", lesson: "Hodina 34", lessonOrder: 34, file: "modules/2-rocnik/zaklady-geometrie-trojuholnikov/34-klasifikacia-a-vlastnosti-trojuholnikov.js" }),
+  placeholder({ id: '2-u05-h035', year: 2, unit: "Základy geometrie trojuholníkov", unitOrder: 5, topic: "Uhol a jeho veľkosť, Uhlová a oblúková miera", lesson: "Hodina 35", lessonOrder: 35, file: "modules/2-rocnik/zaklady-geometrie-trojuholnikov/35-uhol-a-jeho-velkost-uhlova-a-oblukova-miera.js" }),
+  placeholder({ id: '2-u05-h036', year: 2, unit: "Základy geometrie trojuholníkov", unitOrder: 5, topic: "Prevody uhlov", lesson: "Hodina 36", lessonOrder: 36, file: "modules/2-rocnik/zaklady-geometrie-trojuholnikov/36-prevody-uhlov.js" }),
+  placeholder({ id: '2-u05-h037', year: 2, unit: "Základy geometrie trojuholníkov", unitOrder: 5, topic: "Systematizácia učiva, previerka", lesson: "Hodina 37", lessonOrder: 37, file: "modules/2-rocnik/zaklady-geometrie-trojuholnikov/37-systematizacia-uciva-previerka.js" }),
 
   // 2.06 · Pravouhlý trojuholník a jeho vlastnosti
-  planned('2-u06-h039', 2, "Pravouhlý trojuholník a jeho vlastnosti", 6, "Pravouhlý trojuholník - Pytagorova veta", "Hodina 39", 39, "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/39-pravouhly-trojuholnik-pytagorova-veta.js"),
-  planned('2-u06-h040', 2, "Pravouhlý trojuholník a jeho vlastnosti", 6, "Pytagorova veta – aplikačné úlohy", "Hodina 40", 40, "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/40-pytagorova-veta-aplikacne-ulohy.js"),
-  planned('2-u06-h041', 2, "Pravouhlý trojuholník a jeho vlastnosti", 6, "Euklidove vety", "Hodina 41", 41, "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/41-euklidove-vety.js"),
-  planned('2-u06-h042', 2, "Pravouhlý trojuholník a jeho vlastnosti", 6, "Euklidove vety – súhrnné využitie", "Hodina 42", 42, "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/42-euklidove-vety-suhrnne-vyuzitie.js"),
-  planned('2-u06-h043', 2, "Pravouhlý trojuholník a jeho vlastnosti", 6, "Konštrukcia úsečiek rôznych veľkostí", "Hodina 43", 43, "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/43-konstrukcia-useciek-roznych-velkosti.js"),
-  planned('2-u06-h044', 2, "Pravouhlý trojuholník a jeho vlastnosti", 6, "Využitie Euklidových viet pri konštrukciách", "Hodina 44", 44, "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/44-vyuzitie-euklidovych-viet-pri-konstrukciach.js"),
-  planned('2-u06-h045', 2, "Pravouhlý trojuholník a jeho vlastnosti", 6, "Opakovanie tematického celku", "Hodina 45", 45, "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/45-opakovanie-tematickeho-celku.js"),
-  planned('2-u06-h046', 2, "Pravouhlý trojuholník a jeho vlastnosti", 6, "Písomná práca", "Hodina 46", 46, "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/46-pisomna-praca.js"),
+  placeholder({ id: '2-u06-h039', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Pravouhlý trojuholník - Pytagorova veta", lesson: "Hodina 39", lessonOrder: 39, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/39-pravouhly-trojuholnik-pytagorova-veta.js" }),
+  placeholder({ id: '2-u06-h040', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Pytagorova veta – aplikačné úlohy", lesson: "Hodina 40", lessonOrder: 40, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/40-pytagorova-veta-aplikacne-ulohy.js" }),
+  placeholder({ id: '2-u06-h041', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Euklidove vety", lesson: "Hodina 41", lessonOrder: 41, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/41-euklidove-vety.js" }),
+  placeholder({ id: '2-u06-h042', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Euklidove vety – súhrnné využitie", lesson: "Hodina 42", lessonOrder: 42, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/42-euklidove-vety-suhrnne-vyuzitie.js" }),
+  placeholder({ id: '2-u06-h043', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Konštrukcia úsečiek rôznych veľkostí", lesson: "Hodina 43", lessonOrder: 43, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/43-konstrukcia-useciek-roznych-velkosti.js" }),
+  placeholder({ id: '2-u06-h044', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Využitie Euklidových viet pri konštrukciách", lesson: "Hodina 44", lessonOrder: 44, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/44-vyuzitie-euklidovych-viet-pri-konstrukciach.js" }),
+  placeholder({ id: '2-u06-h045', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Opakovanie tematického celku", lesson: "Hodina 45", lessonOrder: 45, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/45-opakovanie-tematickeho-celku.js" }),
+  placeholder({ id: '2-u06-h046', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Písomná práca", lesson: "Hodina 46", lessonOrder: 46, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/46-pisomna-praca.js" }),
 
   // 2.07 · Goniometrické funkcie ostrého uhla
-  planned('2-u07-h048', 2, "Goniometrické funkcie ostrého uhla", 7, "Goniometrické funkcie – sínus, kosínus", "Hodina 48", 48, "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/48-goniometricke-funkcie-sinus-kosinus.js"),
-  planned('2-u07-h049', 2, "Goniometrické funkcie ostrého uhla", 7, "Výpočty pomocou sínusu, kosínusu", "Hodina 49", 49, "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/49-vypocty-pomocou-sinusu-kosinusu.js"),
-  planned('2-u07-h050', 2, "Goniometrické funkcie ostrého uhla", 7, "Goniometrické funkcie – tangens, kotangens", "Hodina 50", 50, "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/50-goniometricke-funkcie-tangens-kotangens.js"),
-  planned('2-u07-h051', 2, "Goniometrické funkcie ostrého uhla", 7, "Riešenie pravouhlého trojuholníka", "Hodina 51", 51, "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/51-riesenie-pravouhleho-trojuholnika.js"),
-  planned('2-u07-h052', 2, "Goniometrické funkcie ostrého uhla", 7, "Opakovanie tematického celku", "Hodina 52", 52, "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/52-opakovanie-tematickeho-celku.js"),
-  planned('2-u07-h053', 2, "Goniometrické funkcie ostrého uhla", 7, "Písomná práca", "Hodina 53", 53, "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/53-pisomna-praca.js"),
+  placeholder({ id: '2-u07-h048', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7, topic: "Goniometrické funkcie – sínus, kosínus", lesson: "Hodina 48", lessonOrder: 48, file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/48-goniometricke-funkcie-sinus-kosinus.js" }),
+  placeholder({ id: '2-u07-h049', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7, topic: "Výpočty pomocou sínusu, kosínusu", lesson: "Hodina 49", lessonOrder: 49, file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/49-vypocty-pomocou-sinusu-kosinusu.js" }),
+  placeholder({ id: '2-u07-h050', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7, topic: "Goniometrické funkcie – tangens, kotangens", lesson: "Hodina 50", lessonOrder: 50, file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/50-goniometricke-funkcie-tangens-kotangens.js" }),
+  placeholder({ id: '2-u07-h051', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7, topic: "Riešenie pravouhlého trojuholníka", lesson: "Hodina 51", lessonOrder: 51, file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/51-riesenie-pravouhleho-trojuholnika.js" }),
+  placeholder({ id: '2-u07-h052', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7, topic: "Opakovanie tematického celku", lesson: "Hodina 52", lessonOrder: 52, file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/52-opakovanie-tematickeho-celku.js" }),
+  placeholder({ id: '2-u07-h053', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7, topic: "Písomná práca", lesson: "Hodina 53", lessonOrder: 53, file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/53-pisomna-praca.js" }),
 
   // 2.08 · Sínusová a kosínusová veta
-  planned('2-u08-h054', 2, "Sínusová a kosínusová veta", 8, "Sínusová veta", "Hodina 54", 54, "modules/2-rocnik/sinusova-a-kosinusova-veta/54-sinusova-veta.js"),
-  planned('2-u08-h055', 2, "Sínusová a kosínusová veta", 8, "Sínusová veta – aplikačné úlohy", "Hodina 55", 55, "modules/2-rocnik/sinusova-a-kosinusova-veta/55-sinusova-veta-aplikacne-ulohy.js"),
-  planned('2-u08-h056', 2, "Sínusová a kosínusová veta", 8, "Kosínusová veta", "Hodina 56", 56, "modules/2-rocnik/sinusova-a-kosinusova-veta/56-kosinusova-veta.js"),
-  planned('2-u08-h057', 2, "Sínusová a kosínusová veta", 8, "Kosínusová veta – aplikačné úlohy", "Hodina 57", 57, "modules/2-rocnik/sinusova-a-kosinusova-veta/57-kosinusova-veta-aplikacne-ulohy.js"),
-  planned('2-u08-h058', 2, "Sínusová a kosínusová veta", 8, "Riešenie všeobecných trojuholníkov", "Hodina 58", 58, "modules/2-rocnik/sinusova-a-kosinusova-veta/58-riesenie-vseobecnych-trojuholnikov.js"),
-  planned('2-u08-h059', 2, "Sínusová a kosínusová veta", 8, "Opakovanie", "Hodina 59", 59, "modules/2-rocnik/sinusova-a-kosinusova-veta/59-opakovanie.js"),
-  planned('2-u08-h060', 2, "Sínusová a kosínusová veta", 8, "Písomná práca", "Hodina 60", 60, "modules/2-rocnik/sinusova-a-kosinusova-veta/60-pisomna-praca.js"),
+  placeholder({ id: '2-u08-h054', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8, topic: "Sínusová veta", lesson: "Hodina 54", lessonOrder: 54, file: "modules/2-rocnik/sinusova-a-kosinusova-veta/54-sinusova-veta.js" }),
+  placeholder({ id: '2-u08-h055', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8, topic: "Sínusová veta – aplikačné úlohy", lesson: "Hodina 55", lessonOrder: 55, file: "modules/2-rocnik/sinusova-a-kosinusova-veta/55-sinusova-veta-aplikacne-ulohy.js" }),
+  placeholder({ id: '2-u08-h056', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8, topic: "Kosínusová veta", lesson: "Hodina 56", lessonOrder: 56, file: "modules/2-rocnik/sinusova-a-kosinusova-veta/56-kosinusova-veta.js" }),
+  placeholder({ id: '2-u08-h057', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8, topic: "Kosínusová veta – aplikačné úlohy", lesson: "Hodina 57", lessonOrder: 57, file: "modules/2-rocnik/sinusova-a-kosinusova-veta/57-kosinusova-veta-aplikacne-ulohy.js" }),
+  placeholder({ id: '2-u08-h058', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8, topic: "Riešenie všeobecných trojuholníkov", lesson: "Hodina 58", lessonOrder: 58, file: "modules/2-rocnik/sinusova-a-kosinusova-veta/58-riesenie-vseobecnych-trojuholnikov.js" }),
+  placeholder({ id: '2-u08-h059', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8, topic: "Opakovanie", lesson: "Hodina 59", lessonOrder: 59, file: "modules/2-rocnik/sinusova-a-kosinusova-veta/59-opakovanie.js" }),
+  placeholder({ id: '2-u08-h060', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8, topic: "Písomná práca", lesson: "Hodina 60", lessonOrder: 60, file: "modules/2-rocnik/sinusova-a-kosinusova-veta/60-pisomna-praca.js" }),
 
-  // 2.09 · Kvadratická funkcia a jej gaf
-  planned('2-u09-h063', 2, "Kvadratická funkcia a jej gaf", 9, "Kvadratická funkcia – definícia a základné vlastnosti, Graf kvadratickej funkcie", "Hodina 63", 63, "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/63-kvadraticka-funkcia-definicia-a-zakladne-vlastnosti-graf-kvadratickej-.js"),
-  planned('2-u09-h064', 2, "Kvadratická funkcia a jej gaf", 9, "Vrchol paraboly", "Hodina 64", 64, "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/64-vrchol-paraboly.js"),
-  planned('2-u09-h065', 2, "Kvadratická funkcia a jej gaf", 9, "Hľadanie predpisu kvadratickej funkcie z grafu", "Hodina 65", 65, "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/65-hladanie-predpisu-kvadratickej-funkcie-z-grafu.js"),
-  planned('2-u09-h066', 2, "Kvadratická funkcia a jej gaf", 9, "Systematizácia učiva", "Hodina 66", 66, "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/66-systematizacia-uciva.js"),
-  planned('2-u09-h067', 2, "Kvadratická funkcia a jej gaf", 9, "Písomná práca", "Hodina 67", 67, "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/67-pisomna-praca.js"),
+  // 2.09 · Kvadratická funkcia a jej graf
+  placeholder({ id: '2-u09-h063', year: 2, unit: "Kvadratická funkcia a jej graf", unitOrder: 9, topic: "Kvadratická funkcia – definícia a základné vlastnosti, Graf kvadratickej funkcie", lesson: "Hodina 63", lessonOrder: 63, file: "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/63-kvadraticka-funkcia-definicia-a-zakladne-vlastnosti-graf-kvadratickej-.js" }),
+  placeholder({ id: '2-u09-h064', year: 2, unit: "Kvadratická funkcia a jej graf", unitOrder: 9, topic: "Vrchol paraboly", lesson: "Hodina 64", lessonOrder: 64, file: "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/64-vrchol-paraboly.js" }),
+  placeholder({ id: '2-u09-h065', year: 2, unit: "Kvadratická funkcia a jej graf", unitOrder: 9, topic: "Hľadanie predpisu kvadratickej funkcie z grafu", lesson: "Hodina 65", lessonOrder: 65, file: "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/65-hladanie-predpisu-kvadratickej-funkcie-z-grafu.js" }),
+  placeholder({ id: '2-u09-h066', year: 2, unit: "Kvadratická funkcia a jej graf", unitOrder: 9, topic: "Systematizácia učiva", lesson: "Hodina 66", lessonOrder: 66, file: "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/66-systematizacia-uciva.js" }),
+  placeholder({ id: '2-u09-h067', year: 2, unit: "Kvadratická funkcia a jej graf", unitOrder: 9, topic: "Písomná práca", lesson: "Hodina 67", lessonOrder: 67, file: "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/67-pisomna-praca.js" }),
 
   // 2.10 · Kvadratické rovnice - základné typy
-  planned('2-u10-h068', 2, "Kvadratické rovnice - základné typy", 10, "Rýdzo kvadratické rovnice", "Hodina 68", 68, "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/68-rydzo-kvadraticke-rovnice.js"),
-  planned('2-u10-h069', 2, "Kvadratické rovnice - základné typy", 10, "Kvadratické rovnice bez lineárneho člena", "Hodina 69", 69, "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/69-kvadraticke-rovnice-bez-linearneho-clena.js"),
-  planned('2-u10-h070', 2, "Kvadratické rovnice - základné typy", 10, "Kvadratické rovnice bez absolútneho člena", "Hodina 70", 70, "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/70-kvadraticke-rovnice-bez-absolutneho-clena.js"),
-  planned('2-u10-h071', 2, "Kvadratické rovnice - základné typy", 10, "Úplná kvadratická rovnica", "Hodina 71", 71, "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/71-uplna-kvadraticka-rovnica.js"),
-  planned('2-u10-h072', 2, "Kvadratické rovnice - základné typy", 10, "Súhrnné precvičovanie kvadratických rovníc", "Hodina 72", 72, "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/72-suhrnne-precvicovanie-kvadratickych-rovnic.js"),
-  planned('2-u10-h073', 2, "Kvadratické rovnice - základné typy", 10, "Opakovanie", "Hodina 73", 73, "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/73-opakovanie.js"),
-  planned('2-u10-h074', 2, "Kvadratické rovnice - základné typy", 10, "Písomná práca", "Hodina 74", 74, "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/74-pisomna-praca.js"),
+  placeholder({ id: '2-u10-h068', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10, topic: "Rýdzo kvadratické rovnice", lesson: "Hodina 68", lessonOrder: 68, file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/68-rydzo-kvadraticke-rovnice.js" }),
+  placeholder({ id: '2-u10-h069', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10, topic: "Kvadratické rovnice bez lineárneho člena", lesson: "Hodina 69", lessonOrder: 69, file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/69-kvadraticke-rovnice-bez-linearneho-clena.js" }),
+  placeholder({ id: '2-u10-h070', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10, topic: "Kvadratické rovnice bez absolútneho člena", lesson: "Hodina 70", lessonOrder: 70, file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/70-kvadraticke-rovnice-bez-absolutneho-clena.js" }),
+  placeholder({ id: '2-u10-h071', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10, topic: "Úplná kvadratická rovnica", lesson: "Hodina 71", lessonOrder: 71, file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/71-uplna-kvadraticka-rovnica.js" }),
+  placeholder({ id: '2-u10-h072', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10, topic: "Súhrnné precvičovanie kvadratických rovníc", lesson: "Hodina 72", lessonOrder: 72, file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/72-suhrnne-precvicovanie-kvadratickych-rovnic.js" }),
+  placeholder({ id: '2-u10-h073', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10, topic: "Opakovanie", lesson: "Hodina 73", lessonOrder: 73, file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/73-opakovanie.js" }),
+  placeholder({ id: '2-u10-h074', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10, topic: "Písomná práca", lesson: "Hodina 74", lessonOrder: 74, file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/74-pisomna-praca.js" }),
 
   // 2.11 · Kvadratické rovnice – vzťahy a algebraické úpravy
-  planned('2-u11-h075', 2, "Kvadratické rovnice – vzťahy a algebraické úpravy", 11, "Vzťahy medzi koreňmi a koeficientmi kvadratickej rovnice", "Hodina 75", 75, "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/75-vztahy-medzi-korenmi-a-koeficientmi-kvadratickej-rovnice.js"),
-  planned('2-u11-h076', 2, "Kvadratické rovnice – vzťahy a algebraické úpravy", 11, "Využitie Vietových vzťahov pri riešení rovníc", "Hodina 76", 76, "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/76-vyuzitie-vietovych-vztahov-pri-rieseni-rovnic.js"),
-  planned('2-u11-h077', 2, "Kvadratické rovnice – vzťahy a algebraické úpravy", 11, "Rozklad kvadratických trojčlenov na súčin", "Hodina 77", 77, "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/77-rozklad-kvadratickych-trojclenov-na-sucin.js"),
-  planned('2-u11-h078', 2, "Kvadratické rovnice – vzťahy a algebraické úpravy", 11, "Úprava algebraických výrazov rozkladom", "Hodina 78", 78, "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/78-uprava-algebraickych-vyrazov-rozkladom.js"),
-  planned('2-u11-h079', 2, "Kvadratické rovnice – vzťahy a algebraické úpravy", 11, "Súhrnné precvičovanie", "Hodina 79", 79, "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/79-suhrnne-precvicovanie.js"),
-  planned('2-u11-h080', 2, "Kvadratické rovnice – vzťahy a algebraické úpravy", 11, "Systematizácia učiva", "Hodina 80", 80, "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/80-systematizacia-uciva.js"),
-  planned('2-u11-h081', 2, "Kvadratické rovnice – vzťahy a algebraické úpravy", 11, "Písomná práca", "Hodina 81", 81, "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/81-pisomna-praca.js"),
+  placeholder({ id: '2-u11-h075', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11, topic: "Vzťahy medzi koreňmi a koeficientmi kvadratickej rovnice", lesson: "Hodina 75", lessonOrder: 75, file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/75-vztahy-medzi-korenmi-a-koeficientmi-kvadratickej-rovnice.js" }),
+  placeholder({ id: '2-u11-h076', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11, topic: "Využitie Vietových vzťahov pri riešení rovníc", lesson: "Hodina 76", lessonOrder: 76, file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/76-vyuzitie-vietovych-vztahov-pri-rieseni-rovnic.js" }),
+  placeholder({ id: '2-u11-h077', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11, topic: "Rozklad kvadratických trojčlenov na súčin", lesson: "Hodina 77", lessonOrder: 77, file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/77-rozklad-kvadratickych-trojclenov-na-sucin.js" }),
+  placeholder({ id: '2-u11-h078', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11, topic: "Úprava algebraických výrazov rozkladom", lesson: "Hodina 78", lessonOrder: 78, file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/78-uprava-algebraickych-vyrazov-rozkladom.js" }),
+  placeholder({ id: '2-u11-h079', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11, topic: "Súhrnné precvičovanie", lesson: "Hodina 79", lessonOrder: 79, file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/79-suhrnne-precvicovanie.js" }),
+  placeholder({ id: '2-u11-h080', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11, topic: "Systematizácia učiva", lesson: "Hodina 80", lessonOrder: 80, file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/80-systematizacia-uciva.js" }),
+  placeholder({ id: '2-u11-h081', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11, topic: "Písomná práca", lesson: "Hodina 81", lessonOrder: 81, file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/81-pisomna-praca.js" }),
 
   // 2.12 · Slovné úlohy a aplikácie kvadratických rovníc
-  planned('2-u12-h082', 2, "Slovné úlohy a aplikácie kvadratických rovníc", 12, "Úvod do slovných úloh - jednoduché slovné úlohy", "Hodina 82", 82, "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/82-uvod-do-slovnych-uloh-jednoduche-slovne-ulohy.js"),
-  planned('2-u12-h083', 2, "Slovné úlohy a aplikácie kvadratických rovníc", 12, "Slovné úlohy o pohybe a práci - zostavenie a riešenie kvadratickej rovnice", "Hodina 83", 83, "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/83-slovne-ulohy-o-pohybe-a-praci-zostavenie-a-riesenie-kvadratickej-rovni.js"),
-  planned('2-u12-h084', 2, "Slovné úlohy a aplikácie kvadratických rovníc", 12, "Slovné úlohy z praxe: Vekové úlohy, Ekonomické a technické úlohy, Kombinované aplikačné príklady", "Hodina 84", 84, "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/84-slovne-ulohy-z-praxe-vekove-ulohy-ekonomicke-a-technicke-ulohy-kombino.js"),
-  planned('2-u12-h085', 2, "Slovné úlohy a aplikácie kvadratických rovníc", 12, "Súhrnné riešenie slovných úloh", "Hodina 85", 85, "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/85-suhrnne-riesenie-slovnych-uloh.js"),
-  planned('2-u12-h086', 2, "Slovné úlohy a aplikácie kvadratických rovníc", 12, "Kontrolná písomná práca", "Hodina 86", 86, "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/86-kontrolna-pisomna-praca.js"),
+  placeholder({ id: '2-u12-h082', year: 2, unit: "Slovné úlohy a aplikácie kvadratických rovníc", unitOrder: 12, topic: "Úvod do slovných úloh - jednoduché slovné úlohy", lesson: "Hodina 82", lessonOrder: 82, file: "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/82-uvod-do-slovnych-uloh-jednoduche-slovne-ulohy.js" }),
+  placeholder({ id: '2-u12-h083', year: 2, unit: "Slovné úlohy a aplikácie kvadratických rovníc", unitOrder: 12, topic: "Slovné úlohy o pohybe a práci - zostavenie a riešenie kvadratickej rovnice", lesson: "Hodina 83", lessonOrder: 83, file: "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/83-slovne-ulohy-o-pohybe-a-praci-zostavenie-a-riesenie-kvadratickej-rovni.js" }),
+  placeholder({ id: '2-u12-h084', year: 2, unit: "Slovné úlohy a aplikácie kvadratických rovníc", unitOrder: 12, topic: "Slovné úlohy z praxe: Vekové úlohy, Ekonomické a technické úlohy, Kombinované aplikačné príklady", lesson: "Hodina 84", lessonOrder: 84, file: "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/84-slovne-ulohy-z-praxe-vekove-ulohy-ekonomicke-a-technicke-ulohy-kombino.js" }),
+  placeholder({ id: '2-u12-h085', year: 2, unit: "Slovné úlohy a aplikácie kvadratických rovníc", unitOrder: 12, topic: "Súhrnné riešenie slovných úloh", lesson: "Hodina 85", lessonOrder: 85, file: "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/85-suhrnne-riesenie-slovnych-uloh.js" }),
+  placeholder({ id: '2-u12-h086', year: 2, unit: "Slovné úlohy a aplikácie kvadratických rovníc", unitOrder: 12, topic: "Kontrolná písomná práca", lesson: "Hodina 86", lessonOrder: 86, file: "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/86-kontrolna-pisomna-praca.js" }),
 
   // 2.13 · Kvadratické nerovnice
-  planned('2-u13-h087', 2, "Kvadratické nerovnice", 13, "Riešenie kvadratických nerovníc výpočtom", "Hodina 87", 87, "modules/2-rocnik/kvadraticke-nerovnice/87-riesenie-kvadratickych-nerovnic-vypoctom.js"),
-  planned('2-u13-h088', 2, "Kvadratické nerovnice", 13, "Riešenie kvadratických nerovníc výpočtom – precvičovanie", "Hodina 88", 88, "modules/2-rocnik/kvadraticke-nerovnice/88-riesenie-kvadratickych-nerovnic-vypoctom-precvicovanie.js"),
-  planned('2-u13-h089', 2, "Kvadratické nerovnice", 13, "Riešenie kvadratických nerovníc grafickou metódou", "Hodina 89", 89, "modules/2-rocnik/kvadraticke-nerovnice/89-riesenie-kvadratickych-nerovnic-grafickou-metodou.js"),
-  planned('2-u13-h090', 2, "Kvadratické nerovnice", 13, "Kvadratické rovnice s parametrom", "Hodina 90", 90, "modules/2-rocnik/kvadraticke-nerovnice/90-kvadraticke-rovnice-s-parametrom.js"),
-  planned('2-u13-h091', 2, "Kvadratické nerovnice", 13, "Kvadratické rovnice s parametrom - precvičovanie", "Hodina 91", 91, "modules/2-rocnik/kvadraticke-nerovnice/91-kvadraticke-rovnice-s-parametrom-precvicovanie.js"),
-  planned('2-u13-h092', 2, "Kvadratické nerovnice", 13, "Súhrnné precvičovanie", "Hodina 92", 92, "modules/2-rocnik/kvadraticke-nerovnice/92-suhrnne-precvicovanie.js"),
-  planned('2-u13-h093', 2, "Kvadratické nerovnice", 13, "Kontrolná písomná práca", "Hodina 93", 93, "modules/2-rocnik/kvadraticke-nerovnice/93-kontrolna-pisomna-praca.js"),
+  placeholder({ id: '2-u13-h087', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13, topic: "Riešenie kvadratických nerovníc výpočtom", lesson: "Hodina 87", lessonOrder: 87, file: "modules/2-rocnik/kvadraticke-nerovnice/87-riesenie-kvadratickych-nerovnic-vypoctom.js" }),
+  placeholder({ id: '2-u13-h088', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13, topic: "Riešenie kvadratických nerovníc výpočtom – precvičovanie", lesson: "Hodina 88", lessonOrder: 88, file: "modules/2-rocnik/kvadraticke-nerovnice/88-riesenie-kvadratickych-nerovnic-vypoctom-precvicovanie.js" }),
+  placeholder({ id: '2-u13-h089', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13, topic: "Riešenie kvadratických nerovníc grafickou metódou", lesson: "Hodina 89", lessonOrder: 89, file: "modules/2-rocnik/kvadraticke-nerovnice/89-riesenie-kvadratickych-nerovnic-grafickou-metodou.js" }),
+  placeholder({ id: '2-u13-h090', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13, topic: "Kvadratické rovnice s parametrom", lesson: "Hodina 90", lessonOrder: 90, file: "modules/2-rocnik/kvadraticke-nerovnice/90-kvadraticke-rovnice-s-parametrom.js" }),
+  placeholder({ id: '2-u13-h091', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13, topic: "Kvadratické rovnice s parametrom - precvičovanie", lesson: "Hodina 91", lessonOrder: 91, file: "modules/2-rocnik/kvadraticke-nerovnice/91-kvadraticke-rovnice-s-parametrom-precvicovanie.js" }),
+  placeholder({ id: '2-u13-h092', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13, topic: "Súhrnné precvičovanie", lesson: "Hodina 92", lessonOrder: 92, file: "modules/2-rocnik/kvadraticke-nerovnice/92-suhrnne-precvicovanie.js" }),
+  placeholder({ id: '2-u13-h093', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13, topic: "Kontrolná písomná práca", lesson: "Hodina 93", lessonOrder: 93, file: "modules/2-rocnik/kvadraticke-nerovnice/93-kontrolna-pisomna-praca.js" }),
 
   // 2.14 · Iracionálne rovnice
-  planned('2-u14-h095', 2, "Iracionálne rovnice", 14, "Základy iracionálnych rovníc", "Hodina 95", 95, "modules/2-rocnik/iracionalne-rovnice/95-zaklady-iracionalnych-rovnic.js"),
-  planned('2-u14-h096', 2, "Iracionálne rovnice", 14, "Zložitejšie typy a substitúcia", "Hodina 96", 96, "modules/2-rocnik/iracionalne-rovnice/96-zlozitejsie-typy-a-substitucia.js"),
-  planned('2-u14-h097', 2, "Iracionálne rovnice", 14, "Slovné úlohy (Geometria a fyzika)", "Hodina 97", 97, "modules/2-rocnik/iracionalne-rovnice/97-slovne-ulohy-geometria-a-fyzika.js"),
-  planned('2-u14-h098', 2, "Iracionálne rovnice", 14, "Slovné úlohy (Praktické a reálne kontexty)", "Hodina 98", 98, "modules/2-rocnik/iracionalne-rovnice/98-slovne-ulohy-prakticke-a-realne-kontexty.js"),
-  planned('2-u14-h099', 2, "Iracionálne rovnice", 14, "Opakovanie a preverenie vedomostí", "Hodina 99", 99, "modules/2-rocnik/iracionalne-rovnice/99-opakovanie-a-preverenie-vedomosti.js"),
+  placeholder({ id: '2-u14-h095', year: 2, unit: "Iracionálne rovnice", unitOrder: 14, topic: "Základy iracionálnych rovníc", lesson: "Hodina 95", lessonOrder: 95, file: "modules/2-rocnik/iracionalne-rovnice/95-zaklady-iracionalnych-rovnic.js" }),
+  placeholder({ id: '2-u14-h096', year: 2, unit: "Iracionálne rovnice", unitOrder: 14, topic: "Zložitejšie typy a substitúcia", lesson: "Hodina 96", lessonOrder: 96, file: "modules/2-rocnik/iracionalne-rovnice/96-zlozitejsie-typy-a-substitucia.js" }),
+  placeholder({ id: '2-u14-h097', year: 2, unit: "Iracionálne rovnice", unitOrder: 14, topic: "Slovné úlohy (Geometria a fyzika)", lesson: "Hodina 97", lessonOrder: 97, file: "modules/2-rocnik/iracionalne-rovnice/97-slovne-ulohy-geometria-a-fyzika.js" }),
+  placeholder({ id: '2-u14-h098', year: 2, unit: "Iracionálne rovnice", unitOrder: 14, topic: "Slovné úlohy (Praktické a reálne kontexty)", lesson: "Hodina 98", lessonOrder: 98, file: "modules/2-rocnik/iracionalne-rovnice/98-slovne-ulohy-prakticke-a-realne-kontexty.js" }),
+  placeholder({ id: '2-u14-h099', year: 2, unit: "Iracionálne rovnice", unitOrder: 14, topic: "Opakovanie a preverenie vedomostí", lesson: "Hodina 99", lessonOrder: 99, file: "modules/2-rocnik/iracionalne-rovnice/99-opakovanie-a-preverenie-vedomosti.js" }),
   // ==================== 3. ROČNÍK ====================
 
   // 3.01 · Goniometrické funkcie, goniometrické, rovnice
@@ -959,47 +1061,104 @@ window.MATH_MODULE_INDEX = [
   {"id": "3-u03-h056", "year": 3, "unit": "Stereometria metrické úlohy", "unitOrder": 3, "topic": "Kontrolná písomná práca", "lesson": "Hodina 56", "lessonOrder": 56, "time": "5–7 min digitálne + písomka", "status": "ready", "type": "Názornosť → aktivita → zápis → argumentácia → ručná kontrola", "skills": ["porozumenie", "modelovanie", "presný zápis", "argumentácia"], "file": "modules/3-rocnik/stereometria-metricke-ulohy/56-kontrolna-pisomna-praca.js"},
 
   // 3.04 · Sterometria
-  ready('3-u04-h058', 3, "Sterometria", 4, "Základné pojmy geometrie v priestore", "Hodina 58", 58, "modules/3-rocnik/sterometria/58-zakladne-pojmy-geometrie-v-priestore.js"),
-  ready('3-u04-h059', 3, "Sterometria", 4, "Vzájomné polohy priamok a rovín", "Hodina 59", 59, "modules/3-rocnik/sterometria/59-vzajomne-polohy-priamok-a-rovin.js"),
-  ready('3-u04-h060', 3, "Sterometria", 4, "Rezy kocky", "Hodina 60", 60, "modules/3-rocnik/sterometria/60-rezy-kocky.js"),
-  ready('3-u04-h061', 3, "Sterometria", 4, "Rezy kocky", "Hodina 61", 61, "modules/3-rocnik/sterometria/61-rezy-kocky.js"),
-  ready('3-u04-h062', 3, "Sterometria", 4, "Praktické úlohy", "Hodina 62", 62, "modules/3-rocnik/sterometria/62-prakticke-ulohy.js"),
-  ready('3-u04-h063', 3, "Sterometria", 4, "Opakovanie", "Hodina 63", 63, "modules/3-rocnik/sterometria/63-opakovanie.js"),
-  ready('3-u04-h064', 3, "Sterometria", 4, "Systematizácia učiva", "Hodina 64", 64, "modules/3-rocnik/sterometria/64-systematizacia-uciva.js"),
-  ready('3-u04-h065', 3, "Sterometria", 4, "Kontrolná písomná práca", "Hodina 65", 65, "modules/3-rocnik/sterometria/65-kontrolna-pisomna-praca.js"),
+  {
+    id: '3-u04-h058', year: 3, unit: "Sterometria", unitOrder: 4,
+    topic: "Základné pojmy geometrie v priestore", lesson: "Hodina 58", lessonOrder: 58,
+    time: "cca 15 min", status: 'ready',
+    type: "Precvičovanie → záver",
+    skills: ["pojmy","orientácia","argumentácia","komunikácia"],
+    file: "modules/3-rocnik/sterometria/58-zakladne-pojmy-geometrie-v-priestore.js"
+  },
+  {
+    id: '3-u04-h059', year: 3, unit: "Sterometria", unitOrder: 4,
+    topic: "Vzájomné polohy priamok a rovín", lesson: "Hodina 59", lessonOrder: 59,
+    time: "cca 15 min", status: 'ready',
+    type: "Precvičovanie → záver",
+    skills: ["vzájomná poloha","argumentácia","komunikácia"],
+    file: "modules/3-rocnik/sterometria/59-vzajomne-polohy-priamok-a-rovin.js"
+  },
+  {
+    id: '3-u04-h060', year: 3, unit: "Sterometria", unitOrder: 4,
+    topic: "Rezy kocky", lesson: "Hodina 60", lessonOrder: 60,
+    time: "cca 15 min", status: 'ready',
+    type: "Precvičovanie → záver",
+    skills: ["rez kocky","postup","argumentácia"],
+    file: "modules/3-rocnik/sterometria/60-rezy-kocky.js"
+  },
+  {
+    id: '3-u04-h061', year: 3, unit: "Sterometria", unitOrder: 4,
+    topic: "Rezy kocky", lesson: "Hodina 61", lessonOrder: 61,
+    time: "cca 15 min", status: 'ready',
+    type: "Precvičovanie → záver",
+    skills: ["rez kocky","postup","argumentácia"],
+    file: "modules/3-rocnik/sterometria/61-rezy-kocky.js"
+  },
+  {
+    id: '3-u04-h062', year: 3, unit: "Sterometria", unitOrder: 4,
+    topic: "Praktické úlohy", lesson: "Hodina 62", lessonOrder: 62,
+    time: "cca 15 min", status: 'ready',
+    type: "Precvičovanie → záver",
+    skills: ["orientácia","modelovanie","argumentácia","komunikácia"],
+    file: "modules/3-rocnik/sterometria/62-prakticke-ulohy.js"
+  },
+  {
+    id: '3-u04-h063', year: 3, unit: "Sterometria", unitOrder: 4,
+    topic: "Opakovanie", lesson: "Hodina 63", lessonOrder: 63,
+    time: "cca 15 min", status: 'ready',
+    type: "Precvičovanie → záver",
+    skills: ["systematizácia","argumentácia","komunikácia"],
+    file: "modules/3-rocnik/sterometria/63-opakovanie.js"
+  },
+  {
+    id: '3-u04-h064', year: 3, unit: "Sterometria", unitOrder: 4,
+    topic: "Systematizácia učiva", lesson: "Hodina 64", lessonOrder: 64,
+    time: "cca 15 min", status: 'ready',
+    type: "Precvičovanie → záver",
+    skills: ["systematizácia","argumentácia","komunikácia"],
+    file: "modules/3-rocnik/sterometria/64-systematizacia-uciva.js"
+  },
+  {
+    id: '3-u04-h065', year: 3, unit: "Sterometria", unitOrder: 4,
+    topic: "Kontrolná písomná práca", lesson: "Hodina 65", lessonOrder: 65,
+    time: "cca 15 min", status: 'ready',
+    type: "Precvičovanie → záver",
+    skills: ["diagnostika","argumentácia"],
+    file: "modules/3-rocnik/sterometria/65-kontrolna-pisomna-praca.js"
+  },
 
   // 3.05 · Kombinatorika
-  planned('3-u05-h066', 3, "Kombinatorika", 5, "Kombinatorické pravidlo súčinu", "Hodina 66", 66, "modules/3-rocnik/kombinatorika/66-kombinatoricke-pravidlo-sucinu.js"),
-  planned('3-u05-h067', 3, "Kombinatorika", 5, "Faktoriál čísla", "Hodina 67", 67, "modules/3-rocnik/kombinatorika/67-faktorial-cisla.js"),
-  planned('3-u05-h068', 3, "Kombinatorika", 5, "Výrazy s faktoriálmi", "Hodina 68", 68, "modules/3-rocnik/kombinatorika/68-vyrazy-s-faktorialmi.js"),
-  planned('3-u05-h069', 3, "Kombinatorika", 5, "Riešenie úloh", "Hodina 69", 69, "modules/3-rocnik/kombinatorika/69-riesenie-uloh.js"),
-  planned('3-u05-h070', 3, "Kombinatorika", 5, "Variácie s a bez opakovania", "Hodina 70", 70, "modules/3-rocnik/kombinatorika/70-variacie-s-a-bez-opakovania.js"),
-  planned('3-u05-h071', 3, "Kombinatorika", 5, "Permutácie", "Hodina 71", 71, "modules/3-rocnik/kombinatorika/71-permutacie.js"),
-  planned('3-u05-h072', 3, "Kombinatorika", 5, "Riešenie úloh – variácie a permutácie", "Hodina 72", 72, "modules/3-rocnik/kombinatorika/72-riesenie-uloh-variacie-a-permutacie.js"),
-  planned('3-u05-h073', 3, "Kombinatorika", 5, "Pascalov trojuholník, vlastnosti komb. čísel", "Hodina 73", 73, "modules/3-rocnik/kombinatorika/73-pascalov-trojuholnik-vlastnosti-komb-cisel.js"),
-  planned('3-u05-h074', 3, "Kombinatorika", 5, "Riešenie rovníc s komb. číslami", "Hodina 74", 74, "modules/3-rocnik/kombinatorika/74-riesenie-rovnic-s-komb-cislami.js"),
-  planned('3-u05-h075', 3, "Kombinatorika", 5, "Kombinácie", "Hodina 75", 75, "modules/3-rocnik/kombinatorika/75-kombinacie.js"),
-  planned('3-u05-h076', 3, "Kombinatorika", 5, "Riešenie úloh", "Hodina 76", 76, "modules/3-rocnik/kombinatorika/76-riesenie-uloh.js"),
-  planned('3-u05-h077', 3, "Kombinatorika", 5, "Systematizácia učiva", "Hodina 77", 77, "modules/3-rocnik/kombinatorika/77-systematizacia-uciva.js"),
-  planned('3-u05-h078', 3, "Kombinatorika", 5, "Kontrolná písomná práca", "Hodina 78", 78, "modules/3-rocnik/kombinatorika/78-kontrolna-pisomna-praca.js"),
+  placeholder({ id: '3-u05-h066', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Kombinatorické pravidlo súčinu", lesson: "Hodina 66", lessonOrder: 66, file: "modules/3-rocnik/kombinatorika/66-kombinatoricke-pravidlo-sucinu.js" }),
+  placeholder({ id: '3-u05-h067', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Faktoriál čísla", lesson: "Hodina 67", lessonOrder: 67, file: "modules/3-rocnik/kombinatorika/67-faktorial-cisla.js" }),
+  placeholder({ id: '3-u05-h068', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Výrazy s faktoriálmi", lesson: "Hodina 68", lessonOrder: 68, file: "modules/3-rocnik/kombinatorika/68-vyrazy-s-faktorialmi.js" }),
+  placeholder({ id: '3-u05-h069', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Riešenie úloh", lesson: "Hodina 69", lessonOrder: 69, file: "modules/3-rocnik/kombinatorika/69-riesenie-uloh.js" }),
+  placeholder({ id: '3-u05-h070', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Variácie s a bez opakovania", lesson: "Hodina 70", lessonOrder: 70, file: "modules/3-rocnik/kombinatorika/70-variacie-s-a-bez-opakovania.js" }),
+  placeholder({ id: '3-u05-h071', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Permutácie", lesson: "Hodina 71", lessonOrder: 71, file: "modules/3-rocnik/kombinatorika/71-permutacie.js" }),
+  placeholder({ id: '3-u05-h072', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Riešenie úloh – variácie a permutácie", lesson: "Hodina 72", lessonOrder: 72, file: "modules/3-rocnik/kombinatorika/72-riesenie-uloh-variacie-a-permutacie.js" }),
+  placeholder({ id: '3-u05-h073', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Pascalov trojuholník, vlastnosti komb. čísel", lesson: "Hodina 73", lessonOrder: 73, file: "modules/3-rocnik/kombinatorika/73-pascalov-trojuholnik-vlastnosti-komb-cisel.js" }),
+  placeholder({ id: '3-u05-h074', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Riešenie rovníc s komb. číslami", lesson: "Hodina 74", lessonOrder: 74, file: "modules/3-rocnik/kombinatorika/74-riesenie-rovnic-s-komb-cislami.js" }),
+  placeholder({ id: '3-u05-h075', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Kombinácie", lesson: "Hodina 75", lessonOrder: 75, file: "modules/3-rocnik/kombinatorika/75-kombinacie.js" }),
+  placeholder({ id: '3-u05-h076', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Riešenie úloh", lesson: "Hodina 76", lessonOrder: 76, file: "modules/3-rocnik/kombinatorika/76-riesenie-uloh.js" }),
+  placeholder({ id: '3-u05-h077', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Systematizácia učiva", lesson: "Hodina 77", lessonOrder: 77, file: "modules/3-rocnik/kombinatorika/77-systematizacia-uciva.js" }),
+  placeholder({ id: '3-u05-h078', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Kontrolná písomná práca", lesson: "Hodina 78", lessonOrder: 78, file: "modules/3-rocnik/kombinatorika/78-kontrolna-pisomna-praca.js" }),
 
   // 3.06 · Pravdepodobnosť
-  planned('3-u06-h080', 3, "Pravdepodobnosť", 6, "Náhodný pokus a náhodný jav", "Hodina 80", 80, "modules/3-rocnik/pravdepodobnost/80-nahodny-pokus-a-nahodny-jav.js"),
-  planned('3-u06-h081', 3, "Pravdepodobnosť", 6, "Pravdepodobnosť náhodného javu", "Hodina 81", 81, "modules/3-rocnik/pravdepodobnost/81-pravdepodobnost-nahodneho-javu.js"),
-  planned('3-u06-h082', 3, "Pravdepodobnosť", 6, "Riešenie úloh", "Hodina 82", 82, "modules/3-rocnik/pravdepodobnost/82-riesenie-uloh.js"),
-  planned('3-u06-h083', 3, "Pravdepodobnosť", 6, "Pravdepodobnosť zjednotenia a prieniku javov", "Hodina 83", 83, "modules/3-rocnik/pravdepodobnost/83-pravdepodobnost-zjednotenia-a-prieniku-javov.js"),
-  planned('3-u06-h084', 3, "Pravdepodobnosť", 6, "Riešenie úloh", "Hodina 84", 84, "modules/3-rocnik/pravdepodobnost/84-riesenie-uloh.js"),
-  planned('3-u06-h085', 3, "Pravdepodobnosť", 6, "Nezávislé pokusy", "Hodina 85", 85, "modules/3-rocnik/pravdepodobnost/85-nezavisle-pokusy.js"),
-  planned('3-u06-h086', 3, "Pravdepodobnosť", 6, "Bernouliho schéma", "Hodina 86", 86, "modules/3-rocnik/pravdepodobnost/86-bernouliho-schema.js"),
-  planned('3-u06-h087', 3, "Pravdepodobnosť", 6, "Opakovanie", "Hodina 87", 87, "modules/3-rocnik/pravdepodobnost/87-opakovanie.js"),
-  planned('3-u06-h090', 3, "Pravdepodobnosť", 6, "Kontrolná písomná práca", "Hodina 90", 90, "modules/3-rocnik/pravdepodobnost/90-kontrolna-pisomna-praca.js"),
+  placeholder({ id: '3-u06-h080', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Náhodný pokus a náhodný jav", lesson: "Hodina 80", lessonOrder: 80, file: "modules/3-rocnik/pravdepodobnost/80-nahodny-pokus-a-nahodny-jav.js" }),
+  placeholder({ id: '3-u06-h081', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Pravdepodobnosť náhodného javu", lesson: "Hodina 81", lessonOrder: 81, file: "modules/3-rocnik/pravdepodobnost/81-pravdepodobnost-nahodneho-javu.js" }),
+  placeholder({ id: '3-u06-h082', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Riešenie úloh", lesson: "Hodina 82", lessonOrder: 82, file: "modules/3-rocnik/pravdepodobnost/82-riesenie-uloh.js" }),
+  placeholder({ id: '3-u06-h083', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Pravdepodobnosť zjednotenia a prieniku javov", lesson: "Hodina 83", lessonOrder: 83, file: "modules/3-rocnik/pravdepodobnost/83-pravdepodobnost-zjednotenia-a-prieniku-javov.js" }),
+  placeholder({ id: '3-u06-h084', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Riešenie úloh", lesson: "Hodina 84", lessonOrder: 84, file: "modules/3-rocnik/pravdepodobnost/84-riesenie-uloh.js" }),
+  placeholder({ id: '3-u06-h085', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Nezávislé pokusy", lesson: "Hodina 85", lessonOrder: 85, file: "modules/3-rocnik/pravdepodobnost/85-nezavisle-pokusy.js" }),
+  placeholder({ id: '3-u06-h086', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Bernouliho schéma", lesson: "Hodina 86", lessonOrder: 86, file: "modules/3-rocnik/pravdepodobnost/86-bernouliho-schema.js" }),
+  placeholder({ id: '3-u06-h087', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Opakovanie", lesson: "Hodina 87", lessonOrder: 87, file: "modules/3-rocnik/pravdepodobnost/87-opakovanie.js" }),
+  placeholder({ id: '3-u06-h090', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Kontrolná písomná práca", lesson: "Hodina 90", lessonOrder: 90, file: "modules/3-rocnik/pravdepodobnost/90-kontrolna-pisomna-praca.js" }),
 
   // 3.07 · Štatistika
-  planned('3-u07-h091', 3, "Štatistika", 7, "Štatistický súbor, jednotka, znak, rozdelenie početnosti", "Hodina 91", 91, "modules/3-rocnik/statistika/91-statisticky-subor-jednotka-znak-rozdelenie-pocetnosti.js"),
-  planned('3-u07-h092', 3, "Štatistika", 7, "Štat. charakteristiky polohy", "Hodina 92", 92, "modules/3-rocnik/statistika/92-stat-charakteristiky-polohy.js"),
-  planned('3-u07-h093', 3, "Štatistika", 7, "Riešenie úloh", "Hodina 93", 93, "modules/3-rocnik/statistika/93-riesenie-uloh.js"),
-  planned('3-u07-h094', 3, "Štatistika", 7, "Štat. charakteristiky variability", "Hodina 94", 94, "modules/3-rocnik/statistika/94-stat-charakteristiky-variability.js"),
-  planned('3-u07-h095', 3, "Štatistika", 7, "Riešenie praktických úloh", "Hodina 95", 95, "modules/3-rocnik/statistika/95-riesenie-praktickych-uloh.js"),
-  planned('3-u07-h096', 3, "Štatistika", 7, "Systematizácia učiva", "Hodina 96", 96, "modules/3-rocnik/statistika/96-systematizacia-uciva.js"),
-  planned('3-u07-h097', 3, "Štatistika", 7, "Kontrolná písomná práca", "Hodina 97", 97, "modules/3-rocnik/statistika/97-kontrolna-pisomna-praca.js"),
-];
+  placeholder({ id: '3-u07-h091', year: 3, unit: "Štatistika", unitOrder: 7, topic: "Štatistický súbor, jednotka, znak, rozdelenie početnosti", lesson: "Hodina 91", lessonOrder: 91, file: "modules/3-rocnik/statistika/91-statisticky-subor-jednotka-znak-rozdelenie-pocetnosti.js" }),
+  placeholder({ id: '3-u07-h092', year: 3, unit: "Štatistika", unitOrder: 7, topic: "Štat. charakteristiky polohy", lesson: "Hodina 92", lessonOrder: 92, file: "modules/3-rocnik/statistika/92-stat-charakteristiky-polohy.js" }),
+  placeholder({ id: '3-u07-h093', year: 3, unit: "Štatistika", unitOrder: 7, topic: "Riešenie úloh", lesson: "Hodina 93", lessonOrder: 93, file: "modules/3-rocnik/statistika/93-riesenie-uloh.js" }),
+  placeholder({ id: '3-u07-h094', year: 3, unit: "Štatistika", unitOrder: 7, topic: "Štat. charakteristiky variability", lesson: "Hodina 94", lessonOrder: 94, file: "modules/3-rocnik/statistika/94-stat-charakteristiky-variability.js" }),
+  placeholder({ id: '3-u07-h095', year: 3, unit: "Štatistika", unitOrder: 7, topic: "Riešenie praktických úloh", lesson: "Hodina 95", lessonOrder: 95, file: "modules/3-rocnik/statistika/95-riesenie-praktickych-uloh.js" }),
+  placeholder({ id: '3-u07-h096', year: 3, unit: "Štatistika", unitOrder: 7, topic: "Systematizácia učiva", lesson: "Hodina 96", lessonOrder: 96, file: "modules/3-rocnik/statistika/96-systematizacia-uciva.js" }),
+  placeholder({ id: '3-u07-h097', year: 3, unit: "Štatistika", unitOrder: 7, topic: "Kontrolná písomná práca", lesson: "Hodina 97", lessonOrder: 97, file: "modules/3-rocnik/statistika/97-kontrolna-pisomna-praca.js" }),
+  ];
+})();

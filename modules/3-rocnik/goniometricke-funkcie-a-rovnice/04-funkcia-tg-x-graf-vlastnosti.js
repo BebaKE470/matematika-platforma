@@ -60,10 +60,10 @@ MathPlatform.registerModule({
         "options": [
           "π/2",
           "π",
-          "2π",
-          "4π"
+          "4π",
+          "2π"
         ],
-        "answer": 2,
+        "answer": 3,
         "correct": "Celý obeh má 2π radiánov.",
         "hint": "Obvod jednotkovej kružnice je 2π."
       },

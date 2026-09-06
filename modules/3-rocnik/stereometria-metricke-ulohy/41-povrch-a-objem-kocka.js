@@ -70,11 +70,11 @@ MathPlatform.registerModule({
         "skill": "porozumenie",
         "question": "Kocka s hranou 3 cm má objem",
         "options": [
-          "9 cm³",
           "27 cm³",
+          "9 cm³",
           "54 cm³"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "V=a³=27 cm³.",
         "hint": "Najprv si pomenuj, čo je dané a čo hľadáš."
       },
@@ -103,10 +103,10 @@ MathPlatform.registerModule({
         "question": "Povrch kocky s a=4 cm je",
         "options": [
           "16 cm²",
-          "64 cm²",
-          "96 cm²"
+          "96 cm²",
+          "64 cm²"
         ],
-        "answer": 2,
+        "answer": 1,
         "correct": "6·4²=96 cm².",
         "hint": "Skús náčrt, odhad alebo spätnú kontrolu."
       },
@@ -117,11 +117,11 @@ MathPlatform.registerModule({
         "skill": "kritické myslenie",
         "question": "Ktorý postup je pri tejto téme najspoľahlivejší?",
         "options": [
-          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
+          "Preskočiť zápis a tipnúť odpoveď.",
           "Zapamätať si iba posledný výsledok.",
-          "Preskočiť zápis a tipnúť odpoveď."
+          "Použiť pravidlo a skontrolovať podmienky aj jednotky."
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Áno. Postup musí byť kontrolovateľný a výsledok interpretovaný.",
         "hint": "Matematika nie je tipovanie."
       },

@@ -59,12 +59,12 @@ MathPlatform.registerModule({
         "skill": "goniometria",
         "question": "Čo je pri novej goniometrickej úprave najdôležitejšie?",
         "options": [
-          "vedieť, z ktorého už známeho vzťahu vychádzam",
-          "použiť čo najviac vzorcov",
           "preskočiť podmienky",
+          "použiť čo najviac vzorcov",
+          "vedieť, z ktorého už známeho vzťahu vychádzam",
           "pracovať iba podľa obrázka"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Nový krok musí nadväzovať na už zavedený vzťah.",
         "hint": "Hľadaj zdôvodnenie."
       },
@@ -90,12 +90,12 @@ MathPlatform.registerModule({
         "skill": "vzťahy",
         "question": "Ktoré tvrdenie vystihuje správnu prácu so vzorcom?",
         "options": [
-          "Najprv určím, či sa vzorec na daný tvar hodí, potom ho použijem.",
+          "Kontrola výsledku nie je potrebná.",
           "Vzorec môžem použiť bez ohľadu na tvar výrazu.",
           "Stačí upravovať iba číselné hodnoty.",
-          "Kontrola výsledku nie je potrebná."
+          "Najprv určím, či sa vzorec na daný tvar hodí, potom ho použijem."
         ],
-        "answer": 0,
+        "answer": 3,
         "correct": "Vzorec je nástroj s konkrétnou štruktúrou a podmienkami.",
         "hint": "Vzorec nie je kúzelná skratka."
       },

@@ -102,11 +102,11 @@ MathPlatform.registerModule({
         "skill": "prenos",
         "question": "Cena 80 € sa zvýši o 25 %. Nová cena je",
         "options": [
-          "100 €",
+          "60 €",
           "105 €",
-          "60 €"
+          "100 €"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "25 % z 80 je 20, teda 100 €.",
         "hint": "Skús náčrt, odhad alebo spätnú kontrolu."
       },

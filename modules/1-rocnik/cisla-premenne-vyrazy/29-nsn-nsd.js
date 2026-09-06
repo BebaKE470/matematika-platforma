@@ -118,12 +118,12 @@ MathPlatform.registerModule({
         "skill": "NSN",
         "question": "Originálna maturitná úloha 2023, úloha 16: Najmenší spoločný násobok čísla 2 190 a štvorciferného čísla x je 13 140. Určte x.",
         "options": [
-          "2 628",
+          "9 855",
           "4 380",
           "6 570",
-          "9 855"
+          "2 628"
         ],
-        "answer": 0,
+        "answer": 3,
         "correct": "2 190=2·3·5·73 a 13 140=2²·3²·5·73. Štvorciferné x musí doplniť druhú mocninu 2 a 3, teda x=2²·3²·73=2 628.",
         "hint": "Porovnaj prvočíselné rozklady NSN a čísla 2 190."
       },
@@ -134,11 +134,11 @@ MathPlatform.registerModule({
         "skill": "kritické myslenie",
         "question": "Ktorý postup je pri tejto téme najspoľahlivejší?",
         "options": [
-          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Zapamätať si iba posledný výsledok.",
+          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Preskočiť zápis a tipnúť odpoveď."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Áno. Postup musí byť kontrolovateľný a výsledok interpretovaný.",
         "hint": "Matematika nie je tipovanie."
       },

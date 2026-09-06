@@ -118,11 +118,11 @@ MathPlatform.registerModule({
         "skill": "Kvantifikátory",
         "question": "Ktorá veta je negáciou „Existuje reálne číslo x, pre ktoré x²=-1“?",
         "options": [
-          "Pre každé reálne číslo x platí x²≠-1.",
+          "Pre každé reálne číslo x platí x²=-1.",
           "Existuje reálne číslo x, pre ktoré x²≠-1.",
-          "Pre každé reálne číslo x platí x²=-1."
+          "Pre každé reálne číslo x platí x²≠-1."
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Áno. Negácia ∃P je ∀¬P.",
         "hint": "Musíš vylúčiť existenciu každého možného riešenia."
       },
@@ -133,11 +133,11 @@ MathPlatform.registerModule({
         "skill": "Implikácia",
         "question": "Ktorá veta je obmenou A⇒B?",
         "options": [
-          "B⇒A",
           "¬B⇒¬A",
+          "B⇒A",
           "¬A⇒¬B"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Správne.",
         "hint": "Obmena: neguj obe časti a obráť poradie."
       },
@@ -148,11 +148,11 @@ MathPlatform.registerModule({
         "skill": "Dôkaz",
         "question": "Čo stačí na vyvrátenie všeobecného tvrdenia?",
         "options": [
-          "jeden správny protipríklad",
           "desať príkladov, ktoré ho potvrdia",
+          "jeden správny protipríklad",
           "definícia pojmu"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Áno. Jeden protipríklad stačí.",
         "hint": "Vyvrátenie a potvrdenie všeobecného tvrdenia nie sú symetrické."
       },
@@ -172,10 +172,10 @@ MathPlatform.registerModule({
         "question": "Ktorá dvojica pojmov patrí k výroku „pre každé x platí...“?",
         "options": [
           "existenčný kvantifikátor a príklad",
-          "všeobecný kvantifikátor a možný protipríklad",
-          "definícia a otázka"
+          "definícia a otázka",
+          "všeobecný kvantifikátor a možný protipríklad"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Všeobecné tvrdenie používa myšlienku „pre každé“ a na jeho vyvrátenie môže stačiť protipríklad.",
         "hint": "Spoj kvantifikátor s argumentáciou."
       },

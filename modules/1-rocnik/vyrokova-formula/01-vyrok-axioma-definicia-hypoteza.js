@@ -341,10 +341,10 @@ MathPlatform.registerModule({
         "skill": "Otvorená veta",
         "question": "Je veta „7x − 3 = 18.“ bez určenej hodnoty x výrokom?",
         "options": [
-          "Áno",
-          "Nie"
+          "Nie",
+          "Áno"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Nie. Bez určenej hodnoty x pravdivosť závisí od premennej; ide o otvorenú vetu.",
         "hint": "Vieš bez hodnoty x priradiť jednej vete práve P alebo N?"
       },
@@ -355,11 +355,11 @@ MathPlatform.registerModule({
         "skill": "Výrok a P/N",
         "question": "Veta „Rovnica 3x = 0 má jeden reálny koreň.“ – ktorá odpoveď je správna?",
         "options": [
-          "Nie je to výrok.",
           "Je to pravdivý výrok – P.",
+          "Nie je to výrok.",
           "Je to nepravdivý výrok – N."
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Je to pravdivý výrok. Rovnica má práve jedno riešenie x = 0.",
         "hint": "Vyrieš rovnicu a potom rozhodni o pravdivosti vety."
       },

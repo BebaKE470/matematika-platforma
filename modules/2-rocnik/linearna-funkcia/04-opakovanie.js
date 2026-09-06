@@ -88,11 +88,11 @@ MathPlatform.registerModule({
         "question": "Ktoré tvrdenie je pravdivé?",
         "options": [
           "funkcia je klesajúca",
-          "nulový bod je 2",
           "graf pretína os y v [0;6]",
+          "nulový bod je 2",
           "f(1)=−6"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "a=3>0, b=−6 a 3x−6=0 dá x=2.",
         "hint": "Skontroluj každé tvrdenie cez a, b a f(x)=0."
       },
@@ -111,11 +111,11 @@ MathPlatform.registerModule({
         "question": "Ktorý predpis zodpovedá zobrazenému grafu?",
         "options": [
           "f(x)=x+3",
-          "f(x)=−x+3",
+          "f(x)=−3x+1",
           "f(x)=3x−3",
-          "f(x)=−3x+1"
+          "f(x)=−x+3"
         ],
-        "answer": 1,
+        "answer": 3,
         "correct": "Graf pretína os y v 3 a pri zvýšení x o 1 klesne y o 1, teda a=−1, b=3.",
         "hint": "Najprv urči b a potom smernicu."
       },
@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         "model": "g(6)=1; os y: [0;−2]; nulový bod x=4; funkcia je rastúca."
       },
 
-      {"id":"reverse","type":"choice","phase":"PREPOJ","skill":"predpis","stimulus":"Priamka prechádza bodom [0;−2] a pri zvýšení x o 1 sa y zvýši o 3.","question":"Ktorý predpis ju opisuje?","options":["f(x)=−2x+3","f(x)=3x−2","f(x)=3x+2","f(x)=−3x−2"],"answer":1,"correct":"Zmena o +3 dáva a=3 a bod [0;−2] dáva b=−2.","hint":"Najprv urč a, potom b."},
+      {"id":"reverse","type":"choice","phase":"PREPOJ","skill":"predpis","stimulus":"Priamka prechádza bodom [0;−2] a pri zvýšení x o 1 sa y zvýši o 3.","question":"Ktorý predpis ju opisuje?","options":["f(x)=3x−2","f(x)=−2x+3","f(x)=3x+2","f(x)=−3x−2"],"answer":0,"correct":"Zmena o +3 dáva a=3 a bod [0;−2] dáva b=−2.","hint":"Najprv urč a, potom b."},
       {"id":"error","type":"choice","phase":"NÁJDI CHYBU","skill":"argumentácia","stimulus":"Žiak rieši nulový bod f(x)=2x+6 takto: 2x+6=0 ⇒ 2x=6 ⇒ x=3.","question":"Kde je chyba?","options":["Nulový bod sa nehľadá z f(x)=0.","Pri prenesení +6 na druhú stranu má byť −6.","Treba dosadiť x=0.","Výpočet je správny."],"answer":1,"correct":"Správne: 2x=−6, teda x=−3.","hint":"Sleduj znamienko po úprave rovnice."},
       {"id":"synthesis","type":"selfWrite","phase":"SYNTÉZA","title":"Čo vieš z predpisu","promptHtml":"Pre <strong>f(x)=−2x+4</strong> napíš tri informácie, ktoré vieš určiť bez kreslenia grafu.","model":"Napríklad: a=−2, takže funkcia je klesajúca; b=4, takže graf pretína os y v [0;4]; nulový bod je x=2, takže pretína os x v [2;0]."},
       {

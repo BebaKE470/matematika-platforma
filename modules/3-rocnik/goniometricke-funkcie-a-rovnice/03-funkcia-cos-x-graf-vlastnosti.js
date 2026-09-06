@@ -59,11 +59,11 @@ MathPlatform.registerModule({
         "question": "Koľko radiánov má celý obeh po jednotkovej kružnici?",
         "options": [
           "π/2",
-          "π",
           "2π",
+          "π",
           "4π"
         ],
-        "answer": 2,
+        "answer": 1,
         "correct": "Celý obeh má 2π radiánov.",
         "hint": "Obvod jednotkovej kružnice je 2π."
       },
@@ -89,12 +89,12 @@ MathPlatform.registerModule({
         "skill": "cos",
         "question": "Ktorý zápis je správny? (cos(π)=−1)",
         "options": [
-          "cos(π)=−1",
-          "cos(π)=0",
           "cos(π)=2",
+          "cos(π)=0",
+          "cos(π)=−1",
           "hodnota sa nedá určiť"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Vyplýva to z polohy bodu na jednotkovej kružnici.",
         "hint": "Vráť sa k definícii pomocou súradnice/podielu."
       },

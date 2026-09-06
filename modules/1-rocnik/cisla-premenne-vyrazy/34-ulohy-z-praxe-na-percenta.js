@@ -71,11 +71,11 @@ MathPlatform.registerModule({
         "skill": "porozumenie",
         "question": "Materiál stojí 500 €. Zľava je 8 %. Zaplatíme",
         "options": [
-          "460 €",
           "492 €",
+          "460 €",
           "540 €"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "8 % z 500 je 40; 500−40=460.",
         "hint": "Najprv si pomenuj, čo je dané a čo hľadáš."
       },
@@ -103,11 +103,11 @@ MathPlatform.registerModule({
         "skill": "prenos",
         "question": "Cena po 10 % zvýšení je 330 €. Pôvodná cena bola",
         "options": [
-          "300 €",
+          "363 €",
           "297 €",
-          "363 €"
+          "300 €"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Pôvodná cena je 330/1,10=300 €.",
         "hint": "Skús náčrt, odhad alebo spätnú kontrolu."
       },

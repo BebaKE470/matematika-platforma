@@ -59,12 +59,12 @@ MathPlatform.registerModule({
         "skill": "goniometria",
         "question": "Čo je pri novej goniometrickej úprave najdôležitejšie?",
         "options": [
-          "vedieť, z ktorého už známeho vzťahu vychádzam",
+          "pracovať iba podľa obrázka",
           "použiť čo najviac vzorcov",
           "preskočiť podmienky",
-          "pracovať iba podľa obrázka"
+          "vedieť, z ktorého už známeho vzťahu vychádzam"
         ],
-        "answer": 0,
+        "answer": 3,
         "correct": "Nový krok musí nadväzovať na už zavedený vzťah.",
         "hint": "Hľadaj zdôvodnenie."
       },
@@ -120,15 +120,15 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "ORIGINÁLNA MATURITNÁ ÚLOHA",
         "skill": "grafy",
-        "prompt": "Maturita 2024, úloha 22. Graf ktorej funkcie má na intervale ⟨0;2π⟩ najviac priesečníkov s osou x?",
+        "question": "Maturita 2024, úloha 22. Graf ktorej funkcie má na intervale ⟨0;2π⟩ najviac priesečníkov s osou x?",
         "options": [
-          "y=2+sin x",
+          "y=sin(2x)",
           "y=2 sin x",
           "y=sin(x/2)",
-          "y=sin(2x)",
+          "y=2+sin x",
           "y=sin x"
         ],
-        "answer": 3,
+        "answer": 0,
         "correct": "sin(2x)=0 pre x=0, π/2, π, 3π/2, 2π, teda má päť priesečníkov.",
         "hint": "Priesečník s osou x znamená funkčnú hodnotu 0."
       },

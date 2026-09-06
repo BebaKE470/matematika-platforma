@@ -71,11 +71,11 @@ MathPlatform.registerModule({
         "skill": "porozumenie",
         "question": "Povrch gule je",
         "options": [
-          "4πr²",
+          "πr²",
           "(4/3)πr³",
-          "πr²"
+          "4πr²"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "S=4πr².",
         "hint": "Najprv si pomenuj, čo je dané a čo hľadáš."
       },
@@ -103,11 +103,11 @@ MathPlatform.registerModule({
         "skill": "prenos",
         "question": "Ak sa polomer gule zdvojnásobí, objem sa zväčší",
         "options": [
-          "2-krát",
+          "8-krát",
           "4-krát",
-          "8-krát"
+          "2-krát"
         ],
-        "answer": 2,
+        "answer": 0,
         "correct": "Objem závisí od r³.",
         "hint": "Skús náčrt, odhad alebo spätnú kontrolu."
       },
@@ -119,11 +119,11 @@ MathPlatform.registerModule({
         "question": "Originálna maturitná úloha 2010, úloha 28: Koľkokrát sa zväčší povrch balóna tvaru gule, ak sa jeho objem zväčší 8-násobne?",
         "options": [
           "2-krát",
-          "4-krát",
+          "16-krát",
           "8-krát",
-          "16-krát"
+          "4-krát"
         ],
-        "answer": 1,
+        "answer": 3,
         "correct": "Objem rastie s r³. Osemnásobný objem znamená dvojnásobný polomer. Povrch rastie s r², preto sa zväčší 2²=4-krát.",
         "hint": "Najprv zisti, ako sa musel zmeniť polomer."
       },
@@ -134,11 +134,11 @@ MathPlatform.registerModule({
         "skill": "kritické myslenie",
         "question": "Ktorý postup je pri tejto téme najspoľahlivejší?",
         "options": [
-          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Zapamätať si iba posledný výsledok.",
+          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Preskočiť zápis a tipnúť odpoveď."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Áno. Postup musí byť kontrolovateľný a výsledok interpretovaný.",
         "hint": "Matematika nie je tipovanie."
       },

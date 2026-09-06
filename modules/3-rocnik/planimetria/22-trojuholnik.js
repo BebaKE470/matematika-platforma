@@ -6,8 +6,7 @@ MathPlatform.registerModule({
       "základná planimetria zo ZŠ",
       "Pytagorova veta a goniometria trojuholníka z 2. ročníka",
       "logika, množiny a algebraické úpravy z 1. ročníka",
-      "goniometria z predchádzajúceho tematického celku 3. ročníka",
-      ""
+      "goniometria z predchádzajúceho tematického celku 3. ročníka"
     ],
     "planContent": [
       "Obsah a poradie vychádzajú z aktuálneho tematického plánu 3. ročníka."
@@ -72,12 +71,12 @@ MathPlatform.registerModule({
         "skill": "planimetria",
         "question": "Čo má byť pred dosadením do vzorca?",
         "options": [
-          "náčrt, označenie údajov a voľba vhodného vzťahu",
+          "výber jednotky bez výpočtu",
           "iba kalkulačka",
           "zaokrúhlenie výsledku",
-          "výber jednotky bez výpočtu"
+          "náčrt, označenie údajov a voľba vhodného vzťahu"
         ],
-        "answer": 0,
+        "answer": 3,
         "correct": "Náčrt a označenie údajov znižujú riziko zámeny veličín.",
         "hint": "Najprv matematický model."
       },
@@ -102,7 +101,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "ORIGINÁLNA MATURITNÁ ÚLOHA",
         "skill": "logika a geometria",
-        "prompt": "Maturita 2024, úloha 21. Z nasledujúcich tvrdení vyber ekvivalenciu.",
+        "question": "Maturita 2024, úloha 21. Z nasledujúcich tvrdení vyber ekvivalenciu.",
         "options": [
           "V rovnostrannom trojuholníku sú všetky ťažnice zhodné a kolmé na príslušnú stranu.",
           "V každom trojuholníku je súčet vnútorných uhlov 180°.",

@@ -86,10 +86,10 @@ MathPlatform.registerModule({
         "question": "Ktorý interval vyjadruje podmienku 2 ≤ x < 6?",
         "options": [
           "(2; 6)",
-          "⟨2; 6)",
-          "⟨2; 6⟩"
+          "⟨2; 6⟩",
+          "⟨2; 6)"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Správne. Dvojka patrí, šestka nepatrí.",
         "hint": "Pri každom krajnom bode sa osobitne opýtaj: patrí alebo nepatrí?"
       },
@@ -100,11 +100,11 @@ MathPlatform.registerModule({
         "skill": "presný zápis",
         "question": "Ktorá nerovnosť zodpovedá intervalu (−3; 5⟩?",
         "options": [
-          "−3 ≤ x ≤ 5",
           "−3 < x ≤ 5",
+          "−3 ≤ x ≤ 5",
           "−3 < x < 5"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Áno. −3 nepatrí, 5 patrí.",
         "hint": "Otvorená zátvorka znamená ostrú nerovnosť; uzavretá znamená, že bod patrí."
       },

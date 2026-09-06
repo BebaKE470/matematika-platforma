@@ -104,11 +104,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Sústava 2x−1 ≥ 3 a x+4 < 9 dá po vyriešení:",
         "options": [
-          "x ≥ 2 a x < 5",
+          "x ≥ 1 a x < 13",
           "x ≤ 2 a x > 5",
-          "x ≥ 1 a x < 13"
+          "x ≥ 2 a x < 5"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne. Prvá dá x≥2, druhá x<5.",
         "hint": "Rieš každú zvlášť."
       },

@@ -4,10 +4,16 @@ Katalóg obsahuje všetky pomenované hodiny/témy z aktuálnych tematických pl
 Prázdne riadky plánu bez názvu témy nie sú vytvorené ako moduly. Číslovanie hodín preto môže miestami preskočiť.
 
 ## Ako pridať nový hotový modul
-1. V `modules/registry.js` nájdi tému podľa názvu alebo čísla hodiny.
+1. V `modules/registry.js` nájdi tému podľa názvu alebo čísla hodiny — má tvar
+   `placeholder({ id, year, unit, unitOrder, topic, lesson, lessonOrder, file })`.
 2. Cesta v položke `file` už hovorí, kam má .js súbor patriť.
 3. V obsahovom súbore použi presne rovnaké `id`.
-4. Zmeň `status: 'planned'` na `status: 'ready'` a podľa potreby doplň `time`, `type`, `skills`.
+4. Nahraď ten jeden riadok literálovým objektom so `status: 'ready'` a skutočným
+   `time`/`type`/`skills` modulu (pozri ktorýkoľvek `status:'ready'` záznam v
+   registri ako vzor) — `year`, `unit`, `unitOrder`, `topic`, `lesson`,
+   `lessonOrder` a `file` zostávajú nezmenené.
+5. Over `node tools/audit.mjs` (kontroluje duplicity, chýbajúce súbory aj tvar
+   každej aktivity) pred odovzdaním modulu.
 
 ## Priečinky
 
@@ -30,7 +36,7 @@ Prázdne riadky plánu bez názvu témy nie sú vytvorené ako moduly. Číslova
   06. Pravouhlý trojuholník a jeho vlastnosti  →  modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/  (8 pomenovaných hodín/tém)
   07. Goniometrické funkcie ostrého uhla  →  modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/  (6 pomenovaných hodín/tém)
   08. Sínusová a kosínusová veta  →  modules/2-rocnik/sinusova-a-kosinusova-veta/  (7 pomenovaných hodín/tém)
-  09. Kvadratická funkcia a jej gaf  →  modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/  (5 pomenovaných hodín/tém)
+  09. Kvadratická funkcia a jej graf  →  modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/  (5 pomenovaných hodín/tém)
   10. Kvadratické rovnice - základné typy  →  modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/  (7 pomenovaných hodín/tém)
   11. Kvadratické rovnice – vzťahy a algebraické úpravy  →  modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/  (7 pomenovaných hodín/tém)
   12. Slovné úlohy a aplikácie kvadratických rovníc  →  modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/  (5 pomenovaných hodín/tém)

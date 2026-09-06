@@ -69,11 +69,11 @@ MathPlatform.registerModule({
         "skill": "diagnostika",
         "question": "V kocke ABCDEFGH: Ktoré priamky sú mimobežné?",
         "options": [
-          "AB a CG",
+          "AB a BF",
           "AB a EF",
-          "AB a BF"
+          "AB a CG"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne. Dôležité je vedieť rozhodnutie aj zdôvodniť."
       },
       {
@@ -99,11 +99,11 @@ MathPlatform.registerModule({
         "skill": "diagnostika",
         "question": "V kocke ABCDEFGH: Prienikom dvoch rôznobežných rovín je…",
         "options": [
-          "priamka",
           "bod",
+          "priamka",
           "úsečka vždy dĺžky hrany"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Správne. Dôležité je vedieť rozhodnutie aj zdôvodniť."
       },
       {
@@ -114,11 +114,11 @@ MathPlatform.registerModule({
         "skill": "diagnostika",
         "question": "V kocke ABCDEFGH: Pri konštrukcii rezu môžeme spojiť dva známe body priamo vtedy, keď…",
         "options": [
-          "ležia na tej istej stene kocky",
+          "majú rovnakú vzdialenosť od A",
           "sú ľubovoľné body kocky",
-          "majú rovnakú vzdialenosť od A"
+          "ležia na tej istej stene kocky"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne. Dôležité je vedieť rozhodnutie aj zdôvodniť."
       },
       {
@@ -144,11 +144,11 @@ MathPlatform.registerModule({
         "skill": "diagnostika",
         "question": "V kocke ABCDEFGH: Ak sa dve priamky v priestore nepretínajú…",
         "options": [
-          "môžu byť rovnobežné alebo mimobežné",
           "sú vždy rovnobežné",
+          "môžu byť rovnobežné alebo mimobežné",
           "sú vždy mimobežné"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Správne. Dôležité je vedieť rozhodnutie aj zdôvodniť."
       },
       {
@@ -159,11 +159,11 @@ MathPlatform.registerModule({
         "skill": "diagnostika",
         "question": "V kocke ABCDEFGH: Tri body určujú rovinu jednoznačne, ak…",
         "options": [
-          "neležia na jednej priamke",
+          "ležia na jednej priamke",
           "sú ľubovoľné",
-          "ležia na jednej priamke"
+          "neležia na jednej priamke"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne. Dôležité je vedieť rozhodnutie aj zdôvodniť."
       },
       {
@@ -193,9 +193,10 @@ MathPlatform.registerModule({
       {
         "id": "r",
         "type": "reflection",
-        "phase": "PRECVIČ",
+        "phase": "ZÁVER",
         "title": "Po diagnostike",
-        "items": [
+        "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka.",
+        "skills": [
           "Vzájomné polohy mám isté.",
           "V priestore kocky sa orientujem.",
           "Postup rezu viem vysvetliť."

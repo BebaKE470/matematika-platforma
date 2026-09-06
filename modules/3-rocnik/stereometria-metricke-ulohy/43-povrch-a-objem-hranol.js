@@ -70,11 +70,11 @@ MathPlatform.registerModule({
         "skill": "porozumenie",
         "question": "Objem hranola vypočítame ako",
         "options": [
-          "obsah podstavy × výška",
+          "obsah plášťa × výška",
           "obvod podstavy × výška",
-          "obsah plášťa × výška"
+          "obsah podstavy × výška"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "V=Sp·v.",
         "hint": "Najprv si pomenuj, čo je dané a čo hľadáš."
       },
@@ -102,11 +102,11 @@ MathPlatform.registerModule({
         "skill": "prenos",
         "question": "Trojboký hranol má Sp=12 cm² a v=5 cm. V=",
         "options": [
-          "17 cm³",
           "60 cm³",
+          "17 cm³",
           "120 cm³"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "12·5=60 cm³.",
         "hint": "Skús náčrt, odhad alebo spätnú kontrolu."
       },
@@ -117,11 +117,11 @@ MathPlatform.registerModule({
         "skill": "kritické myslenie",
         "question": "Ktorý postup je pri tejto téme najspoľahlivejší?",
         "options": [
-          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Zapamätať si iba posledný výsledok.",
+          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Preskočiť zápis a tipnúť odpoveď."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Áno. Postup musí byť kontrolovateľný a výsledok interpretovaný.",
         "hint": "Matematika nie je tipovanie."
       },

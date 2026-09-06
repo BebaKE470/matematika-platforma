@@ -97,11 +97,11 @@ MathPlatform.registerModule({
         "skill": "Práca s modulom",
         "question": "Čo najlepšie vystihuje XP v tejto aplikácii?",
         "options": [
-          "Je to automatická školská známka.",
           "Je to spätná väzba o práci v konkrétnom module.",
+          "Je to automatická školská známka.",
           "Je to počet minút strávených pri mobile."
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Správne. XP sú orientačná spätná väzba, nie automatická známka.",
         "hint": "Spomeň si, čo má byť cieľom aplikácie."
       },
@@ -222,11 +222,11 @@ MathPlatform.registerModule({
         "question": "V triede je 24 žiakov. Presne tri štvrtiny z nich sú dievčatá. Koľko dievčat je v triede?",
         "options": [
           "16",
-          "6",
           "18",
+          "6",
           "8"
         ],
-        "answer": 2,
+        "answer": 1,
         "correct": "Správne. Jedna štvrtina z 24 je 24 : 4 = 6, tri štvrtiny sú teda 6 · 3 = 18.",
         "hint": "Najprv zisti, koľko žiakov tvorí jednu štvrtinu (24 : 4), a potom to vynásob tromi."
       },

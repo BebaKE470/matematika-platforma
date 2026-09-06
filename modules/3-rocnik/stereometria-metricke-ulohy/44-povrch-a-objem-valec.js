@@ -71,10 +71,10 @@ MathPlatform.registerModule({
         "question": "Valec s r=2 cm, v=5 cm má objem",
         "options": [
           "10π cm³",
-          "20π cm³",
-          "40π cm³"
+          "40π cm³",
+          "20π cm³"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "V=πr²v=20π cm³.",
         "hint": "Najprv si pomenuj, čo je dané a čo hľadáš."
       },
@@ -102,11 +102,11 @@ MathPlatform.registerModule({
         "skill": "prenos",
         "question": "Obsah plášťa valca r=3, v=4 je",
         "options": [
-          "12π",
           "24π",
+          "12π",
           "36π"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Q=2πrv=24π.",
         "hint": "Skús náčrt, odhad alebo spätnú kontrolu."
       },
@@ -117,11 +117,11 @@ MathPlatform.registerModule({
         "skill": "kritické myslenie",
         "question": "Ktorý postup je pri tejto téme najspoľahlivejší?",
         "options": [
-          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Zapamätať si iba posledný výsledok.",
+          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Preskočiť zápis a tipnúť odpoveď."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Áno. Postup musí byť kontrolovateľný a výsledok interpretovaný.",
         "hint": "Matematika nie je tipovanie."
       },

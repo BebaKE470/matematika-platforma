@@ -104,12 +104,12 @@ MathPlatform.registerModule({
         "skill": "modelovanie",
         "question": "Ktorý zápis najlepšie uzatvára geometrickú úlohu?",
         "options": [
-          "číselný výsledok s jednotkou a krátkou odpoveďou podľa otázky",
           "iba vzorec",
+          "číselný výsledok s jednotkou a krátkou odpoveďou podľa otázky",
           "iba obrázok",
           "číslo bez jednotky"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Výsledok musí byť interpretovaný v kontexte a mať správnu jednotku.",
         "hint": "Matematický výsledok treba vrátiť do zadania."
       },

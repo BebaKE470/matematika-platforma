@@ -71,11 +71,11 @@ MathPlatform.registerModule({
         "skill": "zjednotenie",
         "question": "A={1,2,3}, B={3,4}. Čo je A∩B?",
         "options": [
-          "{1,2,3,4}",
           "{3}",
+          "{1,2,3,4}",
           "{1,2,4}"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Prienik obsahuje prvky spoločné obom množinám.",
         "hint": "Nakresli si malý diagram alebo vypíš prvky."
       },
@@ -128,10 +128,10 @@ MathPlatform.registerModule({
         "question": "Pre tie isté množiny A ∪ B je:",
         "options": [
           "{3}",
-          "{1,2,3,4}",
-          "{1,2,4}"
+          "{1,2,4}",
+          "{1,2,3,4}"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Zjednotenie obsahuje prvky, ktoré sú aspoň v jednej z množín.",
         "hint": "Každý prvok zapíš iba raz."
       },

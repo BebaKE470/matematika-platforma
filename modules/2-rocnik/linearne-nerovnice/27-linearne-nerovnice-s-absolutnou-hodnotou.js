@@ -67,11 +67,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Čo znamená |x−3| < 2?",
         "options": [
-          "x je od 3 vzdialené menej ako 2",
+          "x je od 3 vzdialené viac ako 2",
           "x je od 2 vzdialené menej ako 3",
-          "x je od 3 vzdialené viac ako 2"
+          "x je od 3 vzdialené menej ako 2"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne. Stred je 3, polomer vzdialenosti 2.",
         "hint": "Čítaj |x−a| ako vzdialenosť od a."
       },
@@ -105,10 +105,10 @@ MathPlatform.registerModule({
         "question": "Riešenie |x+1| ≥ 4 je:",
         "options": [
           "⟨−5;3⟩",
-          "(−5;3)",
-          "(−∞;−5⟩ ∪ ⟨3;∞)"
+          "(−∞;−5⟩ ∪ ⟨3;∞)",
+          "(−5;3)"
         ],
-        "answer": 2,
+        "answer": 1,
         "correct": "Správne. Hľadáme vzdialenosť aspoň 4 od −1.",
         "hint": "|x+1|=|x−(−1)|."
       },

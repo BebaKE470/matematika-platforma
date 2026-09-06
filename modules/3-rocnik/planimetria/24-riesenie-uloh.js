@@ -72,12 +72,12 @@ MathPlatform.registerModule({
         "skill": "planimetria",
         "question": "Čo má byť pred dosadením do vzorca?",
         "options": [
-          "náčrt, označenie údajov a voľba vhodného vzťahu",
-          "iba kalkulačka",
           "zaokrúhlenie výsledku",
+          "iba kalkulačka",
+          "náčrt, označenie údajov a voľba vhodného vzťahu",
           "výber jednotky bez výpočtu"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Náčrt a označenie údajov znižujú riziko zámeny veličín.",
         "hint": "Najprv matematický model."
       },
@@ -104,12 +104,12 @@ MathPlatform.registerModule({
         "skill": "modelovanie",
         "question": "Ktorý zápis najlepšie uzatvára geometrickú úlohu?",
         "options": [
-          "číselný výsledok s jednotkou a krátkou odpoveďou podľa otázky",
+          "číslo bez jednotky",
           "iba vzorec",
           "iba obrázok",
-          "číslo bez jednotky"
+          "číselný výsledok s jednotkou a krátkou odpoveďou podľa otázky"
         ],
-        "answer": 0,
+        "answer": 3,
         "correct": "Výsledok musí byť interpretovaný v kontexte a mať správnu jednotku.",
         "hint": "Matematický výsledok treba vrátiť do zadania."
       },

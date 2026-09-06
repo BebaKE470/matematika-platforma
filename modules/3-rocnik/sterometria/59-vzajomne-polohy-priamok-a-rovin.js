@@ -76,11 +76,11 @@ MathPlatform.registerModule({
         "skill": "vzájomná poloha",
         "question": "V kocke ABCDEFGH: Hrany AB a EF sú…",
         "options": [
-          "rovnobežné",
+          "mimobežné",
           "rôznobežné",
-          "mimobežné"
+          "rovnobežné"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Rozhoduj podľa spoločného bodu, rovnobežnosti a spoločnej roviny."
       },
       {
@@ -106,11 +106,11 @@ MathPlatform.registerModule({
         "skill": "vzájomná poloha",
         "question": "V kocke ABCDEFGH: Priamky AB a CG sú…",
         "options": [
-          "mimobežné",
           "rovnobežné",
+          "mimobežné",
           "rôznobežné"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Rozhoduj podľa spoločného bodu, rovnobežnosti a spoločnej roviny."
       },
       {
@@ -121,11 +121,11 @@ MathPlatform.registerModule({
         "skill": "vzájomná poloha",
         "question": "V kocke ABCDEFGH: Roviny ABFE a DCGH (protiľahlé steny) sú…",
         "options": [
-          "rovnobežné",
+          "rôznobežné",
           "totožné",
-          "rôznobežné"
+          "rovnobežné"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Rozhoduj podľa spoločného bodu, rovnobežnosti a spoločnej roviny."
       },
       {
@@ -151,11 +151,11 @@ MathPlatform.registerModule({
         "skill": "argumentácia",
         "question": "„Ak sa dve priamky nepretínajú, sú rovnobežné.“ Prečo to v priestore nemusí platiť?",
         "options": [
-          "Môžu byť mimobežné.",
           "Musia byť totožné.",
+          "Môžu byť mimobežné.",
           "V priestore sa každé dve priamky pretínajú."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Mimobežné priamky sa nepretínajú, ale ani nie sú rovnobežné."
       },
       {
@@ -177,9 +177,10 @@ MathPlatform.registerModule({
       {
         "id": "r",
         "type": "reflection",
-        "phase": "PRECVIČ",
+        "phase": "ZÁVER",
         "title": "Sebahodnotenie",
-        "items": [
+        "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka.",
+        "skills": [
           "Rozlíšim tri polohy priamok.",
           "Určím polohu rovín.",
           "Viem svoje rozhodnutie zdôvodniť."

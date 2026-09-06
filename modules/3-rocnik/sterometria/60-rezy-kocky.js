@@ -76,11 +76,11 @@ MathPlatform.registerModule({
         "skill": "rez kocky",
         "question": "Rovina rezu má na jednej stene dva známe body. Čo urobíš ako prvé?",
         "options": [
-          "Spojím ich úsečkou v tejto stene.",
+          "Vypočítam objem kocky.",
           "Spojím každý bod so stredom kocky.",
-          "Vypočítam objem kocky."
+          "Spojím ich úsečkou v tejto stene."
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Pri reze vždy kontroluj, v ktorej stene práve pracuješ."
       },
       {
@@ -106,11 +106,11 @@ MathPlatform.registerModule({
         "skill": "rez kocky",
         "question": "Čo musí platiť o susedných stranách rezu?",
         "options": [
-          "Stretávajú sa na tej istej hrane kocky.",
           "Musia byť vždy rovnobežné.",
+          "Stretávajú sa na tej istej hrane kocky.",
           "Musia mať rovnakú dĺžku."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Pri reze vždy kontroluj, v ktorej stene práve pracuješ."
       },
       {
@@ -121,11 +121,11 @@ MathPlatform.registerModule({
         "skill": "rez kocky",
         "question": "Kedy je konštrukcia rezu dokončená?",
         "options": [
-          "Keď vznikne uzavretý mnohouholník a jeho strany ležia v stenách kocky.",
+          "Keď nakreslíme uhlopriečku kocky.",
           "Keď nájdeme prvé dva body.",
-          "Keď nakreslíme uhlopriečku kocky."
+          "Keď vznikne uzavretý mnohouholník a jeho strany ležia v stenách kocky."
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Pri reze vždy kontroluj, v ktorej stene práve pracuješ."
       },
       {
@@ -135,22 +135,27 @@ MathPlatform.registerModule({
         "title": "Kontrola postupu",
         "skill": "postup",
         "question": "Označ kroky, ktoré patria do správnej konštrukcie rezu.",
+        "labels": ["Patrí do postupu", "Nepatrí"],
         "items": [
           {
             "text": "nájsť známe body roviny rezu na hranách",
-            "correct": true
+            "answer": true,
+            "why": "Body, ktoré poznáme na hranách, sú základom, z ktorého rez staviame."
           },
           {
             "text": "spájať dva body, ak ležia na tej istej stene",
-            "correct": true
+            "answer": true,
+            "why": "Úsečku smieme viesť len vtedy, keď obidva body ležia v tej istej stene – inak by nešlo o stranu rezu."
           },
           {
             "text": "uzavrieť vzniknutý mnohouholník",
-            "correct": true
+            "answer": true,
+            "why": "Rez telesa rovinou je vždy uzavretý mnohouholník; bez uzavretia konštrukcia nie je hotová."
           },
           {
             "text": "spojiť ľubovoľné dva body bez kontroly steny",
-            "correct": false
+            "answer": false,
+            "why": "Bez kontroly steny môže úsečka viesť mimo roviny rezu alebo mimo steny – takýto krok nie je platný."
           }
         ]
       },
@@ -173,9 +178,10 @@ MathPlatform.registerModule({
       {
         "id": "r",
         "type": "reflection",
-        "phase": "PRECVIČ",
+        "phase": "ZÁVER",
         "title": "Ako zvládaš rezy?",
-        "items": [
+        "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka.",
+        "skills": [
           "Viem nájsť prvú stranu rezu.",
           "Kontrolujem, v ktorej stene pracujem.",
           "Viem skontrolovať hotový rez."

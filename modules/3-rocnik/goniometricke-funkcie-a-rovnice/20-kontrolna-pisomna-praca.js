@@ -64,12 +64,12 @@ MathPlatform.registerModule({
         "skill": "goniometria",
         "question": "Čo je najlepší postup, keď si nie si istý/istá vlastnosťou goniometrickej funkcie?",
         "options": [
-          "vrátiť sa k jednotkovej kružnici alebo grafu",
-          "tipnúť si",
           "zmeniť zadanie",
+          "tipnúť si",
+          "vrátiť sa k jednotkovej kružnici alebo grafu",
           "preskočiť definíciu"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Obrázok a definícia sú opora pre zdôvodnenie.",
         "hint": "Hľadaj matematický dôvod."
       },

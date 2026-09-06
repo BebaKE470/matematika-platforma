@@ -66,12 +66,12 @@ MathPlatform.registerModule({
         "stimulus": "D(f)=⟨−3;4⟩",
         "question": "Čo tento zápis hovorí?",
         "options": [
-          "funkčné hodnoty sú od −3 do 4",
           "dovolené vstupy x sú od −3 do 4 vrátane",
+          "funkčné hodnoty sú od −3 do 4",
           "graf pretína osi v −3 a 4",
           "funkcia má iba dve hodnoty"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Definičný obor opisuje možné x-ové vstupy.",
         "hint": "D ako definičný = vstupy."
       },
@@ -89,12 +89,12 @@ MathPlatform.registerModule({
         "skill": "definičný obor",
         "question": "Ktorý údaj určuje, či číslo 4 patrí do D(f)?",
         "options": [
-          "či na grafe existuje bod s x=4",
           "či na grafe existuje bod s y=4",
+          "či na grafe existuje bod s x=4",
           "či f(0)=4",
           "či graf prechádza začiatkom"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "D(f) sleduje x-ové súradnice bodov grafu.",
         "hint": "Definičný obor = možné vstupy."
       },
@@ -115,7 +115,7 @@ MathPlatform.registerModule({
         "model": "Definičný obor je množina všetkých vstupov x, pre ktoré je funkcia určená. Obor hodnôt je množina všetkých výsledkov f(x), ktoré funkcia nadobúda."
       },
 
-      {"id":"domain-language","type":"choice","phase":"ROZLÍŠ","skill":"D a H","question":"Ktorá otázka sa pýta na definičný obor D(f)?","options":["Aké hodnoty môže nadobudnúť y?","Pre ktoré vstupy x je funkcia určená?","Kde má funkcia maximum?","Koľkokrát graf pretína os x?"],"answer":1,"correct":"Definičný obor opisuje dovolené vstupy x.","hint":"D(f) = vstupy."},
+      {"id":"domain-language","type":"choice","phase":"ROZLÍŠ","skill":"D a H","question":"Ktorá otázka sa pýta na definičný obor D(f)?","options":["Aké hodnoty môže nadobudnúť y?","Kde má funkcia maximum?","Pre ktoré vstupy x je funkcia určená?","Koľkokrát graf pretína os x?"],"answer":2,"correct":"Definičný obor opisuje dovolené vstupy x.","hint":"D(f) = vstupy."},
       {"id":"range-language","type":"choice","phase":"ROZLÍŠ","skill":"D a H","question":"Ktorá veta správne opisuje H(f)?","options":["Množina všetkých dovolených vstupov.","Množina všetkých hodnôt, ktoré funkcia skutočne nadobudne.","Množina nulových bodov.","Množina bodov na osi x."],"answer":1,"correct":"H(f) je obor hodnôt – všetky dosiahnuté výstupy y.","hint":"H(f) = výstupy."},
       {"id":"dh-error","type":"selfWrite","phase":"NÁJDI CHYBU","title":"Nezamieňaj osi","promptHtml":"Spolužiak tvrdí: <strong>„D(f) čítam zvislo a H(f) vodorovne.“</strong> Oprav ho a vysvetli prečo.","model":"D(f) čítame vodorovne podľa osi x, lebo opisuje vstupy. H(f) čítame zvislo podľa osi y, lebo opisuje funkčné hodnoty."},
       {

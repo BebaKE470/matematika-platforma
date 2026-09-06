@@ -78,10 +78,10 @@ MathPlatform.registerModule({
         "question": "Akú hodnotu má |−7|?",
         "options": [
           "−7",
-          "0",
-          "7"
+          "7",
+          "0"
         ],
-        "answer": 2,
+        "answer": 1,
         "correct": "Správne. Číslo −7 je od nuly vzdialené 7 jednotiek.",
         "hint": "Absolútna hodnota vyjadruje vzdialenosť, nie polohu vľavo alebo vpravo."
       },
@@ -92,11 +92,11 @@ MathPlatform.registerModule({
         "skill": "porozumenie",
         "question": "Ktoré tvrdenie je správne?",
         "options": [
-          "|−3,5| = 3,5",
+          "|−3,5| = 0",
           "|−3,5| = −3,5",
-          "|−3,5| = 0"
+          "|−3,5| = 3,5"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Áno. Vzdialenosť −3,5 od nuly je 3,5.",
         "hint": "Vzdialenosť nemôže byť záporná."
       },
@@ -131,10 +131,10 @@ MathPlatform.registerModule({
         "question": "Žiak tvrdí: „Pre každé reálne číslo x platí |x| = x.“ Ktorý príklad jeho tvrdenie vyvráti?",
         "options": [
           "x = 3",
-          "x = 0",
-          "x = −3"
+          "x = −3",
+          "x = 0"
         ],
-        "answer": 2,
+        "answer": 1,
         "correct": "Správne. Pre x = −3 dostaneme |−3| = 3, nie −3.",
         "hint": "Hľadaj číslo, pri ktorom sa absolútna hodnota líši od pôvodného čísla."
       },

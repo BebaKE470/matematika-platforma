@@ -77,20 +77,20 @@ MathPlatform.registerModule({
       {
         id:"neg-13", type:"choice", phase:"1 · NÁJDI NEGÁCIU", skill:"Presná negácia",
         prompt:"A: Číslo 13 je prvočíslo.", question:"Ktorá veta je presnou negáciou ¬A?",
-        options:["Číslo 13 nie je prvočíslo.","Číslo 13 je zložené číslo.","Číslo 13 je nepárne.","Číslo 13 je väčšie ako 10."],
-        answer:0, correct:"Správne. ¬A: Číslo 13 nie je prvočíslo.", hint:"Popri presne pôvodné tvrdenie."
+        options:["Číslo 13 je nepárne.","Číslo 13 je zložené číslo.","Číslo 13 nie je prvočíslo.","Číslo 13 je väčšie ako 10."],
+        answer:2, correct:"Správne. ¬A: Číslo 13 nie je prvočíslo.", hint:"Popri presne pôvodné tvrdenie."
       },
       {
         id:"pn-13", type:"choice", phase:"2 · P/N DVOJICA", skill:"Pravdivostná hodnota",
         question:"A: Číslo 13 je prvočíslo.  ¬A: Číslo 13 nie je prvočíslo.  Ktorá dvojica pravdivostných hodnôt je správna?",
-        options:["A: P, ¬A: N","A: N, ¬A: P","A: P, ¬A: P","A: N, ¬A: N"],
-        answer:0, correct:"Áno. A je P, preto ¬A je N.", hint:"A a ¬A majú opačné pravdivostné hodnoty."
+        options:["A: N, ¬A: N","A: N, ¬A: P","A: P, ¬A: P","A: P, ¬A: N"],
+        answer:3, correct:"Áno. A je P, preto ¬A je N.", hint:"A a ¬A majú opačné pravdivostné hodnoty."
       },
       {
         id:"neg-year", type:"choice", phase:"1 · NÁJDI NEGÁCIU", skill:"Presná negácia",
         prompt:"A: Rok má 360 dní.", question:"Ktorá veta je presnou negáciou ¬A?",
-        options:["Rok má 365 dní.","Rok nemá 360 dní.","Rok má viac ako 360 dní.","Rok nemá 365 dní."],
-        answer:1, correct:"Správne. „Rok nemá 360 dní.“ presne popiera A. „Rok má 365 dní.“ je iné tvrdenie.", hint:"Použi: „Nie je pravda, že rok má 360 dní.“"
+        options:["Rok nemá 360 dní.","Rok má 365 dní.","Rok má viac ako 360 dní.","Rok nemá 365 dní."],
+        answer:0, correct:"Správne. „Rok nemá 360 dní.“ presne popiera A. „Rok má 365 dní.“ je iné tvrdenie.", hint:"Použi: „Nie je pravda, že rok má 360 dní.“"
       },
       {
         id:"pn-year", type:"choice", phase:"2 · P/N DVOJICA", skill:"Pravdivostná hodnota",
@@ -101,32 +101,32 @@ MathPlatform.registerModule({
       {
         id:"neg-real", type:"choice", phase:"1 · NÁJDI NEGÁCIU", skill:"Presná negácia",
         prompt:"A: Množina reálnych čísel je nekonečná.", question:"Ktorá veta je presnou negáciou ¬A?",
-        options:["Množina reálnych čísel nie je nekonečná.","Množina reálnych čísel je veľká.","Množina prirodzených čísel je nekonečná.","Reálne čísla obsahujú záporné čísla."],
-        answer:0, correct:"Áno. Táto veta priamo popiera pôvodné tvrdenie.", hint:"Negácia nemení predmet tvrdenia."
+        options:["Množina prirodzených čísel je nekonečná.","Množina reálnych čísel je veľká.","Množina reálnych čísel nie je nekonečná.","Reálne čísla obsahujú záporné čísla."],
+        answer:2, correct:"Áno. Táto veta priamo popiera pôvodné tvrdenie.", hint:"Negácia nemení predmet tvrdenia."
       },
       {
         id:"pn-real", type:"choice", phase:"2 · P/N DVOJICA", skill:"Pravdivostná hodnota",
         question:"A: Množina reálnych čísel je nekonečná.  ¬A: Množina reálnych čísel nie je nekonečná.  Ktorá dvojica P/N je správna?",
-        options:["A: P, ¬A: N","A: N, ¬A: P","A: P, ¬A: P","A: N, ¬A: N"],
-        answer:0, correct:"Správne. A je P a ¬A je N.", hint:"A a ¬A nemôžu mať rovnakú hodnotu."
+        options:["A: N, ¬A: N","A: N, ¬A: P","A: P, ¬A: P","A: P, ¬A: N"],
+        answer:3, correct:"Správne. A je P a ¬A je N.", hint:"A a ¬A nemôžu mať rovnakú hodnotu."
       },
       {
         id:"neg-equation", type:"choice", phase:"1 · NÁJDI NEGÁCIU", skill:"Presná negácia",
         prompt:"A: Rovnica x − 6 = 8 má v ℝ práve jedno riešenie.", question:"Ktorá veta je bezpečnou presnou negáciou ¬A?",
-        options:["Rovnica x − 6 = 8 nemá riešenie.","Rovnica x − 6 = 8 má dve riešenia.","Nie je pravda, že rovnica x − 6 = 8 má v ℝ práve jedno riešenie.","Rovnica x − 6 = 8 má riešenie x = 14."],
-        answer:2, correct:"Presne. Bezpečný tvar „Nie je pravda, že A“ pokrýva všetky prípady, keď A neplatí.", hint:"Nevyberaj svojvoľne iba jednu možnosť, prečo by A neplatilo."
+        options:["Nie je pravda, že rovnica x − 6 = 8 má v ℝ práve jedno riešenie.","Rovnica x − 6 = 8 má dve riešenia.","Rovnica x − 6 = 8 nemá riešenie.","Rovnica x − 6 = 8 má riešenie x = 14."],
+        answer:0, correct:"Presne. Bezpečný tvar „Nie je pravda, že A“ pokrýva všetky prípady, keď A neplatí.", hint:"Nevyberaj svojvoľne iba jednu možnosť, prečo by A neplatilo."
       },
       {
         id:"pn-equation", type:"choice", phase:"2 · P/N DVOJICA", skill:"Pravdivostná hodnota",
         question:"A: Rovnica x − 6 = 8 má v ℝ práve jedno riešenie.  ¬A: Nie je pravda, že rovnica x − 6 = 8 má v ℝ práve jedno riešenie.  Ktorá dvojica P/N je správna?",
-        options:["A: P, ¬A: N","A: N, ¬A: P","A: P, ¬A: P","A: N, ¬A: N"],
-        answer:0, correct:"Áno. Rovnica má jediné riešenie x = 14, teda A je P a ¬A je N.", hint:"Vyrieš krátko rovnicu."
+        options:["A: N, ¬A: P","A: P, ¬A: N","A: P, ¬A: P","A: N, ¬A: N"],
+        answer:1, correct:"Áno. Rovnica má jediné riešenie x = 14, teda A je P a ¬A je N.", hint:"Vyrieš krátko rovnicu."
       },
       {
         id:"error-year", type:"choice", phase:"3 · OPRAV CHYBU", skill:"Analýza chyby",
         question:"A: Rok má 360 dní.  Návrh ¬A: Rok má 365 dní.  Čo je na návrhu problém?",
-        options:["Nič, je to presná negácia.","Je to iné konkrétne tvrdenie; nepopiera presne vetu „Rok má 360 dní“.","Negácia nesmie obsahovať číslo.","Negovať možno iba pravdivé výroky."],
-        answer:1, correct:"Správne. Presná negácia: „Rok nemá 360 dní.“", hint:"Použi bezpečný tvar „Nie je pravda, že...“"
+        options:["Nič, je to presná negácia.","Negácia nesmie obsahovať číslo.","Je to iné konkrétne tvrdenie; nepopiera presne vetu „Rok má 360 dní“.","Negovať možno iba pravdivé výroky."],
+        answer:2, correct:"Správne. Presná negácia: „Rok nemá 360 dní.“", hint:"Použi bezpečný tvar „Nie je pravda, že...“"
       },
       {
         id:"error-prime", type:"choice", phase:"3 · OPRAV CHYBU", skill:"Analýza chyby",
@@ -143,12 +143,12 @@ MathPlatform.registerModule({
         id:"final-check", type:"choice", phase:"RÝCHLA KONTROLA", skill:"Negácia a pravdivosť",
         question:"A: Množina reálnych čísel je nekonečná. Ktorá možnosť obsahuje správnu negáciu aj pravdivostné hodnoty?",
         options:[
-          "¬A: Množina reálnych čísel nie je nekonečná; A: P, ¬A: N",
+          "¬A: Množina reálnych čísel nie je nekonečná; A: P, ¬A: P",
           "¬A: Množina reálnych čísel je konečná; A: N, ¬A: P",
           "¬A: Množina prirodzených čísel je konečná; A: P, ¬A: N",
-          "¬A: Množina reálnych čísel nie je nekonečná; A: P, ¬A: P"
+          "¬A: Množina reálnych čísel nie je nekonečná; A: P, ¬A: N"
         ],
-        answer:0, correct:"Správne. Presná negácia popiera A a má opačnú pravdivostnú hodnotu.", hint:"Kontroluj význam aj P/N."
+        answer:3, correct:"Správne. Presná negácia popiera A a má opačnú pravdivostnú hodnotu.", hint:"Kontroluj význam aj P/N."
       },
       {
         id:"reflection", type:"reflection", phase:"ZÁVER PLATFORMY", title:"Ako sa ti darilo?",

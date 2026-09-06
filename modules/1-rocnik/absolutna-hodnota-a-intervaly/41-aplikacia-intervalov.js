@@ -70,11 +70,11 @@ MathPlatform.registerModule({
         "skill": "modelovanie",
         "question": "Meraná dĺžka je prípustná od 49,8 mm do 50,2 mm vrátane. Ktorý interval to vyjadruje?",
         "options": [
-          "(49,8; 50,2)",
           "⟨49,8; 50,2⟩",
+          "(49,8; 50,2)",
           "⟨49,8; 50,2)"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Správne. Obe hraničné hodnoty sú dovolené.",
         "hint": "Slovo „vrátane“ rozhoduje o krajných bodoch."
       },
@@ -108,11 +108,11 @@ MathPlatform.registerModule({
         "skill": "modelovanie",
         "question": "Hodnota x musí spĺňať x ∈ ⟨−2; 6⟩ a zároveň x ∈ (1; 9). Ktorý interval spĺňa obe podmienky?",
         "options": [
-          "(1; 6⟩",
           "⟨−2; 9)",
+          "(1; 6⟩",
           "⟨1; 6⟩"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Správne. Ide o prienik: 1 nepatrí, 6 patrí.",
         "hint": "Slovo „zároveň“ znamená, že hodnota musí patriť do oboch intervalov."
       },
@@ -124,10 +124,10 @@ MathPlatform.registerModule({
         "question": "Predpis povoľuje teplotu v intervale ⟨15; 25⟩ °C. Namerali 25,1 °C. Ktoré hodnotenie je správne?",
         "options": [
           "Vyhovuje, lebo je približne 25 °C.",
-          "Nevyhovuje, lebo 25,1 > 25.",
-          "Vyhovuje, lebo pravý koniec je uzavretý."
+          "Vyhovuje, lebo pravý koniec je uzavretý.",
+          "Nevyhovuje, lebo 25,1 > 25."
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Správne. Uzavretý koniec zahŕňa 25, nie hodnoty väčšie ako 25.",
         "hint": "Porovnaj nameranú hodnotu s presnou hornou hranicou."
       },

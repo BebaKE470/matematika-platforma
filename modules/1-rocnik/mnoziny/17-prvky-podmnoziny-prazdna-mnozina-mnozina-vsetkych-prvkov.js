@@ -102,11 +102,11 @@ MathPlatform.registerModule({
         "skill": "Prázdna množina",
         "question": "Koľko prvkov má prázdna množina ∅?",
         "options": [
-          "0",
           "1",
+          "0",
           "Nedá sa určiť"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Áno. Symbol ∅ označuje množinu bez prvkov.",
         "hint": "Symbol ∅ nie je prvok vložený do množiny."
       },
@@ -135,11 +135,11 @@ MathPlatform.registerModule({
         "skill": "Podmnožina",
         "question": "Nech A={1,2} a B={1,2,3}. Ktorý zápis je správny?",
         "options": [
-          "A ⊆ B",
+          "B ⊆ A",
           "3 ∈ A",
-          "B ⊆ A"
+          "A ⊆ B"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Každý prvok A patrí aj do B, preto A je podmnožinou B.",
         "hint": "Pri ⊆ porovnávame dve množiny, nie prvok a množinu."
       },

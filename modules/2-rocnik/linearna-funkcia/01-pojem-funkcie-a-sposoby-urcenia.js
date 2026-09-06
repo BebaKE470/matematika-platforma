@@ -135,11 +135,11 @@ MathPlatform.registerModule({
         "question": "Ktorý riadok tabuľky je správny?",
         "options": [
           "x=2 → f(x)=3",
-          "x=2 → f(x)=4",
           "x=2 → f(x)=5",
+          "x=2 → f(x)=4",
           "x=2 → f(x)=6"
         ],
-        "answer": 2,
+        "answer": 1,
         "correct": "Dosadením x=2 dostaneme f(2)=2·2+1=5.",
         "hint": "Dosadíš 2 namiesto x."
       },
@@ -153,7 +153,7 @@ MathPlatform.registerModule({
       },
 
       {"id":"same-output","type":"choice","phase":"PREMYSLI","skill":"jednoznačnosť","prompt":"Dvaja rôzni žiaci môžu mať rovnaký dátum narodenia.","question":"Porušuje to podmienku, aby priradenie žiak → dátum narodenia bolo funkciou?","options":["Áno, výstupy musia byť všetky rôzne.","Nie, dôležité je, aby každý jeden žiak mal práve jeden dátum.","Áno, funkcia nesmie mať rovnaké hodnoty.","Nedá sa rozhodnúť."],"answer":1,"correct":"Nie. Funkcia povoľuje rovnaký výstup pre rôzne vstupy. Zakázané sú dva rôzne výstupy pre ten istý vstup.","hint":"Sleduj jeden konkrétny vstup."},
-      {"id":"table-to-rule","type":"choice","phase":"PREPOJ","skill":"reprezentácie","stimulus":"x: 0, 1, 2, 3  |  f(x): 2, 5, 8, 11","question":"Ktorý slovný opis zodpovedá tabuľke?","options":["Vynásob 2 a pripočítaj 3.","Vynásob 3 a pripočítaj 2.","Pripočítaj 3.","Umocni na druhú a pripočítaj 2."],"answer":1,"correct":"Hodnoty rastú vždy o 3 a pri x=0 je výstup 2: pravidlo je 3x+2.","hint":"Skontroluj najprv x=0 a x=1."},
+      {"id":"table-to-rule","type":"choice","phase":"PREPOJ","skill":"reprezentácie","stimulus":"x: 0, 1, 2, 3  |  f(x): 2, 5, 8, 11","question":"Ktorý slovný opis zodpovedá tabuľke?","options":["Vynásob 2 a pripočítaj 3.","Pripočítaj 3.","Vynásob 3 a pripočítaj 2.","Umocni na druhú a pripočítaj 2."],"answer":2,"correct":"Hodnoty rastú vždy o 3 a pri x=0 je výstup 2: pravidlo je 3x+2.","hint":"Skontroluj najprv x=0 a x=1."},
       {"id":"explain-function","type":"selfWrite","phase":"VYSVETLI","title":"Definícia vlastnými slovami","promptHtml":"Spolužiak tvrdí: <strong>„Funkcia je priradenie, v ktorom sa žiadne dva výstupy nesmú opakovať.“</strong> Oprav jeho vetu.","model":"Funkcia je priradenie, v ktorom má každý dovolený vstup práve jeden výstup. Rôzne vstupy môžu mať rovnaký výstup."},
       {
         "id": "clean",

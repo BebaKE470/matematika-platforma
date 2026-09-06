@@ -70,11 +70,11 @@ MathPlatform.registerModule({
         "skill": "porozumenie",
         "question": "Ktorý prepis využíva distributívnosť?",
         "options": [
-          "3(10+2)=30+6",
+          "(2+4)+6=2+(4+6)",
           "3+5=5+3",
-          "(2+4)+6=2+(4+6)"
+          "3(10+2)=30+6"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "a(b+c)=ab+ac je distributívny zákon.",
         "hint": "Najprv si pomenuj, čo je dané a čo hľadáš."
       },
@@ -117,11 +117,11 @@ MathPlatform.registerModule({
         "skill": "kritické myslenie",
         "question": "Ktorý postup je pri tejto téme najspoľahlivejší?",
         "options": [
-          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Zapamätať si iba posledný výsledok.",
+          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Preskočiť zápis a tipnúť odpoveď."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Áno. Postup musí byť kontrolovateľný a výsledok interpretovaný.",
         "hint": "Matematika nie je tipovanie."
       },

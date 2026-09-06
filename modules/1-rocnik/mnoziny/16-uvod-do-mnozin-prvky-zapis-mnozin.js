@@ -89,11 +89,11 @@ MathPlatform.registerModule({
         "skill": "symboly ∈ a ∉",
         "question": "Máme A = {2, 4, 6}. Ako správne prečítaš zápis 4 ∈ A?",
         "options": [
-          "4 patrí do množiny A.",
+          "4 je názov množiny A.",
           "4 nepatrí do množiny A.",
-          "4 je názov množiny A."
+          "4 patrí do množiny A."
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne. Symbol ∈ čítame „patrí do množiny“.",
         "hint": "Pozri sa na kartu s dvoma novými symbolmi."
       },
@@ -104,11 +104,11 @@ MathPlatform.registerModule({
         "skill": "príslušnosť prvku",
         "question": "Máme A = {2, 4, 6}. Ktorý zápis je pravdivý?",
         "options": [
-          "3 ∈ A",
           "4 ∈ A",
+          "3 ∈ A",
           "6 ∉ A"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Áno. Číslo 4 je medzi vypísanými prvkami množiny A, preto 4 ∈ A.",
         "hint": "Najprv nájdi číslo medzi prvkami v zložených zátvorkách a až potom vyber symbol."
       },
@@ -145,11 +145,11 @@ MathPlatform.registerModule({
         "skill": "Prvok množiny",
         "question": "Nech A = {2, 4, 6}. Ktorý zápis je pravdivý?",
         "options": [
-          "4 ∈ A",
           "5 ∈ A",
+          "4 ∈ A",
           "6 ∉ A"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Číslo 4 je medzi prvkami množiny A.",
         "hint": "Pozri sa priamo na vypísané prvky."
       },
@@ -161,10 +161,10 @@ MathPlatform.registerModule({
         "question": "Zápis 7 ∉ B čítame:",
         "options": [
           "7 patrí do B",
-          "7 nepatrí do B",
-          "B patrí do 7"
+          "B patrí do 7",
+          "7 nepatrí do B"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Symbol ∉ znamená „nepatrí do množiny“.",
         "hint": "Rozlišuj ∈ a ∉."
       },

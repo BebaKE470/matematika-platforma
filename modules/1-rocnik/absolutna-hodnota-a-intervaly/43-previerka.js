@@ -85,11 +85,11 @@ MathPlatform.registerModule({
         "skill": "intervaly",
         "question": "Ktorý interval vyjadruje −2 < x ≤ 5?",
         "options": [
-          "(−2; 5⟩",
+          "(−2; 5)",
           "⟨−2; 5⟩",
-          "(−2; 5)"
+          "(−2; 5⟩"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne.",
         "hint": "Skontroluj osobitne oba krajné body."
       },
@@ -100,11 +100,11 @@ MathPlatform.registerModule({
         "skill": "intervaly",
         "question": "Ktorá nerovnosť zodpovedá intervalu ⟨3; 8)?",
         "options": [
-          "3 < x < 8",
           "3 ≤ x < 8",
+          "3 < x < 8",
           "3 ≤ x ≤ 8"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Správne.",
         "hint": "Ľavý bod patrí, pravý nepatrí."
       },
@@ -115,11 +115,11 @@ MathPlatform.registerModule({
         "skill": "prienik",
         "question": "A = ⟨−1; 4⟩, B = (2; 7). Urči A ∩ B.",
         "options": [
-          "(2; 4⟩",
           "⟨−1; 7)",
+          "(2; 4⟩",
           "⟨2; 4⟩"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Správne.",
         "hint": "Hľadaj iba spoločnú časť a skontroluj body 2 a 4."
       },
@@ -131,10 +131,10 @@ MathPlatform.registerModule({
         "question": "A = ⟨−1; 4⟩, B = (2; 7). Urči A ∪ B.",
         "options": [
           "(2; 4⟩",
-          "⟨−1; 7)",
-          "⟨−1; 4⟩"
+          "⟨−1; 4⟩",
+          "⟨−1; 7)"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Správne.",
         "hint": "Zjednotenie obsahuje všetko, čo patrí aspoň do jedného intervalu."
       },
@@ -145,11 +145,11 @@ MathPlatform.registerModule({
         "skill": "prienik",
         "question": "A = (−4; 0) a B = ⟨0; 3⟩. Aký je A ∩ B?",
         "options": [
-          "{0}",
           "∅",
+          "{0}",
           "(−4; 3⟩"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Správne. Nula do A nepatrí.",
         "hint": "Bod 0 by musel patriť do oboch intervalov."
       },
@@ -175,11 +175,11 @@ MathPlatform.registerModule({
         "skill": "reprezentácie",
         "question": "Ktorý interval opisuje |x| ≤ 2?",
         "options": [
-          "⟨−2; 2⟩",
+          "⟨0; 2⟩",
           "(−2; 2)",
-          "⟨0; 2⟩"
+          "⟨−2; 2⟩"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne.",
         "hint": "Ide o všetky body vzdialené od nuly najviac 2."
       },
@@ -190,11 +190,11 @@ MathPlatform.registerModule({
         "skill": "reprezentácie",
         "question": "Ktorý interval opisuje |x − 3| < 1?",
         "options": [
-          "(−1; 1)",
           "(2; 4)",
+          "(−1; 1)",
           "⟨2; 4⟩"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Správne.",
         "hint": "Stredom je 3 a vzdialenosť je menšia ako 1."
       },

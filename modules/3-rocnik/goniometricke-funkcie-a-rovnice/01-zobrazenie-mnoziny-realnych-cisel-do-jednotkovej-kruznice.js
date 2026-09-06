@@ -73,12 +73,12 @@ MathPlatform.registerModule({
         "skill": "jednotková kružnica",
         "question": "Kam sa z bodu [1;0] pohybujeme pri kladnom čísle?",
         "options": [
-          "proti smeru hodinových ručičiek",
+          "smer nie je určený",
           "v smere hodinových ručičiek",
           "po priemere",
-          "smer nie je určený"
+          "proti smeru hodinových ručičiek"
         ],
-        "answer": 0,
+        "answer": 3,
         "correct": "Kladný smer je proti smeru hodinových ručičiek.",
         "hint": "Pozri na dohodnutú orientáciu."
       },

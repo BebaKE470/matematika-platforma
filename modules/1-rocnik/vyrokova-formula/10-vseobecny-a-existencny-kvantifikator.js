@@ -89,10 +89,10 @@ MathPlatform.registerModule({
         "question": "Ktorý zápis znamená „Existuje celé číslo, ktorého druhá mocnina je 9“?",
         "options": [
           "∀ x (x je celé číslo): x² = 9",
-          "∃ x (x je celé číslo): x² = 9",
-          "∃ x (x je celé číslo): x² ≠ 9"
+          "∃ x (x je celé číslo): x² ≠ 9",
+          "∃ x (x je celé číslo): x² = 9"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Áno. Stačí napríklad x=3 alebo x=-3.",
         "hint": "Hľadaj „existuje aspoň jeden“."
       },
@@ -111,11 +111,11 @@ MathPlatform.registerModule({
         "skill": "Zamlčaný kvantifikátor",
         "question": "Veta „Súčet dvoch párnych celých čísel je párny“ sa v matematike zvyčajne chápe ako:",
         "options": [
-          "tvrdenie o jednej konkrétnej dvojici",
           "všeobecné tvrdenie o každej dvojici párnych celých čísel",
+          "tvrdenie o jednej konkrétnej dvojici",
           "existenčné tvrdenie o aspoň jednej dvojici"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Správne. Všeobecný kvantifikátor môže byť v slovnej formulácii zamlčaný.",
         "hint": "Pýta sa veta na jednu dvojicu, alebo tvrdí pravidlo všeobecne?"
       },

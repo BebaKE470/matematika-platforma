@@ -72,10 +72,10 @@ MathPlatform.registerModule({
         "question": "Objem ihlana je",
         "options": [
           "Sp·v",
-          "(1/3)Sp·v",
-          "2Sp+Q"
+          "2Sp+Q",
+          "(1/3)Sp·v"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "V=(1/3)Sp·v.",
         "hint": "Najprv si pomenuj, čo je dané a čo hľadáš."
       },
@@ -118,12 +118,12 @@ MathPlatform.registerModule({
         "skill": "objem ihlana",
         "question": "Originálna maturitná úloha 2024, úloha 9: Podstavou ihlana je obdĺžnik 4 cm × 3 cm a všetky štyri bočné hrany majú 5 cm. Aký je objem ihlana?",
         "options": [
-          "10√3 cm³",
-          "20√3 cm³",
           "30 cm³",
+          "20√3 cm³",
+          "10√3 cm³",
           "60 cm³"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Vrchol leží nad stredom obdĺžnika. Vzdialenosť stredu podstavy od vrcholu obdĺžnika je 2,5 cm, takže výška ihlana je √(5²−2,5²)=5√3/2. V=(1/3)·12·5√3/2=10√3 cm³.",
         "hint": "Najprv nájdi výšku ihlana pomocou pravouhlého trojuholníka."
       },
@@ -134,11 +134,11 @@ MathPlatform.registerModule({
         "skill": "kritické myslenie",
         "question": "Ktorý postup je pri tejto téme najspoľahlivejší?",
         "options": [
-          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Zapamätať si iba posledný výsledok.",
+          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Preskočiť zápis a tipnúť odpoveď."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Áno. Postup musí byť kontrolovateľný a výsledok interpretovaný.",
         "hint": "Matematika nie je tipovanie."
       },

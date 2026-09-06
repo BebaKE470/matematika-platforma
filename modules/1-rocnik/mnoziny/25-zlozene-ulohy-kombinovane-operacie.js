@@ -63,11 +63,11 @@ MathPlatform.registerModule({
         "skill": "kombinované operácie",
         "question": "A={1,2,3,4}, B={3,4,5}, C={4,5,6}. Čo je (A∩B)∩C?",
         "options": [
-          "{3,4,5}",
           "{4}",
+          "{3,4,5}",
           "{5}"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Najprv A∩B={3,4}, potom s C zostáva {4}.",
         "hint": "Nakresli si malý diagram alebo vypíš prvky."
       },

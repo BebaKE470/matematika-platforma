@@ -120,11 +120,11 @@ MathPlatform.registerModule({
         "skill": "Doplnok",
         "question": "Ak U={1,2,3,4,5} a A={2,4}, doplnok A v U je:",
         "options": [
-          "{1,3,5}",
           "{2,4}",
+          "{1,3,5}",
           "{1,2,3,4,5}"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Doplnok tvorí všetko z U, čo nie je v A.",
         "hint": "Začni univerzálnou množinou U."
       },
@@ -135,11 +135,11 @@ MathPlatform.registerModule({
         "skill": "Rozdiel množín",
         "question": "Ak A={1,2,3} a B={3,4}, potom A − B je:",
         "options": [
-          "{1,2}",
+          "{3}",
           "{4}",
-          "{3}"
+          "{1,2}"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Rozdiel A − B obsahuje prvky A, ktoré nepatria do B.",
         "hint": "Smer rozdielu je dôležitý: začínaš množinou A."
       },

@@ -70,11 +70,11 @@ MathPlatform.registerModule({
         "skill": "porozumenie",
         "question": "Množstvo materiálu na potiahnutie lopty súvisí s",
         "options": [
-          "povrchom",
+          "priemerom bez ďalšieho výpočtu",
           "objemom",
-          "priemerom bez ďalšieho výpočtu"
+          "povrchom"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Poťah pokrýva povrch.",
         "hint": "Najprv si pomenuj, čo je dané a čo hľadáš."
       },
@@ -117,11 +117,11 @@ MathPlatform.registerModule({
         "skill": "kritické myslenie",
         "question": "Ktorý postup je pri tejto téme najspoľahlivejší?",
         "options": [
-          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Zapamätať si iba posledný výsledok.",
+          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Preskočiť zápis a tipnúť odpoveď."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Áno. Postup musí byť kontrolovateľný a výsledok interpretovaný.",
         "hint": "Matematika nie je tipovanie."
       },

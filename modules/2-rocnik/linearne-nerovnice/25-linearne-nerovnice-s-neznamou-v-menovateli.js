@@ -68,10 +68,10 @@ MathPlatform.registerModule({
         "question": "Pri nerovnici 3/(x−2) > 0, ktorá hodnota musí byť vylúčená ešte pred riešením?",
         "options": [
           "x = 0",
-          "x = 2",
-          "x = 3"
+          "x = 3",
+          "x = 2"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Správne. Menovateľ x−2 nesmie byť nula.",
         "hint": "Polož menovateľ rovný nule."
       },

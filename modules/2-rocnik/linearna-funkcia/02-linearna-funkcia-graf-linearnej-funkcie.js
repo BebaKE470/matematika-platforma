@@ -82,12 +82,12 @@ MathPlatform.registerModule({
         "stimulus": "f(x) = −2x + 3",
         "question": "Aké sú koeficienty a a b?",
         "options": [
-          "a=−2, b=3",
+          "a=−2, b=0",
           "a=2, b=3",
           "a=3, b=−2",
-          "a=−2, b=0"
+          "a=−2, b=3"
         ],
-        "answer": 0,
+        "answer": 3,
         "correct": "Číslo pri x je a=−2 a samostatný člen je b=3.",
         "hint": "Porovnaj s tvarom ax+b."
       },
@@ -106,12 +106,12 @@ MathPlatform.registerModule({
         "prompt": "Funkcia je f(x)=x−1.",
         "question": "Ktorý bod patrí na jej graf?",
         "options": [
-          "[2; 3]",
           "[2; 1]",
+          "[2; 3]",
           "[1; 2]",
           "[0; 1]"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "f(2)=2−1=1, preto [2;1] patrí na graf.",
         "hint": "Dosadíš x-ovú súradnicu do predpisu a porovnáš y."
       },
@@ -132,7 +132,7 @@ MathPlatform.registerModule({
         "model": "Na osi y je x=0. Po dosadení dostaneme f(0)=a·0+b=b, preto graf obsahuje bod [0;b]."
       },
 
-      {"id":"build-table","type":"choice","phase":"VYPOČÍTAJ","skill":"graf","stimulus":"g(x)=−x+2","question":"Ktorá trojica bodov patrí na graf?","options":["[0;2], [1;1], [2;0]","[0;−1], [1;0], [2;1]","[0;2], [1;2], [2;2]","[0;0], [1;1], [2;2]"],"answer":0,"correct":"g(0)=2, g(1)=1 a g(2)=0.","hint":"Dosadzuj postupne 0, 1 a 2."},
+      {"id":"build-table","type":"choice","phase":"VYPOČÍTAJ","skill":"graf","stimulus":"g(x)=−x+2","question":"Ktorá trojica bodov patrí na graf?","options":["[0;−1], [1;0], [2;1]","[0;2], [1;1], [2;0]","[0;2], [1;2], [2;2]","[0;0], [1;1], [2;2]"],"answer":1,"correct":"g(0)=2, g(1)=1 a g(2)=0.","hint":"Dosadzuj postupne 0, 1 a 2."},
       {"id":"point-test","type":"sortChoice","phase":"OVER GRAF","skill":"graf","title":"Patrí bod na graf f(x)=2x−1?","items":[{"text":"[0;−1]","answer":true,"why":"f(0)=−1."},{"text":"[2;3]","answer":true,"why":"f(2)=4−1=3."},{"text":"[1;2]","answer":false,"why":"f(1)=1, nie 2."},{"text":"[−1;−3]","answer":true,"why":"f(−1)=−2−1=−3."}],"labels":["PATRÍ","NEPATRÍ"]},
       {"id":"why-line","type":"selfWrite","phase":"ARGUMENTUJ","title":"Ako overíš bod?","promptHtml":"Napíš presný postup, ako bez obrázka overíš, či bod <strong>[x₀;y₀]</strong> patrí na graf funkcie zadanej predpisom.","model":"Do predpisu dosadím x₀. Ak vypočítaná funkčná hodnota je y₀, bod na graf patrí; ak nie, nepatrí."},
       {

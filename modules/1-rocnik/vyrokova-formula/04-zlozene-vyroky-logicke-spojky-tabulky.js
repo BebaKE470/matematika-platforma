@@ -87,12 +87,12 @@ MathPlatform.registerModule({
         skill: "Konjunkcia",
         question: "Ako sa nazýva spojka ∧ a ako ju čítame v zápise A ∧ B?",
         options: [
-          "implikácia – „ak A, tak B“",
           "konjunkcia – „A a B“",
+          "implikácia – „ak A, tak B“",
           "ekvivalencia – „A práve vtedy, keď B“",
           "disjunkcia – „A alebo B“"
         ],
-        answer: 1,
+        answer: 0,
         correct: "Správne. ∧ je konjunkcia a A ∧ B čítame „A a B“.",
         hint: "Spomeň si na spojku „a“."
       },
@@ -103,12 +103,12 @@ MathPlatform.registerModule({
         skill: "Disjunkcia",
         question: "Ako sa nazýva spojka ∨ a ako ju čítame v zápise A ∨ B?",
         options: [
-          "disjunkcia – „A alebo B“",
           "ekvivalencia – „A práve vtedy, keď B“",
+          "disjunkcia – „A alebo B“",
           "konjunkcia – „A a B“",
           "implikácia – „ak A, tak B“"
         ],
-        answer: 0,
+        answer: 1,
         correct: "Správne. ∨ je disjunkcia a A ∨ B čítame „A alebo B“.",
         hint: "Ide o nevylučovacie „alebo“."
       },
@@ -121,10 +121,10 @@ MathPlatform.registerModule({
         options: [
           "ekvivalencia – „A práve vtedy, keď B“",
           "disjunkcia – „A alebo B“",
-          "konjunkcia – „A a B“",
-          "implikácia – „ak A, tak B“"
+          "implikácia – „ak A, tak B“",
+          "konjunkcia – „A a B“"
         ],
-        answer: 3,
+        answer: 2,
         correct: "Správne. ⇒ je implikácia a A ⇒ B čítame „ak A, tak B“.",
         hint: "Hľadaj podmienku „ak..., tak...“."
       },
@@ -137,10 +137,10 @@ MathPlatform.registerModule({
         options: [
           "konjunkcia – „A a B“",
           "implikácia – „ak A, tak B“",
-          "ekvivalencia – „A práve vtedy, keď B“",
-          "disjunkcia – „A alebo B“"
+          "disjunkcia – „A alebo B“",
+          "ekvivalencia – „A práve vtedy, keď B“"
         ],
-        answer: 2,
+        answer: 3,
         correct: "Správne. ⇔ je ekvivalencia a A ⇔ B čítame „A práve vtedy, keď B“.",
         hint: "Táto spojka vyjadruje obojstrannú podmienku."
       },
@@ -179,10 +179,10 @@ MathPlatform.registerModule({
         skill: "Implikácia",
         question: "A = P, B = N. Akú pravdivostnú hodnotu má A ⇒ B?",
         options: [
-          "P",
-          "N"
+          "N",
+          "P"
         ],
-        answer: 1,
+        answer: 0,
         correct: "Správne. Implikácia je nepravdivá práve v prípade P ⇒ N.",
         hint: "Toto je jediný nepravdivý riadok implikácie."
       },
@@ -260,12 +260,12 @@ MathPlatform.registerModule({
         skill: "Poradie krokov",
         question: "A = P, B = N. Máš určiť hodnotu ¬A ∨ B. Čo musíš vyhodnotiť ako prvé?",
         options: [
-          "A ∨ B",
-          "celý výraz ¬A ∨ B bez medzikroku",
           "¬A",
+          "celý výraz ¬A ∨ B bez medzikroku",
+          "A ∨ B",
           "¬B"
         ],
-        answer: 2,
+        answer: 0,
         correct: "Správne. Najprv ¬A. Keď A = P, potom ¬A = N.",
         hint: "Negácia sa musí vyhodnotiť skôr než hlavná spojka ∨."
       },
@@ -276,10 +276,10 @@ MathPlatform.registerModule({
         skill: "Negácia a disjunkcia",
         question: "A = P, B = N. Najprv ¬A = N. Akú hodnotu má potom ¬A ∨ B, teda N ∨ N?",
         options: [
-          "N",
-          "P"
+          "P",
+          "N"
         ],
-        answer: 0,
+        answer: 1,
         correct: "Správne. N ∨ N = N.",
         hint: "Disjunkcia je pravdivá, ak je pravdivý aspoň jeden z výrokov."
       },
@@ -306,10 +306,10 @@ MathPlatform.registerModule({
         skill: "Negácia a implikácia",
         question: "A = N, B = P. Vieš, že ¬B = N. Akú hodnotu má ¬B ⇒ A, teda N ⇒ N?",
         options: [
-          "N",
-          "P"
+          "P",
+          "N"
         ],
-        answer: 1,
+        answer: 0,
         correct: "Správne. Implikácia je nepravdivá iba v prípade P ⇒ N; N ⇒ N je pravdivá.",
         hint: "Skontroluj jediný nepravdivý prípad implikácie."
       },
@@ -321,11 +321,11 @@ MathPlatform.registerModule({
         question: "A = N, B = N. Máš určiť hodnotu ¬A ∧ ¬B. Ktorý postup je správny?",
         options: [
           "Stačí znegovať iba B.",
-          "Najprv určím ¬A a ¬B, potom vyhodnotím konjunkciu.",
           "Najprv vyhodnotím A ∧ B a výsledok znegujem.",
+          "Najprv určím ¬A a ¬B, potom vyhodnotím konjunkciu.",
           "Stačí znegovať iba A."
         ],
-        answer: 1,
+        answer: 2,
         correct: "Správne. Najprv ¬A = P a ¬B = P, potom P ∧ P = P.",
         hint: "V zadaní sú dve samostatné negácie."
       },
@@ -336,10 +336,10 @@ MathPlatform.registerModule({
         skill: "Negácie a konjunkcia",
         question: "A = N, B = N. Platí ¬A = P a ¬B = P. Akú hodnotu má ¬A ∧ ¬B?",
         options: [
-          "P",
-          "N"
+          "N",
+          "P"
         ],
-        answer: 0,
+        answer: 1,
         correct: "Správne. P ∧ P = P.",
         hint: "Konjunkcia je pravdivá iba vtedy, keď sú pravdivé obe časti."
       },
@@ -350,10 +350,10 @@ MathPlatform.registerModule({
         skill: "Negácia a ekvivalencia",
         question: "A = P, B = N. Najprv ¬B = P. Akú hodnotu má A ⇔ ¬B, teda P ⇔ P?",
         options: [
-          "N",
-          "P"
+          "P",
+          "N"
         ],
-        answer: 1,
+        answer: 0,
         correct: "Správne. Ekvivalencia je pravdivá, keď majú obe časti rovnakú pravdivostnú hodnotu.",
         hint: "Porovnaj P a P."
       },
@@ -364,10 +364,10 @@ MathPlatform.registerModule({
         skill: "Negácia a implikácia",
         question: "A = N, B = P. Najprv ¬A = P. Akú hodnotu má ¬A ⇒ B, teda P ⇒ P?",
         options: [
-          "P",
-          "N"
+          "N",
+          "P"
         ],
-        answer: 0,
+        answer: 1,
         correct: "Správne. P ⇒ P je pravdivá implikácia.",
         hint: "Implikácia je nepravdivá iba pri P ⇒ N."
       },

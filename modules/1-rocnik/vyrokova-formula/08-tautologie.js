@@ -71,11 +71,11 @@ MathPlatform.registerModule({
         "skill": "Tautológia",
         "question": "Aký typ výroku je A ∨ ¬A?",
         "options": [
-          "tautológia",
+          "kontingencia",
           "kontradikcia",
-          "kontingencia"
+          "tautológia"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Áno. Buď A platí, alebo neplatí; pri každej možnosti je disjunkcia pravdivá.",
         "hint": "Skús dva prípady: A=P a A=N."
       },
@@ -86,11 +86,11 @@ MathPlatform.registerModule({
         "skill": "Kontradikcia",
         "question": "Aký typ výroku je A ∧ ¬A?",
         "options": [
-          "tautológia",
           "kontradikcia",
+          "tautológia",
           "kontingencia"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Správne. A a jeho negácia nemôžu byť pravdivé súčasne.",
         "hint": "Môže platiť tvrdenie aj jeho negácia naraz?"
       },
@@ -102,10 +102,10 @@ MathPlatform.registerModule({
         "question": "Výrok A ⇒ B má v tabuľke pravdivé aj nepravdivé riadky. Je teda:",
         "options": [
           "tautológia",
-          "kontradikcia",
-          "kontingencia"
+          "kontingencia",
+          "kontradikcia"
         ],
-        "answer": 2,
+        "answer": 1,
         "correct": "Áno. Jeho pravdivosť závisí od pravdivostných hodnôt A a B.",
         "hint": "Pozri definície troch typov."
       },
@@ -135,10 +135,10 @@ MathPlatform.registerModule({
         "options": [
           "A ∨ ¬A",
           "A ⇒ A",
-          "A ∧ ¬A",
-          "A ⇔ A"
+          "A ⇔ A",
+          "A ∧ ¬A"
         ],
-        "answer": 2,
+        "answer": 3,
         "correct": "Správne: A ∧ ¬A je vždy nepravdivý.",
         "hint": "Hľadaj formu, ktorá vyžaduje súčasne tvrdenie aj jeho negáciu."
       },
@@ -150,10 +150,10 @@ MathPlatform.registerModule({
         "question": "Ktorý výrokový tvar je pravdivý bez ohľadu na pravdivosť A?",
         "options": [
           "A ∧ ¬A",
-          "A ∨ ¬A",
-          "A ⇒ ¬A"
+          "A ⇒ ¬A",
+          "A ∨ ¬A"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "A ∨ ¬A je tautológia. Jedna z dvojice A, ¬A musí byť pravdivá.",
         "hint": "Skús oba prípady: A je P a A je N."
       },
@@ -164,11 +164,11 @@ MathPlatform.registerModule({
         "skill": "Kontradikcia",
         "question": "Výrokový tvar A ∧ ¬A je:",
         "options": [
-          "tautológia",
           "kontradikcia",
+          "tautológia",
           "vždy ekvivalencia"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Nemôžu byť súčasne pravdivé A aj jeho negácia.",
         "hint": "Môže byť výrok a jeho negácia pravdivá naraz?"
       },

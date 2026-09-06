@@ -71,11 +71,11 @@ MathPlatform.registerModule({
         "skill": "Negácia",
         "question": "Negácia x≥5 je:",
         "options": [
-          "x>5",
           "x<5",
+          "x>5",
           "x≤5"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Správne.",
         "hint": "Negácia musí pokryť všetky prípady, keď x≥5 neplatí."
       },
@@ -86,11 +86,11 @@ MathPlatform.registerModule({
         "skill": "Implikácia",
         "question": "A⇒B je nepravdivá v prípade:",
         "options": [
-          "A=P, B=N",
           "A=N, B=P",
+          "A=P, B=N",
           "A=N, B=N"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Správne.",
         "hint": "Jediný nepravdivý riadok implikácie."
       },

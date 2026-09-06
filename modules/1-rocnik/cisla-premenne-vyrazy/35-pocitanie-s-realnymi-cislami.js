@@ -103,10 +103,10 @@ MathPlatform.registerModule({
         "question": "Ktorý výsledok je rozumný odhad pre 19,8·5,1?",
         "options": [
           "približne 10",
-          "približne 100",
-          "približne 1000"
+          "približne 1000",
+          "približne 100"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "20·5≈100.",
         "hint": "Skús náčrt, odhad alebo spätnú kontrolu."
       },

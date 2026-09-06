@@ -59,12 +59,12 @@ MathPlatform.registerModule({
         "skill": "goniometria",
         "question": "Čo je pri novej goniometrickej úprave najdôležitejšie?",
         "options": [
-          "vedieť, z ktorého už známeho vzťahu vychádzam",
+          "pracovať iba podľa obrázka",
           "použiť čo najviac vzorcov",
           "preskočiť podmienky",
-          "pracovať iba podľa obrázka"
+          "vedieť, z ktorého už známeho vzťahu vychádzam"
         ],
-        "answer": 0,
+        "answer": 3,
         "correct": "Nový krok musí nadväzovať na už zavedený vzťah.",
         "hint": "Hľadaj zdôvodnenie."
       },
@@ -122,12 +122,12 @@ MathPlatform.registerModule({
         "skill": "prenos",
         "question": "Pri testovej úlohe je prvý bezpečný krok:",
         "options": [
-          "preložiť zadanie do známych pojmov a vzťahov",
           "vybrať najdlhšiu odpoveď",
+          "preložiť zadanie do známych pojmov a vzťahov",
           "hneď dosadiť do náhodného vzorca",
           "ignorovať interval alebo podmienky"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Najprv rozpoznaj matematickú štruktúru úlohy.",
         "hint": "Formát testu nemení matematiku."
       },

@@ -89,11 +89,11 @@ MathPlatform.registerModule({
         "skill": "Negácia ∃",
         "question": "Neguj vetu „Existuje prirodzené číslo menšie ako 0.“",
         "options": [
-          "Každé prirodzené číslo je aspoň 0.",
+          "Niektoré prirodzené číslo nie je menšie ako 0.",
           "Existuje prirodzené číslo aspoň 0.",
-          "Niektoré prirodzené číslo nie je menšie ako 0."
+          "Každé prirodzené číslo je aspoň 0."
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Áno. Ak neexistuje ani jeden prvok s vlastnosťou, potom všetky prvky túto vlastnosť nemajú.",
         "hint": "Negácia „existuje“ musí vylúčiť všetky možné prípady."
       },
@@ -112,12 +112,12 @@ MathPlatform.registerModule({
         "skill": "Protipríklad",
         "question": "Ktoré číslo je protipríkladom tvrdenia „Každé prvočíslo je nepárne“?",
         "options": [
-          "3",
-          "5",
           "2",
+          "5",
+          "3",
           "7"
         ],
-        "answer": 2,
+        "answer": 0,
         "correct": "Správne. 2 je prvočíslo a zároveň je párne.",
         "hint": "Hľadaj jedinú výnimku."
       },

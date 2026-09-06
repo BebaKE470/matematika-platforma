@@ -69,11 +69,11 @@ MathPlatform.registerModule({
         "skill": "systematizácia",
         "question": "V kocke ABCDEFGH: Ktoré priamky sú rovnobežné?",
         "options": [
-          "AB a EF",
+          "AB a CG",
           "AB a BF",
-          "AB a CG"
+          "AB a EF"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Použi definíciu a priestorovú orientáciu, nie iba vzhľad náčrtu."
       },
       {
@@ -99,11 +99,11 @@ MathPlatform.registerModule({
         "skill": "systematizácia",
         "question": "V kocke ABCDEFGH: Ktoré priamky sú mimobežné?",
         "options": [
-          "AB a CG",
           "AB a EF",
+          "AB a CG",
           "AB a BF"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Použi definíciu a priestorovú orientáciu, nie iba vzhľad náčrtu."
       },
       {
@@ -114,11 +114,11 @@ MathPlatform.registerModule({
         "skill": "systematizácia",
         "question": "V kocke ABCDEFGH: Čo je prienikom dvoch rôznobežných rovín?",
         "options": [
-          "priamka",
+          "rovina",
           "bod",
-          "rovina"
+          "priamka"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Použi definíciu a priestorovú orientáciu, nie iba vzhľad náčrtu."
       },
       {
@@ -144,11 +144,11 @@ MathPlatform.registerModule({
         "skill": "systematizácia",
         "question": "V kocke ABCDEFGH: Ktorá kontrola rezu je správna?",
         "options": [
-          "Každá strana rezu leží v jednej stene kocky.",
           "Každý rez je štvorec.",
+          "Každá strana rezu leží v jednej stene kocky.",
           "Každý rez prechádza stredom kocky."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Použi definíciu a priestorovú orientáciu, nie iba vzhľad náčrtu."
       },
       {
@@ -158,22 +158,27 @@ MathPlatform.registerModule({
         "title": "Ktoré tvrdenia sú správne?",
         "skill": "argumentácia",
         "question": "Označ všetky správne tvrdenia.",
+        "labels": ["Správne", "Nesprávne"],
         "items": [
           {
             "text": "Mimobežné priamky neležia v jednej rovine.",
-            "correct": true
+            "answer": true,
+            "why": "Je to práve definícia mimobežnosti: priamky sa nepretínajú, nie sú rovnobežné a neležia v spoločnej rovine."
           },
           {
             "text": "Dve rôzne roviny sa môžu pretínať v priamke.",
-            "correct": true
+            "answer": true,
+            "why": "Dve rôzne roviny sú buď rovnobežné, alebo sa pretínajú práve v priamke."
           },
           {
             "text": "Každé dve nepretínajúce sa priamky sú rovnobežné.",
-            "correct": false
+            "answer": false,
+            "why": "V priestore môžu byť dve nepretínajúce sa priamky aj mimobežné, nielen rovnobežné."
           },
           {
             "text": "Rez kocky rovinou je uzavretý mnohouholník.",
-            "correct": true
+            "answer": true,
+            "why": "Prienik kocky s rovinou je vždy rovinný, uzavretý mnohouholník."
           }
         ]
       },
@@ -196,9 +201,10 @@ MathPlatform.registerModule({
       {
         "id": "r",
         "type": "reflection",
-        "phase": "PRECVIČ",
+        "phase": "ZÁVER",
         "title": "Pripravenosť",
-        "items": [
+        "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka.",
+        "skills": [
           "Rýchlo sa orientujem v kocke.",
           "Rozlíšim polohy priamok a rovín.",
           "Viem vysvetliť postup pri reze."

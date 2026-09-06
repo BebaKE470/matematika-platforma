@@ -1,0 +1,47 @@
+/* styles/teacher.css
+   Teacher-only screens: login, the metodická karta, and the live lesson
+   (QR/code, grading settings, live diagnostics). See styles/base.css for
+   tokens and breakpoint conventions.
+*/
+
+/* --- Login --- */
+
+.teacher-login { max-width: 520px; margin: 40px auto; }
+
+/* --- Metodická karta --- */
+
+.method dt { font-weight: 850; color: var(--ink); margin-top: 16px; }
+.method dd { margin: 4px 0 0; }
+
+/* --- Live lesson: QR/code + connection status --- */
+
+.live-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: #2c9b61; margin-right: 6px; }
+.live-setup-row { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; margin: 18px 0; }
+.qr-box { background: #fff; padding: 12px; border-radius: 12px; display: inline-block; min-width: 220px; min-height: 220px; }
+.bigcode { font-size: 42px; letter-spacing: .14em; font-weight: 900; color: var(--ink); }
+
+/* --- Grading settings form --- */
+
+.grading-toggle-row { display: flex; align-items: center; gap: 10px; margin: 14px 0 18px; }
+.grading-toggle-row input[type="checkbox"] { width: 20px; height: 20px; margin: 0; flex: 0 0 auto; }
+.grading-toggle-row label { margin: 0; cursor: pointer; }
+.grading-fields-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; max-width: 650px; }
+.tag.grading-on { background: var(--warn); color: #7a5b12; }
+.tag.grading-off { background: var(--good); color: #256442; }
+.tag.grading-pending { background: #eee; color: #777; }
+
+/* --- Live diagnostics --- */
+
+.live-list { display: grid; gap: 8px; }
+.student {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr 2fr;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+
+@media (max-width: 720px) {
+  .live-setup-row { gap: 16px; }
+}

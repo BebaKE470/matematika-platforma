@@ -73,12 +73,12 @@ MathPlatform.registerModule({
         "stimulus": "f(−3)=f(3), f(−2)=f(2), graf je súmerný podľa osi y",
         "question": "Ktorá vlastnosť je naznačená?",
         "options": [
-          "párnosť",
+          "ohraničenosť",
           "nepárnosť",
           "prostosť",
-          "ohraničenosť"
+          "párnosť"
         ],
-        "answer": 0,
+        "answer": 3,
         "correct": "Súmernosť podľa osi y je znak párnej funkcie.",
         "hint": "Spomeň si, podľa čoho je graf súmerný."
       },
@@ -157,9 +157,9 @@ MathPlatform.registerModule({
         "model": "Prostosť porovnáva výstupy rôznych vstupov: rôzne vstupy musia mať rôzne výstupy. Rastúca funkcia opisuje poradie hodnôt: pri väčšom vstupe je funkčná hodnota väčšia."
       },
 
-      {"id":"oddcheck","type":"choice","phase":"OVER SI","skill":"párnosť","stimulus":"g(−x)=−g(x) a graf je súmerný podľa začiatku súradnicovej sústavy.","question":"Ako funkciu označíme?","options":["párna","nepárna","prostá","konštantná"],"answer":1,"correct":"To je definujúca vlastnosť nepárnej funkcie.","hint":"Súmernosť podľa začiatku."},
+      {"id":"oddcheck","type":"choice","phase":"OVER SI","skill":"párnosť","stimulus":"g(−x)=−g(x) a graf je súmerný podľa začiatku súradnicovej sústavy.","question":"Ako funkciu označíme?","options":["nepárna","párna","prostá","konštantná"],"answer":0,"correct":"To je definujúca vlastnosť nepárnej funkcie.","hint":"Súmernosť podľa začiatku."},
       {"id":"extreme-language","type":"choice","phase":"PRESNÝ JAZYK","skill":"extrémy","stimulus":"Funkcia dosahuje v bode x=2 hodnotu 7 a vyššiu hodnotu už na skúmanej množine nemá.","question":"Ktorá veta je najpresnejšia?","options":["Maximum je x=2.","Maximum je 7 a dosahuje ho pri x=2.","Minimum je 7.","Funkcia je prostá."],"answer":1,"correct":"Maximum je funkčná hodnota 7; x=2 je miesto, kde sa dosahuje.","hint":"Rozlišuj hodnotu a miesto."},
-      {"id":"inject-check","type":"choice","phase":"OVER SI","skill":"prostosť","stimulus":"f(−2)=5 a f(2)=5","question":"Čo z toho určite vyplýva?","options":["Funkcia je párna.","Funkcia nie je prostá.","Funkcia je rastúca.","Funkcia je zhora ohraničená."],"answer":1,"correct":"Dva rôzne vstupy −2 a 2 majú rovnaký výstup 5, preto funkcia nie je prostá.","hint":"Použi definíciu prostej funkcie."},
+      {"id":"inject-check","type":"choice","phase":"OVER SI","skill":"prostosť","stimulus":"f(−2)=5 a f(2)=5","question":"Čo z toho určite vyplýva?","options":["Funkcia je párna.","Funkcia je rastúca.","Funkcia nie je prostá.","Funkcia je zhora ohraničená."],"answer":2,"correct":"Dva rôzne vstupy −2 a 2 majú rovnaký výstup 5, preto funkcia nie je prostá.","hint":"Použi definíciu prostej funkcie."},
       {
         "id": "clean",
         "type": "notebook",

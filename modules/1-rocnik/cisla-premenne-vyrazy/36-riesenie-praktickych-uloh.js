@@ -118,10 +118,10 @@ MathPlatform.registerModule({
         "question": "Na účet vložíme 1 000 € pri ročnom úroku 3 % (bez poplatkov a dane). Koľko je na účte po jednom roku?",
         "options": [
           "1 003 €",
-          "1 030 €",
-          "1 300 €"
+          "1 300 €",
+          "1 030 €"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "3 % z 1 000 € je 30 €, teda po roku 1 030 €.",
         "hint": "Najprv vypočítaj 1 % alebo použi násobok 1,03."
       },

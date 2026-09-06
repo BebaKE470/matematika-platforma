@@ -67,11 +67,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Rieš: 5−2x ≤ 11. Ktorý výsledok je správny?",
         "options": [
-          "x ≥ −3",
+          "x ≥ 3",
           "x ≤ −3",
-          "x ≥ 3"
+          "x ≥ −3"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne: −2x ≤ 6, po delení −2 dostaneme x ≥ −3.",
         "hint": "Pri delení −2 otoč znak."
       },
@@ -97,11 +97,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Pre nerovnicu (x+1)/(x−3) < 0 sú kritické body:",
         "options": [
-          "−1 a 3",
           "1 a −3",
+          "−1 a 3",
           "iba 3"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Správne. Nula čitateľa je −1 a vylúčená hodnota menovateľa je 3.",
         "hint": "Polož zvlášť čitateľ a menovateľ rovný nule."
       },

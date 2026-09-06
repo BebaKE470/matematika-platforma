@@ -63,11 +63,11 @@ MathPlatform.registerModule({
         "skill": "Vennov diagram",
         "question": "Čo v dvojmnožinovom Vennovom diagrame predstavuje prekrytie kruhov A a B?",
         "options": [
-          "A∪B",
           "A∩B",
+          "A∪B",
           "A−B"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Prekrytie znamená súčasné členstvo v A aj B.",
         "hint": "Nakresli si malý diagram alebo vypíš prvky."
       },
@@ -137,11 +137,11 @@ MathPlatform.registerModule({
         "skill": "Vennov diagram",
         "question": "Oblasť v obdĺžniku U mimo kruhu A predstavuje:",
         "options": [
-          "doplnok A",
+          "iba A",
           "A ∩ U",
-          "iba A"
+          "doplnok A"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Je to časť univerzálnej množiny, ktorá nepatrí do A.",
         "hint": "Obdĺžnik predstavuje U."
       },

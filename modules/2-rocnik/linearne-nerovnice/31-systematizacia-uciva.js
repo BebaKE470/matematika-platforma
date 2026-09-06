@@ -67,11 +67,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Pri −3x < 12 je správny výsledok:",
         "options": [
-          "x > −4",
+          "x > 4",
           "x < −4",
-          "x > 4"
+          "x > −4"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne. Pri delení −3 sa znak otočí.",
         "hint": "Delíš záporným číslom."
       },
@@ -82,11 +82,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Pri 2/(x+5) ≤ 0 je hodnota x=−5:",
         "options": [
-          "riešenie",
           "vylúčená z definičného oboru",
+          "riešenie",
           "vždy nulou zlomku"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Správne. Menovateľ by bol nula.",
         "hint": "Zlomok s nulovým menovateľom neexistuje."
       },
@@ -97,11 +97,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "|x−1| ≤ 3 predstavuje:",
         "options": [
-          "body vo vzdialenosti najviac 3 od 1",
           "body vo vzdialenosti viac ako 3 od 1",
+          "body vo vzdialenosti najviac 3 od 1",
           "iba x=1"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Áno. Absolútna hodnota tu vyjadruje vzdialenosť.",
         "hint": "Čítaj |x−a|."
       },
@@ -112,11 +112,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Pri sústave x ≥ 0 a x < 7 je riešenie:",
         "options": [
-          "⟨0;7)",
+          "(−∞;0⟩ ∪ (7;∞)",
           "(0;7⟩",
-          "(−∞;0⟩ ∪ (7;∞)"
+          "⟨0;7)"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne. Ide o prienik.",
         "hint": "Obe podmienky musia platiť naraz."
       },
@@ -127,11 +127,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Ktorá veta je pravdivá?",
         "options": [
-          "Pri delení nerovnice záporným číslom sa znak nemení.",
           "Pri sústave nerovníc hľadáme prienik riešení jednotlivých nerovníc.",
+          "Pri delení nerovnice záporným číslom sa znak nemení.",
           "Hodnota, ktorá vynuluje menovateľ, môže patriť do riešenia."
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Správne. Sústava znamená súčasné splnenie podmienok.",
         "hint": "Skontroluj základné pravidlá celku."
       },

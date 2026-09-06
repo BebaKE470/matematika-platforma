@@ -71,11 +71,11 @@ MathPlatform.registerModule({
         "skill": "porozumenie",
         "question": "Rovnica 5(x−2)=3x+6 má riešenie",
         "options": [
-          "x=8",
+          "x=−8",
           "x=4",
-          "x=−8"
+          "x=8"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "5x−10=3x+6, 2x=16, x=8.",
         "hint": "Najprv si pomenuj, čo je dané a čo hľadáš."
       },

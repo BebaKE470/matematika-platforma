@@ -59,11 +59,11 @@ MathPlatform.registerModule({
         "question": "Koľko radiánov má celý obeh po jednotkovej kružnici?",
         "options": [
           "π/2",
-          "π",
           "2π",
+          "π",
           "4π"
         ],
-        "answer": 2,
+        "answer": 1,
         "correct": "Celý obeh má 2π radiánov.",
         "hint": "Obvod jednotkovej kružnice je 2π."
       },
@@ -89,12 +89,12 @@ MathPlatform.registerModule({
         "skill": "cotg",
         "question": "Ktorý zápis je správny? (cotg(π/4)=1)",
         "options": [
-          "cotg(π/4)=1",
-          "cotg(π/4)=0",
           "cotg(π/4)=2",
+          "cotg(π/4)=0",
+          "cotg(π/4)=1",
           "hodnota sa nedá určiť"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Vyplýva to z polohy bodu na jednotkovej kružnici.",
         "hint": "Vráť sa k definícii pomocou súradnice/podielu."
       },

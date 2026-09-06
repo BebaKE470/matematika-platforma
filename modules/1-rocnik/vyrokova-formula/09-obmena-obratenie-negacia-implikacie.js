@@ -89,11 +89,11 @@ MathPlatform.registerModule({
         "skill": "Obmena",
         "question": "Ktorá veta je obmenou pôvodnej implikácie?",
         "options": [
-          "Ak číslo nie je párne, potom nie je deliteľné 4.",
+          "Ak číslo nie je deliteľné 4, potom nie je párne.",
           "Ak je číslo párne, potom je deliteľné 4.",
-          "Ak číslo nie je deliteľné 4, potom nie je párne."
+          "Ak číslo nie je párne, potom nie je deliteľné 4."
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne. Obmena má tvar ¬B ⇒ ¬A.",
         "hint": "Neguj záver aj predpoklad a obráť poradie."
       },
@@ -104,11 +104,11 @@ MathPlatform.registerModule({
         "skill": "Ekvivalencia implikácie",
         "question": "Pôvodná implikácia je vždy logicky ekvivalentná s:",
         "options": [
-          "obrátenou implikáciou",
           "obmenou implikácie",
+          "obrátenou implikáciou",
           "svojou negáciou"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Áno. A ⇒ B a ¬B ⇒ ¬A majú rovnaké pravdivostné hodnoty.",
         "hint": "Porovnaj pravdivostné tabuľky."
       },
@@ -119,11 +119,11 @@ MathPlatform.registerModule({
         "skill": "Negácia implikácie",
         "question": "Negácia „Ak je číslo deliteľné 4, potom je párne“ je:",
         "options": [
-          "Číslo je deliteľné 4 a nie je párne.",
           "Číslo nie je deliteľné 4 a je párne.",
+          "Číslo je deliteľné 4 a nie je párne.",
           "Ak je číslo párne, je deliteľné 4."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Správne. Negácia A⇒B je A∧¬B.",
         "hint": "Kedy by pôvodná veta zlyhala?"
       },
@@ -151,11 +151,11 @@ MathPlatform.registerModule({
         "skill": "Implikácia",
         "question": "K výroku „Ak je číslo deliteľné 4, potom je párne“ je obrátený výrok:",
         "options": [
-          "Ak je číslo párne, potom je deliteľné 4.",
+          "Číslo je deliteľné 4 a párne.",
           "Ak číslo nie je párne, nie je deliteľné 4.",
-          "Číslo je deliteľné 4 a párne."
+          "Ak je číslo párne, potom je deliteľné 4."
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Obrátený výrok vymení predpoklad a záver.",
         "hint": "Vymeň poradie častí implikácie."
       },
@@ -166,11 +166,11 @@ MathPlatform.registerModule({
         "skill": "Implikácia",
         "question": "Obmena výroku A ⇒ B má tvar:",
         "options": [
-          "B ⇒ A",
+          "¬B ⇒ ¬A",
           "¬A ⇒ ¬B",
-          "¬B ⇒ ¬A"
+          "B ⇒ A"
         ],
-        "answer": 2,
+        "answer": 0,
         "correct": "Správne. Obmena neguje obe časti a zároveň ich vymení.",
         "hint": "Najprv si pomenuj predpoklad A a záver B."
       },

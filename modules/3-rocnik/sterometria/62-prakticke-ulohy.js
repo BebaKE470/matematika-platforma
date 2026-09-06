@@ -84,11 +84,11 @@ MathPlatform.registerModule({
         "skill": "orientácia",
         "question": "Línie AB a CG na modeli kocky sa nepretínajú a nie sú rovnobežné. Ako ich klasifikujeme?",
         "options": [
-          "mimobežné",
           "rôznobežné",
+          "mimobežné",
           "totožné"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Ide o mimobežné priamky."
       },
       {
@@ -99,11 +99,11 @@ MathPlatform.registerModule({
         "skill": "modelovanie",
         "question": "Predná stena ABFE predstavuje fasádu. Ktorá rovina je s ňou rovnobežná?",
         "options": [
-          "protiľahlá stena DCGH",
+          "spodná stena EFGH",
           "susedná stena BCGF",
-          "spodná stena EFGH"
+          "protiľahlá stena DCGH"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Protiľahlé steny kocky ležia v rovnobežných rovinách."
       },
       {
@@ -129,11 +129,11 @@ MathPlatform.registerModule({
         "skill": "argumentácia",
         "question": "V náčrte rezu je jedna strana vedená „cez vnútro“ kocky medzi bodmi na rôznych stenách bez ďalšieho zdôvodnenia. Čo je najlepšia kontrolná otázka?",
         "options": [
-          "Ležia oba koncové body na tej istej stene, v ktorej má byť táto strana rezu?",
           "Má úsečka peknú farbu?",
+          "Ležia oba koncové body na tej istej stene, v ktorej má byť táto strana rezu?",
           "Je kocka nakreslená v mierke 1:1?"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Strana rezu vzniká v konkrétnej stene."
       },
       {
@@ -163,9 +163,10 @@ MathPlatform.registerModule({
       {
         "id": "r",
         "type": "reflection",
-        "phase": "PRECVIČ",
+        "phase": "ZÁVER",
         "title": "Prenos do praxe",
-        "items": [
+        "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka.",
+        "skills": [
           "Viem preložiť situáciu do geometrického modelu.",
           "Rozlíšim polohy priamok a rovín.",
           "Viem skontrolovať priestorový náčrt."

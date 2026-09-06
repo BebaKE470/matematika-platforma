@@ -76,11 +76,11 @@ MathPlatform.registerModule({
         "question": "Aká je funkcia g?",
         "options": [
           "rastúca",
-          "klesajúca",
           "konštantná",
+          "klesajúca",
           "nedá sa rozhodnúť"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Koeficient a=−3 je záporný, preto je funkcia klesajúca.",
         "hint": "Sleduj znamienko čísla pri x."
       },
@@ -134,8 +134,8 @@ MathPlatform.registerModule({
         "hint": "Použi y=ax+b a dosaď súradnice bodu A."
       },
 
-      {"id":"slope-change","type":"choice","phase":"INTERPRETUJ","skill":"smernica","stimulus":"f(x)=4x−7","question":"O koľko sa zmení f(x), keď x zväčšíme o 1?","options":["zmenší sa o 7","zväčší sa o 4","zväčší sa o 7","nezmení sa"],"answer":1,"correct":"Smernica a=4 znamená zmenu funkčnej hodnoty o +4 pri zvýšení x o 1.","hint":"Sleduj koeficient pri x."},
-      {"id":"same-b","type":"choice","phase":"POROVNAJ","skill":"predpis","stimulus":"f(x)=3x+2, g(x)=−x+2","question":"Čo majú grafy spoločné?","options":["rovnakú smernicu","rovnaký nulový bod","rovnaký priesečník s osou y","sú rovnobežné"],"answer":2,"correct":"Obe majú b=2, preto obe prechádzajú bodom [0;2].","hint":"Čo znamená b?"},
+      {"id":"slope-change","type":"choice","phase":"INTERPRETUJ","skill":"smernica","stimulus":"f(x)=4x−7","question":"O koľko sa zmení f(x), keď x zväčšíme o 1?","options":["zväčší sa o 4","zmenší sa o 7","zväčší sa o 7","nezmení sa"],"answer":0,"correct":"Smernica a=4 znamená zmenu funkčnej hodnoty o +4 pri zvýšení x o 1.","hint":"Sleduj koeficient pri x."},
+      {"id":"same-b","type":"choice","phase":"POROVNAJ","skill":"predpis","stimulus":"f(x)=3x+2, g(x)=−x+2","question":"Čo majú grafy spoločné?","options":["rovnakú smernicu","rovnaký priesečník s osou y","rovnaký nulový bod","sú rovnobežné"],"answer":1,"correct":"Obe majú b=2, preto obe prechádzajú bodom [0;2].","hint":"Čo znamená b?"},
       {"id":"zero-explain","type":"selfWrite","phase":"VYSVETLI","title":"Nulový bod nie je bod [0;b]","promptHtml":"Vysvetli rozdiel medzi <strong>nulovým bodom funkcie</strong> a <strong>priesečníkom s osou y</strong>.","model":"Nulový bod je hodnota x, pre ktorú f(x)=0, teda súvisí s priesečníkom s osou x. Priesečník s osou y získame pri x=0 a má tvar [0;b]."},
       {
         "id": "clean",

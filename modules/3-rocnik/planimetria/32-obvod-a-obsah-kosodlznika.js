@@ -72,12 +72,12 @@ MathPlatform.registerModule({
         "skill": "planimetria",
         "question": "Čo má byť pred dosadením do vzorca?",
         "options": [
-          "náčrt, označenie údajov a voľba vhodného vzťahu",
-          "iba kalkulačka",
           "zaokrúhlenie výsledku",
+          "iba kalkulačka",
+          "náčrt, označenie údajov a voľba vhodného vzťahu",
           "výber jednotky bez výpočtu"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Náčrt a označenie údajov znižujú riziko zámeny veličín.",
         "hint": "Najprv matematický model."
       },
@@ -102,14 +102,14 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "ORIGINÁLNA MATURITNÁ ÚLOHA",
         "skill": "obsah rovnobežníka",
-        "prompt": "Maturita 2024, úloha 6. Rovnobežník má AB=7 cm, BC=3 cm a uhol ABC=115°. Ktorý výraz dáva jeho obsah?",
+        "question": "Maturita 2024, úloha 6. Rovnobežník má AB=7 cm, BC=3 cm a uhol ABC=115°. Ktorý výraz dáva jeho obsah?",
         "options": [
-          "21·sin 115°",
+          "(7+3)·115°/2",
           "21·cos 115°",
           "10·sin 115°",
-          "(7+3)·115°/2"
+          "21·sin 115°"
         ],
-        "answer": 0,
+        "answer": 3,
         "correct": "Obsah rovnobežníka zo strán a,b a uhla medzi nimi je S=a·b·sin α, teda 21·sin115° ≈ 19,03 cm².",
         "hint": "Výška k strane 7 je 3·sin115°."
       },

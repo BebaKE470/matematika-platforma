@@ -91,11 +91,11 @@ MathPlatform.registerModule({
         "skill": "rez kocky",
         "question": "Kde môžu ležať vrcholy rezu kocky?",
         "options": [
-          "Na hranách kocky.",
           "Iba vo vrcholoch kocky.",
+          "Na hranách kocky.",
           "Iba v strede stien."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Pri reze vždy kontroluj, v ktorej stene práve pracuješ."
       },
       {
@@ -106,11 +106,11 @@ MathPlatform.registerModule({
         "skill": "rez kocky",
         "question": "Čo musí platiť o susedných stranách rezu?",
         "options": [
-          "Stretávajú sa na tej istej hrane kocky.",
+          "Musia mať rovnakú dĺžku.",
           "Musia byť vždy rovnobežné.",
-          "Musia mať rovnakú dĺžku."
+          "Stretávajú sa na tej istej hrane kocky."
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Pri reze vždy kontroluj, v ktorej stene práve pracuješ."
       },
       {
@@ -136,11 +136,11 @@ MathPlatform.registerModule({
         "skill": "rez kocky",
         "question": "Žiak spojil dva body rezu, ktoré neležia na tej istej stene, priamou úsečkou. Čo treba skontrolovať?",
         "options": [
-          "Či táto úsečka naozaj leží v rovine rezu a v príslušnej stene; inak ju nemožno použiť ako stranu rezu.",
           "Iba jej dĺžku.",
+          "Či táto úsečka naozaj leží v rovine rezu a v príslušnej stene; inak ju nemožno použiť ako stranu rezu.",
           "Iba či je vodorovná."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Pri reze vždy kontroluj, v ktorej stene práve pracuješ."
       },
       {
@@ -151,11 +151,11 @@ MathPlatform.registerModule({
         "skill": "rez kocky",
         "question": "Prečo môže byť pri náročnejšom reze užitočná rovnobežnosť protiľahlých stien?",
         "options": [
-          "Pomáha preniesť smer priesečníc roviny rezu s rovnobežnými stenami.",
+          "Zaručuje, že rez prechádza stredom kocky.",
           "Zaručuje, že rez je vždy štvorec.",
-          "Zaručuje, že rez prechádza stredom kocky."
+          "Pomáha preniesť smer priesečníc roviny rezu s rovnobežnými stenami."
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Pri reze vždy kontroluj, v ktorej stene práve pracuješ."
       },
       {
@@ -165,22 +165,27 @@ MathPlatform.registerModule({
         "title": "Kontrola postupu",
         "skill": "postup",
         "question": "Označ kroky, ktoré patria do správnej konštrukcie rezu.",
+        "labels": ["Patrí do postupu", "Nepatrí"],
         "items": [
           {
             "text": "nájsť známe body roviny rezu na hranách",
-            "correct": true
+            "answer": true,
+            "why": "Body, ktoré poznáme na hranách, sú základom, z ktorého rez staviame."
           },
           {
             "text": "spájať dva body, ak ležia na tej istej stene",
-            "correct": true
+            "answer": true,
+            "why": "Úsečku smieme viesť len vtedy, keď obidva body ležia v tej istej stene – inak by nešlo o stranu rezu."
           },
           {
             "text": "uzavrieť vzniknutý mnohouholník",
-            "correct": true
+            "answer": true,
+            "why": "Rez telesa rovinou je vždy uzavretý mnohouholník; bez uzavretia konštrukcia nie je hotová."
           },
           {
             "text": "spojiť ľubovoľné dva body bez kontroly steny",
-            "correct": false
+            "answer": false,
+            "why": "Bez kontroly steny môže úsečka viesť mimo roviny rezu alebo mimo steny – takýto krok nie je platný."
           }
         ]
       },
@@ -203,9 +208,10 @@ MathPlatform.registerModule({
       {
         "id": "r",
         "type": "reflection",
-        "phase": "PRECVIČ",
+        "phase": "ZÁVER",
         "title": "Ako zvládaš rezy?",
-        "items": [
+        "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka.",
+        "skills": [
           "Viem nájsť prvú stranu rezu.",
           "Kontrolujem, v ktorej stene pracujem.",
           "Viem skontrolovať hotový rez."

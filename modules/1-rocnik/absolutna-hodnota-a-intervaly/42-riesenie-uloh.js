@@ -107,11 +107,11 @@ MathPlatform.registerModule({
         "skill": "reprezentácie",
         "question": "Interval ⟨−6; 6⟩ opisuje všetky čísla, ktorých vzdialenosť od nuly je najviac 6. Ktorý zápis je správny?",
         "options": [
-          "|x| ≤ 6",
+          "|x − 6| ≤ 0",
           "|x| ≥ 6",
-          "|x − 6| ≤ 0"
+          "|x| ≤ 6"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne. Ide o vzdialenosť od nuly najviac 6.",
         "hint": "Všimni si, že interval je súmerný podľa nuly."
       },

@@ -67,11 +67,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Rieš −4x ≥ 20.",
         "options": [
-          "x ≤ −5",
           "x ≥ −5",
+          "x ≤ −5",
           "x ≤ 5"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Správne. Pri delení −4 sa znak otočí.",
         "hint": "Delíš záporným číslom."
       },
@@ -82,11 +82,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Ktorá hodnota je vylúčená pri 1/(x+3) < 0?",
         "options": [
-          "−3",
+          "3",
           "0",
-          "3"
+          "−3"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne. Pre x=−3 je menovateľ nula.",
         "hint": "x+3=0."
       },
@@ -112,11 +112,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Riešenie sústavy x > 2 a x ≤ 8 je:",
         "options": [
-          "(2;8⟩",
           "⟨2;8)",
+          "(2;8⟩",
           "(−∞;2) ∪ ⟨8;∞)"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Správne. Hľadáme prienik.",
         "hint": "Obe podmienky platia súčasne."
       },
@@ -128,10 +128,10 @@ MathPlatform.registerModule({
         "question": "Ktorý zápis znamená „najviac 12“?",
         "options": [
           "x < 12",
-          "x ≤ 12",
-          "x ≥ 12"
+          "x ≥ 12",
+          "x ≤ 12"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Áno. Hodnota 12 je dovolená.",
         "hint": "Najviac = neprekročí 12."
       },

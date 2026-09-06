@@ -102,11 +102,11 @@ MathPlatform.registerModule({
         "skill": "prenos",
         "question": "Povrch kvádra 2×3×5 cm je",
         "options": [
-          "30 cm²",
           "62 cm²",
+          "30 cm²",
           "31 cm²"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "2(6+10+15)=62 cm².",
         "hint": "Skús náčrt, odhad alebo spätnú kontrolu."
       },
@@ -117,11 +117,11 @@ MathPlatform.registerModule({
         "skill": "kritické myslenie",
         "question": "Ktorý postup je pri tejto téme najspoľahlivejší?",
         "options": [
-          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Zapamätať si iba posledný výsledok.",
+          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Preskočiť zápis a tipnúť odpoveď."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Áno. Postup musí byť kontrolovateľný a výsledok interpretovaný.",
         "hint": "Matematika nie je tipovanie."
       },

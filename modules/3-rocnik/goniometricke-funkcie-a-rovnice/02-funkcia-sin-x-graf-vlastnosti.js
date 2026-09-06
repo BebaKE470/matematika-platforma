@@ -60,8 +60,8 @@ MathPlatform.registerModule({
         "phase": "OPAKUJ",
         "skill": "jednotková kružnica",
         "question": "Koľko radiánov má celý obeh po jednotkovej kružnici?",
-        "options": ["π/2", "π", "2π", "4π"],
-        "answer": 2,
+        "options": ["π/2", "2π", "π", "4π"],
+        "answer": 1,
         "correct": "Celý obeh má 2π radiánov.",
         "hint": "Obvod jednotkovej kružnice je 2π."
       },
@@ -86,8 +86,8 @@ MathPlatform.registerModule({
         "phase": "OVER SI",
         "skill": "sin",
         "question": "Bod na jednotkovej kružnici, ktorý zodpovedá číslu x = 0, má súradnice [1; 0]. Hodnota sin x je y-ová súradnica tohto bodu. Čomu sa rovná sin(0)?",
-        "options": ["1", "0", "−1", "neexistuje"],
-        "answer": 1,
+        "options": ["1", "−1", "0", "neexistuje"],
+        "answer": 2,
         "correct": "sin(0) = 0, lebo y-ová súradnica bodu [1; 0] je 0.",
         "hint": "Over si, ktorá súradnica bodu [1; 0] je y-ová."
       },
@@ -97,8 +97,8 @@ MathPlatform.registerModule({
         "phase": "OVER SI",
         "skill": "sin",
         "question": "Bod na jednotkovej kružnici, ktorý zodpovedá číslu x = π/2, má súradnice [0; 1] (najvyšší bod kružnice). Hodnota sin x je y-ová súradnica tohto bodu. Čomu sa rovná sin(π/2)?",
-        "options": ["1", "0", "π/2", "−1"],
-        "answer": 0,
+        "options": ["−1", "0", "π/2", "1"],
+        "answer": 3,
         "correct": "sin(π/2) = 1, lebo y-ová súradnica bodu [0; 1] je 1.",
         "hint": "Over si, ktorá súradnica bodu [0; 1] je y-ová."
       },
@@ -108,8 +108,8 @@ MathPlatform.registerModule({
         "phase": "OVER SI",
         "skill": "sin",
         "question": "Bod na jednotkovej kružnici, ktorý zodpovedá číslu x = 3π/2, má súradnice [0; −1] (najnižší bod kružnice). Hodnota sin x je y-ová súradnica tohto bodu. Čomu sa rovná sin(3π/2)?",
-        "options": ["3π/2", "0", "1", "−1"],
-        "answer": 3,
+        "options": ["−1", "0", "1", "3π/2"],
+        "answer": 0,
         "correct": "sin(3π/2) = −1, lebo y-ová súradnica bodu [0; −1] je −1.",
         "hint": "Over si, ktorá súradnica bodu [0; −1] je y-ová."
       },

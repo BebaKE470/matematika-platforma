@@ -90,12 +90,12 @@ MathPlatform.registerModule({
         "skill": "vzťahy",
         "question": "Ktoré tvrdenie vystihuje správnu prácu so vzorcom?",
         "options": [
-          "Najprv určím, či sa vzorec na daný tvar hodí, potom ho použijem.",
           "Vzorec môžem použiť bez ohľadu na tvar výrazu.",
+          "Najprv určím, či sa vzorec na daný tvar hodí, potom ho použijem.",
           "Stačí upravovať iba číselné hodnoty.",
           "Kontrola výsledku nie je potrebná."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Vzorec je nástroj s konkrétnou štruktúrou a podmienkami.",
         "hint": "Vzorec nie je kúzelná skratka."
       },
@@ -122,12 +122,12 @@ MathPlatform.registerModule({
         "skill": "prenos",
         "question": "Pri testovej úlohe je prvý bezpečný krok:",
         "options": [
-          "preložiť zadanie do známych pojmov a vzťahov",
-          "vybrať najdlhšiu odpoveď",
           "hneď dosadiť do náhodného vzorca",
+          "vybrať najdlhšiu odpoveď",
+          "preložiť zadanie do známych pojmov a vzťahov",
           "ignorovať interval alebo podmienky"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Najprv rozpoznaj matematickú štruktúru úlohy.",
         "hint": "Formát testu nemení matematiku."
       },

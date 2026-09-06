@@ -70,11 +70,11 @@ MathPlatform.registerModule({
         "skill": "porozumenie",
         "question": "Chceme rozdeliť 48 a 60 kusov do čo najväčších rovnakých balíkov bez zvyšku. Hľadáme",
         "options": [
-          "NSD",
+          "priemer",
           "NSN",
-          "priemer"
+          "NSD"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Ide o najväčšiu veľkosť, ktorá delí obe čísla.",
         "hint": "Najprv si pomenuj, čo je dané a čo hľadáš."
       },
@@ -102,11 +102,11 @@ MathPlatform.registerModule({
         "skill": "prenos",
         "question": "Autobusy idú každých 12 a 18 minút. Kedy odídu znova spolu?",
         "options": [
-          "30 min",
           "36 min",
+          "30 min",
           "216 min"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "NSN(12,18)=36.",
         "hint": "Skús náčrt, odhad alebo spätnú kontrolu."
       },
@@ -117,11 +117,11 @@ MathPlatform.registerModule({
         "skill": "kritické myslenie",
         "question": "Ktorý postup je pri tejto téme najspoľahlivejší?",
         "options": [
-          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Zapamätať si iba posledný výsledok.",
+          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
           "Preskočiť zápis a tipnúť odpoveď."
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Áno. Postup musí byť kontrolovateľný a výsledok interpretovaný.",
         "hint": "Matematika nie je tipovanie."
       },

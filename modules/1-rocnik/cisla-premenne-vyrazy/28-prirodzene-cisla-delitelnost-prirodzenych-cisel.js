@@ -102,11 +102,11 @@ MathPlatform.registerModule({
         "skill": "prenos",
         "question": "Je 4 572 deliteľné 9?",
         "options": [
-          "Áno",
+          "Nedá sa určiť",
           "Nie",
-          "Nedá sa určiť"
+          "Áno"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Súčet číslic je 18, preto je číslo deliteľné 9.",
         "hint": "Skús náčrt, odhad alebo spätnú kontrolu."
       },

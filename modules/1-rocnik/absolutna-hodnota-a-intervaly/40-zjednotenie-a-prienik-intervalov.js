@@ -77,11 +77,11 @@ MathPlatform.registerModule({
         "skill": "prienik",
         "question": "Nech A = ⟨−2; 4⟩ a B = (1; 6⟩. Čomu sa rovná A ∩ B?",
         "options": [
-          "(1; 4⟩",
+          "⟨1; 4)",
           "⟨−2; 6⟩",
-          "⟨1; 4)"
+          "(1; 4⟩"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne. Spoločné sú čísla väčšie ako 1 až po 4 vrátane.",
         "hint": "Hľadaj iba prekrytie oboch intervalov a skontroluj body 1 a 4."
       },
@@ -92,11 +92,11 @@ MathPlatform.registerModule({
         "skill": "zjednotenie",
         "question": "Nech A = ⟨−2; 4⟩ a B = (1; 6⟩. Čomu sa rovná A ∪ B?",
         "options": [
-          "(1; 4⟩",
           "⟨−2; 6⟩",
+          "(1; 4⟩",
           "⟨−2; 4⟩"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Áno. Intervaly sa prekrývajú, preto spolu pokryjú celý úsek od −2 po 6 vrátane.",
         "hint": "Pri zjednotení vezmi všetky čísla, ktoré patria aspoň do jedného intervalu."
       },
@@ -107,11 +107,11 @@ MathPlatform.registerModule({
         "skill": "prienik",
         "question": "A = (−5; −2) a B = ⟨1; 4⟩. Aký je A ∩ B?",
         "options": [
-          "∅",
           "(−5; 4⟩",
+          "∅",
           "⟨−2; 1⟩"
         ],
-        "answer": 0,
+        "answer": 1,
         "correct": "Správne. Intervaly nemajú žiadne spoločné číslo.",
         "hint": "Pozri sa, či sa intervaly vôbec dotýkajú alebo prekrývajú."
       },
@@ -123,10 +123,10 @@ MathPlatform.registerModule({
         "question": "A = ⟨0; 2⟩ a B = (2; 5). Žiak tvrdí, že A ∩ B = {2}. Je to správne?",
         "options": [
           "Áno, lebo oba intervaly končia alebo začínajú v 2.",
-          "Nie, lebo 2 nepatrí do B, takže prienik je ∅.",
-          "Nie, lebo 2 nepatrí ani do A."
+          "Nie, lebo 2 nepatrí ani do A.",
+          "Nie, lebo 2 nepatrí do B, takže prienik je ∅."
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Presne. Spoločný bod musí patriť do oboch množín; tu 2 do B nepatrí.",
         "hint": "Pri prieniku nestačí, že sa konce stretnú. Bod musí patriť do oboch intervalov."
       },

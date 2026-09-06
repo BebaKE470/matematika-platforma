@@ -63,11 +63,11 @@ MathPlatform.registerModule({
         "skill": "porozumenie",
         "question": "Pri objeme je správna jednotka",
         "options": [
-          "cm³",
+          "cm",
           "cm²",
-          "cm"
+          "cm³"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Objem zapisujeme v kubických jednotkách.",
         "hint": "Najprv si pomenuj, čo je dané a čo hľadáš."
       },

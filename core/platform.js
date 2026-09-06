@@ -1,9 +1,23 @@
+// core/platform.js — window.MathPlatform
+//
+// The module registry/loader (unchanged contract: every content module under
+// modules/ calls MathPlatform.registerModule({...}) once it loads) plus every
+// query used to build the catalog/navigation screens. This file owns ONLY
+// catalog data — grading and scoring presentation live in core/scoring.js,
+// not here (they used to live here, which mixed "what topics exist" with
+// "how a percentage becomes a grade").
 (function () {
-  const loaded = {};
-  const registry = {};
+  if (!window.MathUtil) throw new Error('core/platform.js: chýba core/util.js pred ním.');
+
+  const loaded = {};   // id -> in-flight/settled load promise
+  const registry = {}; // id -> registered module object
 
   function indexEntry(id) {
     return (window.MATH_MODULE_INDEX || []).find(m => m.id === id);
+  }
+
+  function list() {
+    return window.MATH_MODULE_INDEX || [];
   }
 
   function registerModule(module) {
@@ -11,44 +25,86 @@
     registry[module.id] = module;
   }
 
+  function getModule(id) {
+    return registry[id];
+  }
+
   function loadModule(id) {
     if (registry[id]) return Promise.resolve(registry[id]);
     if (loaded[id]) return loaded[id];
+
     const meta = indexEntry(id);
     if (!meta || !meta.file) return Promise.reject(new Error('Modul nemá obsahový súbor.'));
 
-    loaded[id] = new Promise((resolve, reject) => {
+    const attempt = new Promise((resolve, reject) => {
       const script = document.createElement('script');
       script.src = meta.file;
       script.async = true;
-      script.onload = () => registry[id] ? resolve(registry[id]) : reject(new Error('Obsahový súbor sa načítal, ale modul sa nezaregistroval.'));
+      script.onload = () => {
+        if (registry[id]) resolve(registry[id]);
+        else reject(new Error('Obsahový súbor sa načítal, ale modul sa nezaregistroval.'));
+      };
       script.onerror = () => reject(new Error('Nepodarilo sa načítať obsahový súbor: ' + meta.file));
       document.head.appendChild(script);
     });
+
+    // Bug fix vs. the original loader: a rejected promise used to stay cached
+    // forever, so one transient network error permanently broke that topic
+    // until a full page reload. Clearing the cache entry on rejection lets a
+    // later loadModule(id) call actually retry.
+    loaded[id] = attempt.catch(e => { delete loaded[id]; throw e; });
     return loaded[id];
   }
 
-  // Jediné miesto, kde sa rozhoduje, ako žiakovi zobraziť, či sa aktuálna živá
-  // hodina počíta do známky. Používa ho core/renderers.js (odznak v hlavičke
-  // každej aktivity) aj core/app.js (okamžitá aktualizácia toho istého odznaku,
-  // keď učiteľ zapne/vypne známkovanie počas prebiehajúcej hodiny).
-  function scaleText(t) {
-    return `1: ${t[1]}–100 % · 2: ${t[2]}–${t[1] - 1} % · 3: ${t[3]}–${t[2] - 1} % · 4: ${t[4]}–${t[3] - 1} % · 5: 0–${t[4] - 1} %`;
-  }
-  function gradingBadgeHtml(mode, grading) {
-    if (mode !== 'live') return '';
-    if (grading === undefined || grading === null) return '<span id="gradingBadge" class="tag grading-pending">⏳ zisťujem hodnotenie…</span>';
-    if (!grading.enabled) return '<span id="gradingBadge" class="tag grading-off">🧪 bez známky</span>';
-    const title = grading.thresholds ? ` title="${scaleText(grading.thresholds)}"` : '';
-    return `<span id="gradingBadge" class="tag grading-on"${title}>📝 počíta sa do známky</span>`;
+  // --- Catalog queries -------------------------------------------------
+
+  function sortedModules(source) {
+    const items = source || list();
+    return [...items].sort((a, b) =>
+      (a.year - b.year) ||
+      ((a.unitOrder ?? 999) - (b.unitOrder ?? 999)) ||
+      ((a.lessonOrder ?? 999) - (b.lessonOrder ?? 999)) ||
+      a.topic.localeCompare(b.topic, 'sk')
+    );
   }
 
+  function defaultModuleId() {
+    const first = sortedModules().find(m => m.status === 'ready');
+    return first ? first.id : undefined;
+  }
+
+  function unitKey(unit) { return encodeURIComponent(unit); }
+  function unitFromKey(key) {
+    try { return decodeURIComponent(key || ''); } catch (_) { return key || ''; }
+  }
+
+  function yearModules(year) {
+    return sortedModules().filter(m => m.year === Number(year));
+  }
+
+  function unitsForYear(year) {
+    const map = new Map();
+    yearModules(year).forEach(m => {
+      if (!map.has(m.unit)) map.set(m.unit, { name: m.unit, order: m.unitOrder ?? 999, modules: [] });
+      map.get(m.unit).modules.push(m);
+    });
+    return [...map.values()].sort((a, b) => a.order - b.order || a.name.localeCompare(b.name, 'sk'));
+  }
+
+  function modulesForUnit(year, unit) {
+    return yearModules(year).filter(m => m.unit === unit);
+  }
+
+  function readyCount(items) { return items.filter(m => m.status === 'ready').length; }
+  function placeholderCount(items) { return items.filter(m => m.status === 'placeholder').length; }
+  function openable(m) { return !!m && (m.status === 'ready' || m.status === 'placeholder'); }
+  function statusText(m) { return m.status === 'ready' ? 'Hotové' : m.status === 'placeholder' ? 'TODO' : 'Pripravujeme'; }
+  function statusClass(m) { return m.status === 'ready' ? '' : 'off'; }
+
   window.MathPlatform = {
-    registerModule,
-    loadModule,
-    indexEntry,
-    getModule: id => registry[id],
-    list: () => window.MATH_MODULE_INDEX || [],
-    gradingBadgeHtml
+    registerModule, loadModule, indexEntry, getModule, list,
+    sortedModules, defaultModuleId, unitKey, unitFromKey,
+    yearModules, unitsForYear, modulesForUnit,
+    readyCount, placeholderCount, openable, statusText, statusClass,
   };
 })();

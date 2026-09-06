@@ -89,10 +89,10 @@ MathPlatform.registerModule({
         "skill": "Spojky",
         "question": "A=P, B=N. Aká je hodnota ¬A ∨ B?",
         "options": [
-          "P",
-          "N"
+          "N",
+          "P"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "¬A je N a B je N, takže N∨N=N.",
         "hint": "Najprv neguj A, až potom vyhodnoť disjunkciu."
       },
@@ -104,10 +104,10 @@ MathPlatform.registerModule({
         "question": "Negácia vety „x > 3 a x < 8“ je:",
         "options": [
           "x ≤ 3 a x ≥ 8",
-          "x ≤ 3 alebo x ≥ 8",
-          "x < 3 alebo x > 8"
+          "x < 3 alebo x > 8",
+          "x ≤ 3 alebo x ≥ 8"
         ],
-        "answer": 1,
+        "answer": 2,
         "correct": "Správne podľa De Morganovho pravidla.",
         "hint": "Neguj obe časti a vymeň spojku."
       },
@@ -118,11 +118,11 @@ MathPlatform.registerModule({
         "skill": "Kvantifikátory",
         "question": "Negácia „∀ x (x je reálne číslo): x²≥0“ je:",
         "options": [
-          "∀ x (x je reálne číslo): x²<0",
           "∃ x (x je reálne číslo): x²<0",
+          "∀ x (x je reálne číslo): x²<0",
           "∃ x (x je reálne číslo): x²≥0"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Správne: ¬∀ sa mení na ∃¬.",
         "hint": "„Nie všetky“ = existuje aspoň jedna výnimka."
       },
@@ -173,11 +173,11 @@ MathPlatform.registerModule({
         "skill": "Argumentácia",
         "question": "Na vyvrátenie všeobecného tvrdenia najčastejšie stačí:",
         "options": [
-          "jeden protipríklad",
+          "definícia bez argumentu",
           "desať správnych príkladov",
-          "definícia bez argumentu"
+          "jeden protipríklad"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Jeden platný protipríklad ukáže, že tvrdenie neplatí pre všetky prípady.",
         "hint": "Čo musí zlyhať pri slove „každý“?"
       },

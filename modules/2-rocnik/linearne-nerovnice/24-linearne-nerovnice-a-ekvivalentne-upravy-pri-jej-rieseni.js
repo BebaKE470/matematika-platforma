@@ -74,11 +74,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Z nerovnice 3x − 5 < 7 odčítame/pripočítame číslo tak, aby sme dostali 3x < 12. Aký znak zostane?",
         "options": [
-          "<",
+          "≤",
           ">",
-          "≤"
+          "<"
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Správne. Pri pripočítaní 5 sa smer nemení.",
         "hint": "Znak meníme iba pri násobení alebo delení záporným číslom."
       },
@@ -89,11 +89,11 @@ MathPlatform.registerModule({
         "skill": "riešenie",
         "question": "Máme −2x > 6. Po vydelení oboch strán číslom −2 dostaneme:",
         "options": [
-          "x > −3",
           "x < −3",
+          "x > −3",
           "x < 3"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Áno. Pri delení záporným číslom sa znak otočí.",
         "hint": "−2 je záporné číslo."
       },
