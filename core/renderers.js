@@ -4,7 +4,8 @@
 
   function cardHeader(activity, ctx) {
     const pct = Math.round((ctx.index / ctx.total) * 100);
-    return `<div class="module-topic-bar"><span>${esc(ctx.unit || '')}</span><strong>${esc(ctx.topic || '')}</strong></div><div class="row activity-top"><div class="row" style="gap:.55rem">${ctx.index > 0 ? '<button class="ghost back-step" type="button">← Späť</button>' : ''}<span class="tag phase">${esc(activity.phase || 'AKTIVITA')}</span></div><strong>${ctx.score} XP</strong></div>
+    const gradingBadge = window.MathPlatform.gradingBadgeHtml(ctx.mode, ctx.grading);
+    return `<div class="module-topic-bar"><span>${esc(ctx.unit || '')}</span><strong>${esc(ctx.topic || '')}</strong></div><div class="row activity-top"><div class="row" style="gap:.55rem">${ctx.index > 0 ? '<button class="ghost back-step" type="button">← Späť</button>' : ''}<span class="tag phase">${esc(activity.phase || 'AKTIVITA')}</span></div><div class="row" style="gap:.5rem;align-items:center"><strong>${ctx.score} XP</strong>${gradingBadge}</div></div>
       <div class="progress"><div style="width:${pct}%"></div></div>
       <p class="muted">Krok ${ctx.index + 1} z ${ctx.total}</p>`;
   }

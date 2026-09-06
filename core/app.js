@@ -70,7 +70,7 @@
     return !!r.ok;
   }
 
-  function freshState(extra={}) { return { mode:'solo', nick:'', session:'', moduleId:'', index:0, score:0, answers:[], reflection:{}, ...extra }; }
+  function freshState(extra={}) { return { mode:'solo', nick:'', session:'', moduleId:'', index:0, score:0, answers:[], reflection:{}, grading:null, ...extra }; }
   function go(hash){ location.hash=hash; }
   window.addEventListener('hashchange', render);
   document.addEventListener('click', e=>{const g=e.target.closest('[data-go]');if(g)go(g.dataset.go)});
@@ -171,7 +171,7 @@
   }
   function next(){state.index++;sendProgress(false);play();}
   function prev(){if(state.index>0){state.index--;sendProgress(false);play();}}
-  function play(){if(!currentModule){go(`module/${state.moduleId||'1-logika-01'}`);return}const acts=currentModule.student.activities;if(state.index>=acts.length){finish();return}const activity=acts[state.index];const renderer=ActivityRenderers[activity.type];if(!renderer){app.innerHTML=`<div class="card"><h2>Neznámy typ aktivity</h2><code>${activity.type}</code></div>`;return}const m=meta(state.moduleId);renderer(activity,{app,index:state.index,total:acts.length,score:state.score,record,next,prev,setReflection:v=>state.reflection=v,finish,topic:m?.topic||currentModule.student.title,unit:m?.unit||''});}
+  function play(){if(!currentModule){go(`module/${state.moduleId||'1-logika-01'}`);return}const acts=currentModule.student.activities;if(state.index>=acts.length){finish();return}const activity=acts[state.index];const renderer=ActivityRenderers[activity.type];if(!renderer){app.innerHTML=`<div class="card"><h2>Neznámy typ aktivity</h2><code>${activity.type}</code></div>`;return}const m=meta(state.moduleId);renderer(activity,{app,index:state.index,total:acts.length,score:state.score,record,next,prev,setReflection:v=>state.reflection=v,finish,topic:m?.topic||currentModule.student.title,unit:m?.unit||'',mode:state.mode,grading:state.grading});}
 
   function finish(){
     const maxScore=moduleMaxPoints();
@@ -181,7 +181,11 @@
     state.answers.forEach(a=>{if(!a.skill)return;skills[a.skill]??={n:0,ok:0,pts:0};skills[a.skill].n++;if(a.correct)skills[a.skill].ok++;skills[a.skill].pts+=a.points||0});
     sendProgress(true);
     const m=meta(state.moduleId);
-    app.innerHTML=`<article class="card result-card"><div class="eyebrow">MISIA SPLNENÁ</div><h1>Ako sa ti darilo?</h1><div class="result-score"><strong>${state.score} XP</strong><span>z ${maxScore} XP</span></div><div class="result-progress" role="progressbar" aria-valuenow="${percent}" aria-valuemin="0" aria-valuemax="100"><div style="width:${Math.min(100,percent)}%"></div></div><p class="result-percent">Zvládol/a si približne <strong>${percent} %</strong> bodovanej práce v module.</p><div class="result-message"><strong>${feedback.level}.</strong> ${feedback.text}</div><p class="muted small-note"><strong>XP nie sú známka.</strong> Sú spätnou väzbou o tvojej práci v tomto module.</p>${Object.keys(skills).length?`<h2>Tvoja mapa práce</h2><div class="skill-summary">${Object.entries(skills).map(([k,v])=>`<div class="skill-row"><strong>${k}</strong><span>${v.ok}/${v.n}</span></div>`).join('')}</div>`:''}${reflectionSummary(state.reflection)}<div class="notice"><strong>Teraz mobil odlož.</strong> Skús jednou vetou pomenovať, čo je hlavná myšlienka dnešnej témy. Presný matematický zápis patrí do zošita a k spoločnej práci pri tabuli.</div><button class="btn" data-go="catalog/unit/${m?.year||1}/${unitKey(m?.unit||'Výroková formula')}">Späť k témam</button></article>`;
+    const gradingOn = state.mode==='live' && state.grading && state.grading.enabled;
+    const gradeNote = gradingOn
+      ? `<p class="muted small-note"><strong>Táto hodina sa dnes počíta do známky.</strong> Tvojich ${percent} % zodpovedá známke <strong>${gradeForPercent(percent,state.grading)||'—'}</strong> podľa stupnice, ktorú vyhlásil učiteľ (${gradingScaleText(state.grading)}).</p>`
+      : `<p class="muted small-note"><strong>XP nie sú známka.</strong> Sú spätnou väzbou o tvojej práci v tomto module.</p>`;
+    app.innerHTML=`<article class="card result-card"><div class="eyebrow">MISIA SPLNENÁ</div><h1>Ako sa ti darilo?</h1><div class="result-score"><strong>${state.score} XP</strong><span>z ${maxScore} XP</span></div><div class="result-progress" role="progressbar" aria-valuenow="${percent}" aria-valuemin="0" aria-valuemax="100"><div style="width:${Math.min(100,percent)}%"></div></div><p class="result-percent">Zvládol/a si približne <strong>${percent} %</strong> bodovanej práce v module.</p><div class="result-message"><strong>${feedback.level}.</strong> ${feedback.text}</div>${gradeNote}${Object.keys(skills).length?`<h2>Tvoja mapa práce</h2><div class="skill-summary">${Object.entries(skills).map(([k,v])=>`<div class="skill-row"><strong>${k}</strong><span>${v.ok}/${v.n}</span></div>`).join('')}</div>`:''}${reflectionSummary(state.reflection)}<div class="notice"><strong>Teraz mobil odlož.</strong> Skús jednou vetou pomenovať, čo je hlavná myšlienka dnešnej témy. Presný matematický zápis patrí do zošita a k spoločnej práci pri tabuli.</div><button class="btn" data-go="catalog/unit/${m?.year||1}/${unitKey(m?.unit||'Výroková formula')}">Späť k témam</button></article>`;
   }
 
   let qrLibPromise=null;
@@ -214,9 +218,20 @@
       let nick=$('#nick').value.trim(),code=$('#code').value.trim().toUpperCase();
       if(!nick||code.length<4)return $('#joinInfo').textContent='Vyplň nick aj kód hodiny.';
       try{
-        live=await setupRealtime(code,msg=>{if(msg._teacher&&msg.action==='ended'){alert('Učiteľ ukončil živú hodinu. Pokračovať môžeš samostatne.');state.mode='solo';live=null}});
+        live=await setupRealtime(code,msg=>{
+          if(!msg._teacher)return;
+          if(msg.action==='ended'){ alert('Učiteľ ukončil živú hodinu. Pokračovať môžeš samostatne.'); state.mode='solo'; live=null; }
+          else if(msg.action==='grading'){
+            state.grading=msg.grading;
+            const badge=document.getElementById('gradingBadge');
+            if(badge) badge.outerHTML=MathPlatform.gradingBadgeHtml(state.mode,state.grading);
+          }
+        });
+        // Pošli "joined" hneď, nech si o aktuálne nastavenie známkovania appka
+        // stihne vypýtať skôr, než sa vykreslí prvá aktivita.
+        const joined=live.send({type:'broadcast',event:'progress',payload:{nick,moduleId:selected,stage:'joined',score:0,ts:Date.now()}});
         await startModule(selected,{mode:'live',nick,session:code});
-        await live.send({type:'broadcast',event:'progress',payload:{nick,moduleId:selected,stage:'joined',score:0,ts:Date.now()}});
+        await joined;
       }catch(e){
         console.error('Realtime chyba pri pripájaní žiaka:',e);
         $('#joinInfo').innerHTML='<strong>Nepodarilo sa pripojiť k živej hodine.</strong> Skontroluj pripojenie a skús to znova.';
@@ -270,7 +285,7 @@
     let grading=loadGradingSettings();
     const joinUrl=`${location.origin}${location.pathname}#join/${encodeURIComponent(id)}/${encodeURIComponent(c)}`;
     app.innerHTML=`<div class="card"><div class="eyebrow"><span class="live-dot"></span> ŽIVÁ HODINA</div><h1>${m.topic}</h1><div style="display:flex;gap:28px;align-items:center;flex-wrap:wrap;margin:18px 0"><div><p><strong>Naskenuj QR kód:</strong></p><div id="joinQr" style="background:#fff;padding:12px;border-radius:12px;display:inline-block;min-width:220px;min-height:220px"></div></div><div><p class="muted">Po naskenovaní sa otvorí správny modul aj táto hodina. Žiak zadá už iba nick.</p><p>Kód pre ručné pripojenie:</p><div class="bigcode">${c}</div><p class="muted">Záloha: žiak môže otvoriť platformu → „Mám kód hodiny“ → zadať nick a tento kód.</p></div></div><div id="connect" class="notice">Pripájam živý kanál…</div><div class="row"><button class="btn" id="endLive" disabled>Ukončiť hodinu</button><button class="ghost" onclick="location.hash='method/${id}'">Metodická karta</button><button class="ghost" data-go="teacher-unit/${m.year}/${unitKey(m.unit)}">Späť k témam</button></div></div>
-    <div class="card" style="margin-top:16px"><div class="eyebrow">HODNOTENIE A EXPORT</div><h2>Nastavenie známkovania</h2><div style="display:flex;align-items:center;gap:10px;justify-content:flex-start;margin:14px 0 18px"><input id="gradingEnabled" type="checkbox" ${grading.enabled?'checked':''} style="width:20px;height:20px;margin:0;flex:0 0 auto"><label for="gradingEnabled" style="margin:0;cursor:pointer"><strong>Počítať aj orientačné známky z percent</strong></label></div><div id="gradingFields" style="${grading.enabled?'':'display:none'}"><p class="muted">Zadaj najnižšie percento pre danú známku. Hranice musia klesať.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;max-width:650px">${[1,2,3,4].map(g=>`<div class="field"><label>Známka ${g} od</label><input id="grade${g}" type="number" min="0" max="100" step="1" value="${grading.thresholds[g]}"></div>`).join('')}</div><div id="gradingInfo" class="notice" style="margin-top:10px">${gradingScaleText(grading)}</div></div><div class="row" style="margin-top:14px"><button class="ghost" id="saveGrading">Uložiť nastavenie</button><button class="btn" id="exportResults">Exportovať kompletné výsledky CSV</button></div><p class="muted small-note">Nastavenie sa uloží iba v tomto prehliadači. Export obsahuje súhrn, sebahodnotenie, výsledky podľa zručností aj jednotlivé bodované aktivity žiakov. Zostáva dostupný aj po ukončení hodiny, kým túto stránku neopustíš.</p></div>
+    <div class="card" style="margin-top:16px"><div class="eyebrow">HODNOTENIE A EXPORT</div><h2>Nastavenie známkovania</h2><div style="display:flex;align-items:center;gap:10px;justify-content:flex-start;margin:14px 0 18px"><input id="gradingEnabled" type="checkbox" ${grading.enabled?'checked':''} style="width:20px;height:20px;margin:0;flex:0 0 auto"><label for="gradingEnabled" style="margin:0;cursor:pointer"><strong>Počítať aj orientačné známky z percent</strong></label></div><div id="gradingFields" style="${grading.enabled?'':'display:none'}"><p class="muted">Zadaj najnižšie percento pre danú známku. Hranice musia klesať.</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;max-width:650px">${[1,2,3,4].map(g=>`<div class="field"><label>Známka ${g} od</label><input id="grade${g}" type="number" min="0" max="100" step="1" value="${grading.thresholds[g]}"></div>`).join('')}</div><div id="gradingInfo" class="notice" style="margin-top:10px">${gradingScaleText(grading)}</div></div><div class="row" style="margin-top:14px"><button class="ghost" id="saveGrading">Uložiť nastavenie</button><button class="btn" id="exportResults">Exportovať kompletné výsledky CSV</button></div><p class="muted small-note">Nastavenie sa uloží iba v tomto prehliadači. Export obsahuje súhrn, sebahodnotenie, výsledky podľa zručností aj jednotlivé bodované aktivity žiakov. Zostáva dostupný aj po ukončení hodiny, kým túto stránku neopustíš. Pripojení žiaci hneď uvidia v hlavičke každej aktivity odznak, či sa im táto hodina počíta do známky – aj keď zapneš/vypneš známkovanie počas hodiny.</p></div>
     <div class="card" style="margin-top:16px"><h2>Živá diagnostika</h2><div id="summary" class="muted">Zatiaľ bez výsledkov.</div><div id="students" class="live-list"></div></div>`;
     drawJoinQr('joinQr',joinUrl).catch(e=>{console.error('QR chyba:',e);const el=$('#joinQr');if(el)el.innerHTML='<span class="muted">QR kód sa nepodarilo načítať. Použi textový kód vedľa.</span>';});
     let students={};
@@ -280,6 +295,8 @@
       const s=readGradingFromForm();
       if(!validGradingThresholds(s.thresholds)){const el=$('#gradingInfo');el.className='notice bad';el.innerHTML='<strong>Skontroluj hranice.</strong> Musia byť medzi 0 a 100 a platiť: známka 1 > 2 > 3 > 4.';return;}
       grading=s;saveGradingSettings(grading);const el=$('#gradingInfo');el.className='notice good';el.innerHTML=`<strong>Nastavenie uložené.</strong> ${grading.enabled?gradingScaleText(grading):'Známkovanie je vypnuté.'}`;drawStudents(students,grading);
+      // Pripojení žiaci musia hneď vidieť, či sa im táto hodina počíta do známky.
+      if(live) live.send({type:'broadcast',event:'teacher',payload:{action:'grading',grading}}).catch(()=>{});
     };
     $('#exportResults').onclick=()=>{
       const s=readGradingFromForm();
@@ -328,8 +345,14 @@
       downloadCsv(`${stamp}-${safe||'vysledky-triedy'}.csv`,rows);
     };
     try{
-      const ch=await setupRealtime(c,msg=>{if(msg._teacher)return;students[msg.nick]=msg;drawStudents(students,grading);});
+      const ch=await setupRealtime(c,msg=>{
+        if(msg._teacher)return;
+        students[msg.nick]=msg;drawStudents(students,grading);
+        // Novopripojený žiak ešte nevie, či sa dnes hodnotí – pošli mu aktuálny stav.
+        if(msg.stage==='joined') ch.send({type:'broadcast',event:'teacher',payload:{action:'grading',grading}}).catch(()=>{});
+      });
       live=ch;$('#connect').className='notice good';$('#connect').innerHTML='<strong>Kanál je aktívny.</strong> Výsledky sa neukladajú do databázy.';$('#endLive').disabled=false;
+      ch.send({type:'broadcast',event:'teacher',payload:{action:'grading',grading}}).catch(()=>{});
       $('#endLive').onclick=async()=>{await ch.send({type:'broadcast',event:'teacher',payload:{action:'ended'}});await ch.unsubscribe();live=null;$('#connect').className='notice';$('#connect').innerHTML='<strong>Hodina ukončená.</strong> Výsledky zostávajú na tejto obrazovke, aby si ich mohol/mohla exportovať. Po odchode zo stránky sa zahodia.';$('#endLive').disabled=true;};
     }catch(e){console.error('Realtime chyba:',e);$('#connect').className='notice bad';$('#connect').innerHTML='<strong>Nepodarilo sa pripojiť živý kanál.</strong> Obnov stránku a skús to znova.';}
   }
