@@ -342,7 +342,7 @@ Ak sa zdroje nezhodujú, nemáme potichu vytvoriť vlastnú verziu. Rozpor treba
 
 17. Pri prerábaní existujúceho modulu nemeníme jeho identitu
 
-Pri náhrade hotového/TODO modulu zachovávame:
+Pri náhrade hotového/zástupného modulu zachovávame:
 
 presné id,
 presnú cestu súboru,

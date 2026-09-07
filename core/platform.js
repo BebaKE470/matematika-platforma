@@ -98,7 +98,7 @@
   function readyCount(items) { return items.filter(m => m.status === 'ready').length; }
   function placeholderCount(items) { return items.filter(m => m.status === 'placeholder').length; }
   function openable(m) { return !!m && (m.status === 'ready' || m.status === 'placeholder'); }
-  function statusText(m) { return m.status === 'ready' ? 'Hotové' : m.status === 'placeholder' ? 'TODO' : 'Pripravujeme'; }
+  function statusText(m) { return m.status === 'ready' ? 'Hotové' : m.status === 'placeholder' ? 'Zástupný' : 'Pripravujeme'; }
   function statusClass(m) { return m.status === 'ready' ? '' : 'off'; }
 
   window.MathPlatform = {

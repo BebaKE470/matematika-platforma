@@ -61,7 +61,7 @@
             <span class="home-year-no">0${y}</span>
             <strong>${y}. ročník</strong>
             <small>${labels[y]}</small>
-            <span class="home-year-meta">${MathPlatform.readyCount(mods)} hotové · ${MathPlatform.placeholderCount(mods)} TODO · ${units.length} tematických celkov <b>→</b></span>
+            <span class="home-year-meta">${MathPlatform.readyCount(mods)} hotové · ${MathPlatform.placeholderCount(mods)} zástupné · ${units.length} tematických celkov <b>→</b></span>
           </button>`;
         }).join('')}</div>
       </section>
@@ -114,7 +114,7 @@
         app.innerHTML = `
           ${MathUI.backRow(`catalog/unit/${m.year}/${MathPlatform.unitKey(m.unit)}`, m.unit)}
           <div class="card">
-            <div class="eyebrow">TODO PLACEHOLDER · ${esc(m.unit)} · ${esc(m.lesson)}</div>
+            <div class="eyebrow">ZÁSTUPNÝ MODUL · ${esc(m.unit)} · ${esc(m.lesson)}</div>
             <h1>${esc(mod.student.title)}</h1>
             <h2>${esc(mod.student.subtitle)}</h2>
             <p>${esc(mod.student.intro)}</p>

@@ -39,7 +39,7 @@
       const mods = P.yearModules(y), units = P.unitsForYear(y);
       return `<button class="year-card" data-go="${basePath}/${y}">
         <span class="year-number">${y}.</span>
-        <span><strong>ročník</strong><small>${units.length} ${units.length === 1 ? 'tematický celok' : 'tematické celky'} · ${P.readyCount(mods)} hotové · ${P.placeholderCount(mods)} TODO</small></span>
+        <span><strong>ročník</strong><small>${units.length} ${units.length === 1 ? 'tematický celok' : 'tematické celky'} · ${P.readyCount(mods)} hotové · ${P.placeholderCount(mods)} zástupné</small></span>
         <span class="chevron">→</span>
       </button>`;
     }).join('')}</div>`;
@@ -51,7 +51,7 @@
     return `<div class="unit-list">${units.map((u, i) => `
       <button class="unit-card" data-go="${basePath}/${year}/${P.unitKey(u.name)}">
         <span class="unit-order">${pad2(i + 1)}</span>
-        <span class="unit-main"><strong>${esc(u.name)}</strong><small>${u.modules.length} ${u.modules.length === 1 ? 'téma' : 'témy'} · ${P.readyCount(u.modules)} hotové · ${P.placeholderCount(u.modules)} TODO</small></span>
+        <span class="unit-main"><strong>${esc(u.name)}</strong><small>${u.modules.length} ${u.modules.length === 1 ? 'téma' : 'témy'} · ${P.readyCount(u.modules)} hotové · ${P.placeholderCount(u.modules)} zástupné</small></span>
         <span class="chevron">→</span>
       </button>`).join('')}</div>`;
   }
@@ -66,7 +66,7 @@
   function topicRow(m, opts) {
     const teacherMode = !!(opts && opts.teacherMode);
     const canOpen = P.openable(m);
-    const isTodo = m.status === 'placeholder';
+    const isPlaceholder = m.status === 'placeholder';
 
     const skillsHtml = (!teacherMode && m.status === 'ready')
       ? `<div>${(m.skills || []).map(s => `<span class="tag">${esc(s)}</span>`).join('')}</div>`
@@ -78,10 +78,10 @@
         actionsHtml = `
           <button class="ghost" data-go="method/${m.id}">Metodická karta</button>
           ${m.status === 'ready' ? `<button class="btn" data-go="teacher-live/${m.id}">Živá hodina</button>` : ''}
-          <button class="ghost" data-go="module/${m.id}">${isTodo ? 'Zobraziť TODO' : 'Otvoriť modul'}</button>
+          <button class="ghost" data-go="module/${m.id}">${isPlaceholder ? 'Zobraziť náhľad' : 'Otvoriť modul'}</button>
         `;
       } else {
-        actionsHtml = `<button class="${isTodo ? 'ghost' : 'btn'}" data-go="module/${m.id}">${isTodo ? 'Zobraziť TODO' : 'Otvoriť'}</button>`;
+        actionsHtml = `<button class="${isPlaceholder ? 'ghost' : 'btn'}" data-go="module/${m.id}">${isPlaceholder ? 'Zobraziť náhľad' : 'Otvoriť'}</button>`;
       }
     }
 

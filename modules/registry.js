@@ -3,10 +3,10 @@
 
   unitOrder   = poradie tematického celku v ročníku
   lessonOrder = číslo prvej hodiny uvedenej v tematickom pláne
-  status      = 'ready' pri hotovom module, 'placeholder' pri technicky prepojenom TODO module
+  status      = 'ready' pri hotovom module, 'placeholder' pri technicky prepojenom zástupnom module
   file        = cieľová cesta, kam patrí obsahový .js súbor
 
-  Zostávajúce témy majú vytvorený TODO placeholder na presnej ceste.
+  Zostávajúce témy majú vytvorený zástupný súbor na presnej ceste.
   Pri spracovaní témy sa nahradí obsah súboru a status sa zmení na 'ready'.
 */
 
@@ -14,7 +14,7 @@
   function placeholder({ id, year, unit, unitOrder, topic, lesson, lessonOrder, file }) {
     return {
       id, year, unit, unitOrder, topic, lesson, lessonOrder,
-      time: 'TODO', status: 'placeholder', type: 'TODO – zástupný modul', skills: [], file,
+      time: '—', status: 'placeholder', type: 'Zástupný modul', skills: [], file,
     };
   }
 
