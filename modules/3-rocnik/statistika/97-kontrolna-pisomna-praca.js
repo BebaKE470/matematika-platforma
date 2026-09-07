@@ -1,29 +1,132 @@
-/*
-  TODO PLACEHOLDER
-  Tento súbor je zámerne iba zástupný modul.
-  Neskôr sa nahradí plnohodnotným interaktívnym modulom bez zmeny jeho ID a cesty v registry.js.
-*/
 MathPlatform.registerModule({
-  id: "3-u07-h097",
+  id: '3-u07-h097',
   teacher: {
-    placement: "3. ročník · Štatistika · Hodina 97",
-    prerequisites: ["TODO – doplniť pri spracovaní modulu."],
-    planContent: ["TODO – prevziať presne z aktuálneho tematického plánu pri spracovaní modulu."],
-    planPerformance: ["TODO – prevziať iba to, čo je v aktuálnom tematickom pláne; ak bunka nie je vyplnená, nič nevymýšľať."],
-    goals: ["TODO – doplniť ciele až pri plnohodnotnom spracovaní."],
-    competencies: ["TODO – doplniť pri spracovaní modulu."],
-    enrichment: ["TODO – návrh maturitného štandardu použiť iba ako prirodzené obohatenie, nie ako určujúce učivo."],
-    estimatedTime: "TODO – cieľ približne 15 minút aktívnej práce, ak charakter hodiny nevyžaduje inak.",
-    notebook: "TODO – zachovať zápis do zošita → kontrola/vysvetlenie → zápis do zošita.",
-    diagnostics: ["TODO – doplniť diagnostické body pri spracovaní modulu."],
-    flow: ["TODO – vytvoriť názorný, vekovo primeraný a obsahovo presný priebeh hodiny."],
-    partialUse: ["TODO – určiť, ktoré časti sa dajú použiť samostatne."]
+    placement: '3. ročník · Štatistika · 97. hodina: Kontrolná písomná práca',
+    prerequisites: [
+      'celá téma Štatistika (hodiny 91–96)',
+    ],
+    planContent: [
+      'Výkonový štandard celku (z tematického plánu): Vedieť vytvoriť tabuľku početnosti. Poznať vzorce na výpočet štat. char. polohy a variability. Vedieť vypočítať charakteristiky úrovne a variability. Určiť štatistické charakteristiky zo zadania slovnej úlohy. Vie aplikovať získané poznatky a vzťahy v úlohách z praxe.',
+      'Táto hodina je vyhradená na kontrolnú písomnú prácu z celého celku.',
+    ],
+    planPerformance: [
+      'Téma hodiny podľa plánu: „Kontrolná písomná práca“.',
+    ],
+    goals: [
+      'Kognitívny cieľ: žiak preukáže, že ovláda tabuľku početnosti, charakteristiky polohy a variability.',
+      'Afektívny cieľ: žiak pristupuje k písomnej práci pokojne, so systematickým postupom.',
+      'Praktický cieľ: žiak si pred písomkou samostatne overí, ktoré časti témy ešte potrebuje zopakovať.',
+      'Kritérium úspechu: žiak v tejto rozcvičke pred písomkou správne vyrieši aspoň 4 z 5 úloh.',
+    ],
+    competencies: [
+      'sebahodnotenie a zodpovednosť za vlastnú prípravu',
+      'systematické opakovanie väčšieho celku učiva',
+      'digitálna kompetencia pri účelnom použití interaktívnej platformy',
+    ],
+    enrichment: [
+      'Bez doplňujúceho obohatenia — hodina je vyhradená na písomnú prácu podľa tematického plánu.',
+    ],
+    flow: [
+      '0–5 min – krátka diagnostická rozcvička na platforme (táto aktivita) ako posledná kontrola pred písomkou.',
+      '5–40 min – samotná písomná práca (mimo aplikácie, na papieri).',
+      '40–45 min – zber prác, krátke zhodnotenie priebehu, prípadne zhodnotenie celého školského roka v tejto téme.',
+    ],
+    diagnostics: [
+      'ktorá zručnosť z celej témy robí žiakovi najviac problém tesne pred písomkou',
+    ],
+    partialUse: [
+      'Túto krátku rozcvičku možno vynechať, ak trieda potrebuje celú hodinu na samotnú písomku.',
+      'Pomôcky: papier na písomnú prácu, písacie potreby; platforma iba na úvodnú rozcvičku.',
+      'Hodnotenie: samotná písomná práca sa hodnotí známkou mimo platformy; rozcvička v aplikácii slúži len ako posledná spätná väzba pred písomkou, XP nie sú známka.',
+    ],
   },
   student: {
-    title: "Kontrolná písomná práca",
-    subtitle: "TODO – modul čaká na plnohodnotné spracovanie",
-    estimatedTime: "TODO",
-    intro: "Téma je už technicky prepojená s platformou. Obsah tohto modulu ešte nie je spracovaný; tento súbor je iba zástupný placeholder.",
-    activities: []
-  }
+    title: 'Rozcvička pred písomnou prácou',
+    subtitle: 'Téma 97 · Štatistika',
+    intro: 'Krátka rozcvička na overenie, či si pripravený/á na písomnú prácu z celej témy.',
+    estimatedTime: '10–14 min',
+    activities: [
+      {
+        id: 'intro',
+        type: 'info',
+        phase: 'POCHOP',
+        title: 'Posledná kontrola pred písomkou',
+        html: '<p>Táto krátka rozcvička preverí najdôležitejšie body celej témy: tabuľku početnosti, charakteristiky polohy a charakteristiky variability.</p>',
+        continueLabel: 'Pokračovať',
+      },
+      {
+        id: 'q1',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'tabuľka početnosti',
+        question: 'Z 30 žiakov chodí pešo do školy 6. Aká je relatívna početnosť žiakov chodiacich pešo?',
+        options: ['6%', '20%', '6/30=0,2'],
+        answer: 1,
+        correct: 'Správne. 6/30=0,2=20%.',
+        hint: 'Vydeľ absolútnu početnosť (6) celkovým počtom (30) a preveď na percentá.',
+      },
+      {
+        id: 'q2',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'aritmetický priemer',
+        question: 'Vypočítaj priemer hodnôt 5, 10, 15, 20.',
+        options: ['15', '10', '12,5'],
+        answer: 2,
+        correct: 'Správne. (5+10+15+20)/4=50/4=12,5.',
+        hint: 'Sčítaj všetky hodnoty a vydeľ ich počtom (4).',
+      },
+      {
+        id: 'q3',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'medián',
+        question: 'Vypočítaj medián hodnôt 3, 8, 1, 6 (párny počet — najprv usporiadaj).',
+        options: ['4,5', '6', '3'],
+        answer: 0,
+        correct: 'Správne. Usporiadané: 1,3,6,8 — dve prostredné sú 3 a 6, medián=(3+6)/2=4,5.',
+        hint: 'Usporiadaj hodnoty a nájdi priemer dvoch prostredných.',
+      },
+      {
+        id: 'q4',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'variabilita',
+        question: 'Dva súbory majú rovnaký priemer, ale súbor A má nižšiu smerodajnú odchýlku ako súbor B. Čo to znamená?',
+        options: [
+          'Súbor A má hodnoty viac rozptýlené okolo priemeru.',
+          'Súbor A má hodnoty bližšie k priemeru (menšiu rozptýlenosť) ako súbor B.',
+          'Oba súbory majú identické hodnoty.',
+        ],
+        answer: 1,
+        correct: 'Správne. Nižšia smerodajná odchýlka znamená menšiu rozptýlenosť okolo priemeru.',
+        hint: 'Čo vyjadruje nižšia smerodajná odchýlka o rozptýlenosti hodnôt?',
+      },
+      {
+        id: 'q5',
+        type: 'numberInput',
+        phase: 'OVER',
+        skill: 'kombinácia zručností',
+        title: 'Vypočítaj variačné rozpätie',
+        prompt: 'Vypočítaj variačné rozpätie hodnôt 7, 15, 3, 20, 9.',
+        validate: 'exact',
+        answer: 17,
+        success: 'Správne. Rozpätie=20−3=17.',
+        hint: 'Rozpätie=najväčšia hodnota−najmenšia hodnota.',
+        reveal: '20−3=17.',
+      },
+      {
+        id: 'reflection',
+        type: 'reflection',
+        phase: 'ZÁVER',
+        title: 'Si pripravený/á na písomku?',
+        skills: [
+          'tabuľka početnosti a priemer',
+          'medián a variabilita',
+          'interpretácia výsledkov',
+        ],
+        prompt: 'Označ, ktoré časti témy ešte potrebuješ zopakovať pred písomkou. Nie je to známka.',
+      },
+    ],
+  },
 });

@@ -1,29 +1,128 @@
-/*
-  TODO PLACEHOLDER
-  Tento súbor je zámerne iba zástupný modul.
-  Neskôr sa nahradí plnohodnotným interaktívnym modulom bez zmeny jeho ID a cesty v registry.js.
-*/
 MathPlatform.registerModule({
-  id: "3-u05-h078",
+  id: '3-u05-h078',
   teacher: {
-    placement: "3. ročník · Kombinatorika · Hodina 78",
-    prerequisites: ["TODO – doplniť pri spracovaní modulu."],
-    planContent: ["TODO – prevziať presne z aktuálneho tematického plánu pri spracovaní modulu."],
-    planPerformance: ["TODO – prevziať iba to, čo je v aktuálnom tematickom pláne; ak bunka nie je vyplnená, nič nevymýšľať."],
-    goals: ["TODO – doplniť ciele až pri plnohodnotnom spracovaní."],
-    competencies: ["TODO – doplniť pri spracovaní modulu."],
-    enrichment: ["TODO – návrh maturitného štandardu použiť iba ako prirodzené obohatenie, nie ako určujúce učivo."],
-    estimatedTime: "TODO – cieľ približne 15 minút aktívnej práce, ak charakter hodiny nevyžaduje inak.",
-    notebook: "TODO – zachovať zápis do zošita → kontrola/vysvetlenie → zápis do zošita.",
-    diagnostics: ["TODO – doplniť diagnostické body pri spracovaní modulu."],
-    flow: ["TODO – vytvoriť názorný, vekovo primeraný a obsahovo presný priebeh hodiny."],
-    partialUse: ["TODO – určiť, ktoré časti sa dajú použiť samostatne."]
+    placement: '3. ročník · Kombinatorika · 78. hodina: Kontrolná písomná práca',
+    prerequisites: [
+      'celá téma Kombinatorika (hodiny 66–77)',
+    ],
+    planContent: [
+      'Výkonový štandard celku (z tematického plánu): Vedieť použiť pravidlo súčinu. Vedieť použiť variácie. Vedieť použiť kombinácie. Vedieť použiť permutácie. Poznať Pascalov trojuholník. Vedieť umocniť výraz pomocou binomickej vety.',
+      'Táto hodina je vyhradená na kontrolnú písomnú prácu z celého celku.',
+    ],
+    planPerformance: [
+      'Téma hodiny podľa plánu: „Kontrolná písomná práca“.',
+    ],
+    goals: [
+      'Kognitívny cieľ: žiak preukáže, že ovláda pravidlo súčinu, faktoriál, variácie, permutácie a kombinácie.',
+      'Afektívny cieľ: žiak pristupuje k písomnej práci pokojne, so systematickým postupom.',
+      'Praktický cieľ: žiak si pred písomkou samostatne overí, ktoré časti témy ešte potrebuje zopakovať.',
+      'Kritérium úspechu: žiak v tejto rozcvičke pred písomkou správne vyrieši aspoň 4 z 5 úloh.',
+    ],
+    competencies: [
+      'sebahodnotenie a zodpovednosť za vlastnú prípravu',
+      'systematické opakovanie väčšieho celku učiva',
+      'digitálna kompetencia pri účelnom použití interaktívnej platformy',
+    ],
+    enrichment: [
+      'Bez doplňujúceho obohatenia — hodina je vyhradená na písomnú prácu podľa tematického plánu.',
+    ],
+    flow: [
+      '0–5 min – krátka diagnostická rozcvička na platforme (táto aktivita) ako posledná kontrola pred písomkou.',
+      '5–40 min – samotná písomná práca (mimo aplikácie, na papieri).',
+      '40–45 min – zber prác, krátke zhodnotenie priebehu.',
+    ],
+    diagnostics: [
+      'ktorá zručnosť z celej témy robí žiakovi najviac problém tesne pred písomkou',
+    ],
+    partialUse: [
+      'Túto krátku rozcvičku možno vynechať, ak trieda potrebuje celú hodinu na samotnú písomku.',
+      'Pomôcky: papier na písomnú prácu, písacie potreby; platforma iba na úvodnú rozcvičku.',
+      'Hodnotenie: samotná písomná práca sa hodnotí známkou mimo platformy; rozcvička v aplikácii slúži len ako posledná spätná väzba pred písomkou, XP nie sú známka.',
+    ],
   },
   student: {
-    title: "Kontrolná písomná práca",
-    subtitle: "TODO – modul čaká na plnohodnotné spracovanie",
-    estimatedTime: "TODO",
-    intro: "Téma je už technicky prepojená s platformou. Obsah tohto modulu ešte nie je spracovaný; tento súbor je iba zástupný placeholder.",
-    activities: []
-  }
+    title: 'Rozcvička pred písomnou prácou',
+    subtitle: 'Téma 78 · Kombinatorika',
+    intro: 'Krátka rozcvička na overenie, či si pripravený/á na písomnú prácu z celej témy.',
+    estimatedTime: '10–14 min',
+    activities: [
+      {
+        id: 'intro',
+        type: 'info',
+        phase: 'POCHOP',
+        title: 'Posledná kontrola pred písomkou',
+        html: '<p>Táto krátka rozcvička preverí najdôležitejšie body celej témy: pravidlo súčinu, faktoriál, variácie, permutácie a kombinácie.</p>',
+        continueLabel: 'Pokračovať',
+      },
+      {
+        id: 'q1',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'pravidlo súčinu',
+        question: 'Menu má 3 predjedlá a 4 hlavné jedlá. Koľko rôznych menu (predjedlo+hlavné jedlo) existuje?',
+        options: ['7', '3', '12'],
+        answer: 2,
+        correct: 'Správne. 3·4=12.',
+        hint: 'Vynásob počty možností pre obe voľby.',
+      },
+      {
+        id: 'q2',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'faktoriál',
+        question: 'Koľkými spôsobmi môže 4 rôznych žiakov stáť v rade?',
+        options: ['4!=24', '4²=16', '4·3=12'],
+        answer: 0,
+        correct: 'Správne. Permutácia P(4)=4!=24.',
+        hint: 'Usporiadanie VŠETKÝCH 4 rôznych prvkov je P(n)=n!.',
+      },
+      {
+        id: 'q3',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'variácia vs. kombinácia',
+        question: 'Z 8 žiakov vyberáme predsedu a podpredsedu (rôzne funkcie). Ktorý vzorec použiješ?',
+        options: ['kombinácia C(2,8)', 'variácia V(2,8)', 'permutácia P(8)'],
+        answer: 1,
+        correct: 'Správne. Poradie záleží (rôzne funkcie), vyberáme iba 2 z 8 — variácia.',
+        hint: 'Záleží na poradí výberu (rôzne funkcie)?',
+      },
+      {
+        id: 'q4',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'kombinačné číslo',
+        question: 'Vypočítaj (6 nad 2)=6!/(2!·4!).',
+        options: ['15', '30', '12'],
+        answer: 0,
+        correct: 'Správne. 6·5/2=15.',
+        hint: 'Vypočítaj V(2,6)=6·5=30, potom vydeľ 2!=2.',
+      },
+      {
+        id: 'q5',
+        type: 'numberInput',
+        phase: 'OVER',
+        skill: 'kombinácia zručností',
+        title: 'Vypočítaj počet kombinácií',
+        prompt: 'Z 5 kamarátov vyberáme 2, ktorí spolu pôjdu na výlet (poradie nezáleží). Koľko rôznych dvojíc existuje? C(2,5)=(5 nad 2)',
+        validate: 'exact',
+        answer: 10,
+        success: 'Správne. (5 nad 2)=5·4/2=10.',
+        hint: 'Vypočítaj V(2,5)=5·4=20, potom vydeľ 2!=2.',
+        reveal: '5·4/2=10.',
+      },
+      {
+        id: 'reflection',
+        type: 'reflection',
+        phase: 'ZÁVER',
+        title: 'Si pripravený/á na písomku?',
+        skills: [
+          'pravidlo súčinu a faktoriál',
+          'variácia vs. kombinácia',
+          'výpočet kombinačného čísla',
+        ],
+        prompt: 'Označ, ktoré časti témy ešte potrebuješ zopakovať pred písomkou. Nie je to známka.',
+      },
+    ],
+  },
 });

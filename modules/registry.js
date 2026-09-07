@@ -1946,38 +1946,241 @@
   },
 
   // 3.05 · Kombinatorika
-  placeholder({ id: '3-u05-h066', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Kombinatorické pravidlo súčinu", lesson: "Hodina 66", lessonOrder: 66, file: "modules/3-rocnik/kombinatorika/66-kombinatoricke-pravidlo-sucinu.js" }),
-  placeholder({ id: '3-u05-h067', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Faktoriál čísla", lesson: "Hodina 67", lessonOrder: 67, file: "modules/3-rocnik/kombinatorika/67-faktorial-cisla.js" }),
-  placeholder({ id: '3-u05-h068', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Výrazy s faktoriálmi", lesson: "Hodina 68", lessonOrder: 68, file: "modules/3-rocnik/kombinatorika/68-vyrazy-s-faktorialmi.js" }),
-  placeholder({ id: '3-u05-h069', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Riešenie úloh", lesson: "Hodina 69", lessonOrder: 69, file: "modules/3-rocnik/kombinatorika/69-riesenie-uloh.js" }),
-  placeholder({ id: '3-u05-h070', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Variácie s a bez opakovania", lesson: "Hodina 70", lessonOrder: 70, file: "modules/3-rocnik/kombinatorika/70-variacie-s-a-bez-opakovania.js" }),
-  placeholder({ id: '3-u05-h071', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Permutácie", lesson: "Hodina 71", lessonOrder: 71, file: "modules/3-rocnik/kombinatorika/71-permutacie.js" }),
-  placeholder({ id: '3-u05-h072', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Riešenie úloh – variácie a permutácie", lesson: "Hodina 72", lessonOrder: 72, file: "modules/3-rocnik/kombinatorika/72-riesenie-uloh-variacie-a-permutacie.js" }),
-  placeholder({ id: '3-u05-h073', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Pascalov trojuholník, vlastnosti komb. čísel", lesson: "Hodina 73", lessonOrder: 73, file: "modules/3-rocnik/kombinatorika/73-pascalov-trojuholnik-vlastnosti-komb-cisel.js" }),
-  placeholder({ id: '3-u05-h074', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Riešenie rovníc s komb. číslami", lesson: "Hodina 74", lessonOrder: 74, file: "modules/3-rocnik/kombinatorika/74-riesenie-rovnic-s-komb-cislami.js" }),
-  placeholder({ id: '3-u05-h075', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Kombinácie", lesson: "Hodina 75", lessonOrder: 75, file: "modules/3-rocnik/kombinatorika/75-kombinacie.js" }),
-  placeholder({ id: '3-u05-h076', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Riešenie úloh", lesson: "Hodina 76", lessonOrder: 76, file: "modules/3-rocnik/kombinatorika/76-riesenie-uloh.js" }),
-  placeholder({ id: '3-u05-h077', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Systematizácia učiva", lesson: "Hodina 77", lessonOrder: 77, file: "modules/3-rocnik/kombinatorika/77-systematizacia-uciva.js" }),
-  placeholder({ id: '3-u05-h078', year: 3, unit: "Kombinatorika", unitOrder: 5, topic: "Kontrolná písomná práca", lesson: "Hodina 78", lessonOrder: 78, file: "modules/3-rocnik/kombinatorika/78-kontrolna-pisomna-praca.js" }),
+  {
+    id: '3-u05-h066', year: 3, unit: "Kombinatorika", unitOrder: 5,
+    topic: "Kombinatorické pravidlo súčinu", lesson: "Hodina 66", lessonOrder: 66,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["aplikácia pravidla súčinu", "rozpoznanie nezávislých volieb", "argumentácia"],
+    file: "modules/3-rocnik/kombinatorika/66-kombinatoricke-pravidlo-sucinu.js"
+  },
+  {
+    id: '3-u05-h067', year: 3, unit: "Kombinatorika", unitOrder: 5,
+    topic: "Faktoriál čísla", lesson: "Hodina 67", lessonOrder: 67,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["výpočet faktoriálu", "zjednodušenie výrazu s faktoriálmi", "argumentácia"],
+    file: "modules/3-rocnik/kombinatorika/67-faktorial-cisla.js"
+  },
+  {
+    id: '3-u05-h068', year: 3, unit: "Kombinatorika", unitOrder: 5,
+    topic: "Výrazy s faktoriálmi", lesson: "Hodina 68", lessonOrder: 68,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["zjednodušenie výrazu s faktoriálmi", "overenie dosadením konkrétneho n", "argumentácia"],
+    file: "modules/3-rocnik/kombinatorika/68-vyrazy-s-faktorialmi.js"
+  },
+  {
+    id: '3-u05-h069', year: 3, unit: "Kombinatorika", unitOrder: 5,
+    topic: "Riešenie úloh", lesson: "Hodina 69", lessonOrder: 69,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozhodovanie medzi pravidlom súčinu a faktoriálom", "riešenie kombinovanej úlohy", "argumentácia"],
+    file: "modules/3-rocnik/kombinatorika/69-riesenie-uloh.js"
+  },
+  {
+    id: '3-u05-h070', year: 3, unit: "Kombinatorika", unitOrder: 5,
+    topic: "Variácie s a bez opakovania", lesson: "Hodina 70", lessonOrder: 70,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["variácia bez opakovania", "variácia s opakovaním", "argumentácia"],
+    file: "modules/3-rocnik/kombinatorika/70-variacie-s-a-bez-opakovania.js"
+  },
+  {
+    id: '3-u05-h071', year: 3, unit: "Kombinatorika", unitOrder: 5,
+    topic: "Permutácie", lesson: "Hodina 71", lessonOrder: 71,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["permutácia bez opakovania", "permutácia s opakovaním", "argumentácia"],
+    file: "modules/3-rocnik/kombinatorika/71-permutacie.js"
+  },
+  {
+    id: '3-u05-h072', year: 3, unit: "Kombinatorika", unitOrder: 5,
+    topic: "Riešenie úloh – variácie a permutácie", lesson: "Hodina 72", lessonOrder: 72,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozpoznanie variácie vs. permutácie", "rozpoznanie s/bez opakovania", "argumentácia"],
+    file: "modules/3-rocnik/kombinatorika/72-riesenie-uloh-variacie-a-permutacie.js"
+  },
+  {
+    id: '3-u05-h073', year: 3, unit: "Kombinatorika", unitOrder: 5,
+    topic: "Pascalov trojuholník, vlastnosti komb. čísel", lesson: "Hodina 73", lessonOrder: 73,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["výpočet kombinačného čísla", "vlastnosť symetrie a Pascalov trojuholník", "argumentácia"],
+    file: "modules/3-rocnik/kombinatorika/73-pascalov-trojuholnik-vlastnosti-komb-cisel.js"
+  },
+  {
+    id: '3-u05-h074', year: 3, unit: "Kombinatorika", unitOrder: 5,
+    topic: "Riešenie rovníc s komb. číslami", lesson: "Hodina 74", lessonOrder: 74,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozpísanie kombinačného čísla na výraz s n", "riešenie rovnice s kombinačným číslom", "argumentácia"],
+    file: "modules/3-rocnik/kombinatorika/74-riesenie-rovnic-s-komb-cislami.js"
+  },
+  {
+    id: '3-u05-h075', year: 3, unit: "Kombinatorika", unitOrder: 5,
+    topic: "Kombinácie", lesson: "Hodina 75", lessonOrder: 75,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozpoznanie kombinácie vs. variácie", "výpočet kombinácie", "argumentácia"],
+    file: "modules/3-rocnik/kombinatorika/75-kombinacie.js"
+  },
+  {
+    id: '3-u05-h076', year: 3, unit: "Kombinatorika", unitOrder: 5,
+    topic: "Riešenie úloh", lesson: "Hodina 76", lessonOrder: 76,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozpoznanie typu kombinatorického výberu", "výpočet naprieč všetkými typmi", "argumentácia"],
+    file: "modules/3-rocnik/kombinatorika/76-riesenie-uloh.js"
+  },
+  {
+    id: '3-u05-h077', year: 3, unit: "Kombinatorika", unitOrder: 5,
+    topic: "Systematizácia učiva", lesson: "Hodina 77", lessonOrder: 77,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozpoznanie typu kombinatorického výberu", "výpočet naprieč celou témou", "argumentácia"],
+    file: "modules/3-rocnik/kombinatorika/77-systematizacia-uciva.js"
+  },
+  {
+    id: '3-u05-h078', year: 3, unit: "Kombinatorika", unitOrder: 5,
+    topic: "Kontrolná písomná práca", lesson: "Hodina 78", lessonOrder: 78,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička → kontrolné otázky z celej témy → sebahodnotenie",
+    skills: ["pravidlo súčinu a faktoriál", "variácia vs. kombinácia", "výpočet kombinačného čísla"],
+    file: "modules/3-rocnik/kombinatorika/78-kontrolna-pisomna-praca.js"
+  },
 
   // 3.06 · Pravdepodobnosť
-  placeholder({ id: '3-u06-h080', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Náhodný pokus a náhodný jav", lesson: "Hodina 80", lessonOrder: 80, file: "modules/3-rocnik/pravdepodobnost/80-nahodny-pokus-a-nahodny-jav.js" }),
-  placeholder({ id: '3-u06-h081', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Pravdepodobnosť náhodného javu", lesson: "Hodina 81", lessonOrder: 81, file: "modules/3-rocnik/pravdepodobnost/81-pravdepodobnost-nahodneho-javu.js" }),
-  placeholder({ id: '3-u06-h082', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Riešenie úloh", lesson: "Hodina 82", lessonOrder: 82, file: "modules/3-rocnik/pravdepodobnost/82-riesenie-uloh.js" }),
-  placeholder({ id: '3-u06-h083', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Pravdepodobnosť zjednotenia a prieniku javov", lesson: "Hodina 83", lessonOrder: 83, file: "modules/3-rocnik/pravdepodobnost/83-pravdepodobnost-zjednotenia-a-prieniku-javov.js" }),
-  placeholder({ id: '3-u06-h084', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Riešenie úloh", lesson: "Hodina 84", lessonOrder: 84, file: "modules/3-rocnik/pravdepodobnost/84-riesenie-uloh.js" }),
-  placeholder({ id: '3-u06-h085', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Nezávislé pokusy", lesson: "Hodina 85", lessonOrder: 85, file: "modules/3-rocnik/pravdepodobnost/85-nezavisle-pokusy.js" }),
-  placeholder({ id: '3-u06-h086', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Bernouliho schéma", lesson: "Hodina 86", lessonOrder: 86, file: "modules/3-rocnik/pravdepodobnost/86-bernouliho-schema.js" }),
-  placeholder({ id: '3-u06-h087', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Opakovanie", lesson: "Hodina 87", lessonOrder: 87, file: "modules/3-rocnik/pravdepodobnost/87-opakovanie.js" }),
-  placeholder({ id: '3-u06-h090', year: 3, unit: "Pravdepodobnosť", unitOrder: 6, topic: "Kontrolná písomná práca", lesson: "Hodina 90", lessonOrder: 90, file: "modules/3-rocnik/pravdepodobnost/90-kontrolna-pisomna-praca.js" }),
+  {
+    id: '3-u06-h080', year: 3, unit: "Pravdepodobnosť", unitOrder: 6,
+    topic: "Náhodný pokus a náhodný jav", lesson: "Hodina 80", lessonOrder: 80,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozoznanie elementárneho a náhodného javu", "určenie opačného, istého a nemožného javu", "argumentácia"],
+    file: "modules/3-rocnik/pravdepodobnost/80-nahodny-pokus-a-nahodny-jav.js"
+  },
+  {
+    id: '3-u06-h081', year: 3, unit: "Pravdepodobnosť", unitOrder: 6,
+    topic: "Pravdepodobnosť náhodného javu", lesson: "Hodina 81", lessonOrder: 81,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["klasická definícia pravdepodobnosti", "výpočet pravdepodobnosti pomocou kombinácií", "argumentácia"],
+    file: "modules/3-rocnik/pravdepodobnost/81-pravdepodobnost-nahodneho-javu.js"
+  },
+  {
+    id: '3-u06-h082', year: 3, unit: "Pravdepodobnosť", unitOrder: 6,
+    topic: "Riešenie úloh", lesson: "Hodina 82", lessonOrder: 82,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["výpočet pravdepodobnosti v rôznych kontextoch", "presné čítanie zadania (aspoň, presne, obaja)", "argumentácia"],
+    file: "modules/3-rocnik/pravdepodobnost/82-riesenie-uloh.js"
+  },
+  {
+    id: '3-u06-h083', year: 3, unit: "Pravdepodobnosť", unitOrder: 6,
+    topic: "Pravdepodobnosť zjednotenia a prieniku javov", lesson: "Hodina 83", lessonOrder: 83,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["vzorec pre zjednotenie javov", "rozpoznanie nezlučiteľných javov", "argumentácia"],
+    file: "modules/3-rocnik/pravdepodobnost/83-pravdepodobnost-zjednotenia-a-prieniku-javov.js"
+  },
+  {
+    id: '3-u06-h084', year: 3, unit: "Pravdepodobnosť", unitOrder: 6,
+    topic: "Riešenie úloh", lesson: "Hodina 84", lessonOrder: 84,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["určenie prieniku javov", "výpočet zjednotenia v rôznych kontextoch", "argumentácia"],
+    file: "modules/3-rocnik/pravdepodobnost/84-riesenie-uloh.js"
+  },
+  {
+    id: '3-u06-h085', year: 3, unit: "Pravdepodobnosť", unitOrder: 6,
+    topic: "Nezávislé pokusy", lesson: "Hodina 85", lessonOrder: 85,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozpoznanie nezávislých a závislých javov", "súčinové pravidlo pre nezávislé javy", "argumentácia"],
+    file: "modules/3-rocnik/pravdepodobnost/85-nezavisle-pokusy.js"
+  },
+  {
+    id: '3-u06-h086', year: 3, unit: "Pravdepodobnosť", unitOrder: 6,
+    topic: "Bernouliho schéma", lesson: "Hodina 86", lessonOrder: 86,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["identifikácia n, k, p, q zo zadania", "výpočet Bernoulliho schémy", "argumentácia"],
+    file: "modules/3-rocnik/pravdepodobnost/86-bernouliho-schema.js"
+  },
+  {
+    id: '3-u06-h087', year: 3, unit: "Pravdepodobnosť", unitOrder: 6,
+    topic: "Opakovanie", lesson: "Hodina 87", lessonOrder: 87,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["klasická definícia a zjednotenie javov", "nezávislosť a Bernoulliho schéma", "argumentácia"],
+    file: "modules/3-rocnik/pravdepodobnost/87-opakovanie.js"
+  },
+  {
+    id: '3-u06-h090', year: 3, unit: "Pravdepodobnosť", unitOrder: 6,
+    topic: "Kontrolná písomná práca", lesson: "Hodina 90", lessonOrder: 90,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička → kontrolné otázky z celej témy → sebahodnotenie",
+    skills: ["náhodný jav a klasická definícia", "zjednotenie a nezávislosť javov", "Bernoulliho schéma"],
+    file: "modules/3-rocnik/pravdepodobnost/90-kontrolna-pisomna-praca.js"
+  },
 
   // 3.07 · Štatistika
-  placeholder({ id: '3-u07-h091', year: 3, unit: "Štatistika", unitOrder: 7, topic: "Štatistický súbor, jednotka, znak, rozdelenie početnosti", lesson: "Hodina 91", lessonOrder: 91, file: "modules/3-rocnik/statistika/91-statisticky-subor-jednotka-znak-rozdelenie-pocetnosti.js" }),
-  placeholder({ id: '3-u07-h092', year: 3, unit: "Štatistika", unitOrder: 7, topic: "Štat. charakteristiky polohy", lesson: "Hodina 92", lessonOrder: 92, file: "modules/3-rocnik/statistika/92-stat-charakteristiky-polohy.js" }),
-  placeholder({ id: '3-u07-h093', year: 3, unit: "Štatistika", unitOrder: 7, topic: "Riešenie úloh", lesson: "Hodina 93", lessonOrder: 93, file: "modules/3-rocnik/statistika/93-riesenie-uloh.js" }),
-  placeholder({ id: '3-u07-h094', year: 3, unit: "Štatistika", unitOrder: 7, topic: "Štat. charakteristiky variability", lesson: "Hodina 94", lessonOrder: 94, file: "modules/3-rocnik/statistika/94-stat-charakteristiky-variability.js" }),
-  placeholder({ id: '3-u07-h095', year: 3, unit: "Štatistika", unitOrder: 7, topic: "Riešenie praktických úloh", lesson: "Hodina 95", lessonOrder: 95, file: "modules/3-rocnik/statistika/95-riesenie-praktickych-uloh.js" }),
-  placeholder({ id: '3-u07-h096', year: 3, unit: "Štatistika", unitOrder: 7, topic: "Systematizácia učiva", lesson: "Hodina 96", lessonOrder: 96, file: "modules/3-rocnik/statistika/96-systematizacia-uciva.js" }),
-  placeholder({ id: '3-u07-h097', year: 3, unit: "Štatistika", unitOrder: 7, topic: "Kontrolná písomná práca", lesson: "Hodina 97", lessonOrder: 97, file: "modules/3-rocnik/statistika/97-kontrolna-pisomna-praca.js" }),
+  {
+    id: '3-u07-h091', year: 3, unit: "Štatistika", unitOrder: 7,
+    topic: "Štatistický súbor, jednotka, znak, rozdelenie početnosti", lesson: "Hodina 91", lessonOrder: 91,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozoznanie štatistických pojmov", "zostavenie tabuľky početnosti", "argumentácia"],
+    file: "modules/3-rocnik/statistika/91-statisticky-subor-jednotka-znak-rozdelenie-pocetnosti.js"
+  },
+  {
+    id: '3-u07-h092', year: 3, unit: "Štatistika", unitOrder: 7,
+    topic: "Štat. charakteristiky polohy", lesson: "Hodina 92", lessonOrder: 92,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["výpočet aritmetického priemeru", "výpočet mediánu a modusu", "argumentácia"],
+    file: "modules/3-rocnik/statistika/92-stat-charakteristiky-polohy.js"
+  },
+  {
+    id: '3-u07-h093', year: 3, unit: "Štatistika", unitOrder: 7,
+    topic: "Riešenie úloh", lesson: "Hodina 93", lessonOrder: 93,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["výpočet charakteristík polohy v rôznych kontextoch", "voľba vhodnej charakteristiky", "argumentácia"],
+    file: "modules/3-rocnik/statistika/93-riesenie-uloh.js"
+  },
+  {
+    id: '3-u07-h094', year: 3, unit: "Štatistika", unitOrder: 7,
+    topic: "Štat. charakteristiky variability", lesson: "Hodina 94", lessonOrder: 94,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["výpočet variačného rozpätia", "výpočet rozptylu a smerodajnej odchýlky", "argumentácia"],
+    file: "modules/3-rocnik/statistika/94-stat-charakteristiky-variability.js"
+  },
+  {
+    id: '3-u07-h095', year: 3, unit: "Štatistika", unitOrder: 7,
+    topic: "Riešenie praktických úloh", lesson: "Hodina 95", lessonOrder: 95,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["interpretácia variability v praktickom kontexte", "voľba vhodného typu grafu", "argumentácia"],
+    file: "modules/3-rocnik/statistika/95-riesenie-praktickych-uloh.js"
+  },
+  {
+    id: '3-u07-h096', year: 3, unit: "Štatistika", unitOrder: 7,
+    topic: "Systematizácia učiva", lesson: "Hodina 96", lessonOrder: 96,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["tabuľka početnosti a charakteristiky polohy", "charakteristiky variability", "argumentácia"],
+    file: "modules/3-rocnik/statistika/96-systematizacia-uciva.js"
+  },
+  {
+    id: '3-u07-h097', year: 3, unit: "Štatistika", unitOrder: 7,
+    topic: "Kontrolná písomná práca", lesson: "Hodina 97", lessonOrder: 97,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička → kontrolné otázky z celej témy → sebahodnotenie",
+    skills: ["tabuľka početnosti a priemer", "medián a variabilita", "interpretácia výsledkov"],
+    file: "modules/3-rocnik/statistika/97-kontrolna-pisomna-praca.js"
+  },
   ];
 })();
