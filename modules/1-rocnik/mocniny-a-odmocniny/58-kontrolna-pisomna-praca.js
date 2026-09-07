@@ -1,29 +1,125 @@
-/*
-  TODO PLACEHOLDER
-  Tento súbor je zámerne iba zástupný modul.
-  Neskôr sa nahradí plnohodnotným interaktívnym modulom bez zmeny jeho ID a cesty v registry.js.
-*/
 MathPlatform.registerModule({
-  id: "1-u05-h058",
+  id: '1-u05-h058',
   teacher: {
-    placement: "1. ročník · Mocniny a odmocniny · Hodina 58",
-    prerequisites: ["TODO – doplniť pri spracovaní modulu."],
-    planContent: ["TODO – prevziať presne z aktuálneho tematického plánu pri spracovaní modulu."],
-    planPerformance: ["TODO – prevziať iba to, čo je v aktuálnom tematickom pláne; ak bunka nie je vyplnená, nič nevymýšľať."],
-    goals: ["TODO – doplniť ciele až pri plnohodnotnom spracovaní."],
-    competencies: ["TODO – doplniť pri spracovaní modulu."],
-    enrichment: ["TODO – návrh maturitného štandardu použiť iba ako prirodzené obohatenie, nie ako určujúce učivo."],
-    estimatedTime: "TODO – cieľ približne 15 minút aktívnej práce, ak charakter hodiny nevyžaduje inak.",
-    notebook: "TODO – zachovať zápis do zošita → kontrola/vysvetlenie → zápis do zošita.",
-    diagnostics: ["TODO – doplniť diagnostické body pri spracovaní modulu."],
-    flow: ["TODO – vytvoriť názorný, vekovo primeraný a obsahovo presný priebeh hodiny."],
-    partialUse: ["TODO – určiť, ktoré časti sa dajú použiť samostatne."]
+    placement: '1. ročník · Mocniny a odmocniny · 58. hodina: Kontrolná písomná práca',
+    prerequisites: [
+      'celá téma Mocniny a odmocniny (hodiny 44–57)',
+    ],
+    planContent: [
+      'Tematický plán pre tento celok nemá bunku obsahového štandardu vyplnenú. Modul vychádza z názvu hodiny a z výkonového štandardu celku nižšie.',
+    ],
+    planPerformance: [
+      'Tematický plán pre celok Mocniny a odmocniny zhŕňa všetky ciele hodín 44–57: „žiak používa mocniny s prirodzeným a celým mocniteľom, žiak využíva mocniny v technickej praxi, žiak pozná mocninu čísla 10 a používa vedecký zápis čísel, žiak počíta druhú a tretiu odmocninu, žiak aplikuje základné vety o odmocninách, žiak využíva odmocniny v praktických úlohách, žiak pracuje s mocninami s racionálnym mocniteľom, žiak kombinuje odmocniny a mocniny.“',
+    ],
+    goals: [
+      'Kognitívny cieľ: žiak preukáže, že ovláda definíciu a pravidlá pre mocniny aj odmocniny z celej témy.',
+      'Afektívny cieľ: žiak pristupuje k písomnej práci pokojne, s dôverou vo vlastný systematický postup.',
+      'Praktický cieľ: žiak si pred písomkou samostatne overí, ktoré časti témy ešte potrebuje zopakovať.',
+      'Kritérium úspechu: žiak v tejto rozcvičke pred písomkou správne vyrieši aspoň 4 z 5 úloh.',
+    ],
+    competencies: [
+      'sebahodnotenie a zodpovednosť za vlastnú prípravu',
+      'systematické opakovanie väčšieho celku učiva',
+      'digitálna kompetencia pri účelnom použití interaktívnej platformy',
+    ],
+    enrichment: [
+      'Bez doplňujúceho obohatenia — hodina je vyhradená na písomnú previerku podľa tematického plánu.',
+    ],
+    flow: [
+      '0–5 min – krátka diagnostická rozcvička na platforme (táto aktivita) ako posledná kontrola pred písomkou.',
+      '5–40 min – samotná kontrolná písomná práca (mimo aplikácie, na papieri).',
+      '40–45 min – zber prác, krátke zhodnotenie priebehu.',
+    ],
+    diagnostics: [
+      'ktoré typy úloh z celej témy (definícia, pravidlá, odmocniny, zlomkový exponent) robia žiakovi najviac problém tesne pred písomkou',
+    ],
+    partialUse: [
+      'Túto krátku rozcvičku možno vynechať, ak trieda potrebuje celú hodinu na samotnú písomku.',
+      'Pomôcky: papier na písomnú prácu, písacie potreby; platforma iba na úvodnú rozcvičku.',
+      'Hodnotenie: samotná písomná práca sa hodnotí známkou mimo platformy; rozcvička v aplikácii slúži len ako posledná spätná väzba pred písomkou, XP nie sú známka.',
+    ],
   },
   student: {
-    title: "Kontrolná písomná práca",
-    subtitle: "TODO – modul čaká na plnohodnotné spracovanie",
-    estimatedTime: "TODO",
-    intro: "Téma je už technicky prepojená s platformou. Obsah tohto modulu ešte nie je spracovaný; tento súbor je iba zástupný placeholder.",
-    activities: []
-  }
+    title: 'Rozcvička pred previerkou',
+    subtitle: 'Téma 58 · Mocniny a odmocniny',
+    intro: 'Krátka rozcvička na overenie, či si pripravený/á na kontrolnú písomnú prácu z celej témy Mocniny a odmocniny.',
+    estimatedTime: '10–14 min',
+    activities: [
+      {
+        id: 'intro',
+        type: 'info',
+        phase: 'POCHOP',
+        title: 'Posledná kontrola pred písomkou',
+        html: '<p>Táto krátka rozcvička preverí najdôležitejšie body celej témy: definíciu mocniny, tri základné pravidlá, nultý a záporný mocniteľ, druhú a tretiu odmocninu, vety o odmocninách a zlomkový exponent.</p>',
+        continueLabel: 'Pokračovať',
+      },
+      {
+        id: 'q1',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'definícia mocniny',
+        question: 'Čomu sa rovná (−3)⁴?',
+        options: ['81', '−81', '12'],
+        answer: 0,
+        correct: 'Správne. Párny počet záporných činiteľov dáva kladný výsledok: (−3)⁴ = 81.',
+        hint: 'Zisti, či je mocniteľ párny alebo nepárny.',
+      },
+      {
+        id: 'q2',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'pravidlá pre mocniny',
+        question: 'Zjednoduš 6⁵ : 6².',
+        options: ['6²', '6³', '6⁷'],
+        answer: 1,
+        correct: 'Správne. 6⁵ : 6² = 6⁵⁻² = 6³.',
+        hint: 'Pri delení mocnín rovnakého základu sa exponenty odčítajú.',
+      },
+      {
+        id: 'q3',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'nultý a záporný mocniteľ',
+        question: 'Čomu sa rovná 5⁻²?',
+        options: ['1/25', '−25', '−10'],
+        answer: 0,
+        correct: 'Správne. 5⁻² = 1/5² = 1/25.',
+        hint: 'Záporný exponent znamená prevrátenú hodnotu príslušnej kladnej mocniny.',
+      },
+      {
+        id: 'q4',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'druhá a tretia odmocnina',
+        question: 'Čomu sa rovná ∛(−64)?',
+        options: ['nie je definovaná', '−4', '4'],
+        answer: 1,
+        correct: 'Správne. (−4)³ = −64, preto ∛(−64) = −4. Tretia odmocnina zo záporného čísla je definovaná.',
+        hint: 'Skús nájsť záporné číslo, ktorého tretia mocnina je −64.',
+      },
+      {
+        id: 'q5',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'zlomkový exponent',
+        question: 'Ako sa zapíše 25^(1/2) pomocou odmocniny a čomu sa rovná?',
+        options: ['√25 = 5', '25² = 625', '2 · 25 = 50'],
+        answer: 0,
+        correct: 'Správne. 25^(1/2) = √25 = 5.',
+        hint: 'Menovateľ 2 v exponente zodpovedá druhej odmocnine.',
+      },
+      {
+        id: 'reflection',
+        type: 'reflection',
+        phase: 'ZÁVER',
+        title: 'Si pripravený/á na písomku?',
+        skills: [
+          'definícia a pravidlá pre mocniny',
+          'druhá a tretia odmocnina',
+          'zlomkový exponent',
+        ],
+        prompt: 'Označ, ktoré časti témy ešte potrebuješ zopakovať pred písomkou. Nie je to známka.',
+      },
+    ],
+  },
 });

@@ -157,7 +157,7 @@ const KNOWN_TYPES = new Set([
 ]);
 
 // Keep in sync with the named-validator table in core/renderers.js.
-const KNOWN_NUMBER_VALIDATORS = new Set(['oddComposite']);
+const KNOWN_NUMBER_VALIDATORS = new Set(['oddComposite', 'exact']);
 
 const TEACHER_ARRAY_FIELDS = [
   'prerequisites', 'goals', 'planContent', 'planPerformance',
@@ -234,6 +234,9 @@ for (const [id, mod] of modulesByEntry) {
       case 'numberInput': {
         if (!KNOWN_NUMBER_VALIDATORS.has(a.validate)) {
           fail('content', `${where}: numberInput.validate='${a.validate}' nemá implementáciu v core/renderers.js`);
+        }
+        if (a.validate === 'exact' && !Number.isFinite(a.answer)) {
+          fail('content', `${where}: numberInput.validate='exact' potrebuje číselné pole answer`);
         }
         break;
       }

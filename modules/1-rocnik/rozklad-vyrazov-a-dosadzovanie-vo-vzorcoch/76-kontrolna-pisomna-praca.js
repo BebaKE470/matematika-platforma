@@ -1,29 +1,125 @@
-/*
-  TODO PLACEHOLDER
-  Tento súbor je zámerne iba zástupný modul.
-  Neskôr sa nahradí plnohodnotným interaktívnym modulom bez zmeny jeho ID a cesty v registry.js.
-*/
 MathPlatform.registerModule({
-  id: "1-u07-h076",
+  id: '1-u07-h076',
   teacher: {
-    placement: "1. ročník · Rozklad výrazov a dosadzovanie vo vzorcoch · Hodina 76",
-    prerequisites: ["TODO – doplniť pri spracovaní modulu."],
-    planContent: ["TODO – prevziať presne z aktuálneho tematického plánu pri spracovaní modulu."],
-    planPerformance: ["TODO – prevziať iba to, čo je v aktuálnom tematickom pláne; ak bunka nie je vyplnená, nič nevymýšľať."],
-    goals: ["TODO – doplniť ciele až pri plnohodnotnom spracovaní."],
-    competencies: ["TODO – doplniť pri spracovaní modulu."],
-    enrichment: ["TODO – návrh maturitného štandardu použiť iba ako prirodzené obohatenie, nie ako určujúce učivo."],
-    estimatedTime: "TODO – cieľ približne 15 minút aktívnej práce, ak charakter hodiny nevyžaduje inak.",
-    notebook: "TODO – zachovať zápis do zošita → kontrola/vysvetlenie → zápis do zošita.",
-    diagnostics: ["TODO – doplniť diagnostické body pri spracovaní modulu."],
-    flow: ["TODO – vytvoriť názorný, vekovo primeraný a obsahovo presný priebeh hodiny."],
-    partialUse: ["TODO – určiť, ktoré časti sa dajú použiť samostatne."]
+    placement: '1. ročník · Rozklad výrazov a dosadzovanie vo vzorcoch · 76. hodina: Kontrolná písomná práca',
+    prerequisites: [
+      'celá téma Rozklad výrazov a dosadzovanie vo vzorcoch (hodiny 67–75)',
+    ],
+    planContent: [
+      'Tematický plán pre celok Rozklad výrazov a dosadzovanie vo vzorcoch uvádza obsahový štandard: „žiak vie dosadiť hodnoty do výrazov, žiak upravuje jednoduché vzorce, žiak rozkladá výrazy vynímaním pred zátvorku, žiak používa rozklad podľa vzorcov, žiak ovláda ďalšie spôsoby rozkladu výrazov.“',
+    ],
+    planPerformance: [
+      'Tematický plán zhŕňa výkonový štandard celku: „dosadí čísla do vzorca a vypočíta hodnotu, upraví vzorec podľa zadanej premennej, rozloží výraz vynímaním, podľa vzorcov aj inými spôsobmi.“',
+    ],
+    goals: [
+      'Kognitívny cieľ: žiak preukáže, že ovláda dosadzovanie, úpravu vzorcov a rozklad výrazov z celej témy.',
+      'Afektívny cieľ: žiak pristupuje ku kontrolnej práci pokojne, so systematickým postupom.',
+      'Praktický cieľ: žiak si pred písomkou samostatne overí, ktoré časti témy ešte potrebuje zopakovať.',
+      'Kritérium úspechu: žiak v tejto rozcvičke pred písomkou správne vyrieši aspoň 4 z 5 úloh.',
+    ],
+    competencies: [
+      'sebahodnotenie a zodpovednosť za vlastnú prípravu',
+      'systematické opakovanie väčšieho celku učiva',
+      'digitálna kompetencia pri účelnom použití interaktívnej platformy',
+    ],
+    enrichment: [
+      'Bez doplňujúceho obohatenia — hodina je vyhradená na kontrolnú písomnú prácu podľa tematického plánu.',
+    ],
+    flow: [
+      '0–5 min – krátka diagnostická rozcvička na platforme (táto aktivita) ako posledná kontrola pred písomkou.',
+      '5–40 min – samotná kontrolná písomná práca (mimo aplikácie, na papieri).',
+      '40–45 min – zber prác, krátke zhodnotenie priebehu.',
+    ],
+    diagnostics: [
+      'ktoré typy úloh z celej témy (dosadzovanie, úprava vzorca, tri spôsoby rozkladu) robia žiakovi najviac problém tesne pred písomkou',
+    ],
+    partialUse: [
+      'Túto krátku rozcvičku možno vynechať, ak trieda potrebuje celú hodinu na samotnú písomku.',
+      'Pomôcky: papier na písomnú prácu, písacie potreby; platforma iba na úvodnú rozcvičku.',
+      'Hodnotenie: samotná písomná práca sa hodnotí známkou mimo platformy; rozcvička v aplikácii slúži len ako posledná spätná väzba pred písomkou, XP nie sú známka.',
+    ],
   },
   student: {
-    title: "Kontrolná písomná práca",
-    subtitle: "TODO – modul čaká na plnohodnotné spracovanie",
-    estimatedTime: "TODO",
-    intro: "Téma je už technicky prepojená s platformou. Obsah tohto modulu ešte nie je spracovaný; tento súbor je iba zástupný placeholder.",
-    activities: []
-  }
+    title: 'Rozcvička pred previerkou',
+    subtitle: 'Téma 76 · Rozklad výrazov a dosadzovanie vo vzorcoch',
+    intro: 'Krátka rozcvička na overenie, či si pripravený/á na kontrolnú písomnú prácu z celej témy.',
+    estimatedTime: '10–14 min',
+    activities: [
+      {
+        id: 'intro',
+        type: 'info',
+        phase: 'POCHOP',
+        title: 'Posledná kontrola pred písomkou',
+        html: '<p>Táto krátka rozcvička preverí najdôležitejšie body celej témy: dosadzovanie so zátvorkou, úprava vzorca, vyňatie spoločného činiteľa a rozklad podľa vzorcov.</p>',
+        continueLabel: 'Pokračovať',
+      },
+      {
+        id: 'q1',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'dosadzovanie',
+        question: 'Vypočítaj hodnotu výrazu x² − 5 pre x = −3.',
+        options: ['4', '−14', '14'],
+        answer: 0,
+        correct: 'Správne. (−3)² − 5 = 9 − 5 = 4.',
+        hint: 'Ohraď x=−3 zátvorkou pri dosadzovaní do mocniny.',
+      },
+      {
+        id: 'q2',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'úprava vzorca',
+        question: 'Zo vzorca o = 2(a + b) vyjadri b.',
+        options: ['b = o − 2 − a', 'b = 2(o − a)', 'b = o:2 − a'],
+        answer: 2,
+        correct: 'Správne. Najprv vydelíme obe strany dvomi, potom odčítame a: b = o:2 − a.',
+        hint: 'Postupuj po krokoch: najprv delenie, potom odčítanie.',
+      },
+      {
+        id: 'q3',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'vyňatie pred zátvorku',
+        question: 'Rozlož na súčin výraz 8x² + 12x.',
+        options: ['4x(2x + 3)', '4(2x² + 3x)', 'x(8x + 12)'],
+        answer: 0,
+        correct: 'Správne. Najväčší spoločný činiteľ je 4x: 8x² + 12x = 4x(2x + 3).',
+        hint: 'Skontroluj, či po vyňatí zostáva ešte nejaký ďalší spoločný činiteľ.',
+      },
+      {
+        id: 'q4',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'rozklad podľa vzorca',
+        question: 'Rozlož na súčin výraz x² − 144.',
+        options: ['(x − 144)(x + 1)', '(x − 12)²', '(x − 12)(x + 12)'],
+        answer: 2,
+        correct: 'Správne. 144 = 12², preto x² − 144 = (x − 12)(x + 12).',
+        hint: 'Zisti, ktoré číslo umocnené na druhú dáva 144.',
+      },
+      {
+        id: 'q5',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'druhá mocnina dvojčlena',
+        question: 'Rozlož na súčin výraz x² + 16x + 64.',
+        options: ['(x + 8)²', '(x + 64)²', '(x + 8)(x + 16)'],
+        answer: 0,
+        correct: 'Správne. Prostredný člen 16x = 2·x·8, preto x²+16x+64 = (x+8)².',
+        hint: 'Skontroluj, či prostredný člen zodpovedá 2ab.',
+      },
+      {
+        id: 'reflection',
+        type: 'reflection',
+        phase: 'ZÁVER',
+        title: 'Si pripravený/á na písomku?',
+        skills: [
+          'dosadzovanie a úprava vzorcov',
+          'tri spôsoby rozkladu na súčin',
+          'kombinácia zručností',
+        ],
+        prompt: 'Označ, ktoré časti témy ešte potrebuješ zopakovať pred písomkou. Nie je to známka.',
+      },
+    ],
+  },
 });

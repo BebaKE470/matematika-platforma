@@ -1,29 +1,125 @@
-/*
-  TODO PLACEHOLDER
-  Tento súbor je zámerne iba zástupný modul.
-  Neskôr sa nahradí plnohodnotným interaktívnym modulom bez zmeny jeho ID a cesty v registry.js.
-*/
 MathPlatform.registerModule({
-  id: "1-u06-h066",
+  id: '1-u06-h066',
   teacher: {
-    placement: "1. ročník · Výrazy a mnohočleny · Hodina 66",
-    prerequisites: ["TODO – doplniť pri spracovaní modulu."],
-    planContent: ["TODO – prevziať presne z aktuálneho tematického plánu pri spracovaní modulu."],
-    planPerformance: ["TODO – prevziať iba to, čo je v aktuálnom tematickom pláne; ak bunka nie je vyplnená, nič nevymýšľať."],
-    goals: ["TODO – doplniť ciele až pri plnohodnotnom spracovaní."],
-    competencies: ["TODO – doplniť pri spracovaní modulu."],
-    enrichment: ["TODO – návrh maturitného štandardu použiť iba ako prirodzené obohatenie, nie ako určujúce učivo."],
-    estimatedTime: "TODO – cieľ približne 15 minút aktívnej práce, ak charakter hodiny nevyžaduje inak.",
-    notebook: "TODO – zachovať zápis do zošita → kontrola/vysvetlenie → zápis do zošita.",
-    diagnostics: ["TODO – doplniť diagnostické body pri spracovaní modulu."],
-    flow: ["TODO – vytvoriť názorný, vekovo primeraný a obsahovo presný priebeh hodiny."],
-    partialUse: ["TODO – určiť, ktoré časti sa dajú použiť samostatne."]
+    placement: '1. ročník · Výrazy a mnohočleny · 66. hodina: Previerka',
+    prerequisites: [
+      'celá téma Výrazy a mnohočleny (hodiny 59–65)',
+    ],
+    planContent: [
+      'Tematický plán pre celok Výrazy a mnohočleny uvádza obsahový štandard: „žiak rozumie pojmom konštanta, premenná, výraz, mnohočlen, žiak vykonáva základné operácie s mnohočlenmi, žiak prevádza slovné úlohy na výrazy, žiak vie upravovať mnohočleny.“',
+    ],
+    planPerformance: [
+      'Tematický plán zhŕňa výkonový štandard celku: „zostaví výraz podľa zadania, sčíta, odčíta, násobí mnohočleny, prevedie slovný text na výraz, upraví a zjednoduší mnohočlen.“',
+    ],
+    goals: [
+      'Kognitívny cieľ: žiak preukáže, že ovláda pojmy a operácie s mnohočlenmi z celej témy.',
+      'Afektívny cieľ: žiak pristupuje k previerke pokojne, so systematickým postupom.',
+      'Praktický cieľ: žiak si pred previerkou samostatne overí, ktoré časti témy ešte potrebuje zopakovať.',
+      'Kritérium úspechu: žiak v tejto rozcvičke pred previerkou správne vyrieši aspoň 4 z 5 úloh.',
+    ],
+    competencies: [
+      'sebahodnotenie a zodpovednosť za vlastnú prípravu',
+      'systematické opakovanie väčšieho celku učiva',
+      'digitálna kompetencia pri účelnom použití interaktívnej platformy',
+    ],
+    enrichment: [
+      'Bez doplňujúceho obohatenia — hodina je vyhradená na previerku podľa tematického plánu.',
+    ],
+    flow: [
+      '0–5 min – krátka diagnostická rozcvička na platforme (táto aktivita) ako posledná kontrola pred previerkou.',
+      '5–40 min – samotná previerka (mimo aplikácie, na papieri).',
+      '40–45 min – zber prác, krátke zhodnotenie priebehu.',
+    ],
+    diagnostics: [
+      'ktoré typy úloh z celej témy (pojmy, sčítanie/odčítanie, násobenie, delenie, slovné úlohy) robia žiakovi najviac problém tesne pred previerkou',
+    ],
+    partialUse: [
+      'Túto krátku rozcvičku možno vynechať, ak trieda potrebuje celú hodinu na samotnú previerku.',
+      'Pomôcky: papier na previerku, písacie potreby; platforma iba na úvodnú rozcvičku.',
+      'Hodnotenie: samotná previerka sa hodnotí známkou mimo platformy; rozcvička v aplikácii slúži len ako posledná spätná väzba, XP nie sú známka.',
+    ],
   },
   student: {
-    title: "Previerka",
-    subtitle: "TODO – modul čaká na plnohodnotné spracovanie",
-    estimatedTime: "TODO",
-    intro: "Téma je už technicky prepojená s platformou. Obsah tohto modulu ešte nie je spracovaný; tento súbor je iba zástupný placeholder.",
-    activities: []
-  }
+    title: 'Rozcvička pred previerkou',
+    subtitle: 'Téma 66 · Výrazy a mnohočleny',
+    intro: 'Krátka rozcvička na overenie, či si pripravený/á na previerku z celej témy Výrazy a mnohočleny.',
+    estimatedTime: '10–14 min',
+    activities: [
+      {
+        id: 'intro',
+        type: 'info',
+        phase: 'POCHOP',
+        title: 'Posledná kontrola pred previerkou',
+        html: '<p>Táto krátka rozcvička preverí najdôležitejšie body celej témy: pojmy (konštanta, premenná, jednočlen, mnohočlen), štyri operácie s mnohočlenmi a prevod slovného textu na výraz.</p>',
+        continueLabel: 'Pokračovať',
+      },
+      {
+        id: 'q1',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'pojmy',
+        question: 'Koľko členov má mnohočlen 5x² + 3x − 2?',
+        options: ['2', '3', '4'],
+        answer: 1,
+        correct: 'Správne. Mnohočlen 5x²+3x−2 má tri členy: 5x², 3x a −2.',
+        hint: 'Spočítaj sčítance oddelené znamienkom + alebo −.',
+      },
+      {
+        id: 'q2',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'sčítanie a odčítanie',
+        question: 'Zjednoduš (4x + 3) − (2x − 5).',
+        options: ['2x − 2', '2x + 8', '6x − 2'],
+        answer: 1,
+        correct: 'Správne. (4x+3) − (2x−5) = 4x+3−2x+5 = 2x+8.',
+        hint: 'Nezabudni zmeniť znamienko oboch členov odčítaného mnohočlena.',
+      },
+      {
+        id: 'q3',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'násobenie',
+        question: 'Zjednoduš (x + 2)(x − 3).',
+        options: ['x² − x − 6', 'x² − 6', 'x² + x − 6'],
+        answer: 0,
+        correct: 'Správne. (x+2)(x−3) = x²−3x+2x−6 = x²−x−6.',
+        hint: 'Vynásob každý člen prvej zátvorky každým členom druhej, potom spoj podobné členy.',
+      },
+      {
+        id: 'q4',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'delenie',
+        question: 'Zjednoduš (12x³ − 8x²) : 4x².',
+        options: ['3x − 2', '3x − 8x²', '4x'],
+        answer: 0,
+        correct: 'Správne. 12x³:4x² = 3x a −8x²:4x² = −2, teda výsledok je 3x−2.',
+        hint: 'Vydeľ 4x²-om každý člen mnohočlena samostatne.',
+      },
+      {
+        id: 'q5',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'prevod slovného textu',
+        question: 'Ktorý výraz zodpovedá opisu „dvojnásobok súčtu čísel x a 3“?',
+        options: ['2x + 3', '2(x + 3)', 'x + 6'],
+        answer: 1,
+        correct: 'Správne. Najprv sa sčíta x a 3, potom sa celý súčet vynásobí dvomi: 2(x+3).',
+        hint: 'Slovo „súčtu“ znamená, že sa násobí celá zátvorka, nie iba jedno z čísel.',
+      },
+      {
+        id: 'reflection',
+        type: 'reflection',
+        phase: 'ZÁVER',
+        title: 'Si pripravený/á na previerku?',
+        skills: [
+          'pojmy (konštanta, premenná, mnohočlen)',
+          'štyri operácie s mnohočlenmi',
+          'prevod slovného textu na výraz',
+        ],
+        prompt: 'Označ, ktoré časti témy ešte potrebuješ zopakovať pred previerkou. Nie je to známka.',
+      },
+    ],
+  },
 });

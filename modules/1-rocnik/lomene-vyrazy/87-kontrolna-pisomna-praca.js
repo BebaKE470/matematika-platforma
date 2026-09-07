@@ -1,29 +1,125 @@
-/*
-  TODO PLACEHOLDER
-  Tento súbor je zámerne iba zástupný modul.
-  Neskôr sa nahradí plnohodnotným interaktívnym modulom bez zmeny jeho ID a cesty v registry.js.
-*/
 MathPlatform.registerModule({
-  id: "1-u08-h087",
+  id: '1-u08-h087',
   teacher: {
-    placement: "1. ročník · Lomené výrazy · Hodina 87",
-    prerequisites: ["TODO – doplniť pri spracovaní modulu."],
-    planContent: ["TODO – prevziať presne z aktuálneho tematického plánu pri spracovaní modulu."],
-    planPerformance: ["TODO – prevziať iba to, čo je v aktuálnom tematickom pláne; ak bunka nie je vyplnená, nič nevymýšľať."],
-    goals: ["TODO – doplniť ciele až pri plnohodnotnom spracovaní."],
-    competencies: ["TODO – doplniť pri spracovaní modulu."],
-    enrichment: ["TODO – návrh maturitného štandardu použiť iba ako prirodzené obohatenie, nie ako určujúce učivo."],
-    estimatedTime: "TODO – cieľ približne 15 minút aktívnej práce, ak charakter hodiny nevyžaduje inak.",
-    notebook: "TODO – zachovať zápis do zošita → kontrola/vysvetlenie → zápis do zošita.",
-    diagnostics: ["TODO – doplniť diagnostické body pri spracovaní modulu."],
-    flow: ["TODO – vytvoriť názorný, vekovo primeraný a obsahovo presný priebeh hodiny."],
-    partialUse: ["TODO – určiť, ktoré časti sa dajú použiť samostatne."]
+    placement: '1. ročník · Lomené výrazy · 87. hodina: Kontrolná písomná práca',
+    prerequisites: [
+      'celá téma Lomené výrazy (hodiny 77–86)',
+    ],
+    planContent: [
+      'Tematický plán pre celok Lomené výrazy uvádza obsahový štandard: „žiak vie upraviť lomené výrazy, žiak sčíta a odčíta lomené výrazy, žiak násobí a delí lomené výrazy, žiak vykonáva zložitejšie úpravy lomených výrazov.“',
+    ],
+    planPerformance: [
+      'Tematický plán zhŕňa výkonový štandard celku: „upraví lomený výraz, vykoná základné operácie s lomenými výrazmi, rieši úlohy so zloženými lomenými výrazmi.“',
+    ],
+    goals: [
+      'Kognitívny cieľ: žiak preukáže, že ovláda definičný obor, krátenie a štyri operácie s lomenými výrazmi z celej témy.',
+      'Afektívny cieľ: žiak pristupuje ku kontrolnej práci pokojne, so systematickým postupom.',
+      'Praktický cieľ: žiak si pred písomkou samostatne overí, ktoré časti témy ešte potrebuje zopakovať.',
+      'Kritérium úspechu: žiak v tejto rozcvičke pred písomkou správne vyrieši aspoň 4 z 5 úloh.',
+    ],
+    competencies: [
+      'sebahodnotenie a zodpovednosť za vlastnú prípravu',
+      'systematické opakovanie väčšieho celku učiva',
+      'digitálna kompetencia pri účelnom použití interaktívnej platformy',
+    ],
+    enrichment: [
+      'Bez doplňujúceho obohatenia — hodina je vyhradená na kontrolnú písomnú prácu podľa tematického plánu.',
+    ],
+    flow: [
+      '0–5 min – krátka diagnostická rozcvička na platforme (táto aktivita) ako posledná kontrola pred písomkou.',
+      '5–40 min – samotná kontrolná písomná práca (mimo aplikácie, na papieri).',
+      '40–45 min – zber prác, krátke zhodnotenie priebehu.',
+    ],
+    diagnostics: [
+      'ktoré typy úloh z celej témy (definičný obor, krátenie, štyri operácie, zložitejšie úpravy) robia žiakovi najviac problém tesne pred písomkou',
+    ],
+    partialUse: [
+      'Túto krátku rozcvičku možno vynechať, ak trieda potrebuje celú hodinu na samotnú písomku.',
+      'Pomôcky: papier na písomnú prácu, písacie potreby; platforma iba na úvodnú rozcvičku.',
+      'Hodnotenie: samotná písomná práca sa hodnotí známkou mimo platformy; rozcvička v aplikácii slúži len ako posledná spätná väzba pred písomkou, XP nie sú známka.',
+    ],
   },
   student: {
-    title: "Kontrolná písomná práca",
-    subtitle: "TODO – modul čaká na plnohodnotné spracovanie",
-    estimatedTime: "TODO",
-    intro: "Téma je už technicky prepojená s platformou. Obsah tohto modulu ešte nie je spracovaný; tento súbor je iba zástupný placeholder.",
-    activities: []
-  }
+    title: 'Rozcvička pred previerkou',
+    subtitle: 'Téma 87 · Lomené výrazy',
+    intro: 'Krátka rozcvička na overenie, či si pripravený/á na kontrolnú písomnú prácu z celej témy Lomené výrazy.',
+    estimatedTime: '10–14 min',
+    activities: [
+      {
+        id: 'intro',
+        type: 'info',
+        phase: 'POCHOP',
+        title: 'Posledná kontrola pred písomkou',
+        html: '<p>Táto krátka rozcvička preverí najdôležitejšie body celej témy: definičný obor, krátenie, sčítanie, odčítanie, násobenie a delenie lomených výrazov.</p>',
+        continueLabel: 'Pokračovať',
+      },
+      {
+        id: 'q1',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'definičný obor',
+        question: 'Ktorá hodnota x je vylúčená z definičného oboru výrazu 8/(x−9)?',
+        options: ['x = 9', 'x = −9', 'x = 8'],
+        answer: 0,
+        correct: 'Správne. Menovateľ x−9 je nulový práve pre x=9.',
+        hint: 'Zisti, pre ktoré x sa menovateľ rovná nule.',
+      },
+      {
+        id: 'q2',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'krátenie',
+        question: 'Skráť lomený výraz (x²−4)/(x−2).',
+        options: ['x−4', 'x+4', 'x+2'],
+        answer: 2,
+        correct: 'Správne. (x²−4)/(x−2) = (x−2)(x+2)/(x−2) = x+2.',
+        hint: 'Rozlož čitateľa ako rozdiel druhých mocnín.',
+      },
+      {
+        id: 'q3',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'sčítanie a odčítanie',
+        question: 'Vypočítaj 5/x − 2/x.',
+        options: ['3/x', '3/(2x)', '3'],
+        answer: 0,
+        correct: 'Správne. Menovateľ je rovnaký: 5/x − 2/x = 3/x.',
+        hint: 'Ak je menovateľ rovnaký, odčítaj iba čitatele.',
+      },
+      {
+        id: 'q4',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'násobenie a delenie',
+        question: 'Vypočítaj (x/4) · (8/x²) a skráť.',
+        options: ['2x', '2/x', '8x/4x²'],
+        answer: 1,
+        correct: 'Správne. (x·8)/(4·x²) = 8x/(4x²), po krátení: 2/x.',
+        hint: 'Vynásob a potom skráť spoločné činitele.',
+      },
+      {
+        id: 'q5',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'zložitá úprava',
+        question: 'Aký je spoločný menovateľ výrazov 1/(x−3) a x/(x²−9)?',
+        options: ['(x−3)(x+3)', '(x−3)(x²−9)', 'x²−9+x−3'],
+        answer: 0,
+        correct: 'Správne. x²−9 = (x−3)(x+3), preto spoločný menovateľ je (x−3)(x+3).',
+        hint: 'Rozlož x²−9 na súčin.',
+      },
+      {
+        id: 'reflection',
+        type: 'reflection',
+        phase: 'ZÁVER',
+        title: 'Si pripravený/á na písomku?',
+        skills: [
+          'definičný obor a krátenie',
+          'štyri operácie s lomenými výrazmi',
+          'zložitejšie úpravy',
+        ],
+        prompt: 'Označ, ktoré časti témy ešte potrebuješ zopakovať pred písomkou. Nie je to známka.',
+      },
+    ],
+  },
 });

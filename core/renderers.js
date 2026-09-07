@@ -233,17 +233,24 @@
   // numberInput activity needs a different check.
   const NUMBER_VALIDATORS = {
     oddComposite(n) {
-      if (n % 2 === 0 || n < 3) return false;
+      if (!Number.isInteger(n) || n % 2 === 0 || n < 3) return false;
       for (let d = 2; d <= Math.sqrt(n); d++) if (n % d === 0) return true;
       return false;
+    },
+    // General-purpose check against a numeric activity.answer — use this for
+    // any numberInput whose correct value isn't a positive-integer puzzle
+    // (negative numbers, decimals). Set answer: <number> on the activity.
+    exact(n, activity) {
+      return Number.isFinite(activity.answer) && Math.abs(n - activity.answer) < 1e-9;
     },
   };
 
   function validateNumber(activity, rawValue) {
-    const n = Number(rawValue);
-    if (!Number.isInteger(n) || n <= 0) return false;
+    // Accept a Slovak decimal comma ("3,5") alongside a plain dot.
+    const n = Number(String(rawValue).trim().replace(',', '.'));
+    if (!Number.isFinite(n)) return false;
     const fn = NUMBER_VALIDATORS[activity.validate];
-    return fn ? fn(n) : false;
+    return fn ? fn(n, activity) : false;
   }
 
   R.numberInput = (a, ctx) => {
@@ -251,7 +258,7 @@
     shell(ctx, a, `
       <h1>${esc(a.title)}</h1>
       <p>${esc(a.prompt)}</p>
-      <div class="field"><input id="num" inputmode="numeric" placeholder="Napíš číslo"></div>
+      <div class="field"><input id="num" inputmode="decimal" placeholder="Napíš číslo"></div>
       <button class="btn" id="check">Overiť</button>
       <div id="feedback"></div>
     `);

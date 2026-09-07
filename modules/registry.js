@@ -408,56 +408,364 @@
   },
 
   // 1.05 · Mocniny a odmocniny
-  placeholder({ id: '1-u05-h044', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Definícia mocniny, zápis, príklady na kladné prirodzené mocnitele", lesson: "Hodina 44", lessonOrder: 44, file: "modules/1-rocnik/mocniny-a-odmocniny/44-definicia-mocniny-zapis-priklady-na-kladne-prirodzene-mocnitele.js" }),
-  placeholder({ id: '1-u05-h045', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Vlastnosti mocnín (násobenie, delenie, mocnina mocniny), príklady", lesson: "Hodina 45", lessonOrder: 45, file: "modules/1-rocnik/mocniny-a-odmocniny/45-vlastnosti-mocnin-nasobenie-delenie-mocnina-mocniny-priklady.js" }),
-  placeholder({ id: '1-u05-h046', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Definícia mocniny so záporným mocniteľom, príklady", lesson: "Hodina 46", lessonOrder: 46, file: "modules/1-rocnik/mocniny-a-odmocniny/46-definicia-mocniny-so-zapornym-mocnitelom-priklady.js" }),
-  placeholder({ id: '1-u05-h047', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Precvičovanie, typické úlohy, aplikácia vo výpočtoch", lesson: "Hodina 47", lessonOrder: 47, file: "modules/1-rocnik/mocniny-a-odmocniny/47-precvicovanie-typicke-ulohy-aplikacia-vo-vypoctoch.js" }),
-  placeholder({ id: '1-u05-h048', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Príklady zo stavebníctva, fyziky, chémie (plochy, objemy, hustota, tlak)", lesson: "Hodina 48", lessonOrder: 48, file: "modules/1-rocnik/mocniny-a-odmocniny/48-priklady-zo-stavebnictva-fyziky-chemie-plochy-objemy-hustota-tlak.js" }),
-  placeholder({ id: '1-u05-h049', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Vlastnosti mocnín so základom 10, zápis veľkých a malých čísel", lesson: "Hodina 49", lessonOrder: 49, file: "modules/1-rocnik/mocniny-a-odmocniny/49-vlastnosti-mocnin-so-zakladom-10-zapis-velkych-a-malych-cisel.js" }),
-  placeholder({ id: '1-u05-h050', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Používanie v technike a prírodných vedách, prevody jednotiek, cvičenia", lesson: "Hodina 50", lessonOrder: 50, file: "modules/1-rocnik/mocniny-a-odmocniny/50-pouzivanie-v-technike-a-prirodnych-vedach-prevody-jednotiek-cvicenia.js" }),
-  placeholder({ id: '1-u05-h051', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Druhá odmocnina", lesson: "Hodina 51", lessonOrder: 51, file: "modules/1-rocnik/mocniny-a-odmocniny/51-druha-odmocnina.js" }),
-  placeholder({ id: '1-u05-h052', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Tretia odmocnina", lesson: "Hodina 52", lessonOrder: 52, file: "modules/1-rocnik/mocniny-a-odmocniny/52-tretia-odmocnina.js" }),
-  placeholder({ id: '1-u05-h053', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Vety o odmocninách", lesson: "Hodina 53", lessonOrder: 53, file: "modules/1-rocnik/mocniny-a-odmocniny/53-vety-o-odmocninach.js" }),
-  placeholder({ id: '1-u05-h054', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Použitie odmocnín", lesson: "Hodina 54", lessonOrder: 54, file: "modules/1-rocnik/mocniny-a-odmocniny/54-pouzitie-odmocnin.js" }),
-  placeholder({ id: '1-u05-h055', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Definícia, prechod od odmocnín k mocninám s racionálnym mocniteľom", lesson: "Hodina 55", lessonOrder: 55, file: "modules/1-rocnik/mocniny-a-odmocniny/55-definicia-prechod-od-odmocnin-k-mocninam-s-racionalnym-mocnitelom.js" }),
-  placeholder({ id: '1-u05-h056', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Vlastnosti, príklady, riešenie úloh", lesson: "Hodina 56", lessonOrder: 56, file: "modules/1-rocnik/mocniny-a-odmocniny/56-vlastnosti-priklady-riesenie-uloh.js" }),
-  placeholder({ id: '1-u05-h057', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Kombinácie mocnín a odmocnín", lesson: "Hodina 57", lessonOrder: 57, file: "modules/1-rocnik/mocniny-a-odmocniny/57-kombinacie-mocnin-a-odmocnin.js" }),
-  placeholder({ id: '1-u05-h058', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5, topic: "Kontrolná písomná práca", lesson: "Hodina 58", lessonOrder: 58, file: "modules/1-rocnik/mocniny-a-odmocniny/58-kontrolna-pisomna-praca.js" }),
+  {
+    id: '1-u05-h044', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5,
+    topic: "Definícia mocniny, zápis, príklady na kladné prirodzené mocnitele", lesson: "Hodina 44", lessonOrder: 44,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nový pojem → znamienko pri zápornom základe → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["pojem mocniny", "výpočet mocniny", "znamienko mocniny", "argumentácia"],
+    file: "modules/1-rocnik/mocniny-a-odmocniny/44-definicia-mocniny-zapis-priklady-na-kladne-prirodzene-mocnitele.js"
+  },
+  {
+    id: '1-u05-h045', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5,
+    topic: "Vlastnosti mocnín (násobenie, delenie, mocnina mocniny), príklady", lesson: "Hodina 45", lessonOrder: 45,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nové pravidlá → precvičenie → hľadanie chyby → kombinácia pravidiel → zápis do zošita → argumentácia → záver",
+    skills: ["násobenie mocnín", "delenie mocnín", "mocnina mocniny", "argumentácia"],
+    file: "modules/1-rocnik/mocniny-a-odmocniny/45-vlastnosti-mocnin-nasobenie-delenie-mocnina-mocniny-priklady.js"
+  },
+  {
+    id: '1-u05-h046', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5,
+    topic: "Definícia mocniny so záporným mocniteľom, príklady", lesson: "Hodina 46", lessonOrder: 46,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → odvodenie a⁰=1 → záporný mocniteľ → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["nultá mocnina", "záporný mocniteľ", "argumentácia"],
+    file: "modules/1-rocnik/mocniny-a-odmocniny/46-definicia-mocniny-so-zapornym-mocnitelom-priklady.js"
+  },
+  {
+    id: '1-u05-h047', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5,
+    topic: "Precvičovanie, typické úlohy, aplikácia vo výpočtoch", lesson: "Hodina 47", lessonOrder: 47,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → kombinácia pravidiel → klasifikácia tvrdení → aplikácia → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["kombinácia pravidiel", "kritické myslenie", "argumentácia"],
+    file: "modules/1-rocnik/mocniny-a-odmocniny/47-precvicovanie-typicke-ulohy-aplikacia-vo-vypoctoch.js"
+  },
+  {
+    id: '1-u05-h048', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5,
+    topic: "Príklady zo stavebníctva, fyziky, chémie (plochy, objemy, hustota, tlak)", lesson: "Hodina 48", lessonOrder: 48,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → prevod jednotiek → hustota a tlak → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["prevod jednotiek", "hustota a tlak", "aplikácia v praxi"],
+    file: "modules/1-rocnik/mocniny-a-odmocniny/48-priklady-zo-stavebnictva-fyziky-chemie-plochy-objemy-hustota-tlak.js"
+  },
+  {
+    id: '1-u05-h049', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5,
+    topic: "Vlastnosti mocnín so základom 10, zápis veľkých a malých čísel", lesson: "Hodina 49", lessonOrder: 49,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → vedecký zápis → precvičenie → hľadanie chyby → aplikácia → zápis do zošita → argumentácia → záver",
+    skills: ["vedecký zápis", "prevod čísel", "argumentácia"],
+    file: "modules/1-rocnik/mocniny-a-odmocniny/49-vlastnosti-mocnin-so-zakladom-10-zapis-velkych-a-malych-cisel.js"
+  },
+  {
+    id: '1-u05-h050', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5,
+    topic: "Používanie v technike a prírodných vedách, prevody jednotiek, cvičenia", lesson: "Hodina 50", lessonOrder: 50,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → predpony jednotiek → porovnávanie → hľadanie chyby → odhad rádu veľkosti → zápis do zošita → argumentácia → záver",
+    skills: ["predpony jednotiek", "porovnávanie čísel", "odhad rádu veľkosti", "argumentácia"],
+    file: "modules/1-rocnik/mocniny-a-odmocniny/50-pouzivanie-v-technike-a-prirodnych-vedach-prevody-jednotiek-cvicenia.js"
+  },
+  {
+    id: '1-u05-h051', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5,
+    topic: "Druhá odmocnina", lesson: "Hodina 51", lessonOrder: 51,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nový pojem → hľadanie chyby → odhad → zápis do zošita → argumentácia → záver",
+    skills: ["výpočet odmocniny", "definičný obor odmocniny", "odhad odmocniny", "argumentácia"],
+    file: "modules/1-rocnik/mocniny-a-odmocniny/51-druha-odmocnina.js"
+  },
+  {
+    id: '1-u05-h052', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5,
+    topic: "Tretia odmocnina", lesson: "Hodina 52", lessonOrder: 52,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → hľadanie chyby → odhad → zápis do zošita → argumentácia → záver",
+    skills: ["výpočet tretej odmocniny", "porovnanie s druhou odmocninou", "argumentácia"],
+    file: "modules/1-rocnik/mocniny-a-odmocniny/52-tretia-odmocnina.js"
+  },
+  {
+    id: '1-u05-h053', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5,
+    topic: "Vety o odmocninách", lesson: "Hodina 53", lessonOrder: 53,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → vety o súčine a podiele → hľadanie chyby → √(a²)=|a| → aplikácia → zápis do zošita → argumentácia → záver",
+    skills: ["odmocnina súčinu a podielu", "vzťah √(a²)=|a|", "kritické myslenie", "argumentácia"],
+    file: "modules/1-rocnik/mocniny-a-odmocniny/53-vety-o-odmocninach.js"
+  },
+  {
+    id: '1-u05-h054', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5,
+    topic: "Použitie odmocnín", lesson: "Hodina 54", lessonOrder: 54,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → Pytagorova veta → precvičenie → hľadanie chyby → aplikácia v praxi → zápis do zošita → argumentácia → záver",
+    skills: ["výpočet prepony a odvesny", "aplikácia v geodetickej praxi", "argumentácia"],
+    file: "modules/1-rocnik/mocniny-a-odmocniny/54-pouzitie-odmocnin.js"
+  },
+  {
+    id: '1-u05-h055', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5,
+    topic: "Definícia, prechod od odmocnín k mocninám s racionálnym mocniteľom", lesson: "Hodina 55", lessonOrder: 55,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["prevod odmocniny na mocninu", "zlomkový exponent", "argumentácia"],
+    file: "modules/1-rocnik/mocniny-a-odmocniny/55-definicia-prechod-od-odmocnin-k-mocninam-s-racionalnym-mocnitelom.js"
+  },
+  {
+    id: '1-u05-h056', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5,
+    topic: "Vlastnosti, príklady, riešenie úloh", lesson: "Hodina 56", lessonOrder: 56,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie pravidiel → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["pravidlá pre zlomkový exponent", "argumentácia"],
+    file: "modules/1-rocnik/mocniny-a-odmocniny/56-vlastnosti-priklady-riesenie-uloh.js"
+  },
+  {
+    id: '1-u05-h057', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5,
+    topic: "Kombinácie mocnín a odmocnín", lesson: "Hodina 57", lessonOrder: 57,
+    time: "22–28 min", status: 'ready',
+    type: "Zhrnutie → kombinácia mocnín a odmocnín → priraďovanie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["kombinácia mocnín a odmocnín", "kritické myslenie", "argumentácia"],
+    file: "modules/1-rocnik/mocniny-a-odmocniny/57-kombinacie-mocnin-a-odmocnin.js"
+  },
+  {
+    id: '1-u05-h058', year: 1, unit: "Mocniny a odmocniny", unitOrder: 5,
+    topic: "Kontrolná písomná práca", lesson: "Hodina 58", lessonOrder: 58,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička pred previerkou → over → sebahodnotenie",
+    skills: ["zhrnutie celej témy", "sebahodnotenie"],
+    file: "modules/1-rocnik/mocniny-a-odmocniny/58-kontrolna-pisomna-praca.js"
+  },
 
   // 1.06 · Výrazy a mnohočleny
-  placeholder({ id: '1-u06-h059', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Konštanta, premenná, výraz, mnohočlen", lesson: "Hodina 59", lessonOrder: 59, file: "modules/1-rocnik/vyrazy-a-mnohocleny/59-konstanta-premenna-vyraz-mnohoclen.js" }),
-  placeholder({ id: '1-u06-h060', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Sčítanie a odčítanie mnohočlenov, jednoduché príklady, násobenie jednočlenom, pravidlá a príklady", lesson: "Hodina 60", lessonOrder: 60, file: "modules/1-rocnik/vyrazy-a-mnohocleny/60-scitanie-a-odcitanie-mnohoclenov-jednoduche-priklady-nasobenie-jednocl.js" }),
-  placeholder({ id: '1-u06-h061', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Násobenie mnohočlenov", lesson: "Hodina 61", lessonOrder: 61, file: "modules/1-rocnik/vyrazy-a-mnohocleny/61-nasobenie-mnohoclenov.js" }),
-  placeholder({ id: '1-u06-h062', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Delenie mnohočlenov", lesson: "Hodina 62", lessonOrder: 62, file: "modules/1-rocnik/vyrazy-a-mnohocleny/62-delenie-mnohoclenov.js" }),
-  placeholder({ id: '1-u06-h063', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Tvorba výrazov zo slovného zadania, príklady", lesson: "Hodina 63", lessonOrder: 63, file: "modules/1-rocnik/vyrazy-a-mnohocleny/63-tvorba-vyrazov-zo-slovneho-zadania-priklady.js" }),
-  placeholder({ id: '1-u06-h064', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Riešenie a diskusia úloh z technickej praxe", lesson: "Hodina 64", lessonOrder: 64, file: "modules/1-rocnik/vyrazy-a-mnohocleny/64-riesenie-a-diskusia-uloh-z-technickej-praxe.js" }),
-  placeholder({ id: '1-u06-h065', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Úpravy mnohočlenov", lesson: "Hodina 65", lessonOrder: 65, file: "modules/1-rocnik/vyrazy-a-mnohocleny/65-upravy-mnohoclenov.js" }),
-  placeholder({ id: '1-u06-h066', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6, topic: "Previerka", lesson: "Hodina 66", lessonOrder: 66, file: "modules/1-rocnik/vyrazy-a-mnohocleny/66-previerka.js" }),
+  {
+    id: '1-u06-h059', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6,
+    topic: "Konštanta, premenná, výraz, mnohočlen", lesson: "Hodina 59", lessonOrder: 59,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["pojem koeficientu", "jednočlen a mnohočlen", "argumentácia"],
+    file: "modules/1-rocnik/vyrazy-a-mnohocleny/59-konstanta-premenna-vyraz-mnohoclen.js"
+  },
+  {
+    id: '1-u06-h060', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6,
+    topic: "Sčítanie a odčítanie mnohočlenov, jednoduché príklady, násobenie jednočlenom, pravidlá a príklady", lesson: "Hodina 60", lessonOrder: 60,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → sčítanie/odčítanie → hľadanie chyby → násobenie jednočlenom → zápis do zošita → argumentácia → záver",
+    skills: ["sčítanie a odčítanie mnohočlenov", "násobenie jednočlenom", "argumentácia"],
+    file: "modules/1-rocnik/vyrazy-a-mnohocleny/60-scitanie-a-odcitanie-mnohoclenov-jednoduche-priklady-nasobenie-jednocl.js"
+  },
+  {
+    id: '1-u06-h061', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6,
+    topic: "Násobenie mnohočlenov", lesson: "Hodina 61", lessonOrder: 61,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → aplikácia → zápis do zošita → argumentácia → záver",
+    skills: ["násobenie dvojčlenov", "argumentácia"],
+    file: "modules/1-rocnik/vyrazy-a-mnohocleny/61-nasobenie-mnohoclenov.js"
+  },
+  {
+    id: '1-u06-h062', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6,
+    topic: "Delenie mnohočlenov", lesson: "Hodina 62", lessonOrder: 62,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → overenie → zápis do zošita → argumentácia → záver",
+    skills: ["delenie jednočlenom", "overenie spätným násobením", "argumentácia"],
+    file: "modules/1-rocnik/vyrazy-a-mnohocleny/62-delenie-mnohoclenov.js"
+  },
+  {
+    id: '1-u06-h063', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6,
+    topic: "Tvorba výrazov zo slovného zadania, príklady", lesson: "Hodina 63", lessonOrder: 63,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → prevod slovného textu → hľadanie chyby → viackrokový prevod → zápis do zošita → argumentácia → záver",
+    skills: ["prevod slovného textu na výraz", "argumentácia"],
+    file: "modules/1-rocnik/vyrazy-a-mnohocleny/63-tvorba-vyrazov-zo-slovneho-zadania-priklady.js"
+  },
+  {
+    id: '1-u06-h064', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6,
+    topic: "Riešenie a diskusia úloh z technickej praxe", lesson: "Hodina 64", lessonOrder: 64,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → aplikácia → hľadanie chyby → diskusia → zápis do zošita → argumentácia → záver",
+    skills: ["zostavenie výrazu pre obsah a obvod", "interpretácia výsledku", "argumentácia"],
+    file: "modules/1-rocnik/vyrazy-a-mnohocleny/64-riesenie-a-diskusia-uloh-z-technickej-praxe.js"
+  },
+  {
+    id: '1-u06-h065', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6,
+    topic: "Úpravy mnohočlenov", lesson: "Hodina 65", lessonOrder: 65,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → kombinácia operácií → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["kombinácia operácií s mnohočlenmi", "kritické myslenie", "argumentácia"],
+    file: "modules/1-rocnik/vyrazy-a-mnohocleny/65-upravy-mnohoclenov.js"
+  },
+  {
+    id: '1-u06-h066', year: 1, unit: "Výrazy a mnohočleny", unitOrder: 6,
+    topic: "Previerka", lesson: "Hodina 66", lessonOrder: 66,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička pred previerkou → over → sebahodnotenie",
+    skills: ["zhrnutie celej témy", "sebahodnotenie"],
+    file: "modules/1-rocnik/vyrazy-a-mnohocleny/66-previerka.js"
+  },
 
   // 1.07 · Rozklad výrazov a dosadzovanie vo vzorcoch
-  placeholder({ id: '1-u07-h067', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Dosadzovanie do výrazov", lesson: "Hodina 67", lessonOrder: 67, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/67-dosadzovanie-do-vyrazov.js" }),
-  placeholder({ id: '1-u07-h068', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Úpravy vzorcov", lesson: "Hodina 68", lessonOrder: 68, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/68-upravy-vzorcov.js" }),
-  placeholder({ id: '1-u07-h069', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Rozklad výrazov pomocou vynímania pred zátvorku", lesson: "Hodina 69", lessonOrder: 69, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/69-rozklad-vyrazov-pomocou-vynimania-pred-zatvorku.js" }),
-  placeholder({ id: '1-u07-h070', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Riešenie úloh", lesson: "Hodina 70", lessonOrder: 70, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/70-riesenie-uloh.js" }),
-  placeholder({ id: '1-u07-h071', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Rozklad výrazov podľa vzorcov", lesson: "Hodina 71", lessonOrder: 71, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/71-rozklad-vyrazov-podla-vzorcov.js" }),
-  placeholder({ id: '1-u07-h072', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Rozklad výrazov pomocou vzorcov", lesson: "Hodina 72", lessonOrder: 72, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/72-rozklad-vyrazov-pomocou-vzorcov.js" }),
-  placeholder({ id: '1-u07-h073', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Riešenie úloh", lesson: "Hodina 73", lessonOrder: 73, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/73-riesenie-uloh.js" }),
-  placeholder({ id: '1-u07-h074', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Zložitejšie úpravy", lesson: "Hodina 74", lessonOrder: 74, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/74-zlozitejsie-upravy.js" }),
-  placeholder({ id: '1-u07-h075', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Riešenie úloh", lesson: "Hodina 75", lessonOrder: 75, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/75-riesenie-uloh.js" }),
-  placeholder({ id: '1-u07-h076', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7, topic: "Kontrolná písomná práca", lesson: "Hodina 76", lessonOrder: 76, file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/76-kontrolna-pisomna-praca.js" }),
+  {
+    id: '1-u07-h067', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7,
+    topic: "Dosadzovanie do výrazov", lesson: "Hodina 67", lessonOrder: 67,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["dosadzovanie do výrazu", "znamienko pri dosadzovaní", "argumentácia"],
+    file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/67-dosadzovanie-do-vyrazov.js"
+  },
+  {
+    id: '1-u07-h068', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7,
+    topic: "Úpravy vzorcov", lesson: "Hodina 68", lessonOrder: 68,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → aplikácia → zápis do zošita → argumentácia → záver",
+    skills: ["úprava vzorca", "aplikácia v technickej praxi", "argumentácia"],
+    file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/68-upravy-vzorcov.js"
+  },
+  {
+    id: '1-u07-h069', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7,
+    topic: "Rozklad výrazov pomocou vynímania pred zátvorku", lesson: "Hodina 69", lessonOrder: 69,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → overenie → zápis do zošita → argumentácia → záver",
+    skills: ["vyňatie spoločného činiteľa", "najväčší spoločný činiteľ", "argumentácia"],
+    file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/69-rozklad-vyrazov-pomocou-vynimania-pred-zatvorku.js"
+  },
+  {
+    id: '1-u07-h070', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7,
+    topic: "Riešenie úloh", lesson: "Hodina 70", lessonOrder: 70,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → kombinácia zručností → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["kombinácia zručností", "kritické myslenie", "argumentácia"],
+    file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/70-riesenie-uloh.js"
+  },
+  {
+    id: '1-u07-h071', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7,
+    topic: "Rozklad výrazov podľa vzorcov", lesson: "Hodina 71", lessonOrder: 71,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nový vzorec → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozdiel druhých mocnín", "argumentácia"],
+    file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/71-rozklad-vyrazov-podla-vzorcov.js"
+  },
+  {
+    id: '1-u07-h072', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7,
+    topic: "Rozklad výrazov pomocou vzorcov", lesson: "Hodina 72", lessonOrder: 72,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nové vzorce → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["druhá mocnina dvojčlena", "kontrola prostredného člena", "argumentácia"],
+    file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/72-rozklad-vyrazov-pomocou-vzorcov.js"
+  },
+  {
+    id: '1-u07-h073', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7,
+    topic: "Riešenie úloh", lesson: "Hodina 73", lessonOrder: 73,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → rozpoznanie vzorca → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozpoznanie vhodného vzorca", "kritické myslenie", "argumentácia"],
+    file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/73-riesenie-uloh.js"
+  },
+  {
+    id: '1-u07-h074', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7,
+    topic: "Zložitejšie úpravy", lesson: "Hodina 74", lessonOrder: 74,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → kombinovaný rozklad → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["kombinácia vyňatia a vzorca", "úplnosť rozkladu", "argumentácia"],
+    file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/74-zlozitejsie-upravy.js"
+  },
+  {
+    id: '1-u07-h075', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7,
+    topic: "Riešenie úloh", lesson: "Hodina 75", lessonOrder: 75,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → pestrá zmes úloh → zápis do zošita → argumentácia → záver",
+    skills: ["kombinácia zručností celého celku", "argumentácia"],
+    file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/75-riesenie-uloh.js"
+  },
+  {
+    id: '1-u07-h076', year: 1, unit: "Rozklad výrazov a dosadzovanie vo vzorcoch", unitOrder: 7,
+    topic: "Kontrolná písomná práca", lesson: "Hodina 76", lessonOrder: 76,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička pred previerkou → over → sebahodnotenie",
+    skills: ["zhrnutie celej témy", "sebahodnotenie"],
+    file: "modules/1-rocnik/rozklad-vyrazov-a-dosadzovanie-vo-vzorcoch/76-kontrolna-pisomna-praca.js"
+  },
 
   // 1.08 · Lomené výrazy
-  placeholder({ id: '1-u08-h077', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Úpravy lomených výrazov", lesson: "Hodina 77", lessonOrder: 77, file: "modules/1-rocnik/lomene-vyrazy/77-upravy-lomenych-vyrazov.js" }),
-  placeholder({ id: '1-u08-h078', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Úpravy lomených výrazov-ščítanie lomených výrazov", lesson: "Hodina 78", lessonOrder: 78, file: "modules/1-rocnik/lomene-vyrazy/78-upravy-lomenych-vyrazov-scitanie-lomenych-vyrazov.js" }),
-  placeholder({ id: '1-u08-h079', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Úpravy lomených výrazov-odčítanie lomených výrazov", lesson: "Hodina 79", lessonOrder: 79, file: "modules/1-rocnik/lomene-vyrazy/79-upravy-lomenych-vyrazov-odcitanie-lomenych-vyrazov.js" }),
-  placeholder({ id: '1-u08-h080', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Riešenie úloh", lesson: "Hodina 80", lessonOrder: 80, file: "modules/1-rocnik/lomene-vyrazy/80-riesenie-uloh.js" }),
-  placeholder({ id: '1-u08-h081', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Úpravy lomených výrazov-násobenie lomených výrazov", lesson: "Hodina 81", lessonOrder: 81, file: "modules/1-rocnik/lomene-vyrazy/81-upravy-lomenych-vyrazov-nasobenie-lomenych-vyrazov.js" }),
-  placeholder({ id: '1-u08-h082', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Úpravy lomených výrazov-delenie lomených výrazov", lesson: "Hodina 82", lessonOrder: 82, file: "modules/1-rocnik/lomene-vyrazy/82-upravy-lomenych-vyrazov-delenie-lomenych-vyrazov.js" }),
-  placeholder({ id: '1-u08-h083', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Riešenie úloh", lesson: "Hodina 83", lessonOrder: 83, file: "modules/1-rocnik/lomene-vyrazy/83-riesenie-uloh.js" }),
-  placeholder({ id: '1-u08-h084', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Zložitejšie úpravy lomených výrazov", lesson: "Hodina 84", lessonOrder: 84, file: "modules/1-rocnik/lomene-vyrazy/84-zlozitejsie-upravy-lomenych-vyrazov.js" }),
-  placeholder({ id: '1-u08-h085', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Riešenie úloh", lesson: "Hodina 85", lessonOrder: 85, file: "modules/1-rocnik/lomene-vyrazy/85-riesenie-uloh.js" }),
-  placeholder({ id: '1-u08-h086', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Systematizácia učiva", lesson: "Hodina 86", lessonOrder: 86, file: "modules/1-rocnik/lomene-vyrazy/86-systematizacia-uciva.js" }),
-  placeholder({ id: '1-u08-h087', year: 1, unit: "Lomené výrazy", unitOrder: 8, topic: "Kontrolná písomná práca", lesson: "Hodina 87", lessonOrder: 87, file: "modules/1-rocnik/lomene-vyrazy/87-kontrolna-pisomna-praca.js" }),
+  {
+    id: '1-u08-h077', year: 1, unit: "Lomené výrazy", unitOrder: 8,
+    topic: "Úpravy lomených výrazov", lesson: "Hodina 77", lessonOrder: 77,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → definičný obor → krátenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["definičný obor lomeného výrazu", "krátenie lomeného výrazu", "argumentácia"],
+    file: "modules/1-rocnik/lomene-vyrazy/77-upravy-lomenych-vyrazov.js"
+  },
+  {
+    id: '1-u08-h078', year: 1, unit: "Lomené výrazy", unitOrder: 8,
+    topic: "Úpravy lomených výrazov-ščítanie lomených výrazov", lesson: "Hodina 78", lessonOrder: 78,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["sčítanie lomených výrazov", "spoločný menovateľ", "argumentácia"],
+    file: "modules/1-rocnik/lomene-vyrazy/78-upravy-lomenych-vyrazov-scitanie-lomenych-vyrazov.js"
+  },
+  {
+    id: '1-u08-h079', year: 1, unit: "Lomené výrazy", unitOrder: 8,
+    topic: "Úpravy lomených výrazov-odčítanie lomených výrazov", lesson: "Hodina 79", lessonOrder: 79,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["odčítanie lomených výrazov", "znamienko pri odčítaní", "argumentácia"],
+    file: "modules/1-rocnik/lomene-vyrazy/79-upravy-lomenych-vyrazov-odcitanie-lomenych-vyrazov.js"
+  },
+  {
+    id: '1-u08-h080', year: 1, unit: "Lomené výrazy", unitOrder: 8,
+    topic: "Riešenie úloh", lesson: "Hodina 80", lessonOrder: 80,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → kombinácia zručností → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["kombinácia zručností", "kritické myslenie", "argumentácia"],
+    file: "modules/1-rocnik/lomene-vyrazy/80-riesenie-uloh.js"
+  },
+  {
+    id: '1-u08-h081', year: 1, unit: "Lomené výrazy", unitOrder: 8,
+    topic: "Úpravy lomených výrazov-násobenie lomených výrazov", lesson: "Hodina 81", lessonOrder: 81,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["násobenie lomených výrazov", "krátenie pred násobením", "argumentácia"],
+    file: "modules/1-rocnik/lomene-vyrazy/81-upravy-lomenych-vyrazov-nasobenie-lomenych-vyrazov.js"
+  },
+  {
+    id: '1-u08-h082', year: 1, unit: "Lomené výrazy", unitOrder: 8,
+    topic: "Úpravy lomených výrazov-delenie lomených výrazov", lesson: "Hodina 82", lessonOrder: 82,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["delenie lomených výrazov", "prevod delenia na násobenie", "argumentácia"],
+    file: "modules/1-rocnik/lomene-vyrazy/82-upravy-lomenych-vyrazov-delenie-lomenych-vyrazov.js"
+  },
+  {
+    id: '1-u08-h083', year: 1, unit: "Lomené výrazy", unitOrder: 8,
+    topic: "Riešenie úloh", lesson: "Hodina 83", lessonOrder: 83,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → kombinácia zručností → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["násobenie a delenie lomených výrazov", "kritické myslenie", "argumentácia"],
+    file: "modules/1-rocnik/lomene-vyrazy/83-riesenie-uloh.js"
+  },
+  {
+    id: '1-u08-h084', year: 1, unit: "Lomené výrazy", unitOrder: 8,
+    topic: "Zložitejšie úpravy lomených výrazov", lesson: "Hodina 84", lessonOrder: 84,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozklad menovateľa pri hľadaní spoločného menovateľa", "zložitá úprava", "argumentácia"],
+    file: "modules/1-rocnik/lomene-vyrazy/84-zlozitejsie-upravy-lomenych-vyrazov.js"
+  },
+  {
+    id: '1-u08-h085', year: 1, unit: "Lomené výrazy", unitOrder: 8,
+    topic: "Riešenie úloh", lesson: "Hodina 85", lessonOrder: 85,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → zložitá úprava → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["zložitá úprava lomeného výrazu", "kritické myslenie", "argumentácia"],
+    file: "modules/1-rocnik/lomene-vyrazy/85-riesenie-uloh.js"
+  },
+  {
+    id: '1-u08-h086', year: 1, unit: "Lomené výrazy", unitOrder: 8,
+    topic: "Systematizácia učiva", lesson: "Hodina 86", lessonOrder: 86,
+    time: "22–28 min", status: 'ready',
+    type: "Zhrnutie → klasifikácia typu úlohy → precvičenie → zápis do zošita → argumentácia → záver",
+    skills: ["systematické rozpoznanie typu úlohy", "kombinácia zručností", "argumentácia"],
+    file: "modules/1-rocnik/lomene-vyrazy/86-systematizacia-uciva.js"
+  },
+  {
+    id: '1-u08-h087', year: 1, unit: "Lomené výrazy", unitOrder: 8,
+    topic: "Kontrolná písomná práca", lesson: "Hodina 87", lessonOrder: 87,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička pred previerkou → over → sebahodnotenie",
+    skills: ["zhrnutie celej témy", "sebahodnotenie"],
+    file: "modules/1-rocnik/lomene-vyrazy/87-kontrolna-pisomna-praca.js"
+  },
 
   // 1.09 · Funkcie- základné vlastnosti
   {
@@ -468,17 +776,94 @@
     skills: ["funkcia", "definičný obor D(f)", "obor hodnôt H(f)"],
     file: 'modules/1-rocnik/funkcie-zakladne-vlastnosti/88-pojem-funkcie-definicny-obor-funkcie-obor-hodnot-funkcie.js'
   },
-  placeholder({ id: '1-u09-h089', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Graf funkcie, určovanie D(f) a H(f) z grafu", lesson: "Hodina 89", lessonOrder: 89, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/89-graf-funkcie-urcovanie-d-f-a-h-f-z-grafu.js" }),
-  placeholder({ id: '1-u09-h090', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Riešenie úloh", lesson: "Hodina 90", lessonOrder: 90, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/90-riesenie-uloh.js" }),
-  placeholder({ id: '1-u09-h091', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Párna a nepárna funkcia", lesson: "Hodina 91", lessonOrder: 91, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/91-parna-a-neparna-funkcia.js" }),
-  placeholder({ id: '1-u09-h092', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Rastúca a klesajúca funkci", lesson: "Hodina 92", lessonOrder: 92, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/92-rastuca-a-klesajuca-funkci.js" }),
-  placeholder({ id: '1-u09-h093', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Maximum a minimum funkcie na množine", lesson: "Hodina 93", lessonOrder: 93, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/93-maximum-a-minimum-funkcie-na-mnozine.js" }),
-  placeholder({ id: '1-u09-h094', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Prostá funkcia", lesson: "Hodina 94", lessonOrder: 94, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/94-prosta-funkcia.js" }),
-  placeholder({ id: '1-u09-h095', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Funkcia ohraničená na množine", lesson: "Hodina 95", lessonOrder: 95, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/95-funkcia-ohranicena-na-mnozine.js" }),
-  placeholder({ id: '1-u09-h096', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Riešenie úloh", lesson: "Hodina 96", lessonOrder: 96, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/96-riesenie-uloh.js" }),
-  placeholder({ id: '1-u09-h097', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Určovanie vlastnosti funkcie z grafu", lesson: "Hodina 97", lessonOrder: 97, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/97-urcovanie-vlastnosti-funkcie-z-grafu.js" }),
-  placeholder({ id: '1-u09-h098', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Riešenie úloh", lesson: "Hodina 98", lessonOrder: 98, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/98-riesenie-uloh.js" }),
-  placeholder({ id: '1-u09-h099', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9, topic: "Kontrolná písomná práca", lesson: "Hodina 99", lessonOrder: 99, file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/99-kontrolna-pisomna-praca.js" }),
+  {
+    id: '1-u09-h089', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9,
+    topic: "Graf funkcie, určovanie D(f) a H(f) z grafu", lesson: "Hodina 89", lessonOrder: 89,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → graf funkcie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["D(f) z grafu", "H(f) z grafu", "argumentácia"],
+    file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/89-graf-funkcie-urcovanie-d-f-a-h-f-z-grafu.js"
+  },
+  {
+    id: '1-u09-h090', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9,
+    topic: "Riešenie úloh", lesson: "Hodina 90", lessonOrder: 90,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → precvičenie reprezentácií → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["pojem funkcie", "D(f) a H(f) z rôznych reprezentácií", "argumentácia"],
+    file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/90-riesenie-uloh.js"
+  },
+  {
+    id: '1-u09-h091', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9,
+    topic: "Párna a nepárna funkcia", lesson: "Hodina 91", lessonOrder: 91,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["párna funkcia", "nepárna funkcia", "argumentácia"],
+    file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/91-parna-a-neparna-funkcia.js"
+  },
+  {
+    id: '1-u09-h092', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9,
+    topic: "Rastúca a klesajúca funkci", lesson: "Hodina 92", lessonOrder: 92,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → aplikácia → zápis do zošita → argumentácia → záver",
+    skills: ["rastúca funkcia", "klesajúca funkcia", "argumentácia"],
+    file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/92-rastuca-a-klesajuca-funkci.js"
+  },
+  {
+    id: '1-u09-h093', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9,
+    topic: "Maximum a minimum funkcie na množine", lesson: "Hodina 93", lessonOrder: 93,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → aplikácia → zápis do zošita → argumentácia → záver",
+    skills: ["maximum funkcie", "minimum funkcie", "argumentácia"],
+    file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/93-maximum-a-minimum-funkcie-na-mnozine.js"
+  },
+  {
+    id: '1-u09-h094', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9,
+    topic: "Prostá funkcia", lesson: "Hodina 94", lessonOrder: 94,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → hľadanie protipríkladu → zápis do zošita → argumentácia → záver",
+    skills: ["prostá funkcia", "hľadanie protipríkladu", "argumentácia"],
+    file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/94-prosta-funkcia.js"
+  },
+  {
+    id: '1-u09-h095', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9,
+    topic: "Funkcia ohraničená na množine", lesson: "Hodina 95", lessonOrder: 95,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → aplikácia → zápis do zošita → argumentácia → záver",
+    skills: ["ohraničenosť zhora a zdola", "rozdiel od extrému", "argumentácia"],
+    file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/95-funkcia-ohranicena-na-mnozine.js"
+  },
+  {
+    id: '1-u09-h096', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9,
+    topic: "Riešenie úloh", lesson: "Hodina 96", lessonOrder: 96,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → priraďovanie → kombinácia vlastností → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["kombinácia vlastností funkcie", "kritické myslenie", "argumentácia"],
+    file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/96-riesenie-uloh.js"
+  },
+  {
+    id: '1-u09-h097', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9,
+    topic: "Určovanie vlastnosti funkcie z grafu", lesson: "Hodina 97", lessonOrder: 97,
+    time: "22–28 min", status: 'ready',
+    type: "Graf funkcie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["komplexné čítanie grafu", "monotónnosť po úsekoch", "argumentácia"],
+    file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/97-urcovanie-vlastnosti-funkcie-z-grafu.js"
+  },
+  {
+    id: '1-u09-h098', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9,
+    topic: "Riešenie úloh", lesson: "Hodina 98", lessonOrder: 98,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → pestrá zmes úloh → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["kombinácia zručností celej témy", "kritické myslenie", "argumentácia"],
+    file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/98-riesenie-uloh.js"
+  },
+  {
+    id: '1-u09-h099', year: 1, unit: "Funkcie- základné vlastnosti", unitOrder: 9,
+    topic: "Kontrolná písomná práca", lesson: "Hodina 99", lessonOrder: 99,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička pred previerkou → over → sebahodnotenie",
+    skills: ["zhrnutie celej témy", "sebahodnotenie"],
+    file: "modules/1-rocnik/funkcie-zakladne-vlastnosti/99-kontrolna-pisomna-praca.js"
+  },
   // ==================== 2. ROČNÍK ====================
 
   // 2.01 · Lineárna funkcia

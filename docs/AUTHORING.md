@@ -116,12 +116,21 @@ against after writing it. Never used as a stand-in for `notebook`.
 ### `numberInput` — free-form numeric answer
 
 Required: `title`, `prompt`, `validate` (a key into `core/renderers.js`'s
-`NUMBER_VALIDATORS` table — currently only `'oddComposite'`; add a new
-validator function there, and the matching key to
-`tools/audit.mjs`'s `KNOWN_NUMBER_VALIDATORS`, before using a new one),
-`success` (shown on a correct answer), `hint` (shown after the first wrong
-attempt). Optional: `reveal` (shown on the second wrong attempt instead of a
-generic message — use it for a concrete worked counter-example).
+`NUMBER_VALIDATORS` table), `success` (shown on a correct answer), `hint`
+(shown after the first wrong attempt). Optional: `reveal` (shown on the
+second wrong attempt instead of a generic message — use it for a concrete
+worked counter-example).
+
+Two validators exist: `'oddComposite'` (a specific puzzle — is this a
+positive odd composite number) and the general-purpose `'exact'`, which
+compares the typed value against a numeric `answer` field you set on the
+activity (works for negative numbers and decimals; a Slovak decimal comma
+is accepted alongside a dot). Use `'exact'` for an ordinary computed
+answer — set `answer: -32` (say), not a new named function. Add a new
+validator function to `NUMBER_VALIDATORS` (and the matching key to
+`tools/audit.mjs`'s `KNOWN_NUMBER_VALIDATORS`) only for a check that isn't
+"does it equal this one number" — a puzzle with many correct answers, like
+`oddComposite`.
 
 ### `matrix` — match every item to one label
 

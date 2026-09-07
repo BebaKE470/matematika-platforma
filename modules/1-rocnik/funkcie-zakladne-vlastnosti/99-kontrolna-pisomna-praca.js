@@ -1,29 +1,137 @@
-/*
-  TODO PLACEHOLDER
-  Tento súbor je zámerne iba zástupný modul.
-  Neskôr sa nahradí plnohodnotným interaktívnym modulom bez zmeny jeho ID a cesty v registry.js.
-*/
 MathPlatform.registerModule({
-  id: "1-u09-h099",
+  id: '1-u09-h099',
   teacher: {
-    placement: "1. ročník · Funkcie- základné vlastnosti · Hodina 99",
-    prerequisites: ["TODO – doplniť pri spracovaní modulu."],
-    planContent: ["TODO – prevziať presne z aktuálneho tematického plánu pri spracovaní modulu."],
-    planPerformance: ["TODO – prevziať iba to, čo je v aktuálnom tematickom pláne; ak bunka nie je vyplnená, nič nevymýšľať."],
-    goals: ["TODO – doplniť ciele až pri plnohodnotnom spracovaní."],
-    competencies: ["TODO – doplniť pri spracovaní modulu."],
-    enrichment: ["TODO – návrh maturitného štandardu použiť iba ako prirodzené obohatenie, nie ako určujúce učivo."],
-    estimatedTime: "TODO – cieľ približne 15 minút aktívnej práce, ak charakter hodiny nevyžaduje inak.",
-    notebook: "TODO – zachovať zápis do zošita → kontrola/vysvetlenie → zápis do zošita.",
-    diagnostics: ["TODO – doplniť diagnostické body pri spracovaní modulu."],
-    flow: ["TODO – vytvoriť názorný, vekovo primeraný a obsahovo presný priebeh hodiny."],
-    partialUse: ["TODO – určiť, ktoré časti sa dajú použiť samostatne."]
+    placement: '1. ročník · Funkcie – základné vlastnosti · Hodina 99: Kontrolná písomná práca',
+    prerequisites: [
+      'celá téma Funkcie – základné vlastnosti (hodiny 88–98)',
+    ],
+    planContent: [
+      'Tematický plán pre tento celok nemá bunku obsahového štandardu vyplnenú. Modul vychádza z výkonového štandardu celku.',
+    ],
+    planPerformance: [
+      'Tematický plán zhŕňa výkonový štandard celku: „žiak pozná definičný obor a obor hodnôt funkcie, žiak vie určiť tieto množiny aj z grafu, žiak rozlišuje párne a nepárne funkcie, žiak určuje monotónnosť funkcie a extrémy funkcie na množine, žiak rozpoznáva prostú funkciu, ohraničenosť, žiak vie určiť vlastnosti funkcie z grafu.“',
+    ],
+    goals: [
+      'Kognitívny cieľ: žiak preukáže, že ovláda pojem funkcie a všetky jej vlastnosti z celej témy.',
+      'Afektívny cieľ: žiak pristupuje ku kontrolnej práci pokojne, so systematickým postupom.',
+      'Praktický cieľ: žiak si pred písomkou samostatne overí, ktoré časti témy ešte potrebuje zopakovať.',
+      'Kritérium úspechu: žiak v tejto rozcvičke pred písomkou správne vyrieši aspoň 4 z 5 úloh.',
+    ],
+    competencies: [
+      'sebahodnotenie a zodpovednosť za vlastnú prípravu',
+      'systematické opakovanie väčšieho celku učiva',
+      'digitálna kompetencia pri účelnom použití interaktívnej platformy',
+    ],
+    enrichment: [
+      'Bez doplňujúceho obohatenia — hodina je vyhradená na kontrolnú písomnú prácu podľa tematického plánu.',
+    ],
+    flow: [
+      '0–5 min – krátka diagnostická rozcvička na platforme (táto aktivita) ako posledná kontrola pred písomkou.',
+      '5–40 min – samotná kontrolná písomná práca (mimo aplikácie, na papieri).',
+      '40–45 min – zber prác, krátke zhodnotenie priebehu celej témy.',
+    ],
+    diagnostics: [
+      'ktoré typy úloh z celej témy (pojem funkcie, D(f)/H(f), párnosť, monotónnosť, extrémy, prostota, ohraničenosť) robia žiakovi najviac problém tesne pred písomkou',
+    ],
+    partialUse: [
+      'Túto krátku rozcvičku možno vynechať, ak trieda potrebuje celú hodinu na samotnú písomku.',
+      'Pomôcky: papier na písomnú prácu, písacie potreby; platforma iba na úvodnú rozcvičku.',
+      'Hodnotenie: samotná písomná práca sa hodnotí známkou mimo platformy; rozcvička v aplikácii slúži len ako posledná spätná väzba pred písomkou, XP nie sú známka.',
+    ],
   },
   student: {
-    title: "Kontrolná písomná práca",
-    subtitle: "TODO – modul čaká na plnohodnotné spracovanie",
-    estimatedTime: "TODO",
-    intro: "Téma je už technicky prepojená s platformou. Obsah tohto modulu ešte nie je spracovaný; tento súbor je iba zástupný placeholder.",
-    activities: []
-  }
+    title: 'Rozcvička pred previerkou',
+    subtitle: 'Hodina 99 · Funkcie – základné vlastnosti',
+    intro: 'Krátka rozcvička na overenie, či si pripravený/á na kontrolnú písomnú prácu z celej témy Funkcie – základné vlastnosti.',
+    estimatedTime: '10–14 min',
+    activities: [
+      {
+        id: 'intro',
+        type: 'info',
+        phase: 'POCHOP',
+        title: 'Posledná kontrola pred písomkou',
+        html: '<p>Táto krátka rozcvička preverí najdôležitejšie body celej témy: pojem funkcie, D(f)/H(f), párnosť, monotónnosť, extrémy, prostotu a ohraničenosť.</p>',
+        continueLabel: 'Pokračovať',
+      },
+      {
+        id: 'q1',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'pojem funkcie',
+        question: 'Ktoré priradenie JE funkciou?',
+        options: [
+          'Každému x = 2 priraď hodnoty 5 aj 9.',
+          'Každému žiakovi priraď jeho vek.',
+          'Toto nie je matematická otázka.',
+        ],
+        answer: 1,
+        correct: 'Správne. Každý žiak má práve jeden vek — priradenie je jednoznačné.',
+        hint: 'Hľadaj priradenie, kde má každý vstup práve jeden výstup.',
+      },
+      {
+        id: 'q2',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'D(f) a H(f)',
+        question: 'Funkcia je daná tabuľkou: x=1→y=5; x=2→y=5; x=3→y=8. Aký je obor hodnôt H(f)?',
+        options: ['H(f) = {5, 5, 8}', 'H(f) = {1, 2, 3}', 'H(f) = {5, 8}'],
+        answer: 2,
+        correct: 'Správne. H(f) je množina bez opakovania: {5, 8}.',
+        hint: 'H(f) čítaj z hodnôt y, bez opakovania.',
+      },
+      {
+        id: 'q3',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'párna a nepárna funkcia',
+        question: 'Funkcia f(x) = x² − 3. Over výpočtom f(−2), či je funkcia párna.',
+        options: ['f(−2)=1=f(2), párna', 'f(−2)=−1, nepárna', 'f(−2)=7, ani jedno'],
+        answer: 0,
+        correct: 'Správne. f(−2)=(−2)²−3=1=f(2), funkcia je párna.',
+        hint: 'Vypočítaj f(−2) a porovnaj s f(2).',
+      },
+      {
+        id: 'q4',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'monotónnosť a extrémy',
+        question: 'Funkcia má hodnoty f(1)=2, f(2)=6, f(3)=9. Je táto funkcia na tejto množine rastúca?',
+        options: [
+          'Áno, so zväčšujúcim sa x sa hodnoty y stále zväčšujú (2, 6, 9).',
+          'Nie, funkcia klesá.',
+          'Nedá sa to rozhodnúť.',
+        ],
+        answer: 0,
+        correct: 'Správne. Hodnoty 2, 6, 9 sa so zväčšujúcim sa x stále zväčšujú.',
+        hint: 'Porovnaj, či sa hodnoty y zväčšujú alebo zmenšujú so zväčšujúcim sa x.',
+      },
+      {
+        id: 'q5',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'prostá a ohraničená funkcia',
+        question: 'Funkcia g má g(1)=4, g(2)=7, g(3)=4. Je táto funkcia prostá?',
+        options: [
+          'Áno, má tri rôzne hodnoty x.',
+          'Nie, lebo g(1)=g(3)=4, hoci 1≠3.',
+          'Nedá sa to rozhodnúť.',
+        ],
+        answer: 1,
+        correct: 'Správne. g(1) a g(3) sú rovnaké, hoci 1 a 3 sú rôzne — funkcia nie je prostá.',
+        hint: 'Skontroluj, či sa niektorá funkčná hodnota opakuje.',
+      },
+      {
+        id: 'reflection',
+        type: 'reflection',
+        phase: 'ZÁVER',
+        title: 'Si pripravený/á na písomku?',
+        skills: [
+          'pojem funkcie a D(f)/H(f)',
+          'párnosť, monotónnosť, extrémy',
+          'prostá funkcia a ohraničenosť',
+        ],
+        prompt: 'Označ, ktoré časti témy ešte potrebuješ zopakovať pred písomkou. Nie je to známka.',
+      },
+    ],
+  },
 });
