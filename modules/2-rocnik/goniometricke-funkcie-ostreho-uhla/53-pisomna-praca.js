@@ -1,29 +1,125 @@
-/*
-  TODO PLACEHOLDER
-  Tento súbor je zámerne iba zástupný modul.
-  Neskôr sa nahradí plnohodnotným interaktívnym modulom bez zmeny jeho ID a cesty v registry.js.
-*/
 MathPlatform.registerModule({
-  id: "2-u07-h053",
+  id: '2-u07-h053',
   teacher: {
-    placement: "2. ročník · Goniometrické funkcie ostrého uhla · Hodina 53",
-    prerequisites: ["TODO – doplniť pri spracovaní modulu."],
-    planContent: ["TODO – prevziať presne z aktuálneho tematického plánu pri spracovaní modulu."],
-    planPerformance: ["TODO – prevziať iba to, čo je v aktuálnom tematickom pláne; ak bunka nie je vyplnená, nič nevymýšľať."],
-    goals: ["TODO – doplniť ciele až pri plnohodnotnom spracovaní."],
-    competencies: ["TODO – doplniť pri spracovaní modulu."],
-    enrichment: ["TODO – návrh maturitného štandardu použiť iba ako prirodzené obohatenie, nie ako určujúce učivo."],
-    estimatedTime: "TODO – cieľ približne 15 minút aktívnej práce, ak charakter hodiny nevyžaduje inak.",
-    notebook: "TODO – zachovať zápis do zošita → kontrola/vysvetlenie → zápis do zošita.",
-    diagnostics: ["TODO – doplniť diagnostické body pri spracovaní modulu."],
-    flow: ["TODO – vytvoriť názorný, vekovo primeraný a obsahovo presný priebeh hodiny."],
-    partialUse: ["TODO – určiť, ktoré časti sa dajú použiť samostatne."]
+    placement: '2. ročník · Goniometrické funkcie ostrého uhla · 53. hodina: Písomná práca',
+    prerequisites: [
+      'celá téma Goniometrické funkcie ostrého uhla (hodiny 48–52)',
+    ],
+    planContent: [
+      'Tematický plán pre tento celok nemá bunku obsahového štandardu vyplnenú. Modul vychádza z výkonového štandardu celku.',
+    ],
+    planPerformance: [
+      'Téma hodiny podľa plánu: „Písomná práca“. Hodina je vyhradená na kontrolnú písomnú prácu z celého celku.',
+    ],
+    goals: [
+      'Kognitívny cieľ: žiak preukáže, že ovláda sin, cos, tg, cotg a riešenie pravouhlého trojuholníka.',
+      'Afektívny cieľ: žiak pristupuje k písomnej práci pokojne, so systematickým postupom.',
+      'Praktický cieľ: žiak si pred písomkou samostatne overí, ktoré časti témy ešte potrebuje zopakovať.',
+      'Kritérium úspechu: žiak v tejto rozcvičke pred písomkou správne vyrieši aspoň 4 z 5 úloh.',
+    ],
+    competencies: [
+      'sebahodnotenie a zodpovednosť za vlastnú prípravu',
+      'systematické opakovanie väčšieho celku učiva',
+      'digitálna kompetencia pri účelnom použití interaktívnej platformy',
+    ],
+    enrichment: [
+      'Bez doplňujúceho obohatenia — hodina je vyhradená na písomnú prácu podľa tematického plánu.',
+    ],
+    flow: [
+      '0–5 min – krátka diagnostická rozcvička na platforme (táto aktivita) ako posledná kontrola pred písomkou.',
+      '5–40 min – samotná písomná práca (mimo aplikácie, na papieri, s kalkulačkou).',
+      '40–45 min – zber prác, krátke zhodnotenie priebehu.',
+    ],
+    diagnostics: [
+      'ktoré typy úloh z celej témy (sin, cos, tg, cotg, riešenie trojuholníka) robia žiakovi najviac problém tesne pred písomkou',
+    ],
+    partialUse: [
+      'Túto krátku rozcvičku možno vynechať, ak trieda potrebuje celú hodinu na samotnú písomku.',
+      'Pomôcky: papier na písomnú prácu, písacie potreby, kalkulačka; platforma iba na úvodnú rozcvičku.',
+      'Hodnotenie: samotná písomná práca sa hodnotí známkou mimo platformy; rozcvička v aplikácii slúži len ako posledná spätná väzba pred písomkou, XP nie sú známka.',
+    ],
   },
   student: {
-    title: "Písomná práca",
-    subtitle: "TODO – modul čaká na plnohodnotné spracovanie",
-    estimatedTime: "TODO",
-    intro: "Téma je už technicky prepojená s platformou. Obsah tohto modulu ešte nie je spracovaný; tento súbor je iba zástupný placeholder.",
-    activities: []
-  }
+    title: 'Rozcvička pred písomnou prácou',
+    subtitle: 'Téma 53 · Goniometrické funkcie ostrého uhla',
+    intro: 'Krátka rozcvička na overenie, či si pripravený/á na písomnú prácu z celej témy.',
+    estimatedTime: '10–14 min',
+    activities: [
+      {
+        id: 'intro',
+        type: 'info',
+        phase: 'POCHOP',
+        title: 'Posledná kontrola pred písomkou',
+        html: '<p>Táto krátka rozcvička preverí najdôležitejšie body celej témy: sin, cos, tg, cotg a riešenie pravouhlého trojuholníka.</p>',
+        continueLabel: 'Pokračovať',
+      },
+      {
+        id: 'q1',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'sínus',
+        question: 'Trojuholník má protiľahlú odvesnu 7cm a preponu 25cm. Aké je sin α?',
+        options: ['7/25', '25/7', '18/25'],
+        answer: 0,
+        correct: 'Správne. sin α = protiľahlá/prepona = 7/25.',
+        hint: 'sin α je pomer protiľahlej odvesny k prepone.',
+      },
+      {
+        id: 'q2',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'kosínus',
+        question: 'Trojuholník má priľahlú odvesnu 24cm a preponu 25cm. Aké je cos α?',
+        options: ['25/24', '1/25', '24/25'],
+        answer: 2,
+        correct: 'Správne. cos α = priľahlá/prepona = 24/25.',
+        hint: 'cos α je pomer priľahlej odvesny k prepone.',
+      },
+      {
+        id: 'q3',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'tangens',
+        question: 'Trojuholník má protiľahlú odvesnu 7cm a priľahlú 24cm. Aké je tg α?',
+        options: ['7/24', '24/7', '7/25'],
+        answer: 0,
+        correct: 'Správne. tg α = protiľahlá/priľahlá = 7/24.',
+        hint: 'tg α je pomer protiľahlej odvesny k priľahlej.',
+      },
+      {
+        id: 'q4',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'súčet uhlov',
+        question: 'Jeden ostrý uhol je 48°. Aký je druhý ostrý uhol?',
+        options: ['52°', '132°', '42°'],
+        answer: 2,
+        correct: 'Správne. 90°−48°=42°.',
+        hint: 'Súčet ostrých uhlov v pravouhlom trojuholníku je 90°.',
+      },
+      {
+        id: 'q5',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'Pytagorova veta',
+        question: 'Pravouhlý trojuholník má odvesny 5cm a 12cm. Aká je dĺžka prepony?',
+        options: ['17cm', '60cm', '13cm'],
+        answer: 2,
+        correct: 'Správne. c=√(5²+12²)=√169=13cm.',
+        hint: 'Použi Pytagorovu vetu c=√(a²+b²).',
+      },
+      {
+        id: 'reflection',
+        type: 'reflection',
+        phase: 'ZÁVER',
+        title: 'Si pripravený/á na písomku?',
+        skills: [
+          'sínus, kosínus, tangens',
+          'súčet ostrých uhlov',
+          'Pytagorova veta',
+        ],
+        prompt: 'Označ, ktoré časti témy ešte potrebuješ zopakovať pred písomkou. Nie je to známka.',
+      },
+    ],
+  },
 });

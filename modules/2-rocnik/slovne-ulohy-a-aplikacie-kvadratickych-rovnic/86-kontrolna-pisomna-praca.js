@@ -1,29 +1,127 @@
-/*
-  TODO PLACEHOLDER
-  Tento súbor je zámerne iba zástupný modul.
-  Neskôr sa nahradí plnohodnotným interaktívnym modulom bez zmeny jeho ID a cesty v registry.js.
-*/
 MathPlatform.registerModule({
-  id: "2-u12-h086",
+  id: '2-u12-h086',
   teacher: {
-    placement: "2. ročník · Slovné úlohy a aplikácie kvadratických rovníc · Hodina 86",
-    prerequisites: ["TODO – doplniť pri spracovaní modulu."],
-    planContent: ["TODO – prevziať presne z aktuálneho tematického plánu pri spracovaní modulu."],
-    planPerformance: ["TODO – prevziať iba to, čo je v aktuálnom tematickom pláne; ak bunka nie je vyplnená, nič nevymýšľať."],
-    goals: ["TODO – doplniť ciele až pri plnohodnotnom spracovaní."],
-    competencies: ["TODO – doplniť pri spracovaní modulu."],
-    enrichment: ["TODO – návrh maturitného štandardu použiť iba ako prirodzené obohatenie, nie ako určujúce učivo."],
-    estimatedTime: "TODO – cieľ približne 15 minút aktívnej práce, ak charakter hodiny nevyžaduje inak.",
-    notebook: "TODO – zachovať zápis do zošita → kontrola/vysvetlenie → zápis do zošita.",
-    diagnostics: ["TODO – doplniť diagnostické body pri spracovaní modulu."],
-    flow: ["TODO – vytvoriť názorný, vekovo primeraný a obsahovo presný priebeh hodiny."],
-    partialUse: ["TODO – určiť, ktoré časti sa dajú použiť samostatne."]
+    placement: '2. ročník · Slovné úlohy a aplikácie kvadratických rovníc · 86. hodina: Kontrolná písomná práca',
+    prerequisites: [
+      'celá téma Slovné úlohy a aplikácie kvadratických rovníc (hodiny 82–85)',
+    ],
+    planContent: [
+      'Tematický plán pre tento celok nemá bunku obsahového štandardu vyplnenú. Modul vychádza z výkonového štandardu celku.',
+    ],
+    planPerformance: [
+      'Téma hodiny podľa plánu: „Kontrolná písomná práca“. Hodina je vyhradená na kontrolnú písomnú prácu z celého celku.',
+    ],
+    goals: [
+      'Kognitívny cieľ: žiak preukáže, že ovláda zostavenie a riešenie kvadratickej rovnice zo slovného zadania.',
+      'Afektívny cieľ: žiak pristupuje k písomnej práci pokojne, so systematickým postupom.',
+      'Praktický cieľ: žiak si pred písomkou samostatne overí, ktoré typy slovných úloh ešte potrebuje zopakovať.',
+      'Kritérium úspechu: žiak v tejto rozcvičke pred písomkou správne vyrieši aspoň 4 z 5 úloh.',
+    ],
+    competencies: [
+      'sebahodnotenie a zodpovednosť za vlastnú prípravu',
+      'systematické opakovanie väčšieho celku učiva',
+      'digitálna kompetencia pri účelnom použití interaktívnej platformy',
+    ],
+    enrichment: [
+      'Bez doplňujúceho obohatenia — hodina je vyhradená na písomnú prácu podľa tematického plánu.',
+    ],
+    flow: [
+      '0–5 min – krátka diagnostická rozcvička na platforme (táto aktivita) ako posledná kontrola pred písomkou.',
+      '5–40 min – samotná písomná práca (mimo aplikácie, na papieri).',
+      '40–45 min – zber prác, krátke zhodnotenie priebehu.',
+    ],
+    diagnostics: [
+      'ktorý typ slovnej úlohy robí žiakovi najviac problém tesne pred písomkou',
+    ],
+    partialUse: [
+      'Túto krátku rozcvičku možno vynechať, ak trieda potrebuje celú hodinu na samotnú písomku.',
+      'Pomôcky: papier na písomnú prácu, písacie potreby; platforma iba na úvodnú rozcvičku.',
+      'Hodnotenie: samotná písomná práca sa hodnotí známkou mimo platformy; rozcvička v aplikácii slúži len ako posledná spätná väzba pred písomkou, XP nie sú známka.',
+    ],
   },
   student: {
-    title: "Kontrolná písomná práca",
-    subtitle: "TODO – modul čaká na plnohodnotné spracovanie",
-    estimatedTime: "TODO",
-    intro: "Téma je už technicky prepojená s platformou. Obsah tohto modulu ešte nie je spracovaný; tento súbor je iba zástupný placeholder.",
-    activities: []
-  }
+    title: 'Rozcvička pred písomnou prácou',
+    subtitle: 'Téma 86 · Slovné úlohy a aplikácie kvadratických rovníc',
+    intro: 'Krátka rozcvička na overenie, či si pripravený/á na písomnú prácu z celej témy.',
+    estimatedTime: '10–14 min',
+    activities: [
+      {
+        id: 'intro',
+        type: 'info',
+        phase: 'POCHOP',
+        title: 'Posledná kontrola pred písomkou',
+        html: '<p>Táto krátka rozcvička preverí najdôležitejšie body celej témy: zostavenie rovnice zo slovného zadania a overenie zmysluplnosti riešenia.</p>',
+        continueLabel: 'Pokračovať',
+      },
+      {
+        id: 'q1',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'zostavenie rovnice',
+        question: 'Obdĺžnik má obsah 28 cm² a jedna strana je o 3 cm dlhšia. Ktorá rovnica to vyjadruje (x je kratšia strana)?',
+        options: ['x(x+3) = 28', 'x² + 3 = 28', '2(x+3) = 28'],
+        answer: 0,
+        correct: 'Správne. Obsah=strana×strana, teda x(x+3)=28.',
+        hint: 'Obsah obdĺžnika je súčin jeho strán.',
+      },
+      {
+        id: 'q2',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'riešenie a výber koreňa',
+        question: 'Rovnica x²+3x−28=0 má korene x=4 a x=−7. Aké sú rozmery obdĺžnika?',
+        options: ['4 cm a −7 cm', '−7 cm a −4 cm', '4 cm a 7 cm'],
+        answer: 2,
+        correct: 'Správne. Kratšia strana x=4 cm, dlhšia x+3=7 cm.',
+        hint: 'Zamietni záporné riešenie.',
+      },
+      {
+        id: 'q3',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'veková úloha',
+        question: 'Súčin vekov je 66, staršie dieťa je o 5 rokov staršie. Rovnica x²+5x−66=0 má korene x=6 a x=−11. Koľko rokov má mladšie dieťa?',
+        options: ['11 rokov', '6 rokov', '5 rokov'],
+        answer: 1,
+        correct: 'Správne. Vek nemôže byť záporný, takže mladšie dieťa má 6 rokov.',
+        hint: 'Zamietni záporné riešenie.',
+      },
+      {
+        id: 'q4',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'ekonomická úloha',
+        question: 'Rovnica x²−40x+300=0 (tržba z predaja) má korene x=10 a x=30, obe kladné a zmysluplné. Koľko riešení má táto úloha bez ďalšej podmienky?',
+        options: ['žiadne', 'dve', 'iba jedno'],
+        answer: 1,
+        correct: 'Správne. Bez ďalšieho obmedzenia sú zmysluplé obe kladné riešenia.',
+        hint: 'Over, či obe hodnoty spĺňajú podmienky zo zadania (kladná cena aj kladné množstvo).',
+      },
+      {
+        id: 'q5',
+        type: 'numberInput',
+        phase: 'OVER',
+        skill: 'kombinácia zručností',
+        title: 'Vyrieš slovnú úlohu',
+        prompt: 'Hľadáme kladné číslo x, ktorého druhá mocnina zmenšená o číslo samotné dá 30 (x²−x=30). Zapíš kladné riešenie.',
+        validate: 'exact',
+        answer: 6,
+        success: 'Správne. x²−x−30=0 má korene x=6 a x=−5; kladné riešenie je 6.',
+        hint: 'Zostav rovnicu x²−x−30=0 a vyber kladné riešenie.',
+        reveal: 'x=6 alebo x=−5, kladné riešenie je 6.',
+      },
+      {
+        id: 'reflection',
+        type: 'reflection',
+        phase: 'ZÁVER',
+        title: 'Si pripravený/á na písomku?',
+        skills: [
+          'zostavenie rovnice z rôznych kontextov',
+          'overenie zmysluplnosti riešenia',
+          'riešenie kvadratickej rovnice',
+        ],
+        prompt: 'Označ, ktoré typy slovných úloh ešte potrebuješ zopakovať pred písomkou. Nie je to známka.',
+      },
+    ],
+  },
 });

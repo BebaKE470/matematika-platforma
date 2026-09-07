@@ -1,29 +1,129 @@
-/*
-  TODO PLACEHOLDER
-  Tento súbor je zámerne iba zástupný modul.
-  Neskôr sa nahradí plnohodnotným interaktívnym modulom bez zmeny jeho ID a cesty v registry.js.
-*/
 MathPlatform.registerModule({
-  id: "2-u06-h046",
+  id: '2-u06-h046',
   teacher: {
-    placement: "2. ročník · Pravouhlý trojuholník a jeho vlastnosti · Hodina 46",
-    prerequisites: ["TODO – doplniť pri spracovaní modulu."],
-    planContent: ["TODO – prevziať presne z aktuálneho tematického plánu pri spracovaní modulu."],
-    planPerformance: ["TODO – prevziať iba to, čo je v aktuálnom tematickom pláne; ak bunka nie je vyplnená, nič nevymýšľať."],
-    goals: ["TODO – doplniť ciele až pri plnohodnotnom spracovaní."],
-    competencies: ["TODO – doplniť pri spracovaní modulu."],
-    enrichment: ["TODO – návrh maturitného štandardu použiť iba ako prirodzené obohatenie, nie ako určujúce učivo."],
-    estimatedTime: "TODO – cieľ približne 15 minút aktívnej práce, ak charakter hodiny nevyžaduje inak.",
-    notebook: "TODO – zachovať zápis do zošita → kontrola/vysvetlenie → zápis do zošita.",
-    diagnostics: ["TODO – doplniť diagnostické body pri spracovaní modulu."],
-    flow: ["TODO – vytvoriť názorný, vekovo primeraný a obsahovo presný priebeh hodiny."],
-    partialUse: ["TODO – určiť, ktoré časti sa dajú použiť samostatne."]
+    placement: '2. ročník · Pravouhlý trojuholník a jeho vlastnosti · 46. hodina: Písomná práca',
+    prerequisites: [
+      'celá téma Pravouhlý trojuholník a jeho vlastnosti (hodiny 39–45)',
+    ],
+    planContent: [
+      'Tematický plán pre tento celok nemá bunku obsahového štandardu vyplnenú. Modul vychádza z výkonového štandardu celku.',
+    ],
+    planPerformance: [
+      'Téma hodiny podľa plánu: „Písomná práca“. Hodina je vyhradená na kontrolnú písomnú prácu z celého celku.',
+    ],
+    goals: [
+      'Kognitívny cieľ: žiak preukáže, že ovláda Pytagorovu vetu, jej obrátenie a Euklidove vety z celej témy.',
+      'Afektívny cieľ: žiak pristupuje k písomnej práci pokojne, so systematickým postupom.',
+      'Praktický cieľ: žiak si pred písomkou samostatne overí, ktoré časti témy ešte potrebuje zopakovať.',
+      'Kritérium úspechu: žiak v tejto rozcvičke pred písomkou správne vyrieši aspoň 4 z 5 úloh.',
+    ],
+    competencies: [
+      'sebahodnotenie a zodpovednosť za vlastnú prípravu',
+      'systematické opakovanie väčšieho celku učiva',
+      'digitálna kompetencia pri účelnom použití interaktívnej platformy',
+    ],
+    enrichment: [
+      'Bez doplňujúceho obohatenia — hodina je vyhradená na písomnú prácu podľa tematického plánu.',
+    ],
+    flow: [
+      '0–5 min – krátka diagnostická rozcvička na platforme (táto aktivita) ako posledná kontrola pred písomkou.',
+      '5–40 min – samotná písomná práca (mimo aplikácie, na papieri).',
+      '40–45 min – zber prác, krátke zhodnotenie priebehu.',
+    ],
+    diagnostics: [
+      'ktoré typy úloh z celej témy (Pytagorova veta, obrátená veta, Euklidove vety, konštrukcie) robia žiakovi najviac problém tesne pred písomkou',
+    ],
+    partialUse: [
+      'Túto krátku rozcvičku možno vynechať, ak trieda potrebuje celú hodinu na samotnú písomku.',
+      'Pomôcky: papier na písomnú prácu, písacie potreby, pravítko a kružidlo; platforma iba na úvodnú rozcvičku.',
+      'Hodnotenie: samotná písomná práca sa hodnotí známkou mimo platformy; rozcvička v aplikácii slúži len ako posledná spätná väzba pred písomkou, XP nie sú známka.',
+    ],
   },
   student: {
-    title: "Písomná práca",
-    subtitle: "TODO – modul čaká na plnohodnotné spracovanie",
-    estimatedTime: "TODO",
-    intro: "Téma je už technicky prepojená s platformou. Obsah tohto modulu ešte nie je spracovaný; tento súbor je iba zástupný placeholder.",
-    activities: []
-  }
+    title: 'Rozcvička pred písomnou prácou',
+    subtitle: 'Téma 46 · Pravouhlý trojuholník a jeho vlastnosti',
+    intro: 'Krátka rozcvička na overenie, či si pripravený/á na písomnú prácu z celej témy.',
+    estimatedTime: '10–14 min',
+    activities: [
+      {
+        id: 'intro',
+        type: 'info',
+        phase: 'POCHOP',
+        title: 'Posledná kontrola pred písomkou',
+        html: '<p>Táto krátka rozcvička preverí najdôležitejšie body celej témy: Pytagorovu vetu, jej obrátenie, Euklidove vety a geometrický priemer.</p>',
+        continueLabel: 'Pokračovať',
+      },
+      {
+        id: 'q1',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'Pytagorova veta',
+        question: 'Pravouhlý trojuholník má odvesny 6cm a 8cm. Aká je dĺžka prepony?',
+        options: ['10cm', '14cm', '48cm'],
+        answer: 0,
+        correct: 'Správne. c=√(6²+8²)=√100=10cm.',
+        hint: 'Použi c=√(a²+b²).',
+      },
+      {
+        id: 'q2',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'obrátená Pytagorova veta',
+        question: 'Trojuholník má strany 6cm, 9cm, 11cm. Je pravouhlý?',
+        options: [
+          'Áno, lebo súčet dvoch strán je väčší ako tretia.',
+          'Nedá sa to rozhodnúť.',
+          'Nie, lebo 6²+9²=36+81=117≠121=11².',
+        ],
+        answer: 2,
+        correct: 'Správne. 6²+9²=117, čo sa nerovná 11²=121 — trojuholník nie je pravouhlý.',
+        hint: 'Over, či druhá mocnina najdlhšej strany je súčtom druhých mocnín zvyšných dvoch.',
+      },
+      {
+        id: 'q3',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'Euklidova veta o výške',
+        question: 'Úseky prepony sú ca=3cm, cb=12cm. Aká je dĺžka výšky v?',
+        options: ['6cm', '15cm', '36cm'],
+        answer: 0,
+        correct: 'Správne. v²=3·12=36, teda v=6cm.',
+        hint: 'Vynásob oba úseky prepony, potom urob odmocninu.',
+      },
+      {
+        id: 'q4',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'Euklidova veta o odvesne',
+        question: 'Prepona c=16cm, úsek ca=4cm. Aká je dĺžka odvesny a?',
+        options: ['10cm', '8cm', '64cm'],
+        answer: 1,
+        correct: 'Správne. a²=16·4=64, teda a=8cm.',
+        hint: 'Vynásob preponu s príslušným úsekom, potom urob odmocninu.',
+      },
+      {
+        id: 'q5',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'geometrický priemer',
+        question: 'Aký je geometrický priemer úsečiek 3cm a 27cm?',
+        options: ['15cm', '81cm', '9cm'],
+        answer: 2,
+        correct: 'Správne. √(3·27)=√81=9cm.',
+        hint: 'Vynásob obe úsečky a z výsledku urob odmocninu.',
+      },
+      {
+        id: 'reflection',
+        type: 'reflection',
+        phase: 'ZÁVER',
+        title: 'Si pripravený/á na písomku?',
+        skills: [
+          'Pytagorova veta a jej obrátenie',
+          'Euklidove vety',
+          'geometrický priemer',
+        ],
+        prompt: 'Označ, ktoré časti témy ešte potrebuješ zopakovať pred písomkou. Nie je to známka.',
+      },
+    ],
+  },
 });

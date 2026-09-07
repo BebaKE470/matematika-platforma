@@ -1,29 +1,127 @@
-/*
-  TODO PLACEHOLDER
-  Tento súbor je zámerne iba zástupný modul.
-  Neskôr sa nahradí plnohodnotným interaktívnym modulom bez zmeny jeho ID a cesty v registry.js.
-*/
 MathPlatform.registerModule({
-  id: "2-u13-h093",
+  id: '2-u13-h093',
   teacher: {
-    placement: "2. ročník · Kvadratické nerovnice · Hodina 93",
-    prerequisites: ["TODO – doplniť pri spracovaní modulu."],
-    planContent: ["TODO – prevziať presne z aktuálneho tematického plánu pri spracovaní modulu."],
-    planPerformance: ["TODO – prevziať iba to, čo je v aktuálnom tematickom pláne; ak bunka nie je vyplnená, nič nevymýšľať."],
-    goals: ["TODO – doplniť ciele až pri plnohodnotnom spracovaní."],
-    competencies: ["TODO – doplniť pri spracovaní modulu."],
-    enrichment: ["TODO – návrh maturitného štandardu použiť iba ako prirodzené obohatenie, nie ako určujúce učivo."],
-    estimatedTime: "TODO – cieľ približne 15 minút aktívnej práce, ak charakter hodiny nevyžaduje inak.",
-    notebook: "TODO – zachovať zápis do zošita → kontrola/vysvetlenie → zápis do zošita.",
-    diagnostics: ["TODO – doplniť diagnostické body pri spracovaní modulu."],
-    flow: ["TODO – vytvoriť názorný, vekovo primeraný a obsahovo presný priebeh hodiny."],
-    partialUse: ["TODO – určiť, ktoré časti sa dajú použiť samostatne."]
+    placement: '2. ročník · Kvadratické nerovnice · 93. hodina: Kontrolná písomná práca',
+    prerequisites: [
+      'celá téma Kvadratické nerovnice (hodiny 87–92)',
+    ],
+    planContent: [
+      'Tematický plán pre tento celok nemá bunku obsahového štandardu vyplnenú. Modul vychádza z výkonového štandardu celku.',
+    ],
+    planPerformance: [
+      'Téma hodiny podľa plánu: „Kontrolná písomná práca“. Hodina je vyhradená na kontrolnú písomnú prácu z celého celku.',
+    ],
+    goals: [
+      'Kognitívny cieľ: žiak preukáže, že ovláda riešenie kvadratickej nerovnice a úlohy s parametrom.',
+      'Afektívny cieľ: žiak pristupuje k písomnej práci pokojne, so systematickým postupom.',
+      'Praktický cieľ: žiak si pred písomkou samostatne overí, ktoré časti témy ešte potrebuje zopakovať.',
+      'Kritérium úspechu: žiak v tejto rozcvičke pred písomkou správne vyrieši aspoň 4 z 5 úloh.',
+    ],
+    competencies: [
+      'sebahodnotenie a zodpovednosť za vlastnú prípravu',
+      'systematické opakovanie väčšieho celku učiva',
+      'digitálna kompetencia pri účelnom použití interaktívnej platformy',
+    ],
+    enrichment: [
+      'Bez doplňujúceho obohatenia — hodina je vyhradená na písomnú prácu podľa tematického plánu.',
+    ],
+    flow: [
+      '0–5 min – krátka diagnostická rozcvička na platforme (táto aktivita) ako posledná kontrola pred písomkou.',
+      '5–40 min – samotná písomná práca (mimo aplikácie, na papieri).',
+      '40–45 min – zber prác, krátke zhodnotenie priebehu.',
+    ],
+    diagnostics: [
+      'ktorá zručnosť z celej témy robí žiakovi najviac problém tesne pred písomkou',
+    ],
+    partialUse: [
+      'Túto krátku rozcvičku možno vynechať, ak trieda potrebuje celú hodinu na samotnú písomku.',
+      'Pomôcky: papier na písomnú prácu, písacie potreby; platforma iba na úvodnú rozcvičku.',
+      'Hodnotenie: samotná písomná práca sa hodnotí známkou mimo platformy; rozcvička v aplikácii slúži len ako posledná spätná väzba pred písomkou, XP nie sú známka.',
+    ],
   },
   student: {
-    title: "Kontrolná písomná práca",
-    subtitle: "TODO – modul čaká na plnohodnotné spracovanie",
-    estimatedTime: "TODO",
-    intro: "Téma je už technicky prepojená s platformou. Obsah tohto modulu ešte nie je spracovaný; tento súbor je iba zástupný placeholder.",
-    activities: []
-  }
+    title: 'Rozcvička pred písomnou prácou',
+    subtitle: 'Téma 93 · Kvadratické nerovnice',
+    intro: 'Krátka rozcvička na overenie, či si pripravený/á na písomnú prácu z celej témy.',
+    estimatedTime: '10–14 min',
+    activities: [
+      {
+        id: 'intro',
+        type: 'info',
+        phase: 'POCHOP',
+        title: 'Posledná kontrola pred písomkou',
+        html: '<p>Táto krátka rozcvička preverí najdôležitejšie body celej témy: riešenie kvadratickej nerovnice, prípad D&lt;0 a úlohy s parametrom.</p>',
+        continueLabel: 'Pokračovať',
+      },
+      {
+        id: 'q1',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'nerovnica výpočtom',
+        question: 'Nerovnica x²−4 &gt; 0 (korene −2 a 2, a=1&gt;0). Aké je riešenie?',
+        options: ['x ∈ (−2, 2)', 'x ∈ (−∞,−2) ∪ (2,∞)', 'x ∈ R'],
+        answer: 1,
+        correct: 'Správne. a>0 → kladné mimo koreňov.',
+        hint: 'a>0 → kladné mimo koreňov.',
+      },
+      {
+        id: 'q2',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'prípad D<0',
+        question: 'Nerovnica x²+x+4 &lt; 0 (D=1−16=−15&lt;0, a=1&gt;0). Aké je riešenie?',
+        options: ['x ∈ R', 'nerovnica nemá riešenie', 'x &lt; 0'],
+        answer: 1,
+        correct: 'Správne. D<0, a>0 — výraz je vždy kladný, nikdy nie záporný, takže nerovnica nemá riešenie.',
+        hint: 'D<0 a a>0 → výraz je vždy kladný.',
+      },
+      {
+        id: 'q3',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'grafická metóda',
+        question: 'Parabola (otvorená nadol) má korene −3 a 3. Pre ktoré x je funkčná hodnota kladná?',
+        options: ['x ∈ (−3, 3)', 'x ∈ (−∞,−3) ∪ (3,∞)', 'x ∈ R'],
+        answer: 0,
+        correct: 'Správne. Parabola nadol je nad osou x (kladná) medzi koreňmi.',
+        hint: 'Parabola otvorená nadol má svoj vrchol medzi koreňmi.',
+      },
+      {
+        id: 'q4',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'rovnica s parametrom',
+        question: 'Rovnica x²−2x+m=0 (D=4−4m). Pre ktoré m má rovnica dve rôzne riešenia?',
+        options: ['m &gt; 1', 'm = 1', 'm &lt; 1'],
+        answer: 2,
+        correct: 'Správne. 4−4m&gt;0 → m&lt;1.',
+        hint: 'Rieš nerovnicu 4−4m>0 pre m.',
+      },
+      {
+        id: 'q5',
+        type: 'numberInput',
+        phase: 'OVER',
+        skill: 'kombinácia zručností',
+        title: 'Nájdi parameter dosadením',
+        prompt: 'Číslo x=5 je koreňom rovnice x²−7x+m=0. Nájdi hodnotu m.',
+        validate: 'exact',
+        answer: 10,
+        success: 'Správne. 5²−7·5+m=0 → 25−35+m=0 → m=10.',
+        hint: 'Dosaď x=5 do rovnice a vyrieš lineárnu rovnicu pre m.',
+        reveal: '25−35+m=0, m=10.',
+      },
+      {
+        id: 'reflection',
+        type: 'reflection',
+        phase: 'ZÁVER',
+        title: 'Si pripravený/á na písomku?',
+        skills: [
+          'riešenie kvadratickej nerovnice',
+          'prípad D<0',
+          'určenie podmienky na parameter',
+        ],
+        prompt: 'Označ, ktoré časti témy ešte potrebuješ zopakovať pred písomkou. Nie je to známka.',
+      },
+    ],
+  },
 });

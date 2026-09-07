@@ -1,29 +1,125 @@
-/*
-  TODO PLACEHOLDER
-  Tento súbor je zámerne iba zástupný modul.
-  Neskôr sa nahradí plnohodnotným interaktívnym modulom bez zmeny jeho ID a cesty v registry.js.
-*/
 MathPlatform.registerModule({
-  id: "2-u09-h067",
+  id: '2-u09-h067',
   teacher: {
-    placement: "2. ročník · Kvadratická funkcia a jej gaf · Hodina 67",
-    prerequisites: ["TODO – doplniť pri spracovaní modulu."],
-    planContent: ["TODO – prevziať presne z aktuálneho tematického plánu pri spracovaní modulu."],
-    planPerformance: ["TODO – prevziať iba to, čo je v aktuálnom tematickom pláne; ak bunka nie je vyplnená, nič nevymýšľať."],
-    goals: ["TODO – doplniť ciele až pri plnohodnotnom spracovaní."],
-    competencies: ["TODO – doplniť pri spracovaní modulu."],
-    enrichment: ["TODO – návrh maturitného štandardu použiť iba ako prirodzené obohatenie, nie ako určujúce učivo."],
-    estimatedTime: "TODO – cieľ približne 15 minút aktívnej práce, ak charakter hodiny nevyžaduje inak.",
-    notebook: "TODO – zachovať zápis do zošita → kontrola/vysvetlenie → zápis do zošita.",
-    diagnostics: ["TODO – doplniť diagnostické body pri spracovaní modulu."],
-    flow: ["TODO – vytvoriť názorný, vekovo primeraný a obsahovo presný priebeh hodiny."],
-    partialUse: ["TODO – určiť, ktoré časti sa dajú použiť samostatne."]
+    placement: '2. ročník · Kvadratická funkcia a jej graf · 67. hodina: Písomná práca',
+    prerequisites: [
+      'celá téma Kvadratická funkcia a jej graf (hodiny 63–66)',
+    ],
+    planContent: [
+      'Tematický plán pre tento celok nemá bunku obsahového štandardu vyplnenú. Modul vychádza z výkonového štandardu celku.',
+    ],
+    planPerformance: [
+      'Téma hodiny podľa plánu: „Písomná práca“. Hodina je vyhradená na kontrolnú písomnú prácu z celého celku.',
+    ],
+    goals: [
+      'Kognitívny cieľ: žiak preukáže, že ovláda definíciu kvadratickej funkcie, orientáciu paraboly, vrchol a vrcholový tvar predpisu.',
+      'Afektívny cieľ: žiak pristupuje k písomnej práci pokojne, so systematickým postupom.',
+      'Praktický cieľ: žiak si pred písomkou samostatne overí, ktoré časti témy ešte potrebuje zopakovať.',
+      'Kritérium úspechu: žiak v tejto rozcvičke pred písomkou správne vyrieši aspoň 4 z 5 úloh.',
+    ],
+    competencies: [
+      'sebahodnotenie a zodpovednosť za vlastnú prípravu',
+      'systematické opakovanie väčšieho celku učiva',
+      'digitálna kompetencia pri účelnom použití interaktívnej platformy',
+    ],
+    enrichment: [
+      'Bez doplňujúceho obohatenia — hodina je vyhradená na písomnú prácu podľa tematického plánu.',
+    ],
+    flow: [
+      '0–5 min – krátka diagnostická rozcvička na platforme (táto aktivita) ako posledná kontrola pred písomkou.',
+      '5–40 min – samotná písomná práca (mimo aplikácie, na papieri).',
+      '40–45 min – zber prác, krátke zhodnotenie priebehu.',
+    ],
+    diagnostics: [
+      'ktoré typy úloh z celej témy (definícia, orientácia, vrchol, vrcholový tvar) robia žiakovi najviac problém tesne pred písomkou',
+    ],
+    partialUse: [
+      'Túto krátku rozcvičku možno vynechať, ak trieda potrebuje celú hodinu na samotnú písomku.',
+      'Pomôcky: papier na písomnú prácu, písacie potreby; platforma iba na úvodnú rozcvičku.',
+      'Hodnotenie: samotná písomná práca sa hodnotí známkou mimo platformy; rozcvička v aplikácii slúži len ako posledná spätná väzba pred písomkou, XP nie sú známka.',
+    ],
   },
   student: {
-    title: "Písomná práca",
-    subtitle: "TODO – modul čaká na plnohodnotné spracovanie",
-    estimatedTime: "TODO",
-    intro: "Téma je už technicky prepojená s platformou. Obsah tohto modulu ešte nie je spracovaný; tento súbor je iba zástupný placeholder.",
-    activities: []
-  }
+    title: 'Rozcvička pred písomnou prácou',
+    subtitle: 'Téma 67 · Kvadratická funkcia a jej graf',
+    intro: 'Krátka rozcvička na overenie, či si pripravený/á na písomnú prácu z celej témy.',
+    estimatedTime: '10–14 min',
+    activities: [
+      {
+        id: 'intro',
+        type: 'info',
+        phase: 'POCHOP',
+        title: 'Posledná kontrola pred písomkou',
+        html: '<p>Táto krátka rozcvička preverí najdôležitejšie body celej témy: definíciu kvadratickej funkcie, orientáciu paraboly, vrchol a vrcholový tvar predpisu.</p>',
+        continueLabel: 'Pokračovať',
+      },
+      {
+        id: 'q1',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'definícia kvadratickej funkcie',
+        question: 'Ktorý z predpisov NIE JE kvadratická funkcia?',
+        options: ['f(x) = 3x²', 'f(x) = 5x − 2', 'f(x) = −x² + x'],
+        answer: 1,
+        correct: 'Správne. f(x)=5x−2 nemá člen s x², je to lineárna funkcia.',
+        hint: 'Kvadratická funkcia musí mať nenulový koeficient pri x².',
+      },
+      {
+        id: 'q2',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'orientácia paraboly',
+        question: 'Funkcia f(x) = −5x² + x − 1. Ako je otvorená jej parabola?',
+        options: ['nahor', 'nadol', 'nedá sa určiť'],
+        answer: 1,
+        correct: 'Správne. a=−5 je záporné, parabola je otvorená nadol.',
+        hint: 'Zisti znamienko koeficientu pri x².',
+      },
+      {
+        id: 'q3',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'vrchol paraboly',
+        question: 'Funkcia f(x) = x² − 10x + 21. Aká je x-ová súradnica vrcholu?',
+        options: ['x_v = 5', 'x_v = −5', 'x_v = 10'],
+        answer: 0,
+        correct: 'Správne. x_v = −(−10)/(2·1) = 5.',
+        hint: 'Použi x_v=−b/(2a).',
+      },
+      {
+        id: 'q4',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'vrcholový tvar',
+        question: 'Vrchol paraboly je V[2, −3]. Ktorý vrcholový tvar je správny?',
+        options: ['y = a(x−2)² − 3', 'y = a(x+2)² − 3', 'y = a(x−2)² + 3'],
+        answer: 0,
+        correct: 'Správne. Vzorec y=a(x−x_v)²+y_v pre x_v=2, y_v=−3 dáva y=a(x−2)²−3.',
+        hint: 'Dosaď x_v a y_v priamo do vzorca y=a(x−x_v)²+y_v.',
+      },
+      {
+        id: 'q5',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'funkčná hodnota',
+        question: 'Funkcia f(x) = 2x² + 1. Aká je hodnota f(2)?',
+        options: ['9', '5', '8'],
+        answer: 0,
+        correct: 'Správne. f(2) = 2·4+1 = 9.',
+        hint: 'Dosaď x=2 do predpisu 2x²+1.',
+      },
+      {
+        id: 'reflection',
+        type: 'reflection',
+        phase: 'ZÁVER',
+        title: 'Si pripravený/á na písomku?',
+        skills: [
+          'definícia a orientácia paraboly',
+          'vrchol paraboly',
+          'vrcholový tvar predpisu',
+        ],
+        prompt: 'Označ, ktoré časti témy ešte potrebuješ zopakovať pred písomkou. Nie je to známka.',
+      },
+    ],
+  },
 });

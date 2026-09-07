@@ -1029,86 +1029,520 @@
   },
 
   // 2.05 · Základy geometrie trojuholníkov
-  placeholder({ id: '2-u05-h033', year: 2, unit: "Základy geometrie trojuholníkov", unitOrder: 5, topic: "Zhodnosť a podobnosť trojuholníkov,", lesson: "Hodina 33", lessonOrder: 33, file: "modules/2-rocnik/zaklady-geometrie-trojuholnikov/33-zhodnost-a-podobnost-trojuholnikov.js" }),
-  placeholder({ id: '2-u05-h034', year: 2, unit: "Základy geometrie trojuholníkov", unitOrder: 5, topic: "Klasifikácia a vlastnosti trojuholníkov", lesson: "Hodina 34", lessonOrder: 34, file: "modules/2-rocnik/zaklady-geometrie-trojuholnikov/34-klasifikacia-a-vlastnosti-trojuholnikov.js" }),
-  placeholder({ id: '2-u05-h035', year: 2, unit: "Základy geometrie trojuholníkov", unitOrder: 5, topic: "Uhol a jeho veľkosť, Uhlová a oblúková miera", lesson: "Hodina 35", lessonOrder: 35, file: "modules/2-rocnik/zaklady-geometrie-trojuholnikov/35-uhol-a-jeho-velkost-uhlova-a-oblukova-miera.js" }),
-  placeholder({ id: '2-u05-h036', year: 2, unit: "Základy geometrie trojuholníkov", unitOrder: 5, topic: "Prevody uhlov", lesson: "Hodina 36", lessonOrder: 36, file: "modules/2-rocnik/zaklady-geometrie-trojuholnikov/36-prevody-uhlov.js" }),
-  placeholder({ id: '2-u05-h037', year: 2, unit: "Základy geometrie trojuholníkov", unitOrder: 5, topic: "Systematizácia učiva, previerka", lesson: "Hodina 37", lessonOrder: 37, file: "modules/2-rocnik/zaklady-geometrie-trojuholnikov/37-systematizacia-uciva-previerka.js" }),
+  {
+    id: '2-u05-h033', year: 2, unit: "Základy geometrie trojuholníkov", unitOrder: 5,
+    topic: "Zhodnosť a podobnosť trojuholníkov,", lesson: "Hodina 33", lessonOrder: 33,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → aplikácia → zápis do zošita → argumentácia → záver",
+    skills: ["zhodnosť trojuholníkov", "podobnosť a koeficient podobnosti", "argumentácia"],
+    file: "modules/2-rocnik/zaklady-geometrie-trojuholnikov/33-zhodnost-a-podobnost-trojuholnikov.js"
+  },
+  {
+    id: '2-u05-h034', year: 2, unit: "Základy geometrie trojuholníkov", unitOrder: 5,
+    topic: "Klasifikácia a vlastnosti trojuholníkov", lesson: "Hodina 34", lessonOrder: 34,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → aplikácia → zápis do zošita → argumentácia → záver",
+    skills: ["klasifikácia trojuholníkov", "trojuholníková nerovnosť", "argumentácia"],
+    file: "modules/2-rocnik/zaklady-geometrie-trojuholnikov/34-klasifikacia-a-vlastnosti-trojuholnikov.js"
+  },
+  {
+    id: '2-u05-h035', year: 2, unit: "Základy geometrie trojuholníkov", unitOrder: 5,
+    topic: "Uhol a jeho veľkosť, Uhlová a oblúková miera", lesson: "Hodina 35", lessonOrder: 35,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → aplikácia → zápis do zošita → argumentácia → záver",
+    skills: ["pojem radiánu", "vzťah stupňov a radiánov", "argumentácia"],
+    file: "modules/2-rocnik/zaklady-geometrie-trojuholnikov/35-uhol-a-jeho-velkost-uhlova-a-oblukova-miera.js"
+  },
+  {
+    id: '2-u05-h036', year: 2, unit: "Základy geometrie trojuholníkov", unitOrder: 5,
+    topic: "Prevody uhlov", lesson: "Hodina 36", lessonOrder: 36,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → prevodové vzorce → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["prevod stupňov na radiány", "prevod radiánov na stupne", "argumentácia"],
+    file: "modules/2-rocnik/zaklady-geometrie-trojuholnikov/36-prevody-uhlov.js"
+  },
+  {
+    id: '2-u05-h037', year: 2, unit: "Základy geometrie trojuholníkov", unitOrder: 5,
+    topic: "Systematizácia učiva, previerka", lesson: "Hodina 37", lessonOrder: 37,
+    time: "18–24 min", status: 'ready',
+    type: "Zhrnutie → pestrá zmes úloh → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["kombinácia zručností celého celku", "kritické myslenie", "argumentácia"],
+    file: "modules/2-rocnik/zaklady-geometrie-trojuholnikov/37-systematizacia-uciva-previerka.js"
+  },
 
   // 2.06 · Pravouhlý trojuholník a jeho vlastnosti
-  placeholder({ id: '2-u06-h039', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Pravouhlý trojuholník - Pytagorova veta", lesson: "Hodina 39", lessonOrder: 39, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/39-pravouhly-trojuholnik-pytagorova-veta.js" }),
-  placeholder({ id: '2-u06-h040', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Pytagorova veta – aplikačné úlohy", lesson: "Hodina 40", lessonOrder: 40, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/40-pytagorova-veta-aplikacne-ulohy.js" }),
-  placeholder({ id: '2-u06-h041', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Euklidove vety", lesson: "Hodina 41", lessonOrder: 41, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/41-euklidove-vety.js" }),
-  placeholder({ id: '2-u06-h042', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Euklidove vety – súhrnné využitie", lesson: "Hodina 42", lessonOrder: 42, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/42-euklidove-vety-suhrnne-vyuzitie.js" }),
-  placeholder({ id: '2-u06-h043', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Konštrukcia úsečiek rôznych veľkostí", lesson: "Hodina 43", lessonOrder: 43, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/43-konstrukcia-useciek-roznych-velkosti.js" }),
-  placeholder({ id: '2-u06-h044', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Využitie Euklidových viet pri konštrukciách", lesson: "Hodina 44", lessonOrder: 44, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/44-vyuzitie-euklidovych-viet-pri-konstrukciach.js" }),
-  placeholder({ id: '2-u06-h045', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Opakovanie tematického celku", lesson: "Hodina 45", lessonOrder: 45, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/45-opakovanie-tematickeho-celku.js" }),
-  placeholder({ id: '2-u06-h046', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6, topic: "Písomná práca", lesson: "Hodina 46", lessonOrder: 46, file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/46-pisomna-praca.js" }),
+  {
+    id: '2-u06-h039', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6,
+    topic: "Pravouhlý trojuholník - Pytagorova veta", lesson: "Hodina 39", lessonOrder: 39,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → obrátená veta → precvičenie → hľadanie chyby → aplikácia → zápis do zošita → argumentácia → záver",
+    skills: ["terminológia odvesna/prepona", "obrátená Pytagorova veta", "argumentácia"],
+    file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/39-pravouhly-trojuholnik-pytagorova-veta.js"
+  },
+  {
+    id: '2-u06-h040', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6,
+    topic: "Pytagorova veta – aplikačné úlohy", lesson: "Hodina 40", lessonOrder: 40,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["uhlopriečka obdĺžnika", "výška rovnoramenného trojuholníka", "argumentácia"],
+    file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/40-pytagorova-veta-aplikacne-ulohy.js"
+  },
+  {
+    id: '2-u06-h041', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6,
+    topic: "Euklidove vety", lesson: "Hodina 41", lessonOrder: 41,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nové vzťahy → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["Euklidova veta o výške", "Euklidova veta o odvesne", "argumentácia"],
+    file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/41-euklidove-vety.js"
+  },
+  {
+    id: '2-u06-h042', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6,
+    topic: "Euklidove vety – súhrnné využitie", lesson: "Hodina 42", lessonOrder: 42,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → výber vzťahu → kombinácia → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["výber vhodného vzťahu", "kombinácia vzťahov", "argumentácia"],
+    file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/42-euklidove-vety-suhrnne-vyuzitie.js"
+  },
+  {
+    id: '2-u06-h043', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6,
+    topic: "Konštrukcia úsečiek rôznych veľkostí", lesson: "Hodina 43", lessonOrder: 43,
+    time: "18–24 min", status: 'ready',
+    type: "Pochopenie → nový pojem → rozbor konštrukcie → hľadanie chyby → konštrukcia na papieri → argumentácia → záver",
+    skills: ["rozbor konštrukcie úsečky √n", "úloha Tálesovej kružnice", "argumentácia"],
+    file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/43-konstrukcia-useciek-roznych-velkosti.js"
+  },
+  {
+    id: '2-u06-h044', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6,
+    topic: "Využitie Euklidových viet pri konštrukciách", lesson: "Hodina 44", lessonOrder: 44,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → konštrukcia na papieri → argumentácia → záver",
+    skills: ["geometrický priemer dvoch úsečiek", "obsah obdĺžnika a štvorca", "argumentácia"],
+    file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/44-vyuzitie-euklidovych-viet-pri-konstrukciach.js"
+  },
+  {
+    id: '2-u06-h045', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6,
+    topic: "Opakovanie tematického celku", lesson: "Hodina 45", lessonOrder: 45,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → kombinácia vzťahov → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["kombinácia metrických vzťahov", "kritické myslenie", "argumentácia"],
+    file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/45-opakovanie-tematickeho-celku.js"
+  },
+  {
+    id: '2-u06-h046', year: 2, unit: "Pravouhlý trojuholník a jeho vlastnosti", unitOrder: 6,
+    topic: "Písomná práca", lesson: "Hodina 46", lessonOrder: 46,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička pred písomnou prácou → over → sebahodnotenie",
+    skills: ["zhrnutie celej témy", "sebahodnotenie"],
+    file: "modules/2-rocnik/pravouhly-trojuholnik-a-jeho-vlastnosti/46-pisomna-praca.js"
+  },
 
   // 2.07 · Goniometrické funkcie ostrého uhla
-  placeholder({ id: '2-u07-h048', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7, topic: "Goniometrické funkcie – sínus, kosínus", lesson: "Hodina 48", lessonOrder: 48, file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/48-goniometricke-funkcie-sinus-kosinus.js" }),
-  placeholder({ id: '2-u07-h049', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7, topic: "Výpočty pomocou sínusu, kosínusu", lesson: "Hodina 49", lessonOrder: 49, file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/49-vypocty-pomocou-sinusu-kosinusu.js" }),
-  placeholder({ id: '2-u07-h050', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7, topic: "Goniometrické funkcie – tangens, kotangens", lesson: "Hodina 50", lessonOrder: 50, file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/50-goniometricke-funkcie-tangens-kotangens.js" }),
-  placeholder({ id: '2-u07-h051', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7, topic: "Riešenie pravouhlého trojuholníka", lesson: "Hodina 51", lessonOrder: 51, file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/51-riesenie-pravouhleho-trojuholnika.js" }),
-  placeholder({ id: '2-u07-h052', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7, topic: "Opakovanie tematického celku", lesson: "Hodina 52", lessonOrder: 52, file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/52-opakovanie-tematickeho-celku.js" }),
-  placeholder({ id: '2-u07-h053', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7, topic: "Písomná práca", lesson: "Hodina 53", lessonOrder: 53, file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/53-pisomna-praca.js" }),
+  {
+    id: '2-u07-h048', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7,
+    topic: "Goniometrické funkcie – sínus, kosínus", lesson: "Hodina 48", lessonOrder: 48,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → aplikácia → zápis do zošita → argumentácia → záver",
+    skills: ["sínus a kosínus ostrého uhla", "protiľahlá a priľahlá odvesna", "argumentácia"],
+    file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/48-goniometricke-funkcie-sinus-kosinus.js"
+  },
+  {
+    id: '2-u07-h049', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7,
+    topic: "Výpočty pomocou sínusu, kosínusu", lesson: "Hodina 49", lessonOrder: 49,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → hodnoty pre 30/45/60° → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["výpočet strany zo vzorca", "hodnoty pre 30/45/60°", "argumentácia"],
+    file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/49-vypocty-pomocou-sinusu-kosinusu.js"
+  },
+  {
+    id: '2-u07-h050', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7,
+    topic: "Goniometrické funkcie – tangens, kotangens", lesson: "Hodina 50", lessonOrder: 50,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → aplikácia → zápis do zošita → argumentácia → záver",
+    skills: ["tangens ostrého uhla", "kotangens ostrého uhla", "argumentácia"],
+    file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/50-goniometricke-funkcie-tangens-kotangens.js"
+  },
+  {
+    id: '2-u07-h051', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7,
+    topic: "Riešenie pravouhlého trojuholníka", lesson: "Hodina 51", lessonOrder: 51,
+    time: "22–28 min", status: 'ready',
+    type: "Zhrnutie → výber vzťahu → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["súčet ostrých uhlov", "výber vhodného vzťahu", "argumentácia"],
+    file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/51-riesenie-pravouhleho-trojuholnika.js"
+  },
+  {
+    id: '2-u07-h052', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7,
+    topic: "Opakovanie tematického celku", lesson: "Hodina 52", lessonOrder: 52,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → kombinácia funkcií → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["kombinácia goniometrických funkcií", "kritické myslenie", "argumentácia"],
+    file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/52-opakovanie-tematickeho-celku.js"
+  },
+  {
+    id: '2-u07-h053', year: 2, unit: "Goniometrické funkcie ostrého uhla", unitOrder: 7,
+    topic: "Písomná práca", lesson: "Hodina 53", lessonOrder: 53,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička pred písomnou prácou → over → sebahodnotenie",
+    skills: ["zhrnutie celej témy", "sebahodnotenie"],
+    file: "modules/2-rocnik/goniometricke-funkcie-ostreho-uhla/53-pisomna-praca.js"
+  },
 
   // 2.08 · Sínusová a kosínusová veta
-  placeholder({ id: '2-u08-h054', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8, topic: "Sínusová veta", lesson: "Hodina 54", lessonOrder: 54, file: "modules/2-rocnik/sinusova-a-kosinusova-veta/54-sinusova-veta.js" }),
-  placeholder({ id: '2-u08-h055', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8, topic: "Sínusová veta – aplikačné úlohy", lesson: "Hodina 55", lessonOrder: 55, file: "modules/2-rocnik/sinusova-a-kosinusova-veta/55-sinusova-veta-aplikacne-ulohy.js" }),
-  placeholder({ id: '2-u08-h056', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8, topic: "Kosínusová veta", lesson: "Hodina 56", lessonOrder: 56, file: "modules/2-rocnik/sinusova-a-kosinusova-veta/56-kosinusova-veta.js" }),
-  placeholder({ id: '2-u08-h057', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8, topic: "Kosínusová veta – aplikačné úlohy", lesson: "Hodina 57", lessonOrder: 57, file: "modules/2-rocnik/sinusova-a-kosinusova-veta/57-kosinusova-veta-aplikacne-ulohy.js" }),
-  placeholder({ id: '2-u08-h058', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8, topic: "Riešenie všeobecných trojuholníkov", lesson: "Hodina 58", lessonOrder: 58, file: "modules/2-rocnik/sinusova-a-kosinusova-veta/58-riesenie-vseobecnych-trojuholnikov.js" }),
-  placeholder({ id: '2-u08-h059', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8, topic: "Opakovanie", lesson: "Hodina 59", lessonOrder: 59, file: "modules/2-rocnik/sinusova-a-kosinusova-veta/59-opakovanie.js" }),
-  placeholder({ id: '2-u08-h060', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8, topic: "Písomná práca", lesson: "Hodina 60", lessonOrder: 60, file: "modules/2-rocnik/sinusova-a-kosinusova-veta/60-pisomna-praca.js" }),
+  {
+    id: '2-u08-h054', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8,
+    topic: "Sínusová veta", lesson: "Hodina 54", lessonOrder: 54,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["formulácia sínusovej vety", "výpočet chýbajúcej strany", "argumentácia"],
+    file: "modules/2-rocnik/sinusova-a-kosinusova-veta/54-sinusova-veta.js"
+  },
+  {
+    id: '2-u08-h055', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8,
+    topic: "Sínusová veta – aplikačné úlohy", lesson: "Hodina 55", lessonOrder: 55,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → matematizácia → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["matematizácia aplikačnej úlohy", "triangulácia", "argumentácia"],
+    file: "modules/2-rocnik/sinusova-a-kosinusova-veta/55-sinusova-veta-aplikacne-ulohy.js"
+  },
+  {
+    id: '2-u08-h056', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8,
+    topic: "Kosínusová veta", lesson: "Hodina 56", lessonOrder: 56,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["formulácia kosínusovej vety", "súvis s Pytagorovou vetou", "argumentácia"],
+    file: "modules/2-rocnik/sinusova-a-kosinusova-veta/56-kosinusova-veta.js"
+  },
+  {
+    id: '2-u08-h057', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8,
+    topic: "Kosínusová veta – aplikačné úlohy", lesson: "Hodina 57", lessonOrder: 57,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → úprava vzorca → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["úprava kosínusovej vety na výpočet uhla", "typ trojuholníka podľa uhla", "argumentácia"],
+    file: "modules/2-rocnik/sinusova-a-kosinusova-veta/57-kosinusova-veta-aplikacne-ulohy.js"
+  },
+  {
+    id: '2-u08-h058', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8,
+    topic: "Riešenie všeobecných trojuholníkov", lesson: "Hodina 58", lessonOrder: 58,
+    time: "22–28 min", status: 'ready',
+    type: "Zhrnutie → výber vzťahu → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["výber vhodnej vety", "riešenie všeobecného trojuholníka", "argumentácia"],
+    file: "modules/2-rocnik/sinusova-a-kosinusova-veta/58-riesenie-vseobecnych-trojuholnikov.js"
+  },
+  {
+    id: '2-u08-h059', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8,
+    topic: "Opakovanie", lesson: "Hodina 59", lessonOrder: 59,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → kombinácia viet → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["sínusová a kosínusová veta", "kritické myslenie", "argumentácia"],
+    file: "modules/2-rocnik/sinusova-a-kosinusova-veta/59-opakovanie.js"
+  },
+  {
+    id: '2-u08-h060', year: 2, unit: "Sínusová a kosínusová veta", unitOrder: 8,
+    topic: "Písomná práca", lesson: "Hodina 60", lessonOrder: 60,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička pred písomnou prácou → over → sebahodnotenie",
+    skills: ["zhrnutie celej témy", "sebahodnotenie"],
+    file: "modules/2-rocnik/sinusova-a-kosinusova-veta/60-pisomna-praca.js"
+  },
 
   // 2.09 · Kvadratická funkcia a jej graf
-  placeholder({ id: '2-u09-h063', year: 2, unit: "Kvadratická funkcia a jej graf", unitOrder: 9, topic: "Kvadratická funkcia – definícia a základné vlastnosti, Graf kvadratickej funkcie", lesson: "Hodina 63", lessonOrder: 63, file: "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/63-kvadraticka-funkcia-definicia-a-zakladne-vlastnosti-graf-kvadratickej-.js" }),
-  placeholder({ id: '2-u09-h064', year: 2, unit: "Kvadratická funkcia a jej graf", unitOrder: 9, topic: "Vrchol paraboly", lesson: "Hodina 64", lessonOrder: 64, file: "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/64-vrchol-paraboly.js" }),
-  placeholder({ id: '2-u09-h065', year: 2, unit: "Kvadratická funkcia a jej graf", unitOrder: 9, topic: "Hľadanie predpisu kvadratickej funkcie z grafu", lesson: "Hodina 65", lessonOrder: 65, file: "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/65-hladanie-predpisu-kvadratickej-funkcie-z-grafu.js" }),
-  placeholder({ id: '2-u09-h066', year: 2, unit: "Kvadratická funkcia a jej graf", unitOrder: 9, topic: "Systematizácia učiva", lesson: "Hodina 66", lessonOrder: 66, file: "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/66-systematizacia-uciva.js" }),
-  placeholder({ id: '2-u09-h067', year: 2, unit: "Kvadratická funkcia a jej graf", unitOrder: 9, topic: "Písomná práca", lesson: "Hodina 67", lessonOrder: 67, file: "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/67-pisomna-praca.js" }),
+  {
+    id: '2-u09-h063', year: 2, unit: "Kvadratická funkcia a jej graf", unitOrder: 9,
+    topic: "Kvadratická funkcia – definícia a základné vlastnosti, Graf kvadratickej funkcie", lesson: "Hodina 63", lessonOrder: 63,
+    time: "22–28 min", status: 'ready',
+    type: "Graf funkcie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["definícia kvadratickej funkcie", "orientácia paraboly", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/63-kvadraticka-funkcia-definicia-a-zakladne-vlastnosti-graf-kvadratickej-.js"
+  },
+  {
+    id: '2-u09-h064', year: 2, unit: "Kvadratická funkcia a jej graf", unitOrder: 9,
+    topic: "Vrchol paraboly", lesson: "Hodina 64", lessonOrder: 64,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["výpočet súradníc vrcholu", "minimum a maximum funkcie", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/64-vrchol-paraboly.js"
+  },
+  {
+    id: '2-u09-h065', year: 2, unit: "Kvadratická funkcia a jej graf", unitOrder: 9,
+    topic: "Hľadanie predpisu kvadratickej funkcie z grafu", lesson: "Hodina 65", lessonOrder: 65,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nové pravidlo → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["vrcholový tvar predpisu", "výpočet koeficientu a", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/65-hladanie-predpisu-kvadratickej-funkcie-z-grafu.js"
+  },
+  {
+    id: '2-u09-h066', year: 2, unit: "Kvadratická funkcia a jej graf", unitOrder: 9,
+    topic: "Systematizácia učiva", lesson: "Hodina 66", lessonOrder: 66,
+    time: "20–26 min", status: 'ready',
+    type: "Zhrnutie → kombinácia zručností → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["kombinácia zručností celého celku", "kritické myslenie", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/66-systematizacia-uciva.js"
+  },
+  {
+    id: '2-u09-h067', year: 2, unit: "Kvadratická funkcia a jej graf", unitOrder: 9,
+    topic: "Písomná práca", lesson: "Hodina 67", lessonOrder: 67,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička pred písomnou prácou → over → sebahodnotenie",
+    skills: ["zhrnutie celej témy", "sebahodnotenie"],
+    file: "modules/2-rocnik/kvadraticka-funkcia-a-jej-gaf/67-pisomna-praca.js"
+  },
 
   // 2.10 · Kvadratické rovnice - základné typy
-  placeholder({ id: '2-u10-h068', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10, topic: "Rýdzo kvadratické rovnice", lesson: "Hodina 68", lessonOrder: 68, file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/68-rydzo-kvadraticke-rovnice.js" }),
-  placeholder({ id: '2-u10-h069', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10, topic: "Kvadratické rovnice bez lineárneho člena", lesson: "Hodina 69", lessonOrder: 69, file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/69-kvadraticke-rovnice-bez-linearneho-clena.js" }),
-  placeholder({ id: '2-u10-h070', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10, topic: "Kvadratické rovnice bez absolútneho člena", lesson: "Hodina 70", lessonOrder: 70, file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/70-kvadraticke-rovnice-bez-absolutneho-clena.js" }),
-  placeholder({ id: '2-u10-h071', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10, topic: "Úplná kvadratická rovnica", lesson: "Hodina 71", lessonOrder: 71, file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/71-uplna-kvadraticka-rovnica.js" }),
-  placeholder({ id: '2-u10-h072', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10, topic: "Súhrnné precvičovanie kvadratických rovníc", lesson: "Hodina 72", lessonOrder: 72, file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/72-suhrnne-precvicovanie-kvadratickych-rovnic.js" }),
-  placeholder({ id: '2-u10-h073', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10, topic: "Opakovanie", lesson: "Hodina 73", lessonOrder: 73, file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/73-opakovanie.js" }),
-  placeholder({ id: '2-u10-h074', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10, topic: "Písomná práca", lesson: "Hodina 74", lessonOrder: 74, file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/74-pisomna-praca.js" }),
+  {
+    id: '2-u10-h068', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10,
+    topic: "Rýdzo kvadratické rovnice", lesson: "Hodina 68", lessonOrder: 68,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozpoznanie rýdzo kvadratickej rovnice", "riešenie s dvomi koreňmi", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/68-rydzo-kvadraticke-rovnice.js"
+  },
+  {
+    id: '2-u10-h069', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10,
+    topic: "Kvadratické rovnice bez lineárneho člena", lesson: "Hodina 69", lessonOrder: 69,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → úprava rovnice → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["úprava rovnice na tvar ax²+c=0", "riešenie po úprave", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/69-kvadraticke-rovnice-bez-linearneho-clena.js"
+  },
+  {
+    id: '2-u10-h070', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10,
+    topic: "Kvadratické rovnice bez absolútneho člena", lesson: "Hodina 70", lessonOrder: 70,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["vyňatie x pred zátvorku", "pravidlo o nulovom súčine", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/70-kvadraticke-rovnice-bez-absolutneho-clena.js"
+  },
+  {
+    id: '2-u10-h071', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10,
+    topic: "Úplná kvadratická rovnica", lesson: "Hodina 71", lessonOrder: 71,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["výpočet diskriminantu", "určenie počtu riešení podľa D", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/71-uplna-kvadraticka-rovnica.js"
+  },
+  {
+    id: '2-u10-h072', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10,
+    topic: "Súhrnné precvičovanie kvadratických rovníc", lesson: "Hodina 72", lessonOrder: 72,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozpoznanie typu kvadratickej rovnice", "voľba vhodného postupu riešenia", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/72-suhrnne-precvicovanie-kvadratickych-rovnic.js"
+  },
+  {
+    id: '2-u10-h073', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10,
+    topic: "Opakovanie", lesson: "Hodina 73", lessonOrder: 73,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozpoznanie typu kvadratickej rovnice", "riešenie všetkých troch typov", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/73-opakovanie.js"
+  },
+  {
+    id: '2-u10-h074', year: 2, unit: "Kvadratické rovnice - základné typy", unitOrder: 10,
+    topic: "Písomná práca", lesson: "Hodina 74", lessonOrder: 74,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička → kontrolné otázky z celej témy → sebahodnotenie",
+    skills: ["rozpoznanie typu kvadratickej rovnice", "riešenie všetkých troch typov", "výpočet diskriminantu"],
+    file: "modules/2-rocnik/kvadraticke-rovnice-zakladne-typy/74-pisomna-praca.js"
+  },
 
   // 2.11 · Kvadratické rovnice – vzťahy a algebraické úpravy
-  placeholder({ id: '2-u11-h075', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11, topic: "Vzťahy medzi koreňmi a koeficientmi kvadratickej rovnice", lesson: "Hodina 75", lessonOrder: 75, file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/75-vztahy-medzi-korenmi-a-koeficientmi-kvadratickej-rovnice.js" }),
-  placeholder({ id: '2-u11-h076', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11, topic: "Využitie Vietových vzťahov pri riešení rovníc", lesson: "Hodina 76", lessonOrder: 76, file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/76-vyuzitie-vietovych-vztahov-pri-rieseni-rovnic.js" }),
-  placeholder({ id: '2-u11-h077', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11, topic: "Rozklad kvadratických trojčlenov na súčin", lesson: "Hodina 77", lessonOrder: 77, file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/77-rozklad-kvadratickych-trojclenov-na-sucin.js" }),
-  placeholder({ id: '2-u11-h078', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11, topic: "Úprava algebraických výrazov rozkladom", lesson: "Hodina 78", lessonOrder: 78, file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/78-uprava-algebraickych-vyrazov-rozkladom.js" }),
-  placeholder({ id: '2-u11-h079', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11, topic: "Súhrnné precvičovanie", lesson: "Hodina 79", lessonOrder: 79, file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/79-suhrnne-precvicovanie.js" }),
-  placeholder({ id: '2-u11-h080', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11, topic: "Systematizácia učiva", lesson: "Hodina 80", lessonOrder: 80, file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/80-systematizacia-uciva.js" }),
-  placeholder({ id: '2-u11-h081', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11, topic: "Písomná práca", lesson: "Hodina 81", lessonOrder: 81, file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/81-pisomna-praca.js" }),
+  {
+    id: '2-u11-h075', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11,
+    topic: "Vzťahy medzi koreňmi a koeficientmi kvadratickej rovnice", lesson: "Hodina 75", lessonOrder: 75,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["výpočet súčtu koreňov (−b/a)", "výpočet súčinu koreňov (c/a)", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/75-vztahy-medzi-korenmi-a-koeficientmi-kvadratickej-rovnice.js"
+  },
+  {
+    id: '2-u11-h076', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11,
+    topic: "Využitie Vietových vzťahov pri riešení rovníc", lesson: "Hodina 76", lessonOrder: 76,
+    time: "22–28 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["odhad celočíselných koreňov", "zostavenie rovnice z daných koreňov", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/76-vyuzitie-vietovych-vztahov-pri-rieseni-rovnic.js"
+  },
+  {
+    id: '2-u11-h077', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11,
+    topic: "Rozklad kvadratických trojčlenov na súčin", lesson: "Hodina 77", lessonOrder: 77,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozklad kvadratického trojčlena na súčin", "kontrola rozkladu roznásobením", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/77-rozklad-kvadratickych-trojclenov-na-sucin.js"
+  },
+  {
+    id: '2-u11-h078', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11,
+    topic: "Úprava algebraických výrazov rozkladom", lesson: "Hodina 78", lessonOrder: 78,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["rozklad a krátenie lomeného výrazu", "určenie definičného oboru pred krátením", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/78-uprava-algebraickych-vyrazov-rozkladom.js"
+  },
+  {
+    id: '2-u11-h079', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11,
+    topic: "Súhrnné precvičovanie", lesson: "Hodina 79", lessonOrder: 79,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["odhad koreňov a rozklad na súčin", "krátenie lomeného výrazu", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/79-suhrnne-precvicovanie.js"
+  },
+  {
+    id: '2-u11-h080', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11,
+    topic: "Systematizácia učiva", lesson: "Hodina 80", lessonOrder: 80,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["Vietove vzťahy a odhad koreňov", "rozklad trojčlena na súčin", "krátenie lomeného výrazu"],
+    file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/80-systematizacia-uciva.js"
+  },
+  {
+    id: '2-u11-h081', year: 2, unit: "Kvadratické rovnice – vzťahy a algebraické úpravy", unitOrder: 11,
+    topic: "Písomná práca", lesson: "Hodina 81", lessonOrder: 81,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička → kontrolné otázky z celej témy → sebahodnotenie",
+    skills: ["Vietove vzťahy a odhad koreňov", "rozklad trojčlena na súčin", "krátenie lomeného výrazu"],
+    file: "modules/2-rocnik/kvadraticke-rovnice-vztahy-a-algebraicke-upravy/81-pisomna-praca.js"
+  },
 
   // 2.12 · Slovné úlohy a aplikácie kvadratických rovníc
-  placeholder({ id: '2-u12-h082', year: 2, unit: "Slovné úlohy a aplikácie kvadratických rovníc", unitOrder: 12, topic: "Úvod do slovných úloh - jednoduché slovné úlohy", lesson: "Hodina 82", lessonOrder: 82, file: "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/82-uvod-do-slovnych-uloh-jednoduche-slovne-ulohy.js" }),
-  placeholder({ id: '2-u12-h083', year: 2, unit: "Slovné úlohy a aplikácie kvadratických rovníc", unitOrder: 12, topic: "Slovné úlohy o pohybe a práci - zostavenie a riešenie kvadratickej rovnice", lesson: "Hodina 83", lessonOrder: 83, file: "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/83-slovne-ulohy-o-pohybe-a-praci-zostavenie-a-riesenie-kvadratickej-rovni.js" }),
-  placeholder({ id: '2-u12-h084', year: 2, unit: "Slovné úlohy a aplikácie kvadratických rovníc", unitOrder: 12, topic: "Slovné úlohy z praxe: Vekové úlohy, Ekonomické a technické úlohy, Kombinované aplikačné príklady", lesson: "Hodina 84", lessonOrder: 84, file: "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/84-slovne-ulohy-z-praxe-vekove-ulohy-ekonomicke-a-technicke-ulohy-kombino.js" }),
-  placeholder({ id: '2-u12-h085', year: 2, unit: "Slovné úlohy a aplikácie kvadratických rovníc", unitOrder: 12, topic: "Súhrnné riešenie slovných úloh", lesson: "Hodina 85", lessonOrder: 85, file: "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/85-suhrnne-riesenie-slovnych-uloh.js" }),
-  placeholder({ id: '2-u12-h086', year: 2, unit: "Slovné úlohy a aplikácie kvadratických rovníc", unitOrder: 12, topic: "Kontrolná písomná práca", lesson: "Hodina 86", lessonOrder: 86, file: "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/86-kontrolna-pisomna-praca.js" }),
+  {
+    id: '2-u12-h082', year: 2, unit: "Slovné úlohy a aplikácie kvadratických rovníc", unitOrder: 12,
+    topic: "Úvod do slovných úloh - jednoduché slovné úlohy", lesson: "Hodina 82", lessonOrder: 82,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["zostavenie rovnice zo slovného zadania", "overenie zmysluplnosti riešenia", "argumentácia"],
+    file: "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/82-uvod-do-slovnych-uloh-jednoduche-slovne-ulohy.js"
+  },
+  {
+    id: '2-u12-h083', year: 2, unit: "Slovné úlohy a aplikácie kvadratických rovníc", unitOrder: 12,
+    topic: "Slovné úlohy o pohybe a práci - zostavenie a riešenie kvadratickej rovnice", lesson: "Hodina 83", lessonOrder: 83,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["riešenie kvadratickej rovnice zo slovnej úlohy", "výber zmysluplného riešenia", "argumentácia"],
+    file: "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/83-slovne-ulohy-o-pohybe-a-praci-zostavenie-a-riesenie-kvadratickej-rovni.js"
+  },
+  {
+    id: '2-u12-h084', year: 2, unit: "Slovné úlohy a aplikácie kvadratických rovníc", unitOrder: 12,
+    topic: "Slovné úlohy z praxe: Vekové úlohy, Ekonomické a technické úlohy, Kombinované aplikačné príklady", lesson: "Hodina 84", lessonOrder: 84,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["riešenie vekovej úlohy", "riešenie ekonomickej úlohy a posúdenie počtu riešení", "argumentácia"],
+    file: "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/84-slovne-ulohy-z-praxe-vekove-ulohy-ekonomicke-a-technicke-ulohy-kombino.js"
+  },
+  {
+    id: '2-u12-h085', year: 2, unit: "Slovné úlohy a aplikácie kvadratických rovníc", unitOrder: 12,
+    topic: "Súhrnné riešenie slovných úloh", lesson: "Hodina 85", lessonOrder: 85,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["zostavenie rovnice z rôznych kontextov", "overenie zmysluplnosti riešenia", "argumentácia"],
+    file: "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/85-suhrnne-riesenie-slovnych-uloh.js"
+  },
+  {
+    id: '2-u12-h086', year: 2, unit: "Slovné úlohy a aplikácie kvadratických rovníc", unitOrder: 12,
+    topic: "Kontrolná písomná práca", lesson: "Hodina 86", lessonOrder: 86,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička → kontrolné otázky z celej témy → sebahodnotenie",
+    skills: ["zostavenie rovnice z rôznych kontextov", "overenie zmysluplnosti riešenia", "riešenie kvadratickej rovnice"],
+    file: "modules/2-rocnik/slovne-ulohy-a-aplikacie-kvadratickych-rovnic/86-kontrolna-pisomna-praca.js"
+  },
 
   // 2.13 · Kvadratické nerovnice
-  placeholder({ id: '2-u13-h087', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13, topic: "Riešenie kvadratických nerovníc výpočtom", lesson: "Hodina 87", lessonOrder: 87, file: "modules/2-rocnik/kvadraticke-nerovnice/87-riesenie-kvadratickych-nerovnic-vypoctom.js" }),
-  placeholder({ id: '2-u13-h088', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13, topic: "Riešenie kvadratických nerovníc výpočtom – precvičovanie", lesson: "Hodina 88", lessonOrder: 88, file: "modules/2-rocnik/kvadraticke-nerovnice/88-riesenie-kvadratickych-nerovnic-vypoctom-precvicovanie.js" }),
-  placeholder({ id: '2-u13-h089', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13, topic: "Riešenie kvadratických nerovníc grafickou metódou", lesson: "Hodina 89", lessonOrder: 89, file: "modules/2-rocnik/kvadraticke-nerovnice/89-riesenie-kvadratickych-nerovnic-grafickou-metodou.js" }),
-  placeholder({ id: '2-u13-h090', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13, topic: "Kvadratické rovnice s parametrom", lesson: "Hodina 90", lessonOrder: 90, file: "modules/2-rocnik/kvadraticke-nerovnice/90-kvadraticke-rovnice-s-parametrom.js" }),
-  placeholder({ id: '2-u13-h091', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13, topic: "Kvadratické rovnice s parametrom - precvičovanie", lesson: "Hodina 91", lessonOrder: 91, file: "modules/2-rocnik/kvadraticke-nerovnice/91-kvadraticke-rovnice-s-parametrom-precvicovanie.js" }),
-  placeholder({ id: '2-u13-h092', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13, topic: "Súhrnné precvičovanie", lesson: "Hodina 92", lessonOrder: 92, file: "modules/2-rocnik/kvadraticke-nerovnice/92-suhrnne-precvicovanie.js" }),
-  placeholder({ id: '2-u13-h093', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13, topic: "Kontrolná písomná práca", lesson: "Hodina 93", lessonOrder: 93, file: "modules/2-rocnik/kvadraticke-nerovnice/93-kontrolna-pisomna-praca.js" }),
+  {
+    id: '2-u13-h087', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13,
+    topic: "Riešenie kvadratických nerovníc výpočtom", lesson: "Hodina 87", lessonOrder: 87,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["určenie intervalu podľa orientácie paraboly", "zápis riešenia ako intervalu", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-nerovnice/87-riesenie-kvadratickych-nerovnic-vypoctom.js"
+  },
+  {
+    id: '2-u13-h088', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13,
+    topic: "Riešenie kvadratických nerovníc výpočtom – precvičovanie", lesson: "Hodina 88", lessonOrder: 88,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["riešenie nerovnice pri D<0", "rozlíšenie „celé R“ vs. „žiadne riešenie“", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-nerovnice/88-riesenie-kvadratickych-nerovnic-vypoctom-precvicovanie.js"
+  },
+  {
+    id: '2-u13-h089', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13,
+    topic: "Riešenie kvadratických nerovníc grafickou metódou", lesson: "Hodina 89", lessonOrder: 89,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["čítanie riešenia z grafu paraboly", "prepojenie orientácie paraboly so znamienkom funkcie", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-nerovnice/89-riesenie-kvadratickych-nerovnic-grafickou-metodou.js"
+  },
+  {
+    id: '2-u13-h090', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13,
+    topic: "Kvadratické rovnice s parametrom", lesson: "Hodina 90", lessonOrder: 90,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["vyjadrenie diskriminantu s parametrom", "riešenie podmienky na parameter", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-nerovnice/90-kvadraticke-rovnice-s-parametrom.js"
+  },
+  {
+    id: '2-u13-h091', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13,
+    topic: "Kvadratické rovnice s parametrom - precvičovanie", lesson: "Hodina 91", lessonOrder: 91,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["dosadenie daného koreňa", "Vietove vzťahy s parametrom", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-nerovnice/91-kvadraticke-rovnice-s-parametrom-precvicovanie.js"
+  },
+  {
+    id: '2-u13-h092', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13,
+    topic: "Súhrnné precvičovanie", lesson: "Hodina 92", lessonOrder: 92,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["riešenie kvadratickej nerovnice", "určenie podmienky na parameter", "argumentácia"],
+    file: "modules/2-rocnik/kvadraticke-nerovnice/92-suhrnne-precvicovanie.js"
+  },
+  {
+    id: '2-u13-h093', year: 2, unit: "Kvadratické nerovnice", unitOrder: 13,
+    topic: "Kontrolná písomná práca", lesson: "Hodina 93", lessonOrder: 93,
+    time: "10–14 min", status: 'ready',
+    type: "Rozcvička → kontrolné otázky z celej témy → sebahodnotenie",
+    skills: ["riešenie kvadratickej nerovnice", "prípad D<0", "určenie podmienky na parameter"],
+    file: "modules/2-rocnik/kvadraticke-nerovnice/93-kontrolna-pisomna-praca.js"
+  },
 
   // 2.14 · Iracionálne rovnice
-  placeholder({ id: '2-u14-h095', year: 2, unit: "Iracionálne rovnice", unitOrder: 14, topic: "Základy iracionálnych rovníc", lesson: "Hodina 95", lessonOrder: 95, file: "modules/2-rocnik/iracionalne-rovnice/95-zaklady-iracionalnych-rovnic.js" }),
-  placeholder({ id: '2-u14-h096', year: 2, unit: "Iracionálne rovnice", unitOrder: 14, topic: "Zložitejšie typy a substitúcia", lesson: "Hodina 96", lessonOrder: 96, file: "modules/2-rocnik/iracionalne-rovnice/96-zlozitejsie-typy-a-substitucia.js" }),
-  placeholder({ id: '2-u14-h097', year: 2, unit: "Iracionálne rovnice", unitOrder: 14, topic: "Slovné úlohy (Geometria a fyzika)", lesson: "Hodina 97", lessonOrder: 97, file: "modules/2-rocnik/iracionalne-rovnice/97-slovne-ulohy-geometria-a-fyzika.js" }),
-  placeholder({ id: '2-u14-h098', year: 2, unit: "Iracionálne rovnice", unitOrder: 14, topic: "Slovné úlohy (Praktické a reálne kontexty)", lesson: "Hodina 98", lessonOrder: 98, file: "modules/2-rocnik/iracionalne-rovnice/98-slovne-ulohy-prakticke-a-realne-kontexty.js" }),
-  placeholder({ id: '2-u14-h099', year: 2, unit: "Iracionálne rovnice", unitOrder: 14, topic: "Opakovanie a preverenie vedomostí", lesson: "Hodina 99", lessonOrder: 99, file: "modules/2-rocnik/iracionalne-rovnice/99-opakovanie-a-preverenie-vedomosti.js" }),
+  {
+    id: '2-u14-h095', year: 2, unit: "Iracionálne rovnice", unitOrder: 14,
+    topic: "Základy iracionálnych rovníc", lesson: "Hodina 95", lessonOrder: 95,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["riešenie iracionálnej rovnice", "skúška a rozpoznanie cudzieho koreňa", "argumentácia"],
+    file: "modules/2-rocnik/iracionalne-rovnice/95-zaklady-iracionalnych-rovnic.js"
+  },
+  {
+    id: '2-u14-h096', year: 2, unit: "Iracionálne rovnice", unitOrder: 14,
+    topic: "Zložitejšie typy a substitúcia", lesson: "Hodina 96", lessonOrder: 96,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["zavedenie substitúcie t=√x", "návrat k pôvodnej premennej x", "argumentácia"],
+    file: "modules/2-rocnik/iracionalne-rovnice/96-zlozitejsie-typy-a-substitucia.js"
+  },
+  {
+    id: '2-u14-h097', year: 2, unit: "Iracionálne rovnice", unitOrder: 14,
+    topic: "Slovné úlohy (Geometria a fyzika)", lesson: "Hodina 97", lessonOrder: 97,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["iracionálna rovnica z geometrie", "iracionálna rovnica z fyziky", "argumentácia"],
+    file: "modules/2-rocnik/iracionalne-rovnice/97-slovne-ulohy-geometria-a-fyzika.js"
+  },
+  {
+    id: '2-u14-h098', year: 2, unit: "Iracionálne rovnice", unitOrder: 14,
+    topic: "Slovné úlohy (Praktické a reálne kontexty)", lesson: "Hodina 98", lessonOrder: 98,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → nový pojem → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["iracionálna rovnica z praktického vzorca", "overenie zmysluplnosti výsledku", "argumentácia"],
+    file: "modules/2-rocnik/iracionalne-rovnice/98-slovne-ulohy-prakticke-a-realne-kontexty.js"
+  },
+  {
+    id: '2-u14-h099', year: 2, unit: "Iracionálne rovnice", unitOrder: 14,
+    topic: "Opakovanie a preverenie vedomostí", lesson: "Hodina 99", lessonOrder: 99,
+    time: "20–26 min", status: 'ready',
+    type: "Pochopenie → precvičenie → hľadanie chyby → zápis do zošita → argumentácia → záver",
+    skills: ["riešenie iracionálnej rovnice a skúška", "substitúcia t=√x", "aplikácie (geometria, fyzika, prax)"],
+    file: "modules/2-rocnik/iracionalne-rovnice/99-opakovanie-a-preverenie-vedomosti.js"
+  },
   // ==================== 3. ROČNÍK ====================
 
   // 3.01 · Goniometrické funkcie, goniometrické, rovnice
