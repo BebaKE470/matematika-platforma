@@ -12,12 +12,13 @@
 // Escaping contract (see also docs/AUTHORING.md): MathUtil.esc() wraps any
 // value that came from the module author as PLAIN TEXT (title, question,
 // options, item text, skill names, prompts). The fields `html`, `promptHtml`,
-// `remember`, `correct`, `hint`, `model`, `note`, `success`, `reveal` are
-// TRUSTED AUTHORED HTML on purpose — modules hand-write SVG diagrams, tables
-// and formatted explanations into them — and are never escaped. A value that
-// did not come from the module author (a live-lesson participant's nick, for
-// instance) must never be printed by this file at all; that only happens on
-// the teacher's own screens (core/views-teacher.js), which esc() themselves.
+// `remember`, `correct`, `hint`, `model`, `note`, `success`, `reveal` (and, on
+// a taskList item, `item.html`) are TRUSTED AUTHORED HTML on purpose —
+// modules hand-write SVG diagrams, tables and formatted explanations into
+// them — and are never escaped. A value that did not come from the module
+// author (a live-lesson participant's nick, for instance) must never be
+// printed by this file at all; that only happens on the teacher's own
+// screens (core/views-teacher.js), which esc() themselves.
 (function () {
   if (!window.MathUtil || !window.MathScore) {
     throw new Error('core/renderers.js: chýba core/util.js alebo core/scoring.js pred ním.');
@@ -122,6 +123,42 @@
       ${a.html || ''}
       <div class="actions">${continueButtonHtml(a.continueLabel || 'Mám zapísané')}</div>
     `, 'notebook');
+    wireContinue(ctx, () => { ctx.record(a, { correct: true, attempts: 1 }); ctx.next(); });
+  };
+
+  // Unscored checklist of tasks the student ticks off as they work through
+  // them on paper — the app never grades this, it just remembers which boxes
+  // are checked (ctx.getChecks/setChecks, backed by localStorage in
+  // core/session.js) so it survives a refresh or stepping back/forward, and
+  // is never sent to the teacher (see core/session.js's sendProgress()).
+  R.taskList = (a, ctx) => {
+    const checked = new Set(ctx.getChecks(a.id));
+    const total = a.items.length;
+    const rowHtml = (it, i) => `
+      <label class="task-row">
+        <input type="checkbox" data-i="${i}"${checked.has(i) ? ' checked' : ''}>
+        <span>${it.html || esc(it.text)}</span>
+      </label>`;
+    shell(ctx, a, `
+      <h1>${esc(a.title)}</h1>
+      ${a.html || ''}
+      <div class="task-list">${a.items.map(rowHtml).join('')}</div>
+      <p class="muted task-count" id="taskCount"></p>
+      ${a.note ? `<div class="notice">${a.note}</div>` : ''}
+      ${continueButtonHtml(a.continueLabel)}
+    `);
+    const updateCount = () => {
+      $('#taskCount').textContent = `Hotové: ${checked.size} / ${total}`;
+    };
+    $$('.task-list input[type="checkbox"]').forEach(box => {
+      box.onchange = () => {
+        const i = Number(box.dataset.i);
+        if (box.checked) checked.add(i); else checked.delete(i);
+        ctx.setChecks(a.id, [...checked]);
+        updateCount();
+      };
+    });
+    updateCount();
     wireContinue(ctx, () => { ctx.record(a, { correct: true, attempts: 1 }); ctx.next(); });
   };
 

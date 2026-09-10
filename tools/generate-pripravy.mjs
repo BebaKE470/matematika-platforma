@@ -134,6 +134,7 @@ const PSYCHOMOTOR_BY_TYPE = {
   matrix: 'Žiak priradí/zaradí položky podľa správneho matematického kritéria.',
   sortChoice: 'Žiak rozdelí/zoradí položky do správnych kategórií.',
   selfWrite: 'Žiak sformuluje a zapíše vlastnými slovami matematické vysvetlenie alebo zdôvodnenie.',
+  taskList: 'Žiak samostatne rieši zadané úlohy v zošite a priebežne si eviduje, ktoré má hotové.',
 };
 
 const INTERSUBJECT_BY_KEYWORD = [

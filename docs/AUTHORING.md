@@ -37,7 +37,8 @@ names, `prompt`. These fields are **trusted authored HTML** and are never
 escaped — write real markup into them:
 
 `html`, `promptHtml`, `remember`, `correct`, `hint`, `model`, `note`,
-`success`, `reveal`
+`success`, `reveal`, and a `taskList` item's `html` (its `text` is escaped,
+same as any other item text)
 
 A module can use the shared visual-diagram classes inside those fields:
 `.logic-visual`/`.truth` (an SVG or table dropped straight into `html`, as
@@ -62,7 +63,7 @@ mechanism. The max per type (honoured unless the activity sets its own
 | `matrix` | 120 | `120 × correctItems / totalItems`, rounded |
 | `notebook` | 20 | flat, on acknowledging the note |
 | `selfWrite` | 30 | flat, on revealing the model sentence |
-| `info`, `explain`, `coordinatePlot`, `reflection` | 0 | — |
+| `info`, `explain`, `coordinatePlot`, `reflection`, `taskList` | 0 | — |
 
 ## Activity types
 
@@ -106,6 +107,28 @@ Required: `html` (the **exact** finished text the student copies — never
 just an instruction to write the definition themselves, per
 `PravidlaTvorbyModulov.txt`). Optional: `title` (default "Zapíš si do
 zošita"), `continueLabel` (default "Mám zapísané").
+
+### `taskList` — unscored checklist of tasks
+
+For a set of problems the student solves on paper while the app just tracks
+which ones are done — no grading, no answers collected. Required: `title`,
+`items` (array of `{ text }` or `{ html }` — `html` wins if both are set, so
+a task can carry a fraction, an exponent or a small SVG). Optional: `html`
+(intro text above the list), `note` (shown after the list), `continueLabel`.
+
+Ticked boxes are per-student, stored in the browser (`localStorage`, keyed by
+module + activity) via `ctx.getChecks`/`ctx.setChecks` — they survive a
+refresh or stepping back/forward, are worth 0 points, and are never sent to
+the teacher's live view (see `core/session.js`'s `sendProgress()`, which only
+ever reads `state.answers`/`state.score`, not the checks store). The
+Pokračovať button is never disabled — nothing forces a student to tick
+everything before moving on.
+
+**Choosing between `notebook`, `taskList` and `selfWrite`** (rule 6): use
+`notebook` when the student must copy an *exact finished text* you wrote;
+`taskList` when the student solves *your exact task statements* on paper and
+just tracks progress; `selfWrite` when the student must *formulate an idea in
+their own words*. Never use one as a stand-in for another.
 
 ### `selfWrite` — formulate an idea in your own words
 

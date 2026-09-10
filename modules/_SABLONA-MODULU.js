@@ -39,7 +39,7 @@ MathPlatform.registerModule({
     intro: '',            // krátky úvodný text pred "Začať samostatne"
     estimatedTime: '',    // napr. "≈ 15 min" — iba digitálna časť, nie celá hodina
     activities: [
-      // Príklad — najjednoduchšie tri typy. Ďalšie typy (sortChoice, matrix,
+      // Príklad — najjednoduchšie typy. Ďalšie typy (sortChoice, matrix,
       // numberInput, selfWrite, notebook, coordinatePlot) pozri docs/AUTHORING.md
       // alebo ktorýkoľvek hotový modul v modules/<ročník>/.
       {
@@ -60,6 +60,23 @@ MathPlatform.registerModule({
         answer: 1, // index správnej možnosti — rozlož správne odpovede medzi rôznymi modulmi (rule 8)
         correct: 'Krátke vysvetlenie, prečo je to správne — zobrazí sa po správnej odpovedi.',
         hint: 'Pomôcka po prvom nesprávnom pokuse — nesmie prezradiť riešenie.',
+      },
+      {
+        // Nebodovaný zoznam úloh na papier/zošit — žiak si odfajkáva, čo má
+        // hotové. Nedáva sa žiadny bod, zaškrtnutia sa ukladajú len
+        // v prehliadači žiaka (prežijú F5 aj krok späť/vpred) a učiteľovi sa
+        // neposielajú. Nezamieňať s notebook (presný text na odpísanie) ani
+        // so selfWrite (formulácia vlastnými slovami) — rule 6.
+        id: 'priklady',
+        type: 'taskList',
+        phase: 'PRÍKLADY',
+        skill: 'Samostatná práca',
+        title: 'Príklady na dnešnú hodinu',
+        html: '<p class="muted">Počítaj do zošita. Odfajkni si, čo máš hotové.</p>',
+        items: [
+          { text: 'Prvá úloha — presné zadanie.' },
+          { text: 'Druhá úloha — presné zadanie.' },
+        ],
       },
       {
         id: 'zaver',

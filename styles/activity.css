@@ -97,6 +97,22 @@ select.answer-good, select.answer-bad { opacity: 1; -webkit-text-fill-color: var
 .skill-summary { display: grid; gap: 8px; margin: 12px 0 18px; }
 .skill-row { display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding: 8px 0; }
 
+/* --- taskList (unscored checklist — core/renderers.js's R.taskList) --- */
+
+.task-list { display: grid; gap: 10px; margin: 18px 0; }
+.task-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 400;
+}
+.task-row input[type="checkbox"] { margin-top: 3px; flex: none; }
+.task-count { font-weight: 750; }
+
 /* --- coordinatePlot --- */
 
 .coordinate-wrap { margin: 18px 0; overflow: auto; border: 1px solid var(--line); border-radius: 16px; background: #fbfcfa; padding: 8px; }

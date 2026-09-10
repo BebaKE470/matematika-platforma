@@ -23,6 +23,7 @@
     explain:        { max: 0 },
     coordinatePlot: { max: 0 },
     reflection:     { max: 0 },
+    taskList:       { max: 0 },
   };
 
   function rule(activity) {

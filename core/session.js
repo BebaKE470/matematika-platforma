@@ -20,6 +20,37 @@
   let live = null; // MathLive handle while state.mode === 'live'; null otherwise
   let state = freshState();
 
+  // --- taskList checkbox state -------------------------------------------
+  //
+  // Unlike the rest of session state, a taskList's ticked boxes are meant to
+  // survive a page refresh and are purely for the student — never scored,
+  // never sent to the teacher (see sendProgress() below, which only ever
+  // reads state.answers/state.score). So they live in localStorage, keyed by
+  // module + activity, rather than in the in-memory `state` that leave()
+  // wipes on every navigation away from the module/play/join cluster.
+  const CHECKS_KEY = 'mathStudentChecksV1';
+
+  function checksStoreKey(activityId) { return `${state.moduleId}::${activityId}`; }
+
+  function loadChecksStore() {
+    try { return JSON.parse(localStorage.getItem(CHECKS_KEY) || '{}') || {}; }
+    catch (_) { return {}; }
+  }
+
+  function getChecks(activityId) {
+    const store = loadChecksStore();
+    const arr = store[checksStoreKey(activityId)];
+    return Array.isArray(arr) ? arr : [];
+  }
+
+  function setChecks(activityId, indices) {
+    try {
+      const store = loadChecksStore();
+      store[checksStoreKey(activityId)] = indices;
+      localStorage.setItem(CHECKS_KEY, JSON.stringify(store));
+    } catch (_) { /* localStorage unavailable (private mode, quota) — checks just won't persist */ }
+  }
+
   function freshState(extra) {
     return Object.assign({
       mode: 'solo', nick: '', session: '', moduleId: '',
@@ -159,6 +190,8 @@
       prev: () => { if (state.index > 0) { state.index--; sendProgress(false, false); play(app); } },
       setReflection: v => { state.reflection = v; },
       finish: () => finish(app),
+      getChecks,
+      setChecks,
       topic: (meta && meta.topic) || currentModule.student.title,
       unit: (meta && meta.unit) || '',
       mode: state.mode,

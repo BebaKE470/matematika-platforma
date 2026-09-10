@@ -154,6 +154,7 @@ for (const entry of registry) {
 const KNOWN_TYPES = new Set([
   'info', 'explain', 'choice', 'sortChoice', 'notebook',
   'selfWrite', 'numberInput', 'matrix', 'coordinatePlot', 'reflection',
+  'taskList',
 ]);
 
 // Keep in sync with the named-validator table in core/renderers.js.
@@ -240,6 +241,14 @@ for (const [id, mod] of modulesByEntry) {
         }
         break;
       }
+      case 'taskList': {
+        if (!a.title) fail('content', `${where}: taskList bez title`);
+        if (!Array.isArray(a.items) || !a.items.length) fail('content', `${where}: taskList bez items`);
+        else a.items.forEach((it, j) => {
+          if (!it || (!it.text && !it.html)) fail('content', `${where}: items[${j}] bez text alebo html`);
+        });
+        break;
+      }
     }
   });
 
@@ -263,7 +272,7 @@ for (const [id, mod] of modulesByEntry) {
 const POINTS = {
   choice: 100, numberInput: 100, sortChoice: 100, matrix: 120,
   notebook: 20, selfWrite: 30,
-  info: 0, explain: 0, coordinatePlot: 0, reflection: 0,
+  info: 0, explain: 0, coordinatePlot: 0, reflection: 0, taskList: 0,
 };
 
 const scoringPath = path.join(ROOT, 'core/scoring.js');
