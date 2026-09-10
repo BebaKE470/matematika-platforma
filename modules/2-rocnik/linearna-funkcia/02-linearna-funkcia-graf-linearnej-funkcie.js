@@ -144,6 +144,26 @@ MathPlatform.registerModule({
         "model": "<strong>POSTUP:</strong> zvolím x → vypočítam f(x) → zapíšem body [x;f(x)] → zostrojím priamku."
       },
       {
+        // Zdroj: zbierka úloh, 5.1.10 (Narysujte grafy lineárnych funkcií) —
+        // prevzatá je iba časť „zostroj graf"; časť úlohy o definičnom obore,
+        // obore hodnôt, monotónnosti a ohraničenosti je z neskoršej témy
+        // (Funkcie – základné pojmy a vlastnosti), tu sa nepoužíva (rule 2).
+        "id": "priklady-graf",
+        "type": "taskList",
+        "phase": "PRECVIČ",
+        "skill": "graf",
+        "title": "Grafy lineárnych funkcií",
+        "html": "<p class=\"muted\">Ku každej funkcii zostroj jej graf do zošita – zvoľ si aspoň tri hodnoty x, vypočítaj y, zapíš body [x; y] a spoj ich priamkou. Odfajkni si úlohu, keď máš graf hotový.</p>",
+        "items": [
+          { "text": "f: y = x + 2, x ∈ R" },
+          { "text": "f: y = 2x − 1, x ∈ R" },
+          { "text": "f: y = 3 − 2x, x ∈ R" },
+          { "text": "f: y = 4x + 3, x ∈ R" },
+          { "text": "f: y = (x − 2)/4, x ∈ R" },
+          { "text": "f: y = 0,5 − 2,5x, x ∈ R" }
+        ]
+      },
+      {
         "id": "reflection",
         "type": "reflection",
         "phase": "SEBAHODNOTENIE",
