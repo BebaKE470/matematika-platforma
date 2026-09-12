@@ -30,10 +30,11 @@ MathPlatform.registerModule({
       "Návrh štandardu podporuje prepájanie predpisu, tabuľky a grafu a argumentáciu na základe reprezentácie."
     ],
     "flow": [
-      "5 min opakovanie funkcie",
-      "15–15–18 min modul",
-      "10 min ručná konštrukcia grafu",
-      "5 min syntéza"
+      "0–3 min: KDE SME – nadväzuje na pojem funkcie a f(x) z 1. hodiny.",
+      "3–8 min: zavedenie lineárnej funkcie a ukážka, ako vzniká graf.",
+      "8–25 min: rozpoznávanie koeficientov, overovanie bodov na grafe, ručná konštrukcia.",
+      "25–40 min: ZBIERKA – funkčné hodnoty, bod na grafe, grafy funkcií, každá v troch úrovniach náročnosti.",
+      "40–45 min: ZHRNUTIE a sebahodnotenie."
     ],
     "diagnostics": [
       "rozpoznanie a,b",
@@ -41,15 +42,24 @@ MathPlatform.registerModule({
       "zostrojenie priamky"
     ],
     "partialUse": [
-      "Modul je možné použiť celý alebo vybrať iba objavovaciu, zošitovú či diagnostickú časť podľa priebehu hodiny."
+      "Modul je možné použiť celý alebo vybrať iba objavovaciu, zošitovú či diagnostickú časť podľa priebehu hodiny.",
+      "Zbierkové úlohy (aktivity ZBIERKA) sú nebodované, žiak si ich rieši na papieri a v aplikácii iba odfajkne; pri potrebe skrátiť možno vynechať úroveň bonus."
     ]
   },
   "student": {
     "title": "Priamka z predpisu",
     "subtitle": "Od vzorca ku grafu",
     "intro": "Dnes zavedieš lineárnu funkciu a uvidíš, ako sa jej predpis mení na priamku.",
-    "estimatedTime": "15–18 min",
+    "estimatedTime": "20–24 min",
     "activities": [
+      {
+        "id": "kde-sme",
+        "type": "info",
+        "phase": "0 · KDE SME",
+        "title": "Od funkcie k jej prvému konkrétnemu typu",
+        "html": "<p>Na 1. hodine sme zaviedli <strong>pojem funkcie</strong> a zápis <strong>f(x)</strong>. Dnes uvidíš prvý konkrétny typ funkcie — <strong>lineárnu funkciu</strong> — a naučíš sa čítať jej graf.</p><p class=\"keyidea\">Nepotrebuješ nič nové okrem toho, čo už vieš: dosadiť číslo za x a pracovať so súradnicovou sústavou.</p>",
+        "continueLabel": "Idem na to"
+      },
       {
         "id": "recall",
         "type": "choice",
@@ -69,7 +79,7 @@ MathPlatform.registerModule({
       {
         "id": "linear-intro",
         "type": "explain",
-        "phase": "NOVÝ POJEM",
+        "phase": "1 · NOVÝ POJEM",
         "title": "Lineárna funkcia",
         "html": "<p>Funkciu s predpisom <strong>f(x)=ax+b</strong>, kde a a b sú reálne čísla, nazývame <strong>lineárna funkcia</strong>.</p><p><strong>a</strong> je koeficient pri x. Určuje smer a strmosť priamky. <strong>b</strong> je hodnota f(0), teda miesto, kde graf pretína os y.</p>",
         "remember": "graf lineárnej funkcie je priamka (pri a=0 vodorovná priamka)."
@@ -94,7 +104,7 @@ MathPlatform.registerModule({
       {
         "id": "graph-how",
         "type": "info",
-        "phase": "VIZUALIZÁCIA",
+        "phase": "2 · VIZUALIZÁCIA",
         "title": "Ako vznikne graf",
         "html": "<p>Pre <strong>f(x)=x−1</strong> vypočítame niekoľko hodnôt a body [x; f(x)] zakreslíme. Keďže ide o lineárnu funkciu, ležia na jednej priamke.</p><div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 620 360\" role=\"img\"><line x1=\"45.0\" y1=\"45\" x2=\"45.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"98.0\" y1=\"45\" x2=\"98.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"151.0\" y1=\"45\" x2=\"151.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"204.0\" y1=\"45\" x2=\"204.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"257.0\" y1=\"45\" x2=\"257.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"310.0\" y1=\"45\" x2=\"310.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"363.0\" y1=\"45\" x2=\"363.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"416.0\" y1=\"45\" x2=\"416.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"469.0\" y1=\"45\" x2=\"469.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"522.0\" y1=\"45\" x2=\"522.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"575.0\" y1=\"45\" x2=\"575.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"45\" y1=\"315.0\" x2=\"575\" y2=\"315.0\" class=\"plot-grid\"/><line x1=\"45\" y1=\"290.5\" x2=\"575\" y2=\"290.5\" class=\"plot-grid\"/><line x1=\"45\" y1=\"265.9\" x2=\"575\" y2=\"265.9\" class=\"plot-grid\"/><line x1=\"45\" y1=\"241.4\" x2=\"575\" y2=\"241.4\" class=\"plot-grid\"/><line x1=\"45\" y1=\"216.8\" x2=\"575\" y2=\"216.8\" class=\"plot-grid\"/><line x1=\"45\" y1=\"192.3\" x2=\"575\" y2=\"192.3\" class=\"plot-grid\"/><line x1=\"45\" y1=\"167.7\" x2=\"575\" y2=\"167.7\" class=\"plot-grid\"/><line x1=\"45\" y1=\"143.2\" x2=\"575\" y2=\"143.2\" class=\"plot-grid\"/><line x1=\"45\" y1=\"118.6\" x2=\"575\" y2=\"118.6\" class=\"plot-grid\"/><line x1=\"45\" y1=\"94.1\" x2=\"575\" y2=\"94.1\" class=\"plot-grid\"/><line x1=\"45\" y1=\"69.5\" x2=\"575\" y2=\"69.5\" class=\"plot-grid\"/><line x1=\"45\" y1=\"45.0\" x2=\"575\" y2=\"45.0\" class=\"plot-grid\"/><line x1=\"257.0\" y1=\"45\" x2=\"257.0\" y2=\"315\" class=\"plot-axis\"/><line x1=\"45\" y1=\"192.3\" x2=\"575\" y2=\"192.3\" class=\"plot-axis\"/><text x=\"45.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-4</text><text x=\"98.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-3</text><text x=\"151.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-2</text><text x=\"204.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-1</text><text x=\"310.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">1</text><text x=\"363.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">2</text><text x=\"416.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">3</text><text x=\"469.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">4</text><text x=\"522.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">5</text><text x=\"575.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">6</text><text x=\"35\" y=\"319.0\" text-anchor=\"end\" class=\"plot-label\">-5</text><text x=\"35\" y=\"294.5\" text-anchor=\"end\" class=\"plot-label\">-4</text><text x=\"35\" y=\"269.9\" text-anchor=\"end\" class=\"plot-label\">-3</text><text x=\"35\" y=\"245.4\" text-anchor=\"end\" class=\"plot-label\">-2</text><text x=\"35\" y=\"220.8\" text-anchor=\"end\" class=\"plot-label\">-1</text><text x=\"35\" y=\"171.7\" text-anchor=\"end\" class=\"plot-label\">1</text><text x=\"35\" y=\"147.2\" text-anchor=\"end\" class=\"plot-label\">2</text><text x=\"35\" y=\"122.6\" text-anchor=\"end\" class=\"plot-label\">3</text><text x=\"35\" y=\"98.1\" text-anchor=\"end\" class=\"plot-label\">4</text><text x=\"35\" y=\"73.5\" text-anchor=\"end\" class=\"plot-label\">5</text><text x=\"35\" y=\"49.0\" text-anchor=\"end\" class=\"plot-label\">6</text><polyline points=\"45.0,315.0 575.0,69.5\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"257.0\" cy=\"216.8\" r=\"6\" fill=\"#173d35\"/><text x=\"266.0\" y=\"206.8\" class=\"plot-point-label\">[0; −1]</text><circle cx=\"363.0\" cy=\"167.7\" r=\"6\" fill=\"#173d35\"/><text x=\"372.0\" y=\"157.7\" class=\"plot-point-label\">[2; 1]</text><text x=\"589\" y=\"184.3\" class=\"plot-axis-name\">x</text><text x=\"266.0\" y=\"33\" class=\"plot-axis-name\">y</text></svg></div><p class=\"keyidea\">Na určenie priamky stačia dva rôzne body, ale tretí bod je dobrá kontrola výpočtu.</p>"
       },
@@ -106,15 +116,15 @@ MathPlatform.registerModule({
         // čitateľný, preto bez konkrétneho čísla.
         "id": "priklady-hodnoty",
         "type": "taskList",
-        "phase": "VYPOČÍTAJ",
+        "phase": "4 · ZBIERKA",
         "skill": "funkčná hodnota",
         "title": "Vypočítaj funkčné hodnoty",
-        "html": "<p class=\"muted\">Dosaď dané x do predpisu a vypočítaj funkčnú hodnotu. Odfajkni si úlohu, keď máš výpočet hotový.</p>",
+        "html": "<p class=\"muted\">Dosaď dané x do predpisu a vypočítaj funkčnú hodnotu. Odfajkni si úlohu, keď máš výpočet hotový — riešenie si over tlačidlom.</p>",
         "items": [
-          { "text": "f: y = −x + 1, x ∈ R. Vypočítaj f(−3), f(1), f(18)." },
-          { "text": "f: y = 11x + 3, x ∈ R. Vypočítaj f(−2,3), f(3,31), f(0,001), f(−111,01)." },
-          { "text": "f: y = −3,2x + 2,1. Vypočítaj približné hodnoty f(−24,08), f(√2), f(−1 + 2√3), f(0,1π); výsledky zaokrúhli na desatinné miesta." },
-          { "text": "f: y = 2x − 5. Vypočítaj f(1½), f(−3/8), f(−2 5/16)." }
+          { "level": "zaklad", "text": "f: y = −x + 1, x ∈ R. Vypočítaj f(−3), f(1), f(18).", "answer": "f(−3) = 4, f(1) = 0, f(18) = −17." },
+          { "level": "rozsirenie", "text": "f: y = 11x + 3, x ∈ R. Vypočítaj f(−2,3), f(3,31), f(0,001), f(−111,01).", "answer": "f(−2,3) = −22,3, f(3,31) = 39,41, f(0,001) = 3,011, f(−111,01) = −1218,11." },
+          { "level": "bonus", "text": "f: y = −3,2x + 2,1. Vypočítaj približné hodnoty f(−24,08), f(√2), f(−1 + 2√3), f(0,1π); výsledky zaokrúhli na dve desatinné miesta.", "answer": "f(−24,08) ≈ 79,16; f(√2) ≈ −2,43; f(−1 + 2√3) ≈ −5,79; f(0,1π) ≈ 1,09." },
+          { "level": "bonus", "text": "f: y = 2x − 5. Vypočítaj f(1½), f(−3/8), f(−2 5/16).", "answer": "f(1½) = −2; f(−3/8) = −5¾ (= −5,75); f(−2 5/16) = −9⅝ (= −9,625)." }
         ]
       },
       {
@@ -139,18 +149,18 @@ MathPlatform.registerModule({
         // na graf funkcie).
         "id": "priklady-body",
         "type": "taskList",
-        "phase": "OVER GRAF",
+        "phase": "4 · ZBIERKA",
         "skill": "graf",
         "title": "Patrí bod na graf?",
-        "html": "<p class=\"muted\">Over dosadením, či bod naozaj patrí na graf danej funkcie. Odfajkni si úlohu, keď máš overené.</p>",
+        "html": "<p class=\"muted\">Over dosadením, či bod naozaj patrí na graf danej funkcie. Odfajkni si úlohu, keď máš overené — riešenie si over tlačidlom.</p>",
         "items": [
-          { "text": "Patrí bod [−2; −3] na graf f: y = x − 1?" },
-          { "text": "Patrí bod [2; −5] na graf g: y = 1 − 3x?" },
-          { "text": "Patrí bod [¼; 2] na graf h: y = 4x + 1?" },
-          { "text": "Patrí bod [−1⅔; −11] na graf k: y = −x/6 − 1?" },
-          { "text": "Patrí bod [−2; −1] na graf f: y = (1 + 3x)/5?" },
-          { "text": "Patrí bod [−3,6; 1,3] na graf g: y = 1 − (x + 2)/3?" },
-          { "text": "f: y = −0,1x + 3,18, x ∈ ⟨−5, 10⟩ a g: y = −7x − 0,2, x ∈ ⟨−1,1; 1,2⟩. Rozhodni, ktoré z bodov A[1; 6,8], B[2,3; 15,9], C[10; 2,18], D[0; −0,2], E[15,03; 2,6771], F[31,8; 0] ležia na grafe f a ktoré na grafe g." }
+          { "level": "zaklad", "text": "Patrí bod [−2; −3] na graf f: y = x − 1?", "answer": "Áno. f(−2) = −2 − 1 = −3, zhoduje sa." },
+          { "level": "zaklad", "text": "Patrí bod [2; −5] na graf g: y = 1 − 3x?", "answer": "Áno. g(2) = 1 − 3·2 = −5, zhoduje sa." },
+          { "level": "rozsirenie", "text": "Patrí bod [¼; 2] na graf h: y = 4x + 1?", "answer": "Áno. h(¼) = 4·¼ + 1 = 1 + 1 = 2, zhoduje sa." },
+          { "level": "rozsirenie", "text": "Patrí bod [−2; −1] na graf f: y = (1 + 3x)/5?", "answer": "Áno. f(−2) = (1 + 3·(−2))/5 = (1 − 6)/5 = −5/5 = −1, zhoduje sa." },
+          { "level": "bonus", "text": "Patrí bod [−1⅔; −11] na graf k: y = −x/6 − 1?", "answer": "Nie. −1⅔ = −5/3, k(−5/3) = −(−5/3)/6 − 1 = 5/18 − 1 = −13/18 ≈ −0,72, čo sa nezhoduje s −11." },
+          { "level": "bonus", "text": "Patrí bod [−3,6; 1,3] na graf g: y = 1 − (x + 2)/3?", "answer": "Nie. g(−3,6) = 1 − (−3,6 + 2)/3 = 1 − (−1,6)/3 = 1 + 0,5(3) ≈ 1,53, čo sa nezhoduje s 1,3." },
+          { "level": "bonus", "text": "f: y = −0,1x + 3,18, x ∈ ⟨−5, 10⟩ a g: y = −7x − 0,2, x ∈ ⟨−1,1; 1,2⟩. Rozhodni, ktoré z bodov A[1; 6,8], B[2,3; 15,9], C[10; 2,18], D[0; −0,2], E[15,03; 2,6771], F[31,8; 0] ležia na grafe f a ktoré na grafe g.", "answer": "C[10; 2,18] leží na grafe f (f(10) = 2,18, krajný bod oboru). D[0; −0,2] leží na grafe g (g(0) = −0,2). A, B, E, F na žiadnom z grafov neležia — B, E aj F majú x mimo definičného oboru aspoň jednej z funkcií, A má x v oboch oboroch, ale hodnota nesedí ani pri jednej funkcii." }
         ]
       },
       {
@@ -190,29 +200,37 @@ MathPlatform.registerModule({
         // základné pojmy a vlastnosti), tu sa nepoužíva (rule 2).
         "id": "priklady-graf",
         "type": "taskList",
-        "phase": "PRECVIČ",
+        "phase": "4 · ZBIERKA",
         "skill": "graf",
         "title": "Grafy lineárnych funkcií",
-        "html": "<p class=\"muted\">Ku každej funkcii zostroj jej graf do zošita – zvoľ si aspoň tri hodnoty x (v danom definičnom obore), vypočítaj y, zapíš body [x; y] a spoj ich priamkou (alebo úsečkou, ak je x obmedzené). Odfajkni si úlohu, keď máš graf hotový.</p>",
+        "html": "<p class=\"muted\">Ku každej funkcii zostroj jej graf do zošita – zvoľ si aspoň tri hodnoty x (v danom definičnom obore), vypočítaj y, zapíš body [x; y] a spoj ich priamkou (alebo úsečkou/polpriamkou, ak je x obmedzené). Odfajkni si úlohu, keď máš graf hotový — riešenie si over tlačidlom.</p>",
         "items": [
-          { "text": "f: y = x + 2, x ∈ R" },
-          { "text": "f: y = 2x − 1, x ∈ R" },
-          { "text": "f: y = 3 − 2x, x ∈ R" },
-          { "text": "f: y = 4x + 3, x ∈ R" },
-          { "text": "f: y = (x − 2)/4, x ∈ R" },
-          { "text": "f: y = 0,5 − 2,5x, x ∈ R" },
-          { "text": "f: y = x − 3, x ∈ ⟨−2, 4⟩" },
-          { "text": "f: y = 4 − x, x ∈ ⟨−5, 6⟩" },
-          { "text": "f: y = −2x + 4, x ∈ ⟨0, 2⟩" },
-          { "text": "f: y = 0,4x + 0,2, x ∈ ⟨−1, 5⟩" },
-          { "text": "f: y = (x + 6)/3, x ∈ ⟨−3, ∞)" },
-          { "text": "f: y = 3/5 − x/2, x ∈ (−∞, 10⟩" }
+          { "level": "zaklad", "text": "f: y = x + 2, x ∈ R", "answer": "Napr. body [0;2], [1;3], [2;4] — priamka cez celý obor R." },
+          { "level": "zaklad", "text": "f: y = 2x − 1, x ∈ R", "answer": "Napr. body [0;−1], [1;1], [2;3] — priamka cez celý obor R." },
+          { "level": "zaklad", "text": "f: y = 3 − 2x, x ∈ R", "answer": "Napr. body [0;3], [1;1], [2;−1] — priamka cez celý obor R." },
+          { "level": "zaklad", "text": "f: y = 4x + 3, x ∈ R", "answer": "Napr. body [0;3], [1;7], [−1;−1] — priamka cez celý obor R." },
+          { "level": "rozsirenie", "text": "f: y = (x − 2)/4, x ∈ R", "answer": "Napr. body [2;0], [6;1], [−2;−1] — priamka cez celý obor R." },
+          { "level": "rozsirenie", "text": "f: y = 0,5 − 2,5x, x ∈ R", "answer": "Napr. body [0;0,5], [1;−2], [2;−4,5] — priamka cez celý obor R." },
+          { "level": "rozsirenie", "text": "f: y = x − 3, x ∈ ⟨−2, 4⟩", "answer": "Krajné body [−2;−5] a [4;1], stred napr. [1;−2] — úsečka medzi krajnými bodmi (oba patria do grafu)." },
+          { "level": "rozsirenie", "text": "f: y = 4 − x, x ∈ ⟨−5, 6⟩", "answer": "Krajné body [−5;9] a [6;−2], stred napr. [0;4] — úsečka medzi krajnými bodmi (oba patria do grafu)." },
+          { "level": "bonus", "text": "f: y = −2x + 4, x ∈ ⟨0, 2⟩", "answer": "Krajné body [0;4] a [2;0], stred napr. [1;2] — úsečka medzi krajnými bodmi (oba patria do grafu)." },
+          { "level": "bonus", "text": "f: y = 0,4x + 0,2, x ∈ ⟨−1, 5⟩", "answer": "Krajné body [−1;−0,2] a [5;2,2], stred napr. [0;0,2] — úsečka medzi krajnými bodmi (oba patria do grafu)." },
+          { "level": "bonus", "text": "f: y = (x + 6)/3, x ∈ ⟨−3, ∞)", "answer": "Krajný bod [−3;1] (patrí do grafu), napr. aj [0;2] a [3;3] — polpriamka smerujúca doprava od bodu [−3;1]." },
+          { "level": "bonus", "text": "f: y = 3/5 − x/2, x ∈ (−∞, 10⟩", "answer": "Krajný bod [10;−4,4] (patrí do grafu), napr. aj [0;0,6] a [−2;1,6] — polpriamka smerujúca doľava od bodu [10;−4,4]." }
         ]
+      },
+      {
+        "id": "zhrnutie",
+        "type": "info",
+        "phase": "5 · ZHRNUTIE",
+        "title": "Čo si sa dnes naučil/a",
+        "html": "<ul><li>Lineárna funkcia má predpis f(x)=ax+b a jej grafom je priamka.</li><li>Koeficient b je f(0) — miesto, kde graf pretína os y.</li><li>Bod patrí na graf práve vtedy, keď po dosadení jeho x-ovej súradnice do predpisu vyjde jeho y-ová súradnica.</li></ul>",
+        "continueLabel": "Na záver sa zhodnotím"
       },
       {
         "id": "reflection",
         "type": "reflection",
-        "phase": "SEBAHODNOTENIE",
+        "phase": "5 · SEBAHODNOTENIE",
         "title": "Čo už viem?",
         "prompt": "Pri každej zručnosti označ, ako sa teraz cítiš.",
         "skills": [
