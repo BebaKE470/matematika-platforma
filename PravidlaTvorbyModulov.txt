@@ -132,8 +132,8 @@ Napríklad:
 TOTO SI ZAPÍŠ DO ZOŠITA
 
 Výrok je oznamovacia veta, o ktorej možno jednoznačne rozhodnúť, či je pravdivá alebo nepravdivá.
-P – pravdivý výrok
-N – nepravdivý výrok
+1 – pravdivý výrok
+0 – nepravdivý výrok
 
 Žiak to jednoducho prepíše a klikne „Mám zapísané“.
 
@@ -152,6 +152,20 @@ Teda:
 ZOŠIT = presne vidím, čo mám prepísať.
 
 ÚLOHA DO ZOŠITA = presne vidím, čo mám samostatne vyriešiť.
+
+6a. Zbierkové úlohy podľa úrovne (základ/rozšírenie/bonus)
+
+Keď modul obsahuje úlohy zo zbierky, ktoré chceme rozdeliť podľa náročnosti, patria do jednej aktivity (taskList), nie do troch samostatných.
+
+V rámci tejto jednej aktivity idú za sebou tri skupiny úloh, každá s vlastným nadpisom:
+
+ZÁKLAD
+ROZŠÍRENIE
+BONUS
+
+Dôvod: žiak vidí celú ponuku úloh naraz a prirodzene si vyberá, kam až sa dostane — silnejší žiak pokračuje k bonusu, slabší zostáva pri základe. Nič sa needitovaním neblokuje; tlačidlo „Pokračovať“ nikdy nečaká na to, koľko úloh je odfajknutých.
+
+Pri každej úlohe môže byť aj správne riešenie, ktoré sa ale nezobrazuje automaticky — žiak si ho vyžiada tlačidlom „Zobraz riešenie“. Toto riešenie sa nikde neznámkuje ani nekontroluje automaticky; slúži iba na to, aby si žiak sám overil vlastný postup vyriešený na papieri.
 
 7. selfWrite nie je zápis do zošita
 

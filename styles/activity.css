@@ -112,6 +112,14 @@ select.answer-good, select.answer-bad { opacity: 1; -webkit-text-fill-color: var
 }
 .task-row input[type="checkbox"] { margin-top: 3px; flex: none; }
 .task-count { font-weight: 750; }
+.task-item { display: grid; gap: 6px; }
+.task-level-heading {
+  margin: 22px 0 2px; font-size: 12px; font-weight: 850; letter-spacing: .06em;
+  color: var(--muted); text-transform: uppercase;
+}
+.task-level-heading:first-child { margin-top: 0; }
+.task-reveal { justify-self: start; padding: 6px 14px; font-size: .92em; }
+.task-solution { margin: 0 0 0 34px; padding: 10px 13px; border-left: 3px solid var(--ink); border-radius: 8px; background: var(--soft); }
 
 /* --- coordinatePlot --- */
 

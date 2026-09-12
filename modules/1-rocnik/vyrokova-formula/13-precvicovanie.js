@@ -87,13 +87,13 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "OVER SI",
         "skill": "Spojky",
-        "question": "A=P, B=N. Aká je hodnota ¬A ∨ B?",
+        "question": "A=1, B=0. Aká je hodnota ¬A ∨ B?",
         "options": [
-          "N",
-          "P"
+          "0",
+          "1"
         ],
         "answer": 0,
-        "correct": "¬A je N a B je N, takže N∨N=N.",
+        "correct": "¬A je 0 a B je 0, takže 0∨0=0.",
         "hint": "Najprv neguj A, až potom vyhodnoť disjunkciu."
       },
       {

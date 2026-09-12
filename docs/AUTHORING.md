@@ -37,8 +37,8 @@ names, `prompt`. These fields are **trusted authored HTML** and are never
 escaped — write real markup into them:
 
 `html`, `promptHtml`, `remember`, `correct`, `hint`, `model`, `note`,
-`success`, `reveal`, and a `taskList` item's `html` (its `text` is escaped,
-same as any other item text)
+`success`, `reveal`, and a `taskList` item's `html` or `answer` (its `text` is
+escaped, same as any other item text)
 
 A module can use the shared visual-diagram classes inside those fields:
 `.logic-visual`/`.truth` (an SVG or table dropped straight into `html`, as
@@ -111,7 +111,7 @@ zošita"), `continueLabel` (default "Mám zapísané").
 ### `taskList` — unscored checklist of tasks
 
 For a set of problems the student solves on paper while the app just tracks
-which ones are done — no grading, no answers collected. Required: `title`,
+which ones are done — no grading, no answers auto-checked. Required: `title`,
 `items` (array of `{ text }` or `{ html }` — `html` wins if both are set, so
 a task can carry a fraction, an exponent or a small SVG). Optional: `html`
 (intro text above the list), `note` (shown after the list), `continueLabel`.
@@ -123,6 +123,15 @@ the teacher's live view (see `core/session.js`'s `sendProgress()`, which only
 ever reads `state.answers`/`state.score`, not the checks store). The
 Pokračovať button is never disabled — nothing forces a student to tick
 everything before moving on.
+
+**Levelled zbierka (základ/rozšírenie/bonus) is one `taskList` activity, not
+three.** Give each item an optional `level: 'zaklad' | 'rozsirenie' |
+'bonus'` — the renderer groups items under ZÁKLAD/ROZŠÍRENIE/BONUS headings,
+in that order, inside the single activity (skip `level` entirely for a flat,
+unlevelled list). An item can also carry `answer` (trusted HTML, same rules
+as `html`) — when set, a "Zobraz riešenie" button appears under that item and
+reveals it on click (never auto-checked, purely a self-check the student
+requests; leave `answer` unset on an item that shouldn't be revealable).
 
 **Choosing between `notebook`, `taskList` and `selfWrite`** (rule 6): use
 `notebook` when the student must copy an *exact finished text* you wrote;

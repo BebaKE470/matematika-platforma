@@ -7,19 +7,12 @@ MathPlatform.registerModule({
       "negácia jednoduchého výroku"
     ],
     "planContent": [
-      "Relevantný obsah aktuálneho tematického plánu: Výroky a ich pravdivostná hodnota; jednoduchý výrok a jeho negácia; logické spojky; negácia zložených výrokov a de Morganove zákony; tautológie, kontradikcie a kontingencie; obmena, obrátenie a negácia implikácie; všeobecný a existenčný kvantifikátor; negácia kvantifikovaných výrokov; priamy, nepriamy dôkaz a dôkaz sporom; aplikácie výrokovej logiky; opakovanie a kontrolná písomná práca."
+      "Relevantný obsah aktuálneho tematického plánu: Výroky a ich pravdivostná hodnota; jednoduchý výrok a jeho negácia; logické spojky; negácia zložených výrokov a de Morganove zákony; tautológie, kontradikcie a kontingencie; obmena, obrátenie a negácia implikácie; všeobecný a existenčný kvantifikátor; negácia kvantifikovaných výrokov; priamy, nepriamy dôkaz a dôkaz sporom; aplikácie výrokovej logiky; opakovanie a kontrolná písomná práca.",
+      "Táto hodina rieši negáciu konjunkcie, disjunkcie a implikácie; negácia ekvivalencie sa tu nezavádza, lebo v tematickom pláne nemá samostatné miesto."
     ],
     "planPerformance": [
-      "Určiť, či daná vetná konštrukcia je výrokom (vrátane všeobecného výroku vyjadreného bez použitia všeobecných kvantifikátorov).",
-      "Na konkrétnych príkladoch vysvetliť rozdiel medzi vylučovacím a nevylučovacím chápaním spojky alebo.",
-      "Vysvetliť rozdiel medzi implikáciou a ekvivalenciou.",
       "Vysvetliť de Morganove pravidlá pre negáciu výrokov A ∧ B a A ∨ B.",
-      "Správne vnímať logické spojky v rôznych prostrediach.",
-      "Tvoriť zložené výroky a zistiť štruktúru a pravdivosť výrokov zložených z malého počtu jednoduchých výrokov pomocou logických spojok.",
-      "Utvoriť negáciu výroku pomocou pravidiel pre negáciu základných zložených výrokov a negáciu jednoduchých kvantifikátorov.",
-      "Vysvetliť, kedy na dôkaz nepravdivosti tvrdenia možno použiť protipríklad.",
-      "V jednoduchých prípadoch vysloviť kontrapríklad všeobecných tvrdení.",
-      "Opísať základné druhy dôkazov (priamy, sporom) a dokumentovať ich príkladmi."
+      "Utvoriť negáciu výroku pomocou pravidiel pre negáciu základných zložených výrokov."
     ],
     "goals": [
       "vytvoriť negáciu konjunkcie a disjunkcie",
@@ -38,9 +31,11 @@ MathPlatform.registerModule({
       "Návrh štandardu explicitne uvádza negáciu konjunkcie, disjunkcie (de Morganove pravidlá) a implikácie; obohatenie je najmä v argumentácii, prečo pravidlo funguje."
     ],
     "flow": [
-      "1. hodina: objavenie De Morganových pravidiel cez situácie",
-      "2. hodina: symbolický zápis, tabuľka a negácia implikácie",
-      "ručný zápis a kontrola slovných formulácií"
+      "0–3 min: KDE SME – zo spojok (4.–5. hodina) prechádzame k ich negácii.",
+      "3–10 min: NOVÝ POJEM – De Morganove pravidlá a negácia implikácie, s vizuálom a zdôvodnením.",
+      "10–22 min: OVER SI – objavovanie, kontrola pravidiel, zošit, argumentácia.",
+      "22–34 min: ZBIERKA – negácia zložených výrokov z troch úrovní náročnosti.",
+      "34–38 min: ZHRNUTIE a sebahodnotenie."
     ],
     "diagnostics": [
       "nepoužíva nesprávne ¬(A∧B)=¬A∧¬B",
@@ -48,7 +43,8 @@ MathPlatform.registerModule({
       "dokáže pravidlo overiť tabuľkou"
     ],
     "partialUse": [
-      "Modul je možné použiť celý alebo len vybrané kroky podľa priebehu hodiny.",
+      "Modul je navrhnutý na celú vyučovaciu hodinu; pri potrebe skrátiť možno vynechať jednu úroveň zbierky.",
+      "Zbierkové úlohy sú nebodované, žiak si ich rieši na papieri a v aplikácii iba odfajkne.",
       "Digitálna aktivita nenahrádza ručný zápis, diskusiu pri tabuli ani zdôvodnenie vlastnými slovami."
     ]
   },
@@ -56,12 +52,17 @@ MathPlatform.registerModule({
     "title": "Keď negujeme celú vetu",
     "subtitle": "Téma 06–07 · De Morganove pravidlá a negácia implikácie",
     "intro": "Pri zloženom výroku nestačí pridať slovo „nie“. Negácia mení aj logickú spojku.",
-    "estimatedTime": "15–18 min",
+    "estimatedTime": "35–38 min (celá hodina)",
     "activities": [
+      {
+        "id": "kde-sme", "type": "info", "phase": "0 · KDE SME", "title": "Zo spojok k ich negácii",
+        "html": "<p>Na predošlej hodine sme sa naučili spájať výroky spojkami ∧, ∨, ⇒, ⇔ a vyhodnocovať ich pravdivosť. Dnes zistíme, ako taký zložený výrok <strong>negovať</strong>.</p><p class=\"keyidea\">Negáciu ekvivalencie dnes nepotrebuješ — venujeme sa konjunkcii, disjunkcii a implikácii.</p>",
+        "continueLabel": "Idem na to"
+      },
       {
         "id": "visual",
         "type": "info",
-        "phase": "ZAČÍNAME",
+        "phase": "1 · ZAČÍNAME",
         "title": "Dve základné premeny",
         "html": "<div class=\"logic-visual\"><svg viewBox=\"0 0 760 230\" role=\"img\" aria-label=\"De Morganove pravidlá\"><g font-family=\"system-ui\" text-anchor=\"middle\"><rect x=\"40\" y=\"30\" width=\"300\" height=\"70\" rx=\"16\" fill=\"currentColor\" opacity=\".08\"/><text x=\"190\" y=\"72\" font-size=\"25\" font-weight=\"700\">¬(A ∧ B)</text><text x=\"380\" y=\"74\" font-size=\"25\">⇔</text><rect x=\"420\" y=\"30\" width=\"300\" height=\"70\" rx=\"16\" fill=\"currentColor\" opacity=\".08\"/><text x=\"570\" y=\"72\" font-size=\"25\" font-weight=\"700\">¬A ∨ ¬B</text><rect x=\"40\" y=\"130\" width=\"300\" height=\"70\" rx=\"16\" fill=\"currentColor\" opacity=\".08\"/><text x=\"190\" y=\"172\" font-size=\"25\" font-weight=\"700\">¬(A ∨ B)</text><text x=\"380\" y=\"174\" font-size=\"25\">⇔</text><rect x=\"420\" y=\"130\" width=\"300\" height=\"70\" rx=\"16\" fill=\"currentColor\" opacity=\".08\"/><text x=\"570\" y=\"172\" font-size=\"25\" font-weight=\"700\">¬A ∧ ¬B</text></g></svg></div>",
         "continueLabel": "Pokračovať"
@@ -69,7 +70,7 @@ MathPlatform.registerModule({
       {
         "id": "dm1",
         "type": "choice",
-        "phase": "OBJAVUJ",
+        "phase": "3 · OBJAVUJ",
         "skill": "De Morgan",
         "question": "Neguj vetu: „Adam má pravítko a kružidlo.“",
         "options": [
@@ -84,7 +85,7 @@ MathPlatform.registerModule({
       {
         "id": "dm2",
         "type": "choice",
-        "phase": "OBJAVUJ",
+        "phase": "3 · OBJAVUJ",
         "skill": "De Morgan",
         "question": "Neguj vetu: „x < 0 alebo x > 10“.",
         "options": [
@@ -99,7 +100,7 @@ MathPlatform.registerModule({
       {
         "id": "why",
         "type": "explain",
-        "phase": "POCHOP",
+        "phase": "1 · POCHOP",
         "title": "Prečo sa spojka mení?",
         "html": "<p>De Morganove pravidlá nevznikli ako trik na zapamätanie. Vyjadrujú presne, kedy pôvodné zložené tvrdenie zlyhá.</p><p><strong>¬(A ∧ B)</strong>: nie je pravda, že platia obe → aspoň jedna neplatí.<br><strong>¬(A ∨ B)</strong>: neplatí ani jedna možnosť → neplatí A a zároveň neplatí B.</p>",
         "remember": "Neguj časti a vymeň ∧ ↔ ∨."
@@ -107,7 +108,7 @@ MathPlatform.registerModule({
       {
         "id": "impneg",
         "type": "choice",
-        "phase": "PREMÝŠĽAJ",
+        "phase": "3 · PREMÝŠĽAJ",
         "skill": "Negácia implikácie",
         "question": "Kedy je veta „Ak A, tak B“ nepravdivá?",
         "options": [
@@ -130,7 +131,7 @@ MathPlatform.registerModule({
       {
         "id": "check",
         "type": "sortChoice",
-        "phase": "OVER SI",
+        "phase": "3 · OVER SI",
         "skill": "Negácia zložených výrokov",
         "title": "Sú nasledujúce negácie správne?",
         "items": [
@@ -158,7 +159,7 @@ MathPlatform.registerModule({
       {
         "id": "lang",
         "type": "selfWrite",
-        "phase": "VYJADRI SA",
+        "phase": "3 · VYJADRI SA",
         "skill": "Argumentácia",
         "title": "Vysvetli De Morganovo pravidlo",
         "promptHtml": "<span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vlastnými slovami vysvetli, prečo negácia vety „Mám ceruzku a pravítko“ znie „Nemám ceruzku alebo nemám pravítko“.",
@@ -167,7 +168,7 @@ MathPlatform.registerModule({
       {
         "id": "extra-a",
         "type": "choice",
-        "phase": "OVER SI",
+        "phase": "3 · OVER SI",
         "skill": "Negácia zložených výrokov",
         "question": "Negácia výroku „x > 0 a x < 5“ je:",
         "options": [
@@ -182,16 +183,34 @@ MathPlatform.registerModule({
       {
         "id": "extra-b",
         "type": "selfWrite",
-        "phase": "VYSVETLI",
+        "phase": "3 · VYSVETLI",
         "skill": "Matematická komunikácia",
         "title": "Povedz pravidlo slovami",
         "prompt": "Vysvetli vlastnými slovami, ako sa zmení spojka „a“ pri negácii zloženého výroku.",
         "model": "Negácia výroku „A a B“ má tvar „nie A alebo nie B“. Spojka „a“ sa pri negácii zmení na „alebo“ a negujú sa obe časti."
       },
       {
+        "id": "zbierka", "type": "taskList", "phase": "4 · ZBIERKA", "skill": "Negácia zložených výrokov",
+        "title": "Neguj presne",
+        "html": "<p class=\"muted\">Ku každej vete napíš presnú negáciu podľa De Morganových pravidiel. Odfajkni si úlohu, keď máš hotovo — riešenie si over tlačidlom.</p>",
+        "items": [
+          { "level": "zaklad", "text": "A: Mám peniaze a nemám bicykel.", "answer": "¬A: Nemám peniaze alebo mám bicykel." },
+          { "level": "zaklad", "text": "B: Pôjdem do kina alebo do divadla.", "answer": "¬B: Nepôjdem do kina ani do divadla (nepôjdem do kina a nepôjdem do divadla)." },
+          { "level": "rozsirenie", "text": "x ≥ 5 alebo x ≤ −2", "answer": "Negácia: x &lt; 5 a zároveň x &gt; −2." },
+          { "level": "rozsirenie", "text": "Číslo n je párne a n je väčšie ako 10.", "answer": "Negácia: Číslo n je nepárne alebo n nie je väčšie ako 10 (n ≤ 10)." },
+          { "level": "bonus", "text": "Ak bude pekne, potom pôjdem do kina.", "answer": "Negácia: Bude pekne a ja nepôjdem do kina." },
+          { "level": "bonus", "text": "Ak je číslo deliteľné 10, potom je deliteľné aj 5.", "answer": "Negácia: Číslo je deliteľné 10 a nie je deliteľné 5." }
+        ]
+      },
+      {
+        "id": "zhrnutie", "type": "info", "phase": "5 · ZHRNUTIE", "title": "Čo si sa dnes naučil/a",
+        "html": "<ul><li>¬(A ∧ B) ⇔ ¬A ∨ ¬B a ¬(A ∨ B) ⇔ ¬A ∧ ¬B — spojka sa pri negácii vymení.</li><li>¬(A ⇒ B) ⇔ A ∧ ¬B — implikácia sa negáciou nemení na inú implikáciu.</li><li>Negáciu vždy over dosadením alebo tabuľkou, nie iba „citom“.</li></ul>",
+        "continueLabel": "Na záver sa zhodnotím"
+      },
+      {
         "id": "reflection",
         "type": "reflection",
-        "phase": "ZÁVER",
+        "phase": "5 · ZÁVER",
         "title": "Negácia zložených výrokov",
         "skills": [
           "De Morgan pre konjunkciu",

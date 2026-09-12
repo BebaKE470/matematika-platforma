@@ -9,16 +9,7 @@ MathPlatform.registerModule({
       "Relevantný obsah aktuálneho tematického plánu: Výroky a ich pravdivostná hodnota; jednoduchý výrok a jeho negácia; logické spojky; negácia zložených výrokov a de Morganove zákony; tautológie, kontradikcie a kontingencie; obmena, obrátenie a negácia implikácie; všeobecný a existenčný kvantifikátor; negácia kvantifikovaných výrokov; priamy, nepriamy dôkaz a dôkaz sporom; aplikácie výrokovej logiky; opakovanie a kontrolná písomná práca."
     ],
     "planPerformance": [
-      "Určiť, či daná vetná konštrukcia je výrokom (vrátane všeobecného výroku vyjadreného bez použitia všeobecných kvantifikátorov).",
-      "Na konkrétnych príkladoch vysvetliť rozdiel medzi vylučovacím a nevylučovacím chápaním spojky alebo.",
-      "Vysvetliť rozdiel medzi implikáciou a ekvivalenciou.",
-      "Vysvetliť de Morganove pravidlá pre negáciu výrokov A ∧ B a A ∨ B.",
-      "Správne vnímať logické spojky v rôznych prostrediach.",
-      "Tvoriť zložené výroky a zistiť štruktúru a pravdivosť výrokov zložených z malého počtu jednoduchých výrokov pomocou logických spojok.",
-      "Utvoriť negáciu výroku pomocou pravidiel pre negáciu základných zložených výrokov a negáciu jednoduchých kvantifikátorov.",
-      "Vysvetliť, kedy na dôkaz nepravdivosti tvrdenia možno použiť protipríklad.",
-      "V jednoduchých prípadoch vysloviť kontrapríklad všeobecných tvrdení.",
-      "Opísať základné druhy dôkazov (priamy, sporom) a dokumentovať ich príkladmi."
+      "Určiť, či daná vetná konštrukcia je výrokom (vrátane všeobecného výroku vyjadreného bez použitia všeobecných kvantifikátorov)."
     ],
     "goals": [
       "rozlíšiť význam ∀ a ∃",
@@ -37,10 +28,11 @@ MathPlatform.registerModule({
       "Návrh štandardu explicitne uvádza všeobecný a existenčný kvantifikátor a ich symbolický zápis; modul zdôrazňuje preklad medzi reprezentáciami."
     ],
     "flow": [
-      "5 min: všetci vs. aspoň jeden v bežnej situácii",
-      "15–20 min: digitálny modul",
-      "10 min: symbolický prepis v zošite",
-      "5 min: spoločný záver"
+      "0–3 min: KDE SME – od jednotlivých výrokov k tvrdeniam o množstve prvkov naraz.",
+      "3–8 min: NOVÝ POJEM – značky ∀ a ∃, obor premenných.",
+      "8–24 min: OVER SI – objavovanie, zamlčaný kvantifikátor, preklad, zošit.",
+      "24–34 min: ZBIERKA – preklad a rozpoznanie kvantifikátora v reálnych vetách, tri úrovne náročnosti.",
+      "34–38 min: ZHRNUTIE a sebahodnotenie."
     ],
     "diagnostics": [
       "nepletie „všetky“ a „existuje“",
@@ -48,7 +40,8 @@ MathPlatform.registerModule({
       "dokáže prepísať jednoduchú vetu symbolicky"
     ],
     "partialUse": [
-      "Modul je možné použiť celý alebo len vybrané kroky podľa priebehu hodiny.",
+      "Modul je navrhnutý na celú vyučovaciu hodinu; pri potrebe skrátiť možno vynechať jednu úroveň zbierky.",
+      "Zbierkové úlohy sú nebodované, žiak si ich rieši na papieri a v aplikácii iba odfajkne.",
       "Digitálna aktivita nenahrádza ručný zápis, diskusiu pri tabuli ani zdôvodnenie vlastnými slovami."
     ]
   },
@@ -56,12 +49,17 @@ MathPlatform.registerModule({
     "title": "Všetky alebo aspoň jeden?",
     "subtitle": "Téma 10 · Všeobecný a existenčný kvantifikátor",
     "intro": "Kvantifikátor hovorí, koľkých prvkov sa tvrdenie týka. Táto malá značka zásadne mení význam vety.",
-    "estimatedTime": "15–18 min",
+    "estimatedTime": "35–38 min (celá hodina)",
     "activities": [
+      {
+        "id": "kde-sme", "type": "info", "phase": "0 · KDE SME", "title": "Od jedného výroku k tvrdeniu o mnohých",
+        "html": "<p>Doteraz sme pracovali s jednotlivými výrokmi a ich spájaním. Dnes sa naučíme zapísať tvrdenia typu <strong>„pre každé číslo platí...“</strong> alebo <strong>„existuje číslo, pre ktoré platí...“</strong> pomocou dvoch nových značiek.</p>",
+        "continueLabel": "Idem na to"
+      },
       {
         "id": "visual",
         "type": "info",
-        "phase": "POCHOP",
+        "phase": "1 · POCHOP",
         "title": "Dnes zavádzame dve nové značky: ∀ a ∃",
         "html": "<p><strong>∀</strong> čítame „pre každý“ alebo „pre všetky“. <strong>∃</strong> čítame „existuje aspoň jeden“. Najprv ich budeme zapisovať slovne s uvedením oboru čísel. Množinový zápis príslušnosti zavedie až nasledujúci tematický celok.</p><div class=\"logic-visual\"><svg viewBox=\"0 0 760 260\" role=\"img\" aria-label=\"Všeobecný a existenčný kvantifikátor\"><g font-family=\"system-ui\" text-anchor=\"middle\"><rect x=\"40\" y=\"30\" width=\"310\" height=\"190\" rx=\"20\" fill=\"currentColor\" opacity=\".06\"/><text x=\"195\" y=\"62\" font-size=\"24\" font-weight=\"700\">∀ x</text><text x=\"195\" y=\"88\" font-size=\"15\">pre každý prvok</text><g fill=\"currentColor\"><circle cx=\"120\" cy=\"135\" r=\"13\"/><circle cx=\"170\" cy=\"135\" r=\"13\"/><circle cx=\"220\" cy=\"135\" r=\"13\"/><circle cx=\"270\" cy=\"135\" r=\"13\"/></g><text x=\"195\" y=\"185\" font-size=\"14\">všetky musia spĺňať vlastnosť</text><rect x=\"410\" y=\"30\" width=\"310\" height=\"190\" rx=\"20\" fill=\"currentColor\" opacity=\".06\"/><text x=\"565\" y=\"62\" font-size=\"24\" font-weight=\"700\">∃ x</text><text x=\"565\" y=\"88\" font-size=\"15\">existuje aspoň jeden</text><g fill=\"currentColor\" opacity=\".25\"><circle cx=\"490\" cy=\"135\" r=\"13\"/><circle cx=\"540\" cy=\"135\" r=\"13\"/><circle cx=\"590\" cy=\"135\" r=\"13\"/></g><circle cx=\"640\" cy=\"135\" r=\"17\" fill=\"currentColor\"/><text x=\"565\" y=\"185\" font-size=\"14\">stačí jeden vhodný prvok</text></g></svg></div>",
         "continueLabel": "Pokračovať"
@@ -69,7 +67,7 @@ MathPlatform.registerModule({
       {
         "id": "all",
         "type": "choice",
-        "phase": "OBJAVUJ",
+        "phase": "3 · OBJAVUJ",
         "skill": "Všeobecný kvantifikátor",
         "question": "Ktorý zápis znamená „Pre každé reálne číslo x platí x² ≥ 0“?",
         "options": [
@@ -84,7 +82,7 @@ MathPlatform.registerModule({
       {
         "id": "exists",
         "type": "choice",
-        "phase": "OBJAVUJ",
+        "phase": "3 · OBJAVUJ",
         "skill": "Existenčný kvantifikátor",
         "question": "Ktorý zápis znamená „Existuje celé číslo, ktorého druhá mocnina je 9“?",
         "options": [
@@ -99,7 +97,7 @@ MathPlatform.registerModule({
       {
         "id": "domain",
         "type": "explain",
-        "phase": "POCHOP",
+        "phase": "1 · POCHOP",
         "title": "Kvantifikátor potrebuje obor",
         "html": "<p>Výrok <strong>∃ x: x² = 2</strong> nie je úplný bez toho, aby bolo jasné, medzi akými číslami x hľadáme. V prirodzených číslach riešenie nie je; v reálnych je.</p><p>Preto si vždy všímaj <strong>obor premenných</strong>.</p>",
         "remember": "Význam kvantifikovaného výroku závisí aj od oboru, z ktorého vyberáme x."
@@ -107,7 +105,7 @@ MathPlatform.registerModule({
       {
         "id": "hidden",
         "type": "choice",
-        "phase": "PREMÝŠĽAJ",
+        "phase": "3 · PREMÝŠĽAJ",
         "skill": "Zamlčaný kvantifikátor",
         "question": "Veta „Súčet dvoch párnych celých čísel je párny“ sa v matematike zvyčajne chápe ako:",
         "options": [
@@ -130,7 +128,7 @@ MathPlatform.registerModule({
       {
         "id": "trans",
         "type": "matrix",
-        "phase": "OVER SI",
+        "phase": "3 · OVER SI",
         "skill": "Preklad kvantifikátorov",
         "title": "Priraď význam",
         "labels": [
@@ -159,7 +157,7 @@ MathPlatform.registerModule({
       {
         "id": "extra-a",
         "type": "choice",
-        "phase": "OVER SI",
+        "phase": "3 · OVER SI",
         "skill": "Kvantifikátory",
         "question": "Ktorý zápis čítame „pre každé x“?",
         "options": [
@@ -174,7 +172,7 @@ MathPlatform.registerModule({
       {
         "id": "extra-b",
         "type": "choice",
-        "phase": "OVER SI",
+        "phase": "3 · OVER SI",
         "skill": "Kvantifikátory",
         "question": "Tvrdenie „Existuje prirodzené číslo, ktoré je párne“ potrebuje na potvrdenie:",
         "options": [
@@ -189,16 +187,34 @@ MathPlatform.registerModule({
       {
         "id": "extra-c",
         "type": "selfWrite",
-        "phase": "VYSVETLI",
+        "phase": "3 · VYSVETLI",
         "skill": "Matematická komunikácia",
         "title": "Prelož symbol do vety",
         "prompt": "Vlastnými slovami vysvetli rozdiel medzi „pre každé“ a „existuje aspoň jedno“.",
         "model": "„Pre každé“ tvrdí vlastnosť o všetkých prvkoch uvažovaného oboru. „Existuje“ tvrdí, že stačí aspoň jeden prvok s danou vlastnosťou."
       },
       {
+        "id": "zbierka", "type": "taskList", "phase": "4 · ZBIERKA", "skill": "Preklad kvantifikátorov",
+        "title": "Preber symbolicky",
+        "html": "<p class=\"muted\">Prepíš vetu symbolicky pomocou ∀ alebo ∃ a uveď obor, o ktorom sa hovorí. Odfajkni si úlohu, keď máš hotovo — riešenie si over tlačidlom.</p>",
+        "items": [
+          { "level": "zaklad", "text": "Každé prirodzené číslo je väčšie ako 0.", "answer": "∀ n (n je prirodzené číslo): n &gt; 0. Výrok je pravdivý." },
+          { "level": "zaklad", "text": "Existuje párne prvočíslo.", "answer": "∃ x (x je prvočíslo): x je párne. Výrok je pravdivý — vyhovuje napríklad x = 2." },
+          { "level": "rozsirenie", "text": "Aspoň 4 žiaci z 24 dnes majú výhovorku.", "answer": "Existenčný typ tvrdenia (aspoň n) — hovorí, že existuje najmenej 4-členná skupina žiakov z danej triedy, ktorí majú výhovorku." },
+          { "level": "rozsirenie", "text": "V tejto triede nie je žiak, ktorý má viac ako 23 rokov.", "answer": "Rovnaké ako: Každý žiak v triede má najviac 23 rokov. ∀ x (x je žiak v triede): vek(x) ≤ 23 — všeobecný kvantifikátor." },
+          { "level": "bonus", "text": "Nikto okrem povolených nemá prístup.", "answer": "Skrytý všeobecný kvantifikátor: Každý, kto má prístup, je povolený. ∀ x (x má prístup): x je povolený." },
+          { "level": "bonus", "text": "V prvej dvadsiatke je práve 8 prvočísel.", "answer": "Číselný (počítací) kvantifikátor „práve n“ — nie je to čisté ∀ ani ∃, ale tvrdenie o presnom počte prvkov {1,…,20} s danou vlastnosťou. Výrok je pravdivý (2, 3, 5, 7, 11, 13, 17, 19 — skutočne osem prvočísel)." }
+        ]
+      },
+      {
+        "id": "zhrnutie", "type": "info", "phase": "5 · ZHRNUTIE", "title": "Čo si sa dnes naučil/a",
+        "html": "<ul><li>∀ = pre každý prvok; ∃ = existuje aspoň jeden prvok.</li><li>Kvantifikovaný výrok potrebuje aj obor, z ktorého vyberáme premennú.</li><li>Všeobecný kvantifikátor môže byť v bežnej vete zamlčaný.</li></ul>",
+        "continueLabel": "Na záver sa zhodnotím"
+      },
+      {
         "id": "reflection",
         "type": "reflection",
-        "phase": "ZÁVER",
+        "phase": "5 · ZÁVER",
         "title": "Kvantifikátory",
         "skills": [
           "∀ – pre každý",

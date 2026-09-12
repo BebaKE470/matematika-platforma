@@ -37,48 +37,54 @@ MathPlatform.registerModule({
       "Porovnanie overenia na niekoľkých príkladoch s dôkazom pripravuje pôdu pre neskoršiu prácu s argumentáciou; systematický dôkaz sa na tejto hodine ešte nevyučuje."
     ],
     "flow": [
-      "0–2 min: organizačný úvod; tému zatiaľ neformulovať hotovou definíciou.",
-      "2–7 min: problémový vstup – Číslo 13 je prvočíslo; Koľko je prirodzených čísel?; Cvič!; 7x − 3 = 18. Otázka: pri ktorých vetách sa dá odpovedať PRAVDA alebo NEPRAVDA?",
-      "7–12 min: heuristickým rozhovorom zaviesť pojem výrok a pravdivostná hodnota; zdôrazniť, že aj nepravdivá oznamovacia veta môže byť výrokom; zapísať P/N.",
-      "12–19 min: práca vo dvojiciach – úloha 1.2.1 z priloženého zadania; pri nevýrokoch požadovať dôvod.",
-      "19–24 min: vybrané položky úlohy 1.2.2; vždy postup VETA → JE TO VÝROK? → ak áno P/N.",
-      "24–29 min: spresniť otvorenú vetu, definíciu, tvrdenie, hypotézu a význam axiómy; pri príkladoch 2 + 4 = 6, 4 + 6 = 10, 8 + 12 = 20 formulovať hypotézu a diskutovať, či tri príklady predstavujú dôkaz.",
-      "29–38 min: interaktívna aplikácia – rovnaký rozhodovací postup ako v úlohách 1.2.1 a 1.2.2; samostatne alebo vo dvojici.",
-      "38–42 min: problémové prípady a spoločná argumentácia o jednoznačnosti a kontexte.",
-      "42–45 min: exit ticket podľa priložených úloh, stručné zhrnutie a domáca úloha."
+      "0–3 min: KDE SME – zaradenie hodiny do celku, čo už vieme z 1. hodiny, čo dnes pribudne.",
+      "3–9 min: NOVÝ POJEM – zavedenie pojmu výrok a pravdivostná hodnota priamo v aplikácii, na príkladoch 1/0.",
+      "9–24 min: OVER SI – klasifikácia viet (výrok/nevýrok), dôvody, pravdivostná hodnota vybraných výrokov.",
+      "24–31 min: NOVÝ POJEM 2 – definícia, tvrdenie, hypotéza, axióma; rozlíšenie na príkladoch.",
+      "31–38 min: PRENOS – detektív výrokov, zápis do zošita, exit ticket.",
+      "38–44 min: ZBIERKA – samostatná práca s úlohami zo zbierky, tri úrovne náročnosti.",
+      "44–45 min: ZHRNUTIE a sebahodnotenie."
     ],
     "diagnostics": [
       "či žiak rozlišuje výrok a nevýrok",
-      "či pri výroku správne určuje P/N",
+      "či pri výroku správne určuje pravdivostnú hodnotu 1/0",
       "či rozpozná otázku, príkaz a otvorenú vetu s neurčenou premennou",
       "či vie svoje rozhodnutie aspoň pri jednej položke slovne zdôvodniť",
       "či významovo rozlišuje definíciu, tvrdenie, hypotézu a axiómu"
     ],
     "partialUse": [
-      "Klasifikácia viet + dôvody: približne 4–5 min.",
-      "Pravdivostná hodnota vybraných výrokov: približne 3–4 min.",
-      "Detektív výrokov + slovné zdôvodnenie: približne 2–3 min.",
+      "Modul je navrhnutý na celú vyučovaciu hodinu vrátane zavedenia pojmu; pri potrebe skrátiť možno vynechať niektorú úroveň zbierky (aktivita 4) alebo časť „Detektív výrokov“.",
+      "Zbierkové úlohy (aktivita 4) sú nebodované, žiak si ich rieši na papieri a v aplikácii iba odfajkne — netreba ich kontrolovať naživo pred pokračovaním.",
+      "Klasifikácia viet + dôvody: približne 4–5 min, ak sa použije samostatne.",
       "Exit ticket možno použiť samostatne na záver hodiny."
     ]
   },
   "student": {
     "title": "Je to výrok?",
     "subtitle": "2. hodina · Výrok, axióma, definícia, hypotéza",
-    "intro": "V aplikácii si precvičíš rovnaký postup ako pri práci v učebnici: najprv rozhodni, či je veta výrokom. Až keď je to výrok, urč jeho pravdivostnú hodnotu. Pri vybraných položkách vysvetlíš aj dôvod.",
-    "estimatedTime": "9–12 min",
+    "intro": "Dnes zistíš, čo presne je výrok a ako mu priradiť pravdivostnú hodnotu. Potom sa naučíš rozlišovať definíciu, tvrdenie, hypotézu a axiómu.",
+    "estimatedTime": "40–45 min (celá hodina)",
     "activities": [
       {
-        "id": "recap",
+        "id": "kde-sme",
+        "type": "info",
+        "phase": "0 · KDE SME",
+        "title": "Začíname Výrokovú formulu",
+        "html": "<p>Na 1. hodine sme si zopakovali základné počtové zručnosti zo ZŠ a dohodli si pravidlá práce. Dnes začíname prvú tému tohto tematického celku: <strong>výroková logika</strong>.</p><p>Nepotrebuješ na to nič nové okrem toho, čo už vieš zo ZŠ — rozlíšiť otázku, príkaz a oznamovaciu vetu, a dosadiť číslo za premennú.</p><p class=\"keyidea\">Dnes sa naučíš, čo je výrok, ako mu priradiť pravdivostnú hodnotu, a spoznáš pojmy axióma, definícia, tvrdenie a hypotéza.</p>",
+        "continueLabel": "Idem na to"
+      },
+      {
+        "id": "vyrok-intro",
         "type": "explain",
-        "phase": "PRED ŠTARTOM",
-        "title": "Rozhodovací postup",
-        "html": "<p><strong>1. krok:</strong> Je veta výrokom?</p><p><strong>2. krok:</strong> Ak áno, urč jej pravdivostnú hodnotu: <strong>P</strong> – pravdivý výrok, <strong>N</strong> – nepravdivý výrok.</p><p><strong>Otázka, príkaz ani otvorená veta s neurčenou premennou nie sú výrokom.</strong></p>",
-        "remember": "Najprv VÝROK / NIE JE VÝROK. Až potom pri výroku P / N."
+        "phase": "1 · NOVÝ POJEM",
+        "title": "Čo je výrok?",
+        "html": "<p><strong>Výrok</strong> je oznamovacia veta, o ktorej vieme jednoznačne rozhodnúť, či je pravdivá alebo nepravdivá.</p><p>Výroky označujeme veľkými písmenami A, B, C, … Pravdivostnú hodnotu zapisujeme <strong>1</strong> (pravdivý) alebo <strong>0</strong> (nepravdivý).</p><p>Napríklad: „Číslo 13 je prvočíslo.“ je výrok s hodnotou 1. „Číslo 7 nie je prvočíslo.“ je tiež výrok, ale s hodnotou 0 — aj nepravdivá veta môže byť výrok.</p><p><strong>Otázka, príkaz a otvorená veta s neurčenou premennou nie sú výrok</strong> — pri nich nevieme jednoznačne rozhodnúť pravdivostnú hodnotu, kým premenná nie je určená.</p>",
+        "remember": "Výrok = oznamovacia veta s jednoznačnou pravdivostnou hodnotou 1 alebo 0."
       },
       {
         "id": "classify-all",
         "type": "sortChoice",
-        "phase": "1. KROK",
+        "phase": "2 · UKÁŽKA",
         "skill": "Výrok",
         "title": "Je to výrok?",
         "items": [
@@ -136,7 +142,7 @@ MathPlatform.registerModule({
       {
         "id": "reasons",
         "type": "matrix",
-        "phase": "PREČO?",
+        "phase": "3 · OVER SI",
         "skill": "Zdôvodnenie",
         "title": "Urči dôvod",
         "labels": [
@@ -167,77 +173,77 @@ MathPlatform.registerModule({
       {
         "id": "truth-13",
         "type": "choice",
-        "phase": "2. KROK",
+        "phase": "3 · OVER SI",
         "skill": "Pravdivostná hodnota",
         "question": "Výrok: „Číslo 13 je prvočíslo.“ Akú pravdivostnú hodnotu má tento výrok?",
         "options": [
-          "P – pravdivý",
-          "N – nepravdivý"
+          "0 – nepravdivý",
+          "1 – pravdivý"
         ],
-        "answer": 0,
-        "correct": "P. Číslo 13 je prvočíslo.",
+        "answer": 1,
+        "correct": "1. Číslo 13 je prvočíslo.",
         "hint": "Skontroluj, koľko kladných deliteľov má číslo 13."
       },
       {
         "id": "truth-7",
         "type": "choice",
-        "phase": "2. KROK",
+        "phase": "3 · OVER SI",
         "skill": "Pravdivostná hodnota",
         "question": "Výrok: „Číslo 7 nie je prvočíslo.“ Akú pravdivostnú hodnotu má tento výrok?",
         "options": [
-          "P – pravdivý",
-          "N – nepravdivý"
+          "1 – pravdivý",
+          "0 – nepravdivý"
         ],
         "answer": 1,
-        "correct": "N. Číslo 7 je prvočíslo, preto je uvedený výrok nepravdivý.",
+        "correct": "0. Číslo 7 je prvočíslo, preto je uvedený výrok nepravdivý.",
         "hint": "Výrok môže byť nepravdivý a stále zostáva výrokom."
       },
       {
         "id": "truth-equation",
         "type": "choice",
-        "phase": "2. KROK",
+        "phase": "3 · OVER SI",
         "skill": "Pravdivostná hodnota",
         "question": "Výrok: „Rovnica 3x = 0 má jeden reálny koreň.“ Akú pravdivostnú hodnotu má tento výrok?",
         "options": [
-          "P – pravdivý",
-          "N – nepravdivý"
+          "1 – pravdivý",
+          "0 – nepravdivý"
         ],
         "answer": 0,
-        "correct": "P. Rovnica má práve jedno riešenie x = 0.",
+        "correct": "1. Rovnica má práve jedno riešenie x = 0.",
         "hint": "Vyrieš krátko rovnicu 3x = 0."
       },
       {
         "id": "truth-moon",
         "type": "choice",
-        "phase": "2. KROK",
+        "phase": "3 · OVER SI",
         "skill": "Pravdivostná hodnota",
         "question": "Výrok: „Mesiac je planéta Slnečnej sústavy.“ Akú pravdivostnú hodnotu má tento výrok?",
         "options": [
-          "P – pravdivý",
-          "N – nepravdivý"
+          "0 – nepravdivý",
+          "1 – pravdivý"
         ],
-        "answer": 1,
-        "correct": "N. Mesiac je prirodzená družica Zeme, nie planéta.",
+        "answer": 0,
+        "correct": "0. Mesiac je prirodzená družica Zeme, nie planéta.",
         "hint": "Rozhoduj o pravdivosti tvrdenia, nie o tom, či je veta výrokom."
       },
       {
         "id": "truth-substitution",
         "type": "choice",
-        "phase": "2. KROK",
+        "phase": "3 · OVER SI",
         "skill": "Pravdivostná hodnota",
         "question": "Výrok: „x + 8 = 5, ak x = −3.“ Akú pravdivostnú hodnotu má tento výrok?",
         "options": [
-          "P – pravdivý",
-          "N – nepravdivý"
+          "0 – nepravdivý",
+          "1 – pravdivý"
         ],
-        "answer": 0,
-        "correct": "P. Po dosadení x = −3 dostaneme −3 + 8 = 5.",
+        "answer": 1,
+        "correct": "1. Po dosadení x = −3 dostaneme −3 + 8 = 5.",
         "hint": "Tentoraz je hodnota x určená. Dosaď ju."
       },
       {
         "id": "terms-recap",
         "type": "explain",
-        "phase": "SPRESNI POJMY",
+        "phase": "1 · NOVÝ POJEM 2",
         "title": "Štyri pojmy z dnešnej hodiny",
         "html": "<p><strong>Definícia</strong> zavádza alebo vymedzuje matematický pojem.</p><p><strong>Tvrdenie</strong> je matematická veta, ktorej pravdivosť posudzujeme.</p><p><strong>Hypotéza</strong> je predpokladané tvrdenie, ktorého platnosť skúmame.</p><p><strong>Axióma</strong> je východiskové tvrdenie prijaté v rámci matematickej teórie bez dôkazu.</p>",
         "remember": "Tieto pojmy rozlišuj podľa ich úlohy, nie iba podľa toho, ako veta vyzerá."
@@ -245,7 +251,7 @@ MathPlatform.registerModule({
       {
         "id": "terms-check",
         "type": "matrix",
-        "phase": "OVER SI",
+        "phase": "3 · OVER SI",
         "skill": "Pojmy",
         "title": "Rozlíš pojmy",
         "labels": [
@@ -276,7 +282,7 @@ MathPlatform.registerModule({
       {
         "id": "examples-not-proof",
         "type": "choice",
-        "phase": "PREMÝŠĽAJ",
+        "phase": "3 · OVER SI",
         "skill": "Argumentácia",
         "question": "Overili sme tvrdenie „Súčet dvoch párnych čísel je párny.“ na troch príkladoch: 2 + 4 = 6, 4 + 6 = 10, 8 + 12 = 20. Predstavujú tieto tri príklady už dôkaz všeobecnej platnosti?",
         "options": [
@@ -290,7 +296,7 @@ MathPlatform.registerModule({
       {
         "id": "detective",
         "type": "choice",
-        "phase": "DETEKTÍV VÝROKOV",
+        "phase": "3 · PRENOS",
         "skill": "Výrok",
         "question": "Adam: „Koľko je 6 + 7?“ · Beáta: „Číslo 15 je párne.“ · Cyril: „Vypočítaj 6 + 7!“ Kto z nich vyslovil výrok?",
         "options": [
@@ -299,13 +305,13 @@ MathPlatform.registerModule({
           "Cyril"
         ],
         "answer": 1,
-        "correct": "Beáta. Jej veta je oznamovacie tvrdenie, ktorému možno priradiť pravdivostnú hodnotu N.",
+        "correct": "Beáta. Jej veta je oznamovacie tvrdenie, ktorému možno priradiť pravdivostnú hodnotu 0.",
         "hint": "Otázka ani príkaz nie sú výroky."
       },
       {
         "id": "detective-explain",
         "type": "selfWrite",
-        "phase": "VYJADRI SA",
+        "phase": "3 · VYJADRI SA",
         "skill": "Matematická komunikácia",
         "title": "Vysvetli svoje rozhodnutie",
         "promptHtml": "Do zošita jednou až dvoma vetami vysvetli, prečo Adamova a Cyrilova veta nie sú výroky a prečo Beátina veta výrokom je.",
@@ -316,28 +322,28 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zápis do zošita",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>VÝROKY</strong></p><p>Výrok je oznamovacia veta, o ktorej možno jednoznačne rozhodnúť, či je pravdivá alebo nepravdivá.</p><p>Výroky označujeme veľkými písmenami A, B, C, …</p><p><strong>Pravdivostná hodnota:</strong><br>P – pravdivý výrok<br>N – nepravdivý výrok</p><p><strong>Príklady:</strong><br>A: Číslo 13 je prvočíslo. – P<br>B: Číslo 7 nie je prvočíslo. – N</p><p>Otázka, príkaz ani otvorená veta s neurčenou premennou nie sú výrokom.</p><p><strong>Otvorená veta:</strong> x + 3 = 7 – jej pravdivosť závisí od hodnoty premennej x.</p><p><strong>Definícia</strong> – zavádza alebo vymedzuje matematický pojem.<br><strong>Tvrdenie</strong> – matematická veta, ktorej pravdivosť posudzujeme.<br><strong>Hypotéza</strong> – predpokladané tvrdenie, ktorého platnosť skúmame.<br><strong>Axióma</strong> – východiskové tvrdenie prijaté v matematickej teórii bez dôkazu.</p>",
-        "model": "<strong>VÝROKY</strong><br>Výrok je oznamovacia veta, o ktorej možno jednoznačne rozhodnúť, či je pravdivá alebo nepravdivá.<br>Výroky označujeme veľkými písmenami A, B, C, …<br>Pravdivostná hodnota: P – pravdivý výrok; N – nepravdivý výrok.<br>Príklady: A: Číslo 13 je prvočíslo. – P. B: Číslo 7 nie je prvočíslo. – N.<br>Otázka, príkaz ani otvorená veta s neurčenou premennou nie sú výrokom.<br>Otvorená veta: x + 3 = 7 – jej pravdivosť závisí od hodnoty premennej x.<br>Definícia – zavádza alebo vymedzuje matematický pojem.<br>Tvrdenie – matematická veta, ktorej pravdivosť posudzujeme.<br>Hypotéza – predpokladané tvrdenie, ktorého platnosť skúmame.<br>Axióma – východiskové tvrdenie prijaté v matematickej teórii bez dôkazu."
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>VÝROKY</strong></p><p>Výrok je oznamovacia veta, o ktorej možno jednoznačne rozhodnúť, či je pravdivá alebo nepravdivá.</p><p>Výroky označujeme veľkými písmenami A, B, C, …</p><p><strong>Pravdivostná hodnota:</strong><br>1 – pravdivý výrok<br>0 – nepravdivý výrok</p><p><strong>Príklady:</strong><br>A: Číslo 13 je prvočíslo. – 1<br>B: Číslo 7 nie je prvočíslo. – 0</p><p>Otázka, príkaz ani otvorená veta s neurčenou premennou nie sú výrokom.</p><p><strong>Otvorená veta:</strong> x + 3 = 7 – jej pravdivosť závisí od hodnoty premennej x.</p><p><strong>Definícia</strong> – zavádza alebo vymedzuje matematický pojem.<br><strong>Tvrdenie</strong> – matematická veta, ktorej pravdivosť posudzujeme.<br><strong>Hypotéza</strong> – predpokladané tvrdenie, ktorého platnosť skúmame.<br><strong>Axióma</strong> – východiskové tvrdenie prijaté v matematickej teórii bez dôkazu.</p>",
+        "model": "<strong>VÝROKY</strong><br>Výrok je oznamovacia veta, o ktorej možno jednoznačne rozhodnúť, či je pravdivá alebo nepravdivá.<br>Výroky označujeme veľkými písmenami A, B, C, …<br>Pravdivostná hodnota: 1 – pravdivý výrok; 0 – nepravdivý výrok.<br>Príklady: A: Číslo 13 je prvočíslo. – 1. B: Číslo 7 nie je prvočíslo. – 0.<br>Otázka, príkaz ani otvorená veta s neurčenou premennou nie sú výrokom.<br>Otvorená veta: x + 3 = 7 – jej pravdivosť závisí od hodnoty premennej x.<br>Definícia – zavádza alebo vymedzuje matematický pojem.<br>Tvrdenie – matematická veta, ktorej pravdivosť posudzujeme.<br>Hypotéza – predpokladané tvrdenie, ktorého platnosť skúmame.<br>Axióma – východiskové tvrdenie prijaté v matematickej teórii bez dôkazu."
       },
       {
         "id": "exit-1",
         "type": "choice",
-        "phase": "EXIT TICKET",
-        "skill": "Výrok a P/N",
+        "phase": "3 · EXIT TICKET",
+        "skill": "Výrok a pravdivostná hodnota",
         "question": "Veta „Číslo 7 nie je prvočíslo.“ – ktorá odpoveď je správna?",
         "options": [
+          "Je to nepravdivý výrok – 0.",
           "Nie je to výrok.",
-          "Je to pravdivý výrok – P.",
-          "Je to nepravdivý výrok – N."
+          "Je to pravdivý výrok – 1."
         ],
-        "answer": 2,
-        "correct": "Je to výrok a má pravdivostnú hodnotu N.",
+        "answer": 0,
+        "correct": "Je to výrok a má pravdivostnú hodnotu 0.",
         "hint": "Najprv rozhodni, či veta niečo jednoznačne tvrdí. Potom over pravdivosť."
       },
       {
         "id": "exit-2",
         "type": "choice",
-        "phase": "EXIT TICKET",
+        "phase": "3 · EXIT TICKET",
         "skill": "Otvorená veta",
         "question": "Je veta „7x − 3 = 18.“ bez určenej hodnoty x výrokom?",
         "options": [
@@ -346,31 +352,57 @@ MathPlatform.registerModule({
         ],
         "answer": 0,
         "correct": "Nie. Bez určenej hodnoty x pravdivosť závisí od premennej; ide o otvorenú vetu.",
-        "hint": "Vieš bez hodnoty x priradiť jednej vete práve P alebo N?"
+        "hint": "Vieš bez hodnoty x priradiť jednej vete práve 1 alebo 0?"
       },
       {
         "id": "exit-3",
         "type": "choice",
-        "phase": "EXIT TICKET",
-        "skill": "Výrok a P/N",
+        "phase": "3 · EXIT TICKET",
+        "skill": "Výrok a pravdivostná hodnota",
         "question": "Veta „Rovnica 3x = 0 má jeden reálny koreň.“ – ktorá odpoveď je správna?",
         "options": [
-          "Je to pravdivý výrok – P.",
           "Nie je to výrok.",
-          "Je to nepravdivý výrok – N."
+          "Je to nepravdivý výrok – 0.",
+          "Je to pravdivý výrok – 1."
         ],
-        "answer": 0,
+        "answer": 2,
         "correct": "Je to pravdivý výrok. Rovnica má práve jedno riešenie x = 0.",
         "hint": "Vyrieš rovnicu a potom rozhodni o pravdivosti vety."
       },
       {
+        "id": "zbierka", "type": "taskList", "phase": "4 · ZBIERKA", "skill": "Výrok a pravdivostná hodnota",
+        "title": "Je to výrok?",
+        "html": "<p class=\"muted\">Pri každej vete rozhodni: je to výrok? Ak áno, urč aj pravdivostnú hodnotu 1/0. Odfajkni si úlohu, keď máš rozhodnuté — riešenie si over tlačidlom.</p>",
+        "items": [
+          { "level": "zaklad", "text": "Žilinský kraj.", "answer": "Nie je to výrok — je to iba slovné spojenie (fragment), nie oznamovacia veta." },
+          { "level": "zaklad", "text": "Bratislava je hlavné mesto SR.", "answer": "Je to výrok, hodnota 1 (pravdivý)." },
+          { "level": "zaklad", "text": "Žilina je hlavné mesto Poľska.", "answer": "Je to výrok, hodnota 0 (nepravdivý) — hlavné mesto Poľska je Varšava." },
+          { "level": "zaklad", "text": "Riešte nerovnicu!", "answer": "Nie je to výrok — je to príkaz." },
+          { "level": "rozsirenie", "text": "Obsah kruhu s polomerom r je 2πr.", "answer": "Je to výrok, hodnota 0 (nepravdivý) — obsah kruhu je πr²; 2πr je vzorec pre obvod kružnice." },
+          { "level": "rozsirenie", "text": "2x + 3 < 0", "answer": "Nie je to výrok — je to otvorená veta, x nie je určené." },
+          { "level": "rozsirenie", "text": "Základy matematickej logiky.", "answer": "Nie je to výrok — je to názov/nadpis, nie oznamovacia veta." },
+          { "level": "rozsirenie", "text": "Susedné strany pravouholníka sú zhodné.", "answer": "Je to výrok, hodnota 0 (nepravdivý) — vo všeobecnom pravouholníku (obdĺžniku) susedné strany zhodné nie sú." },
+          { "level": "bonus", "text": "a) Pre každé reálne číslo x platí, že 0 · x = 0.  b) Pre každé reálne číslo x platí, že 0 · x", "answer": "a) Je to výrok, hodnota 1 (pravdivý). b) Nie je to výrok — veta nie je dokončená, chýba jej záver." },
+          { "level": "bonus", "text": "a) Existuje pravouholník, ktorého susedné strany sú zhodné.  b) V každom pravouholníku sú každé dve susedné strany zhodné.", "answer": "a) Je to výrok, hodnota 1 (pravdivý) — napríklad štvorec je pravouholník so zhodnými susednými stranami. b) Je to výrok, hodnota 0 (nepravdivý) — vo všeobecnom pravouholníku to neplatí." },
+          { "level": "bonus", "text": "(x + 1)² = x² + 1", "answer": "Nie je to výrok — je to otvorená veta s neurčenou premennou x (platí iba pre x = 0, pre iné x nie)." }
+        ]
+      },
+      {
+        "id": "zhrnutie",
+        "type": "info",
+        "phase": "5 · ZHRNUTIE",
+        "title": "Čo si sa dnes naučil/a",
+        "html": "<ul><li>Výrok je oznamovacia veta s jednoznačnou pravdivostnou hodnotou 1 alebo 0.</li><li>Otázka, príkaz a otvorená veta s neurčenou premennou výrokom nie sú.</li><li>Definícia, tvrdenie, hypotéza a axióma sú štyri rôzne úlohy matematickej vety.</li><li>Overenie na niekoľkých príkladoch ešte nie je dôkaz.</li></ul>",
+        "continueLabel": "Na záver sa zhodnotím"
+      },
+      {
         "id": "reflection",
         "type": "reflection",
-        "phase": "ZÁVER",
+        "phase": "5 · ZÁVER",
         "title": "Ako tomu rozumieš?",
         "skills": [
           "výrok / nevýrok",
-          "pravdivostná hodnota P/N",
+          "pravdivostná hodnota 1/0",
           "otvorená veta",
           "definícia, tvrdenie, hypotéza, axióma"
         ],

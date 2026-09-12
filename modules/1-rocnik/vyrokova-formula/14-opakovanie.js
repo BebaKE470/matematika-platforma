@@ -87,13 +87,13 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "DIAGNOSTIKA",
         "skill": "Pravdivostná tabuľka",
-        "question": "A=P, B=N. Aká je hodnota A⇒B?",
+        "question": "A=1, B=0. Aká je hodnota A⇒B?",
         "options": [
-          "P",
-          "N"
+          "1",
+          "0"
         ],
         "answer": 1,
-        "correct": "Implikácia je nepravdivá práve v prípade P⇒N.",
+        "correct": "Implikácia je nepravdivá práve v prípade 1⇒0.",
         "hint": "Toto je jediný nepravdivý riadok implikácie."
       },
       {
