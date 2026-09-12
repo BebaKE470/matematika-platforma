@@ -160,6 +160,9 @@ const KNOWN_TYPES = new Set([
 // Keep in sync with the named-validator table in core/renderers.js.
 const KNOWN_NUMBER_VALIDATORS = new Set(['oddComposite', 'exact']);
 
+// Keep in sync with LEVEL_LABELS in core/renderers.js's R.taskList.
+const KNOWN_TASK_LEVELS = new Set(['zaklad', 'rozsirenie', 'bonus']);
+
 const TEACHER_ARRAY_FIELDS = [
   'prerequisites', 'goals', 'planContent', 'planPerformance',
   'competencies', 'enrichment', 'flow', 'diagnostics', 'partialUse',
@@ -246,6 +249,9 @@ for (const [id, mod] of modulesByEntry) {
         if (!Array.isArray(a.items) || !a.items.length) fail('content', `${where}: taskList bez items`);
         else a.items.forEach((it, j) => {
           if (!it || (!it.text && !it.html)) fail('content', `${where}: items[${j}] bez text alebo html`);
+          if (it && it.level && !KNOWN_TASK_LEVELS.has(it.level)) {
+            fail('content', `${where}: items[${j}].level='${it.level}' nie je zaklad/rozsirenie/bonus`);
+          }
         });
         break;
       }

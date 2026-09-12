@@ -86,11 +86,11 @@ MathPlatform.registerModule({
         "skill": "Implikácia",
         "question": "A⇒B je nepravdivá v prípade:",
         "options": [
-          "A=N, B=P",
-          "A=P, B=N",
-          "A=N, B=N"
+          "A=1, B=0",
+          "A=0, B=1",
+          "A=0, B=0"
         ],
-        "answer": 1,
+        "answer": 0,
         "correct": "Správne.",
         "hint": "Jediný nepravdivý riadok implikácie."
       },

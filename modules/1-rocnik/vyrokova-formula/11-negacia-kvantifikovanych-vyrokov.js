@@ -10,16 +10,9 @@ MathPlatform.registerModule({
       "Relevantný obsah aktuálneho tematického plánu: Výroky a ich pravdivostná hodnota; jednoduchý výrok a jeho negácia; logické spojky; negácia zložených výrokov a de Morganove zákony; tautológie, kontradikcie a kontingencie; obmena, obrátenie a negácia implikácie; všeobecný a existenčný kvantifikátor; negácia kvantifikovaných výrokov; priamy, nepriamy dôkaz a dôkaz sporom; aplikácie výrokovej logiky; opakovanie a kontrolná písomná práca."
     ],
     "planPerformance": [
-      "Určiť, či daná vetná konštrukcia je výrokom (vrátane všeobecného výroku vyjadreného bez použitia všeobecných kvantifikátorov).",
-      "Na konkrétnych príkladoch vysvetliť rozdiel medzi vylučovacím a nevylučovacím chápaním spojky alebo.",
-      "Vysvetliť rozdiel medzi implikáciou a ekvivalenciou.",
-      "Vysvetliť de Morganove pravidlá pre negáciu výrokov A ∧ B a A ∨ B.",
-      "Správne vnímať logické spojky v rôznych prostrediach.",
-      "Tvoriť zložené výroky a zistiť štruktúru a pravdivosť výrokov zložených z malého počtu jednoduchých výrokov pomocou logických spojok.",
-      "Utvoriť negáciu výroku pomocou pravidiel pre negáciu základných zložených výrokov a negáciu jednoduchých kvantifikátorov.",
+      "Utvoriť negáciu výroku pomocou pravidiel pre negáciu jednoduchých kvantifikátorov.",
       "Vysvetliť, kedy na dôkaz nepravdivosti tvrdenia možno použiť protipríklad.",
-      "V jednoduchých prípadoch vysloviť kontrapríklad všeobecných tvrdení.",
-      "Opísať základné druhy dôkazov (priamy, sporom) a dokumentovať ich príkladmi."
+      "V jednoduchých prípadoch vysloviť kontrapríklad všeobecných tvrdení."
     ],
     "goals": [
       "negovať jednoduchý všeobecný výrok",
@@ -38,18 +31,21 @@ MathPlatform.registerModule({
       "Návrh štandardu explicitne uvádza negáciu všeobecného a existenčného výroku a protipríklad; modul to využíva priamo v rámci aktuálneho plánu."
     ],
     "flow": [
-      "5 min: jazykový konflikt „nie všetci“ vs. „nikto“",
-      "15–20 min: digitálna práca",
-      "10 min: ručné negácie v zošite",
-      "5 min: protipríklad pri tabuli"
+      "0–3 min: KDE SME – od kvantifikátorov k ich negácii.",
+      "3–12 min: NOVÝ POJEM – dve pravidlá negácie (¬∀→∃¬, ¬∃→∀¬) a tabuľka slovných vzorov na prepis do zošita.",
+      "12–28 min: OVER SI – objavovanie, protipríklad, jazyk negácie, zošit.",
+      "28–40 min: ZBIERKA – negácia kvantifikovaných výrokov, tri úrovne náročnosti.",
+      "40–45 min: ZHRNUTIE a sebahodnotenie."
     ],
     "diagnostics": [
       "správne mení ∀ ↔ ∃ pri negácii",
       "nepreháňa negáciu všeobecného tvrdenia na „žiadny“",
-      "vie uviesť protipríklad"
+      "vie uviesť protipríklad",
+      "správne neguje číselné kvantifikátory aspoň n / najviac n / práve n"
     ],
     "partialUse": [
-      "Modul je možné použiť celý alebo len vybrané kroky podľa priebehu hodiny.",
+      "Modul je navrhnutý na celú vyučovaciu hodinu; pri potrebe skrátiť možno vynechať jednu úroveň zbierky.",
+      "Zbierkové úlohy sú nebodované, žiak si ich rieši na papieri a v aplikácii iba odfajkne.",
       "Digitálna aktivita nenahrádza ručný zápis, diskusiu pri tabuli ani zdôvodnenie vlastnými slovami."
     ]
   },
@@ -57,20 +53,33 @@ MathPlatform.registerModule({
     "title": "Nie všetky neznamená žiadne",
     "subtitle": "Téma 11 · Negácia kvantifikovaných výrokov",
     "intro": "Pri kvantifikátoroch sa negácia mení nielen vo vnútri tvrdenia. Mení aj „všetky“ na „existuje aspoň jeden“ a naopak.",
-    "estimatedTime": "15–18 min",
+    "estimatedTime": "40–45 min (celá hodina)",
     "activities": [
+      {
+        "id": "kde-sme", "type": "info", "phase": "0 · KDE SME", "title": "Od kvantifikátorov k ich negácii",
+        "html": "<p>Na predošlej hodine sme zaviedli ∀ a ∃. Dnes zistíme, čo sa stane s kvantifikátorom, keď kvantifikovaný výrok negujeme.</p>",
+        "continueLabel": "Idem na to"
+      },
       {
         "id": "visual",
         "type": "info",
-        "phase": "ZAČÍNAME",
+        "phase": "1 · ZAČÍNAME",
         "title": "Dve pravidlá, ktoré treba chápať",
         "html": "<div class=\"logic-visual\"><svg viewBox=\"0 0 760 230\" role=\"img\" aria-label=\"Negácia kvantifikovaných výrokov\"><g font-family=\"system-ui\" text-anchor=\"middle\"><rect x=\"35\" y=\"30\" width=\"310\" height=\"72\" rx=\"16\" fill=\"currentColor\" opacity=\".07\"/><text x=\"190\" y=\"61\" font-size=\"21\" font-weight=\"700\">¬(∀x P(x))</text><text x=\"190\" y=\"86\" font-size=\"17\">⇔ ∃x ¬P(x)</text><rect x=\"415\" y=\"30\" width=\"310\" height=\"72\" rx=\"16\" fill=\"currentColor\" opacity=\".07\"/><text x=\"570\" y=\"61\" font-size=\"21\" font-weight=\"700\">¬(∃x P(x))</text><text x=\"570\" y=\"86\" font-size=\"17\">⇔ ∀x ¬P(x)</text><text x=\"380\" y=\"145\" font-size=\"16\" font-weight=\"700\">„Nie všetky“ ≠ „žiadne“</text><text x=\"380\" y=\"176\" font-size=\"15\">Na vyvrátenie „všetky“ stačí jeden protipríklad.</text></g></svg></div>",
         "continueLabel": "Pokračovať"
       },
       {
+        "id": "vzory",
+        "type": "notebook",
+        "phase": "1 · ZOŠIT",
+        "title": "Slovné vzory negácie",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><div class=\"table-wrap\"><table class=\"truth\"><tr><th>Výrok</th><th>Negácia výroku</th></tr><tr><td>každý ... je ...</td><td>aspoň jeden ... nie je ...</td></tr><tr><td>aspoň jeden je ...</td><td>ani jeden ... nie je ...</td></tr><tr><td>aspoň n ... je ... (n&gt;1)</td><td>najviac (n−1) ... je ...</td></tr><tr><td>najviac n ... je ...</td><td>aspoň (n+1) ... je ...</td></tr><tr><td>najmenej n ... je ...</td><td>najviac (n−1) ... je ...</td></tr><tr><td>žiadny ... je ...</td><td>aspoň jeden ... nie je ...</td></tr><tr><td>práve jeden ... je ...</td><td>nikto alebo aspoň dvaja ... sú ...</td></tr><tr><td>práve dvaja ... sú ...</td><td>najviac jeden alebo aspoň traja ... sú ...</td></tr><tr><td>ani jeden ... nie je ...</td><td>aspoň jeden ... je ...</td></tr></table></div>",
+        "model": "<strong>VZORY NEGÁCIE (skrátene):</strong><br>každý → aspoň jeden nie je · aspoň jeden → ani jeden nie je · aspoň n (n&gt;1) → najviac n−1 · najviac n → aspoň n+1 · najmenej n → najviac n−1 · žiadny → aspoň jeden · práve jeden → nikto alebo aspoň dvaja · práve dvaja → najviac jeden alebo aspoň traja · ani jeden nie je → aspoň jeden je."
+      },
+      {
         "id": "na",
         "type": "choice",
-        "phase": "OBJAVUJ",
+        "phase": "3 · OBJAVUJ",
         "skill": "Negácia ∀",
         "question": "Neguj vetu „Každé prirodzené číslo je párne.“",
         "options": [
@@ -85,7 +94,7 @@ MathPlatform.registerModule({
       {
         "id": "ne",
         "type": "choice",
-        "phase": "OBJAVUJ",
+        "phase": "3 · OBJAVUJ",
         "skill": "Negácia ∃",
         "question": "Neguj vetu „Existuje prirodzené číslo menšie ako 0.“",
         "options": [
@@ -100,7 +109,7 @@ MathPlatform.registerModule({
       {
         "id": "counter",
         "type": "explain",
-        "phase": "POCHOP",
+        "phase": "3 · POCHOP",
         "title": "Protipríklad je presný nástroj",
         "html": "<p>Všeobecné tvrdenie <strong>∀x P(x)</strong> vyvrátime tým, že nájdeme konkrétne x, pre ktoré P(x) neplatí.</p><p>Také x sa nazýva <strong>protipríklad</strong>. Jeden správny protipríklad stačí na vyvrátenie všeobecného tvrdenia.</p>",
         "remember": "Na vyvrátenie „pre všetky“ stačí „existuje aspoň jeden, pre ktorý nie“."
@@ -108,7 +117,7 @@ MathPlatform.registerModule({
       {
         "id": "counter2",
         "type": "choice",
-        "phase": "PREMÝŠĽAJ",
+        "phase": "3 · PREMÝŠĽAJ",
         "skill": "Protipríklad",
         "question": "Ktoré číslo je protipríkladom tvrdenia „Každé prvočíslo je nepárne“?",
         "options": [
@@ -132,7 +141,7 @@ MathPlatform.registerModule({
       {
         "id": "lang",
         "type": "sortChoice",
-        "phase": "OVER SI",
+        "phase": "3 · OVER SI",
         "skill": "Jazyk negácie",
         "title": "Je uvedená negácia správna?",
         "items": [
@@ -160,7 +169,7 @@ MathPlatform.registerModule({
       {
         "id": "extra-a",
         "type": "choice",
-        "phase": "OVER SI",
+        "phase": "3 · OVER SI",
         "skill": "Negácia kvantifikátorov",
         "question": "Negácia tvrdenia „Každý žiak vyriešil úlohu“ je:",
         "options": [
@@ -175,7 +184,7 @@ MathPlatform.registerModule({
       {
         "id": "extra-b",
         "type": "choice",
-        "phase": "OVER SI",
+        "phase": "3 · OVER SI",
         "skill": "Negácia kvantifikátorov",
         "question": "Negácia tvrdenia „Existuje číslo s vlastnosťou V“ je:",
         "options": [
@@ -190,16 +199,37 @@ MathPlatform.registerModule({
       {
         "id": "extra-c",
         "type": "selfWrite",
-        "phase": "VYSVETLI",
+        "phase": "3 · VYSVETLI",
         "skill": "Matematická komunikácia",
         "title": "Dve zmeny naraz",
         "prompt": "Opíš, čo sa pri negácii stane s kvantifikátorom a s vlastnosťou.",
         "model": "Všeobecný kvantifikátor sa zmení na existenčný a vlastnosť sa neguje; existenčný sa zmení na všeobecný a vlastnosť sa neguje."
       },
       {
+        "id": "zbierka", "type": "taskList", "phase": "4 · ZBIERKA", "skill": "Negácia kvantifikátorov",
+        "title": "Neguj kvantifikovaný výrok",
+        "html": "<p class=\"muted\">Použi tabuľku vzorov zo zošita. Odfajkni si úlohu, keď máš negáciu hotovú — riešenie si over tlačidlom.</p>",
+        "items": [
+          { "level": "zaklad", "text": "Všetci žiaci mali pravdu.", "answer": "Aspoň jeden žiak nemal pravdu." },
+          { "level": "zaklad", "text": "Nikto neodišiel.", "answer": "Aspoň jeden odišiel." },
+          { "level": "zaklad", "text": "Každý mlčal.", "answer": "Aspoň jeden hovoril." },
+          { "level": "rozsirenie", "text": "Rovnica má práve jeden koreň.", "answer": "Rovnica nemá žiadny koreň alebo má aspoň dva korene." },
+          { "level": "rozsirenie", "text": "Najviac traja chýbajú.", "answer": "Aspoň štyria chýbajú." },
+          { "level": "rozsirenie", "text": "Meškal si aspoň 10 minút.", "answer": "Meškal si najviac 9 minút." },
+          { "level": "bonus", "text": "Priamky majú spoločný najviac jeden bod.", "answer": "Priamky majú spoločné aspoň dva body." },
+          { "level": "bonus", "text": "Paraboly majú spoločné práve tri body.", "answer": "Paraboly majú spoločné najviac dva body alebo aspoň štyri body." },
+          { "level": "bonus", "text": "Aspoň jeden koreň rovnice nie je záporný.", "answer": "Každý koreň rovnice je záporný." }
+        ]
+      },
+      {
+        "id": "zhrnutie", "type": "info", "phase": "5 · ZHRNUTIE", "title": "Čo si sa dnes naučil/a",
+        "html": "<ul><li>¬(∀x P(x)) ⇔ ∃x ¬P(x) a ¬(∃x P(x)) ⇔ ∀x ¬P(x).</li><li>Číselné kvantifikátory sa negujú podľa vzoru: aspoň n → najviac n−1, najviac n → aspoň n+1, práve n → menej alebo viac.</li><li>Na vyvrátenie všeobecného tvrdenia stačí jeden protipríklad.</li></ul>",
+        "continueLabel": "Na záver sa zhodnotím"
+      },
+      {
         "id": "reflection",
         "type": "reflection",
-        "phase": "ZÁVER",
+        "phase": "5 · ZÁVER",
         "title": "Negácia kvantifikátorov",
         "skills": [
           "negácia ∀",

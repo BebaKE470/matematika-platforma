@@ -134,15 +134,35 @@
   R.taskList = (a, ctx) => {
     const checked = new Set(ctx.getChecks(a.id));
     const total = a.items.length;
-    const rowHtml = (it, i) => `
-      <label class="task-row">
-        <input type="checkbox" data-i="${i}"${checked.has(i) ? ' checked' : ''}>
-        <span>${it.html || esc(it.text)}</span>
-      </label>`;
+    const LEVEL_LABELS = { zaklad: 'ZÁKLAD', rozsirenie: 'ROZŠÍRENIE', bonus: 'BONUS' };
+    const LEVEL_ORDER = ['zaklad', 'rozsirenie', 'bonus'];
+    const itemHtml = (it, i) => `
+      <div class="task-item">
+        <label class="task-row">
+          <input type="checkbox" data-i="${i}"${checked.has(i) ? ' checked' : ''}>
+          <span>${it.html || esc(it.text)}</span>
+        </label>
+        ${it.answer ? `
+          <button class="ghost task-reveal" type="button" data-i="${i}">Zobraz riešenie</button>
+          <div class="task-solution" id="taskSolution${i}" hidden>${it.answer}</div>
+        ` : ''}
+      </div>`;
+    const usesLevels = a.items.some(it => LEVEL_LABELS[it.level]);
+    const indexed = a.items.map((it, i) => ({ it, i }));
+    // Items with no (or an unrecognised) level still render, ungrouped, above the
+    // labelled groups — never silently dropped just because `level` was left off.
+    const unleveled = indexed.filter(x => !LEVEL_LABELS[x.it.level]);
+    const itemsHtml = usesLevels
+      ? (unleveled.length ? `<div class="task-list">${unleveled.map(x => itemHtml(x.it, x.i)).join('')}</div>` : '')
+        + LEVEL_ORDER.filter(lvl => indexed.some(x => x.it.level === lvl)).map(lvl => `
+          <h3 class="task-level-heading">${LEVEL_LABELS[lvl]}</h3>
+          <div class="task-list">${indexed.filter(x => x.it.level === lvl).map(x => itemHtml(x.it, x.i)).join('')}</div>
+        `).join('')
+      : `<div class="task-list">${a.items.map(itemHtml).join('')}</div>`;
     shell(ctx, a, `
       <h1>${esc(a.title)}</h1>
       ${a.html || ''}
-      <div class="task-list">${a.items.map(rowHtml).join('')}</div>
+      ${itemsHtml}
       <p class="muted task-count" id="taskCount"></p>
       ${a.note ? `<div class="notice">${a.note}</div>` : ''}
       ${continueButtonHtml(a.continueLabel)}
@@ -150,12 +170,20 @@
     const updateCount = () => {
       $('#taskCount').textContent = `Hotové: ${checked.size} / ${total}`;
     };
-    $$('.task-list input[type="checkbox"]').forEach(box => {
+    $$('.task-item input[type="checkbox"]').forEach(box => {
       box.onchange = () => {
         const i = Number(box.dataset.i);
         if (box.checked) checked.add(i); else checked.delete(i);
         ctx.setChecks(a.id, [...checked]);
         updateCount();
+      };
+    });
+    $$('.task-reveal').forEach(btn => {
+      btn.onclick = () => {
+        const box = $('#taskSolution' + btn.dataset.i);
+        if (!box) return;
+        box.hidden = !box.hidden;
+        btn.textContent = box.hidden ? 'Zobraz riešenie' : 'Skryť riešenie';
       };
     });
     updateCount();
