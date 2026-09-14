@@ -126,14 +126,24 @@
     wireContinue(ctx, () => { ctx.record(a, { correct: true, attempts: 1 }); ctx.next(); });
   };
 
-  // Unscored checklist of tasks the student ticks off as they work through
-  // them on paper — the app never grades this, it just remembers which boxes
-  // are checked (ctx.getChecks/setChecks, backed by localStorage in
-  // core/session.js) so it survives a refresh or stepping back/forward, and
-  // is never sent to the teacher (see core/session.js's sendProgress()).
+  // Checklist of tasks the student ticks off as they work through them on
+  // paper. Nothing here is auto-checked — a ticked box is an honour-system
+  // "I did this", never validated — but it does count towards XP, partial-
+  // credit like sortChoice/matrix: points scale with how many boxes are
+  // ticked when the student continues. The ticked-box indices themselves
+  // stay purely local (ctx.getChecks/setChecks, backed by localStorage in
+  // core/session.js) so they survive a refresh or stepping back/forward and
+  // are never sent to the teacher — only the resulting XP is (same as any
+  // other activity's score).
+  //
+  // In a live lesson (ctx.mode === 'live') the per-item "Zobraz riešenie"
+  // reveal is hidden — the teacher is watching in real time and a student
+  // shouldn't be able to just peek at the answer instead of doing the task.
+  // Solo play still shows it.
   R.taskList = (a, ctx) => {
     const checked = new Set(ctx.getChecks(a.id));
     const total = a.items.length;
+    const hideAnswers = ctx.mode === 'live';
     const LEVEL_LABELS = { zaklad: 'ZÁKLAD', rozsirenie: 'ROZŠÍRENIE', bonus: 'BONUS' };
     const LEVEL_ORDER = ['zaklad', 'rozsirenie', 'bonus'];
     const itemHtml = (it, i) => `
@@ -142,7 +152,7 @@
           <input type="checkbox" data-i="${i}"${checked.has(i) ? ' checked' : ''}>
           <span>${it.html || esc(it.text)}</span>
         </label>
-        ${it.answer ? `
+        ${it.answer && !hideAnswers ? `
           <button class="ghost task-reveal" type="button" data-i="${i}">Zobraz riešenie</button>
           <div class="task-solution" id="taskSolution${i}" hidden>${it.answer}</div>
         ` : ''}
@@ -187,7 +197,10 @@
       };
     });
     updateCount();
-    wireContinue(ctx, () => { ctx.record(a, { correct: true, attempts: 1 }); ctx.next(); });
+    // "correct" here means "ticked everything" (mirrors sortChoice/matrix's
+    // all-items-right flag) — it only drives the skill-map ok/n count, the
+    // XP itself comes from correctCount/itemCount below.
+    wireContinue(ctx, () => { ctx.record(a, { correct: checked.size === total, correctCount: checked.size, itemCount: total }); ctx.next(); });
   };
 
   R.selfWrite = (a, ctx) => {

@@ -19,11 +19,11 @@
     matrix:         { max: 120, partial: true },
     notebook:       { max: 20 },
     selfWrite:      { max: 30 },
+    taskList:       { max: 100, partial: true },
     info:           { max: 0 },
     explain:        { max: 0 },
     coordinatePlot: { max: 0 },
     reflection:     { max: 0 },
-    taskList:       { max: 0 },
   };
 
   function rule(activity) {
@@ -46,7 +46,7 @@
 
   // outcome: { correct, attempts, correctCount, itemCount }
   //   - plain right/wrong activities (choice, numberInput) pass {correct, attempts}
-  //   - partial-credit activities (sortChoice, matrix) pass {correctCount, itemCount}
+  //   - partial-credit activities (sortChoice, matrix, taskList) pass {correctCount, itemCount}
   //   - participation activities (notebook, selfWrite) pass {correct: true, attempts: 1}
   function award(activity, outcome) {
     const max = maxPoints(activity);

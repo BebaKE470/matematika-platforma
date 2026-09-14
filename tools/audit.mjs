@@ -277,8 +277,8 @@ for (const [id, mod] of modulesByEntry) {
 
 const POINTS = {
   choice: 100, numberInput: 100, sortChoice: 100, matrix: 120,
-  notebook: 20, selfWrite: 30,
-  info: 0, explain: 0, coordinatePlot: 0, reflection: 0, taskList: 0,
+  notebook: 20, selfWrite: 30, taskList: 100,
+  info: 0, explain: 0, coordinatePlot: 0, reflection: 0,
 };
 
 const scoringPath = path.join(ROOT, 'core/scoring.js');

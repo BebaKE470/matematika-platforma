@@ -63,7 +63,8 @@ mechanism. The max per type (honoured unless the activity sets its own
 | `matrix` | 120 | `120 × correctItems / totalItems`, rounded |
 | `notebook` | 20 | flat, on acknowledging the note |
 | `selfWrite` | 30 | flat, on revealing the model sentence |
-| `info`, `explain`, `coordinatePlot`, `reflection`, `taskList` | 0 | — |
+| `taskList` | 100 | `100 × checkedItems / totalItems`, rounded (honour system — nothing is validated) |
+| `info`, `explain`, `coordinatePlot`, `reflection` | 0 | — |
 
 ## Activity types
 
@@ -108,21 +109,30 @@ just an instruction to write the definition themselves, per
 `PravidlaTvorbyModulov.txt`). Optional: `title` (default "Zapíš si do
 zošita"), `continueLabel` (default "Mám zapísané").
 
-### `taskList` — unscored checklist of tasks
+### `taskList` — checklist of tasks, honour-system XP
 
 For a set of problems the student solves on paper while the app just tracks
-which ones are done — no grading, no answers auto-checked. Required: `title`,
+which ones are done — no answer is ever auto-checked. Required: `title`,
 `items` (array of `{ text }` or `{ html }` — `html` wins if both are set, so
 a task can carry a fraction, an exponent or a small SVG). Optional: `html`
 (intro text above the list), `note` (shown after the list), `continueLabel`.
 
 Ticked boxes are per-student, stored in the browser (`localStorage`, keyed by
 module + activity) via `ctx.getChecks`/`ctx.setChecks` — they survive a
-refresh or stepping back/forward, are worth 0 points, and are never sent to
-the teacher's live view (see `core/session.js`'s `sendProgress()`, which only
-ever reads `state.answers`/`state.score`, not the checks store). The
+refresh or stepping back/forward. The indices themselves are never sent to
+the teacher (see `core/session.js`'s `sendProgress()`, which only ever reads
+`state.answers`/`state.score`, not the checks store) — but on "Pokračovať",
+the *count* of ticked boxes is recorded as partial-credit XP (`100 ×
+checked/total`, see the scoring table above), same as any other activity's
+score. Nothing validates that a ticked box means the task was actually done
+right — this is an honour-system participation score, not a graded one. The
 Pokračovať button is never disabled — nothing forces a student to tick
 everything before moving on.
+
+In a live lesson, an item's "Zobraz riešenie" reveal (below) is hidden —
+`ctx.mode === 'live'` — so a student can't just peek at the answer instead of
+doing the task while the teacher is watching in real time; solo play still
+shows it.
 
 **Levelled zbierka (základ/rozšírenie/bonus) is one `taskList` activity, not
 three.** Give each item an optional `level: 'zaklad' | 'rozsirenie' |
