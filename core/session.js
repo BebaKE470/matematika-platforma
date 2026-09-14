@@ -23,11 +23,16 @@
   // --- taskList checkbox state -------------------------------------------
   //
   // Unlike the rest of session state, a taskList's ticked boxes are meant to
-  // survive a page refresh and are purely for the student — never scored,
-  // never sent to the teacher (see sendProgress() below, which only ever
-  // reads state.answers/state.score). So they live in localStorage, keyed by
-  // module + activity, rather than in the in-memory `state` that leave()
-  // wipes on every navigation away from the module/play/join cluster.
+  // survive a page refresh and are purely for the student — the indices
+  // themselves are never sent to the teacher (see sendProgress() below,
+  // which only ever reads state.answers/state.score, not this store). So
+  // they live in localStorage, keyed by module + activity, rather than in
+  // the in-memory `state` that leave() wipes on every navigation away from
+  // the module/play/join cluster. The *count* of ticked boxes does feed XP
+  // (core/renderers.js's R.taskList reads it via getChecks() and passes
+  // {correctCount, itemCount} to record() on "Pokračovať"), so the resulting
+  // score/percent is sent like any other activity's — only the raw per-item
+  // indices stay local.
   const CHECKS_KEY = 'mathStudentChecksV1';
 
   function checksStoreKey(activityId) { return `${state.moduleId}::${activityId}`; }
