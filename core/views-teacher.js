@@ -149,37 +149,62 @@
     new QR(el, { text: url, width: 220, height: 220, correctLevel: QR.CorrectLevel.M });
   }
 
+  // Whether to hide points/percent/grade in the teacher's own live view
+  // (drawStudents below) and show only each student's progress through the
+  // activities. Purely a display filter on this screen — it is never
+  // broadcast to students (contrast with `grading`, which is), so a teacher
+  // can watch for someone stuck without seeing outcomes. Per-browser,
+  // remembered across lessons like the grading settings above.
+  const HIDE_SCORES_KEY = 'mathTeacherHideScoresV1';
+  function loadHideScores() {
+    try { return localStorage.getItem(HIDE_SCORES_KEY) === '1'; } catch (_) { return false; }
+  }
+  function saveHideScores(v) {
+    try { localStorage.setItem(HIDE_SCORES_KEY, v ? '1' : '0'); } catch (_) { /* localStorage unavailable */ }
+  }
+
   // Renders the pupil list + summary. `students` keys are nicks — arbitrary
   // text a participant typed on the join screen, so esc() here is not
   // optional: anyone with the projected join code can pick a nick containing
   // markup, and this screen (and the CSV export) is the only place it's ever
   // displayed.
-  function drawStudents(students, grading) {
+  function drawStudents(students, grading, hideScores) {
     grading = grading || MathScore.loadGrading();
     const arr = Object.values(students);
     const done = arr.filter(x => x.stage === 'done');
-    const percents = done.map(x => Number(x.percent)).filter(Number.isFinite);
-    const avg = percents.length ? Math.round(percents.reduce((sum, p) => sum + p, 0) / percents.length) : null;
 
-    let gradeSummary = '';
-    if (grading.enabled && done.length) {
-      const counts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
-      done.forEach(x => { const g = MathScore.gradeForPercent(Number(x.percent), grading); if (g) counts[g]++; });
-      gradeSummary = ` · známky: <strong>1:${counts[1]} · 2:${counts[2]} · 3:${counts[3]} · 4:${counts[4]} · 5:${counts[5]}</strong>`;
+    if (hideScores) {
+      $('#summary').innerHTML = arr.length
+        ? `Pripojení: <strong>${arr.length}</strong> · dokončili: <strong>${done.length}</strong>`
+        : 'Zatiaľ bez výsledkov.';
+    } else {
+      const percents = done.map(x => Number(x.percent)).filter(Number.isFinite);
+      const avg = percents.length ? Math.round(percents.reduce((sum, p) => sum + p, 0) / percents.length) : null;
+
+      let gradeSummary = '';
+      if (grading.enabled && done.length) {
+        const counts = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+        done.forEach(x => { const g = MathScore.gradeForPercent(Number(x.percent), grading); if (g) counts[g]++; });
+        gradeSummary = ` · známky: <strong>1:${counts[1]} · 2:${counts[2]} · 3:${counts[3]} · 4:${counts[4]} · 5:${counts[5]}</strong>`;
+      }
+      $('#summary').innerHTML = arr.length
+        ? `Pripojení: <strong>${arr.length}</strong> · dokončili: <strong>${done.length}</strong>${avg !== null ? ` · priemer dokončených: <strong>${avg} %</strong>` : ''}${gradeSummary}`
+        : 'Zatiaľ bez výsledkov.';
     }
-    $('#summary').innerHTML = arr.length
-      ? `Pripojení: <strong>${arr.length}</strong> · dokončili: <strong>${done.length}</strong>${avg !== null ? ` · priemer dokončených: <strong>${avg} %</strong>` : ''}${gradeSummary}`
-      : 'Zatiaľ bez výsledkov.';
 
     $('#students').innerHTML = arr
       .slice()
       .sort((x, y) => String(x.nick || '').localeCompare(String(y.nick || ''), 'sk'))
       .map(x => {
+        const progress = `<span>${x.stage === 'done' ? 'Hotovo' : x.stage === 'joined' ? 'Pripojený' : `${x.question || 0}/${x.total || 0}`}</span>`;
+        if (hideScores) {
+          return `<div class="student progress-only"><strong>${esc(x.nick)}</strong>${progress}</div>`;
+        }
         const pct = Number.isFinite(Number(x.percent)) ? Number(x.percent) : null;
         const grade = grading.enabled && pct !== null ? MathScore.gradeForPercent(pct, grading) : '';
         return `<div class="student">
           <strong>${esc(x.nick)}</strong>
-          <span>${x.stage === 'done' ? 'Hotovo' : x.stage === 'joined' ? 'Pripojený' : `${x.question || 0}/${x.total || 0}`}</span>
+          ${progress}
           <span>${x.score || 0}${x.maxScore ? ` / ${x.maxScore}` : ''} XP${pct !== null ? ` · ${pct}%` : ''}${grade ? ` · známka <strong>${grade}</strong>` : ''}</span>
         </div>`;
       }).join('');
@@ -248,6 +273,7 @@
     try { mod = await MathPlatform.loadModule(id); } catch (_) { mod = null; }
 
     let grading = MathScore.loadGrading();
+    let hideScores = loadHideScores();
     const joinUrl = `${location.origin}${location.pathname}#join/${encodeURIComponent(id)}/${encodeURIComponent(code)}`;
 
     app.innerHTML = `
@@ -290,6 +316,11 @@
       </div>
       <div class="card spaced">
         <h2>Živá diagnostika</h2>
+        <div class="grading-toggle-row">
+          <input id="hideScores" type="checkbox" ${hideScores ? 'checked' : ''}>
+          <label for="hideScores">Zobrazovať iba postup aktivitami (skryť body, percentá aj známky)</label>
+        </div>
+        <p class="muted small-note">Hodí sa, keď chceš sledovať, či niekto neuviazol na úlohe, bez toho, aby ťa rozptyľovali priebežné výsledky. Týka sa iba tejto obrazovky – žiaci svoje body a percentá vidia bez ohľadu na toto nastavenie.</p>
         <div id="summary" class="muted">Zatiaľ bez výsledkov.</div>
         <div id="students" class="live-list"></div>
       </div>
@@ -309,6 +340,11 @@
       thresholds: { 1: Number($('#grade1').value), 2: Number($('#grade2').value), 3: Number($('#grade3').value), 4: Number($('#grade4').value) },
     });
     $('#gradingEnabled').onchange = () => { $('#gradingFields').hidden = !$('#gradingEnabled').checked; };
+    $('#hideScores').onchange = () => {
+      hideScores = $('#hideScores').checked;
+      saveHideScores(hideScores);
+      drawStudents(students, grading, hideScores);
+    };
 
     $('#saveGrading').onclick = () => {
       const s = readGradingFromForm();
@@ -323,7 +359,7 @@
       const el = $('#gradingInfo');
       el.className = 'notice good';
       el.innerHTML = `<strong>Nastavenie uložené.</strong> ${grading.enabled ? MathScore.scaleText(grading.thresholds) : 'Známkovanie je vypnuté.'}`;
-      drawStudents(students, grading);
+      drawStudents(students, grading, hideScores);
       // Pripojení žiaci musia hneď vidieť, či sa im táto hodina počíta do známky.
       if (handle) handle.announceGrading(grading, true);
     };
@@ -339,7 +375,7 @@
       handle = await MathLive.connectAsTeacher(code, {
         onStudent: msg => {
           students[msg.nick] = Object.assign({}, students[msg.nick], msg);
-          drawStudents(students, grading);
+          drawStudents(students, grading, hideScores);
           // A newly-joined student doesn't yet know whether today's lesson
           // is graded — let them know right away.
           if (msg.stage === 'joined') handle.announceGrading(grading);
