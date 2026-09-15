@@ -168,10 +168,29 @@
   // optional: anyone with the projected join code can pick a nick containing
   // markup, and this screen (and the CSV export) is the only place it's ever
   // displayed.
-  function drawStudents(students, grading, hideScores) {
+  function drawStudents(students, grading, hideScores, reflectOnly) {
     grading = grading || MathScore.loadGrading();
     const arr = Object.values(students);
     const done = arr.filter(x => x.stage === 'done');
+
+    // A reflection-only lesson never scores anything (see core/session.js's
+    // sendProgress, which omits score/maxScore/percent for these students
+    // entirely) — showing "0 XP · 0%" next to "Hotovo" would read as failure,
+    // so this mode gets its own summary built from the self-assessment
+    // colours instead of points.
+    if (reflectOnly) {
+      const colors = { green: 0, yellow: 0, red: 0 };
+      done.forEach(x => Object.values(x.self || {}).forEach(v => { if (colors[v] !== undefined) colors[v]++; }));
+      $('#summary').innerHTML = arr.length
+        ? `Pripojení: <strong>${arr.length}</strong> · odoslali sebareflexiu: <strong>${done.length}</strong> · 🟢 ${colors.green} · 🟡 ${colors.yellow} · 🔴 ${colors.red}`
+        : 'Zatiaľ bez výsledkov.';
+      $('#students').innerHTML = arr
+        .slice()
+        .sort((x, y) => String(x.nick || '').localeCompare(String(y.nick || ''), 'sk'))
+        .map(x => `<div class="student progress-only"><strong>${esc(x.nick)}</strong><span>${x.stage === 'done' ? 'Hotovo' : x.stage === 'joined' ? 'Pripojený' : 'Pracuje'}</span></div>`)
+        .join('');
+      return;
+    }
 
     if (hideScores) {
       $('#summary').innerHTML = arr.length
@@ -274,7 +293,9 @@
 
     let grading = MathScore.loadGrading();
     let hideScores = loadHideScores();
-    const joinUrl = `${location.origin}${location.pathname}#join/${encodeURIComponent(id)}/${encodeURIComponent(code)}`;
+    let reflectOnly = false;
+    const hasReflection = !!(mod && mod.student && mod.student.activities.some(a => a.type === 'reflection'));
+    const buildJoinUrl = () => `${location.origin}${location.pathname}#join/${encodeURIComponent(id)}/${encodeURIComponent(code)}${reflectOnly ? '/reflect' : ''}`;
 
     app.innerHTML = `
       <div class="card">
@@ -286,9 +307,14 @@
             <p class="muted">Po naskenovaní sa otvorí správny modul aj táto hodina. Žiak zadá už iba nick.</p>
             <p>Kód pre ručné pripojenie:</p>
             <div class="bigcode">${esc(code)}</div>
-            <p class="muted">Záloha: žiak môže otvoriť platformu → „Mám kód hodiny“ → zadať nick a tento kód.</p>
+            <p class="muted">Záloha: žiak môže otvoriť platformu → „Mám kód hodiny“ → zadať nick a tento kód. Pri ručnom zadávaní si na obrazovke pripojenia zaškrtne rovnakú voľbu ako nižšie.</p>
           </div>
         </div>
+        <div class="grading-toggle-row">
+          <input id="reflectOnly" type="checkbox" ${hasReflection ? '' : 'disabled'}>
+          <label for="reflectOnly">Iba záverečná sebareflexia (žiaci preskočia úlohy a rovno odpovedia na sebahodnotenie)</label>
+        </div>
+        <p class="muted small-note">${hasReflection ? 'Zapni pred tým, ako žiakom ukážeš QR kód/kód hodiny — QR kód aj kód sa prispôsobia. Sebareflexia sa nezapočítava do bodov ani do známky.' : 'Tento modul nemá sebareflexiu, túto voľbu nie je možné zapnúť.'}</p>
         <div id="connect" class="notice">Pripájam živý kanál…</div>
         <div class="row">
           <button class="btn" id="endLive" disabled>Ukončiť hodinu</button>
@@ -326,11 +352,12 @@
       </div>
     `;
 
-    drawJoinQr('joinQr', joinUrl).catch(e => {
+    const redrawQr = () => drawJoinQr('joinQr', buildJoinUrl()).catch(e => {
       console.error('QR chyba:', e);
       const el = $('#joinQr');
       if (el) el.innerHTML = '<span class="muted">QR kód sa nepodarilo načítať. Použi textový kód vedľa.</span>';
     });
+    redrawQr();
 
     let students = {};
     let handle = null;
@@ -343,7 +370,12 @@
     $('#hideScores').onchange = () => {
       hideScores = $('#hideScores').checked;
       saveHideScores(hideScores);
-      drawStudents(students, grading, hideScores);
+      drawStudents(students, grading, hideScores, reflectOnly);
+    };
+    $('#reflectOnly').onchange = () => {
+      reflectOnly = $('#reflectOnly').checked;
+      redrawQr();
+      drawStudents(students, grading, hideScores, reflectOnly);
     };
 
     $('#saveGrading').onclick = () => {
@@ -359,7 +391,7 @@
       const el = $('#gradingInfo');
       el.className = 'notice good';
       el.innerHTML = `<strong>Nastavenie uložené.</strong> ${grading.enabled ? MathScore.scaleText(grading.thresholds) : 'Známkovanie je vypnuté.'}`;
-      drawStudents(students, grading, hideScores);
+      drawStudents(students, grading, hideScores, reflectOnly);
       // Pripojení žiaci musia hneď vidieť, či sa im táto hodina počíta do známky.
       if (handle) handle.announceGrading(grading, true);
     };
@@ -375,7 +407,7 @@
       handle = await MathLive.connectAsTeacher(code, {
         onStudent: msg => {
           students[msg.nick] = Object.assign({}, students[msg.nick], msg);
-          drawStudents(students, grading, hideScores);
+          drawStudents(students, grading, hideScores, reflectOnly);
           // A newly-joined student doesn't yet know whether today's lesson
           // is graded — let them know right away.
           if (msg.stage === 'joined') handle.announceGrading(grading);

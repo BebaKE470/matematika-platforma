@@ -143,7 +143,7 @@
     } catch (e) { showError(e); }
   }
 
-  async function join(id, presetCode) {
+  async function join(id, presetCode, presetReflect) {
     const meta0 = id && MathPlatform.indexEntry(id);
     const selected = (meta0 && meta0.status === 'ready') ? id : MathPlatform.defaultModuleId();
     const qrCode = (presetCode || '').trim().toUpperCase();
@@ -156,8 +156,12 @@
         <p class="muted">Modul: ${esc(topic)}</p>
         <div class="field"><label>Nick alebo kód žiaka</label><input id="nick" placeholder="napr. 1C-07" maxlength="20" autocomplete="off"></div>
         ${qrCode
-          ? `<div class="notice good"><strong>QR kód hodiny načítaný.</strong> Stačí zadať nick a pripojiť sa.</div><input id="code" type="hidden" value="${esc(qrCode)}">`
-          : `<div class="field"><label>Kód hodiny</label><input id="code" class="uppercase-input" placeholder="napr. K7M4Q2" maxlength="8"></div>`}
+          ? `<div class="notice good"><strong>QR kód hodiny načítaný.</strong> Stačí zadať nick a pripojiť sa.${presetReflect ? ' Táto hodina je iba na záverečnú sebareflexiu.' : ''}</div><input id="code" type="hidden" value="${esc(qrCode)}">`
+          : `<div class="field"><label>Kód hodiny</label><input id="code" class="uppercase-input" placeholder="napr. K7M4Q2" maxlength="8"></div>
+             <div class="grading-toggle-row">
+               <input id="reflectOnly" type="checkbox">
+               <label for="reflectOnly">Iba záverečná sebareflexia (ak to tak povedal učiteľ/učiteľka)</label>
+             </div>`}
         <div id="joinInfo" class="notice">Výsledky sa používajú iba počas prebiehajúcej hodiny. Platforma nevytvára dlhodobý profil žiaka.</div>
         <button class="btn" id="joinBtn">Pripojiť</button>
       </div>
@@ -171,6 +175,7 @@
         $('#joinInfo').textContent = 'Vyplň nick aj kód hodiny (6 znakov).';
         return;
       }
+      const reflectionOnly = !!presetReflect || !!($('#reflectOnly') && $('#reflectOnly').checked);
       try {
         const handle = await MathLive.connectAsStudent(code, {
           onTeacher: msg => {
@@ -192,7 +197,7 @@
         // session as a safety net — see core/session.js), THEN attach this
         // brand-new handle; attaching before starting would have start()
         // immediately close the very handle we just opened.
-        await MathSession.start(selected, { mode: 'live', nick, session: code });
+        await MathSession.start(selected, { mode: 'live', nick, session: code, reflectionOnly });
         MathSession.attachLive(handle);
         go('play');
         await joined;

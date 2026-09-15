@@ -60,11 +60,23 @@
     return Object.assign({
       mode: 'solo', nick: '', session: '', moduleId: '',
       index: 0, score: 0, answers: [], reflection: {}, grading: null,
+      reflectionOnly: false, sessionActivities: null,
     }, extra || {});
   }
 
   function getState() { return state; }
   function getModule() { return currentModule; }
+
+  // The activities actually being played this session — normally the whole
+  // module, but just the closing `reflection` activity when the teacher
+  // started a reflection-only live lesson (see start() below). Kept separate
+  // from currentModule.student.activities rather than filtering that array
+  // in place, because MathPlatform.loadModule() caches one shared module
+  // object per id for the page's lifetime — mutating it would leak into any
+  // other session (solo or live) that opens the same module later in the tab.
+  function activities() {
+    return state.sessionActivities || (currentModule && currentModule.student.activities) || [];
+  }
 
   // Loads (or returns the already-loaded) module without touching session
   // state — used by the module intro screen and the teacher's metodická
@@ -82,6 +94,15 @@
     if (live) { live.close(); live = null; }
     await load(id);
     state = freshState(Object.assign({ moduleId: id }, extra || {}));
+    if (state.reflectionOnly) {
+      const reflections = currentModule.student.activities.filter(a => a.type === 'reflection');
+      // No reflection activity to show (shouldn't happen for a 'ready'
+      // module — see docs/AUTHORING.md — but a manually-typed join code
+      // can't be checked in advance): fall back to the full module rather
+      // than stranding the student on a blank session.
+      if (reflections.length) state.sessionActivities = [reflections[reflections.length - 1]];
+      else state.reflectionOnly = false;
+    }
     return currentModule;
   }
 
@@ -107,20 +128,27 @@
 
   function sendProgress(done, includeAnswers) {
     if (state.mode !== 'live' || !live) return Promise.resolve();
-    const total = currentModule ? currentModule.student.activities.length : 0;
-    const maxScore = window.MathScore.moduleMaxPoints(currentModule);
+    const acts = activities();
+    const total = acts.length;
+    const maxScore = acts.reduce((sum, a) => sum + window.MathScore.maxPoints(a), 0);
     const percent = maxScore ? Math.round(100 * state.score / maxScore) : 0;
     const payload = {
       nick: state.nick,
       moduleId: state.moduleId,
       stage: done ? 'done' : 'working',
-      score: state.score,
-      maxScore,
-      percent,
       question: Math.min(state.index + 1, total),
       total,
       ts: Date.now(),
     };
+    // A reflection-only session never scores anything (reflection is worth 0
+    // points by design — see core/scoring.js) — sending 0/0/0% would just
+    // read as "failed everything" on the teacher's live view and in the CSV,
+    // so these fields are omitted entirely rather than sent as zero.
+    if (!state.reflectionOnly) {
+      payload.score = state.score;
+      payload.maxScore = maxScore;
+      payload.percent = percent;
+    }
     // The full answer breakdown only changes when an activity is scored or
     // the module finishes — sending it on every "next/prev step" click (as
     // the original code did) re-transmits an ever-growing array for no
@@ -175,7 +203,7 @@
       location.hash = 'module/' + (state.moduleId || window.MathPlatform.defaultModuleId());
       return;
     }
-    const acts = currentModule.student.activities;
+    const acts = activities();
     if (state.index >= acts.length) { finish(app); return; }
 
     const activity = acts[state.index];
@@ -225,6 +253,20 @@
     const fallback = window.MathPlatform.sortedModules().find(m => m.status === 'ready') || window.MathPlatform.list()[0];
     const backYear = (meta && meta.year) || (fallback && fallback.year) || 1;
     const backUnit = (meta && meta.unit) || (fallback && fallback.unit) || '';
+
+    if (state.reflectionOnly) {
+      // No úlohy were played, so there is nothing to score — show the
+      // self-assessment on its own instead of an XP bar/percent/feedback
+      // that would misleadingly read as "0%, try again".
+      app.innerHTML = `<article class="card result-card">
+        <div class="eyebrow">SEBAREFLEXIA ODOSLANÁ</div>
+        <h1>Ďakujeme za spätnú väzbu</h1>
+        ${reflectionSummary(state.reflection)}
+        <div class="notice">Tvoje sebahodnotenie vidí učiteľ/učiteľka. Pokračuj podľa pokynov v triede.</div>
+        <button class="btn" data-go="catalog/unit/${backYear}/${window.MathPlatform.unitKey(backUnit)}">Späť k témam</button>
+      </article>`;
+      return;
+    }
 
     const gradingOn = state.mode === 'live' && state.grading && state.grading.enabled;
     const gradeNote = gradingOn
