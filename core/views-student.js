@@ -143,11 +143,17 @@
     } catch (e) { showError(e); }
   }
 
-  async function join(id, presetCode, presetReflect) {
+  async function join(id, presetCode, presetReflect, presetActs) {
     const meta0 = id && MathPlatform.indexEntry(id);
     const selected = (meta0 && meta0.status === 'ready') ? id : MathPlatform.defaultModuleId();
     const qrCode = (presetCode || '').trim().toUpperCase();
     const topic = (MathPlatform.indexEntry(selected) || {}).topic || '';
+    // Encoded by the teacher's activity picker (teacherLive() in
+    // core/views-teacher.js) into the QR/join link as comma-separated
+    // activity indices — only present when the teacher restricted the
+    // lesson to a subset. A student typing the code in by hand (no link)
+    // has no way to receive this, so they always get the full module.
+    const presetActIndices = (presetActs || '').split(',').map(s => parseInt(s, 10)).filter(n => Number.isInteger(n) && n >= 0);
 
     app.innerHTML = `
       <div class="card">
@@ -156,7 +162,7 @@
         <p class="muted">Modul: ${esc(topic)}</p>
         <div class="field"><label>Nick alebo kód žiaka</label><input id="nick" placeholder="napr. 1C-07" maxlength="20" autocomplete="off"></div>
         ${qrCode
-          ? `<div class="notice good"><strong>QR kód hodiny načítaný.</strong> Stačí zadať nick a pripojiť sa.${presetReflect ? ' Táto hodina je iba na záverečnú sebareflexiu.' : ''}</div><input id="code" type="hidden" value="${esc(qrCode)}">`
+          ? `<div class="notice good"><strong>QR kód hodiny načítaný.</strong> Stačí zadať nick a pripojiť sa.${presetReflect ? ' Táto hodina je iba na záverečnú sebareflexiu.' : presetActIndices.length ? ' Učiteľ/učiteľka vybral/a pre túto hodinu iba časť aktivít.' : ''}</div><input id="code" type="hidden" value="${esc(qrCode)}">`
           : `<div class="field"><label>Kód hodiny</label><input id="code" class="uppercase-input" placeholder="napr. K7M4Q2" maxlength="8"></div>
              <div class="grading-toggle-row">
                <input id="reflectOnly" type="checkbox">
@@ -197,7 +203,7 @@
         // session as a safety net — see core/session.js), THEN attach this
         // brand-new handle; attaching before starting would have start()
         // immediately close the very handle we just opened.
-        await MathSession.start(selected, { mode: 'live', nick, session: code, reflectionOnly });
+        await MathSession.start(selected, { mode: 'live', nick, session: code, reflectionOnly, selectedActivityIndices: presetActIndices.length ? presetActIndices : null });
         MathSession.attachLive(handle);
         go('play');
         await joined;

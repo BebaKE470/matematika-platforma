@@ -60,7 +60,7 @@
     return Object.assign({
       mode: 'solo', nick: '', session: '', moduleId: '',
       index: 0, score: 0, answers: [], reflection: {}, grading: null,
-      reflectionOnly: false, sessionActivities: null,
+      reflectionOnly: false, sessionActivities: null, selectedActivityIndices: null,
     }, extra || {});
   }
 
@@ -102,6 +102,15 @@
       // than stranding the student on a blank session.
       if (reflections.length) state.sessionActivities = [reflections[reflections.length - 1]];
       else state.reflectionOnly = false;
+    } else if (Array.isArray(state.selectedActivityIndices) && state.selectedActivityIndices.length) {
+      // The teacher restricted this live lesson to a subset of activities
+      // (see core/views-teacher.js's teacherLive() activity picker). A stale
+      // selection (e.g. the module changed between generating the QR code
+      // and a student joining) must not strand the student on an empty
+      // session, so an empty result falls back to the full module.
+      const keep = new Set(state.selectedActivityIndices);
+      const filtered = currentModule.student.activities.filter((_, i) => keep.has(i));
+      if (filtered.length) state.sessionActivities = filtered;
     }
     return currentModule;
   }
@@ -233,7 +242,11 @@
   }
 
   function finish(app) {
-    const maxScore = window.MathScore.moduleMaxPoints(currentModule);
+    // Not MathScore.moduleMaxPoints(currentModule) — that sums the whole
+    // module, but a live lesson may have been restricted to a subset of
+    // activities (activities() above), and the denominator must match what
+    // was actually playable this session (same reasoning as sendProgress()).
+    const maxScore = activities().reduce((sum, a) => sum + window.MathScore.maxPoints(a), 0);
     const percent = maxScore ? Math.round(100 * state.score / maxScore) : 100;
     const feedback = window.MathScore.resultFeedback(percent);
     const skills = {};

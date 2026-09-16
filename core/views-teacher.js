@@ -295,7 +295,22 @@
     let hideScores = loadHideScores();
     let reflectOnly = false;
     const hasReflection = !!(mod && mod.student && mod.student.activities.some(a => a.type === 'reflection'));
-    const buildJoinUrl = () => `${location.origin}${location.pathname}#join/${encodeURIComponent(id)}/${encodeURIComponent(code)}${reflectOnly ? '/reflect' : ''}`;
+    const activities = (mod && mod.student && mod.student.activities) || [];
+    const actLabel = a => a.title || a.skill || a.phase || a.id || a.type;
+    // Which activities this live lesson includes — everything by default
+    // (no restriction). Only students who join via the QR code/link below
+    // receive this; a manually-typed join code always gets the full module,
+    // since there's no practical way for a student to replicate an arbitrary
+    // subset by hand (unlike the single reflectOnly checkbox below).
+    const selectedActs = new Set(activities.map((_, i) => i));
+    const buildJoinUrl = () => {
+      let extra = '';
+      if (reflectOnly) extra = '/reflect';
+      else if (activities.length && selectedActs.size > 0 && selectedActs.size < activities.length) {
+        extra = `/acts/${[...selectedActs].sort((a, b) => a - b).join(',')}`;
+      }
+      return `${location.origin}${location.pathname}#join/${encodeURIComponent(id)}/${encodeURIComponent(code)}${extra}`;
+    };
 
     app.innerHTML = `
       <div class="card">
@@ -315,6 +330,19 @@
           <label for="reflectOnly">Iba záverečná sebareflexia (žiaci preskočia úlohy a rovno odpovedia na sebahodnotenie)</label>
         </div>
         <p class="muted small-note">${hasReflection ? 'Zapni pred tým, ako žiakom ukážeš QR kód/kód hodiny — QR kód aj kód sa prispôsobia. Sebareflexia sa nezapočítava do bodov ani do známky.' : 'Tento modul nemá sebareflexiu, túto voľbu nie je možné zapnúť.'}</p>
+        <div class="acts-block" id="actsBlock">
+          <p class="muted small-note">Vyber, ktoré aktivity žiaci v tejto hodine uvidia (platí len pre pripojenie cez QR kód/odkaz vyššie — pri ručnom zadaní kódu hodiny dostanú celý modul).</p>
+          ${activities.length ? `
+            <div id="actsList" class="acts-list">
+              ${activities.map((a, i) => `<div class="acts-row"><input type="checkbox" class="actCheck" id="actCheck${i}" data-i="${i}" checked><label for="actCheck${i}">${i + 1}. ${esc(actLabel(a))} <span class="tag">${esc(a.type)}</span></label></div>`).join('')}
+            </div>
+            <div class="row">
+              <button class="ghost" id="actsAll">Vybrať všetky</button>
+              <button class="ghost" id="actsNone">Zrušiť všetky</button>
+            </div>
+            <p class="muted small-note" id="actsInfo"></p>
+          ` : `<p class="muted small-note">Aktivity modulu sa nepodarilo načítať, výber nie je k dispozícii.</p>`}
+        </div>
         <div id="connect" class="notice">Pripájam živý kanál…</div>
         <div class="row">
           <button class="btn" id="endLive" disabled>Ukončiť hodinu</button>
@@ -374,8 +402,36 @@
     };
     $('#reflectOnly').onchange = () => {
       reflectOnly = $('#reflectOnly').checked;
+      const actsBlock = $('#actsBlock');
+      if (actsBlock) actsBlock.classList.toggle('disabled', reflectOnly);
       redrawQr();
       drawStudents(students, grading, hideScores, reflectOnly);
+    };
+
+    function updateActsInfo() {
+      const info = $('#actsInfo');
+      if (!info) return;
+      if (selectedActs.size === activities.length) info.textContent = 'Vybraté všetky aktivity (žiadne obmedzenie).';
+      else if (selectedActs.size === 0) info.textContent = 'Nie je vybraná žiadna aktivita — žiaci preto uvidia celý modul. Zaškrtni aspoň jednu.';
+      else info.textContent = `Vybraných ${selectedActs.size} z ${activities.length} aktivít.`;
+    }
+    function onActsChanged() { updateActsInfo(); redrawQr(); }
+    updateActsInfo();
+    $$('.actCheck').forEach(cb => {
+      cb.onchange = () => {
+        const i = Number(cb.dataset.i);
+        if (cb.checked) selectedActs.add(i); else selectedActs.delete(i);
+        onActsChanged();
+      };
+    });
+    if ($('#actsAll')) $('#actsAll').onclick = () => {
+      $$('.actCheck').forEach(cb => { cb.checked = true; selectedActs.add(Number(cb.dataset.i)); });
+      onActsChanged();
+    };
+    if ($('#actsNone')) $('#actsNone').onclick = () => {
+      $$('.actCheck').forEach(cb => { cb.checked = false; });
+      selectedActs.clear();
+      onActsChanged();
     };
 
     $('#saveGrading').onclick = () => {

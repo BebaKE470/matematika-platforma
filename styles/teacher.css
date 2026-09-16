@@ -30,6 +30,14 @@
 .tag.grading-off { background: var(--good); color: #256442; }
 .tag.grading-pending { background: #eee; color: #777; }
 
+/* --- Live lesson: which activities are active --- */
+
+.acts-block.disabled { opacity: .5; pointer-events: none; }
+.acts-list { display: grid; gap: 6px; margin: 10px 0; max-height: 320px; overflow-y: auto; }
+.acts-row { display: flex; align-items: center; gap: 10px; }
+.acts-row input[type="checkbox"] { width: 18px; height: 18px; margin: 0; flex: 0 0 auto; }
+.acts-row label { margin: 0; cursor: pointer; }
+
 /* --- Live diagnostics --- */
 
 .live-list { display: grid; gap: 8px; }
