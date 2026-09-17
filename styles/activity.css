@@ -125,7 +125,7 @@
   padding: 12px 16px;
   border-radius: 12px;
   border-left: 4px solid var(--ink);
-  background: var(--soft);
+  background: #d3ead9;
 }
 .term-symbol {
   grid-row: 1 / -1;
@@ -154,23 +154,26 @@
 .term-item.no-symbol { grid-template-columns: 1fr; }
 
 /* A single formula or rule pulled out of the prose so it can be seen from
-   across the room. Deliberately NOT the border-left+badge language of
-   .remember/.term-item — a centred plaque reads as "the thing itself", not
-   as a comment about it. Optional .mini-label above (the rule's name) and
-   .formula-note below (the sentence that explains it). */
+   across the room. Solid ink, not a pale tint — the palette's pale tokens
+   (--soft/--warn) sit so close to the card's white that a tinted box alone
+   doesn't read as "different" at a glance (same reasoning as .tag.phase in
+   the header: a solid fill beats a pastel one when the point is to be seen
+   immediately). Optional .mini-label above (the rule's name) and
+   .formula-note below (the sentence that explains it), both re-tinted for
+   the dark background. */
 .formula {
   margin: 18px 0;
-  padding: 15px 18px;
+  padding: 16px 18px;
   border-radius: 14px;
-  background: var(--soft);
+  background: var(--ink);
   text-align: center;
   font-size: clamp(1.18rem, 3.4vw, 1.5rem);
   font-weight: 800;
   line-height: 1.38;
-  color: var(--ink);
+  color: #fff;
 }
-.formula .mini-label { display: block; margin-bottom: 7px; }
-.formula-note { display: block; margin-top: 8px; font-size: .86rem; font-weight: 650; line-height: 1.5; color: var(--muted); }
+.formula .mini-label { display: block; margin-bottom: 7px; color: rgba(255, 255, 255, .68); }
+.formula-note { display: block; margin-top: 8px; font-size: .86rem; font-weight: 650; line-height: 1.5; color: rgba(255, 255, 255, .78); }
 
 /* A step-by-step procedure. Same circular badge as .term-symbol, but
    numbered by a CSS counter so an author can insert a step without
@@ -185,7 +188,7 @@
   gap: 12px;
   padding: 11px 15px 11px 11px;
   border-radius: 12px;
-  background: var(--soft);
+  background: #d3ead9;
 }
 .steps > li::before {
   content: counter(step);
@@ -205,30 +208,31 @@
   .steps > li::before { width: 28px; height: 28px; font-size: .85rem; }
 }
 
-/* The only authored block that uses --warn. Same border-left + rounded
-   shape as .remember, so the two read as a pair — "keep this" in ink
-   green, "don't do this" in amber — and nothing else in the palette moves. */
+/* The only authored block that uses amber. A richer amber than the pale
+   --warn token (reserved for the quieter grading badge/notice uses
+   elsewhere) — a warning specifically needs to read as "stop and look",
+   so it gets the same solid-over-pastel treatment as .formula. */
 .warning {
   position: relative;
   margin: 18px 0;
-  padding: 15px 17px 15px 46px;
-  border-left: 4px solid var(--warn-ink);
+  padding: 15px 17px 15px 48px;
+  border-left: 6px solid var(--warn-ink);
   border-radius: 8px;
-  background: var(--warn);
+  background: #ffe6ab;
 }
 .warning::before {
   content: "!";
   position: absolute;
   left: 15px;
   top: 15px;
-  width: 21px;
-  height: 21px;
+  width: 23px;
+  height: 23px;
   border-radius: 50%;
   background: var(--warn-ink);
   color: #fff;
-  font-size: .8rem;
+  font-size: .85rem;
   font-weight: 850;
-  line-height: 21px;
+  line-height: 23px;
   text-align: center;
 }
 .warning > :first-child { margin-top: 0; }
@@ -242,7 +246,7 @@
   margin: 16px 0;
   padding: 12px 16px;
   border: 1px solid var(--line);
-  border-left: 4px solid #9bb2a8;
+  border-left: 5px solid #5f8478;
   border-radius: 12px;
   background: #fafbf9;
 }
@@ -265,8 +269,8 @@
    replacement for the ALL-CAPS-as-emphasis habit. A marker-pen underline
    rather than a full fill, so it can sit mid-sentence without breaking the
    line rhythm. Inside .warning it picks up the amber instead. */
-.hl { background-image: linear-gradient(transparent 58%, rgba(23, 61, 53, .16) 58%); font-weight: 750; padding: 0 1px; }
-.warning .hl { background-image: linear-gradient(transparent 58%, rgba(138, 106, 18, .2) 58%); }
+.hl { background-image: linear-gradient(transparent 55%, rgba(23, 61, 53, .32) 55%); font-weight: 750; padding: 0 1px; }
+.warning .hl { background-image: linear-gradient(transparent 55%, rgba(138, 106, 18, .38) 55%); }
 
 /* --- choice --- */
 
