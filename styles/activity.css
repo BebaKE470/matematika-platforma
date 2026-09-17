@@ -49,9 +49,64 @@
 .oktext { color: #256442; }
 .badtext { color: #873e34; }
 
+/* --- Typography inside an activity card -------------------------------
+   The renderers drop authored HTML straight into the card, and authors
+   overwhelmingly write plain <p>/<strong> because nothing else looked any
+   different (see docs/AUTHORING.md). These give the elements that actually
+   appear a real hierarchy with zero content changes.
+
+   Every selector is wrapped in :where() so the whole rule has specificity
+   0 — every component below (.term-rule, .task-level-heading, .muted, a
+   renderer's own <strong>, …) still wins without needing an exception here. */
+
+:where(.learning-card) :where(h1) {
+  margin: 0 0 10px;
+  font-size: clamp(1.45rem, 3.6vw, 1.85rem);
+  line-height: 1.22;
+  font-weight: 850;
+  letter-spacing: -.012em;
+  color: var(--ink);
+}
+:where(.learning-card) :where(h2) {
+  margin: 26px 0 8px;
+  font-size: 1.16rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--ink);
+}
+:where(.learning-card) :where(h3) {
+  margin: 20px 0 6px;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+:where(.learning-card) :where(p) { margin: 10px 0; line-height: 1.62; }
+
+/* An author's plain <p><strong>…</strong></p> is the single most common
+   emphasis in the corpus — tinting it ink turns it into a real scan
+   anchor. Restricted to unclassed paragraphs so .term-rule/.muted/
+   .term-example keep their own quieter treatment, and a wrong-answer
+   .feedback box's <strong> stays .badtext red, not ink green. */
+:where(.learning-card) :where(p:not([class])) > :where(strong) {
+  color: var(--ink);
+  font-weight: 750;
+}
+
+:where(.learning-card) :where(ul, ol) { margin: 12px 0; padding-left: 1.4rem; }
+:where(.learning-card) :where(li) { margin: 5px 0; line-height: 1.55; }
+:where(.learning-card) :where(li)::marker { color: var(--ink); font-weight: 750; }
+
+:where(.learning-card) :where(hr) { margin: 24px 0; border: 0; border-top: 1px solid var(--line); }
+:where(.learning-card) :where(code) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .95em;
+  padding: 1px 5px;
+  border-radius: 6px;
+  background: #f3f5f2;
+}
+
 /* --- info / explain / notebook / selfWrite --- */
 
-.explain-card h1 { margin-bottom: 8px; }
 .remember { margin: 18px 0; padding: 15px 17px; border-left: 4px solid var(--ink); border-radius: 8px; background: var(--soft); }
 .keyidea { font-weight: 850; color: var(--ink); }
 .notebook { border: 2px dashed #c2a96e; background: #fffaf0; }
@@ -94,6 +149,124 @@
   .term-item { grid-template-columns: 40px 1fr; padding: 10px 12px; }
   .term-symbol { width: 40px; height: 40px; font-size: 1.25rem; }
 }
+/* Not every term has a single-glyph symbol ("Medián", "Modus", "D > 0") —
+   drop the badge column and the row still works, at both breakpoints. */
+.term-item.no-symbol { grid-template-columns: 1fr; }
+
+/* A single formula or rule pulled out of the prose so it can be seen from
+   across the room. Deliberately NOT the border-left+badge language of
+   .remember/.term-item — a centred plaque reads as "the thing itself", not
+   as a comment about it. Optional .mini-label above (the rule's name) and
+   .formula-note below (the sentence that explains it). */
+.formula {
+  margin: 18px 0;
+  padding: 15px 18px;
+  border-radius: 14px;
+  background: var(--soft);
+  text-align: center;
+  font-size: clamp(1.18rem, 3.4vw, 1.5rem);
+  font-weight: 800;
+  line-height: 1.38;
+  color: var(--ink);
+}
+.formula .mini-label { display: block; margin-bottom: 7px; }
+.formula-note { display: block; margin-top: 8px; font-size: .86rem; font-weight: 650; line-height: 1.5; color: var(--muted); }
+
+/* A step-by-step procedure. Same circular badge as .term-symbol, but
+   numbered by a CSS counter so an author can insert a step without
+   renumbering. No border-left (unlike .term-item): these rows are about
+   ORDER, not about a definition worth remembering. */
+.steps { counter-reset: step; list-style: none; display: grid; gap: 9px; margin: 18px 0; padding: 0; }
+.steps > li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  align-items: start;
+  gap: 12px;
+  padding: 11px 15px 11px 11px;
+  border-radius: 12px;
+  background: var(--soft);
+}
+.steps > li::before {
+  content: counter(step);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  font-size: .95rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 520px) {
+  .steps > li { grid-template-columns: 28px 1fr; gap: 10px; padding: 9px 12px 9px 9px; }
+  .steps > li::before { width: 28px; height: 28px; font-size: .85rem; }
+}
+
+/* The only authored block that uses --warn. Same border-left + rounded
+   shape as .remember, so the two read as a pair — "keep this" in ink
+   green, "don't do this" in amber — and nothing else in the palette moves. */
+.warning {
+  position: relative;
+  margin: 18px 0;
+  padding: 15px 17px 15px 46px;
+  border-left: 4px solid var(--warn-ink);
+  border-radius: 8px;
+  background: var(--warn);
+}
+.warning::before {
+  content: "!";
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: var(--warn-ink);
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 850;
+  line-height: 21px;
+  text-align: center;
+}
+.warning > :first-child { margin-top: 0; }
+.warning > :last-child { margin-bottom: 0; }
+
+/* A worked example: the problem and its derivation. Quieter than .formula
+   (an example is an illustration, not the rule) and structurally neutral —
+   no --soft fill, muted edge — so a card can hold a rule AND its example
+   without the two shouting at each other. */
+.example {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-left: 4px solid #9bb2a8;
+  border-radius: 12px;
+  background: #fafbf9;
+}
+.example .mini-label { display: block; margin-bottom: 5px; }
+.example p { margin: 5px 0; }
+.example p:last-child { margin-bottom: 0; }
+.example b, .example strong { color: var(--ink); }
+
+/* .compare's two cells default to neutral (base.css). Add .good/.bad to a
+   cell to colour-code a right-vs-wrong pair — same tokens and border
+   colours the answer feedback already uses, so "green = this one is
+   right" means the same thing everywhere in the app. */
+.compare > .good { background: var(--good); border-color: #9bcaa8; }
+.compare > .bad { background: var(--bad); border-color: #e3a89a; }
+.compare .mini-label { display: block; margin-bottom: 5px; }
+.compare > div > :first-child { margin-top: 0; }
+.compare > div > :last-child { margin-bottom: 0; }
+
+/* Inline emphasis stronger than <strong> and quieter than a whole box — the
+   replacement for the ALL-CAPS-as-emphasis habit. A marker-pen underline
+   rather than a full fill, so it can sit mid-sentence without breaking the
+   line rhythm. Inside .warning it picks up the amber instead. */
+.hl { background-image: linear-gradient(transparent 58%, rgba(23, 61, 53, .16) 58%); font-weight: 750; padding: 0 1px; }
+.warning .hl { background-image: linear-gradient(transparent 58%, rgba(138, 106, 18, .2) 58%); }
 
 /* --- choice --- */
 
@@ -217,7 +390,7 @@ select.answer-good, select.answer-bad { opacity: 1; -webkit-text-fill-color: var
 .self-chips span { padding: 7px 11px; border: 1px solid var(--line); border-radius: 999px; background: #fafbf9; font-weight: 750; }
 
 @media (max-width: 720px) {
-  .example-grid, .compare, .sort-row, .matrix-row, .reflection-row { grid-template-columns: 1fr; }
+  .compare, .sort-row, .matrix-row, .reflection-row { grid-template-columns: 1fr; }
   .learning-card { padding: 18px; }
   .stimulus { font-size: 21px; }
   .reflection-buttons button { font-size: 14px; }

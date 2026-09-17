@@ -16,6 +16,7 @@
   --line: #dce4de;
   --soft: #e8f1ec;
   --warn: #fff4d8;
+  --warn-ink: #8a6a12;
   --bad: #fde9e6;
   --good: #e5f4e9;
   --shadow: 0 14px 40px rgba(20, 55, 46, .08);
@@ -155,16 +156,16 @@ th, td { text-align: left; padding: 9px; border-bottom: 1px solid var(--line); v
 th:not(:first-child), td:not(:first-child) { text-align: center; }
 
 /* --- Authoring utilities for module `html` content ---
-   Not used by any shipped module yet — kept and documented (see
-   docs/AUTHORING.md) as building blocks for future modules that show a
-   side-by-side comparison or example pair inside an activity's `html`. */
-.example-grid, .compare {
+   Building blocks documented in docs/AUTHORING.md for an activity's `html`.
+   .compare's side-colouring (.good/.bad) lives in activity.css next to the
+   other authoring components. */
+.compare {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
   margin: 16px 0;
 }
-.example-grid > div, .compare > div {
+.compare > div {
   padding: 14px;
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -176,5 +177,5 @@ th:not(:first-child), td:not(:first-child) { text-align: center; }
 .table-wrap { overflow-x: auto; margin: 1rem 0; }
 
 @media (max-width: 720px) {
-  .example-grid, .compare { grid-template-columns: 1fr; }
+  .compare { grid-template-columns: 1fr; }
 }

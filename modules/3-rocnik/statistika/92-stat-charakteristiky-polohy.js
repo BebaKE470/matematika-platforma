@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Priemer, medián, modus',
-        html: '<p><strong>Aritmetický priemer:</strong> súčet všetkých hodnôt vydelený ich počtom.</p><p><strong>Medián:</strong> hodnoty usporiadame podľa veľkosti; pri NEPÁRNOM počte je medián prostredná hodnota, pri PÁRNOM počte je to priemer dvoch prostredných hodnôt.</p><p><strong>Modus:</strong> hodnota, ktorá sa v súbore vyskytuje NAJČASTEJŠIE.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Aritmetický priemer</div><p class="term-rule">Súčet všetkých hodnôt vydelený ich počtom.</p></div><div class="term-item no-symbol"><div class="term-name">Medián</div><p class="term-rule">Hodnoty usporiadame podľa veľkosti; pri <span class="hl">nepárnom</span> počte je medián prostredná hodnota, pri <span class="hl">párnom</span> počte je to priemer dvoch prostredných hodnôt.</p></div><div class="term-item no-symbol"><div class="term-name">Modus</div><p class="term-rule">Hodnota, ktorá sa v súbore vyskytuje <span class="hl">najčastejšie</span>.</p></div></div>',
         remember: 'Priemer=súčet/počet. Medián=prostredná hodnota po usporiadaní. Modus=najčastejšia hodnota.',
       },
       {

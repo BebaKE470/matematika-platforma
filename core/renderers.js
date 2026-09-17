@@ -11,9 +11,10 @@
 //
 // Escaping contract (see also docs/AUTHORING.md): MathUtil.esc() wraps any
 // value that came from the module author as PLAIN TEXT (title, question,
-// options, item text, skill names, prompts). The fields `html`, `promptHtml`,
-// `remember`, `correct`, `hint`, `model`, `note`, `success`, `reveal` (and, on
-// a taskList item, `item.html`) are TRUSTED AUTHORED HTML on purpose —
+// options, item text, skill names, prompts, rememberLabel). The fields
+// `html`, `promptHtml`, `remember`, `correct`, `hint`, `model`, `note`,
+// `success`, `reveal` (and, on a taskList item, `item.html`) are TRUSTED
+// AUTHORED HTML on purpose —
 // modules hand-write SVG diagrams, tables and formatted explanations into
 // them — and are never escaped. A value that did not come from the module
 // author (a live-lesson participant's nick, for instance) must never be
@@ -53,6 +54,16 @@
 
   function continueButtonHtml(label) {
     return `<button class="btn" id="continue">${esc(label || 'Pokračovať')}</button>`;
+  }
+
+  // "Zapamätaj si" box. `remember` is trusted authored HTML; `rememberLabel`
+  // is plain text (escaped) and lets a module relabel the box — set it to
+  // false to drop the label entirely, e.g. when the box holds a procedure
+  // rather than a single fact.
+  function rememberHtml(a) {
+    if (!a.remember) return '';
+    const label = a.rememberLabel === false ? '' : `<strong>${esc(a.rememberLabel || 'Zapamätaj si:')}</strong> `;
+    return `<div class="remember">${label}${a.remember}</div>`;
   }
 
   function wireContinue(ctx, onClick) {
@@ -101,7 +112,7 @@
   // --- Renderers -----------------------------------------------------------
 
   R.info = (a, ctx) => {
-    shell(ctx, a, `<h1>${esc(a.title)}</h1>${a.html || ''}${continueButtonHtml(a.continueLabel)}`);
+    shell(ctx, a, `<h1>${esc(a.title)}</h1>${a.html || ''}${rememberHtml(a)}${continueButtonHtml(a.continueLabel)}`);
     wireContinue(ctx);
   };
 
@@ -110,7 +121,7 @@
       <div class="eyebrow">KRÁTKE VYSVETLENIE</div>
       <h1>${esc(a.title)}</h1>
       ${a.html || ''}
-      ${a.remember ? `<div class="remember"><strong>Zapamätaj si:</strong> ${a.remember}</div>` : ''}
+      ${rememberHtml(a)}
       ${continueButtonHtml('Rozumiem, pokračovať')}
     `, 'explain-card');
     wireContinue(ctx);

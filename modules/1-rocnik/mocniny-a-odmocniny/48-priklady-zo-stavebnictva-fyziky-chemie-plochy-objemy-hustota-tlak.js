@@ -66,8 +66,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Prevod jednotiek obsahu a objemu',
-        html: '<p>Keďže 1 m = 100 cm, pre obsah platí <strong>1 m² = 100² cm² = 10 000 cm²</strong> (nie 100 cm², to je najčastejšia chyba). Pre objem: <strong>1 m³ = 100³ cm³ = 1 000 000 cm³</strong>.</p><p>Vždy sa umocňuje aj prevodové číslo, nielen jednotka.</p>',
-        remember: '1 m² = 100² cm² = 10 000 cm².  1 m³ = 100³ cm³ = 1 000 000 cm³.',
+        html: '<p>Keďže 1 m = 100 cm, platí:</p><div class="formula">1 m² = 100² cm² = 10 000 cm²<span class="formula-note">Pre objem: 1 m³ = 100³ cm³ = 1 000 000 cm³.</span></div><div class="warning"><strong>Pozor:</strong> 1 m² nie je 100 cm² — to je najčastejšia chyba. Vždy sa umocňuje aj prevodové číslo, nielen jednotka.</div>',
+        remember: 'Pri prevode jednotiek obsahu a objemu sa umocňuje aj prevodové číslo, nielen jednotka.',
       },
       {
         id: 'q-convert-area',

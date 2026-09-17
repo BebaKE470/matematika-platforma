@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Postup pri zložitom výraze',
-        html: '<p>1) Rozlož každý menovateľ na súčin. 2) Nájdi najmenší spoločný menovateľ (obsahujúci každý činiteľ aspoň raz). 3) Preveď každý zlomok na tento menovateľ. 4) Sčítaj/odčítaj čitatele. 5) Skráť výsledok, ak je to možné.</p>',
+        html: '<ol class="steps"><li>Rozlož každý menovateľ na súčin.</li><li>Nájdi najmenší spoločný menovateľ (obsahujúci každý činiteľ aspoň raz).</li><li>Preveď každý zlomok na tento menovateľ.</li><li>Sčítaj/odčítaj čitatele.</li><li>Skráť výsledok, ak je to možné.</li></ol>',
         remember: 'Rozlož menovatele → nájdi spoločný menovateľ → priprav zlomky → sčítaj/odčítaj → skráť.',
       },
       {

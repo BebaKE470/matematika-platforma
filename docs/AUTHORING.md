@@ -40,13 +40,145 @@ escaped — write real markup into them:
 `success`, `reveal`, and a `taskList` item's `html` or `answer` (its `text` is
 escaped, same as any other item text)
 
-A module can use the shared visual-diagram classes inside those fields:
+A module can use the shared visual-diagram classes inside those fields —
 `.logic-visual`/`.truth` (an SVG or table dropped straight into `html`, as
-the *vyroková formula* and *sterometria* modules do for cube diagrams and
-truth tables) and `.example-grid`/`.compare`/`.math-list` (two- or one-column
-authoring layouts for a worked example or a side-by-side comparison — not
-used by any shipped module yet, but defined in `styles/base.css` for
-exactly this).
+the *vyroková formula* and *stereometria* modules do for cube diagrams and
+truth tables) — and the authoring building blocks below.
+
+## Building blocks for authored HTML
+
+These classes are defined in `styles/` (mostly `styles/activity.css`) and
+are meant to be used directly inside `html`, `promptHtml`, `remember`, or any
+other trusted-HTML field listed above. `tools/audit.mjs` fails the build if a
+module references a class that isn't defined anywhere under `styles/`, so add
+CSS before you reference it, and check the audit output if a class you'd
+expect to work silently doesn't apply.
+
+Plain `<p>`, `<h2>`/`<h3>`, `<ul>`/`<ol>`, `<strong>`, `<code>` and `<hr>` are
+now styled inside an activity card (`styles/activity.css`'s typography
+section) — you no longer need a wrapper class just to get readable
+structure. Reach for a block below when the content is a distinct *shape*,
+not just "needs to look nicer."
+
+**Colour means something — don't reach for a colour just to decorate.**
+
+- ink green (`--ink`/`--soft`) → the idea worth keeping: `.remember`,
+  `.term-list`, `.formula`, `.steps`.
+- amber (`--warn`/`--warn-ink`) → caution, **only**: `.warning`. Never used
+  decoratively — if you're tempted to make something amber "to stand out",
+  it isn't a warning, so use `.formula`/`.hl` instead.
+- neutral (`#fafbf9` + `--line`) → structure/illustration, not a fact to
+  memorise: `.example`, the default (uncoloured) `.compare`.
+
+**Which block do I reach for?**
+
+| The content is… | Use | Not |
+|---|---|---|
+| one formula or rule, pulled out to be seen | `.formula` | an inline `style="…"` |
+| an ordered procedure (1., 2., 3.) | `<ol class="steps">` | `1) … 2) …` in one `<p>` |
+| 2+ named terms with definitions | `.term-list` (+ `.no-symbol` if no glyph) | repeated `<p><strong>Term:</strong> …</p>` |
+| a common mistake / thing to watch for | `.warning` | a parenthetical aside |
+| a problem with its worked derivation | `.example` | a run-on sentence |
+| right vs. wrong side by side | `.compare` with `.good`/`.bad` | "na rozdiel od…" prose |
+| one phrase to emphasise mid-sentence | `.hl` | ALL CAPS |
+| the single sentence to memorise for the whole activity | the `remember` field | a hand-written `<div class="remember">` |
+| a symbol table, truth table, or hand-drawn diagram | `.table-wrap`+`table.truth`, `.logic-visual`, `.math-list` | — |
+
+### `.formula` — a formula or rule on its own
+
+```html
+<div class="formula">A ⊆ B<span class="formula-note">Čítame: „A je podmnožinou B.“</span></div>
+```
+
+An optional `.mini-label` above names the rule:
+
+```html
+<div class="formula"><span class="mini-label">PODMNOŽINA</span>A ⊆ B</div>
+```
+
+### `.steps` — a numbered procedure
+
+A real `<ol>` so it stays semantic; the numbered circle badge is generated
+by CSS (`counter()`) — never type the numbers yourself, and inserting a step
+never requires renumbering the rest.
+
+```html
+<ol class="steps">
+  <li>Rozlož každý menovateľ na súčin.</li>
+  <li>Nájdi najmenší spoločný menovateľ (obsahujúci každý činiteľ aspoň raz).</li>
+  <li>Preveď každý zlomok na tento menovateľ.</li>
+  <li>Sčítaj/odčítaj čitatele.</li>
+  <li>Skráť výsledok, ak je to možné.</li>
+</ol>
+```
+
+### `.term-list` — a short glossary of symbols or terms
+
+One `.term-item` per row. `.term-symbol` is a circular badge for a single
+glyph (∧, ∨, D…); when a term has no natural single-character symbol (e.g.
+"Medián", "Modus"), add `.no-symbol` to `.term-item` and drop the badge:
+
+```html
+<div class="term-list">
+  <div class="term-item no-symbol">
+    <div class="term-name">Medián</div>
+    <p class="term-rule">Hodnoty usporiadame podľa veľkosti; pri <span class="hl">nepárnom</span> počte je medián prostredná hodnota, pri <span class="hl">párnom</span> počte je to priemer dvoch prostredných hodnôt.</p>
+  </div>
+</div>
+```
+
+With a symbol badge (see `modules/1-rocnik/vyrokova-formula/04-…js` for the
+full four-connective reference):
+
+```html
+<div class="term-item">
+  <span class="term-symbol">∧</span>
+  <div>
+    <div class="term-name">Konjunkcia — „A a B“</div>
+    <p class="term-rule">Pravdivá iba vtedy, keď sú pravdivé obe časti naraz.</p>
+    <p class="term-example">Príklad: <b>„Mám pero a mám zošit.“</b> Pravdivé, len keď mám aj pero, aj zošit.</p>
+  </div>
+</div>
+```
+
+### `.warning` — a common mistake or caution
+
+```html
+<div class="warning"><strong>Pozor:</strong> 1 m² nie je 100 cm² — to je najčastejšia chyba. Vždy sa umocňuje aj prevodové číslo, nielen jednotka.</div>
+```
+
+### `.example` — a worked example
+
+```html
+<div class="example">
+  <span class="mini-label">PRÍKLAD</span>
+  <p>(2⁻¹)² · 2⁴</p>
+  <p>= 2⁻² · 2⁴ = 2⁻²⁺⁴</p>
+  <p>= 2² = <strong>4</strong></p>
+</div>
+```
+
+### `.compare` — right vs. wrong, side by side
+
+Add `.good`/`.bad` to a cell to colour-code it — the same tokens the answer
+feedback already uses, so green always means "this one is right."
+
+```html
+<div class="compare">
+  <div class="bad"><span class="mini-label">ČASTÁ CHYBA</span><p>(a + b)² = a² + b²</p></div>
+  <div class="good"><span class="mini-label">SPRÁVNE</span><p>(a + b)² = a² + 2ab + b²</p></div>
+</div>
+```
+
+### `.hl` — inline highlight
+
+Replaces ALL-CAPS-as-emphasis. Use it for the one word or phrase in a
+sentence that changes the meaning (a condition, a case), not for general
+decoration:
+
+```html
+<p>pri <span class="hl">nepárnom</span> počte je medián prostredná hodnota</p>
+```
 
 ## Points
 
@@ -77,12 +209,14 @@ if omitted).
 ### `info` — read-only content
 
 Required: `title`, `html`. Optional: `continueLabel` (default
-"Pokračovať").
+"Pokračovať"), `remember` (see below).
 
 ### `explain` — a short explanation
 
-Required: `title`, `html`. Optional: `remember` (shown in a highlighted
-"Zapamätaj si" box).
+Required: `title`, `html`. Optional: `remember` (trusted HTML, shown in a
+highlighted "Zapamätaj si" box) and `rememberLabel` (plain text, overrides
+the "Zapamätaj si:" prefix; set to `false` to drop the label entirely — e.g.
+when the box holds something other than a single fact to memorise).
 
 ### `choice` — single-select, up to two tries
 

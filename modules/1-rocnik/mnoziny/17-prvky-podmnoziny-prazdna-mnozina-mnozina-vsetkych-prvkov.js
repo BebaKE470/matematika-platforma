@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         "type": "info",
         "phase": "NOVÝ SYMBOL",
         "title": "Nový vzťah medzi množinami: podmnožina ⊆",
-        "html": "<p>Ak každý prvok množiny A patrí aj do množiny B, hovoríme, že <strong>A je podmnožinou B</strong> a píšeme:</p><p style=\"font-size:1.35em;text-align:center\"><strong>A ⊆ B</strong></p><p>Príklad: A={1,2}, B={1,2,3}. Každý prvok A nájdeme aj v B, preto A ⊆ B.</p>",
+        "html": "<p>Ak každý prvok množiny A patrí aj do množiny B, hovoríme, že <strong>A je podmnožinou B</strong> a píšeme:</p><div class=\"formula\">A ⊆ B</div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>A={1,2}, B={1,2,3}. Každý prvok A nájdeme aj v B, preto A ⊆ B.</p></div>",
         "continueLabel": "Rozlíšim ∈ a ⊆"
       },
       {
