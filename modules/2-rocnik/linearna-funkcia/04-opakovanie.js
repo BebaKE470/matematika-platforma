@@ -108,7 +108,8 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "OVER SI",
         "skill": "graf",
-        "question": "Ktorý predpis zodpovedá zobrazenému grafu?",
+        "stimulus": "Graf prechádza bodmi [0;3] a [3;0].",
+        "question": "Ktorý predpis zodpovedá tomuto grafu?",
         "options": [
           "f(x)=x+3",
           "f(x)=−3x+1",

@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Riešenie goniometrických rovníc",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Kontrola riešenia goniometrickej rovnice</strong></p><p>Po vyriešení rovnice skontrolujeme: podmienky, všeobecné riešenie, periodicitu a prípadný zadaný interval.</p><p>Ak sme pri úpravách delili výrazom s neznámou, osobitne preveríme hodnoty, pri ktorých je tento výraz nulový.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Kontrola riešenia goniometrickej rovnice</strong></p><p>Po vyriešení rovnice skontrolujeme: podmienky, všeobecné riešenie, periodicitu a prípadný zadaný interval.</p><div class=\"warning\"><strong>Pozor:</strong> Ak sme pri úpravách delili výrazom s neznámou, osobitne preveríme hodnoty, pri ktorých je tento výraz nulový.</div>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {

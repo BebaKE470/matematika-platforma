@@ -88,7 +88,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "POCHOP",
         "title": "Priamy dôkaz na párnych číslach",
-        "html": "<p>Tvrdenie: <strong>Súčet dvoch párnych celých čísel je párny.</strong></p><p>Ak a=2k a b=2m pre celé k,m, potom a+b=2k+2m=2(k+m). Keďže k+m je celé číslo, a+b má tvar 2·(celé číslo), teda je párne.</p><p>To je všeobecný argument: nepoužili sme konkrétne čísla, ale tvar ľubovoľných párnych čísel.</p>",
+        "html": "<p>Tvrdenie: <strong>Súčet dvoch párnych celých čísel je párny.</strong></p><div class=\"example\"><span class=\"mini-label\">DÔKAZ</span><p>Ak a=2k a b=2m pre celé k,m, potom a+b=2k+2m=2(k+m).</p><p>Keďže k+m je celé číslo, a+b má tvar 2·(celé číslo), teda je párne.</p></div><p>To je všeobecný argument: nepoužili sme konkrétne čísla, ale tvar ľubovoľných párnych čísel.</p>",
         "remember": "Priamy dôkaz ide od predpokladu platnými krokmi k záveru."
       },
       {
@@ -96,7 +96,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "OVER SI",
         "skill": "Priamy dôkaz",
-        "question": "Ktorý krok je kľúčový pre záver, že 2(k+m) je párne?",
+        "question": "V dôkaze sme mali a=2k, b=2m (k,m celé čísla) a a+b=2k+2m=2(k+m). Ktorý krok je kľúčový pre záver, že 2(k+m) je párne?",
         "options": [
           "k+m je celé číslo.",
           "k+m je vždy kladné.",

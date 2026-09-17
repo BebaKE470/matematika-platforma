@@ -53,7 +53,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÉ POJMY",
         "title": "Dve operácie, dva významy",
-        "html": "<p><strong>Zjednotenie A ∪ B</strong> obsahuje prvky, ktoré patria <strong>aspoň do jednej</strong> z množín A, B.</p><p><strong>Prienik A ∩ B</strong> obsahuje iba prvky, ktoré patria <strong>súčasne do A aj do B</strong>.</p><p>Symboly čítame: <strong>∪ – zjednotenie</strong>, <strong>∩ – prienik</strong>.</p>",
+        "html": "<div class=\"term-list\"><div class=\"term-item\"><span class=\"term-symbol\">∪</span><div><div class=\"term-name\">Zjednotenie A ∪ B</div><p class=\"term-rule\">Obsahuje prvky, ktoré patria <strong>aspoň do jednej</strong> z množín A, B.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">∩</span><div><div class=\"term-name\">Prienik A ∩ B</div><p class=\"term-rule\">Obsahuje iba prvky, ktoré patria <strong>súčasne do A aj do B</strong>.</p></div></div></div><p>Symboly čítame: <strong>∪ – zjednotenie</strong>, <strong>∩ – prienik</strong>.</p>",
         "remember": "∪ = aspoň v jednej. ∩ = v oboch."
       },
       {
@@ -125,7 +125,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "OVER SI",
         "skill": "Zjednotenie",
-        "question": "Pre tie isté množiny A ∪ B je:",
+        "question": "Ak A={1,2,3} a B={3,4} (tie isté množiny ako v predchádzajúcej úlohe), potom A ∪ B je:",
         "options": [
           "{3}",
           "{1,2,4}",

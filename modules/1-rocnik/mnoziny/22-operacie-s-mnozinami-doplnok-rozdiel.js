@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM",
         "title": "Doplnok množiny",
-        "html": "<p>Ak máme určenú univerzálnu množinu U, <strong>doplnok množiny A</strong> tvoria všetky prvky U, ktoré do A nepatria. Budeme ho zapisovať <strong>A′</strong>.</p><p>Príklad: U={1,2,3,4,5}, A={1,2}. Potom A′={3,4,5}.</p>",
+        "html": "<p>Ak máme určenú univerzálnu množinu U, <strong>doplnok množiny A</strong> tvoria všetky prvky U, ktoré do A nepatria. Budeme ho zapisovať <strong>A′</strong>.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>U={1,2,3,4,5}, A={1,2}. Potom A′={3,4,5}.</p></div>",
         "remember": "Doplnok vždy závisí od univerzálnej množiny U."
       },
       {

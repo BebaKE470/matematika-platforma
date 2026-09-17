@@ -62,7 +62,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ ZÁPIS",
         "title": "Čítame zápis po častiach",
-        "html": "<p>Ak máme <strong>U = {1,2,3,4,5,6,7,8,9}</strong>, môžeme napísať:</p><p style=\"font-size:1.25rem\"><strong>A = {x ∈ U; x je párne}</strong></p><p><strong>x ∈ U</strong> znamená: vyberáme prvok x z množiny U. Bodkočiarka oddeľuje obor, z ktorého vyberáme, od podmienky <strong>x je párne</strong>.</p>",
+        "html": "<p>Ak máme <strong>U = {1,2,3,4,5,6,7,8,9}</strong>, môžeme napísať:</p><div class=\"formula\">A = {x ∈ U; x je párne}</div><p><strong>x ∈ U</strong> znamená: vyberáme prvok x z množiny U. Bodkočiarka oddeľuje obor, z ktorého vyberáme, od podmienky <strong>x je párne</strong>.</p>",
         "remember": "{x ∈ U; podmienka} čítame: množina všetkých x z U, ktoré spĺňajú uvedenú podmienku."
       },
       {

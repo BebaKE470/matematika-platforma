@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Základné identity",
-        "html": "<p>Z jednotkovej kružnice vyplýva sin²x+cos²x=1. Ďalšie základné vzťahy odvodzujeme z definícií tg a cotg.</p>",
+        "html": "<p>Z jednotkovej kružnice vyplýva:</p><div class=\"formula\">sin²x + cos²x = 1</div><p>Ďalšie základné vzťahy odvodzujeme z definícií tg a cotg.</p>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {
@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Základné goniometrické vzorce",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Základné goniometrické vzorce</strong></p><p><strong>sin²x + cos²x = 1</strong></p><p><strong>tg x = sin x / cos x</strong>, ak cos x ≠ 0.</p><p>Z prvého vzorca: sin²x = 1 − cos²x a cos²x = 1 − sin²x.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Základné goniometrické vzorce</strong></p><div class=\"formula\">sin²x + cos²x = 1<span class=\"formula-note\">odtiaľ: sin²x = 1 − cos²x a cos²x = 1 − sin²x.</span></div><div class=\"formula\">tg x = sin x / cos x<span class=\"formula-note\">platí, ak cos x ≠ 0.</span></div>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {

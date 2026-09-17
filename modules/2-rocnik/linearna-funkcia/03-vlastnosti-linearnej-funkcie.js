@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM",
         "title": "Priesečníky s osami a nulový bod",
-        "html": "<p>Priesečník s osou y už poznáme: pri x=0 je bod <strong>[0;b]</strong>.</p><p><strong>Nulový bod funkcie</strong> je hodnota x, pre ktorú <strong>f(x)=0</strong>. Graficky je to x-ová súradnica priesečníka grafu s osou x.</p><p>Pre f(x)=2x−4 platí 2x−4=0, teda x=2. Graf pretína os x v bode [2;0].</p>",
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Priesečník s osou y</div><p class=\"term-rule\">Už ho poznáme: pri x=0 je to bod [0;b].</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nulový bod funkcie</div><p class=\"term-rule\">Hodnota x, pre ktorú f(x)=0. Graficky je to x-ová súradnica priesečníka grafu s osou x.</p></div></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Pre f(x)=2x−4 platí 2x−4=0, teda x=2.</p><p>Graf pretína os x v bode [2;0].</p></div>",
         "remember": "nulový bod hľadáme z podmienky f(x)=0."
       },
       {

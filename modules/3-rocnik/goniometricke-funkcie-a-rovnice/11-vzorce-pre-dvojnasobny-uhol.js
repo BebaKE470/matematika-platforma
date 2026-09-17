@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Vzorce pre dvojnásobný uhol",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Vzorce pre dvojnásobný uhol</strong></p><p>sin 2α = 2 sin α cos α</p><p>cos 2α = cos²α − sin²α</p><p>cos 2α = 2cos²α − 1 = 1 − 2sin²α</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Vzorce pre dvojnásobný uhol</strong></p><div class=\"formula\">sin 2α = 2 sin α cos α</div><div class=\"formula\">cos 2α = cos²α − sin²α<span class=\"formula-note\">cos 2α = 2cos²α − 1 = 1 − 2sin²α</span></div>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {

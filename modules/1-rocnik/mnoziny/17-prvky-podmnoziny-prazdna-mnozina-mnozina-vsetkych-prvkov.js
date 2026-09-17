@@ -69,7 +69,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÉ POJMY",
         "title": "Prázdna a univerzálna množina",
-        "html": "<p><strong>∅</strong> označuje <strong>prázdnu množinu</strong> – množinu, ktorá nemá žiadny prvok.</p><p><strong>U</strong> budeme používať pre <strong>univerzálnu množinu</strong> – dohodnutý súbor všetkých prvkov, o ktorých v danej úlohe uvažujeme.</p>",
+        "html": "<div class=\"term-list\"><div class=\"term-item\"><span class=\"term-symbol\">∅</span><div><div class=\"term-name\">prázdna množina</div><p class=\"term-rule\">Množina, ktorá nemá žiadny prvok.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">U</span><div><div class=\"term-name\">univerzálna množina</div><p class=\"term-rule\">Dohodnutý súbor všetkých prvkov, o ktorých v danej úlohe uvažujeme.</p></div></div></div>",
         "remember": "∅ nemá žiadne prvky. U závisí od toho, o akých objektoch v úlohe hovoríme."
       },
       {

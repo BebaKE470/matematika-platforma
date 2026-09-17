@@ -70,7 +70,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM",
         "title": "Funkcia sin x",
-        "html": "<p>Pre reálne číslo x nájdeme na jednotkovej kružnici bod, ktorý mu zodpovedá – presne tak, ako sme sa naučili v predchádzajúcej hodine (orientovaný oblúk od bodu [1; 0]).</p><p>Hodnota <strong>sin x</strong> je <strong>y-ová súradnica</strong> tohto bodu.</p><p>Keďže ku každému reálnemu číslu x vieme na kružnici nájsť práve jeden bod, funkcia sin x je definovaná pre každé reálne x: <strong>D(sin) = ℝ</strong>.</p>",
+        "html": "<p>Pre reálne číslo x nájdeme na jednotkovej kružnici bod, ktorý mu zodpovedá – presne tak, ako sme sa naučili v predchádzajúcej hodine (orientovaný oblúk od bodu [1; 0]).</p><div class=\"formula\">sin x = y-ová súradnica tohto bodu</div><p>Keďže ku každému reálnemu číslu x vieme na kružnici nájsť práve jeden bod, funkcia sin x je definovaná pre každé reálne x: <strong>D(sin) = ℝ</strong>.</p>",
         "remember": "Najprv definícia na kružnici (bod → y-ová súradnica), až potom vlastnosti grafu."
       },
       {
@@ -142,7 +142,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "sin x – definícia a vlastnosti",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>FUNKCIA y = sin x</strong></p><p>Na jednotkovej kružnici je <strong>sin x</strong> y-ová súradnica bodu, ktorý zodpovedá číslu x.</p><p><strong>Definičný obor:</strong> D(sin) = ℝ<br><strong>Obor hodnôt:</strong> H(sin) = ⟨−1; 1⟩<br><strong>Perióda:</strong> 2π, teda sin(x + 2kπ) = sin x, k ∈ ℤ.<br><strong>Nuly:</strong> x = kπ, k ∈ ℤ.<br><strong>Nepárnosť:</strong> sin(−x) = −sin x.</p><p>Maximum funkcie je 1 pre x = π/2 + 2kπ a minimum je −1 pre x = 3π/2 + 2kπ, k ∈ ℤ.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>FUNKCIA y = sin x</strong></p><p>Na jednotkovej kružnici je <strong>sin x</strong> y-ová súradnica bodu, ktorý zodpovedá číslu x.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Definičný obor</div><p class=\"term-rule\">D(sin) = ℝ</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obor hodnôt</div><p class=\"term-rule\">H(sin) = ⟨−1; 1⟩</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Perióda</div><p class=\"term-rule\">2π, teda sin(x + 2kπ) = sin x, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nuly</div><p class=\"term-rule\">x = kπ, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nepárnosť</div><p class=\"term-rule\">sin(−x) = −sin x.</p></div></div><p>Maximum funkcie je 1 pre x = π/2 + 2kπ a minimum je −1 pre x = 3π/2 + 2kπ, k ∈ ℤ.</p>",
         "model": "Teoretický zápis je zobrazený celý v poli html; model sa v zjednodušenom notebook rendereri nezobrazuje."
       },
       {

@@ -71,7 +71,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ ZÁPIS",
         "title": "Ako zapíšeme množinu?",
-        "html": "<p>Ak poznáme všetky prvky konečnej množiny, môžeme ich <strong>vymenovať v zložených zátvorkách</strong>.</p><p style=\"font-size:1.2em;text-align:center\"><strong>A = {2, 4, 6}</strong></p><p>Čítame: „Množina A obsahuje prvky 2, 4 a 6.“ Poradie prvkov množiny nie je podstatné a ten istý prvok nevypisujeme viackrát.</p>",
+        "html": "<p>Ak poznáme všetky prvky konečnej množiny, môžeme ich <strong>vymenovať v zložených zátvorkách</strong>.</p><div class=\"formula\">A = {2, 4, 6}</div><p>Čítame: „Množina A obsahuje prvky 2, 4 a 6.“ Poradie prvkov množiny nie je podstatné a ten istý prvok nevypisujeme viackrát.</p>",
         "remember": "Zložené zátvorky { } hovoria, že zapisujeme množinu."
       },
       {
@@ -79,7 +79,7 @@ MathPlatform.registerModule({
         "type": "info",
         "phase": "NOVÝ SYMBOL",
         "title": "Teraz zavedieme dva nové symboly: ∈ a ∉",
-        "html": "<div style=\"display:grid;grid-template-columns:1fr 1fr;gap:14px\"><div class=\"result-card\"><div style=\"font-size:2rem;font-weight:800\">∈</div><strong>patrí do množiny</strong><p>4 ∈ A<br><small>„4 patrí do množiny A.“</small></p></div><div class=\"result-card\"><div style=\"font-size:2rem;font-weight:800\">∉</div><strong>nepatrí do množiny</strong><p>5 ∉ A<br><small>„5 nepatrí do množiny A.“</small></p></div></div><p>V oboch zápisoch je <strong>vľavo prvok</strong> a <strong>vpravo množina</strong>.</p>",
+        "html": "<div class=\"term-list\"><div class=\"term-item\"><span class=\"term-symbol\">∈</span><div><div class=\"term-name\">patrí do množiny</div><p class=\"term-example\">4 ∈ A<br><small>„4 patrí do množiny A.“</small></p></div></div><div class=\"term-item\"><span class=\"term-symbol\">∉</span><div><div class=\"term-name\">nepatrí do množiny</div><p class=\"term-example\">5 ∉ A<br><small>„5 nepatrí do množiny A.“</small></p></div></div></div><p>V oboch zápisoch je <strong>vľavo prvok</strong> a <strong>vpravo množina</strong>.</p>",
         "continueLabel": "Teraz si to overím"
       },
       {

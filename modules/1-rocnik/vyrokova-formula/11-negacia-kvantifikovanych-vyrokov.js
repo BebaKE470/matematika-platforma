@@ -208,7 +208,7 @@ MathPlatform.registerModule({
       {
         "id": "zbierka", "type": "taskList", "phase": "4 · ZBIERKA", "skill": "Negácia kvantifikátorov",
         "title": "Neguj kvantifikovaný výrok",
-        "html": "<p class=\"muted\">Použi tabuľku vzorov zo zošita. Odfajkni si úlohu, keď máš negáciu hotovú — riešenie si over tlačidlom.</p>",
+        "html": "<p class=\"muted\">Použi tabuľku vzorov zo zošita. Odfajkni si úlohu, keď máš negáciu hotovú — riešenie si over tlačidlom.</p><div class=\"table-wrap\"><table class=\"truth\"><tr><th>Výrok</th><th>Negácia výroku</th></tr><tr><td>každý ... je ...</td><td>aspoň jeden ... nie je ...</td></tr><tr><td>aspoň jeden je ...</td><td>ani jeden ... nie je ...</td></tr><tr><td>aspoň n ... je ... (n&gt;1)</td><td>najviac (n−1) ... je ...</td></tr><tr><td>najviac n ... je ...</td><td>aspoň (n+1) ... je ...</td></tr><tr><td>najmenej n ... je ...</td><td>najviac (n−1) ... je ...</td></tr><tr><td>žiadny ... je ...</td><td>aspoň jeden ... nie je ...</td></tr><tr><td>práve jeden ... je ...</td><td>nikto alebo aspoň dvaja ... sú ...</td></tr><tr><td>práve dvaja ... sú ...</td><td>najviac jeden alebo aspoň traja ... sú ...</td></tr><tr><td>ani jeden ... nie je ...</td><td>aspoň jeden ... je ...</td></tr></table></div>",
         "items": [
           { "level": "zaklad", "text": "Všetci žiaci mali pravdu.", "answer": "Aspoň jeden žiak nemal pravdu." },
           { "level": "zaklad", "text": "Nikto neodišiel.", "answer": "Aspoň jeden odišiel." },

@@ -55,14 +55,14 @@ MathPlatform.registerModule({
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",
         "title": "Obvod a obsah lichobežníka",
-        "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><polygon points=\"160,70 350,70 430,270 70,270\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><line x1=\"160\" y1=\"70\" x2=\"160\" y2=\"270\" stroke=\"#9b6b2f\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><text x=\"168\" y=\"175\">v</text><text x=\"245\" y=\"292\">a</text><text x=\"245\" y=\"60\">c</text></svg></div><p>S=(a+c)·v/2; o=a+b+c+d.</p>"
+        "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><polygon points=\"160,70 350,70 430,270 70,270\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><line x1=\"160\" y1=\"70\" x2=\"160\" y2=\"270\" stroke=\"#9b6b2f\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><text x=\"168\" y=\"175\">v</text><text x=\"245\" y=\"292\">a</text><text x=\"245\" y=\"60\">c</text></svg></div><div class=\"formula\">S = (a + c) · v / 2<span class=\"formula-note\">o = a + b + c + d</span></div>"
       },
       {
         "id": "meaning",
         "type": "explain",
         "phase": "VÝZNAM",
         "title": "Obvod nie je obsah",
-        "html": "<p><strong>Obvod</strong> meria dĺžku hranice útvaru a zapisujeme ho v dĺžkových jednotkách. <strong>Obsah</strong> meria veľkosť plochy a zapisujeme ho v štvorcových jednotkách.</p>",
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Obvod</div><p class=\"term-rule\">Meria dĺžku hranice útvaru a zapisujeme ho v dĺžkových jednotkách.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obsah</div><p class=\"term-rule\">Meria veľkosť plochy a zapisujeme ho v štvorcových jednotkách.</p></div></div>",
         "remember": "Vzorec používaj až po tom, čo vieš, ktoré rozmery v obrázku predstavujú jeho veličiny."
       },
       {

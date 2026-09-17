@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "KROK 1",
         "skill": "D a H",
-        "question": "Aké sú D(f) a H(f) zobrazeného grafu?",
+        "question": "Graf funkcie f prechádza (zľava doprava) bodmi [−4,1], [−3,3], [−2,4], [−1,3], [0,1], [1,−1], [2,−2], [3,−1], [4,2], spojenými lomenou čiarou. Aké sú D(f) a H(f) tejto funkcie?",
         "options": [
           "D=⟨−4;4⟩, H=⟨−4;4⟩",
           "D=⟨−2;4⟩, H=⟨−4;4⟩",
@@ -77,7 +77,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "KROK 2",
         "skill": "extrémy",
-        "question": "Ktoré tvrdenie je správne?",
+        "question": "Graf funkcie f prechádza (zľava doprava) bodmi [−4,1], [−3,3], [−2,4], [−1,3], [0,1], [1,−1], [2,−2], [3,−1], [4,2], spojenými lomenou čiarou. Ktoré tvrdenie o jej extrémoch je správne?",
         "options": [
           "maximum je 4 a minimum −2",
           "minimum je 2",
@@ -96,19 +96,19 @@ MathPlatform.registerModule({
         "title": "Rastie alebo klesá na úseku?",
         "items": [
           {
-            "text": "od x=−4 po x=−2",
+            "text": "od x=−4 (y=1) po x=−2 (y=4)",
             "answer": true,
-            "why": "Pri pohybe zľava doprava hodnoty rastú."
+            "why": "Pri pohybe zľava doprava hodnoty rastú (z 1 na 4)."
           },
           {
-            "text": "od x=−2 po x=2",
+            "text": "od x=−2 (y=4) po x=2 (y=−2)",
             "answer": false,
-            "why": "Hodnoty na tomto úseku klesajú."
+            "why": "Hodnoty na tomto úseku klesajú (zo 4 na −2)."
           },
           {
-            "text": "od x=2 po x=4",
+            "text": "od x=2 (y=−2) po x=4 (y=2)",
             "answer": true,
-            "why": "Od minima pri x=2 hodnoty rastú."
+            "why": "Od minima pri x=2 hodnoty rastú (z −2 na 2)."
           }
         ],
         "labels": [
@@ -121,13 +121,13 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "KROK 4",
         "skill": "prostosť",
-        "question": "Je táto funkcia na celom zobrazenom D(f) prostá?",
+        "question": "Graf funkcie f prechádza (zľava doprava) bodmi [−4,1], [−3,3], [−2,4], [−1,3], [0,1], [1,−1], [2,−2], [3,−1], [4,2], spojenými lomenou čiarou. Je táto funkcia na celom svojom definičnom obore prostá?",
         "options": [
           "áno",
           "nie"
         ],
         "answer": 1,
-        "correct": "Nie. Niektoré vodorovné priamky pretínajú graf viackrát, teda rovnaká hodnota y vzniká pre viac vstupov.",
+        "correct": "Nie. Niektoré vodorovné priamky pretínajú graf viackrát — napríklad hodnota y=1 vzniká pri x=−4 aj pri x=0.",
         "hint": "Predstav si vodorovnú priamku."
       },
       {
@@ -135,7 +135,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "KROK 5",
         "skill": "ohraničenosť",
-        "question": "Ako je funkcia na zobrazenom D(f) ohraničená?",
+        "question": "Graf funkcie f prechádza (zľava doprava) bodmi [−4,1], [−3,3], [−2,4], [−1,3], [0,1], [1,−1], [2,−2], [3,−1], [4,2], spojenými lomenou čiarou. Ako je táto funkcia ohraničená?",
         "options": [
           "iba zhora",
           "zhora aj zdola",
@@ -159,7 +159,7 @@ MathPlatform.registerModule({
         "type": "selfWrite",
         "phase": "ARGUMENTUJ",
         "title": "Zdôvodni neprostosť",
-        "prompt": "Vysvetli z grafu, prečo funkcia nie je prostá.",
+        "promptHtml": "Funkcia f prechádza (zľava doprava) bodmi [−4,1], [−3,3], [−2,4], [−1,3], [0,1], [1,−1], [2,−2], [3,−1], [4,2], spojenými lomenou čiarou. Vysvetli z týchto hodnôt, prečo funkcia nie je prostá.",
         "model": "Existuje vodorovná priamka, ktorá pretína graf vo viac ako jednom bode. Preto existujú rôzne vstupy s rovnakou funkčnou hodnotou a funkcia nie je prostá."
       },
       {

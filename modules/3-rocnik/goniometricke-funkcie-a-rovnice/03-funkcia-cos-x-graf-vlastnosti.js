@@ -72,7 +72,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM",
         "title": "Funkcia cos x",
-        "html": "<p>Pre reálne číslo x najprv nájdeme príslušný bod jednotkovej kružnice. Hodnota <strong>cos x</strong> je určená takto: <strong>x-ová súradnica</strong>.</p><p>Funkcia je definovaná pre každé reálne x.</p>",
+        "html": "<p>Pre reálne číslo x najprv nájdeme príslušný bod jednotkovej kružnice.</p><div class=\"formula\">cos x = x-ová súradnica tohto bodu</div><p>Funkcia je definovaná pre každé reálne x.</p>",
         "remember": "Najprv definícia na kružnici, až potom vlastnosti grafu."
       },
       {
@@ -127,7 +127,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "cos x – definícia a vlastnosti",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>FUNKCIA y = cos x</strong></p><p>Na jednotkovej kružnici je <strong>cos x</strong> x-ová súradnica bodu, ktorý zodpovedá číslu x.</p><p><strong>Definičný obor:</strong> D(cos) = ℝ<br><strong>Obor hodnôt:</strong> H(cos) = ⟨−1; 1⟩<br><strong>Perióda:</strong> 2π, teda cos(x + 2kπ) = cos x, k ∈ ℤ.<br><strong>Nuly:</strong> x = π/2 + kπ, k ∈ ℤ.<br><strong>Párnosť:</strong> cos(−x) = cos x.</p><p>Maximum funkcie je 1 pre x = 2kπ a minimum je −1 pre x = π + 2kπ, k ∈ ℤ.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>FUNKCIA y = cos x</strong></p><p>Na jednotkovej kružnici je <strong>cos x</strong> x-ová súradnica bodu, ktorý zodpovedá číslu x.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Definičný obor</div><p class=\"term-rule\">D(cos) = ℝ</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obor hodnôt</div><p class=\"term-rule\">H(cos) = ⟨−1; 1⟩</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Perióda</div><p class=\"term-rule\">2π, teda cos(x + 2kπ) = cos x, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nuly</div><p class=\"term-rule\">x = π/2 + kπ, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Párnosť</div><p class=\"term-rule\">cos(−x) = cos x.</p></div></div><p>Maximum funkcie je 1 pre x = 2kπ a minimum je −1 pre x = π + 2kπ, k ∈ ℤ.</p>",
         "model": "Teoretický zápis je zobrazený celý v poli html; model sa v zjednodušenom notebook rendereri nezobrazuje."
       },
       {

@@ -81,7 +81,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "1 · NOVÝ POJEM",
         "title": "Lineárna funkcia",
-        "html": "<p>Funkciu s predpisom <strong>f(x)=ax+b</strong>, kde a a b sú reálne čísla, nazývame <strong>lineárna funkcia</strong>.</p><p><strong>a</strong> je koeficient pri x. Určuje smer a strmosť priamky. <strong>b</strong> je hodnota f(0), teda miesto, kde graf pretína os y.</p>",
+        "html": "<p>Funkciu s predpisom:</p><div class=\"formula\">f(x) = ax + b<span class=\"formula-note\">kde a a b sú reálne čísla — nazývame ju lineárna funkcia.</span></div><div class=\"term-list\"><div class=\"term-item\"><span class=\"term-symbol\">a</span><div><div class=\"term-name\">koeficient pri x</div><p class=\"term-rule\">Určuje smer a strmosť priamky.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">b</span><div><div class=\"term-name\">hodnota f(0)</div><p class=\"term-rule\">Miesto, kde graf pretína os y.</p></div></div></div>",
         "remember": "graf lineárnej funkcie je priamka (pri a=0 vodorovná priamka)."
       },
       {

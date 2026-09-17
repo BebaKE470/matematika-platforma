@@ -245,7 +245,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "1 · NOVÝ POJEM 2",
         "title": "Štyri pojmy z dnešnej hodiny",
-        "html": "<p><strong>Definícia</strong> zavádza alebo vymedzuje matematický pojem.</p><p><strong>Tvrdenie</strong> je matematická veta, ktorej pravdivosť posudzujeme.</p><p><strong>Hypotéza</strong> je predpokladané tvrdenie, ktorého platnosť skúmame.</p><p><strong>Axióma</strong> je východiskové tvrdenie prijaté v rámci matematickej teórie bez dôkazu.</p>",
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Definícia</div><p class=\"term-rule\">Zavádza alebo vymedzuje matematický pojem.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Tvrdenie</div><p class=\"term-rule\">Matematická veta, ktorej pravdivosť posudzujeme.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Hypotéza</div><p class=\"term-rule\">Predpokladané tvrdenie, ktorého platnosť skúmame.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Axióma</div><p class=\"term-rule\">Východiskové tvrdenie prijaté v rámci matematickej teórie bez dôkazu.</p></div></div>",
         "remember": "Tieto pojmy rozlišuj podľa ich úlohy, nie iba podľa toho, ako veta vyzerá."
       },
       {
@@ -314,7 +314,7 @@ MathPlatform.registerModule({
         "phase": "3 · VYJADRI SA",
         "skill": "Matematická komunikácia",
         "title": "Vysvetli svoje rozhodnutie",
-        "promptHtml": "Do zošita jednou až dvoma vetami vysvetli, prečo Adamova a Cyrilova veta nie sú výroky a prečo Beátina veta výrokom je.",
+        "promptHtml": "Adam: „Koľko je 6 + 7?“ · Beáta: „Číslo 15 je párne.“ · Cyril: „Vypočítaj 6 + 7!“<br>Do zošita jednou až dvoma vetami vysvetli, prečo Adamova a Cyrilova veta nie sú výroky a prečo Beátina veta výrokom je.",
         "model": "Adam sa pýta, preto jeho veta nie je výrok. Cyril dáva príkaz, preto jeho veta tiež nie je výrok. Beáta vyslovila oznamovacie tvrdenie, o ktorom možno rozhodnúť, či je pravdivé alebo nepravdivé; je to teda výrok, v tomto prípade nepravdivý."
       },
       {

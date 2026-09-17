@@ -116,8 +116,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ ZÁPIS",
         "title": "Ako funkciu zapisujeme",
-        "html": "<p>Funkciu môžeme pomenovať napríklad písmenom <strong>f</strong>. Ak vstup označíme <strong>x</strong>, zápis <strong>f(x)</strong> čítame „ef od x“ a znamená <strong>výstup funkcie pri vstupe x</strong>.</p><p>Ak pravidlo znie „vynásob 2 a pripočítaj 1“, môžeme zapísať <strong>f(x) = 2x + 1</strong>.</p><p>Potom napríklad <strong>f(4)=9</strong>.</p>",
-        "remember": "f(x) nie je násobenie f · x; je to označenie funkčnej hodnoty."
+        "html": "<p>Funkciu môžeme pomenovať napríklad písmenom <strong>f</strong>. Ak vstup označíme <strong>x</strong>, zápis <strong>f(x)</strong> čítame „ef od x“ a znamená <strong>výstup funkcie pri vstupe x</strong>.</p><p>Ak pravidlo znie „vynásob 2 a pripočítaj 1“, môžeme zapísať:</p><div class=\"formula\">f(x) = 2x + 1<span class=\"formula-note\">Potom napríklad f(4) = 9.</span></div><div class=\"warning\"><strong>Pozor:</strong> f(x) nie je násobenie f · x; je to označenie funkčnej hodnoty.</div>"
       },
       {
         "id": "ways",

@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Úprava výrazov",
-        "html": "<p>Pri úprave nemeníme hodnotu výrazu: volíme identitu, upravíme jednu stranu a kontrolujeme podmienky.</p>",
+        "html": "<p>Pri úprave nemeníme hodnotu výrazu:</p><ol class=\"steps\"><li>Volíme identitu.</li><li>Upravíme jednu stranu.</li><li>Kontrolujeme podmienky.</li></ol>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {
@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Úprava goniometrických výrazov",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Úprava goniometrických výrazov</strong></p><p>Pri úprave najprv rozpoznaj vhodný vzorec, potom upravuj algebraicky.</p><p>Najčastejšie používame: <strong>sin²x + cos²x = 1</strong>, súčtové vzorce a vzorce pre dvojnásobný uhol.</p><p>Pri delení výrazom vždy skontroluj, kedy je deliteľ nenulový.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Úprava goniometrických výrazov</strong></p><p>Pri úprave najprv rozpoznaj vhodný vzorec, potom upravuj algebraicky.</p><p>Najčastejšie používame: <strong>sin²x + cos²x = 1</strong>, súčtové vzorce a vzorce pre dvojnásobný uhol.</p><div class=\"warning\"><strong>Pozor:</strong> Pri delení výrazom vždy skontroluj, kedy je deliteľ nenulový.</div>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {

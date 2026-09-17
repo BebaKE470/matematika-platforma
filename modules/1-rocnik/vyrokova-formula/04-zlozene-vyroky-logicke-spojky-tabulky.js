@@ -275,7 +275,7 @@ MathPlatform.registerModule({
         "type": "info",
         "phase": "1 · 5. HODINA · UPEVNENIE",
         "title": "5. hodina – pokračujeme po krokoch",
-        "html": "<p>Pri výraze s negáciou postupuj systematicky:</p><ol><li>urči hodnoty A a B,</li><li>vyhodnoť negáciu,</li><li>nájdi hlavnú spojku,</li><li>až potom urči pravdivostnú hodnotu celého výroku.</li></ol><p class=\"keyidea\">Najprv medzikrok, potom výsledok.</p>",
+        "html": "<p>Pri výraze s negáciou postupuj systematicky:</p><ol class=\"steps\"><li>Urči hodnoty A a B.</li><li>Vyhodnoť negáciu.</li><li>Nájdi hlavnú spojku.</li><li>Až potom urči pravdivostnú hodnotu celého výroku.</li></ol><p class=\"keyidea\">Najprv medzikrok, potom výsledok.</p>",
         "continueLabel": "Pokračujem"
       },
       {

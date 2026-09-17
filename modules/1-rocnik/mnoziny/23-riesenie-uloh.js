@@ -117,7 +117,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "OVER SI",
         "skill": "Doplnok",
-        "question": "Doplnok množiny B v U je:",
+        "question": "Ak U={1,2,3,4,5,6} a B={3,4,5} (tie isté množiny ako v predchádzajúcej úlohe), doplnok množiny B v U je:",
         "options": [
           "{1,2}",
           "{3,4,5}",

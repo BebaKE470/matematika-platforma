@@ -63,7 +63,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM",
         "title": "Radián a oblúková miera",
-        "html": "<p>Na jednotkovej kružnici číselná hodnota uhla v <strong>radiánoch</strong> zodpovedá dĺžke príslušného oblúka. Celý obeh má dĺžku <strong>2π</strong>.</p><p>Preto π/2 je štvrť obratu, π pol obratu a 2π celý obrat.</p>",
+        "html": "<p>Na jednotkovej kružnici číselná hodnota uhla v <strong>radiánoch</strong> zodpovedá dĺžke príslušného oblúka. Celý obeh má dĺžku <strong>2π</strong>.</p><div class=\"formula\">π/2 — štvrť obratu<br>π — pol obratu<br>2π — celý obrat</div>",
         "remember": "Najprv rozumej pohybu po kružnici; sin a cos budeme definovať až v nasledujúcich hodinách."
       },
       {
@@ -103,7 +103,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "SÚVISLOSŤ",
         "title": "Jeden bod, viac čísel",
-        "html": "<p>Po celom obehu sa vrátime do toho istého bodu. Preto čísla <strong>x</strong>, <strong>x+2π</strong>, <strong>x−2π</strong> zobrazia ten istý bod.</p>",
+        "html": "<p>Po celom obehu sa vrátime do toho istého bodu.</p><div class=\"formula\">x,  x+2π,  x−2π<span class=\"formula-note\">Tieto čísla zobrazujú ten istý bod kružnice.</span></div>",
         "remember": "Všeobecne x+2kπ, kde k je celé číslo, určuje ten istý bod."
       },
       {

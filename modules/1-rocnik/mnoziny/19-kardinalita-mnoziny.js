@@ -53,7 +53,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ ZÁPIS",
         "title": "Počet prvkov množiny",
-        "html": "<p>Počet prvkov konečnej množiny nazývame <strong>kardinalita množiny</strong>. Zapisujeme ho <strong>|A|</strong>.</p><p>Ak A={2,4,6}, potom <strong>|A|=3</strong>. Počítame rôzne prvky množiny, nie počet znakov v zápise.</p>",
+        "html": "<p>Počet prvkov konečnej množiny nazývame <strong>kardinalita množiny</strong>.</p><div class=\"formula\">|A|<span class=\"formula-note\">Počet prvkov množiny A.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>A={2,4,6}, teda |A|=3. Počítame rôzne prvky množiny, nie počet znakov v zápise.</p></div>",
         "remember": "|A| znamená počet prvkov množiny A."
       },
       {

@@ -55,14 +55,14 @@ MathPlatform.registerModule({
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",
         "title": "Obvod a obsah kosoštvorca",
-        "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><polygon points=\"150,70 410,70 350,270 90,270\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><line x1=\"150\" y1=\"70\" x2=\"150\" y2=\"270\" stroke=\"#9b6b2f\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><text x=\"158\" y=\"175\">vₐ</text><text x=\"220\" y=\"292\">a</text></svg></div><p>S=a·vₐ; pri kosoštvorci možno využiť aj uhlopriečky.</p>"
+        "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><polygon points=\"150,70 410,70 350,270 90,270\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><line x1=\"150\" y1=\"70\" x2=\"150\" y2=\"270\" stroke=\"#9b6b2f\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><text x=\"158\" y=\"175\">vₐ</text><text x=\"220\" y=\"292\">a</text></svg></div><div class=\"formula\">S = a · vₐ<span class=\"formula-note\">Pri kosoštvorci možno využiť aj uhlopriečky.</span></div>"
       },
       {
         "id": "meaning",
         "type": "explain",
         "phase": "VÝZNAM",
         "title": "Obvod nie je obsah",
-        "html": "<p><strong>Obvod</strong> meria dĺžku hranice útvaru a zapisujeme ho v dĺžkových jednotkách. <strong>Obsah</strong> meria veľkosť plochy a zapisujeme ho v štvorcových jednotkách.</p>",
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Obvod</div><p class=\"term-rule\">Meria dĺžku hranice útvaru a zapisujeme ho v dĺžkových jednotkách.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obsah</div><p class=\"term-rule\">Meria veľkosť plochy a zapisujeme ho v štvorcových jednotkách.</p></div></div>",
         "remember": "Vzorec používaj až po tom, čo vieš, ktoré rozmery v obrázku predstavujú jeho veličiny."
       },
       {

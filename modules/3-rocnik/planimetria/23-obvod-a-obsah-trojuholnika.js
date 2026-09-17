@@ -55,14 +55,14 @@ MathPlatform.registerModule({
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",
         "title": "Obvod a obsah trojuholníka",
-        "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><polygon points=\"90,270 250,60 420,270\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><line x1=\"250\" y1=\"60\" x2=\"250\" y2=\"270\" stroke=\"#9b6b2f\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><text x=\"258\" y=\"175\">v</text><text x=\"245\" y=\"292\">a</text></svg></div><p>S = a·vₐ/2; obvod je súčet troch strán.</p>"
+        "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><polygon points=\"90,270 250,60 420,270\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><line x1=\"250\" y1=\"60\" x2=\"250\" y2=\"270\" stroke=\"#9b6b2f\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><text x=\"258\" y=\"175\">v</text><text x=\"245\" y=\"292\">a</text></svg></div><div class=\"formula\">S = a·vₐ/2<span class=\"formula-note\">Obvod je súčet troch strán.</span></div>"
       },
       {
         "id": "meaning",
         "type": "explain",
         "phase": "VÝZNAM",
         "title": "Obvod nie je obsah",
-        "html": "<p><strong>Obvod</strong> meria dĺžku hranice útvaru a zapisujeme ho v dĺžkových jednotkách. <strong>Obsah</strong> meria veľkosť plochy a zapisujeme ho v štvorcových jednotkách.</p>",
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Obvod</div><p class=\"term-rule\">Meria dĺžku hranice útvaru a zapisujeme ho v dĺžkových jednotkách.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obsah</div><p class=\"term-rule\">Meria veľkosť plochy a zapisujeme ho v štvorcových jednotkách.</p></div></div>",
         "remember": "Vzorec používaj až po tom, čo vieš, ktoré rozmery v obrázku predstavujú jeho veličiny."
       },
       {

@@ -55,14 +55,14 @@ MathPlatform.registerModule({
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",
         "title": "Obvod a obsah kruhu a jeho častí",
-        "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><circle cx=\"250\" cy=\"170\" r=\"120\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><line x1=\"250\" y1=\"170\" x2=\"370\" y2=\"170\" stroke=\"#9b6b2f\" stroke-width=\"4\"/><text x=\"305\" y=\"160\">r</text><path d=\"M250 170 L370 170 A120 120 0 0 0 310 66 Z\" fill=\"rgba(155,107,47,.12)\" stroke=\"#9b6b2f\" stroke-width=\"2\"/><text x=\"325\" y=\"110\">α</text></svg></div><p>Kruh: S=πr², o=2πr. Pri výseku pracujeme s príslušnou časťou celého uhla 360°.</p>"
+        "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><circle cx=\"250\" cy=\"170\" r=\"120\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><line x1=\"250\" y1=\"170\" x2=\"370\" y2=\"170\" stroke=\"#9b6b2f\" stroke-width=\"4\"/><text x=\"305\" y=\"160\">r</text><path d=\"M250 170 L370 170 A120 120 0 0 0 310 66 Z\" fill=\"rgba(155,107,47,.12)\" stroke=\"#9b6b2f\" stroke-width=\"2\"/><text x=\"325\" y=\"110\">α</text></svg></div><div class=\"formula\"><span class=\"mini-label\">KRUH</span>S=πr², o=2πr<span class=\"formula-note\">Pri výseku pracujeme s príslušnou časťou celého uhla 360°.</span></div>"
       },
       {
         "id": "meaning",
         "type": "explain",
         "phase": "VÝZNAM",
         "title": "Obvod nie je obsah",
-        "html": "<p><strong>Obvod</strong> meria dĺžku hranice útvaru a zapisujeme ho v dĺžkových jednotkách. <strong>Obsah</strong> meria veľkosť plochy a zapisujeme ho v štvorcových jednotkách.</p>",
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Obvod</div><p class=\"term-rule\">Meria dĺžku hranice útvaru; zapisujeme ho v dĺžkových jednotkách.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obsah</div><p class=\"term-rule\">Meria veľkosť plochy; zapisujeme ho v štvorcových jednotkách.</p></div></div>",
         "remember": "Vzorec používaj až po tom, čo vieš, ktoré rozmery v obrázku predstavujú jeho veličiny."
       },
       {

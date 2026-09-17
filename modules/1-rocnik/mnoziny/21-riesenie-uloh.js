@@ -117,7 +117,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "OVER SI",
         "skill": "Operácie s množinami",
-        "question": "Pre tie isté množiny má A ∪ B koľko prvkov?",
+        "question": "Ak A={2,4,6} a B={4,6,8} (tie isté množiny ako v predchádzajúcej úlohe), koľko prvkov má A ∪ B?",
         "options": [
           "4",
           "5",

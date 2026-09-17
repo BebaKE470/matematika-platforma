@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Rovnice – systematický postup",
-        "html": "<p>Podmienky → úprava → základné riešenia → periodicita → kontrola.</p>",
+        "html": "<ol class=\"steps\"><li>Podmienky</li><li>Úprava</li><li>Základné riešenia</li><li>Periodicita</li><li>Kontrola</li></ol>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {
@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Riešenie goniometrických rovníc",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Riešenie goniometrických rovníc</strong></p><p>Rovnicu sa snažíme upraviť na základný tvar <strong>sin x = a</strong>, <strong>cos x = a</strong> alebo <strong>tg x = a</strong>.</p><p>Pri úpravách používame goniometrické vzorce a algebraické úpravy. Každé získané riešenie musí spĺňať podmienky pôvodnej rovnice.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Riešenie goniometrických rovníc</strong></p><p>Rovnicu sa snažíme upraviť na základný tvar:</p><div class=\"formula\">sin x = a, cos x = a alebo tg x = a.</div><p>Pri úpravách používame goniometrické vzorce a algebraické úpravy.</p><div class=\"warning\"><strong>Pozor:</strong> Každé získané riešenie musí spĺňať podmienky pôvodnej rovnice.</div>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {
