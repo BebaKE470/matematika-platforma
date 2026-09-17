@@ -67,7 +67,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Vety o zhodnosti a kritériá podobnosti',
-        html: '<p>Trojuholníky sú <strong>zhodné</strong>, ak sa zhodujú v: <strong>sss</strong> (všetky tri strany), <strong>sus</strong> (dve strany a uhol nimi zovretý), alebo <strong>usu</strong> (strana a dva priľahlé uhly).</p><p>Trojuholníky sú <strong>podobné</strong>, ak majú strany v rovnakom pomere (sss podobnosť), dve strany v rovnakom pomere so zhodným uhlom medzi nimi (sus), alebo sa zhodujú v dvoch uhloch (uu).</p><p><strong>Koeficient podobnosti k</strong> je pomer zodpovedajúcich strán podobných trojuholníkov.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Zhodnosť trojuholníkov</div><p class="term-rule">Trojuholníky sú zhodné, ak sa zhodujú v: <strong>sss</strong> (všetky tri strany), <strong>sus</strong> (dve strany a uhol nimi zovretý), alebo <strong>usu</strong> (strana a dva priľahlé uhly).</p></div><div class="term-item no-symbol"><div class="term-name">Podobnosť trojuholníkov</div><p class="term-rule">Trojuholníky sú podobné, ak majú strany v rovnakom pomere (<strong>sss</strong> podobnosť), dve strany v rovnakom pomere so zhodným uhlom medzi nimi (<strong>sus</strong>), alebo sa zhodujú v dvoch uhloch (<strong>uu</strong>).</p></div></div><p><strong>Koeficient podobnosti k</strong> je pomer zodpovedajúcich strán podobných trojuholníkov.</p>',
         remember: 'Zhodnosť: sss, sus, usu. Podobnosť: sss, sus, uu. Koeficient podobnosti k = pomer zodpovedajúcich strán.',
       },
       {
@@ -105,7 +105,7 @@ MathPlatform.registerModule({
         ],
         answer: 0,
         correct: 'Presne. Zhodnosť vyžaduje rovnakú veľkosť aj tvar; tu majú rovnaký tvar (rovnaké uhly), ale rôznu veľkosť strán — to je podobnosť.',
-        hint: 'Zhodnosť vyžaduje ROVNAKÚ veľkosť, nielen rovnaký tvar.',
+        hint: 'Zhodnosť vyžaduje <span class="hl">rovnakú</span> veľkosť, nielen rovnaký tvar.',
       },
       {
         id: 'q-application',
@@ -127,7 +127,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Zhodnosť trojuholníkov</strong> (rovnaký tvar aj veľkosť): vety sss, sus, usu.</p><p><strong>Podobnosť trojuholníkov</strong> (rovnaký tvar, prípadne iná veľkosť): kritériá sss, sus, uu.</p><p><strong>Koeficient podobnosti k</strong> = pomer zodpovedajúcich strán podobných trojuholníkov.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Zhodnosť trojuholníkov</div><p class="term-rule">(rovnaký tvar aj veľkosť): vety sss, sus, usu.</p></div><div class="term-item no-symbol"><div class="term-name">Podobnosť trojuholníkov</div><p class="term-rule">(rovnaký tvar, prípadne iná veľkosť): kritériá sss, sus, uu.</p></div></div><p><strong>Koeficient podobnosti k</strong> = pomer zodpovedajúcich strán podobných trojuholníkov.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

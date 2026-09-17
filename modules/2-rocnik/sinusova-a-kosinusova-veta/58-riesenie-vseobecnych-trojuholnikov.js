@@ -55,7 +55,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Dve vety, rôzne situácie',
-        html: '<p><strong>Sínusová veta:</strong> poznáme aspoň jeden pár strana-protiľahlý uhol.</p><p><strong>Kosínusová veta:</strong> poznáme dve strany a uhol medzi nimi, ALEBO všetky tri strany (bez potreby poznať uhol).</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Sínusová veta</div><p class="term-rule">Poznáme aspoň jeden pár strana-protiľahlý uhol.</p></div><div class="term-item no-symbol"><div class="term-name">Kosínusová veta</div><p class="term-rule">Poznáme dve strany a uhol medzi nimi, <span class="hl">alebo</span> všetky tri strany (bez potreby poznať uhol).</p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -77,7 +77,7 @@ MathPlatform.registerModule({
         question: 'Poznáme strany a=8cm, b=6cm a uhol medzi nimi γ=90°. Ktorú vetu použijeme na výpočet strany c?',
         options: ['sínusovú vetu', 'kosínusovú vetu', 'ani jednu, chýbajú údaje'],
         answer: 1,
-        correct: 'Správne. Poznáme dve strany a uhol MEDZI nimi (nie protiľahlý), preto použijeme kosínusovú vetu.',
+        correct: 'Správne. Poznáme dve strany a uhol <span class="hl">medzi</span> nimi (nie protiľahlý), preto použijeme kosínusovú vetu.',
         hint: 'Je uhol γ protiľahlý niektorej zo známych strán, alebo je medzi nimi?',
       },
       {
@@ -134,7 +134,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Zhrň, ako v prvom kroku rozhodneš, ktorú z dvoch viet (sínusovú, kosínusovú) na danú úlohu o všeobecnom trojuholníku použiješ.',
-        model: 'Najprv sa pozriem, aké údaje mám: ak poznám aspoň jednu stranu spolu s jej PROTIĽAHLÝM uhlom, použijem sínusovú vetu. Ak poznám dve strany a uhol MEDZI nimi, alebo všetky tri strany bez uhla, použijem kosínusovú vetu (v základnom, alebo upravenom tvare pre výpočet uhla).',
+        model: 'Najprv sa pozriem, aké údaje mám: ak poznám aspoň jednu stranu spolu s jej <span class="hl">protiľahlým</span> uhlom, použijem sínusovú vetu. Ak poznám dve strany a uhol <span class="hl">medzi</span> nimi, alebo všetky tri strany bez uhla, použijem kosínusovú vetu (v základnom, alebo upravenom tvare pre výpočet uhla).',
       },
       {
         id: 'manual',

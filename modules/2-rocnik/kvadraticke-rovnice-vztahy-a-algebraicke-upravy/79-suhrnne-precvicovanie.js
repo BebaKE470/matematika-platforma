@@ -54,7 +54,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie postupov',
-        html: '<p>Vietove vzťahy: x₁+x₂=−b/a, x₁·x₂=c/a. Rozklad: ax²+bx+c=a(x−x₁)(x−x₂). Krátenie: rozlož, potom skráť spoločný činiteľ (s podmienkou definičného oboru).</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Vietove vzťahy</div><p class="term-rule">x₁+x₂=−b/a, x₁·x₂=c/a.</p></div><div class="term-item no-symbol"><div class="term-name">Rozklad</div><p class="term-rule">ax²+bx+c=a(x−x₁)(x−x₂).</p></div><div class="term-item no-symbol"><div class="term-name">Krátenie</div><p class="term-rule">Rozlož, potom skráť spoločný činiteľ (s podmienkou definičného oboru).</p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -91,7 +91,7 @@ MathPlatform.registerModule({
           'Mal namiesto x krátiť číslo 15.',
         ],
         answer: 0,
-        correct: 'Presne. Krátiť možno iba SPOLOČNÉHO ČINITEĽA celého súčinu, nie jednotlivé sčítance. Najprv treba x²+2x−15 rozložiť na (x−3)(x+5), a potom skrátiť (x+5).',
+        correct: 'Presne. Krátiť možno iba <span class="hl">spoločného činiteľa</span> celého súčinu, nie jednotlivé sčítance. Najprv treba x²+2x−15 rozložiť na (x−3)(x+5), a potom skrátiť (x+5).',
         hint: 'Skús rozložiť x²+2x−15 na súčin pomocou koreňov a až potom krátiť.',
       },
       {
@@ -112,7 +112,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Postup pri kombinovanej úlohe: 1) odhadni korene rovnice (Vietove vzťahy) alebo použi diskriminant, 2) rozlož trojčlen na súčin a(x−x₁)(x−x₂), 3) ak ide o lomený výraz, urč definičný obor a skráť spoločný činiteľ.</p>',
+        html: '<p>Postup pri kombinovanej úlohe:</p><ol class="steps"><li>Odhadni korene rovnice (Vietove vzťahy) alebo použi diskriminant.</li><li>Rozlož trojčlen na súčin a(x−x₁)(x−x₂).</li><li>Ak ide o lomený výraz, urč definičný obor a skráť spoločný činiteľ.</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -122,7 +122,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo je dôležité poznať poradie krokov (najprv rozklad, potom krátenie), a nie ich robiť v inom poradí alebo naraz?',
-        model: 'Pretože krátiť možno iba spoločného činiteľa CELÉHO súčinu v čitateli a menovateli, nie jednotlivé členy súčtu. Ak by sme sa pokúsili krátiť pred rozkladom na súčin, kráteli by sme nesprávne (napríklad jednotlivé sčítance), čo vedie k nesprávnemu výsledku. Rozklad na súčin musí byť vždy prvým krokom, aby sme videli, čo presne je spoločným činiteľom.',
+        model: 'Pretože krátiť možno iba spoločného činiteľa <span class="hl">celého</span> súčinu v čitateli a menovateli, nie jednotlivé členy súčtu. Ak by sme sa pokúsili krátiť pred rozkladom na súčin, kráteli by sme nesprávne (napríklad jednotlivé sčítance), čo vedie k nesprávnemu výsledku. Rozklad na súčin musí byť vždy prvým krokom, aby sme videli, čo presne je spoločným činiteľom.',
       },
       {
         id: 'manual',

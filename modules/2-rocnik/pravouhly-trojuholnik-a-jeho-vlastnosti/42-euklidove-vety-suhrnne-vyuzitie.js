@@ -57,7 +57,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Tri vzťahy vedľa seba',
-        html: '<p><strong>Pytagorova veta:</strong> a²+b²=c² (poznáme odvesny alebo preponu a odvesnu).</p><p><strong>Veta o výške:</strong> v²=ca·cb (poznáme úseky prepony).</p><p><strong>Veta o odvesne:</strong> a²=c·ca (poznáme celú preponu a úsek).</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Pytagorova veta</div><p class="term-rule">a²+b²=c² (poznáme odvesny alebo preponu a odvesnu)</p></div><div class="term-item no-symbol"><div class="term-name">Veta o výške</div><p class="term-rule">v²=ca·cb (poznáme úseky prepony)</p></div><div class="term-item no-symbol"><div class="term-name">Veta o odvesne</div><p class="term-rule">a²=c·ca (poznáme celú preponu a úsek)</p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -147,7 +147,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'BEZ MOBILU',
         title: 'Riešenie bez mobilu',
-        html: '<p>V zošite: Pravouhlý trojuholník má odvesny 5cm a 12cm. <strong>a)</strong> Vypočítaj preponu. <strong>b)</strong> Vypočítaj výšku na preponu (cez obsah, ako v aktivite vyššie).</p>',
+        html: '<p>V zošite: Pravouhlý trojuholník má odvesny 5cm a 12cm. <strong>a)</strong> Vypočítaj preponu. <strong>b)</strong> Vypočítaj výšku na preponu cez obsah trojuholníka — obsah vyjadri dvoma spôsobmi a z rovnosti vypočítaj v:</p><div class="formula">S = (a·b)/2 = (c·v)/2</div>',
         continueLabel: 'Mám zapísané',
       },
       {

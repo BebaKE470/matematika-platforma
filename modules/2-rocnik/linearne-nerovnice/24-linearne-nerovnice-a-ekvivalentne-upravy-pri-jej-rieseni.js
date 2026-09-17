@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "POCHOP",
         "title": "Kedy sa zmení znak?",
-        "html": "<p>Pri pripočítaní alebo odčítaní rovnakého čísla na oboch stranách sa smer nerovnosti nemení. Pri násobení alebo delení <strong>záporným</strong> číslom sa znak nerovnosti <strong>otočí</strong>.</p>"
+        "html": "<p>Pri pripočítaní alebo odčítaní rovnakého čísla na oboch stranách sa smer nerovnosti nemení.</p><div class=\"warning\"><strong>Pozor:</strong> Pri násobení alebo delení <strong>záporným</strong> číslom sa znak nerovnosti <strong>otočí</strong>.</div>"
       },
       {
         "id": "c1",
@@ -102,7 +102,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>LINEÁRNE NEROVNICE</strong></p><p>Ekvivalentné úpravy: na obe strany môžeme pripočítať alebo odčítať rovnaké číslo. Pri násobení alebo delení kladným číslom sa znak nemení. Pri násobení alebo delení záporným číslom sa znak nerovnosti otočí.</p><p>Riešenie zapisujeme ako množinu riešení, napr. <strong>x &lt; 4</strong>, teda <strong>(−∞; 4)</strong>.</p>",
+        "html": "<div class=\"formula\"><span class=\"mini-label\">LINEÁRNE NEROVNICE</span>Ekvivalentné úpravy: na obe strany môžeme pripočítať alebo odčítať rovnaké číslo. Pri násobení alebo delení kladným číslom sa znak nemení. Pri násobení alebo delení záporným číslom sa znak nerovnosti otočí.</div><p>Riešenie zapisujeme ako množinu riešení, napr. <strong>x &lt; 4</strong>, teda <strong>(−∞; 4)</strong>.</p>",
         "continueLabel": "Mám zapísané"
       },
       {

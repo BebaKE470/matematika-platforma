@@ -57,7 +57,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Dosadenie daného koreňa',
-        html: '<p>Ak vieme, že x=3 je koreňom rovnice x²−5x+m=0, môžeme x=3 priamo dosadiť: 3²−5·3+m=0, teda 9−15+m=0, odkiaľ m=6.</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Ak vieme, že x=3 je koreňom rovnice x²−5x+m=0, môžeme x=3 priamo dosadiť:</p><p>3²−5·3+m=0</p><p>9−15+m=0</p><p>m=6</p></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Vietove vzťahy s parametrom',
-        html: '<p>Ak chceme, aby korene rovnice x²+mx+8=0 mali daný súčet, použijeme Vietov vzťah x₁+x₂=−m/a=−m (a=1). Napríklad, ak má byť súčet koreňov rovný 6: −m=6, teda m=−6.</p><p>Dva postupy: 1) <strong>dosadenie koreňa</strong> — ak poznáme koreň, dosaď ho priamo do rovnice, 2) <strong>Vietove vzťahy</strong> — ak poznáme podmienku na súčet/súčin koreňov, použi −b/a alebo c/a.</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Ak chceme, aby korene rovnice x²+mx+8=0 mali daný súčet, použijeme Vietov vzťah x₁+x₂=−m/a=−m (a=1).</p><p>Napríklad, ak má byť súčet koreňov rovný 6: −m=6, teda m=−6.</p></div><div class="term-list"><div class="term-item no-symbol"><div class="term-name">Dosadenie koreňa</div><p class="term-rule">Ak poznáme koreň, dosaď ho priamo do rovnice.</p></div><div class="term-item no-symbol"><div class="term-name">Vietove vzťahy</div><p class="term-rule">Ak poznáme podmienku na súčet/súčin koreňov, použi −b/a alebo c/a.</p></div></div>',
         remember: 'Poznáme koreň → dosaď priamo. Poznáme súčet/súčin koreňov → použi Vietove vzťahy.',
       },
       {
@@ -123,7 +123,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Dva postupy pri hľadaní parametra: 1) ak poznáme koreň rovnice, dosaď ho priamo a vyrieš lineárnu rovnicu pre parameter, 2) ak poznáme podmienku na súčet/súčin koreňov, použi Vietove vzťahy x₁+x₂=−b/a, x₁·x₂=c/a. Výsledok vždy over dosadením späť.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Ak poznáme koreň rovnice</div><p class="term-rule">Dosaď ho priamo a vyrieš lineárnu rovnicu pre parameter.</p></div><div class="term-item no-symbol"><div class="term-name">Ak poznáme podmienku na súčet/súčin koreňov</div><p class="term-rule">Použi Vietove vzťahy x₁+x₂=−b/a, x₁·x₂=c/a.</p></div></div><p>Výsledok vždy over dosadením späť.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

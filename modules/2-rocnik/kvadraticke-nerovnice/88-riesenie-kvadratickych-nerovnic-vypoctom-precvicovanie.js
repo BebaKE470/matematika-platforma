@@ -55,7 +55,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Keď rovnica nemá korene',
-        html: '<p>Rovnica x²+4=0 nemá reálne korene (D=−16&lt;0). Parabola y=x²+4 (a=1&gt;0) sa vôbec nedotýka osi x — je celá NAD osou x. Preto je x²+4&gt;0 pre VŠETKY reálne x.</p>',
+        html: '<p>Rovnica x²+4=0 nemá reálne korene (D=−16&lt;0). Parabola y=x²+4 (a=1&gt;0) sa vôbec nedotýka osi x — je celá <span class="hl">nad osou x</span>. Preto je x²+4&gt;0 pre <span class="hl">všetky reálne x</span>.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -63,7 +63,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Prípad D < 0',
-        html: '<p>Ak D&lt;0, rovnica ax²+bx+c=0 nemá reálne korene — parabola sa nedotýka osi x a leží celá na jednej strane (podľa znamienka a).</p><p>Ak a&gt;0: výraz je KLADNÝ pre všetky x (parabola je celá nad osou). Ak a&lt;0: výraz je ZÁPORNÝ pre všetky x (parabola je celá pod osou).</p><p>Dôsledok: nerovnica typu ax²+bx+c&gt;0 (pri a&gt;0, D&lt;0) má riešenie CELÉ R; nerovnica ax²+bx+c&lt;0 (pri tých istých podmienkach) nemá ŽIADNE riešenie.</p>',
+        html: '<p>Ak D&lt;0, rovnica ax²+bx+c=0 nemá reálne korene — parabola sa nedotýka osi x a leží celá na jednej strane (podľa znamienka a).</p><div class="term-list"><div class="term-item no-symbol"><div class="term-name">a &gt; 0</div><p class="term-rule">Výraz je <span class="hl">kladný</span> pre všetky x (parabola je celá nad osou).</p></div><div class="term-item no-symbol"><div class="term-name">a &lt; 0</div><p class="term-rule">Výraz je <span class="hl">záporný</span> pre všetky x (parabola je celá pod osou).</p></div></div><p>Dôsledok: nerovnica typu ax²+bx+c&gt;0 (pri a&gt;0, D&lt;0) má riešenie <span class="hl">celé R</span>; nerovnica ax²+bx+c&lt;0 (pri tých istých podmienkach) nemá <span class="hl">žiadne riešenie</span>.</p>',
         remember: 'D<0: a>0 → výraz je vždy kladný (celé R alebo žiadne riešenie); a<0 → výraz je vždy záporný.',
       },
       {
@@ -85,7 +85,7 @@ MathPlatform.registerModule({
         question: 'Nerovnica x²+2x+5 &lt; 0 (D=4−20=−16&lt;0, a=1&gt;0). Aké je riešenie?',
         options: ['x ∈ R (všetky reálne čísla)', 'nerovnica nemá žiadne riešenie', 'x &gt; 0'],
         answer: 1,
-        correct: 'Správne. D<0 a a>0 znamená, že výraz je VŽDY kladný — nikdy nemôže byť záporný, preto nerovnica nemá riešenie.',
+        correct: 'Správne. D<0 a a>0 znamená, že výraz je <span class="hl">vždy</span> kladný — nikdy nemôže byť záporný, preto nerovnica nemá riešenie.',
         hint: 'Ak je výraz vždy kladný, môže byť niekedy menší ako nula?',
       },
       {
@@ -100,7 +100,7 @@ MathPlatform.registerModule({
           'Mal namiesto D=16−32 počítať D=16+32.',
         ],
         answer: 0,
-        correct: 'Presne. D<0 neznamená, že nerovnica nemá riešenie — znamená, že výraz má na CELEJ osi rovnaké znamienko (tu kladné, keďže a>0), takže nerovnica platí pre všetky x.',
+        correct: 'Presne. D<0 neznamená, že nerovnica nemá riešenie — znamená, že výraz má na <span class="hl">celej</span> osi rovnaké znamienko (tu kladné, keďže a>0), takže nerovnica platí pre všetky x.',
         hint: 'Over dosadením ľubovoľného x (napr. x=0) do x²−4x+8 — vyjde kladné alebo záporné číslo?',
       },
       {
@@ -119,7 +119,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Ak D&lt;0, rovnica ax²+bx+c=0 nemá reálne korene a výraz má na CELEJ číselnej osi rovnaké znamienko ako koeficient a: pre a&gt;0 je výraz vždy kladný, pre a&lt;0 vždy záporný. Podľa toho je riešením nerovnice buď celé R, alebo nerovnica nemá žiadne riešenie.</p>',
+        html: '<p>Ak D&lt;0, rovnica ax²+bx+c=0 nemá reálne korene a výraz má na <span class="hl">celej</span> číselnej osi rovnaké znamienko ako koeficient a: pre a&gt;0 je výraz vždy kladný, pre a&lt;0 vždy záporný. Podľa toho je riešením nerovnice buď celé R, alebo nerovnica nemá žiadne riešenie.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

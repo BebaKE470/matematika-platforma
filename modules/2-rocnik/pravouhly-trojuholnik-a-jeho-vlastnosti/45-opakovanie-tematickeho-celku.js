@@ -54,7 +54,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie celého celku',
-        html: '<p>Pytagorova veta: a²+b²=c². Obrátená veta: a²+b²=c² ⇒ pravouhlý. Euklidova veta o výške: v²=ca·cb. Euklidova veta o odvesne: a²=c·ca. Konštrukcia √n a geometrický priemer.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Pytagorova veta</div><p class="term-rule">a²+b²=c²</p></div><div class="term-item no-symbol"><div class="term-name">Obrátená veta</div><p class="term-rule">a²+b²=c² ⇒ pravouhlý</p></div><div class="term-item no-symbol"><div class="term-name">Euklidova veta o výške</div><p class="term-rule">v²=ca·cb</p></div><div class="term-item no-symbol"><div class="term-name">Euklidova veta o odvesne</div><p class="term-rule">a²=c·ca</p></div></div><p>Konštrukcia √n a geometrický priemer.</p>',
         continueLabel: 'Pokračovať',
       },
       {

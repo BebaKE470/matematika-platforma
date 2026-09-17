@@ -57,7 +57,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Umocnenie môže „vyrobiť“ falošné riešenie',
-        html: '<p>Rovnica √(2x+3)=x. Umocníme obe strany: 2x+3=x², čiže x²−2x−3=0, s koreňmi x=3 a x=−1. Skúška: pre x=3: √9=3 ✓. Pre x=−1: √1=1, ale x=−1 — NESEDÍ! x=−1 je tzv. cudzí koreň.</p>',
+        html: '<p>Rovnica √(2x+3)=x. Umocníme obe strany: 2x+3=x², čiže x²−2x−3=0, s koreňmi x=3 a x=−1. Skúška: pre x=3: √9=3 ✓. Pre x=−1: √1=1, ale x=−1 — <span class="hl">nesedí</span>! x=−1 je tzv. cudzí koreň.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -65,8 +65,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Postup riešenia iracionálnej rovnice',
-        html: '<p><strong>Iracionálna rovnica</strong> obsahuje neznámu pod odmocninou. Postup: 1) izoluj odmocninu na jednu stranu rovnice, 2) umocni OBE strany na druhú, 3) vyrieš výslednú rovnicu, 4) <strong>vykonaj skúšku KAŽDÉHO riešenia dosadením do PÔVODNEJ rovnice</strong> — zamietni cudzie korene.</p><p>Prečo je skúška nutná: √výraz je vždy nezáporné číslo, takže ak by pravá strana rovnice po umocnení vyšla záporná, pôvodná rovnica pre toto x nikdy nemohla platiť.</p>',
-        remember: 'Izoluj odmocninu → umocni → vyrieš → SKÚŠKA do PÔVODNEJ rovnice (povinná, nie voliteľná).',
+        html: '<p><strong>Iracionálna rovnica</strong> obsahuje neznámu pod odmocninou.</p><ol class="steps"><li>Izoluj odmocninu na jednu stranu rovnice.</li><li>Umocni <span class="hl">obe</span> strany na druhú.</li><li>Vyrieš výslednú rovnicu.</li><li>Vykonaj skúšku <span class="hl">každého</span> riešenia dosadením do <span class="hl">pôvodnej</span> rovnice — zamietni cudzie korene.</li></ol><div class="warning"><strong>Pozor:</strong> skúška je nutná — √výraz je vždy nezáporné číslo, takže ak by pravá strana rovnice po umocnení vyšla záporná, pôvodná rovnica pre toto x nikdy nemohla platiť.</div>',
+        remember: 'Izoluj odmocninu → umocni → vyrieš → <span class="hl">skúška</span> do <span class="hl">pôvodnej</span> rovnice (povinná, nie voliteľná).',
       },
       {
         id: 'q-basic',
@@ -123,7 +123,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Iracionálna rovnica</strong> obsahuje neznámu pod odmocninou. Postup: 1) izoluj odmocninu, 2) umocni obe strany, 3) vyrieš, 4) SKÚŠKA do pôvodnej rovnice — povinná, zamietni cudzie korene (riešenia vzniknuté umocnením, ktoré pôvodnú rovnicu v skutočnosti nespĺňajú).</p>',
+        html: '<p><strong>Iracionálna rovnica</strong> obsahuje neznámu pod odmocninou.</p><ol class="steps"><li>Izoluj odmocninu.</li><li>Umocni obe strany.</li><li>Vyrieš.</li><li><span class="hl">Skúška</span> do pôvodnej rovnice — povinná, zamietni cudzie korene (riešenia vzniknuté umocnením, ktoré pôvodnú rovnicu v skutočnosti nespĺňajú).</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -133,7 +133,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo môže umocnenie oboch strán rovnice „vyrobiť“ riešenie, ktoré pôvodná rovnica nespĺňa?',
-        model: 'Pretože umocnenie na druhú stráca informáciu o znamienku: ak platí a=b, tak platí aj a²=b², ale z a²=b² NEVYPLÝVA naspäť a=b — mohlo by platiť aj a=−b. Keď teda umocníme rovnicu √výraz=x, môžeme dostať aj riešenia, pre ktoré by v skutočnosti platilo √výraz=−x namiesto √výraz=x. Keďže odmocnina je vždy nezáporná, takéto riešenie so záporným x pôvodnú rovnicu nespĺňa — je to cudzí koreň, ktorý musíme skúškou odhaliť a zamietnuť.',
+        model: 'Pretože umocnenie na druhú stráca informáciu o znamienku: ak platí a=b, tak platí aj a²=b², ale z a²=b² <span class="hl">nevyplýva</span> naspäť a=b — mohlo by platiť aj a=−b. Keď teda umocníme rovnicu √výraz=x, môžeme dostať aj riešenia, pre ktoré by v skutočnosti platilo √výraz=−x namiesto √výraz=x. Keďže odmocnina je vždy nezáporná, takéto riešenie so záporným x pôvodnú rovnicu nespĺňa — je to cudzí koreň, ktorý musíme skúškou odhaliť a zamietnuť.',
       },
       {
         id: 'manual',

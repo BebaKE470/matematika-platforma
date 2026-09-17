@@ -57,7 +57,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Od √n k √(a·b)',
-        html: '<p>Na minulej hodine sme mali úseky prepony 1 a n. Čo ak namiesto 1 máme ľubovoľnú úsečku dĺžky a?</p><p>Euklidova veta o výške stále platí: v² = a·b, teda <strong>v = √(a·b)</strong> — geometrický priemer úsečiek a, b.</p>',
+        html: '<p>Na minulej hodine sme mali úseky prepony 1 a n. Čo ak namiesto 1 máme ľubovoľnú úsečku dĺžky a?</p><p>Euklidova veta o výške stále platí: v² = a·b, teda:</p><div class="formula">v = √(a·b)<span class="formula-note">Geometrický priemer úsečiek a, b.</span></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Obdĺžnik na štvorec s rovnakým obsahom',
-        html: '<p>Obdĺžnik so stranami a, b má obsah S = a·b. Štvorec so stranou <strong>s = √(a·b)</strong> má obsah S = s² = (√(a·b))² = a·b — <strong>rovnaký</strong> obsah ako pôvodný obdĺžnik!</p><p>Preto vieme ku každému obdĺžniku zostrojiť štvorec s rovnakým obsahom pomocou Euklidovej vety o výške.</p>',
+        html: '<p>Obdĺžnik so stranami a, b má obsah S = a·b.</p><div class="formula">s = √(a·b)<span class="formula-note">Strana štvorca s rovnakým obsahom ako obdĺžnik a×b.</span></div><p>Overenie: S = s² = (√(a·b))² = a·b — <strong>rovnaký</strong> obsah ako pôvodný obdĺžnik! Preto vieme ku každému obdĺžniku zostrojiť štvorec s rovnakým obsahom pomocou Euklidovej vety o výške.</p>',
         remember: 'Geometrický priemer √(a·b) = strana štvorca s rovnakým obsahom ako obdĺžnik so stranami a, b.',
       },
       {
@@ -123,7 +123,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Geometrický priemer</strong> úsečiek a, b: √(a·b) — zostrojíme ho ako výšku pravouhlého trojuholníka s úsekmi prepony a, b (Euklidova veta o výške).</p><p>Štvorec so stranou √(a·b) má rovnaký obsah ako obdĺžnik so stranami a, b.</p>',
+        html: '<p><strong>Geometrický priemer</strong> úsečiek a, b:</p><div class="formula">√(a·b)</div><p>Zostrojíme ho ako výšku pravouhlého trojuholníka s úsekmi prepony a, b (Euklidova veta o výške). Štvorec so stranou √(a·b) má rovnaký obsah ako obdĺžnik so stranami a, b.</p>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -140,7 +140,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'BEZ MOBILU',
         title: 'Konštrukcia na papieri',
-        html: '<p>Na papieri: obdĺžnik má strany 2cm a 8cm. <strong>a)</strong> Vypočítaj stranu štvorca s rovnakým obsahom. <strong>b)</strong> Pomocou Euklidovej vety o výške a Tálesovej kružnice (postup z minulej hodiny) zostroj túto stranu ako úsečku.</p>',
+        html: '<p>Na papieri: obdĺžnik má strany 2cm a 8cm.</p><p><strong>a)</strong> Vypočítaj stranu štvorca s rovnakým obsahom.</p><p><strong>b)</strong> Túto stranu zostroj ako úsečku pomocou Euklidovej vety o výške a Tálesovej kružnice:</p><ol class="steps"><li>Narysuj úsečku dĺžky a+b (teda 2+8=10cm).</li><li>Zostroj nad ňou Tálesovu kružnicu.</li><li>V bode vzdialenom a (2cm) od jedného konca vztýč kolmicu po kružnicu.</li><li>Táto kolmica (výška) má dĺžku √(a·b) — stranu hľadaného štvorca.</li></ol>',
         continueLabel: 'Zostrojil/a som',
       },
       {

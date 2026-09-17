@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Uhlopriečka rozdeľuje obdĺžnik',
-        html: '<p>Obdĺžnik so stranami a, b má uhlopriečku u. Uhlopriečka rozdeľuje obdĺžnik na dva zhodné pravouhlé trojuholníky, kde a a b sú odvesny a u je prepona.</p><p>Preto: <strong>u = √(a² + b²)</strong>.</p>',
+        html: '<p>Obdĺžnik so stranami a, b má uhlopriečku u. Uhlopriečka rozdeľuje obdĺžnik na dva zhodné pravouhlé trojuholníky, kde a a b sú odvesny a u je prepona.</p><div class="formula">u = √(a² + b²)</div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -77,7 +77,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Výška rovnoramenného trojuholníka',
-        html: '<p>Výška na základňu rovnoramenného trojuholníka rozdeľuje základňu na dve rovnaké polovice a súčasne vytvára dva zhodné pravouhlé trojuholníky.</p><p>Ak je rameno r a základňa z, výška v = √(r² − (z/2)²).</p>',
+        html: '<p>Výška na základňu rovnoramenného trojuholníka rozdeľuje základňu na dve rovnaké polovice a súčasne vytvára dva zhodné pravouhlé trojuholníky.</p><div class="formula">v = √(r² − (z/2)²)<span class="formula-note">Rameno r, základňa z.</span></div>',
         remember: 'Výška rovnoramenného trojuholníka: v = √(rameno² − (základňa/2)²).',
       },
       {
@@ -103,7 +103,7 @@ MathPlatform.registerModule({
           'Mal použiť súčet ramena a základne.',
         ],
         answer: 0,
-        correct: 'Presne. Výška na základňu vytvára dva zhodné pravouhlé trojuholníky, kde jedna odvesna je POLOVICA základne, nie celá základňa.',
+        correct: 'Presne. Výška na základňu vytvára dva zhodné pravouhlé trojuholníky, kde jedna odvesna je <span class="hl">polovica</span> základne, nie celá základňa.',
         hint: 'Rozmysli si, na koľko rovnakých častí výška rozdeľuje základňu rovnoramenného trojuholníka.',
       },
       {
@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Uhlopriečka obdĺžnika so stranami a, b: <strong>u = √(a² + b²)</strong>.</p><p>Výška rovnoramenného trojuholníka s ramenom r a základňou z: <strong>v = √(r² − (z/2)²)</strong>.</p><p>V oboch prípadoch najprv nájdi skrytý pravouhlý trojuholník náčrtom.</p>',
+        html: '<p>Uhlopriečka obdĺžnika so stranami a, b:</p><div class="formula">u = √(a² + b²)</div><p>Výška rovnoramenného trojuholníka s ramenom r a základňou z:</p><div class="formula">v = √(r² − (z/2)²)</div><p>V oboch prípadoch najprv nájdi skrytý pravouhlý trojuholník náčrtom.</p>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -133,7 +133,7 @@ MathPlatform.registerModule({
         phase: 'ARGUMENTUJ',
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
-        prompt: 'Prečo pri výpočte výšky rovnoramenného trojuholníka používame POLOVICU základne, a nie celú základňu?',
+        promptHtml: 'Prečo pri výpočte výšky rovnoramenného trojuholníka používame <span class="hl">polovicu</span> základne, a nie celú základňu?',
         model: 'Pretože výška na základňu rovnoramenného trojuholníka je zároveň jeho os súmernosti — rozdeľuje trojuholník na dve zhodné časti a spolu s tým aj základňu na dve rovnaké polovice. Práve táto polovica základne je jednou odvesnou vzniknutého pravouhlého trojuholníka, kde druhá odvesna je výška a prepona je rameno pôvodného trojuholníka.',
       },
       {

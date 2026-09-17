@@ -75,7 +75,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Definícia kvadratickej funkcie',
-        html: '<p><strong>Kvadratická funkcia</strong> má predpis <strong>f(x) = ax² + bx + c</strong>, kde a, b, c sú reálne čísla a <strong>a ≠ 0</strong> (inak by člen s x² zanikol a nebola by kvadratická).</p><p>Graf kvadratickej funkcie je vždy <strong>parabola</strong>.</p>',
+        html: '<p><strong>Kvadratická funkcia</strong> má predpis:</p><div class="formula">f(x) = ax² + bx + c<span class="formula-note">a, b, c sú reálne čísla, a ≠ 0 — inak by člen s x² zanikol a nebola by kvadratická.</span></div><p>Graf kvadratickej funkcie je vždy <strong>parabola</strong>.</p>',
         remember: 'f(x) = ax² + bx + c, a ≠ 0. Graf je parabola.',
       },
       {
@@ -120,7 +120,7 @@ MathPlatform.registerModule({
           'Mal by mať aspoň tri členy, aby bola kvadratická.',
         ],
         answer: 0,
-        correct: 'Presne. Kvadratická funkcia musí mať nenulový koeficient PRI ČLENE X², nielen premennú x vo všeobecnosti.',
+        correct: 'Presne. Kvadratická funkcia musí mať nenulový koeficient <span class="hl">pri člene x²</span>, nielen premennú x vo všeobecnosti.',
         hint: 'Skontroluj, či je vo výraze prítomný člen s x² s nenulovým koeficientom.',
       },
       {
@@ -141,7 +141,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Kvadratická funkcia:</strong> f(x) = ax² + bx + c, a ≠ 0. Graf je <strong>parabola</strong>.</p><p>a &gt; 0 → parabola otvorená nahor. a &lt; 0 → parabola otvorená nadol.</p>',
+        html: '<div class="formula">f(x) = ax² + bx + c, a ≠ 0<span class="formula-note">Graf je vždy parabola.</span></div><p>a &gt; 0 → parabola otvorená nahor. a &lt; 0 → parabola otvorená nadol.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

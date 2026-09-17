@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Postup úpravy rozkladom',
-        html: '<p>Postup zjednodušenia lomeného výrazu s kvadratickým trojčlenom: 1) urč definičný obor (menovateľ ≠ 0), 2) rozlož trojčlen na súčin pomocou koreňov, 3) skráť spoločný činiteľ v čitateli a menovateli, 4) zapíš výsledok VRÁTANE podmienky definičného oboru.</p>',
+        html: '<p>Postup zjednodušenia lomeného výrazu s kvadratickým trojčlenom:</p><ol class="steps"><li>Urč definičný obor (menovateľ ≠ 0).</li><li>Rozlož trojčlen na súčin pomocou koreňov.</li><li>Skráť spoločný činiteľ v čitateli a menovateli.</li><li>Zapíš výsledok <span class="hl">vrátane</span> podmienky definičného oboru.</li></ol>',
         remember: 'Definičný obor najprv, rozklad na súčin, krátenie spoločného činiteľa, podmienka pri výsledku.',
       },
       {
@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Postup úpravy lomeného výrazu s kvadratickým trojčlenom:</strong> 1) urč definičný obor, 2) rozlož trojčlen na súčin (pomocou koreňov), 3) skráť spoločný činiteľ, 4) zapíš výsledok s podmienkou definičného oboru.</p>',
+        html: '<p><strong>Postup úpravy lomeného výrazu s kvadratickým trojčlenom:</strong></p><ol class="steps"><li>Urč definičný obor.</li><li>Rozlož trojčlen na súčin (pomocou koreňov).</li><li>Skráť spoločný činiteľ.</li><li>Zapíš výsledok s podmienkou definičného oboru.</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {

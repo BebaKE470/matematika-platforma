@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Terminológia: odvesna a prepona',
-        html: '<p>V pravouhlom trojuholníku sa strany zvierajúce pravý uhol volajú <strong>odvesny</strong> (a, b), strana oproti pravému uhlu (najdlhšia) sa volá <strong>prepona</strong> (c).</p><p>Pytagorova veta: <strong>a² + b² = c²</strong>.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Odvesny (a, b)</div><p class="term-rule">Strany pravouhlého trojuholníka, ktoré zvierajú pravý uhol.</p></div><div class="term-item no-symbol"><div class="term-name">Prepona (c)</div><p class="term-rule">Strana oproti pravému uhlu — najdlhšia strana trojuholníka.</p></div></div><div class="formula">a² + b² = c²<span class="formula-note">Pytagorova veta.</span></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Obrátená Pytagorova veta',
-        html: '<p>Pytagorova veta hovorí: AK je trojuholník pravouhlý, TAK a²+b²=c².</p><p><strong>Obrátená veta</strong> hovorí opačne: AK pre strany trojuholníka a, b, c (c najdlhšia) platí a²+b²=c², TAK je trojuholník pravouhlý (s pravým uhlom oproti strane c).</p><p>Obrátená veta nám umožňuje OVERIŤ pravouhlosť iba z dĺžok strán, bez merania uhlov.</p>',
+        html: '<p>Pytagorova veta hovorí: <span class="hl">ak</span> je trojuholník pravouhlý, <span class="hl">tak</span> a²+b²=c².</p><p><strong>Obrátená veta</strong> hovorí opačne: <span class="hl">ak</span> pre strany trojuholníka a, b, c (c najdlhšia) platí a²+b²=c², <span class="hl">tak</span> je trojuholník pravouhlý (s pravým uhlom oproti strane c).</p><p>Obrátená veta nám umožňuje <span class="hl">overiť</span> pravouhlosť iba z dĺžok strán, bez merania uhlov.</p>',
         remember: 'Priama veta: pravouhlý ⇒ a²+b²=c². Obrátená veta: a²+b²=c² ⇒ pravouhlý.',
       },
       {
@@ -132,7 +132,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>V pravouhlom trojuholníku: <strong>odvesny</strong> (a, b) zvierajú pravý uhol, <strong>prepona</strong> (c, najdlhšia strana) je oproti pravému uhlu.</p><p><strong>Pytagorova veta:</strong> a²+b²=c² (v pravouhlom trojuholníku).</p><p><strong>Obrátená Pytagorova veta:</strong> ak a²+b²=c² (c najdlhšia), trojuholník je pravouhlý.</p>',
+        html: '<p>V pravouhlom trojuholníku: <strong>odvesny</strong> (a, b) zvierajú pravý uhol, <strong>prepona</strong> (c, najdlhšia strana) je oproti pravému uhlu.</p><div class="formula"><span class="mini-label">PYTAGOROVA VETA</span>a² + b² = c²<span class="formula-note">v pravouhlom trojuholníku</span></div><div class="formula"><span class="mini-label">OBRÁTENÁ PYTAGOROVA VETA</span>ak a² + b² = c² (c najdlhšia), trojuholník je pravouhlý</div>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -142,7 +142,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo je dôležité rozlišovať medzi Pytagorovou vetou a jej obrátením — nie sú to vlastne „to isté“ tvrdenie?',
-        model: 'Pytagorova veta hovorí, čo VYPLÝVA z toho, že trojuholník je pravouhlý (a²+b²=c²). Obrátená veta hovorí opačne — čo VYPLÝVA z platnosti rovnice a²+b²=c² (totiž, že trojuholník je pravouhlý). Obe smery nie sú vždy automaticky pravdivé súčasne pre každé tvrdenie v matematike, preto ich treba dokazovať/formulovať samostatne, hoci v tomto prípade obe platia.',
+        model: 'Pytagorova veta hovorí, čo <span class="hl">vyplýva</span> z toho, že trojuholník je pravouhlý (a²+b²=c²). Obrátená veta hovorí opačne — čo <span class="hl">vyplýva</span> z platnosti rovnice a²+b²=c² (totiž, že trojuholník je pravouhlý). Obe smery nie sú vždy automaticky pravdivé súčasne pre každé tvrdenie v matematike, preto ich treba dokazovať/formulovať samostatne, hoci v tomto prípade obe platia.',
       },
       {
         id: 'manual',

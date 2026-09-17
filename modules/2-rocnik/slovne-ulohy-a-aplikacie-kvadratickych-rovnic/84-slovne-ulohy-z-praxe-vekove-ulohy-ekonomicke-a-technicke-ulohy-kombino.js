@@ -56,7 +56,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Veková úloha',
-        html: '<p>Súčin vekov otca a syna je 175. Otec je o 30 rokov starší ako syn. Označíme x (roky) vek syna, vek otca je x+30. Rovnica: x(x+30)=175, po úprave <strong>x²+30x−175=0</strong>.</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Súčin vekov otca a syna je 175. Otec je o 30 rokov starší ako syn. Označíme x (roky) vek syna, vek otca je x+30. Rovnica: x(x+30)=175, po úprave:</p><p><strong>x²+30x−175=0</strong></p></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -64,7 +64,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Ekonomická úloha — dve možné riešenia',
-        html: '<p>Firma predala x kusov tovaru za cenu (100−x) € za kus, pričom tržba bola 2400 €. Rovnica x(100−x)=2400 sa upraví na <strong>x²−100x+2400=0</strong>, s koreňmi x=60 a x=40.</p><p>Na rozdiel od vekovej úlohy tu môžu byť OBE riešenia zmysluplné — 40 kusov za 60 € aj 60 kusov za 40 € dávajú rovnakú tržbu 2400 €. Iba kontext úlohy (napr. obmedzenie skladu) rozhodne, ktoré riešenie firma skutočne dosiahla.</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Firma predala x kusov tovaru za cenu (100−x) € za kus, pričom tržba bola 2400 €. Rovnica x(100−x)=2400 sa upraví na <strong>x²−100x+2400=0</strong>, s koreňmi x=60 a x=40.</p></div><p>Na rozdiel od vekovej úlohy tu môžu byť <span class="hl">obe</span> riešenia zmysluplné — 40 kusov za 60 € aj 60 kusov za 40 € dávajú rovnakú tržbu 2400 €. Iba kontext úlohy (napr. obmedzenie skladu) rozhodne, ktoré riešenie firma skutočne dosiahla.</p>',
         remember: 'Vekové úlohy majú zvyčajne jedno zmysluplné riešenie; ekonomické úlohy môžu mať aj dve.',
       },
       {
@@ -122,7 +122,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Veková úloha: súčin vekov vedie na kvadratickú rovnicu, zvyčajne s JEDNÝM zmysluplným (kladným) riešením. Ekonomická úloha (tržba=cena×množstvo) môže mať DVE zmysluplné riešenia, ak obe hodnoty dávajú kladnú cenu aj kladné množstvo — rozhoduje o tom ďalší kontext úlohy.</p>',
+        html: '<p>Veková úloha: súčin vekov vedie na kvadratickú rovnicu, zvyčajne s <span class="hl">jedným</span> zmysluplným (kladným) riešením. Ekonomická úloha (tržba=cena×množstvo) môže mať <span class="hl">dve</span> zmysluplné riešenia, ak obe hodnoty dávajú kladnú cenu aj kladné množstvo — rozhoduje o tom ďalší kontext úlohy.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

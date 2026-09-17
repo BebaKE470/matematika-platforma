@@ -54,7 +54,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie celého celku',
-        html: '<p>f(x)=ax²+bx+c, a≠0 → parabola. a>0 nahor, a<0 nadol. Vrchol: x_v=−b/(2a), y_v=f(x_v). Vrcholový tvar: y=a(x−x_v)²+y_v.</p>',
+        html: '<p>Zhrnutie celého celku:</p><div class="formula">f(x) = ax² + bx + c, a ≠ 0 → graf je parabola<br>a &gt; 0 nahor, a &lt; 0 nadol<br>vrchol: x_v = −b/(2a), y_v = f(x_v)<br>vrcholový tvar: y = a(x−x_v)² + y_v</div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -112,7 +112,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie: f(x)=ax²+bx+c (a≠0), graf parabola, orientácia podľa znamienka a, vrchol x_v=−b/(2a), y_v=f(x_v), vrcholový tvar y=a(x−x_v)²+y_v.</p>',
+        html: '<p>Zhrnutie:</p><div class="formula">f(x) = ax² + bx + c (a ≠ 0), graf je parabola<br>orientácia podľa znamienka a<br>vrchol: x_v = −b/(2a), y_v = f(x_v)<br>vrcholový tvar: y = a(x−x_v)² + y_v</div>',
         continueLabel: 'Mám zapísané',
       },
       {

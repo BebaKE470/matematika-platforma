@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Fyzikálna úloha — voľný pád',
-        html: '<p>Čas voľného pádu z výšky h je daný vzťahom t=√(h/5) (pri g≈10 m/s²). Ak kameň padal 3 sekundy: √(h/5)=3, umocnením h/5=9, teda h=45 m.</p><p>Postup je rovnaký ako doteraz: izoluj odmocninu (často už je izolovaná), umocni, vyrieš, over zmysluplnosť riešenia (dĺžka a výška musia byť kladné).</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Čas voľného pádu z výšky h je daný vzťahom t=√(h/5) (pri g≈10 m/s²).</p><p>Ak kameň padal 3 sekundy: √(h/5)=3, umocnením h/5=9, teda h=45 m.</p></div><p>Postup je rovnaký ako doteraz:</p><ol class="steps"><li>Izoluj odmocninu (často už je izolovaná).</li><li>Umocni.</li><li>Vyrieš.</li><li>Over zmysluplnosť riešenia (dĺžka a výška musia byť kladné).</li></ol>',
         remember: 'Rovnaký postup ako pri iných iracionálnych rovniciach: umocni, vyrieš, over zmysluplnosť voči kontextu (kladná dĺžka/výška).',
       },
       {
@@ -123,7 +123,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Iracionálne rovnice sa objavujú aj v geometrii (Pytagorova veta: √(a²+b²)=c) a vo fyzike (voľný pád: t=√(h/5) pri g≈10 m/s²). Postup riešenia je rovnaký: izoluj odmocninu, umocni, vyrieš, over zmysluplnosť riešenia (dĺžka aj výška musia byť kladné).</p>',
+        html: '<p>Iracionálne rovnice sa objavujú aj v geometrii (Pytagorova veta: √(a²+b²)=c) a vo fyzike (voľný pád: t=√(h/5) pri g≈10 m/s²).</p><p>Postup riešenia je rovnaký:</p><ol class="steps"><li>Izoluj odmocninu.</li><li>Umocni.</li><li>Vyrieš.</li><li>Over zmysluplnosť riešenia (dĺžka aj výška musia byť kladné).</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {

@@ -59,7 +59,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Rovnica x² = k má dve riešenia',
-        html: '<p>Funkcia √k má vždy jednu (nezápornú) hodnotu. Ale rovnica <strong>x² = 9</strong> má DVE riešenia: x=3 aj x=−3, lebo 3²=9 aj (−3)²=9.</p>',
+        html: '<p>Funkcia √k má vždy jednu (nezápornú) hodnotu. Ale rovnica <strong>x² = 9</strong> má <span class="hl">dve</span> riešenia: x=3 aj x=−3, lebo 3²=9 aj (−3)²=9.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -67,7 +67,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Rýdzo kvadratická rovnica',
-        html: '<p><strong>Rýdzo kvadratická rovnica</strong> má tvar <strong>ax² + c = 0</strong> (a≠0), bez lineárneho člena (b=0).</p><p>Postup riešenia: 1) izoluj x² (x² = −c/a), 2) ak je pravá strana kladná, riešenia sú x = ±√(−c/a); ak je záporná, rovnica nemá reálne riešenie.</p>',
+        html: '<div class="formula"><span class="mini-label">RÝDZO KVADRATICKÁ ROVNICA</span>ax² + c = 0<span class="formula-note">a≠0, bez lineárneho člena (b=0)</span></div><ol class="steps"><li>Izoluj x² (x² = −c/a).</li><li>Ak je pravá strana kladná, riešenia sú x = ±√(−c/a); ak je záporná, rovnica nemá reálne riešenie.</li></ol>',
         remember: 'ax²+c=0 → x²=−c/a → x=±√(−c/a) (ak je pravá strana ≥0).',
       },
       {
@@ -129,7 +129,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Rýdzo kvadratická rovnica:</strong> ax²+c=0 (a≠0, bez lineárneho člena).</p><p>Postup: 1) izoluj x² (x²=−c/a), 2) ak je pravá strana ≥0, riešenia sú x=±√(−c/a); ak je záporná, rovnica nemá reálne riešenie.</p>',
+        html: '<div class="formula"><span class="mini-label">RÝDZO KVADRATICKÁ ROVNICA</span>ax² + c = 0<span class="formula-note">a≠0, bez lineárneho člena</span></div><ol class="steps"><li>Izoluj x² (x²=−c/a).</li><li>Ak je pravá strana ≥0, riešenia sú x=±√(−c/a); ak je záporná, rovnica nemá reálne riešenie.</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {

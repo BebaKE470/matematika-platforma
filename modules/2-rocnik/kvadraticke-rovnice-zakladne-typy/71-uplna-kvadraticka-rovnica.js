@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Diskriminant a vzorec pre korene',
-        html: '<p>Pre rovnicu ax²+bx+c=0 (a≠0) definujeme <strong>diskriminant D = b² − 4ac</strong>.</p><p>Ak D&gt;0, rovnica má dve rôzne riešenia: x = (−b ± √D) / (2a).<br>Ak D=0, rovnica má jedno (dvojnásobné) riešenie: x = −b/(2a).<br>Ak D&lt;0, rovnica nemá reálne riešenie.</p>',
+        html: '<div class="formula"><span class="mini-label">DISKRIMINANT</span>D = b² − 4ac<span class="formula-note">pre rovnicu ax²+bx+c=0, a≠0</span></div><div class="term-list"><div class="term-item no-symbol"><div class="term-name">D &gt; 0 — dve riešenia</div><p class="term-rule">x = (−b ± √D) / (2a)</p></div><div class="term-item no-symbol"><div class="term-name">D = 0 — jedno (dvojnásobné) riešenie</div><p class="term-rule">x = −b / (2a)</p></div><div class="term-item no-symbol"><div class="term-name">D &lt; 0 — žiadne reálne riešenie</div><p class="term-rule">Rovnica nemá v reálnych číslach žiadne riešenie.</p></div></div>',
         remember: 'D = b²−4ac; D>0 → dve riešenia, D=0 → jedno riešenie, D<0 → žiadne reálne riešenie.',
       },
       {
@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Úplná kvadratická rovnica:</strong> ax²+bx+c=0 (a≠0, b≠0, c≠0). Diskriminant: D=b²−4ac. Vzorec pre korene: x=(−b±√D)/(2a).</p><p>D&gt;0 → dve riešenia, D=0 → jedno riešenie, D&lt;0 → žiadne reálne riešenie.</p>',
+        html: '<div class="formula"><span class="mini-label">ÚPLNÁ KVADRATICKÁ ROVNICA</span>ax² + bx + c = 0<span class="formula-note">a≠0, b≠0, c≠0 — diskriminant D = b² − 4ac, korene x = (−b ± √D) / (2a)</span></div><div class="term-list"><div class="term-item no-symbol"><div class="term-name">D &gt; 0</div><p class="term-rule">dve riešenia</p></div><div class="term-item no-symbol"><div class="term-name">D = 0</div><p class="term-rule">jedno riešenie</p></div><div class="term-item no-symbol"><div class="term-name">D &lt; 0</div><p class="term-rule">žiadne reálne riešenie</p></div></div>',
         continueLabel: 'Mám zapísané',
       },
       {

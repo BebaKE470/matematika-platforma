@@ -55,7 +55,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Rozhodovací postup',
-        html: '<p>Chýba lineárny člen (b=0)? → <strong>rýdzo kvadratická</strong>, izoluj x² a odmocni.<br>Chýba absolútny člen (c=0)? → <strong>vyjmi x</strong> pred zátvorku, použi nulový súčin.<br>Sú prítomné všetky tri členy? → <strong>diskriminant a vzorec</strong>.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Chýba lineárny člen (b=0)</div><p class="term-rule">rýdzo kvadratická — izoluj x² a odmocni</p></div><div class="term-item no-symbol"><div class="term-name">Chýba absolútny člen (c=0)</div><p class="term-rule">vyjmi x pred zátvorku, použi nulový súčin</p></div><div class="term-item no-symbol"><div class="term-name">Sú prítomné všetky tri členy</div><p class="term-rule">diskriminant a vzorec</p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -113,7 +113,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie postupu: 1) skontroluj, ktoré členy (b, c) v rovnici chýbajú, 2) zvoľ najrýchlejší postup — izolácia a odmocnenie (b=0), vyňatie x (c=0), alebo diskriminant a vzorec (všeobecný prípad, funguje vždy).</p>',
+        html: '<p>Zhrnutie postupu:</p><ol class="steps"><li>Skontroluj, ktoré členy (b, c) v rovnici chýbajú.</li><li>Zvoľ najrýchlejší postup — izolácia a odmocnenie (b=0), vyňatie x (c=0), alebo diskriminant a vzorec (všeobecný prípad, funguje vždy).</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {

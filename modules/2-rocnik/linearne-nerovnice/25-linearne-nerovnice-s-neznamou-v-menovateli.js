@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "POCHOP",
         "title": "Najprv definičná podmienka",
-        "html": "<p>Ak je neznáma v menovateli, najprv určíme, kedy menovateľ nie je nula. Potom hľadáme, kde má zlomok požadované znamienko. <strong>Násobenie nerovnice výrazom s neznámym znamienkom bez rozboru nie je bezpečný krok.</strong></p>"
+        "html": "<p>Ak je neznáma v menovateli, najprv určíme, kedy menovateľ nie je nula. Potom hľadáme, kde má zlomok požadované znamienko.</p><div class=\"warning\"><strong>Pozor:</strong> Násobenie nerovnice výrazom s neznámym znamienkom bez rozboru nie je bezpečný krok.</div>"
       },
       {
         "id": "c1",
@@ -117,7 +117,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>NEROVNICA S NEZNÁMOU V MENOVATELI</strong></p><p>1. Určíme definičné podmienky. 2. Nájdeme kritické body. 3. Rozdelíme číselnú os na intervaly. 4. Určíme znamienko výrazu na intervaloch. 5. Vyberieme intervaly spĺňajúce nerovnicu. 6. Skontrolujeme, že vylúčené hodnoty nie sú v riešení.</p>",
+        "html": "<span class=\"mini-label\">NEROVNICA S NEZNÁMOU V MENOVATELI</span><ol class=\"steps\"><li>Určíme definičné podmienky.</li><li>Nájdeme kritické body.</li><li>Rozdelíme číselnú os na intervaly.</li><li>Určíme znamienko výrazu na intervaloch.</li><li>Vyberieme intervaly spĺňajúce nerovnicu.</li><li>Skontrolujeme, že vylúčené hodnoty nie sú v riešení.</li></ol>",
         "continueLabel": "Mám zapísané"
       },
       {

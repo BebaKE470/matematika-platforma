@@ -64,7 +64,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Elektrický prúd — vzorec s odmocninou',
-        html: '<p>Riešenie úlohy o dohľadnosti: d=3,57√h → 35,7=3,57√h → √h=10 → h=100 m.</p><p>Podobne v elektrotechnike platí pre výkon spotrebiča P=I²R, odkiaľ I=√(P/R). Ak P=360 W a R=10 Ω: I=√(360/10)=√36=6 A.</p><p>Postup je vždy rovnaký: dosaď do vzorca, izoluj odmocninu, umocni (alebo priamo dosaď, ak je odmocnina už izolovaná), vyrieš, over zmysluplnosť (výška aj prúd musia byť kladné).</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Riešenie úlohy o dohľadnosti: d=3,57√h → 35,7=3,57√h → √h=10 → h=100 m.</p></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Podobne v elektrotechnike platí pre výkon spotrebiča P=I²R, odkiaľ I=√(P/R). Ak P=360 W a R=10 Ω: I=√(360/10)=√36=6 A.</p></div><p>Postup je vždy rovnaký:</p><ol class="steps"><li>Dosaď do vzorca.</li><li>Izoluj odmocninu.</li><li>Umocni (alebo priamo dosaď, ak je odmocnina už izolovaná).</li><li>Vyrieš.</li><li>Over zmysluplnosť (výška aj prúd musia byť kladné).</li></ol>',
         remember: 'Praktický vzorec s odmocninou: dosaď, izoluj odmocninu, umocni, vyrieš, over zmysluplnosť výsledku.',
       },
       {
@@ -101,7 +101,7 @@ MathPlatform.registerModule({
           'Mal namiesto delenia čísla 71,4 číslom 3,57 tieto čísla vynásobiť.',
         ],
         answer: 0,
-        correct: 'Presne. Po izolovaní odmocniny (√h=20) treba OBE strany umocniť na druhú, aby sme dostali samotné h — tu je to h=400 m.',
+        correct: 'Presne. Po izolovaní odmocniny (√h=20) treba <span class="hl">obe</span> strany umocniť na druhú, aby sme dostali samotné h — tu je to h=400 m.',
         hint: 'Ak √h=20, čomu sa rovná h?',
       },
       {
@@ -122,7 +122,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Praktické vzorce s odmocninou: dohľadnosť na obzor d=3,57√h (h výška v m, d vzdialenosť v km), elektrický prúd I=√(P/R) (P výkon vo W, R odpor v Ω). Postup: dosaď, izoluj odmocninu, umocni, vyrieš, over zmysluplnosť (kladná hodnota).</p>',
+        html: '<p>Praktické vzorce s odmocninou: dohľadnosť na obzor d=3,57√h (h výška v m, d vzdialenosť v km), elektrický prúd I=√(P/R) (P výkon vo W, R odpor v Ω).</p><ol class="steps"><li>Dosaď.</li><li>Izoluj odmocninu.</li><li>Umocni.</li><li>Vyrieš.</li><li>Over zmysluplnosť (kladná hodnota).</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {

@@ -125,7 +125,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Úloha do zošita",
-        "html": "<p><strong>ÚLOHA DO ZOŠITA:</strong> Dĺžka súčiastky má byť väčšia ako 24,8 mm a najviac 25,2 mm. Zapíš podmienky ako sústavu nerovníc, interval a znázorni riešenie na číselnej osi.</p>",
+        "html": "<span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><p>Dĺžka súčiastky má byť väčšia ako 24,8 mm a najviac 25,2 mm. Zapíš podmienky ako sústavu nerovníc, interval a znázorni riešenie na číselnej osi.</p>",
         "continueLabel": "Mám zapísané"
       },
       {

@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Prevodové vzorce',
-        html: '<p>Zo stupňov na radiány: <strong>α[rad] = α[°] · π/180</strong>.</p><p>Z radiánov na stupne: <strong>α[°] = α[rad] · 180/π</strong>.</p><p>Príklad: 60° = 60 · π/180 = π/3 rad.</p>',
+        html: '<div class="formula"><span class="mini-label">STUPNE → RADIÁNY</span>α[rad] = α[°] · π/180</div><div class="formula"><span class="mini-label">RADIÁNY → STUPNE</span>α[°] = α[rad] · 180/π</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>60° = 60 · π/180 = π/3 rad</p></div>',
         remember: 'stupne → radiány: ·π/180.  radiány → stupne: ·180/π.',
       },
       {
@@ -123,7 +123,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Prevod stupne → radiány: <strong>α[rad] = α[°] · π/180</strong>.</p><p>Prevod radiány → stupne: <strong>α[°] = α[rad] · 180/π</strong>.</p><p>Príklad: 60° = π/3 rad. Príklad opačne: π/4 rad = 45°.</p>',
+        html: '<div class="formula"><span class="mini-label">STUPNE → RADIÁNY</span>α[rad] = α[°] · π/180</div><div class="formula"><span class="mini-label">RADIÁNY → STUPNE</span>α[°] = α[rad] · 180/π</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>60° = π/3 rad. Príklad opačne: π/4 rad = 45°.</p></div>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -133,7 +133,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Ako si zapamätáš, ktorý zo zlomkov (π/180 alebo 180/π) patrí ku ktorému smeru prevodu?',
-        model: 'Keď prevádzam ZO stupňov NA radiány, výsledné číslo má byť oveľa menšie (radiány sú „väčšia“ jednotka), preto násobím malým zlomkom π/180. Opačne, keď prevádzam z radiánov na stupne, výsledné číslo má byť väčšie, preto násobím väčším zlomkom 180/π. Alebo si to jednoducho overím na 180° = π rad — ktorý zlomok z 180 dá π, ten patrí k prevodu na radiány.',
+        model: 'Keď prevádzam <span class="hl">zo</span> stupňov <span class="hl">na</span> radiány, výsledné číslo má byť oveľa menšie (radiány sú „väčšia“ jednotka), preto násobím malým zlomkom π/180. Opačne, keď prevádzam z radiánov na stupne, výsledné číslo má byť väčšie, preto násobím väčším zlomkom 180/π. Alebo si to jednoducho overím na 180° = π rad — ktorý zlomok z 180 dá π, ten patrí k prevodu na radiány.',
       },
       {
         id: 'manual',

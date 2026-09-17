@@ -64,7 +64,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Odhad koreňov a zostavenie rovnice',
-        html: '<p><strong>Odhad koreňov</strong> (pre a=1): pre x²+bx+c=0 hľadaj dve čísla p, q so súčtom p+q=−b a súčinom p·q=c. Ak také čísla nájdeš, sú to korene rovnice.</p><p><strong>Zostavenie rovnice</strong> z daných koreňov x₁, x₂: x² − (x₁+x₂)x + x₁·x₂ = 0.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Odhad koreňov (pre a=1)</div><p class="term-rule">Pre x²+bx+c=0 hľadaj dve čísla p, q so súčtom p+q=−b a súčinom p·q=c. Ak také čísla nájdeš, sú to korene rovnice.</p></div><div class="term-item no-symbol"><div class="term-name">Zostavenie rovnice</div><p class="term-rule">Z daných koreňov x₁, x₂: x² − (x₁+x₂)x + x₁·x₂ = 0.</p></div></div>',
         remember: 'Odhad: p+q=−b, p·q=c → korene. Zostavenie: x²−(x₁+x₂)x+x₁·x₂=0.',
       },
       {

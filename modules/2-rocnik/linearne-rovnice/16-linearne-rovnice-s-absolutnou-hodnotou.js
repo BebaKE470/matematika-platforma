@@ -82,7 +82,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'PRAVIDLO 1',
         title: 'Typ |L(x)| = k',
-        html: '<p>Označme <strong>L(x)</strong> lineárny výraz, napríklad <strong>2x − 5</strong>. Pri rovnici <strong>|L(x)| = k</strong> najprv pozri na číslo <strong>k</strong>.</p><div class="remember"><strong>Ak k &lt; 0:</strong> rovnica nemá riešenie.<br><strong>Ak k = 0:</strong> rieš L(x) = 0.<br><strong>Ak k &gt; 0:</strong> rieš dve rovnice: L(x) = k alebo L(x) = −k.</div><p>Dôvod: vzdialenosť nemôže byť záporná; kladnú vzdialenosť možno dosiahnuť na oboch stranách od nuly.</p>'
+        html: '<p>Označme <strong>L(x)</strong> lineárny výraz, napríklad <strong>2x − 5</strong>. Pri rovnici <strong>|L(x)| = k</strong> najprv pozri na číslo <strong>k</strong>.</p><div class="term-list"><div class="term-item no-symbol"><div class="term-name">k &lt; 0</div><p class="term-rule">Rovnica nemá riešenie.</p></div><div class="term-item no-symbol"><div class="term-name">k = 0</div><p class="term-rule">Rieš L(x) = 0.</p></div><div class="term-item no-symbol"><div class="term-name">k &gt; 0</div><p class="term-rule">Rieš dve rovnice: L(x) = k alebo L(x) = −k.</p></div></div><p>Dôvod: vzdialenosť nemôže byť záporná; kladnú vzdialenosť možno dosiahnuť na oboch stranách od nuly.</p>',
+        remember: 'k &lt; 0 → bez riešenia. k = 0 → L(x) = 0. k &gt; 0 → L(x) = k alebo L(x) = −k.'
       },
       {
         id: 'basic-example',
@@ -119,14 +120,15 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'PRAVIDLO 2',
         title: 'Keď na pravej strane nie je iba číslo',
-        html: '<p>Pri rovnici <strong>|L(x)| = R(x)</strong> je pravá strana už výraz závislý od x.</p><div class="remember"><strong>Presný postup:</strong><br>1. Zapíš podmienku <strong>R(x) ≥ 0</strong>.<br>2. Rieš vetvu <strong>L(x) = R(x)</strong>.<br>3. Rieš vetvu <strong>L(x) = −R(x)</strong>.<br>4. Kandidát musí spĺňať podmienku z kroku 1.<br>5. Nakoniec ho dosaď do <strong>pôvodnej</strong> rovnice.</div><p>Podmienka nie je ozdoba: ľavá strana je absolútna hodnota, teda nikdy nemôže byť záporná.</p>'
+        html: '<p>Pri rovnici <strong>|L(x)| = R(x)</strong> je pravá strana už výraz závislý od x.</p><ol class="steps"><li>Zapíš podmienku <strong>R(x) ≥ 0</strong>.</li><li>Rieš vetvu <strong>L(x) = R(x)</strong>.</li><li>Rieš vetvu <strong>L(x) = −R(x)</strong>.</li><li>Kandidát musí spĺňať podmienku z kroku 1.</li><li>Nakoniec ho dosaď do <strong>pôvodnej</strong> rovnice.</li></ol><p>Podmienka nie je ozdoba: ľavá strana je absolútna hodnota, teda nikdy nemôže byť záporná.</p>',
+        remember: 'Podmienka R(x) ≥ 0 → vetva L(x) = R(x) → vetva L(x) = −R(x) → over podmienku → over v pôvodnej rovnici.'
       },
       {
         id: 'rhs-example-visual',
         type: 'info',
         phase: 'VZOROVÝ PRÍKLAD',
         title: '|2x − 4| = x + 2 krok za krokom',
-        html: '<p><strong>1. Podmienka:</strong> x + 2 ≥ 0, teda x ≥ −2.</p><p><strong>2. Prvá vetva:</strong> 2x − 4 = x + 2 ⇒ x = 6.</p><p><strong>3. Druhá vetva:</strong> 2x − 4 = −(x + 2) ⇒ 3x = 2 ⇒ x = 2/3.</p><p><strong>4. Podmienka:</strong> 6 ≥ −2 aj 2/3 ≥ −2, takže oba kandidáty zostávajú.</p><p><strong>5. Kontrola v pôvodnej rovnici:</strong><br>x=6: |12−4|=8 a 6+2=8.<br>x=2/3: |4/3−4|=8/3 a 2/3+2=8/3.</p><div class="remember"><strong>Výsledok:</strong> x ∈ {2/3, 6}.</div>'
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p><strong>1. Podmienka:</strong> x + 2 ≥ 0, teda x ≥ −2.</p><p><strong>2. Prvá vetva:</strong> 2x − 4 = x + 2 ⇒ x = 6.</p><p><strong>3. Druhá vetva:</strong> 2x − 4 = −(x + 2) ⇒ 3x = 2 ⇒ x = 2/3.</p><p><strong>4. Podmienka:</strong> 6 ≥ −2 aj 2/3 ≥ −2, takže oba kandidáty zostávajú.</p><p><strong>5. Kontrola v pôvodnej rovnici:</strong><br>x=6: |12−4|=8 a 6+2=8.<br>x=2/3: |4/3−4|=8/3 a 2/3+2=8/3.</p><p><strong>Výsledok: x ∈ {2/3, 6}.</strong></p></div>'
       },
       {
         id: 'rhs-error',
@@ -148,7 +150,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'PRAVIDLO 3',
         title: 'Typ |L(x)| = |R(x)|',
-        html: '<p>Ak sú absolútne hodnoty na oboch stranách, obe strany sú automaticky nezáporné.</p><div class="remember"><strong>|L(x)| = |R(x)| ⇔ L(x) = R(x) alebo L(x) = −R(x).</strong></div><p>Príklad: |3x−1| = |x+5|.<br>Vetva 1: 3x−1=x+5 ⇒ x=3.<br>Vetva 2: 3x−1=−x−5 ⇒ 4x=−4 ⇒ x=−1.</p><p>Oba výsledky ešte skontroluj v pôvodnej rovnici.</p>'
+        html: '<p>Ak sú absolútne hodnoty na oboch stranách, obe strany sú automaticky nezáporné.</p><div class="formula">|L(x)| = |R(x)| ⇔ L(x) = R(x) alebo L(x) = −R(x)</div><p>Príklad: |3x−1| = |x+5|.<br>Vetva 1: 3x−1=x+5 ⇒ x=3.<br>Vetva 2: 3x−1=−x−5 ⇒ 4x=−4 ⇒ x=−1.</p><p>Oba výsledky ešte skontroluj v pôvodnej rovnici.</p>',
+        remember: 'Dve absolútne hodnoty sa rovnajú práve vtedy, keď sú ich vnútra rovnaké alebo navzájom opačné.'
       },
       {
         id: 'complex-transition',
@@ -184,7 +187,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'KROK 3',
         title: 'Ako odstrániť absolútnu hodnotu na intervale',
-        html: '<p>Platí:</p><div class="remember">Ak A(x) ≥ 0, potom |A(x)| = A(x).<br>Ak A(x) &lt; 0, potom |A(x)| = −A(x).</div><p>Pre interval <strong>x &lt; −1</strong> sú oba výrazy záporné, preto:</p><p>|2x−3| + |x+1| = <strong>−(2x−3) − (x+1)</strong>.</p><p>Po odstránení absolútnych hodnôt už riešiš obyčajnú lineárnu rovnicu.</p>'
+        html: '<p>Platí:</p><div class="term-list"><div class="term-item no-symbol"><div class="term-name">A(x) ≥ 0</div><p class="term-rule">|A(x)| = A(x)</p></div><div class="term-item no-symbol"><div class="term-name">A(x) &lt; 0</div><p class="term-rule">|A(x)| = −A(x)</p></div></div><p>Pre interval <strong>x &lt; −1</strong> sú oba výrazy záporné, preto:</p><p>|2x−3| + |x+1| = <strong>−(2x−3) − (x+1)</strong>.</p><p>Po odstránení absolútnych hodnôt už riešiš obyčajnú lineárnu rovnicu.</p>',
+        remember: 'A(x) ≥ 0 → |A(x)| = A(x). A(x) &lt; 0 → |A(x)| = −A(x).'
       },
       {
         id: 'interval-case1',
@@ -236,14 +240,15 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'UNIVERZÁLNY POSTUP',
         title: 'Postup pre rovnicu s viacerými absolútnymi hodnotami',
-        html: '<div class="remember"><strong>1.</strong> Nájdi všetky výrazy v absolútnych hodnotách.<br><strong>2.</strong> Každý polož rovný nule – dostaneš kritické body.<br><strong>3.</strong> Kritické body zoradi a rozdeľ nimi číselnú os na intervaly.<br><strong>4.</strong> Na každom intervale urči znamienko každého vnútorného výrazu.<br><strong>5.</strong> Podľa znamienka odstráň absolútne hodnoty.<br><strong>6.</strong> Vyrieš vzniknutú lineárnu rovnicu.<br><strong>7.</strong> Kandidát prijmi iba vtedy, ak patrí do práve riešeného intervalu.<br><strong>8.</strong> Všetky prijaté kandidáty dosaď do pôvodnej rovnice.<br><strong>9.</strong> Zapíš množinu riešení.</div><p><strong>Najčastejšia chyba:</strong> žiak vyrieši čiastkovú rovnicu, ale zabudne skontrolovať interval, pre ktorý táto rovnica vôbec platila.</p>'
+        html: '<ol class="steps"><li>Nájdi všetky výrazy v absolútnych hodnotách.</li><li>Každý polož rovný nule – dostaneš kritické body.</li><li>Kritické body zoradi a rozdeľ nimi číselnú os na intervaly.</li><li>Na každom intervale urči znamienko každého vnútorného výrazu.</li><li>Podľa znamienka odstráň absolútne hodnoty.</li><li>Vyrieš vzniknutú lineárnu rovnicu.</li><li>Kandidát prijmi iba vtedy, ak patrí do práve riešeného intervalu.</li><li>Všetky prijaté kandidáty dosaď do pôvodnej rovnice.</li><li>Zapíš množinu riešení.</li></ol><div class="warning"><strong>Najčastejšia chyba:</strong> žiak vyrieši čiastkovú rovnicu, ale zabudne skontrolovať interval, pre ktorý táto rovnica vôbec platila.</div>',
+        remember: 'Kritické body → intervaly → znamienka → rieš rovnicu → over interval → over v pôvodnej rovnici → zapíš riešenia.'
       },
       {
         id: 'notebook-main',
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Čistý algoritmus do zošita',
-        html: '<p><span class="mini-label">ÚLOHA DO ZOŠITA</span><br>Rieš v zošite <strong>|x−2| + |x+4| = 10</strong>. Najprv bez pomoci nájdi kritické body, urob číselnú os a rozdeľ riešenie na intervaly.</p><p><span class="mini-label">ZAPÍŠ SI DO ZOŠITA</span><br>Po kontrole si zapíš deväťkrokový postup z predchádzajúcej obrazovky a pod neho svoje opravené riešenie.</p>',
+        html: '<p><span class="mini-label">ÚLOHA DO ZOŠITA</span><br>Rieš v zošite <strong>|x−2| + |x+4| = 10</strong>. Najprv bez pomoci nájdi kritické body, urob číselnú os a rozdeľ riešenie na intervaly.</p><p><span class="mini-label">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Postup pre rovnicu s viacerými absolútnymi hodnotami:</p><ol class="steps"><li>Nájdi všetky výrazy v absolútnych hodnotách.</li><li>Každý polož rovný nule – dostaneš kritické body.</li><li>Kritické body zoradi a rozdeľ nimi číselnú os na intervaly.</li><li>Na každom intervale urči znamienko každého vnútorného výrazu.</li><li>Podľa znamienka odstráň absolútne hodnoty.</li><li>Vyrieš vzniknutú lineárnu rovnicu.</li><li>Kandidát prijmi iba vtedy, ak patrí do práve riešeného intervalu.</li><li>Všetky prijaté kandidáty dosaď do pôvodnej rovnice.</li><li>Zapíš množinu riešení.</li></ol><p>Pod postup zapíš svoje opravené riešenie úlohy vyššie.</p>',
         model: '<strong>KONTROLA:</strong> Kritické body sú x=2 a x=−4. Intervaly: x&lt;−4, −4≤x&lt;2, x≥2. V strednom intervale je súčet vzdialeností medzi bodmi −4 a 2 stále 6, takže tam riešenie nevznikne. V krajných intervaloch vyjdú x=−6 a x=4. Obe hodnoty po dosadení dávajú 10.'
       },
       {

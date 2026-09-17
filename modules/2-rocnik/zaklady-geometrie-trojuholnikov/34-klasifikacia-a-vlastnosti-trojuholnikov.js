@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Dve nezávislé klasifikácie',
-        html: '<p>Trojuholník klasifikujeme podľa <strong>strán</strong> (rovnostranný — všetky strany rovnaké; rovnoramenný — aspoň dve strany rovnaké; rôznostranný — všetky strany rôzne) a podľa <strong>uhlov</strong> (ostrouhlý — všetky uhly ostré; pravouhlý — jeden uhol pravý; tupouhlý — jeden uhol tupý).</p><p>Tieto dve klasifikácie sa dajú kombinovať — napríklad pravouhlý rovnoramenný trojuholník.</p>',
+        html: '<p>Trojuholník klasifikujeme podľa <strong>strán</strong> a podľa <strong>uhlov</strong> — nezávisle od seba.</p><div class="term-list"><div class="term-item no-symbol"><div class="term-name">Podľa strán</div><p class="term-rule"><strong>rovnostranný</strong> — všetky strany rovnaké; <strong>rovnoramenný</strong> — aspoň dve strany rovnaké; <strong>rôznostranný</strong> — všetky strany rôzne.</p></div><div class="term-item no-symbol"><div class="term-name">Podľa uhlov</div><p class="term-rule"><strong>ostrouhlý</strong> — všetky uhly ostré; <strong>pravouhlý</strong> — jeden uhol pravý; <strong>tupouhlý</strong> — jeden uhol tupý.</p></div></div><p>Tieto dve klasifikácie sa dajú kombinovať — napríklad pravouhlý rovnoramenný trojuholník.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Trojuholníková nerovnosť',
-        html: '<p>Tri úsečky tvoria trojuholník iba vtedy, ak súčet dĺžok ľubovoľných dvoch z nich je väčší ako dĺžka tretej: <strong>a + b > c</strong>, <strong>a + c > b</strong>, <strong>b + c > a</strong>.</p><p>Príklad: úsečky 2cm, 3cm, 8cm netvoria trojuholník, lebo 2+3=5 nie je väčšie ako 8.</p>',
+        html: '<p>Tri úsečky tvoria trojuholník iba vtedy, ak súčet dĺžok ľubovoľných dvoch z nich je väčší ako dĺžka tretej:</p><div class="formula">a + b > c, a + c > b, b + c > a</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Úsečky 2cm, 3cm, 8cm netvoria trojuholník, lebo 2+3=5 nie je väčšie ako 8.</p></div>',
         remember: 'Trojuholníková nerovnosť: súčet ľubovoľných dvoch strán > tretia strana (treba overiť všetky tri dvojice).',
       },
       {
@@ -108,7 +108,7 @@ MathPlatform.registerModule({
         ],
         answer: 0,
         correct: 'Presne. Ak súčet dvoch najkratších strán prevýši najdlhšiu, zvyšné dve nerovnosti (kde je na pravej strane kratšia strana) platia automaticky, keďže ľavá strana bude ešte väčšia.',
-        hint: 'Rozmysli si, či môže byť súčet dvoch strán vrátane tej najdlhšej niekedy MENŠÍ ako zvyšná strana.',
+        hint: 'Rozmysli si, či môže byť súčet dvoch strán vrátane tej najdlhšej niekedy <span class="hl">menší</span> ako zvyšná strana.',
       },
       {
         id: 'q-combo',
@@ -130,7 +130,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Podľa strán: <strong>rovnostranný</strong> (všetky strany rovnaké), <strong>rovnoramenný</strong> (aspoň dve strany rovnaké), <strong>rôznostranný</strong> (všetky strany rôzne).</p><p>Podľa uhlov: <strong>ostrouhlý</strong> (všetky uhly ostré), <strong>pravouhlý</strong> (jeden uhol pravý), <strong>tupouhlý</strong> (jeden uhol tupý).</p><p><strong>Trojuholníková nerovnosť:</strong> súčet ľubovoľných dvoch strán musí byť väčší ako tretia strana.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Podľa strán</div><p class="term-rule"><strong>rovnostranný</strong> (všetky strany rovnaké), <strong>rovnoramenný</strong> (aspoň dve strany rovnaké), <strong>rôznostranný</strong> (všetky strany rôzne).</p></div><div class="term-item no-symbol"><div class="term-name">Podľa uhlov</div><p class="term-rule"><strong>ostrouhlý</strong> (všetky uhly ostré), <strong>pravouhlý</strong> (jeden uhol pravý), <strong>tupouhlý</strong> (jeden uhol tupý).</p></div></div><div class="formula">a + b > c, a + c > b, b + c > a<span class="formula-note">Trojuholníková nerovnosť: súčet ľubovoľných dvoch strán musí byť väčší ako tretia strana.</span></div>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -140,7 +140,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo úsečky 1cm, 2cm a 3cm netvoria trojuholník, hoci 1+2=3 sa rovná tretej strane?',
-        model: 'Trojuholníková nerovnosť vyžaduje OSTRÚ nerovnosť (súčet musí byť VÄČŠÍ, nie iba rovný). Ak je súčet dvoch strán presne rovný tretej, všetky tri úsečky by ležali na jednej priamke (splynuli by do úsečky), a nevznikol by žiadny trojuholník s nenulovým obsahom.',
+        model: 'Trojuholníková nerovnosť vyžaduje <span class="hl">ostrú</span> nerovnosť (súčet musí byť <span class="hl">väčší</span>, nie iba rovný). Ak je súčet dvoch strán presne rovný tretej, všetky tri úsečky by ležali na jednej priamke (splynuli by do úsečky), a nevznikol by žiadny trojuholník s nenulovým obsahom.',
       },
       {
         id: 'manual',

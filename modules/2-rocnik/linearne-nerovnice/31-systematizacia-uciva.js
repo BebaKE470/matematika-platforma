@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "POCHOP",
         "title": "Mapa rozhodovania",
-        "html": "<p><strong>Bežná lineárna nerovnica:</strong> ekvivalentné úpravy; pozor na záporné násobenie/delenie. <strong>Neznáma v menovateli:</strong> definičné podmienky + znamienka. <strong>Absolútna hodnota:</strong> vzdialenosť. <strong>Sústava:</strong> vyriešiť každú podmienku + prienik.</p>"
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Bežná lineárna nerovnica</div><p class=\"term-rule\">Ekvivalentné úpravy; pozor na záporné násobenie/delenie.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Neznáma v menovateli</div><p class=\"term-rule\">Definičné podmienky + znamienka.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Absolútna hodnota</div><p class=\"term-rule\">Vzdialenosť.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Sústava</div><p class=\"term-rule\">Vyriešiť každú podmienku + prienik.</p></div></div>"
       },
       {
         "id": "c1",
@@ -140,7 +140,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>SYSTEMATIZÁCIA – LINEÁRNE NEROVNICE</strong></p><p>1. Urč typ nerovnice. 2. Zapíš podmienky. 3. Zvoľ správny postup. 4. Vykonaj úpravy a sleduj smer nerovnosti. 5. Zapíš množinu riešení. 6. Skontroluj krajné/vylúčené body a význam výsledku.</p>",
+        "html": "<span class=\"mini-label\">SYSTEMATIZÁCIA – LINEÁRNE NEROVNICE</span><ol class=\"steps\"><li>Urč typ nerovnice.</li><li>Zapíš podmienky.</li><li>Zvoľ správny postup.</li><li>Vykonaj úpravy a sleduj smer nerovnosti.</li><li>Zapíš množinu riešení.</li><li>Skontroluj krajné/vylúčené body a význam výsledku.</li></ol>",
         "continueLabel": "Mám zapísané"
       },
       {

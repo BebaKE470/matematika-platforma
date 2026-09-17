@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Skrytý typ rovnice',
-        html: '<p>Rovnica 3(x²−4) = x²+8 na prvý pohľad nevyzerá ako rýdzo kvadratická. Po roznásobení: 3x²−12=x²+8, po presune členov: 2x²=20, teda x²=10 — je to vlastne rýdzo kvadratická rovnica!</p>',
+        html: '<p>Rovnica 3(x²−4) = x²+8 na prvý pohľad nevyzerá ako rýdzo kvadratická.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>3(x²−4) = x²+8</p><p>Po roznásobení: 3x²−12 = x²+8</p><p>Po presune členov: 2x²=20, teda x²=10 — je to vlastne <strong>rýdzo kvadratická rovnica</strong>!</p></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -116,7 +116,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Ak rovnica na prvý pohľad nie je v tvare ax²+c=0, najprv ju uprav: roznásob zátvorky, presuň všetky členy na jednu stranu, spoj podobné členy. Až potom rozpoznaj typ a vyrieš.</p>',
+        html: '<p>Ak rovnica na prvý pohľad nie je v tvare ax²+c=0, najprv ju priprav:</p><ol class="steps"><li>Roznásob zátvorky.</li><li>Presuň všetky členy na jednu stranu.</li><li>Spoj podobné členy.</li><li>Až potom rozpoznaj typ rovnice a vyrieš ju.</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {

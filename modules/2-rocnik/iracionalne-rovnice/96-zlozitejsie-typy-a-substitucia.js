@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Postup substitúcie',
-        html: '<p>Postup: 1) zaveď substitúciu t=√x s podmienkou <strong>t≥0</strong>, 2) prepíš celú rovnicu pomocou t (x=t²), 3) vyrieš vzniknutú kvadratickú rovnicu pre t, 4) zamietni záporné riešenia t (keďže t=√x≥0), 5) z každého platného t vypočítaj x=t², 6) over skúškou v pôvodnej rovnici.</p><p>Pre t²−5t+4=0: t=1 alebo t=4 (obe kladné, obe platné). Späť: x=1²=1 alebo x=4²=16.</p>',
+        html: '<p>Postup:</p><ol class="steps"><li>Zaveď substitúciu t=√x s podmienkou <strong>t≥0</strong>.</li><li>Prepíš celú rovnicu pomocou t (x=t²).</li><li>Vyrieš vzniknutú kvadratickú rovnicu pre t.</li><li>Zamietni záporné riešenia t (keďže t=√x≥0).</li><li>Z každého platného t vypočítaj x=t².</li><li>Over skúškou v pôvodnej rovnici.</li></ol><div class="example"><span class="mini-label">PRÍKLAD</span><p>Pre t²−5t+4=0: t=1 alebo t=4 (obe kladné, obe platné).</p><p>Späť: x=1²=1 alebo x=4²=16.</p></div>',
         remember: 't=√x (t≥0) → kvadratická rovnica pre t → zamietni záporné t → x=t² → skúška.',
       },
       {
@@ -103,7 +103,7 @@ MathPlatform.registerModule({
           'Mal namiesto umocnenia t na druhú vypočítať odmocninu z t.',
         ],
         answer: 0,
-        correct: 'Presne. Substitúcia t=√x má podmienku t≥0 — záporné riešenie t sa musí zamietnuť PRED návratom k x, inak vznikne cudzí koreň.',
+        correct: 'Presne. Substitúcia t=√x má podmienku t≥0 — záporné riešenie t sa musí zamietnuť <span class="hl">pred</span> návratom k x, inak vznikne cudzí koreň.',
         hint: 'Môže byť t=√x záporné číslo?',
       },
       {
@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Substitúcia pri iracionálnej rovnici:</strong> zaveď t=√x (t≥0), x=t², prepíš rovnicu pomocou t, vyrieš kvadratickú rovnicu pre t, zamietni záporné t, z platných t vypočítaj x=t², over skúškou v pôvodnej rovnici.</p>',
+        html: '<p><strong>Substitúcia pri iracionálnej rovnici:</strong></p><ol class="steps"><li>Zaveď t=√x (t≥0), x=t².</li><li>Prepíš rovnicu pomocou t.</li><li>Vyrieš kvadratickú rovnicu pre t.</li><li>Zamietni záporné t.</li><li>Z platných t vypočítaj x=t².</li><li>Over skúškou v pôvodnej rovnici.</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {

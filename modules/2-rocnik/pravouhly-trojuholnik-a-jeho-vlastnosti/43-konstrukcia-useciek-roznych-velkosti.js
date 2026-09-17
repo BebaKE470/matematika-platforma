@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Ako zostrojiť úsečku dĺžky √n?',
-        html: '<p>Euklidova veta o výške hovorí: v² = ca·cb. Ak zvolíme ca = 1 (jednotková dĺžka) a cb = n, dostaneme <strong>v² = 1·n = n</strong>, teda <strong>v = √n</strong>.</p><p>Stačí teda zostrojiť pravouhlý trojuholník s výškou na preponu, kde úseky prepony sú 1 a n — výška bude mať presne dĺžku √n.</p>',
+        html: '<p>Euklidova veta o výške hovorí: v² = ca·cb. Ak zvolíme ca = 1 (jednotková dĺžka) a cb = n, dostaneme:</p><div class="formula">v² = 1·n = n, teda v = √n</div><p>Stačí teda zostrojiť pravouhlý trojuholník s výškou na preponu, kde úseky prepony sú 1 a n — výška bude mať presne dĺžku √n.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Úloha Tálesovej kružnice',
-        html: '<p>Aby výška skutočne vznikla z PRAVOUHLÉHO trojuholníka, musí byť vrchol pravého uhla na <strong>Tálesovej kružnici</strong> nad priemerom rovným celej prepone (1+n).</p><p>Postup: 1) narysuj úsečku dĺžky 1+n, 2) zostroj nad ňou Tálesovu kružnicu, 3) v bode vzdialenom 1 od jedného konca vztýč kolmicu po kružnicu, 4) táto kolmica (výška) má dĺžku √n.</p>',
+        html: '<p>Aby výška skutočne vznikla z <span class="hl">pravouhlého</span> trojuholníka, musí byť vrchol pravého uhla na <strong>Tálesovej kružnici</strong> nad priemerom rovným celej prepone (1+n).</p><ol class="steps"><li>Narysuj úsečku dĺžky 1+n.</li><li>Zostroj nad ňou Tálesovu kružnicu.</li><li>V bode vzdialenom 1 od jedného konca vztýč kolmicu po kružnicu.</li><li>Táto kolmica (výška) má dĺžku √n.</li></ol>',
         remember: 'Zvoľ ca=1, cb=n. Zostroj Tálesovu kružnicu nad úsečkou 1+n. Kolmica v bode vo vzdialenosti 1 má dĺžku √n.',
       },
       {
@@ -136,14 +136,14 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo musí byť vrchol pravého uhla práve na Tálesovej kružnici, aby konštrukcia fungovala?',
-        model: 'Euklidova veta o výške platí iba v PRAVOUHLOM trojuholníku. Tálesova kružnica zaručuje, že uhol pri vrchole nad priemerom je vždy presne 90° — bez tejto podmienky by trojuholník nemusel byť pravouhlý a vzťah v²=ca·cb by vôbec neplatil.',
+        model: 'Euklidova veta o výške platí iba v <span class="hl">pravouhlom</span> trojuholníku. Tálesova kružnica zaručuje, že uhol pri vrchole nad priemerom je vždy presne 90° — bez tejto podmienky by trojuholník nemusel byť pravouhlý a vzťah v²=ca·cb by vôbec neplatil.',
       },
       {
         id: 'manual',
         type: 'notebook',
         phase: 'BEZ MOBILU',
         title: 'Konštrukcia na papieri',
-        html: '<p>Na papieri pomocou pravítka a kružidla zostroj úsečku dĺžky <strong>√5</strong>: 1) narysuj úsečku dĺžky 1+5=6cm (v mierke, napr. 1 jednotka = 1cm), 2) zostroj nad ňou Tálesovu kružnicu, 3) v bode vzdialenom 1cm od kraja vztýč kolmicu po kružnicu, 4) zmeraj a over dĺžku výslednej úsečky.</p>',
+        html: '<p>Na papieri pomocou pravítka a kružidla zostroj úsečku dĺžky <strong>√5</strong>:</p><ol class="steps"><li>Narysuj úsečku dĺžky 1+5=6cm (v mierke, napr. 1 jednotka = 1cm).</li><li>Zostroj nad ňou Tálesovu kružnicu.</li><li>V bode vzdialenom 1cm od kraja vztýč kolmicu po kružnicu.</li><li>Zmeraj a over dĺžku výslednej úsečky.</li></ol>',
         continueLabel: 'Zostrojil/a som',
       },
       {

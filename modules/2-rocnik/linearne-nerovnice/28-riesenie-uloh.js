@@ -125,7 +125,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Úloha do zošita",
-        "html": "<p><strong>ÚLOHA DO ZOŠITA:</strong> Rieš ručne <strong>|3x−6| ≥ 9</strong>. Výsledok zapíš ako nerovnosť, zjednotenie intervalov a vyznač na číselnej osi.</p>",
+        "html": "<span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><p>Rieš ručne <strong>|3x−6| ≥ 9</strong>. Výsledok zapíš ako nerovnosť, zjednotenie intervalov a vyznač na číselnej osi.</p>",
         "continueLabel": "Mám zapísané"
       },
       {

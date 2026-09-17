@@ -57,7 +57,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Skryté číslo v rovnici',
-        html: '<p>Rovnica x²−4x+m=0 obsahuje okrem x aj parameter m — „skryté číslo“, ktorého hodnotu nepoznáme. Diskriminant D=16−4m ZÁVISÍ od m, preto aj počet riešení rovnice závisí od m.</p>',
+        html: '<p>Rovnica x²−4x+m=0 obsahuje okrem x aj parameter m — „skryté číslo“, ktorého hodnotu nepoznáme. Diskriminant D=16−4m <span class="hl">závisí</span> od m, preto aj počet riešení rovnice závisí od m.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Podmienka na parameter',
-        html: '<p>Pre rovnicu x²−4x+m=0 (a=1, b=−4, c=m): D=(−4)²−4·1·m=16−4m.</p><p>Dve riešenia: D&gt;0 → 16−4m&gt;0 → m&lt;4.<br>Jedno riešenie: D=0 → 16−4m=0 → m=4.<br>Žiadne riešenie: D&lt;0 → 16−4m&lt;0 → m&gt;4.</p><p>Postup: vyjadri D ako výraz v m, potom vyrieš príslušnú (ne)rovnicu pre m.</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Pre rovnicu x²−4x+m=0 (a=1, b=−4, c=m):</p><p>D=(−4)²−4·1·m=16−4m</p></div><div class="term-list"><div class="term-item no-symbol"><div class="term-name">Dve riešenia (D &gt; 0)</div><p class="term-rule">16−4m &gt; 0 → m &lt; 4</p></div><div class="term-item no-symbol"><div class="term-name">Jedno riešenie (D = 0)</div><p class="term-rule">16−4m = 0 → m = 4</p></div><div class="term-item no-symbol"><div class="term-name">Žiadne riešenie (D &lt; 0)</div><p class="term-rule">16−4m &lt; 0 → m &gt; 4</p></div></div><p>Postup: vyjadri D ako výraz v m, potom vyrieš príslušnú (ne)rovnicu pre m.</p>',
         remember: 'Vyjadri D(m), potom rieš D>0 / D=0 / D<0 ako (ne)rovnicu pre m.',
       },
       {
@@ -133,7 +133,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo pri úlohách s parametrom riešime NEROVNICU (D&gt;0), a nie iba jednu konkrétnu hodnotu D?',
-        model: 'Pretože pri rovnici s parametrom nepoznáme konkrétnu číselnú hodnotu D — D je výraz závislý od parametra m. Úlohou je zistiť VŠETKY hodnoty m, pre ktoré rovnica má požadovaný počet riešení (napr. dve rôzne), čo znamená nájsť celú množinu hodnôt m spĺňajúcich podmienku D>0, nie iba jednu konkrétnu hodnotu — preto rovnicu D>0 riešime ako nerovnicu pre m.',
+        model: 'Pretože pri rovnici s parametrom nepoznáme konkrétnu číselnú hodnotu D — D je výraz závislý od parametra m. Úlohou je zistiť <span class="hl">všetky</span> hodnoty m, pre ktoré rovnica má požadovaný počet riešení (napr. dve rôzne), čo znamená nájsť celú množinu hodnôt m spĺňajúcich podmienku D>0, nie iba jednu konkrétnu hodnotu — preto rovnicu D>0 riešime ako nerovnicu pre m.',
       },
       {
         id: 'manual',

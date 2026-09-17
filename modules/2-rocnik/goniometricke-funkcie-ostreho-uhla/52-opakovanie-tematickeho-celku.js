@@ -54,7 +54,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie celého celku',
-        html: '<p>sin α = protiľahlá/prepona. cos α = priľahlá/prepona. tg α = protiľahlá/priľahlá. cotg α = priľahlá/protiľahlá = 1/tg α. Súčet ostrých uhlov = 90°.</p>',
+        html: '<div class="term-list"><div class="term-item"><span class="term-symbol">sin</span><div><div class="term-name">sin α</div><p class="term-rule">protiľahlá/prepona</p></div></div><div class="term-item"><span class="term-symbol">cos</span><div><div class="term-name">cos α</div><p class="term-rule">priľahlá/prepona</p></div></div><div class="term-item"><span class="term-symbol">tg</span><div><div class="term-name">tg α</div><p class="term-rule">protiľahlá/priľahlá</p></div></div><div class="term-item"><span class="term-symbol">cotg</span><div><div class="term-name">cotg α</div><p class="term-rule">priľahlá/protiľahlá = 1/tg α</p></div></div><div class="term-item no-symbol"><div class="term-name">Súčet ostrých uhlov</div><p class="term-rule">90°</p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         type: 'choice',
         phase: 'PRECVIČ',
         skill: 'tangens',
-        question: 'Ten istý trojuholník. Aké je tg α?',
+        question: 'Trojuholník má protiľahlú odvesnu 5cm, priľahlú 12cm, preponu 13cm. Aké je tg α?',
         options: ['12/5', '5/13', '5/12'],
         answer: 2,
         correct: 'Správne. tg α = protiľahlá/priľahlá = 5/12.',

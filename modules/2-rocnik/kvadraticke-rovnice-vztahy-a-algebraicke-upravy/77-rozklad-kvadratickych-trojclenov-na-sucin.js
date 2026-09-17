@@ -67,7 +67,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Rozklad trojčlena na súčin',
-        html: '<p>Ak má rovnica ax²+bx+c=0 (a≠0) korene x₁, x₂, potom kvadratický trojčlen ax²+bx+c možno rozložiť na súčin:</p><p><strong>ax² + bx + c = a(x − x₁)(x − x₂)</strong></p><p>Postup: 1) nájdi korene x₁, x₂ (diskriminant, vzorec alebo odhad), 2) dosaď ich do tvaru a(x−x₁)(x−x₂), 3) over roznásobením.</p>',
+        html: '<p>Ak má rovnica ax²+bx+c=0 (a≠0) korene x₁, x₂, potom kvadratický trojčlen ax²+bx+c možno rozložiť na súčin:</p><div class="formula">ax² + bx + c = a(x − x₁)(x − x₂)</div><ol class="steps"><li>Nájdi korene x₁, x₂ (diskriminant, vzorec alebo odhad).</li><li>Dosaď ich do tvaru a(x−x₁)(x−x₂).</li><li>Over roznásobením.</li></ol>',
         remember: 'ax²+bx+c = a(x−x₁)(x−x₂), kde x₁, x₂ sú korene rovnice ax²+bx+c=0.',
       },
       {
@@ -125,7 +125,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Rozklad kvadratického trojčlena na súčin:</strong> ax²+bx+c = a(x−x₁)(x−x₂), kde x₁, x₂ sú korene rovnice ax²+bx+c=0. Postup: nájdi korene, dosaď do vzorca, over roznásobením.</p>',
+        html: '<p><strong>Rozklad kvadratického trojčlena na súčin:</strong></p><div class="formula">ax² + bx + c = a(x − x₁)(x − x₂)<span class="formula-note">kde x₁, x₂ sú korene rovnice ax²+bx+c=0</span></div><p>Postup: nájdi korene, dosaď do vzorca, over roznásobením.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

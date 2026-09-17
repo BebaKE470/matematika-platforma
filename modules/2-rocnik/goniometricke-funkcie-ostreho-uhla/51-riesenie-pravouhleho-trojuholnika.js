@@ -115,7 +115,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Riešenie pravouhlého trojuholníka: použi Pytagorovu vetu (poznáš dve strany), sin/cos/tg (poznáš stranu a uhol), a súčet ostrých uhlov = 90° na dopočítanie druhého uhla. Výsledok si over kontrolou (napr. súčtom uhlov, alebo spätným dosadením do Pytagorovej vety).</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Pytagorova veta</div><p class="term-rule">Použi, keď poznáš dve strany.</p></div><div class="term-item no-symbol"><div class="term-name">sin / cos / tg</div><p class="term-rule">Použi, keď poznáš stranu a uhol.</p></div><div class="term-item no-symbol"><div class="term-name">Súčet ostrých uhlov = 90°</div><p class="term-rule">Použi na dopočítanie druhého uhla.</p></div></div><p>Výsledok si over kontrolou (napr. súčtom uhlov, alebo spätným dosadením do Pytagorovej vety).</p>',
         continueLabel: 'Mám zapísané',
       },
       {

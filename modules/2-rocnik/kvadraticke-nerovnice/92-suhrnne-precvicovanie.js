@@ -54,7 +54,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie postupov',
-        html: '<p>Nerovnica: nájdi korene, urč interval podľa orientácie paraboly (a>0 kladné mimo koreňov, a<0 naopak). D<0: výraz má na celej osi znamienko podľa a. Parameter: vyjadri D(m), rieš (ne)rovnicu pre m.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Nerovnica</div><p class="term-rule">Nájdi korene, urč interval podľa orientácie paraboly (a&gt;0 kladné mimo koreňov, a&lt;0 naopak).</p></div><div class="term-item no-symbol"><div class="term-name">D &lt; 0</div><p class="term-rule">Výraz má na celej osi znamienko podľa a.</p></div><div class="term-item no-symbol"><div class="term-name">Parameter</div><p class="term-rule">Vyjadri D(m), rieš (ne)rovnicu pre m.</p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -112,7 +112,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie celej témy: kvadratická nerovnica — nájdi korene, urč interval podľa orientácie paraboly (výpočtom alebo z grafu); ak D&lt;0, výraz má na celej osi znamienko podľa a; rovnica s parametrom — vyjadri D(m) alebo dosaď daný koreň, rieš výslednú (ne)rovnicu pre parameter.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Kvadratická nerovnica</div><p class="term-rule">Nájdi korene, urč interval podľa orientácie paraboly (výpočtom alebo z grafu).</p></div><div class="term-item no-symbol"><div class="term-name">D &lt; 0</div><p class="term-rule">Výraz má na celej osi znamienko podľa a.</p></div><div class="term-item no-symbol"><div class="term-name">Rovnica s parametrom</div><p class="term-rule">Vyjadri D(m) alebo dosaď daný koreň, rieš výslednú (ne)rovnicu pre parameter.</p></div></div>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -140,7 +140,7 @@ MathPlatform.registerModule({
         question: 'Nerovnica −x²+4 &lt; 0 (a=−1&lt;0, korene −2 a 2). Aké je riešenie?',
         options: ['x ∈ (−2, 2)', 'x ∈ R', 'x ∈ (−∞,−2) ∪ (2,∞)'],
         answer: 2,
-        correct: 'Správne. a<0, takže výraz je záporný MIMO koreňov: x<−2 alebo x>2.',
+        correct: 'Správne. a<0, takže výraz je záporný <span class="hl">mimo koreňov</span>: x<−2 alebo x>2.',
         hint: 'a<0 → záporné mimo koreňov (opačne ako pri a>0).',
       },
       {

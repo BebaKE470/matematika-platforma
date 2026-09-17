@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Výška rozdeľuje preponu na dva úseky',
-        html: '<p>V pravouhlom trojuholníku ABC s pravým uhlom pri C spustíme výšku v z vrcholu C na preponu c. Päta výšky rozdelí preponu na dva úseky: ca (bližšie k vrcholu A, pod odvesnou a) a cb (bližšie k B, pod odvesnou b). Platí c = ca + cb.</p>',
+        html: '<p>V pravouhlom trojuholníku ABC s pravým uhlom pri C spustíme výšku v z vrcholu C na preponu c. Päta výšky rozdelí preponu na dva úseky:</p><div class="term-list"><div class="term-item no-symbol"><div class="term-name">Úsek ca</div><p class="term-rule">Bližšie k vrcholu A, pod odvesnou a.</p></div><div class="term-item no-symbol"><div class="term-name">Úsek cb</div><p class="term-rule">Bližšie k B, pod odvesnou b.</p></div></div><p>Platí c = ca + cb.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Euklidova veta o výške a o odvesne',
-        html: '<p><strong>Euklidova veta o výške:</strong> v² = ca · cb.</p><p><strong>Euklidova veta o odvesne:</strong> a² = c · ca,  b² = c · cb.</p><p>Kde c je celá prepona, ca a cb sú úseky prepony (ca pri odvesne a, cb pri odvesne b).</p>',
+        html: '<div class="formula"><span class="mini-label">EUKLIDOVA VETA O VÝŠKE</span>v² = ca · cb</div><div class="formula"><span class="mini-label">EUKLIDOVA VETA O ODVESNE</span>a² = c · ca<br>b² = c · cb</div><p>Kde c je celá prepona, ca a cb sú úseky prepony (ca pri odvesne a, cb pri odvesne b).</p>',
         remember: 'v² = ca·cb (výška). a² = c·ca, b² = c·cb (odvesna).',
       },
       {
@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Výška na preponu v pravouhlom trojuholníku rozdeľuje preponu c na úseky ca (pri odvesne a) a cb (pri odvesne b), c = ca+cb.</p><p><strong>Euklidova veta o výške:</strong> v² = ca·cb.</p><p><strong>Euklidova veta o odvesne:</strong> a² = c·ca,  b² = c·cb.</p>',
+        html: '<p>Výška na preponu v pravouhlom trojuholníku rozdeľuje preponu c na úseky ca (pri odvesne a) a cb (pri odvesne b), c = ca+cb.</p><div class="formula"><span class="mini-label">EUKLIDOVA VETA O VÝŠKE</span>v² = ca · cb</div><div class="formula"><span class="mini-label">EUKLIDOVA VETA O ODVESNE</span>a² = c · ca<br>b² = c · cb</div>',
         continueLabel: 'Mám zapísané',
       },
       {

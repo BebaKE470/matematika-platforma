@@ -55,7 +55,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie celej témy',
-        html: '<p>Postup: izoluj odmocninu, umocni, vyrieš, SKÚŠKA do pôvodnej rovnice (povinná). Substitúcia t=√x (t≥0) mení rovnicu na kvadratickú. Aplikácie: geometria, fyzika, prax — vždy over zmysluplnosť riešenia.</p>',
+        html: '<p>Postup:</p><ol class="steps"><li>Izoluj odmocninu.</li><li>Umocni.</li><li>Vyrieš.</li><li><span class="hl">Skúška</span> do pôvodnej rovnice (povinná).</li></ol><p>Substitúcia t=√x (t≥0) mení rovnicu na kvadratickú.</p><p>Aplikácie: geometria, fyzika, prax — vždy over zmysluplnosť riešenia.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -113,7 +113,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie: iracionálna rovnica — izoluj odmocninu, umocni, vyrieš, SKÚŠKA (povinná) do pôvodnej rovnice. Substitúcia t=√x (t≥0) prevádza zložitejšiu rovnicu na kvadratickú. V aplikáciách (geometria, fyzika, prax) vždy over aj zmysluplnosť výsledku voči kontextu.</p>',
+        html: '<p>Zhrnutie: iracionálna rovnica —</p><ol class="steps"><li>Izoluj odmocninu.</li><li>Umocni.</li><li>Vyrieš.</li><li><span class="hl">Skúška</span> (povinná) do pôvodnej rovnice.</li></ol><p>Substitúcia t=√x (t≥0) prevádza zložitejšiu rovnicu na kvadratickú.</p><p>V aplikáciách (geometria, fyzika, prax) vždy over aj zmysluplnosť výsledku voči kontextu.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

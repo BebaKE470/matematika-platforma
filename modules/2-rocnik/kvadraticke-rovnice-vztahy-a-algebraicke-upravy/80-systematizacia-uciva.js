@@ -54,7 +54,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie celého celku',
-        html: '<p>Vietove vzťahy: x₁+x₂=−b/a, x₁·x₂=c/a. Rozklad: ax²+bx+c=a(x−x₁)(x−x₂). Krátenie lomeného výrazu: definičný obor → rozklad → krátenie.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Vietove vzťahy</div><p class="term-rule">x₁+x₂=−b/a, x₁·x₂=c/a.</p></div><div class="term-item no-symbol"><div class="term-name">Rozklad</div><p class="term-rule">ax²+bx+c=a(x−x₁)(x−x₂).</p></div><div class="term-item no-symbol"><div class="term-name">Krátenie lomeného výrazu</div><p class="term-rule">Definičný obor → rozklad → krátenie.</p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {

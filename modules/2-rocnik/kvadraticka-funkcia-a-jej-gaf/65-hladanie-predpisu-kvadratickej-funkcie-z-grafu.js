@@ -57,7 +57,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Vrcholový tvar predpisu',
-        html: '<p>Ak poznáme vrchol V[x_v, y_v] paraboly, predpis funkcie môžeme zapísať vo <strong>vrcholovom tvare</strong>: y = a(x−x_v)² + y_v.</p><p>Koeficient a zatiaľ nepoznáme — dopočítame ho z ďalšieho bodu grafu.</p>',
+        html: '<p>Ak poznáme vrchol V[x_v, y_v] paraboly, predpis funkcie môžeme zapísať vo <strong>vrcholovom tvare</strong>:</p><div class="formula">y = a(x−x_v)² + y_v</div><p>Koeficient a zatiaľ nepoznáme — dopočítame ho z ďalšieho bodu grafu.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Zostavenie predpisu z vrcholu a bodu',
-        html: '<p>Príklad: vrchol V[1, −4], graf prechádza aj bodom [3, 0].</p><p>Dosadíme vrchol: y = a(x−1)² − 4. Teraz dosadíme bod [3,0]: 0 = a(3−1)² − 4, teda 0 = 4a − 4, a = 1.</p><p>Predpis: <strong>y = (x−1)² − 4</strong>.</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Vrchol V[1, −4], graf prechádza aj bodom [3, 0].</p><p>Dosadíme vrchol: y = a(x−1)² − 4.</p><p>Dosadíme bod [3,0]: 0 = a(3−1)² − 4, teda 0 = 4a − 4, a = 1.</p><p>Predpis: <strong>y = (x−1)² − 4</strong>.</p></div>',
         remember: 'Dosaď vrchol do y=a(x−x_v)²+y_v, potom dosaď ďalší bod a vyrieš rovnicu pre a.',
       },
       {
@@ -123,7 +123,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Vrcholový tvar: <strong>y = a(x−x_v)² + y_v</strong>.</p><p>Postup: 1) dosaď súradnice vrcholu, 2) dosaď súradnice ďalšieho známeho bodu, 3) vyrieš vzniknutú rovnicu pre a.</p>',
+        html: '<div class="formula">y = a(x−x_v)² + y_v<span class="formula-note">Vrcholový tvar predpisu.</span></div><ol class="steps"><li>Dosaď súradnice vrcholu.</li><li>Dosaď súradnice ďalšieho známeho bodu.</li><li>Vyrieš vzniknutú rovnicu pre a.</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -132,7 +132,7 @@ MathPlatform.registerModule({
         phase: 'ARGUMENTUJ',
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
-        prompt: 'Prečo nám na jednoznačné určenie predpisu kvadratickej funkcie stačí poznať vrchol a JEDEN ďalší bod (nie dva ďalšie body)?',
+        promptHtml: 'Prečo nám na jednoznačné určenie predpisu kvadratickej funkcie stačí poznať vrchol a <span class="hl">jeden</span> ďalší bod (nie dva ďalšie body)?',
         model: 'Vo vrcholovom tvare y=a(x−x_v)²+y_v už poznáme dve z troch neznámych (x_v aj y_v priamo z vrcholu) — zostáva nájsť iba jedno číslo, koeficient a. Na určenie jedinej neznámej stačí jedna rovnica, ktorú získame dosadením jedného ďalšieho bodu.',
       },
       {

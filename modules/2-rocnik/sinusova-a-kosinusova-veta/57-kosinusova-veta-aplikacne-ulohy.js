@@ -57,7 +57,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Úprava vzorca na výpočet uhla',
-        html: '<p>Z kosínusovej vety a²=b²+c²−2bc·cosα vyjadríme cos α:</p><p><strong>cos α = (b²+c²−a²) / (2bc)</strong></p><p>Keď poznáme všetky tri strany, vieme takto dopočítať ktorýkoľvek uhol.</p>',
+        html: '<p>Z kosínusovej vety a²=b²+c²−2bc·cosα vyjadríme cos α:</p><div class="formula">cos α = (b²+c²−a²) / (2bc)</div><p>Keď poznáme všetky tri strany, vieme takto dopočítať ktorýkoľvek uhol.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -115,7 +115,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Úprava kosínusovej vety na výpočet uhla: <strong>cos α = (b²+c²−a²)/(2bc)</strong> (analogicky pre β, γ).</p><p>Ak vyjde cos uhla = 0, uhol je 90°; ak vyjde záporné číslo, uhol je tupý.</p>',
+        html: '<div class="formula">cos α = (b²+c²−a²)/(2bc)<span class="formula-note">(analogicky pre β, γ)</span></div><p>Ak vyjde cos uhla = 0, uhol je 90°; ak vyjde záporné číslo, uhol je tupý.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

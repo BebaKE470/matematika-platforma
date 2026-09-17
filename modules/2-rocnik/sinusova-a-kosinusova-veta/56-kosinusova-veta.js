@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Keď sínusová veta nestačí',
-        html: '<p>Sínusová veta potrebuje aspoň jeden pár strana-protiľahlý uhol. Ak poznáme iba dve strany a uhol MEDZI nimi (nie protiľahlý k žiadnej z nich), potrebujeme iný vzorec.</p>',
+        html: '<p>Sínusová veta potrebuje aspoň jeden pár strana-protiľahlý uhol. Ak poznáme iba dve strany a uhol <span class="hl">medzi</span> nimi (nie protiľahlý k žiadnej z nich), potrebujeme iný vzorec.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Kosínusová veta',
-        html: '<p><strong>a² = b² + c² − 2bc·cos α</strong> (a analogicky pre b², c²).</p><p>Všimni si: pre α=90° je cos90°=0, takže posledný člen zmizne a vzorec sa zjednoduší presne na Pytagorovu vetu a²=b²+c². Kosínusová veta je teda jej zovšeobecnenie.</p>',
+        html: '<div class="formula">a² = b² + c² − 2bc·cos α<span class="formula-note">(a analogicky pre b², c²)</span></div><p>Všimni si: pre α=90° je cos90°=0, takže posledný člen zmizne a vzorec sa zjednoduší presne na Pytagorovu vetu a²=b²+c². Kosínusová veta je teda jej zovšeobecnenie.</p>',
         remember: 'a² = b²+c²−2bc·cosα. Pre α=90°: a²=b²+c² (Pytagorova veta).',
       },
       {
@@ -128,7 +128,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Kosínusová veta:</strong> a² = b²+c²−2bc·cosα (analogicky pre b², c²).</p><p>Použi ju, keď poznáš dve strany a uhol MEDZI nimi. Pre α=90° sa zjednoduší na Pytagorovu vetu (cos90°=0).</p>',
+        html: '<div class="formula"><span class="mini-label">KOSÍNUSOVÁ VETA</span>a² = b²+c²−2bc·cosα<span class="formula-note">(analogicky pre b², c²)</span></div><p>Použi ju, keď poznáš dve strany a uhol <span class="hl">medzi</span> nimi. Pre α=90° sa zjednoduší na Pytagorovu vetu (cos90°=0).</p>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -138,7 +138,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Ako rozhodneš, či na danú úlohu použiť sínusovú, alebo kosínusovú vetu?',
-        model: 'Ak poznám stranu a jej protiľahlý uhol (aspoň jeden takýto pár), použijem sínusovú vetu. Ak poznám dve strany a uhol MEDZI nimi (ktorý nie je protiľahlý žiadnej z nich), sínusová veta nefunguje a použijem kosínusovú vetu.',
+        model: 'Ak poznám stranu a jej protiľahlý uhol (aspoň jeden takýto pár), použijem sínusovú vetu. Ak poznám dve strany a uhol <span class="hl">medzi</span> nimi (ktorý nie je protiľahlý žiadnej z nich), sínusová veta nefunguje a použijem kosínusovú vetu.',
       },
       {
         id: 'manual',

@@ -57,7 +57,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Korene rozdeľujú os na intervaly',
-        html: '<p>Rovnica x²−4=0 má korene x=−2 a x=2. Parabola y=x²−4 je otvorená nahor a pretína os x práve v týchto bodoch — MEDZI nimi (od −2 do 2) je pod osou (záporná), MIMO nich je nad osou (kladná).</p>',
+        html: '<p>Rovnica x²−4=0 má korene x=−2 a x=2. Parabola y=x²−4 je otvorená nahor a pretína os x práve v týchto bodoch — <span class="hl">medzi nimi</span> (od −2 do 2) je pod osou (záporná), <span class="hl">mimo nich</span> je nad osou (kladná).</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Postup riešenia kvadratickej nerovnice',
-        html: '<p>Pre nerovnicu ax²+bx+c &gt; 0 (alebo &lt;, ≥, ≤): 1) nájdi korene x₁≤x₂ rovnice ax²+bx+c=0, 2) podľa orientácie paraboly urči znak na intervaloch:</p><p>Ak <strong>a&gt;0</strong> (nahor): výraz je <strong>záporný MEDZI koreňmi</strong> (x₁,x₂), <strong>kladný MIMO nich</strong> (x&lt;x₁ alebo x&gt;x₂).<br>Ak <strong>a&lt;0</strong> (nadol): naopak — kladný medzi koreňmi, záporný mimo nich.</p>',
+        html: '<p>Pre nerovnicu ax²+bx+c &gt; 0 (alebo &lt;, ≥, ≤):</p><ol class="steps"><li>Nájdi korene x₁≤x₂ rovnice ax²+bx+c=0.</li><li>Podľa orientácie paraboly urči znak na intervaloch.</li></ol><div class="term-list"><div class="term-item no-symbol"><div class="term-name">a &gt; 0 (nahor)</div><p class="term-rule">Výraz je <span class="hl">záporný medzi koreňmi</span> (x₁,x₂), <span class="hl">kladný mimo nich</span> (x&lt;x₁ alebo x&gt;x₂).</p></div><div class="term-item no-symbol"><div class="term-name">a &lt; 0 (nadol)</div><p class="term-rule">Naopak — kladný medzi koreňmi, záporný mimo nich.</p></div></div>',
         remember: 'a>0: mimo koreňov kladné, medzi koreňmi záporné. a<0: naopak.',
       },
       {
@@ -76,7 +76,7 @@ MathPlatform.registerModule({
         question: 'Nerovnica x²−9 &gt; 0 (a=1&gt;0, korene x=−3, x=3). Pre ktoré x je výraz kladný?',
         options: ['pre x medzi −3 a 3', 'pre x&lt;−3 alebo x&gt;3', 'pre všetky x'],
         answer: 1,
-        correct: 'Správne. a>0 (nahor), takže výraz je kladný MIMO koreňov: x<−3 alebo x>3.',
+        correct: 'Správne. a>0 (nahor), takže výraz je kladný <span class="hl">mimo koreňov</span>: x<−3 alebo x>3.',
         hint: 'Použi pravidlo: a>0 → kladné mimo koreňov.',
       },
       {
@@ -87,7 +87,7 @@ MathPlatform.registerModule({
         question: 'Nerovnica −x²+9 &gt; 0 (a=−1&lt;0, korene x=−3, x=3). Pre ktoré x je výraz kladný?',
         options: ['pre x&lt;−3 alebo x&gt;3', 'pre všetky x', 'pre x medzi −3 a 3'],
         answer: 2,
-        correct: 'Správne. a<0 (nadol), takže výraz je kladný MEDZI koreňmi: −3<x<3.',
+        correct: 'Správne. a<0 (nadol), takže výraz je kladný <span class="hl">medzi koreňmi</span>: −3<x<3.',
         hint: 'Použi pravidlo: a<0 → kladné medzi koreňmi.',
       },
       {
@@ -102,7 +102,7 @@ MathPlatform.registerModule({
           'Mal namiesto koreňov −1 a 1 použiť 1 a −1.',
         ],
         answer: 0,
-        correct: 'Presne. Pre a>0 je výraz záporný MEDZI koreňmi, nie mimo nich — správne riešenie je −1<x<1.',
+        correct: 'Presne. Pre a>0 je výraz záporný <span class="hl">medzi koreňmi</span>, nie mimo nich — správne riešenie je −1<x<1.',
         hint: 'Over dosadením x=0 (medzi koreňmi) do x²−1 — vyjde záporné alebo kladné číslo?',
       },
       {

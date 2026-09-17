@@ -95,7 +95,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "POCHOP",
         "title": "Postup",
-        "html": "<p>1. Vyrieš každú nerovnicu. 2. Zapíš jej množinu riešení. 3. Znázorni obe množiny na jednej číselnej osi. 4. Vyber spoločnú časť – prienik.</p>"
+        "html": "<ol class=\"steps\"><li>Vyrieš každú nerovnicu.</li><li>Zapíš jej množinu riešení.</li><li>Znázorni obe množiny na jednej číselnej osi.</li><li>Vyber spoločnú časť – prienik.</li></ol>"
       },
       {
         "id": "c3",
@@ -132,7 +132,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>SÚSTAVA LINEÁRNYCH NEROVNÍC S JEDNOU NEZNÁMOU</strong></p><p>Riešením sústavy sú tie hodnoty x, ktoré spĺňajú všetky nerovnice súčasne.</p><p>Postup: vyriešime jednotlivé nerovnice → zapíšeme ich množiny riešení → určíme ich <strong>prienik</strong>.</p>",
+        "html": "<span class=\"mini-label\">SÚSTAVA LINEÁRNYCH NEROVNÍC S JEDNOU NEZNÁMOU</span><p>Riešením sústavy sú tie hodnoty x, ktoré spĺňajú všetky nerovnice súčasne.</p><p>Postup: vyriešime jednotlivé nerovnice → zapíšeme ich množiny riešení → určíme ich <strong>prienik</strong>.</p>",
         "continueLabel": "Mám zapísané"
       },
       {

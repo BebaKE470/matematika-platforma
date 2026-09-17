@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Definícia tangensu a kotangensu',
-        html: '<p><strong>tg α = protiľahlá odvesna / priľahlá odvesna = sin α / cos α</strong>.</p><p><strong>cotg α = priľahlá odvesna / protiľahlá odvesna = 1 / tg α</strong>.</p>',
+        html: '<div class="term-list"><div class="term-item"><span class="term-symbol">tg</span><div><div class="term-name">tg α</div><p class="term-rule">protiľahlá odvesna / priľahlá odvesna = sin α / cos α</p></div></div><div class="term-item"><span class="term-symbol">cotg</span><div><div class="term-name">cotg α</div><p class="term-rule">priľahlá odvesna / protiľahlá odvesna = 1 / tg α</p></div></div></div>',
         remember: 'tg α = protiľahlá/priľahlá = sin α/cos α. cotg α = priľahlá/protiľahlá = 1/tg α.',
       },
       {

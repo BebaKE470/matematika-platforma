@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Čo je radián?',
-        html: '<p><strong>1 radián</strong> je veľkosť stredového uhla, pri ktorom dĺžka príslušného oblúka kružnice je rovná polomeru tejto kružnice.</p><p>Radián je teda <strong>pomer</strong> dvoch dĺžok (oblúk : polomer), preto je to bezrozmerné číslo — nepíšeme k nemu jednotku (alebo iba „rad“).</p><p>Platí základný vzťah: <strong>180° = π rad</strong>.</p>',
+        html: '<p><strong>1 radián</strong> je veľkosť stredového uhla, pri ktorom dĺžka príslušného oblúka kružnice je rovná polomeru tejto kružnice.</p><p>Radián je teda <strong>pomer</strong> dvoch dĺžok (oblúk : polomer), preto je to bezrozmerné číslo — nepíšeme k nemu jednotku (alebo iba „rad“).</p><div class="formula"><span class="mini-label">ZÁKLADNÝ VZŤAH</span>180° = π rad</div>',
         remember: '1 rad = uhol, pri ktorom dĺžka oblúka = polomer. 180° = π rad.',
       },
       {
@@ -107,7 +107,7 @@ MathPlatform.registerModule({
           'Radián je jednotka objemu.',
         ],
         answer: 0,
-        correct: 'Presne. Radián vzniká ako pomer dvoch dĺžok (oblúk/polomer), takže jednotky dĺžky sa vykrátia — výsledné číslo je bezrozmerné a vyjadruje veľkosť UHLA.',
+        correct: 'Presne. Radián vzniká ako pomer dvoch dĺžok (oblúk/polomer), takže jednotky dĺžky sa vykrátia — výsledné číslo je bezrozmerné a vyjadruje veľkosť <span class="hl">uhla</span>.',
         hint: 'Rozmysli si, čím je radián definovaný — pomerom dvoch dĺžok, alebo priamo jednou dĺžkou?',
       },
       {
@@ -130,7 +130,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Radián (oblúková miera)</strong> — veľkosť uhla, pri ktorej sa dĺžka prislúchajúceho oblúka rovná polomeru kružnice. Je to bezrozmerné číslo (pomer dvoch dĺžok).</p><p>Základný vzťah: <strong>180° = π rad</strong>.</p>',
+        html: '<p><strong>Radián (oblúková miera)</strong> — veľkosť uhla, pri ktorej sa dĺžka prislúchajúceho oblúka rovná polomeru kružnice. Je to bezrozmerné číslo (pomer dvoch dĺžok).</p><div class="formula"><span class="mini-label">ZÁKLADNÝ VZŤAH</span>180° = π rad</div>',
         continueLabel: 'Mám zapísané',
       },
       {

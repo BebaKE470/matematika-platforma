@@ -56,7 +56,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Nie každé riešenie má zmysel',
-        html: '<p>Obdĺžnik má obsah 12 cm² a jedna strana je o 1 cm dlhšia ako druhá. Rovnica x(x+1)=12 má riešenia x=3 a x=−4. Ale strana obdĺžnika nemôže byť záporná — takže riešenie x=−4 nemá v tejto úlohe zmysel!</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Obdĺžnik má obsah 12 cm² a jedna strana je o 1 cm dlhšia ako druhá. Rovnica x(x+1)=12 má riešenia x=3 a x=−4.</p></div><div class="warning"><strong>Pozor:</strong> strana obdĺžnika nemôže byť záporná — riešenie x=−4 preto nemá v tejto úlohe zmysel.</div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -64,8 +64,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Postup riešenia slovnej úlohy',
-        html: '<p>Postup: 1) označ neznámu x (napr. dĺžka strany), 2) prelož podmienku zo zadania do rovnice, 3) vyrieš rovnicu, 4) over KAŽDÉ riešenie — zamietni tie, ktoré nedávajú v kontexte úlohy zmysel (napr. záporná dĺžka, záporný vek, neceločíselný počet ľudí).</p>',
-        remember: 'Označ neznámu → zostav rovnicu → vyrieš → over zmysluplnosť KAŽDÉHO riešenia.',
+        html: '<ol class="steps"><li>Označ neznámu x (napr. dĺžka strany).</li><li>Prelož podmienku zo zadania do rovnice.</li><li>Vyrieš rovnicu.</li><li>Over <span class="hl">každé</span> riešenie — zamietni tie, ktoré nedávajú v kontexte úlohy zmysel (napr. záporná dĺžka, záporný vek, neceločíselný počet ľudí).</li></ol>',
+        remember: 'Označ neznámu → zostav rovnicu → vyrieš → over zmysluplnosť <span class="hl">každého</span> riešenia.',
       },
       {
         id: 'q-setup',
@@ -122,7 +122,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Postup riešenia slovnej úlohy s kvadratickou rovnicou:</strong> 1) označ neznámu x, 2) prelož podmienku zo zadania do rovnice, 3) vyrieš rovnicu, 4) over KAŽDÉ riešenie voči kontextu úlohy — zamietni riešenia, ktoré nedávajú zmysel (napr. záporná dĺžka alebo vek).</p>',
+        html: '<p><strong>Postup riešenia slovnej úlohy s kvadratickou rovnicou:</strong></p><ol class="steps"><li>Označ neznámu x.</li><li>Prelož podmienku zo zadania do rovnice.</li><li>Vyrieš rovnicu.</li><li>Over <span class="hl">každé</span> riešenie voči kontextu úlohy — zamietni riešenia, ktoré nedávajú zmysel (napr. záporná dĺžka alebo vek).</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {
