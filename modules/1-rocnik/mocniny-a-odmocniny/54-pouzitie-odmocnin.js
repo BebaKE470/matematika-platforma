@@ -67,7 +67,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Výpočet prepony a odvesny',
-        html: '<p>Prepona: <strong>c = √(a² + b²)</strong>.</p><p>Odvesna (keď poznáme preponu a druhú odvesnu): <strong>a = √(c² − b²)</strong>.</p><p>Vždy najprv dosaď do vzorca a spočítaj súčet/rozdiel pod odmocninou, až potom odmocni.</p>',
+        html: '<div class="formula"><span class="mini-label">PREPONA</span>c = √(a² + b²)</div><div class="formula"><span class="mini-label">ODVESNA</span>a = √(c² − b²)<span class="formula-note">keď poznáme preponu a druhú odvesnu</span></div><p>Vždy najprv dosaď do vzorca a spočítaj súčet/rozdiel pod odmocninou, až potom odmocni.</p>',
         remember: 'c = √(a² + b²).  a = √(c² − b²).',
       },
       {
@@ -140,7 +140,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Pytagorova veta: a² + b² = c² (a, b odvesny, c prepona).</p><p>Výpočet prepony: <strong>c = √(a² + b²)</strong>.</p><p>Výpočet odvesny: <strong>a = √(c² − b²)</strong>.</p><p>Postup: 1) dosaď čísla, 2) umocni a sčítaj/odčítaj, 3) až na záver odmocni.</p>',
+        html: '<p>Pytagorova veta: a² + b² = c² (a, b odvesny, c prepona).</p><div class="formula"><span class="mini-label">VÝPOČET PREPONY</span>c = √(a² + b²)</div><div class="formula"><span class="mini-label">VÝPOČET ODVESNY</span>a = √(c² − b²)</div><ol class="steps"><li>dosaď čísla</li><li>umocni a sčítaj/odčítaj</li><li>až na záver odmocni</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {

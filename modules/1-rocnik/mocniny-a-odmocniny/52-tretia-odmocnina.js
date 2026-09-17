@@ -67,7 +67,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Definícia tretej odmocniny',
-        html: '<p>Pre <strong>ľubovoľné reálne</strong> a je <strong>∛a</strong> to číslo b, pre ktoré platí b³ = a. Na rozdiel od druhej odmocniny tu nepotrebujeme podmienku a ≥ 0.</p><p>Napríklad <strong>∛(−8) = −2</strong>, pretože (−2)³ = (−2) · (−2) · (−2) = −8. Tretia odmocnina zo záporného čísla je teda záporné číslo.</p>',
+        html: '<p>Pre <strong>ľubovoľné reálne</strong> a je <strong>∛a</strong> to číslo b, pre ktoré platí b³ = a. Na rozdiel od druhej odmocniny tu nepotrebujeme podmienku a ≥ 0.</p><div class="formula">∛a = b<span class="formula-note">kde b³ = a, pre ľubovoľné reálne a</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>∛(−8) = −2, pretože (−2)³ = (−2) · (−2) · (−2) = −8. Tretia odmocnina zo záporného čísla je teda záporné číslo.</p></div>',
         remember: '∛a existuje pre každé reálne a. Znamienko výsledku sa zhoduje so znamienkom a.',
       },
       {
@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Pre <strong>ľubovoľné reálne a</strong> je <strong>∛a</strong> číslo b, pre ktoré platí b³ = a.</p><p>Na rozdiel od druhej odmocniny je tretia odmocnina definovaná aj pre záporné a — znamienko výsledku sa zhoduje so znamienkom a. Príklad: ∛(−8) = −2.</p>',
+        html: '<p>Pre <strong>ľubovoľné reálne a</strong> je <strong>∛a</strong> číslo b, pre ktoré platí b³ = a.</p><p>Na rozdiel od druhej odmocniny je tretia odmocnina definovaná aj pre záporné a — znamienko výsledku sa zhoduje so znamienkom a.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>∛(−8) = −2.</p></div>',
         continueLabel: 'Mám zapísané',
       },
       {

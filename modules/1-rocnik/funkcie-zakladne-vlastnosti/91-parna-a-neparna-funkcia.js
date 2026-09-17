@@ -59,7 +59,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Čo sa stane pri f(−x)?',
-        html: '<p>Funkcia f(x) = x² pre x=3 dáva f(3)=9. Čo dá f(−3)? f(−3) = (−3)² = 9 — rovnaká hodnota ako f(3)!</p><p>Funkcia f(x) = x³ pre x=2 dáva f(2)=8, ale f(−2) = (−2)³ = −8 — presne opačná hodnota.</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Funkcia f(x) = x² pre x=3 dáva f(3)=9.</p><p>Čo dá f(−3)? f(−3) = (−3)² = 9 — rovnaká hodnota ako f(3)!</p></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Funkcia f(x) = x³ pre x=2 dáva f(2)=8.</p><p>Ale f(−2) = (−2)³ = −8 — presne opačná hodnota.</p></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -67,7 +67,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Definícia párnej a nepárnej funkcie',
-        html: '<p>Funkcia f je <strong>párna</strong>, ak pre každé x z D(f) platí <strong>f(−x) = f(x)</strong>.</p><p>Funkcia f je <strong>nepárna</strong>, ak pre každé x z D(f) platí <strong>f(−x) = −f(x)</strong>.</p><p>Niektoré funkcie nie sú ani párne, ani nepárne.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Párna funkcia</div><p class="term-rule">Funkcia f je párna, ak pre každé x z D(f) platí f(−x) = f(x).</p></div><div class="term-item no-symbol"><div class="term-name">Nepárna funkcia</div><p class="term-rule">Funkcia f je nepárna, ak pre každé x z D(f) platí f(−x) = −f(x).</p></div></div><p>Niektoré funkcie nie sú ani párne, ani nepárne.</p>',
         remember: 'Párna: f(−x) = f(x). Nepárna: f(−x) = −f(x).',
       },
       {
@@ -120,7 +120,7 @@ MathPlatform.registerModule({
         ],
         answer: 0,
         correct: 'Presne. Párnosť/nepárnosť funkcie sa musí overiť výpočtom f(−x), nie odhadom podľa vzhľadu exponentu.',
-        hint: 'Slovo „párna funkcia“ nemá nič spoločné s tým, či je EXPONENT párne alebo nepárne číslo — over si to výpočtom.',
+        hint: 'Slovo „párna funkcia“ nemá nič spoločné s tým, či je <span class="hl">exponent</span> párne alebo nepárne číslo — over si to výpočtom.',
       },
       {
         id: 'notebook',

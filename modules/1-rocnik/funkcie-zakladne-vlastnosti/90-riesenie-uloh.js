@@ -71,7 +71,7 @@ MathPlatform.registerModule({
         ],
         answer: 1,
         correct: 'Správne. Aj keď sa výsledné meno môže u viacerých žiakov opakovať, každému žiakovi je priradené práve jedno meno — to jednoznačnosť nenarúša.',
-        hint: 'Jednoznačnosť sa týka toho, či JEDEN žiak má práve JEDNU priradenú hodnotu — nezáleží, či sa hodnoty rôznych žiakov zhodujú.',
+        hint: 'Jednoznačnosť sa týka toho, či <span class="hl">jeden</span> žiak má práve <span class="hl">jednu</span> priradenú hodnotu — nezáleží, či sa hodnoty rôznych žiakov zhodujú.',
       },
       {
         id: 'q-eval-predpis',
@@ -107,7 +107,7 @@ MathPlatform.registerModule({
           'Problém je, že x môže byť záporné číslo.',
         ],
         answer: 0,
-        correct: 'Presne. Aby išlo o funkciu, musí byť ku každému x priradené PRÁVE JEDNO číslo, nie ľubovoľné z nekonečne mnohých možností.',
+        correct: 'Presne. Aby išlo o funkciu, musí byť ku každému x priradené <span class="hl">práve jedno</span> číslo, nie ľubovoľné z nekonečne mnohých možností.',
         hint: 'Skús nájsť aspoň dve rôzne čísla, ktoré by mohli byť priradené k jednému x.',
       },
       {

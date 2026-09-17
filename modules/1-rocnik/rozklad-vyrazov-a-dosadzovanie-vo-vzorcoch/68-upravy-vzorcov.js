@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Ako upraviť vzorec',
-        html: '<p>Vzorec upravujeme rovnako, ako by sme riešili rovnicu — čo urobíme na jednej strane, musíme urobiť aj na druhej.</p><p>Napríklad z o = 2(a + b) vyjadríme a: najprv vydelíme obe strany dvomi (o:2 = a+b), potom odčítame b (o:2 − b = a).</p>',
+        html: '<p>Vzorec upravujeme rovnako, ako by sme riešili rovnicu — čo urobíme na jednej strane, musíme urobiť aj na druhej.</p><p>Príklad: z o = 2(a + b) vyjadríme a.</p><ol class="steps"><li>Vydeľ obe strany rovnosti dvomi: o:2 = a + b.</li><li>Odčítaj b z oboch strán: o:2 − b = a.</li></ol>',
         remember: 'Úprava vzorca = rovnaká operácia na oboch stranách rovnosti, ako pri riešení rovnice.',
       },
       {

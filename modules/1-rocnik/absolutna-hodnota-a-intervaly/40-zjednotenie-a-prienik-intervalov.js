@@ -60,7 +60,7 @@ MathPlatform.registerModule({
         "type": "info",
         "phase": "POCHOP",
         "title": "Dva intervaly na jednej osi",
-        "html": "<p>Z množín už poznáš dve operácie: <strong>prienik ∩</strong> a <strong>zjednotenie ∪</strong>. Teraz ich použijeme na intervaly.</p><p><strong>Prienik</strong> hľadá čísla, ktoré patria do oboch intervalov. <strong>Zjednotenie</strong> obsahuje čísla, ktoré patria aspoň do jedného z nich.</p>",
+        "html": "<p>Z množín už poznáš dve operácie: <strong>prienik ∩</strong> a <strong>zjednotenie ∪</strong>. Teraz ich použijeme na intervaly.</p><div class=\"term-list\"><div class=\"term-item\"><span class=\"term-symbol\">∩</span><div><div class=\"term-name\">Prienik</div><p class=\"term-rule\">Hľadá čísla, ktoré patria do oboch intervalov.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">∪</span><div><div class=\"term-name\">Zjednotenie</div><p class=\"term-rule\">Obsahuje čísla, ktoré patria aspoň do jedného z nich.</p></div></div></div>",
         "continueLabel": "Pokračovať"
       },
       {

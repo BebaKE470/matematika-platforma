@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Racionálne číslo možno zapísať ako zlomok celých čísel s nenulovým menovateľom. Iracionálne číslo takto zapísať nemožno; obe skupiny patria medzi reálne čísla.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Racionálne číslo</div><p class=\"term-rule\">Možno ho zapísať ako zlomok celých čísel s nenulovým menovateľom.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Iracionálne číslo</div><p class=\"term-rule\">Takto ho zapísať nemožno.</p></div></div><p>Obe skupiny patria medzi reálne čísla.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

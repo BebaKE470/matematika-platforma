@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Čo by malo znamenať a^(1/2)?',
-        html: '<p>Vieš, že (aᵐ)ⁿ = aᵐⁿ. Ak by sme chceli, aby toto pravidlo platilo aj pre zlomkový exponent 1/2, muselo by platiť: (a^(1/2))² = a^((1/2)·2) = a¹ = a.</p><p>To znamená, že a^(1/2) je také číslo, ktorého druhá mocnina je a — a to je presne <strong>√a</strong>.</p>',
+        html: '<p>Vieš, že (aᵐ)ⁿ = aᵐⁿ. Ak by sme chceli, aby toto pravidlo platilo aj pre zlomkový exponent 1/2, muselo by platiť:</p><div class="example"><p>(a^(1/2))² = a^((1/2)·2) = a¹ = a</p></div><p>To znamená, že a^(1/2) je také číslo, ktorého druhá mocnina je a — a to je presne <strong>√a</strong>.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Mocnina s racionálnym mocniteľom',
-        html: '<p>Pre a > 0 definujeme:</p><p><strong>a^(1/n) = ⁿ√a</strong> (n-tá odmocnina z a)</p><p><strong>a^(m/n) = ⁿ√(aᵐ)</strong> — menovateľ n hovorí, akého stupňa je odmocnina, čitateľ m hovorí, na akú mocninu sa a najprv umocní.</p>',
+        html: '<p>Pre a > 0 definujeme:</p><div class="formula">a^(1/n) = ⁿ√a<span class="formula-note">n-tá odmocnina z a</span></div><div class="formula">a^(m/n) = ⁿ√(aᵐ)<span class="formula-note">menovateľ n hovorí, akého stupňa je odmocnina, čitateľ m hovorí, na akú mocninu sa a najprv umocní</span></div>',
         remember: 'a^(1/n) = ⁿ√a.  a^(m/n) = ⁿ√(aᵐ)  (a > 0).',
       },
       {
@@ -135,7 +135,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Pre a > 0:</p><p><strong>a^(1/n) = ⁿ√a</strong></p><p><strong>a^(m/n) = ⁿ√(aᵐ)</strong></p><p>Menovateľ zlomkového exponentu udáva stupeň odmocniny, čitateľ udáva, na akú mocninu sa základ umocní. Príklad: 4^(3/2) = √(4³) = √64 = 8.</p>',
+        html: '<p>Pre a > 0:</p><div class="formula">a^(1/n) = ⁿ√a</div><div class="formula">a^(m/n) = ⁿ√(aᵐ)</div><p>Menovateľ zlomkového exponentu udáva stupeň odmocniny, čitateľ udáva, na akú mocninu sa základ umocní.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>4^(3/2) = √(4³) = √64 = 8.</p></div>',
         continueLabel: 'Mám zapísané',
       },
       {

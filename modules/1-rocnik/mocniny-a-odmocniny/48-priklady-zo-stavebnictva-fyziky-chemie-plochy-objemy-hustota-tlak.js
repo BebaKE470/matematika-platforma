@@ -96,7 +96,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Hustota a tlak',
-        html: '<p><strong>Hustota</strong> ρ = m / V sa udáva v kg/m³ — hmotnosť pripadajúca na jednotku objemu.</p><p><strong>Tlak</strong> p = F / S sa udáva v Pa = N/m² — sila pripadajúca na jednotku obsahu.</p><p>V oboch prípadoch je v menovateli mocnina dĺžkovej jednotky (m² alebo m³), takže pri prevode jednotiek treba mocninu zohľadniť aj tu.</p>',
+        html: '<div class="term-list"><div class="term-item"><span class="term-symbol">ρ</span><div><div class="term-name">Hustota</div><p class="term-rule">ρ = m / V sa udáva v kg/m³ — hmotnosť pripadajúca na jednotku objemu.</p></div></div><div class="term-item"><span class="term-symbol">p</span><div><div class="term-name">Tlak</div><p class="term-rule">p = F / S sa udáva v Pa = N/m² — sila pripadajúca na jednotku obsahu.</p></div></div></div><p>V oboch prípadoch je v menovateli mocnina dĺžkovej jednotky (m² alebo m³), takže pri prevode jednotiek treba mocninu zohľadniť aj tu.</p>',
         remember: 'Hustota ρ = m/V [kg/m³]. Tlak p = F/S [Pa = N/m²].',
       },
       {

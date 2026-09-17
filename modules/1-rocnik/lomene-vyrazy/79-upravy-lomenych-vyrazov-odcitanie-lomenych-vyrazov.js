@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Odčítanie s rôznym menovateľom a zátvorka',
-        html: '<p><strong>a/x − b/y = (ay − bx)/(xy)</strong>.</p><p>Ak je čitateľ odčítaného zlomku zložitejší výraz, ohraď ho zátvorkou: 5/x − (x+2)/y = [5y − x(x+2)]/(xy).</p>',
+        html: '<div class="formula">a/x − b/y = (ay − bx)/(xy)</div><div class="warning"><strong>Pozor:</strong> Ak je čitateľ odčítaného zlomku zložitejší výraz, ohraď ho zátvorkou: 5/x − (x+2)/y = [5y − x(x+2)]/(xy).</div>',
         remember: 'a/x − b/y = (ay − bx)/(xy). Zložitejší čitateľ ohraď zátvorkou.',
       },
       {
@@ -123,7 +123,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Rovnaký menovateľ: <strong>a/c − b/c = (a−b)/c</strong>.</p><p>Rôzny menovateľ: <strong>a/x − b/y = (ay−bx)/(xy)</strong>.</p><p>Zložitejší čitateľ pri odčítaní vždy ohraď zátvorkou, aby si nezabudol zmeniť znamienko celého výrazu.</p>',
+        html: '<div class="formula"><span class="mini-label">ROVNAKÝ MENOVATEĽ</span>a/c − b/c = (a−b)/c</div><div class="formula"><span class="mini-label">RÔZNY MENOVATEĽ</span>a/x − b/y = (ay−bx)/(xy)</div><div class="warning"><strong>Pozor:</strong> Zložitejší čitateľ pri odčítaní vždy ohraď zátvorkou, aby si nezabudol zmeniť znamienko celého výrazu.</div>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -133,7 +133,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo je pri odčítaní lomeného výrazu s viacčlenným čitateľom dôležité ohraď ho zátvorkou?',
-        model: 'Pretože odčítanie celého výrazu znamená, že znamienko mínus sa musí vzťahovať na KAŽDÝ člen tohto výrazu, nielen na prvý. Zátvorka zaručuje, že pri ďalšej úprave (napr. roznásobovaní) sa znamienko správne rozdelí na všetky členy vnútri nej — bez zátvorky by sme omylom odčítali iba prvý člen a druhý pripočítali.',
+        model: 'Pretože odčítanie celého výrazu znamená, že znamienko mínus sa musí vzťahovať na <span class="hl">každý</span> člen tohto výrazu, nielen na prvý. Zátvorka zaručuje, že pri ďalšej úprave (napr. roznásobovaní) sa znamienko správne rozdelí na všetky členy vnútri nej — bez zátvorky by sme omylom odčítali iba prvý člen a druhý pripočítali.',
       },
       {
         id: 'manual',

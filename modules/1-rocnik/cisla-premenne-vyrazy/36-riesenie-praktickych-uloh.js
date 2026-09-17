@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Praktická úloha potrebuje model, správne jednotky, výpočet a záverečnú vetu v kontexte.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<p>Praktická úloha potrebuje:</p><ol class=\"steps\"><li>model,</li><li>správne jednotky,</li><li>výpočet,</li><li>záverečnú vetu v kontexte.</li></ol><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

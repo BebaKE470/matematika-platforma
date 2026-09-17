@@ -67,8 +67,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Vzorec pre rozdiel druhých mocnín',
-        html: '<p><strong>a² − b² = (a − b)(a + b)</strong>.</p><p>Príklad: x² − 16 = x² − 4² = (x − 4)(x + 4).</p><p>Vzorec funguje aj vtedy, keď a alebo b je zložitejší výraz: 4x² − 9 = (2x)² − 3² = (2x − 3)(2x + 3).</p>',
-        remember: 'a² − b² = (a − b)(a + b) — iba pri ROZDIELE druhých mocnín, nie pri súčte.',
+        html: '<div class="formula">a² − b² = (a − b)(a + b)</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>x² − 16 = x² − 4² = (x − 4)(x + 4)</p></div><p>Vzorec funguje aj vtedy, keď a alebo b je zložitejší výraz:</p><div class="example"><span class="mini-label">PRÍKLAD SO ZLOŽITEJŠÍM a</span><p>4x² − 9 = (2x)² − 3² = (2x − 3)(2x + 3)</p></div>',
+        remember: 'a² − b² = (a − b)(a + b) — iba pri <span class="hl">rozdiele</span> druhých mocnín, nie pri súčte.',
       },
       {
         id: 'q-basic',

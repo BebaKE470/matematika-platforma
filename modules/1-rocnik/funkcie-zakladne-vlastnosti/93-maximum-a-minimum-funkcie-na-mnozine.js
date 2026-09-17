@@ -57,7 +57,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Ktorý bod je najvyššie, ktorý najnižšie?',
-        html: '<p>Funkcia f má na množine {1,2,3,4} hodnoty f(1)=3, f(2)=7, f(3)=2, f(4)=5.</p><p>Najväčšia z týchto hodnôt je 7 (pri x=2), najmenšia je 2 (pri x=3).</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Funkcia f má na množine {1,2,3,4} hodnoty f(1)=3, f(2)=7, f(3)=2, f(4)=5.</p><p>Najväčšia z týchto hodnôt je 7 (pri x=2), najmenšia je 2 (pri x=3).</p></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Maximum a minimum funkcie na množine',
-        html: '<p><strong>Maximum</strong> funkcie f na množine M je najväčšia hodnota, ktorú f na M nadobúda.</p><p><strong>Minimum</strong> funkcie f na množine M je najmenšia hodnota, ktorú f na M nadobúda.</p><p>Maximum aj minimum sú hodnoty <strong>y</strong> (funkčné hodnoty), nie hodnoty x!</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Maximum</div><p class="term-rule">Najväčšia hodnota, ktorú f na množine M nadobúda.</p></div><div class="term-item no-symbol"><div class="term-name">Minimum</div><p class="term-rule">Najmenšia hodnota, ktorú f na množine M nadobúda.</p></div></div><div class="warning"><strong>Pozor:</strong> Maximum aj minimum sú hodnoty y (funkčné hodnoty), nie hodnoty x!</div>',
         remember: 'Maximum/minimum = najväčšia/najmenšia hodnota y, ktorú funkcia nadobúda.',
       },
       {

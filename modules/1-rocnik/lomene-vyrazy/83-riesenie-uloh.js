@@ -55,7 +55,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Dve operácie spolu',
-        html: '<p>Násobenie: a/b · c/d = (ac)/(bd). Delenie: a/b : c/d = a/b · d/c = (ad)/(bc) (obráť deliteľa).</p>',
+        html: '<div class="formula"><span class="mini-label">NÁSOBENIE</span>a/b · c/d = (ac)/(bd)</div><div class="formula"><span class="mini-label">DELENIE</span>a/b : c/d = a/b · d/c = (ad)/(bc)<span class="formula-note">Obráť deliteľa.</span></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -87,7 +87,7 @@ MathPlatform.registerModule({
         skill: 'kritické myslenie',
         question: 'Žiak počíta (x/2) : (3/y) a napíše (x/2) · (3/y) = 3x/(2y) (zabudol obrátiť druhý zlomok). Kde je chyba?',
         options: [
-          'Pri delení treba obrátiť DRUHÝ výraz: (x/2):(3/y) = (x/2)·(y/3) = xy/6, nie 3x/(2y).',
+          'Pri delení treba obrátiť druhý výraz: (x/2):(3/y) = (x/2)·(y/3) = xy/6, nie 3x/(2y).',
           'Žiadna chyba, výsledok je správny.',
           'Mal obrátiť prvý výraz namiesto druhého.',
         ],
@@ -113,7 +113,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie: násobenie (čitateľ krát čitateľ, menovateľ krát menovateľ), delenie (obráť deliteľa, potom násob). Vždy kráť, keď je to možné.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Násobenie</div><p class="term-rule">Čitateľ krát čitateľ, menovateľ krát menovateľ.</p></div><div class="term-item no-symbol"><div class="term-name">Delenie</div><p class="term-rule">Obráť deliteľa, potom násob.</p></div></div><p>Vždy kráť, keď je to možné.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

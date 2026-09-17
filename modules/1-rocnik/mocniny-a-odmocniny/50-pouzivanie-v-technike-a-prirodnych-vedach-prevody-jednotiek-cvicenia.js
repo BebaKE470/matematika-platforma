@@ -78,7 +78,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Porovnávanie čísel vo vedeckom zápise',
-        html: '<p>Ak sú obe čísla vo vedeckom zápise s koeficientom medzi 1 a 10, väčšie je to, ktoré má <strong>väčší exponent</strong>. Pri rovnakom exponente rozhoduje väčší koeficient.</p><p>Príklad: 3 · 10⁵ &lt; 2 · 10⁷, pretože exponent 7 je väčší ako 5, hoci koeficient 2 je menší ako 3.</p>',
+        html: '<p>Ak sú obe čísla vo vedeckom zápise s koeficientom medzi 1 a 10, väčšie je to, ktoré má <strong>väčší exponent</strong>. Pri rovnakom exponente rozhoduje väčší koeficient.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>3 · 10⁵ &lt; 2 · 10⁷, pretože exponent 7 je väčší ako 5, hoci koeficient 2 je menší ako 3.</p></div>',
         remember: 'Väčší exponent = väčšie číslo (pri koeficiente 1–10). Pri rovnakom exponente rozhoduje koeficient.',
       },
       {

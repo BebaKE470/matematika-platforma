@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Násobenie dvojčlena dvojčlenom',
-        html: '<p><strong>(a + b)(c + d) = ac + ad + bc + bd</strong> — každý člen prvého dvojčlena vynásobíme každým členom druhého.</p><p>Príklad: (x + 2)(x + 3) = x·x + x·3 + 2·x + 2·3 = x² + 3x + 2x + 6 = x² + 5x + 6 (po spojení podobných členov 3x a 2x).</p>',
+        html: '<div class="formula">(a + b)(c + d) = ac + ad + bc + bd<span class="formula-note">Každý člen prvého dvojčlena vynásobíme každým členom druhého.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>(x + 2)(x + 3) = x·x + x·3 + 2·x + 2·3 = x² + 3x + 2x + 6 = x² + 5x + 6</p><p>(po spojení podobných členov 3x a 2x)</p></div>',
         remember: '(a+b)(c+d) = ac + ad + bc + bd. Po roznásobení spoj podobné členy.',
       },
       {

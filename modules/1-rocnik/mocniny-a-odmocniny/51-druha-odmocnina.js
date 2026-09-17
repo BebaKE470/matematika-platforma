@@ -67,7 +67,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Definícia druhej odmocniny',
-        html: '<p>Pre a ≥ 0 je <strong>√a</strong> to nezáporné číslo, ktorého druhá mocnina sa rovná a. Teda √a = b znamená b ≥ 0 a b² = a.</p><p>Druhá odmocnina zo záporného čísla (napr. √(−4)) nie je v tomto rozsahu definovaná — neexistuje nezáporné číslo, ktorého druhá mocnina by bola záporná.</p>',
+        html: '<p>Pre a ≥ 0 je <strong>√a</strong> to nezáporné číslo, ktorého druhá mocnina sa rovná a.</p><div class="formula">√a = b<span class="formula-note">znamená b ≥ 0 a b² = a</span></div><p>Druhá odmocnina zo záporného čísla (napr. √(−4)) nie je v tomto rozsahu definovaná — neexistuje nezáporné číslo, ktorého druhá mocnina by bola záporná.</p>',
         remember: '√a (a ≥ 0) je nezáporné číslo b, pre ktoré platí b² = a. √(záporné číslo) nie je definovaná.',
       },
       {
@@ -136,7 +136,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Pre a ≥ 0 je <strong>√a</strong> nezáporné číslo b, pre ktoré platí b² = a.</p><p>√(záporné číslo) nie je v tomto rozsahu definovaná.</p><p>Príklad: √25 = 5 (nie ±5) — odmocnina je vždy jedno konkrétne nezáporné číslo, na rozdiel od riešení rovnice x² = 25, ktorých je dvoje (5 aj −5).</p>',
+        html: '<p>Pre a ≥ 0 je <strong>√a</strong> nezáporné číslo b, pre ktoré platí b² = a.</p><p>√(záporné číslo) nie je v tomto rozsahu definovaná.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>√25 = 5 (nie ±5) — odmocnina je vždy jedno konkrétne nezáporné číslo, na rozdiel od riešení rovnice x² = 25, ktorých je dvoje (5 aj −5).</p></div>',
         continueLabel: 'Mám zapísané',
       },
       {

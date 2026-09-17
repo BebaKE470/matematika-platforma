@@ -67,7 +67,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Definičný obor lomeného výrazu',
-        html: '<p><strong>Lomený výraz</strong> je podiel dvoch mnohočlenov, napr. (x+3)/(x−2). Menovateľ nesmie byť nulový, preto <strong>definičný obor</strong> vylučuje hodnoty x, pre ktoré by sa menovateľ rovnal nule.</p><p>Pre (x+3)/(x−2) je definičný obor všetky reálne čísla okrem x = 2 (lebo x−2 = 0 pre x = 2).</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Lomený výraz</div><p class="term-rule">Podiel dvoch mnohočlenov, napr. (x+3)/(x−2). Menovateľ nesmie byť nulový.</p></div><div class="term-item no-symbol"><div class="term-name">Definičný obor</div><p class="term-rule">Vylučuje hodnoty x, pre ktoré by sa menovateľ rovnal nule.</p></div></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Pre (x+3)/(x−2) je definičný obor všetky reálne čísla okrem x = 2 (lebo x−2 = 0 pre x = 2).</p></div>',
         remember: 'Definičný obor lomeného výrazu vylučuje hodnoty, pre ktoré je menovateľ nulový.',
       },
       {
@@ -86,7 +86,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Krátenie lomeného výrazu',
-        html: '<p>Aby sme lomený výraz skrátili, musíme najprv čitateľa aj menovateľa <strong>rozložiť na súčin</strong>.</p><p>Príklad: (x²−4)/(x−2) = [(x−2)(x+2)]/(x−2) = x+2 (pre x ≠ 2).</p><p>Krátiť môžeme iba celé <strong>činitele</strong> (súčinové zložky), nie jednotlivé sčítance.</p>',
+        html: '<p>Aby sme lomený výraz skrátili, musíme najprv čitateľa aj menovateľa <strong>rozložiť na súčin</strong>.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>(x²−4)/(x−2) = [(x−2)(x+2)]/(x−2) = x+2 (pre x ≠ 2)</p></div><div class="warning"><strong>Pozor:</strong> Krátiť môžeme iba celé činitele (súčinové zložky), nie jednotlivé sčítance.</div>',
         remember: 'Najprv rozlož čitateľa aj menovateľa na súčin, potom kráť spoločné činitele.',
       },
       {
@@ -107,7 +107,7 @@ MathPlatform.registerModule({
         skill: 'krátenie iba činiteľov',
         question: 'Žiak kráti výraz (x+5)/(x+2) tak, že vyškrtne x z čitateľa aj menovateľa a dostane 5/2. Kde je chyba?',
         options: [
-          'Krátiť sa dajú iba celé spoločné ČINITELE (súčinové zložky), nie jednotlivé sčítance v súčte — tento výraz sa vôbec nedá skrátiť.',
+          'Krátiť sa dajú iba celé spoločné činitele (súčinové zložky), nie jednotlivé sčítance v súčte — tento výraz sa vôbec nedá skrátiť.',
           'Žiadna chyba, 5/2 je správny výsledok.',
           'Mal vyškrtnúť aj čísla, teda výsledok je 0.',
         ],
@@ -133,7 +133,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Lomený výraz</strong> je podiel dvoch mnohočlenov. Definičný obor vylučuje hodnoty, pre ktoré je menovateľ nulový.</p><p><strong>Krátenie:</strong> najprv rozlož čitateľa aj menovateľa na súčin, potom vykráť spoločný činiteľ. Príklad: (x²−4)/(x−2) = (x−2)(x+2)/(x−2) = x+2 (x≠2).</p><p>Krátiť sa dajú iba činitele súčinu, nie jednotlivé sčítance.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Lomený výraz</div><p class="term-rule">Podiel dvoch mnohočlenov.</p></div><div class="term-item no-symbol"><div class="term-name">Definičný obor</div><p class="term-rule">Vylučuje hodnoty, pre ktoré je menovateľ nulový.</p></div></div><p><strong>Krátenie:</strong> najprv rozlož čitateľa aj menovateľa na súčin, potom vykráť spoločný činiteľ.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>(x²−4)/(x−2) = (x−2)(x+2)/(x−2) = x+2 (x≠2)</p></div><div class="warning"><strong>Pozor:</strong> Krátiť sa dajú iba činitele súčinu, nie jednotlivé sčítance.</div>',
         continueLabel: 'Mám zapísané',
       },
       {

@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Vedecký (normovaný) zápis čísla',
-        html: '<p>Vedecký zápis má tvar <strong>a · 10ⁿ</strong>, kde <strong>1 ≤ a &lt; 10</strong> a n je celé číslo.</p><p>Veľké číslo má <strong>kladný</strong> exponent n (posúvame desatinnú čiarku doľava): 3 400 = 3,4 · 10³.</p><p>Malé číslo (menšie ako 1) má <strong>záporný</strong> exponent n (posúvame desatinnú čiarku doprava): 0,0034 = 3,4 · 10⁻³.</p>',
+        html: '<div class="formula">a · 10ⁿ<span class="formula-note">kde 1 ≤ a &lt; 10 a n je celé číslo</span></div><p>Veľké číslo má <strong>kladný</strong> exponent n (posúvame desatinnú čiarku doľava): 3 400 = 3,4 · 10³.</p><p>Malé číslo (menšie ako 1) má <strong>záporný</strong> exponent n (posúvame desatinnú čiarku doprava): 0,0034 = 3,4 · 10⁻³.</p>',
         remember: 'a · 10ⁿ, kde 1 ≤ a < 10. Veľké číslo → n kladné. Malé číslo (< 1) → n záporné.',
       },
       {

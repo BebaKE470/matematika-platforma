@@ -57,7 +57,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Pravidlá fungujú aj so zlomkami',
-        html: '<p>Pravidlo aᵐ · aⁿ = aᵐ⁺ⁿ platí bez ohľadu na to, či sú m, n celé čísla alebo zlomky.</p><p>Napríklad 2^(1/2) · 2^(1/2) = 2^(1/2 + 1/2) = 2¹ = 2 — a to súhlasí, pretože √2 · √2 = 2.</p>',
+        html: '<p>Pravidlo platí bez ohľadu na to, či sú m, n celé čísla alebo zlomky:</p><div class="formula">aᵐ · aⁿ = aᵐ⁺ⁿ</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>2^(1/2) · 2^(1/2) = 2^(1/2 + 1/2) = 2¹ = 2 — a to súhlasí, pretože √2 · √2 = 2.</p></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -126,7 +126,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Pravidlá pre mocniny platia rovnako aj pre racionálny (zlomkový) mocniteľ:</p><p><strong>aᵐ · aⁿ = aᵐ⁺ⁿ</strong>,  <strong>aᵐ : aⁿ = aᵐ⁻ⁿ</strong>,  <strong>(aᵐ)ⁿ = aᵐⁿ</strong>.</p><p>Príklad: 8^(1/3) · 8^(1/3) = 8^(2/3) = ∛(8²) = ∛64 = 4.</p>',
+        html: '<p>Pravidlá pre mocniny platia rovnako aj pre racionálny (zlomkový) mocniteľ:</p><div class="formula">aᵐ · aⁿ = aᵐ⁺ⁿ<br>aᵐ : aⁿ = aᵐ⁻ⁿ<br>(aᵐ)ⁿ = aᵐⁿ</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>8^(1/3) · 8^(1/3) = 8^(2/3) = ∛(8²) = ∛64 = 4.</p></div>',
         continueLabel: 'Mám zapísané',
       },
       {

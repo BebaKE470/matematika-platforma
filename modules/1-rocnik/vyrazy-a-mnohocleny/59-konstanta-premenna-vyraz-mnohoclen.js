@@ -67,7 +67,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Konštanta, premenná, jednočlen, mnohočlen',
-        html: '<p><strong>Konštanta</strong> je pevné číslo, ktoré sa nemení (napr. 5, −2, ½). <strong>Premenná</strong> je písmeno zastupujúce ľubovoľné číslo (napr. x, y).</p><p><strong>Jednočlen</strong> je súčin konštanty (koeficientu) a premennej (prípadne v nejakej mocnine), napr. 4x² — koeficient je 4, premenná x je v druhej mocnine.</p><p><strong>Mnohočlen</strong> je súčet viacerých jednočlenov, napr. 4x² + 3x − 7. Každý sčítanec sa volá <strong>člen</strong> mnohočlena.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Konštanta</div><p class="term-rule">Pevné číslo, ktoré sa nemení (napr. 5, −2, ½).</p></div><div class="term-item no-symbol"><div class="term-name">Premenná</div><p class="term-rule">Písmeno zastupujúce ľubovoľné číslo (napr. x, y).</p></div><div class="term-item no-symbol"><div class="term-name">Jednočlen</div><p class="term-rule">Súčin konštanty (koeficientu) a premennej (prípadne v nejakej mocnine), napr. 4x² — koeficient je 4, premenná x je v druhej mocnine.</p></div><div class="term-item no-symbol"><div class="term-name">Mnohočlen</div><p class="term-rule">Súčet viacerých jednočlenov, napr. 4x² + 3x − 7. Každý sčítanec sa volá <strong>člen</strong> mnohočlena.</p></div></div>',
         remember: 'Jednočlen = koeficient · premenná (v mocnine). Mnohočlen = súčet jednočlenov (členov).',
       },
       {

@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Rovnaký princíp ako pri číselných zlomkoch',
-        html: '<p>Vieš, že 2/3 · 4/5 = (2·4)/(3·5) = 8/15. Lomené výrazy násobíme rovnako: <strong>a/b · c/d = (a·c)/(b·d)</strong>.</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>2/3 · 4/5 = (2·4)/(3·5) = 8/15</p></div><p>Lomené výrazy násobíme rovnako: <strong>a/b · c/d = (a·c)/(b·d)</strong>.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Násobenie a krátenie pred násobením',
-        html: '<p><strong>a/b · c/d = (ac)/(bd)</strong> — čitatele sa vynásobia medzi sebou, menovatele medzi sebou.</p><p>Výhodné je krátiť <strong>pred</strong> násobením, nie až po ňom — čísla ostávajú menšie a výsledok jednoduchší.</p>',
+        html: '<div class="formula">a/b · c/d = (ac)/(bd)<span class="formula-note">Čitatele sa vynásobia medzi sebou, menovatele medzi sebou.</span></div><p>Výhodné je krátiť <strong>pred</strong> násobením, nie až po ňom — čísla ostávajú menšie a výsledok jednoduchší.</p>',
         remember: 'a/b · c/d = (ac)/(bd). Kráť pred násobením, ak je to možné.',
       },
       {
@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>a/b · c/d = (ac)/(bd)</strong> — čitateľ krát čitateľ, menovateľ krát menovateľ.</p><p>Kráť pred násobením, ak je to možné — je to jednoduchšie a rýchlejšie ako krátiť až po vynásobení veľkých výrazov.</p>',
+        html: '<div class="formula">a/b · c/d = (ac)/(bd)<span class="formula-note">Čitateľ krát čitateľ, menovateľ krát menovateľ.</span></div><p>Kráť pred násobením, ak je to možné — je to jednoduchšie a rýchlejšie ako krátiť až po vynásobení veľkých výrazov.</p>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -133,7 +133,7 @@ MathPlatform.registerModule({
         phase: 'ARGUMENTUJ',
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
-        prompt: 'Prečo je výhodnejšie krátiť spoločné činitele PRED násobením lomených výrazov, než ich najprv vynásobiť a krátiť až potom?',
+        prompt: 'Prečo je výhodnejšie krátiť spoločné činitele pred násobením lomených výrazov, než ich najprv vynásobiť a krátiť až potom?',
         model: 'Ak krátim pred násobením, pracujem s menšími a jednoduchšími výrazmi počas celého výpočtu, čo znižuje riziko chyby. Ak by som najprv vynásobil, mohol by som dostať zložitý výraz (vysoký stupeň mnohočlena), v ktorom je oveľa ťažšie rozpoznať spoločné činitele a správne ich vykrátiť.',
       },
       {

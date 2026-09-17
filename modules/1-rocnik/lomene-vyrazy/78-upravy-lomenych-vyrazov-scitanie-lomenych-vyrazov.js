@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Sčítanie s rôznym menovateľom',
-        html: '<p>Ak sú menovatele rôzne (napr. x a y bez spoločného činiteľa), spoločný menovateľ je ich súčin: <strong>a/x + b/y = (ay + bx)/(xy)</strong>.</p><p>Príklad: 1/x + 2/y = (y + 2x)/(xy) — čitateľa každého zlomku vynásobíme menovateľom toho druhého.</p>',
+        html: '<p>Ak sú menovatele rôzne (napr. x a y bez spoločného činiteľa), spoločný menovateľ je ich súčin:</p><div class="formula">a/x + b/y = (ay + bx)/(xy)</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>1/x + 2/y = (y + 2x)/(xy) — čitateľa každého zlomku vynásobíme menovateľom toho druhého.</p></div>',
         remember: 'a/x + b/y = (ay + bx)/(xy) — spoločný menovateľ je súčin oboch menovateľov.',
       },
       {
@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Rovnaký menovateľ: <strong>a/c + b/c = (a+b)/c</strong> — sčítaj iba čitatele.</p><p>Rôzny menovateľ: <strong>a/x + b/y = (ay+bx)/(xy)</strong> — spoločný menovateľ je súčin oboch menovateľov.</p><p>Definičný obor: hodnoty, pre ktoré je niektorý z menovateľov nulový, sú vylúčené.</p>',
+        html: '<div class="formula"><span class="mini-label">ROVNAKÝ MENOVATEĽ</span>a/c + b/c = (a+b)/c<span class="formula-note">Sčítaj iba čitatele.</span></div><div class="formula"><span class="mini-label">RÔZNY MENOVATEĽ</span>a/x + b/y = (ay+bx)/(xy)<span class="formula-note">Spoločný menovateľ je súčin oboch menovateľov.</span></div><p>Definičný obor: hodnoty, pre ktoré je niektorý z menovateľov nulový, sú vylúčené.</p>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -134,7 +134,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo pri sčítaní lomených výrazov s rôznym menovateľom nemôžeme jednoducho sčítať čitatele aj menovatele osobitne (napr. 1/x + 1/y ≠ 2/(x+y))?',
-        model: 'Pretože zlomky vyjadrujú pomer k CELKU (menovateľu), a pri rôznych celkoch (menovateľoch) nedáva zmysel priamo sčítať čitatele — je to podobné, akoby sme chceli sčítať polovicu jedného koláča a tretinu iného koláča a povedať, že je to „dve pätiny“ niečoho. Musíme najprv oba zlomky previesť na rovnaký (spoločný) menovateľ, aby sme sčítavali porovnateľné časti.',
+        model: 'Pretože zlomky vyjadrujú pomer k <span class="hl">celku</span> (menovateľu), a pri rôznych celkoch (menovateľoch) nedáva zmysel priamo sčítať čitatele — je to podobné, akoby sme chceli sčítať polovicu jedného koláča a tretinu iného koláča a povedať, že je to „dve pätiny“ niečoho. Musíme najprv oba zlomky previesť na rovnaký (spoločný) menovateľ, aby sme sčítavali porovnateľné časti.',
       },
       {
         id: 'manual',

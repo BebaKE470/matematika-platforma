@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Komutatívnosť mení poradie, asociatívnosť zoskupenie a distributívnosť rozdeľuje násobenie cez súčet alebo rozdiel.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Komutatívnosť</div><p class=\"term-rule\">Mení poradie.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Asociatívnosť</div><p class=\"term-rule\">Mení zoskupenie.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Distributívnosť</div><p class=\"term-rule\">Rozdeľuje násobenie cez súčet alebo rozdiel.</p></div></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

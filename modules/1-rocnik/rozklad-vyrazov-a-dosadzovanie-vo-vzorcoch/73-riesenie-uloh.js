@@ -55,7 +55,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Dva vzorce vedľa seba',
-        html: '<p><strong>a² − b² = (a − b)(a + b)</strong> — dvojčlen, rozdiel dvoch štvorcov.</p><p><strong>a² ± 2ab + b² = (a ± b)²</strong> — trojčlen s prostredným členom 2ab.</p><p>Rozhoduje, koľko členov výraz má a či je prostredný člen prítomný.</p>',
+        html: '<div class="formula">a² − b² = (a − b)(a + b)<span class="formula-note">Dvojčlen — rozdiel dvoch štvorcov.</span></div><div class="formula">a² ± 2ab + b² = (a ± b)²<span class="formula-note">Trojčlen s prostredným členom 2ab.</span></div><p>Rozhoduje, koľko členov výraz má a či je prostredný člen prítomný.</p>',
         continueLabel: 'Pokračovať',
       },
       {

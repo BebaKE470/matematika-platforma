@@ -66,8 +66,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Vyňatie spoločného činiteľa',
-        html: '<p>Nájdeme najväčší spoločný činiteľ všetkých členov mnohočlena a vyjmeme ho pred zátvorku: <strong>ab + ac = a(b + c)</strong>.</p><p>Príklad: 6x² + 15x — spoločný činiteľ je 3x (najväčšie číslo aj premenná spoločná obom členom), preto 6x² + 15x = 3x(2x + 5).</p>',
-        remember: 'ab + ac = a(b + c). Vyjmi NAJVÄČŠÍ spoločný činiteľ (číslo aj premennú).',
+        html: '<p>Nájdeme najväčší spoločný činiteľ všetkých členov mnohočlena a vyjmeme ho pred zátvorku:</p><div class="formula">ab + ac = a(b + c)</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>6x² + 15x — spoločný činiteľ je 3x (najväčšie číslo aj premenná spoločná obom členom).</p><p>6x² + 15x = 3x(2x + 5)</p></div>',
+        remember: 'ab + ac = a(b + c). Vyjmi <span class="hl">najväčší</span> spoločný činiteľ (číslo aj premennú).',
       },
       {
         id: 'q-basic',
@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         options: ['x²(1 + 5)', '5(x² + x)', 'x(x + 5)'],
         answer: 2,
         correct: 'Správne. Oba členy obsahujú x, preto x² + 5x = x(x + 5).',
-        hint: 'Ktorá premenná sa vyskytuje v OBOCH členoch výrazu?',
+        hint: 'Ktorá premenná sa vyskytuje v <span class="hl">oboch</span> členoch výrazu?',
       },
       {
         id: 'q-not-maximal',

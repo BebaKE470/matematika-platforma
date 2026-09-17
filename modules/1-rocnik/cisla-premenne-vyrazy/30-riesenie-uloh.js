@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Pri delení na čo najväčšie rovnaké časti typicky používame NSD; pri opakujúcich sa cykloch a prvom spoločnom termíne NSN.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">NSD</div><p class=\"term-rule\">Používame pri delení na čo najväčšie rovnaké časti.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">NSN</div><p class=\"term-rule\">Používame pri opakujúcich sa cykloch a pri prvom spoločnom termíne.</p></div></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

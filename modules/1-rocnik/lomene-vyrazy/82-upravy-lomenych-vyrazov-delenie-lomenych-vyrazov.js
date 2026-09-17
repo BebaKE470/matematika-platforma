@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Pravidlo pre delenie',
-        html: '<p><strong>a/b : c/d = a/b · d/c = (ad)/(bc)</strong> — druhý zlomok obráť (prevráť čitateľa a menovateľa) a zmeň delenie na násobenie.</p><p>Príklad: (x/2) : (3/y) = (x/2) · (y/3) = xy/6.</p>',
+        html: '<div class="formula">a/b : c/d = a/b · d/c = (ad)/(bc)<span class="formula-note">Druhý zlomok obráť (prevráť čitateľa a menovateľa) a zmeň delenie na násobenie.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>(x/2) : (3/y) = (x/2) · (y/3) = xy/6</p></div>',
         remember: 'a/b : c/d = a/b · d/c. Deliteľa vždy obráť a preveď delenie na násobenie.',
       },
       {
@@ -103,7 +103,7 @@ MathPlatform.registerModule({
           'Mal obrátiť prvý zlomok, nie druhý.',
         ],
         answer: 0,
-        correct: 'Presne. Pri delení sa vždy obracia DRUHÝ (deliaci) výraz, nie prvý.',
+        correct: 'Presne. Pri delení sa vždy obracia <span class="hl">druhý</span> (deliaci) výraz, nie prvý.',
         hint: 'Over si to na jednoduchšom príklade — ako by si delil 2 : (1/3)? Vynásobíš 2 trojkou, nie treťou časťou.',
       },
       {
@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>a/b : c/d = a/b · d/c = (ad)/(bc)</strong> — obráť deliaci výraz a zmeň delenie na násobenie.</p><p>Po prevode na násobenie vždy skontroluj, či sa dá výsledok ešte skrátiť.</p>',
+        html: '<div class="formula">a/b : c/d = a/b · d/c = (ad)/(bc)<span class="formula-note">Obráť deliaci výraz a zmeň delenie na násobenie.</span></div><p>Po prevode na násobenie vždy skontroluj, či sa dá výsledok ešte skrátiť.</p>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -133,7 +133,7 @@ MathPlatform.registerModule({
         phase: 'ARGUMENTUJ',
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
-        prompt: 'Prečo je pri delení lomeným výrazom dôležité obrátiť práve DRUHÝ výraz (deliteľa), a nie prvý (delenca)?',
+        prompt: 'Prečo je pri delení lomeným výrazom dôležité obrátiť práve druhý výraz (deliteľa), a nie prvý (delenca)?',
         model: 'Delenie a/b : c/d znamená, koľkokrát sa c/d „zmestí“ do a/b — to je matematicky ekvivalentné násobeniu a/b prevrátenou hodnotou c/d, teda d/c. Ak by som obrátil prvý výraz namiesto druhého, počítal by som úplne inú úlohu (opačný pomer), preto sa vždy obracia práve ten výraz, ktorým delíme.',
       },
       {

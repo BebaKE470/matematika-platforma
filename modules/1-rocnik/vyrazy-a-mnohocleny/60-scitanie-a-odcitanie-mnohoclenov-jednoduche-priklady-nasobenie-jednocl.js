@@ -67,7 +67,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Sčítanie a odčítanie mnohočlenov',
-        html: '<p>Pri sčítaní mnohočlenov spojíme podobné členy: (2x + 3) + (5x − 1) = (2x + 5x) + (3 − 1) = 7x + 2.</p><p>Pri odčítaní musíme zmeniť znamienko <strong>každého</strong> člena odčítaného mnohočlena: (2x + 3) − (5x − 1) = 2x + 3 − 5x + 1 = −3x + 4.</p>',
+        html: '<div class="example"><span class="mini-label">SČÍTANIE</span><p>Pri sčítaní mnohočlenov spojíme podobné členy:</p><p>(2x + 3) + (5x − 1) = (2x + 5x) + (3 − 1) = 7x + 2</p></div><div class="warning"><strong>Pozor pri odčítaní:</strong> musíme zmeniť znamienko <strong>každého</strong> člena odčítaného mnohočlena: (2x + 3) − (5x − 1) = 2x + 3 − 5x + 1 = −3x + 4.</div>',
         remember: 'Pri odčítaní mnohočlena v zátvorke zmeň znamienko každého jeho člena.',
       },
       {
@@ -112,7 +112,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Násobenie mnohočlena jednočlenom',
-        html: '<p>Podľa distributívneho zákona a(b + c) = ab + ac vynásobíme jednočlenom <strong>každý</strong> člen mnohočlena.</p><p>Príklad: 3x(2x + 5) = 3x · 2x + 3x · 5 = 6x² + 15x.</p>',
+        html: '<p>Podľa distributívneho zákona vynásobíme jednočlenom <strong>každý</strong> člen mnohočlena:</p><div class="formula">a(b + c) = ab + ac</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>3x(2x + 5) = 3x · 2x + 3x · 5 = 6x² + 15x</p></div>',
         remember: 'a(b + c) = ab + ac — jednočlenom násobíme každý člen mnohočlena.',
       },
       {

@@ -67,7 +67,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Odmocnina súčinu a podielu',
-        html: '<p>Pre a, b ≥ 0 (b ≠ 0 pri podiele) platí:</p><p><strong>√(a · b) = √a · √b</strong></p><p><strong>√(a : b) = √a : √b</strong></p><p>Tieto vzťahy platia iba pre súčin a podiel — <strong>nie</strong> pre súčet alebo rozdiel pod odmocninou.</p>',
+        html: '<p>Pre a, b ≥ 0 (b ≠ 0 pri podiele) platí:</p><div class="formula">√(a · b) = √a · √b<br>√(a : b) = √a : √b</div><div class="warning">Tieto vzťahy platia iba pre súčin a podiel — <strong>nie</strong> pre súčet alebo rozdiel pod odmocninou.</div>',
         remember: '√(a·b) = √a · √b,  √(a:b) = √a : √b  (a, b ≥ 0, b ≠ 0 pri podiele).',
       },
       {
@@ -101,7 +101,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Odmocnina druhej mocniny: √(a²) = |a|',
-        html: '<p>Pre a ∈ ℝ platí <strong>√(a²) = |a|</strong>.</p><p>Ak a ≥ 0, je to jasné: √(a²) = a. Ale ak je a záporné, napríklad a = −3, potom a² = 9 a √9 = 3, čo je |−3|, nie −3.</p>',
+        html: '<p>Pre a ∈ ℝ platí:</p><div class="formula">√(a²) = |a|</div><p>Ak a ≥ 0, je to jasné: √(a²) = a.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>Ak je a záporné, napríklad a = −3, potom a² = 9 a √9 = 3, čo je |−3|, nie −3.</p></div>',
         remember: '√(a²) = |a| pre každé reálne a — nie automaticky a.',
       },
       {
@@ -148,7 +148,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Pre a, b ≥ 0 (b ≠ 0 pri podiele): <strong>√(a·b) = √a · √b</strong>,  <strong>√(a:b) = √a : √b</strong>.</p><p>Pre ľubovoľné reálne a: <strong>√(a²) = |a|</strong>.</p><p>Pozor: pre súčet a rozdiel podobný vzťah <strong>neplatí</strong> — √(a+b) ≠ √a + √b vo všeobecnosti.</p>',
+        html: '<p>Pre a, b ≥ 0 (b ≠ 0 pri podiele):</p><div class="formula">√(a·b) = √a · √b<br>√(a:b) = √a : √b</div><p>Pre ľubovoľné reálne a:</p><div class="formula">√(a²) = |a|</div><div class="warning"><strong>Pozor:</strong> pre súčet a rozdiel podobný vzťah <strong>neplatí</strong> — √(a+b) ≠ √a + √b vo všeobecnosti.</div>',
         continueLabel: 'Mám zapísané',
       },
       {

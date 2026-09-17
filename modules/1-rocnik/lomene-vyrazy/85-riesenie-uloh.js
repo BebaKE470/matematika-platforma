@@ -55,7 +55,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Pripomeňme si postup',
-        html: '<p>1) Rozlož menovatele na súčin. 2) Nájdi spoločný menovateľ. 3) Preveď zlomky naň. 4) Sčítaj/odčítaj/násob/deľ podľa zadania. 5) Skráť výsledok.</p>',
+        html: '<ol class="steps"><li>Rozlož menovatele na súčin.</li><li>Nájdi spoločný menovateľ.</li><li>Preveď zlomky naň.</li><li>Sčítaj/odčítaj/násob/deľ podľa zadania.</li><li>Skráť výsledok.</li></ol>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -113,7 +113,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie postupu pri zložitejšom výraze: rozlož menovatele → nájdi spoločný menovateľ → priprav zlomky → sčítaj/odčítaj → skráť.</p>',
+        html: '<ol class="steps"><li>Rozlož menovatele.</li><li>Nájdi spoločný menovateľ.</li><li>Priprav zlomky.</li><li>Sčítaj/odčítaj.</li><li>Skráť.</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {

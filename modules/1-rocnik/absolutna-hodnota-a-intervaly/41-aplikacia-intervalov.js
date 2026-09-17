@@ -60,7 +60,7 @@ MathPlatform.registerModule({
         "type": "info",
         "phase": "POCHOP",
         "title": "Interval ako podmienka z praxe",
-        "html": "<p>V technickej praxi často nehľadáme jednu jedinú hodnotu. Potrebujeme vedieť, <strong>ktoré hodnoty sú prípustné</strong>.</p><p>Napríklad: dĺžka prvku môže byť od 199,5 mm do 200,5 mm vrátane. Matematicky ide o interval <strong>⟨199,5; 200,5⟩</strong>.</p>",
+        "html": "<p>V technickej praxi často nehľadáme jednu jedinú hodnotu. Potrebujeme vedieť, <strong>ktoré hodnoty sú prípustné</strong>.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Dĺžka prvku môže byť od 199,5 mm do 200,5 mm vrátane.</p><p>Matematicky ide o interval <strong>⟨199,5; 200,5⟩</strong>.</p></div>",
         "continueLabel": "Pokračovať"
       },
       {
@@ -98,7 +98,7 @@ MathPlatform.registerModule({
         "type": "info",
         "phase": "PREPOJ",
         "title": "Keď platia dve podmienky naraz",
-        "html": "<p>Ak musí hodnota spĺňať <strong>dve podmienky súčasne</strong>, hľadáme prienik intervalov.</p><p>Projektová podmienka: x ∈ ⟨2; 8⟩. Podmienka materiálu: x ∈ ⟨5; 10). Spoločne teda musí platiť <strong>x ∈ ⟨5; 8⟩</strong>.</p>",
+        "html": "<p>Ak musí hodnota spĺňať <strong>dve podmienky súčasne</strong>, hľadáme prienik intervalov.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Projektová podmienka: x ∈ ⟨2; 8⟩.</p><p>Podmienka materiálu: x ∈ ⟨5; 10).</p><p>Spoločne teda musí platiť <strong>x ∈ ⟨5; 8⟩</strong>.</p></div>",
         "continueLabel": "Pokračovať"
       },
       {

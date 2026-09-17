@@ -67,7 +67,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Násobenie a delenie mocnín s rovnakým základom',
-        html: '<p><strong>aᵐ · aⁿ = aᵐ⁺ⁿ</strong> — pri násobení mocnín s rovnakým základom sa exponenty sčítajú.</p><p><strong>aᵐ : aⁿ = aᵐ⁻ⁿ</strong> (pre m > n) — pri delení sa exponenty odčítajú.</p><p>Obe pravidlá platia iba vtedy, keď je <strong>základ rovnaký</strong>. Výraz 2³ · 3² sa takto zjednodušiť nedá.</p>',
+        html: '<div class="formula">aᵐ · aⁿ = aᵐ⁺ⁿ<span class="formula-note">pri násobení mocnín s rovnakým základom sa exponenty sčítajú</span></div><div class="formula">aᵐ : aⁿ = aᵐ⁻ⁿ<span class="formula-note">(pre m &gt; n) — pri delení sa exponenty odčítajú</span></div><p>Obe pravidlá platia iba vtedy, keď je <strong>základ rovnaký</strong>. Výraz 2³ · 3² sa takto zjednodušiť nedá.</p>',
         remember: 'aᵐ · aⁿ = aᵐ⁺ⁿ,  aᵐ : aⁿ = aᵐ⁻ⁿ (rovnaký základ, m > n).',
       },
       {
@@ -97,7 +97,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Mocnina mocniny',
-        html: '<p>Výraz (2³)² znamená „druhá mocnina čísla 2³“, teda 2³ · 2³ = 2³⁺³ = 2⁶.</p><p>Všeobecne: <strong>(aᵐ)ⁿ = aᵐⁿ</strong> — pri mocnine mocniny sa exponenty <strong>násobia</strong>.</p>',
+        html: '<p>Výraz (2³)² znamená „druhá mocnina čísla 2³“, teda 2³ · 2³ = 2³⁺³ = 2⁶.</p><div class="formula">(aᵐ)ⁿ = aᵐⁿ<span class="formula-note">pri mocnine mocniny sa exponenty násobia</span></div>',
         remember: '(aᵐ)ⁿ = aᵐⁿ — exponenty sa násobia.',
       },
       {

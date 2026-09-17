@@ -62,7 +62,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Pri zľave o 20 % násobíme pôvodnú cenu číslom 0,80; pri zvýšení o 20 % číslom 1,20.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"compare\"><div><span class=\"mini-label\">ZĽAVA O 20 %</span><p>Násobíme pôvodnú cenu číslom 0,80.</p></div><div><span class=\"mini-label\">ZVÝŠENIE O 20 %</span><p>Násobíme pôvodnú cenu číslom 1,20.</p></div></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

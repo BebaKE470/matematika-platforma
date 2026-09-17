@@ -71,7 +71,7 @@ MathPlatform.registerModule({
         type: 'choice',
         phase: 'OVER SI',
         skill: 'D(f) a H(f) z grafu',
-        question: 'Graf vyššie má body [0,3], [1,5], [2,6], [3,4], [4,2]. Aký je obor hodnôt H(f)?',
+        question: 'Funkcia f prechádza bodmi [0,3], [1,5], [2,6], [3,4], [4,2] (zľava doprava). Aký je obor hodnôt H(f)?',
         options: ['H(f) = {2, 3, 4, 5, 6}', 'H(f) = {0, 1, 2, 3, 4}', 'H(f) = {6}'],
         answer: 0,
         correct: 'Správne. H(f) tvoria hodnoty y: {2, 3, 4, 5, 6}.',
@@ -115,7 +115,7 @@ MathPlatform.registerModule({
         type: 'choice',
         phase: 'NÁJDI CHYBU',
         skill: 'systematickosť',
-        question: 'Žiak sa pozrie iba na body [0,3] a [4,2] a usúdi, že funkcia na celom grafe klesá (lebo 2<3). Kde je chyba?',
+        question: 'Funkcia f prechádza bodmi [0,3], [1,5], [2,6], [3,4], [4,2] (zľava doprava). Žiak sa pozrie iba na body [0,3] a [4,2] a usúdi, že funkcia na celom grafe klesá (lebo 2<3). Kde je chyba?',
         options: [
           'Nesledoval, čo sa deje MEDZI krajnými bodmi — funkcia najprv rastie (do x=2) a až potom klesá, takže nie je monotónna na celom úseku.',
           'Žiadna chyba, funkcia naozaj klesá na celom grafe.',
@@ -130,7 +130,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Postup pri komplexnom čítaní grafu: 1) D(f) — priemet na os x. 2) H(f) — priemet na os y. 3) Monotónnosť — sleduj zľava doprava, či y rastie alebo klesá (môže sa meniť po úsekoch). 4) Extrémy — najväčšia/najmenšia hodnota y. 5) Prostota — sleduj, či sa niektorá hodnota y opakuje.</p>',
+        html: '<p>Postup pri komplexnom čítaní grafu:</p><ol class="steps"><li>D(f) — priemet na os x.</li><li>H(f) — priemet na os y.</li><li>Monotónnosť — sleduj zľava doprava, či y rastie alebo klesá (môže sa meniť po úsekoch).</li><li>Extrémy — najväčšia/najmenšia hodnota y.</li><li>Prostota — sleduj, či sa niektorá hodnota y opakuje.</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {

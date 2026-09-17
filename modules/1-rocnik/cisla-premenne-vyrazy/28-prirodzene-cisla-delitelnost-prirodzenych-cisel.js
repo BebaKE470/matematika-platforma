@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Číslo je deliteľné 6 práve vtedy, keď je deliteľné 2 aj 3. Kritériá treba použiť obe.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"formula\">Číslo je deliteľné 6 práve vtedy, keď je deliteľné 2 aj 3.<span class=\"formula-note\">Kritériá treba použiť obe.</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

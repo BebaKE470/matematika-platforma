@@ -60,7 +60,7 @@ MathPlatform.registerModule({
         "type": "info",
         "phase": "POCHOP",
         "title": "Absolútna hodnota a interval hovoria o vzdialenosti",
-        "html": "<p>Už vieš, že |x| je vzdialenosť čísla x od nuly. Preto podmienka „vzdialenosť od nuly je najviac 3“ opisuje všetky čísla od −3 do 3.</p><p>Až teraz tento význam zapíšeme stručne: <strong>|x| ≤ 3 ⇔ x ∈ ⟨−3; 3⟩</strong>.</p>",
+        "html": "<p>Už vieš, že |x| je vzdialenosť čísla x od nuly. Preto podmienka „vzdialenosť od nuly je najviac 3“ opisuje všetky čísla od −3 do 3.</p><p>Až teraz tento význam zapíšeme stručne:</p><div class=\"formula\">|x| ≤ 3 ⇔ x ∈ ⟨−3; 3⟩</div>",
         "continueLabel": "Pokračovať"
       },
       {
@@ -68,7 +68,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Vzdialenosť od iného bodu",
-        "html": "<p>Zápis <strong>|x − a|</strong> vyjadruje vzdialenosť čísla x od čísla a.</p><p>Napríklad <strong>|x − 2| ≤ 3</strong> znamená: x je od čísla 2 vzdialené najviac 3 jednotky. Na osi sa dostaneme od 2 − 3 = −1 po 2 + 3 = 5, teda <strong>x ∈ ⟨−1; 5⟩</strong>.</p><p>Neuč sa to ako trik so znamienkami; vždy si predstav stred a vzdialenosť.</p>"
+        "html": "<div class=\"formula\">Zápis |x − a| vyjadruje vzdialenosť čísla x od čísla a.</div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>|x − 2| ≤ 3 znamená: x je od čísla 2 vzdialené najviac 3 jednotky.</p><p>Na osi sa dostaneme od 2 − 3 = −1 po 2 + 3 = 5, teda <strong>x ∈ ⟨−1; 5⟩</strong>.</p></div><div class=\"warning\"><strong>Pozor:</strong> Neuč sa to ako trik so znamienkami; vždy si predstav stred a vzdialenosť.</div>"
       },
       {
         "id": "abs-int1",

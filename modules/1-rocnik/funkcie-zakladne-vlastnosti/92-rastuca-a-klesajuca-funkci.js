@@ -74,7 +74,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Definícia rastúcej a klesajúcej funkcie',
-        html: '<p>Funkcia f je <strong>rastúca</strong> na množine, ak pre každé dve hodnoty x₁ &lt; x₂ z tejto množiny platí f(x₁) &lt; f(x₂) — väčšiemu x zodpovedá väčšie f(x).</p><p>Funkcia f je <strong>klesajúca</strong>, ak pre x₁ &lt; x₂ platí f(x₁) &gt; f(x₂) — väčšiemu x zodpovedá menšie f(x).</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Rastúca funkcia</div><p class="term-rule">Funkcia f je rastúca na množine, ak pre každé dve hodnoty x₁ &lt; x₂ z tejto množiny platí f(x₁) &lt; f(x₂) — väčšiemu x zodpovedá väčšie f(x).</p></div><div class="term-item no-symbol"><div class="term-name">Klesajúca funkcia</div><p class="term-rule">Funkcia f je klesajúca, ak pre x₁ &lt; x₂ platí f(x₁) &gt; f(x₂) — väčšiemu x zodpovedá menšie f(x).</p></div></div>',
         remember: 'Rastúca: x₁<x₂ ⇒ f(x₁)<f(x₂). Klesajúca: x₁<x₂ ⇒ f(x₁)>f(x₂).',
       },
       {
@@ -144,7 +144,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo je dôležité pri určovaní monotónnosti najprv usporiadať body podľa hodnoty x, a nie podľa poradia, v akom sú v zadaní uvedené?',
-        model: 'Pretože definícia rastúcej/klesajúcej funkcie hovorí o tom, čo sa deje s f(x), keď x RASTIE — teda keď postupujeme od menšieho x k väčšiemu. Ak by som porovnal body v náhodnom poradí (nie podľa x), mohol by som dostať opačný, nesprávny záver o monotónnosti.',
+        model: 'Pretože definícia rastúcej/klesajúcej funkcie hovorí o tom, čo sa deje s f(x), keď x <span class="hl">rastie</span> — teda keď postupujeme od menšieho x k väčšiemu. Ak by som porovnal body v náhodnom poradí (nie podľa x), mohol by som dostať opačný, nesprávny záver o monotónnosti.',
       },
       {
         id: 'manual',

@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>p % znamená p stotín zo základu. Pred výpočtom treba určiť základ, počet percent a percentovú hodnotu.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"formula\">p % znamená p stotín zo základu.<span class=\"formula-note\">Pred výpočtom treba určiť základ, počet percent a percentovú hodnotu.</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Ohraničená funkcia',
-        html: '<p>Funkcia f je na množine M <strong>ohraničená zhora</strong>, ak existuje číslo h také, že f(x) ≤ h pre všetky x z M.</p><p>Funkcia f je <strong>ohraničená zdola</strong>, ak existuje číslo d také, že f(x) ≥ d pre všetky x z M.</p><p>Ak je ohraničená zhora aj zdola, je <strong>ohraničená</strong>.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Ohraničená zhora</div><p class="term-rule">Existuje číslo h také, že f(x) ≤ h pre všetky x z M.</p></div><div class="term-item no-symbol"><div class="term-name">Ohraničená zdola</div><p class="term-rule">Existuje číslo d také, že f(x) ≥ d pre všetky x z M.</p></div><div class="term-item no-symbol"><div class="term-name">Ohraničená</div><p class="term-rule">Funkcia je ohraničená zhora aj zdola súčasne.</p></div></div>',
         remember: 'Ohraničená zhora: existuje h, f(x)≤h. Ohraničená zdola: existuje d, f(x)≥d.',
       },
       {
@@ -129,7 +129,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Vysvetli rozdiel medzi tým, že funkcia MÁ maximum na danej množine, a tým, že je na tejto množine ohraničená zhora.',
-        model: 'Ohraničenosť zhora iba hovorí, že existuje nejaké číslo, ktoré hodnoty funkcie neprekročia — toto číslo nemusí byť samotnou hodnotou funkcie. Maximum je konkrétna hodnota, ktorú funkcia SKUTOČNE dosahuje pri nejakom x, a je zároveň tou najmenšou možnou hornou hranicou. Funkcia teda môže byť ohraničená zhora aj vtedy, keď maximum vôbec nedosahuje (napr. sa k hranici iba priblíži, ale nikdy ju nedosiahne).',
+        model: 'Ohraničenosť zhora iba hovorí, že existuje nejaké číslo, ktoré hodnoty funkcie neprekročia — toto číslo nemusí byť samotnou hodnotou funkcie. Maximum je konkrétna hodnota, ktorú funkcia <span class="hl">skutočne</span> dosahuje pri nejakom x, a je zároveň tou najmenšou možnou hornou hranicou. Funkcia teda môže byť ohraničená zhora aj vtedy, keď maximum vôbec nedosahuje (napr. sa k hranici iba priblíži, ale nikdy ju nedosiahne).',
       },
       {
         id: 'manual',

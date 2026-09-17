@@ -67,7 +67,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Vzorce pre druhú mocninu dvojčlena',
-        html: '<p><strong>a² + 2ab + b² = (a + b)²</strong></p><p><strong>a² − 2ab + b² = (a − b)²</strong></p><p>Trojčlen takto rozložíme len vtedy, keď prostredný člen je presne 2ab. Príklad: x² + 8x + 16 = x² + 2·x·4 + 4² = (x+4)².</p>',
+        html: '<div class="formula"><span class="mini-label">SÚČET</span>a² + 2ab + b² = (a + b)²</div><div class="formula"><span class="mini-label">ROZDIEL</span>a² − 2ab + b² = (a − b)²</div><p>Trojčlen takto rozložíme len vtedy, keď prostredný člen je presne 2ab.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>x² + 8x + 16 = x² + 2·x·4 + 4² = (x+4)²</p></div>',
         remember: 'a² ± 2ab + b² = (a ± b)². Skontroluj, že prostredný člen je presne 2ab.',
       },
       {

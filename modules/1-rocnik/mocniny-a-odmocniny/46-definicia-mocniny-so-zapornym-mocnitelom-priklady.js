@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Nultá mocnina',
-        html: '<p>Pre každé číslo a ≠ 0 platí <strong>a⁰ = 1</strong>.</p><p>Podmienka a ≠ 0 je dôležitá — výraz 0⁰ nemá v tomto kontexte definovanú hodnotu.</p>',
+        html: '<div class="formula">a⁰ = 1<span class="formula-note">pre každé číslo a ≠ 0</span></div><p>Podmienka a ≠ 0 je dôležitá — výraz 0⁰ nemá v tomto kontexte definovanú hodnotu.</p>',
         remember: 'a⁰ = 1 pre každé a ≠ 0.',
       },
       {
@@ -85,7 +85,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Záporný mocniteľ',
-        html: '<p>Skús 5² : 5⁵ podľa pravidla: 5² : 5⁵ = 5²⁻⁵ = 5⁻³. Na druhej strane 5² : 5⁵ = (5·5)/(5·5·5·5·5) = 1/5³ po skrátení.</p><p>Preto <strong>a⁻ⁿ = 1/aⁿ</strong> (a ≠ 0) — záporný mocniteľ znamená prevrátenú hodnotu príslušnej kladnej mocniny, nie záporný výsledok.</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Skús 5² : 5⁵ podľa pravidla: 5² : 5⁵ = 5²⁻⁵ = 5⁻³.</p><p>Na druhej strane 5² : 5⁵ = (5·5)/(5·5·5·5·5) = 1/5³ po skrátení.</p></div><div class="formula">a⁻ⁿ = 1/aⁿ<span class="formula-note">(a ≠ 0) — záporný mocniteľ znamená prevrátenú hodnotu príslušnej kladnej mocniny, nie záporný výsledok</span></div>',
         remember: 'a⁻ⁿ = 1/aⁿ (a ≠ 0). Záporný exponent ≠ záporný výsledok.',
       },
       {

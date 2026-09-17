@@ -68,7 +68,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Nový pojem a nové zátvorky",
-        "html": "<p><strong>Interval</strong> je súvislá časť reálnej číselnej osi.</p><p><strong>⟨a; b⟩</strong> – oba krajné body patria do intervalu (uzavretý interval).<br><strong>(a; b)</strong> – krajné body nepatria do intervalu (otvorený interval).<br><strong>⟨a; b)</strong> alebo <strong>(a; b⟩</strong> – patrí iba jeden krajný bod.</p><p>Pri nekonečne píšeme vždy otvorenú zátvorku, napr. <strong>(−∞; 3⟩</strong>, pretože ∞ ani −∞ nie sú reálne čísla a nie sú krajnými bodmi intervalu.</p>"
+        "html": "<p><strong>Interval</strong> je súvislá časť reálnej číselnej osi.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">⟨a; b⟩</div><p class=\"term-rule\">Oba krajné body patria do intervalu (uzavretý interval).</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">(a; b)</div><p class=\"term-rule\">Krajné body nepatria do intervalu (otvorený interval).</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">⟨a; b) alebo (a; b⟩</div><p class=\"term-rule\">Patrí iba jeden krajný bod.</p></div></div><div class=\"formula\">Pri nekonečne píšeme vždy otvorenú zátvorku.<span class=\"formula-note\">Napr. (−∞; 3⟩, pretože ∞ ani −∞ nie sú reálne čísla a nie sú krajnými bodmi intervalu.</span></div>"
       },
       {
         "id": "visual",

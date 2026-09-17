@@ -68,7 +68,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Nový zápis: absolútna hodnota",
-        "html": "<p>Absolútnu hodnotu čísla <strong>x</strong> zapisujeme <strong>|x|</strong> a čítame „absolútna hodnota x“.</p><p><strong>|x| je vzdialenosť čísla x od nuly na číselnej osi.</strong> Preto nikdy nie je záporná.</p><p>Príklady: |5| = 5, |−5| = 5, |0| = 0.</p>"
+        "html": "<p>Absolútnu hodnotu čísla <strong>x</strong> zapisujeme <strong>|x|</strong> a čítame „absolútna hodnota x“.</p><div class=\"formula\">|x| je vzdialenosť čísla x od nuly na číselnej osi.<span class=\"formula-note\">Preto nikdy nie je záporná.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLADY</span><p>|5| = 5, |−5| = 5, |0| = 0.</p></div>"
       },
       {
         "id": "abs1",

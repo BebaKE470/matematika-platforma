@@ -67,7 +67,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Mocnina aⁿ',
-        html: '<p>Pre kladné prirodzené číslo n definujeme <strong>aⁿ = a · a · … · a</strong> (n činiteľov, každý rovný a).</p><p>Číslo <strong>a</strong> sa volá <strong>základ mocniny</strong>, číslo <strong>n</strong> sa volá <strong>mocniteľ (exponent)</strong>, celý zápis aⁿ sa číta „a na n-tú“ a volá sa <strong>mocnina</strong>.</p>',
+        html: '<p>Pre kladné prirodzené číslo n definujeme:</p><div class="formula">aⁿ = a · a · … · a<span class="formula-note">n činiteľov, každý rovný a</span></div><p>Číslo <strong>a</strong> sa volá <strong>základ mocniny</strong>, číslo <strong>n</strong> sa volá <strong>mocniteľ (exponent)</strong>, celý zápis aⁿ sa číta „a na n-tú“ a volá sa <strong>mocnina</strong>.</p>',
         remember: 'aⁿ = a · a · … · a (n činiteľov). a je základ, n je mocniteľ (exponent).',
       },
       {
@@ -101,7 +101,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'PREPOJ',
         title: 'Znamienko pri zápornom základe',
-        html: '<p>Ak je základ záporný, dôležité je, koľkokrát sa násobí. Napríklad <strong>(−2)³ = (−2) · (−2) · (−2) = −8</strong> (nepárny počet záporných činiteľov dáva záporný výsledok), zatiaľ čo <strong>(−2)⁴ = 16</strong> (párny počet dáva kladný výsledok).</p><p>Pozor: <strong>−2³</strong> bez zátvorky znamená „mínus (2³)“, teda −8, nie (−2)³.</p>',
+        html: '<p>Ak je základ záporný, dôležité je, koľkokrát sa násobí.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p><strong>(−2)³ = (−2) · (−2) · (−2) = −8</strong> (nepárny počet záporných činiteľov dáva záporný výsledok)</p><p><strong>(−2)⁴ = 16</strong> (párny počet dáva kladný výsledok)</p></div><div class="warning"><strong>Pozor:</strong> <strong>−2³</strong> bez zátvorky znamená „mínus (2³)“, teda −8, nie (−2)³.</div>',
         remember: '(−a)ⁿ ≠ −aⁿ vo všeobecnosti. Zátvorka rozhoduje, čo sa umocňuje.',
       },
       {

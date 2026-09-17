@@ -67,7 +67,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Delenie mnohočlena jednočlenom',
-        html: '<p>Mnohočlen delíme jednočlenom tak, že vydelíme <strong>každý</strong> jeho člen: (a + b) : c = a:c + b:c.</p><p>Pri delení premenných s mocninou platí pravidlo aᵐ : aⁿ = aᵐ⁻ⁿ. Príklad: (8x³ + 12x²) : 4x = 8x³:4x + 12x²:4x = 2x² + 3x.</p>',
+        html: '<p>Mnohočlen delíme jednočlenom tak, že vydelíme <strong>každý</strong> jeho člen:</p><div class="formula">(a + b) : c = a:c + b:c</div><p>Pri delení premenných s mocninou platí pravidlo aᵐ : aⁿ = aᵐ⁻ⁿ.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>(8x³ + 12x²) : 4x = 8x³:4x + 12x²:4x = 2x² + 3x</p></div>',
         remember: '(a+b) : c = a:c + b:c — delíme každý člen zvlášť.',
       },
       {

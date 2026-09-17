@@ -82,8 +82,8 @@ MathPlatform.registerModule({
         type: "explain",
         phase: "NOVÝ POJEM",
         title: "Čo je funkcia?",
-        html: "<p><strong>Funkcia</strong> f je predpis, ktorý každému prvku x z množiny D priraďuje práve jeden prvok y.</p><p>Zapisujeme: <strong>y = f(x)</strong></p><p><strong>x</strong> nazývame <strong>argument</strong> (nezávislá premenná).<br><strong>y = f(x)</strong> nazývame <strong>funkčná hodnota</strong> (závislá premenná).</p><p>Kľúčové je slovo <strong>PRÁVE JEDEN</strong>. Ak by jednému x zodpovedali dve rôzne hodnoty y, o funkciu by nešlo.</p>",
-        remember: "Funkcia = každému x priraď PRÁVE JEDNU hodnotu y."
+        html: "<p><strong>Funkcia</strong> f je predpis, ktorý každému prvku x z množiny D priraďuje práve jeden prvok y.</p><p>Zapisujeme:</p><div class=\"formula\">y = f(x)</div><div class=\"term-list\"><div class=\"term-item\"><span class=\"term-symbol\">x</span><div><div class=\"term-name\">argument</div><p class=\"term-rule\">nezávislá premenná</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">y</span><div><div class=\"term-name\">funkčná hodnota f(x)</div><p class=\"term-rule\">závislá premenná</p></div></div></div><p>Kľúčové je slovo <span class=\"hl\">práve jeden</span>. Ak by jednému x zodpovedali dve rôzne hodnoty y, o funkciu by nešlo.</p>",
+        remember: "Funkcia = každému x priraď <span class=\"hl\">práve jednu</span> hodnotu y."
       },
       {
         id: "is-function-check",

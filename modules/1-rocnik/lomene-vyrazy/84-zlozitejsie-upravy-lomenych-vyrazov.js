@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Postup pri zložitom výraze: 1) rozlož každý menovateľ na súčin, 2) nájdi najmenší spoločný menovateľ, 3) preveď zlomky naň, 4) sčítaj/odčítaj čitatele, 5) skráť výsledok.</p><p>Príklad: 1/(x−2) + x/(x²−4), kde x²−4 = (x−2)(x+2), teda spoločný menovateľ je (x−2)(x+2).</p>',
+        html: '<ol class="steps"><li>Rozlož každý menovateľ na súčin.</li><li>Nájdi najmenší spoločný menovateľ.</li><li>Preveď zlomky naň.</li><li>Sčítaj/odčítaj čitatele.</li><li>Skráť výsledok.</li></ol><div class="example"><span class="mini-label">PRÍKLAD</span><p>1/(x−2) + x/(x²−4), kde x²−4 = (x−2)(x+2), teda spoločný menovateľ je (x−2)(x+2).</p></div>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -133,7 +133,7 @@ MathPlatform.registerModule({
         phase: 'ARGUMENTUJ',
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
-        prompt: 'Prečo je dôležité rozložiť menovatele NA SÚČIN skôr, ako začneme hľadať spoločný menovateľ dvoch lomených výrazov?',
+        prompt: 'Prečo je dôležité rozložiť menovatele na súčin skôr, ako začneme hľadať spoločný menovateľ dvoch lomených výrazov?',
         model: 'Ak menovatele nie sú rozložené, nemôžeme rozpoznať, či majú spoločný činiteľ. Bez rozkladu by sme museli použiť súčin oboch celých menovateľov ako spoločný menovateľ, čo vedie k zbytočne zložitému výrazu. Rozklad nám umožňuje nájsť najmenší (najjednoduchší) spoločný menovateľ, ktorý obsahuje každý potrebný činiteľ len raz.',
       },
       {

@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie troch zručností: krátenie (rozlož, potom kráť činiteľ), sčítanie a odčítanie (spoločný menovateľ, sčítaj/odčítaj čitatele).</p><p>Vždy over, či sa dá výraz naozaj rozložiť na súčin skôr, než skrátiš.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Krátenie</div><p class="term-rule">Rozlož, potom kráť činiteľ.</p></div><div class="term-item no-symbol"><div class="term-name">Sčítanie a odčítanie</div><p class="term-rule">Spoločný menovateľ, potom sčítaj/odčítaj čitatele.</p></div></div><p>Vždy over, či sa dá výraz naozaj rozložiť na súčin skôr, než skrátiš.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

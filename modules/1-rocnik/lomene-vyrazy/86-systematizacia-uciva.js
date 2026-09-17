@@ -56,7 +56,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Päť zručností celého celku',
-        html: '<p>1) Definičný obor a krátenie. 2) Sčítanie a odčítanie (spoločný menovateľ). 3) Násobenie (čitateľ krát čitateľ). 4) Delenie (obráť deliteľa). 5) Zložitejšie výrazy (rozlož menovateľ najprv).</p>',
+        html: '<ol class="steps"><li>Definičný obor a krátenie.</li><li>Sčítanie a odčítanie (spoločný menovateľ).</li><li>Násobenie (čitateľ krát čitateľ).</li><li>Delenie (obráť deliteľa).</li><li>Zložitejšie výrazy (rozlož menovateľ najprv).</li></ol>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -113,7 +113,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie celého celku pred previerkou: definičný obor (menovateľ ≠ 0), krátenie (rozlož, potom kráť), sčítanie/odčítanie (spoločný menovateľ), násobenie/delenie (delenie = násobenie prevráteným), zložitejšie výrazy (rozlož menovateľ najprv).</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Definičný obor</div><p class="term-rule">Menovateľ ≠ 0.</p></div><div class="term-item no-symbol"><div class="term-name">Krátenie</div><p class="term-rule">Rozlož, potom kráť.</p></div><div class="term-item no-symbol"><div class="term-name">Sčítanie/odčítanie</div><p class="term-rule">Spoločný menovateľ.</p></div><div class="term-item no-symbol"><div class="term-name">Násobenie/delenie</div><p class="term-rule">Delenie = násobenie prevráteným.</p></div><div class="term-item no-symbol"><div class="term-name">Zložitejšie výrazy</div><p class="term-rule">Rozlož menovateľ najprv.</p></div></div>',
         continueLabel: 'Mám zapísané',
       },
       {

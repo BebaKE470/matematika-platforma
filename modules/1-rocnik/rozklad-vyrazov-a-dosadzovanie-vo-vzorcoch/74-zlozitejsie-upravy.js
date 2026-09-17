@@ -57,7 +57,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Rozklad nie je vždy hotový po jednom kroku',
-        html: '<p>Rozlož 2x² − 8. Najprv vyjmeme spoločný činiteľ 2: 2x² − 8 = 2(x² − 4).</p><p>Ale pozor — v zátvorke zostal x² − 4, čo je rozdiel druhých mocnín! Môžeme pokračovať: 2(x² − 4) = 2(x − 2)(x + 2).</p>',
+        html: '<p>Rozlož 2x² − 8. Najprv vyjmeme spoločný činiteľ 2: 2x² − 8 = 2(x² − 4).</p><div class="warning"><strong>Pozor:</strong> v zátvorke zostal x² − 4, čo je rozdiel druhých mocnín! Môžeme pokračovať ďalej.</div><p>2(x² − 4) = 2(x − 2)(x + 2)</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Postup pri úplnom rozklade',
-        html: '<p>1) Skús najprv vyňať spoločný činiteľ. 2) Skontroluj, či sa dá výraz v zátvorke rozložiť ešte ďalej pomocou vzorca. 3) Opakuj, kým sa už nedá pokračovať.</p>',
+        html: '<ol class="steps"><li>Skús najprv vyňať spoločný činiteľ.</li><li>Skontroluj, či sa dá výraz v zátvorke rozložiť ešte ďalej pomocou vzorca.</li><li>Opakuj, kým sa už nedá pokračovať.</li></ol>',
         remember: 'Rozklad je úplný, až keď sa už žiadna časť výrazu nedá ďalej rozložiť.',
       },
       {

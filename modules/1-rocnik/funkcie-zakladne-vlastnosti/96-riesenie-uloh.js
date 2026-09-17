@@ -125,7 +125,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie piatich vlastností: párna/nepárna (porovnanie f(−x)), rastúca/klesajúca (porovnanie f(x₁), f(x₂) pri x₁<x₂), extrémy (najväčšia/najmenšia hodnota y), prostá (rôzne x → rôzne y), ohraničená (existencia hranice).</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Párna / nepárna</div><p class="term-rule">Porovnanie f(−x).</p></div><div class="term-item no-symbol"><div class="term-name">Rastúca / klesajúca</div><p class="term-rule">Porovnanie f(x₁), f(x₂) pri x₁&lt;x₂.</p></div><div class="term-item no-symbol"><div class="term-name">Extrémy</div><p class="term-rule">Najväčšia/najmenšia hodnota y.</p></div><div class="term-item no-symbol"><div class="term-name">Prostá</div><p class="term-rule">Rôzne x → rôzne y.</p></div><div class="term-item no-symbol"><div class="term-name">Ohraničená</div><p class="term-rule">Existencia hranice.</p></div></div>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -135,7 +135,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Ktoré dve z piatich vlastností funkcie sa ti najľahšie zamieňajú, a ako si ich rozlíšiš?',
-        model: 'Napríklad ohraničenosť a maximum/minimum sa mi ľahko zamieňajú, pretože obe hovoria o „hraniciach“ hodnôt funkcie. Rozlíšim si ich tak, že maximum/minimum je vždy KONKRÉTNA hodnota, ktorú funkcia naozaj dosiahne, kým ohraničenosť iba hovorí, že existuje NEJAKÁ hranica, ktorú hodnoty neprekročia — tá nemusí byť touto dosiahnutou hodnotou.',
+        model: 'Napríklad ohraničenosť a maximum/minimum sa mi ľahko zamieňajú, pretože obe hovoria o „hraniciach“ hodnôt funkcie. Rozlíšim si ich tak, že maximum/minimum je vždy <span class="hl">konkrétna</span> hodnota, ktorú funkcia naozaj dosiahne, kým ohraničenosť iba hovorí, že existuje <span class="hl">nejaká</span> hranica, ktorú hodnoty neprekročia — tá nemusí byť touto dosiahnutou hodnotou.',
       },
       {
         id: 'manual',

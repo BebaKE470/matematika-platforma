@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Dosadzovanie záporného čísla',
-        html: '<p>Ak dosadzuješ záporné číslo, vždy ho <strong>ohraď zátvorkou</strong>, aby si sa vyhol chybe v znamienku.</p><p>Príklad: pre výraz x² dosaď x = −3 ako (−3)², nie −3² (to by znamenalo niečo iné). (−3)² = 9, zatiaľ čo −3² = −9.</p>',
+        html: '<p>Ak dosadzuješ záporné číslo, vždy ho <strong>ohraď zátvorkou</strong>, aby si sa vyhol chybe v znamienku.</p><p>Príklad: pre výraz x² dosaď x = −3.</p><div class="compare"><div class="bad"><span class="mini-label">ČASTÁ CHYBA</span><p>−3² = −9</p></div><div class="good"><span class="mini-label">SPRÁVNE</span><p>(−3)² = 9</p></div></div>',
         remember: 'Záporné číslo pri dosadzovaní vždy ohraď zátvorkou: x = −3 → (−3).',
       },
       {

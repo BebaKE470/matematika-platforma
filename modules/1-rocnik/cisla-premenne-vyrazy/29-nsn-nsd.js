@@ -62,7 +62,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>NSD je najväčší spoločný deliteľ; NSN najmenší kladný spoločný násobok. Prvočíselný rozklad pomáha oba určiť.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">NSD</div><p class=\"term-rule\">Najväčší spoločný deliteľ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">NSN</div><p class=\"term-rule\">Najmenší kladný spoločný násobok.</p></div></div><p>Prvočíselný rozklad pomáha oba určiť.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

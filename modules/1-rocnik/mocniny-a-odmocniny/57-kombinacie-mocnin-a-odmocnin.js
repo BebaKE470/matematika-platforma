@@ -126,7 +126,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie celej témy pred previerkou:</p><p>aⁿ = a·a·…·a (n-krát), a⁰ = 1, a⁻ⁿ = 1/aⁿ, aᵐ·aⁿ = aᵐ⁺ⁿ, aᵐ:aⁿ = aᵐ⁻ⁿ, (aᵐ)ⁿ = aᵐⁿ.</p><p>√a (a ≥ 0) je nezáporné, ∛a existuje pre každé reálne a. √(ab) = √a·√b, √(a²) = |a|.</p><p>a^(1/n) = ⁿ√a, a^(m/n) = ⁿ√(aᵐ) — všetky tri pravidlá pre mocniny platia aj pre zlomkový exponent.</p>',
+        html: '<p>Zhrnutie celej témy pred previerkou:</p><div class="formula">aⁿ = a·a·…·a (n-krát)<br>a⁰ = 1,  a⁻ⁿ = 1/aⁿ<br>aᵐ·aⁿ = aᵐ⁺ⁿ,  aᵐ:aⁿ = aᵐ⁻ⁿ,  (aᵐ)ⁿ = aᵐⁿ</div><p>√a (a ≥ 0) je nezáporné, ∛a existuje pre každé reálne a.</p><div class="formula">√(ab) = √a·√b<br>√(a²) = |a|</div><div class="formula">a^(1/n) = ⁿ√a<br>a^(m/n) = ⁿ√(aᵐ)<span class="formula-note">všetky tri pravidlá pre mocniny platia aj pre zlomkový exponent</span></div>',
         continueLabel: 'Mám zapísané',
       },
       {

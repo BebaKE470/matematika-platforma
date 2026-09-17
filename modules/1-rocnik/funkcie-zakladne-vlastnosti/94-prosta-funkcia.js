@@ -141,7 +141,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo stačí nájsť JEDEN protipríklad na to, aby sme dokázali, že funkcia nie je prostá, kým na dokázanie, že JE prostá, treba skontrolovať všetky dvojice x?',
-        model: 'Definícia prostej funkcie hovorí, že PRE VŠETKY dvojice rôznych x musia byť funkčné hodnoty rôzne. Ak nájdem čo i len jednu dvojicu, kde sa funkčné hodnoty zhodujú, definícia je porušená a funkcia nie je prostá — na vyvrátenie stačí jeden prípad. Ale na potvrdenie, že JE prostá, musím vedieť, že sa toto nestane pri ŽIADNEJ dvojici, čo si vyžaduje overiť všetky.',
+        model: 'Definícia prostej funkcie hovorí, že <span class="hl">pre všetky</span> dvojice rôznych x musia byť funkčné hodnoty rôzne. Ak nájdem čo i len jednu dvojicu, kde sa funkčné hodnoty zhodujú, definícia je porušená a funkcia nie je prostá — na vyvrátenie stačí jeden prípad. Ale na potvrdenie, že <span class="hl">je</span> prostá, musím vedieť, že sa toto nestane pri <span class="hl">žiadnej</span> dvojici, čo si vyžaduje overiť všetky.',
       },
       {
         id: 'manual',
