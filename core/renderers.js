@@ -34,7 +34,7 @@
     return `<div class="module-topic-bar"><span>${esc(ctx.unit || '')}</span><strong>${esc(ctx.topic || '')}</strong></div>
       <div class="row activity-top">
         <div class="row gap-sm">${ctx.index > 0 ? '<button class="ghost back-step" type="button">← Späť</button>' : ''}<span class="tag phase">${esc(activity.phase || 'AKTIVITA')}</span></div>
-        <div class="row gap-sm items-center"><strong>${ctx.score} XP</strong>${gradingBadge}</div>
+        <div class="row gap-sm items-center"><strong class="xp-score">${ctx.score} XP</strong>${gradingBadge}</div>
       </div>
       <div class="progress"><div style="width:${pct}%"></div></div>
       <p class="muted">Krok ${ctx.index + 1} z ${ctx.total}</p>`;

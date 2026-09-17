@@ -28,7 +28,9 @@
 .grading-fields-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; max-width: 650px; }
 .tag.grading-on { background: var(--warn); color: #7a5b12; }
 .tag.grading-off { background: var(--good); color: #256442; }
-.tag.grading-pending { background: #eee; color: #777; }
+/* Still unknown whether this counts for a grade — secondary info next to
+   the phase/XP it sits beside in the activity header, so it stays quiet. */
+.tag.grading-pending { background: #eee; color: #777; font-size: 11px; opacity: .8; }
 
 /* --- Live lesson: which activities are active --- */
 
