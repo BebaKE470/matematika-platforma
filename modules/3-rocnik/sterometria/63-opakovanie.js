@@ -196,7 +196,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "PRECVIČ",
         "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>STEREOMETRIA – SYSTÉM POJMOV</strong></p><p>Priestorové úlohy riešim v poradí: <strong>objekty → vzájomná poloha → spoločná rovina/stena → zdôvodnenie</strong>.</p><p>Pri reze: <strong>body rezu → úsečky v jednotlivých stenách → uzavretý mnohouholník → kontrola</strong>.</p>"
+        "html": "<p><strong>STEREOMETRIA – SYSTÉM POJMOV</strong></p><p>Priestorové úlohy riešim v poradí:</p><ol class=\"steps\"><li>objekty</li><li>vzájomná poloha</li><li>spoločná rovina/stena</li><li>zdôvodnenie</li></ol><p>Pri reze:</p><ol class=\"steps\"><li>body rezu</li><li>úsečky v jednotlivých stenách</li><li>uzavretý mnohouholník</li><li>kontrola</li></ol>"
       },
       {
         "id": "r",

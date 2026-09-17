@@ -55,7 +55,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie postupu',
-        html: '<p>P(A∪B)=P(A)+P(B)−P(A∩B). Postup: 1) urč elementárne javy A, B, A∩B, 2) vypočítaj P(A), P(B), P(A∩B), 3) dosaď do vzorca (alebo, ak sú nezlučiteľné, iba sčítaj).</p>',
+        html: '<div class="formula">P(A∪B) = P(A) + P(B) − P(A∩B)</div><ol class="steps"><li>Urč elementárne javy A, B, A∩B.</li><li>Vypočítaj P(A), P(B), P(A∩B).</li><li>Dosaď do vzorca (alebo, ak sú nezlučiteľné, iba sčítaj).</li></ol>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -113,7 +113,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Pri riešení úlohy so zjednotením: 1) presne urč, ktoré elementárne javy patria do A, do B a do A∩B, 2) vypočítaj P(A), P(B), P(A∩B) so spoločným menovateľom, 3) dosaď do P(A∪B)=P(A)+P(B)−P(A∩B) (alebo použi zjednodušený vzorec pre nezlučiteľné javy).</p>',
+        html: '<ol class="steps"><li>Presne urč, ktoré elementárne javy patria do A, do B a do A∩B.</li><li>Vypočítaj P(A), P(B), P(A∩B) so spoločným menovateľom.</li><li>Dosaď do P(A∪B)=P(A)+P(B)−P(A∩B) (alebo použi zjednodušený vzorec pre nezlučiteľné javy).</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {

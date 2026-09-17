@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Permutácia — osobitný prípad variácie',
-        html: '<p>Variácia V(k,n)=n!/(n−k)! pre k=n dáva V(n,n)=n!/(n−n)!=n!/0!=n! (lebo 0!=1). Toto je <strong>permutácia</strong> — usporiadanie VŠETKÝCH n prvkov: P(n)=n!.</p>',
+        html: '<p>Variácia V(k,n)=n!/(n−k)! pre k=n dáva V(n,n)=n!/(n−n)!=n!/0!=n! (lebo 0!=1). Toto je <strong>permutácia</strong> — usporiadanie <span class="hl">všetkých</span> n prvkov: P(n)=n!.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Permutácia s opakovaním',
-        html: '<p>Ak medzi n prvkami sú niektoré NEROZLÍŠITEĽNÉ (rovnaké), počet ich rôznych usporiadaní je menší ako n!. Vzorec <strong>permutácie s opakovaním</strong>: P\'(n;n₁,n₂,...) = n!/(n₁!·n₂!·...), kde n₁, n₂, ... sú počty opakovaní jednotlivých rozlíšiteľných prvkov.</p><p>Príklad: slovo MAMA má 4 písmená, z toho 2× M a 2× A. Počet rôznych usporiadaní: 4!/(2!·2!)=24/4=6.</p>',
+        html: '<p>Ak medzi n prvkami sú niektoré <span class="hl">nerozlíšiteľné</span> (rovnaké), počet ich rôznych usporiadaní je menší ako n!.</p><div class="formula"><span class="mini-label">PERMUTÁCIA S OPAKOVANÍM</span>P\'(n;n₁,n₂,...) = n!/(n₁!·n₂!·...)<span class="formula-note">n₁, n₂, ... sú počty opakovaní jednotlivých rozlíšiteľných prvkov.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Slovo MAMA má 4 písmená, z toho 2× M a 2× A.</p><p>Počet rôznych usporiadaní: 4!/(2!·2!) = 24/4 = 6.</p></div>',
         remember: 'Bez opakovania: P(n)=n!. S opakovaním (n₁, n₂,... opakovaní): P\'(n;n₁,n₂,...)=n!/(n₁!·n₂!·...).',
       },
       {
@@ -78,7 +78,7 @@ MathPlatform.registerModule({
         options: ['5·4=20', '5!=120', '5²=25'],
         answer: 1,
         correct: 'Správne. Permutácia 5 rôznych prvkov: P(5)=5!=120.',
-        hint: 'Usporiadanie VŠETKÝCH 5 rôznych prvkov je permutácia, P(n)=n!.',
+        hint: 'Usporiadanie <span class="hl">všetkých</span> 5 rôznych prvkov je permutácia, P(n)=n!.',
       },
       {
         id: 'q-repeat',
@@ -134,7 +134,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo je permutácia P(n)=n! iba OSOBITNÝM prípadom variácie V(k,n), a nie úplne novým, nesúvisiacim vzorcom?',
-        model: 'Pretože variácia V(k,n)=n!/(n−k)! vyjadruje počet spôsobov, ako vybrať a usporiadať k prvkov z n. Ak si zvolíme k=n (teda usporadúvame VŠETKY prvky, nie iba ich časť), dostaneme V(n,n)=n!/(n−n)!=n!/0!=n! (vďaka dohode 0!=1). Permutácia je teda presne tento špeciálny prípad variácie, keď vyberáme a usporadúvame úplne všetky prvky danej skupiny.',
+        model: 'Pretože variácia V(k,n)=n!/(n−k)! vyjadruje počet spôsobov, ako vybrať a usporiadať k prvkov z n. Ak si zvolíme k=n (teda usporadúvame <span class="hl">všetky</span> prvky, nie iba ich časť), dostaneme V(n,n)=n!/(n−n)!=n!/0!=n! (vďaka dohode 0!=1). Permutácia je teda presne tento špeciálny prípad variácie, keď vyberáme a usporadúvame úplne všetky prvky danej skupiny.',
       },
       {
         id: 'manual',

@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Kombinačné číslo „n nad k“',
-        html: '<p><strong>Kombinačné číslo</strong> (n nad k), pre 0≤k≤n, sa vypočíta ako (n nad k) = n!/(k!·(n−k)!).</p><p>Čísla v n-tom riadku Pascalovho trojuholníka sú presne kombinačné čísla (n nad 0), (n nad 1), ..., (n nad n).</p><p><strong>Vlastnosti:</strong> (n nad 0)=(n nad n)=1 (krajné hodnoty). Symetria: <strong>(n nad k) = (n nad n−k)</strong>.</p>',
+        html: '<p><strong>Kombinačné číslo</strong> (n nad k), pre 0≤k≤n, sa vypočíta takto:</p><div class="formula">(n nad k) = n!/(k!·(n−k)!)</div><p>Čísla v n-tom riadku Pascalovho trojuholníka sú presne kombinačné čísla (n nad 0), (n nad 1), ..., (n nad n).</p><div class="term-list"><div class="term-item no-symbol"><div class="term-name">Krajné hodnoty</div><p class="term-rule">(n nad 0) = (n nad n) = 1.</p></div><div class="term-item no-symbol"><div class="term-name">Symetria</div><p class="term-rule">(n nad k) = (n nad n−k).</p></div></div>',
         remember: '(n nad k)=n!/(k!(n−k)!). Krajné: (n nad 0)=(n nad n)=1. Symetria: (n nad k)=(n nad n−k).',
       },
       {
@@ -102,7 +102,7 @@ MathPlatform.registerModule({
           'Mal namiesto delenia faktoriálom vynásobiť.',
         ],
         answer: 0,
-        correct: 'Presne. Vzorec (n nad k)=n!/(k!·(n−k)!) má v menovateli SÚČIN dvoch faktoriálov — k! aj (n−k)! — chýbajúci druhý faktor mení výsledok.',
+        correct: 'Presne. Vzorec (n nad k)=n!/(k!·(n−k)!) má v menovateli <span class="hl">súčin</span> dvoch faktoriálov — k! aj (n−k)! — chýbajúci druhý faktor mení výsledok.',
         hint: 'Zopakuj si celý vzorec (n nad k)=n!/(k!·(n−k)!) — koľko faktoriálov je v menovateli?',
       },
       {

@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Variačné rozpätie, rozptyl, smerodajná odchýlka',
-        html: '<p><strong>Variačné rozpätie</strong> = najväčšia hodnota − najmenšia hodnota (najjednoduchšia miera).</p><p><strong>Rozptyl:</strong> vypočítaj odchýlku každej hodnoty od priemeru, tieto odchýlky umocni na druhú, spočítaj a vydeľ počtom hodnôt.</p><p><strong>Smerodajná odchýlka</strong> = odmocnina z rozptylu (vracia nás späť do pôvodných jednotiek).</p><p>Príklad pre 2,4,6,8,10 (priemer 6): odchýlky −4,−2,0,2,4; mocniny 16,4,0,4,16; súčet=40; rozptyl=40/5=8; smerodajná odchýlka=√8≈2,83.</p>',
+        html: '<div class="formula"><span class="mini-label">VARIAČNÉ ROZPÄTIE</span>najväčšia hodnota − najmenšia hodnota<span class="formula-note">Najjednoduchšia miera.</span></div><p><strong>Rozptyl</strong> — postup výpočtu:</p><ol class="steps"><li>Vypočítaj odchýlku každej hodnoty od priemeru.</li><li>Tieto odchýlky umocni na druhú.</li><li>Spočítaj ich.</li><li>Vydeľ počtom hodnôt.</li></ol><div class="formula"><span class="mini-label">SMERODAJNÁ ODCHÝLKA</span>odmocnina z rozptylu<span class="formula-note">Vracia nás späť do pôvodných jednotiek.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Pre 2,4,6,8,10 (priemer 6): odchýlky −4,−2,0,2,4; mocniny 16,4,0,4,16; súčet=40; rozptyl=40/5=8; smerodajná odchýlka=√8≈2,83.</p></div>',
         remember: 'Rozpätie=max−min. Rozptyl=priemer druhých mocnín odchýlok od priemeru. Smerodajná odchýlka=√rozptyl.',
       },
       {
@@ -103,7 +103,7 @@ MathPlatform.registerModule({
           'Mal namiesto umocnenia odchýlky odmocniť.',
         ],
         answer: 0,
-        correct: 'Presne. Súčet odchýlok od priemeru je VŽDY 0 (to je vlastnosť priemeru) — preto sa odchýlky pred súčtom musia umocniť na druhú, aby sa záporné a kladné hodnoty nevyrušili.',
+        correct: 'Presne. Súčet odchýlok od priemeru je <span class="hl">vždy</span> 0 (to je vlastnosť priemeru) — preto sa odchýlky pred súčtom musia umocniť na druhú, aby sa záporné a kladné hodnoty nevyrušili.',
         hint: 'Prečo súčet obyčajných (neumocnených) odchýlok od priemeru vždy vyjde 0?',
       },
       {
@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Variačné rozpätie:</strong> max−min. <strong>Rozptyl:</strong> priemer druhých mocnín odchýlok jednotlivých hodnôt od aritmetického priemeru. <strong>Smerodajná odchýlka:</strong> odmocnina z rozptylu — vyjadruje typickú veľkosť odchýlky v pôvodných jednotkách.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Variačné rozpätie</div><p class="term-rule">Max−min.</p></div><div class="term-item no-symbol"><div class="term-name">Rozptyl</div><p class="term-rule">Priemer druhých mocnín odchýlok jednotlivých hodnôt od aritmetického priemeru.</p></div><div class="term-item no-symbol"><div class="term-name">Smerodajná odchýlka</div><p class="term-rule">Odmocnina z rozptylu — vyjadruje typickú veľkosť odchýlky v pôvodných jednotkách.</p></div></div>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -134,7 +134,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo musíme pri výpočte rozptylu odchýlky UMOCNIŤ na druhú, a nie ich iba spočítať tak, ako sú?',
-        model: 'Pretože súčet obyčajných odchýlok od priemeru je vždy presne 0 — kladné odchýlky (hodnoty nad priemerom) sa presne vyrušia so zápornými odchýlkami (hodnoty pod priemerom), keďže priemer je práve tá hodnota, okolo ktorej sú odchýlky vyvážené. Aby sme namiesto tejto nulovej hodnoty dostali zmysluplné číslo vyjadrujúce VEĽKOSŤ rozptýlenosti (bez ohľadu na smer), musíme odchýlky najprv umocniť na druhú, čím sa všetky stanú nezápornými a ich súčet už nebude automaticky nulový.',
+        model: 'Pretože súčet obyčajných odchýlok od priemeru je vždy presne 0 — kladné odchýlky (hodnoty nad priemerom) sa presne vyrušia so zápornými odchýlkami (hodnoty pod priemerom), keďže priemer je práve tá hodnota, okolo ktorej sú odchýlky vyvážené. Aby sme namiesto tejto nulovej hodnoty dostali zmysluplné číslo vyjadrujúce <span class="hl">veľkosť</span> rozptýlenosti (bez ohľadu na smer), musíme odchýlky najprv umocniť na druhú, čím sa všetky stanú nezápornými a ich súčet už nebude automaticky nulový.',
       },
       {
         id: 'manual',

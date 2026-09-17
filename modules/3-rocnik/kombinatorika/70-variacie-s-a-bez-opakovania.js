@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Variácia bez opakovania a s opakovaním',
-        html: '<p><strong>Variácia k-tej triedy z n prvkov BEZ opakovania:</strong> usporiadaný výber k rôznych prvkov z n, V(k,n) = n!/(n−k)! = n(n−1)...(n−k+1).</p><p><strong>Variácia k-tej triedy z n prvkov S opakovaním:</strong> usporiadaný výber k prvkov z n, pričom sa prvky MÔŽU opakovať, V\'(k,n) = n^k.</p><p>Príklad s opakovaním: PIN kód so 4 číslicami (0–9, opakovanie povolené): 10⁴=10000.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Variácia BEZ opakovania</div><p class="term-rule">Usporiadaný výber k rôznych prvkov z n: V(k,n) = n!/(n−k)! = n(n−1)...(n−k+1).</p></div><div class="term-item no-symbol"><div class="term-name">Variácia S opakovaním</div><p class="term-rule">Usporiadaný výber k prvkov z n, pričom sa prvky <span class="hl">môžu</span> opakovať: V\'(k,n) = n^k.</p></div></div><div class="example"><span class="mini-label">PRÍKLAD S OPAKOVANÍM</span><p>PIN kód so 4 číslicami (0–9, opakovanie povolené): 10⁴=10000.</p></div>',
         remember: 'Bez opakovania: V(k,n)=n!/(n−k)!. S opakovaním: V\'(k,n)=n^k.',
       },
       {

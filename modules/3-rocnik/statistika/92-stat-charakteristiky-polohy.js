@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Tri rôzne pohľady na „stred“',
-        html: '<p>Známky žiaka: 1, 2, 2, 3, 5. Priemer (1+2+2+3+5)/5=13/5=2,6. Medián (prostredná hodnota po usporiadaní): 2. Modus (najčastejšia hodnota): 2. Priemer a medián/modus dávajú tu rôzne čísla!</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Známky žiaka: 1, 2, 2, 3, 5. Priemer (1+2+2+3+5)/5=13/5=2,6. Medián (prostredná hodnota po usporiadaní): 2. Modus (najčastejšia hodnota): 2.</p></div><p>Priemer a medián/modus dávajú tu rôzne čísla!</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -103,7 +103,7 @@ MathPlatform.registerModule({
           'Mal namiesto mediánu počítať modus.',
         ],
         answer: 0,
-        correct: 'Presne. Medián sa počíta VŽDY z usporiadaných hodnôt, a pri párnom počte je to priemer dvoch prostredných hodnôt, nie ľubovoľná hodnota z pôvodného poradia.',
+        correct: 'Presne. Medián sa počíta <span class="hl">vždy</span> z usporiadaných hodnôt, a pri párnom počte je to priemer dvoch prostredných hodnôt, nie ľubovoľná hodnota z pôvodného poradia.',
         hint: 'Usporiadaj hodnoty 8,3,5,1 podľa veľkosti — sú to 4 hodnoty (párny počet).',
       },
       {
@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Aritmetický priemer:</strong> súčet hodnôt / počet hodnôt. <strong>Medián:</strong> prostredná hodnota po usporiadaní (pri párnom počte priemer dvoch prostredných). <strong>Modus:</strong> najčastejšia hodnota v súbore.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Aritmetický priemer</div><p class="term-rule">Súčet hodnôt / počet hodnôt.</p></div><div class="term-item no-symbol"><div class="term-name">Medián</div><p class="term-rule">Prostredná hodnota po usporiadaní (pri párnom počte priemer dvoch prostredných).</p></div><div class="term-item no-symbol"><div class="term-name">Modus</div><p class="term-rule">Najčastejšia hodnota v súbore.</p></div></div>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -134,7 +134,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo môžu priemer, medián a modus dávať rôzne hodnoty pre ten istý súbor dát? Uveď, prečo je to užitočné vedieť.',
-        model: 'Pretože každá z týchto charakteristík meria „stred“ súboru iným spôsobom: priemer zohľadňuje VŠETKY hodnoty a je citlivý na extrémne (veľmi vysoké alebo nízke) hodnoty, medián zohľadňuje iba POZÍCIU hodnôt po usporiadaní a nie je citlivý na extrémy, a modus jednoducho ukazuje, ktorá hodnota sa vyskytuje najčastejšie. Ak sa tieto tri hodnoty výrazne líšia, je to signál, že súbor dát nie je rovnomerne rozložený (napr. obsahuje extrémne hodnoty) — preto je užitočné poznať všetky tri, nielen jednu.',
+        model: 'Pretože každá z týchto charakteristík meria „stred“ súboru iným spôsobom: priemer zohľadňuje <span class="hl">všetky</span> hodnoty a je citlivý na extrémne (veľmi vysoké alebo nízke) hodnoty, medián zohľadňuje iba <span class="hl">pozíciu</span> hodnôt po usporiadaní a nie je citlivý na extrémy, a modus jednoducho ukazuje, ktorá hodnota sa vyskytuje najčastejšie. Ak sa tieto tri hodnoty výrazne líšia, je to signál, že súbor dát nie je rovnomerne rozložený (napr. obsahuje extrémne hodnoty) — preto je užitočné poznať všetky tri, nielen jednu.',
       },
       {
         id: 'manual',

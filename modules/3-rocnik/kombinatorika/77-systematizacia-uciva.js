@@ -55,7 +55,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie celého celku',
-        html: '<p>Pravidlo súčinu: n₁·n₂·...·n_k. Faktoriál: n!=n·(n−1)·...·1. Permutácia: P(n)=n!. Variácia: V(k,n)=n!/(n−k)! (poradie záleží). Kombinácia: C(k,n)=(n nad k)=n!/(k!(n−k)!) (poradie nezáleží).</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Pravidlo súčinu</div><p class="term-rule">n₁·n₂·...·n_k</p></div><div class="term-item no-symbol"><div class="term-name">Faktoriál</div><p class="term-rule">n! = n·(n−1)·...·1</p></div><div class="term-item no-symbol"><div class="term-name">Permutácia</div><p class="term-rule">P(n) = n!</p></div><div class="term-item no-symbol"><div class="term-name">Variácia</div><p class="term-rule">V(k,n) = n!/(n−k)! (poradie záleží)</p></div><div class="term-item no-symbol"><div class="term-name">Kombinácia</div><p class="term-rule">C(k,n) = (n nad k) = n!/(k!(n−k)!) (poradie nezáleží)</p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -92,7 +92,7 @@ MathPlatform.registerModule({
           'Mal namiesto kombinácie použiť variáciu s opakovaním.',
         ],
         answer: 0,
-        correct: 'Presne. Usporiadanie (kde záleží na poradí kníh na poličke) VŠETKÝCH prvkov je permutácia P(n)=n!, nie kombinácia (kombinácia navyše úplne ignoruje poradie).',
+        correct: 'Presne. Usporiadanie (kde záleží na poradí kníh na poličke) <span class="hl">všetkých</span> prvkov je permutácia P(n)=n!, nie kombinácia (kombinácia navyše úplne ignoruje poradie).',
         hint: 'Záleží na poradí kníh na poličke? Ide o usporiadanie všetkých, alebo výber bez poradia?',
       },
       {
@@ -113,7 +113,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie celej témy: pravidlo súčinu (nezávislé voľby), faktoriál n! (súčin od n do 1), permutácia P(n)=n! (usporiadanie všetkých), variácia V(k,n)=n!/(n−k)! (výber časti, poradie záleží), kombinácia C(k,n)=(n nad k)=n!/(k!(n−k)!) (výber časti, poradie nezáleží). Pascalov trojuholník obsahuje kombinačné čísla, symetria (n nad k)=(n nad n−k).</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Pravidlo súčinu</div><p class="term-rule">nezávislé voľby: n₁·n₂·...·n_k</p></div><div class="term-item no-symbol"><div class="term-name">Faktoriál</div><p class="term-rule">n! (súčin od n do 1)</p></div><div class="term-item no-symbol"><div class="term-name">Permutácia</div><p class="term-rule">P(n)=n! (usporiadanie všetkých)</p></div><div class="term-item no-symbol"><div class="term-name">Variácia</div><p class="term-rule">V(k,n)=n!/(n−k)! (výber časti, poradie záleží)</p></div><div class="term-item no-symbol"><div class="term-name">Kombinácia</div><p class="term-rule">C(k,n)=(n nad k)=n!/(k!(n−k)!) (výber časti, poradie nezáleží)</p></div></div><p>Pascalov trojuholník obsahuje kombinačné čísla, symetria (n nad k)=(n nad n−k).</p>',
         continueLabel: 'Mám zapísané',
       },
       {

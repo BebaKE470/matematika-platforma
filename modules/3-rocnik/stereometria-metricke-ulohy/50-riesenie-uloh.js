@@ -68,7 +68,7 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "OBJAVUJ",
         "skill": "porozumenie",
-        "question": "Dobrá kontrola vzorca je skúsiť prípad R=r a porovnať s",
+        "question": "Zrezaný kužeľ má polomery podstáv R a r. Dobrá kontrola vzorca je skúsiť hraničný prípad R=r a porovnať výsledné teleso s",
         "options": [
           "kockou",
           "guľou",

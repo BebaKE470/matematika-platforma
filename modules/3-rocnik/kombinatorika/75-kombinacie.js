@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Záleží tu na poradí?',
-        html: '<p>Výber predsedu a podpredsedu z 5 žiakov: POradie záleží (iné funkcie) — variácia, V(2,5)=20. Výber 2 žiakov, ktorí pôjdu spolu na výlet: poradie NEZÁLEŽÍ (je to len dvojica) — toto je <strong>kombinácia</strong>.</p>',
+        html: '<div class="compare"><div><span class="mini-label">VARIÁCIA</span><p>Výber predsedu a podpredsedu z 5 žiakov: <span class="hl">poradie záleží</span> (iné funkcie), V(2,5)=20.</p></div><div><span class="mini-label">KOMBINÁCIA</span><p>Výber 2 žiakov, ktorí pôjdu spolu na výlet: <span class="hl">poradie nezáleží</span> (je to len dvojica).</p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Kombinácia a jej vzťah k variácii',
-        html: '<p><strong>Kombinácia k-tej triedy z n prvkov</strong> je výber k prvkov z n BEZ OHĽADU NA PORADIE. Počet kombinácií je C(k,n)=(n nad k)=n!/(k!(n−k)!).</p><p>Vzťah k variácii: V(k,n)=C(k,n)·k! — každú k-prvkovú kombináciu možno usporiadať k! spôsobmi, čím vzniknú všetky variácie. Preto C(k,n)=10 pre výber 2 z 5 kamarátov (variácia V(2,5)=20, delené 2!=2, dáva 10).</p>',
+        html: '<p><strong>Kombinácia k-tej triedy z n prvkov</strong> je výber k prvkov z n <span class="hl">bez ohľadu na poradie</span>.</p><div class="formula">C(k,n) = (n nad k) = n!/(k!(n−k)!)<span class="formula-note">Vzťah k variácii: V(k,n) = C(k,n) · k! — každú k-prvkovú kombináciu možno usporiadať k! spôsobmi, čím vzniknú všetky variácie.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Výber 2 z 5 kamarátov: variácia V(2,5)=20, delené 2!=2, dáva C(2,5)=10.</p></div>',
         remember: 'Kombinácia (poradie nezáleží): C(k,n)=(n nad k)=n!/(k!(n−k)!). Vzťah: V(k,n)=C(k,n)·k!.',
       },
       {
@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Kombinácia k-tej triedy z n prvkov:</strong> výber k prvkov z n BEZ OHĽADU NA PORADIE. Počet: C(k,n)=(n nad k)=n!/(k!(n−k)!). Vzťah k variácii: V(k,n)=C(k,n)·k!. Kľúčová otázka pri rozlíšení: záleží na poradí výberu? Áno → variácia. Nie → kombinácia.</p>',
+        html: '<p><strong>Kombinácia k-tej triedy z n prvkov:</strong> výber k prvkov z n <span class="hl">bez ohľadu na poradie</span>. Počet: C(k,n)=(n nad k)=n!/(k!(n−k)!). Vzťah k variácii: V(k,n)=C(k,n)·k!. Kľúčová otázka pri rozlíšení: záleží na poradí výberu? Áno → variácia. Nie → kombinácia.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

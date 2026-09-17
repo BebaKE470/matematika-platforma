@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Kombinatorické pravidlo súčinu',
-        html: '<p>Ak máme urobiť viacero NEZÁVISLÝCH volieb, pričom prvá voľba má n₁ možností, druhá n₂ možností, atď., potom celkový počet možností, ako urobiť všetky voľby spolu, je <strong>n₁ · n₂ · ... · n_k</strong> (súčin, nie súčet).</p>',
+        html: '<p>Ak máme urobiť viacero <span class="hl">nezávislých</span> volieb, pričom prvá voľba má n₁ možností, druhá n₂ možností atď.:</p><div class="formula">n₁ · n₂ · ... · n_k<span class="formula-note">Súčin, nie súčet — toľko je celkový počet možností, ako urobiť všetky voľby spolu.</span></div>',
         remember: 'Nezávislé voľby s n₁, n₂, ..., n_k možnosťami → celkový počet možností = n₁·n₂·...·n_k.',
       },
       {
@@ -102,7 +102,7 @@ MathPlatform.registerModule({
           'Mal namiesto sčítania čísla odčítať.',
         ],
         answer: 0,
-        correct: 'Presne. Keď robíme dve NEZÁVISLÉ voľby súčasne (tričko AJ nohavice), počty možností sa násobia — súčet by dával zmysel iba vtedy, keby sme si vyberali JEDNU vec z dvoch skupín (buď tričko, alebo nohavice).',
+        correct: 'Presne. Keď robíme dve <span class="hl">nezávislé</span> voľby súčasne (tričko aj nohavice), počty možností sa násobia — súčet by dával zmysel iba vtedy, keby sme si vyberali jednu vec z dvoch skupín (buď tričko, alebo nohavice).',
         hint: 'Skús si vypísať niekoľko konkrétnych kombinácií a spočítať ich — vyjde 7 alebo viac?',
       },
       {
@@ -133,7 +133,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo sa pri nezávislých voľbách počty možností NÁSOBIA, a nie sčítavajú?',
-        model: 'Pretože ku KAŽDEJ jednej možnosti prvej voľby môžeme priradiť VŠETKY možnosti druhej voľby — ak má prvá voľba n₁ možností a ku každej z nich existuje n₂ možností druhej voľby, celkový počet kombinácií je n₁ skupín po n₂ možnostiach, čo je práve n₁·n₂. Súčet by dával zmysel iba vtedy, ak by sme si vyberali jednu možnosť z dvoch oddelených skupín (buď-alebo), nie kombináciu oboch volieb naraz.',
+        model: 'Pretože ku <span class="hl">každej</span> jednej možnosti prvej voľby môžeme priradiť <span class="hl">všetky</span> možnosti druhej voľby — ak má prvá voľba n₁ možností a ku každej z nich existuje n₂ možností druhej voľby, celkový počet kombinácií je n₁ skupín po n₂ možnostiach, čo je práve n₁·n₂. Súčet by dával zmysel iba vtedy, ak by sme si vyberali jednu možnosť z dvoch oddelených skupín (buď-alebo), nie kombináciu oboch volieb naraz.',
       },
       {
         id: 'manual',

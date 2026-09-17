@@ -55,7 +55,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie celého celku',
-        html: '<p>P(A)=m/n. P(A∪B)=P(A)+P(B)−P(A∩B). Nezávislé javy: P(A∩B)=P(A)·P(B). Bernoulliho schéma: P(k)=(n nad k)·p^k·q^(n−k).</p>',
+        html: '<div class="formula"><span class="mini-label">KLASICKÁ DEFINÍCIA</span>P(A) = m/n</div><div class="formula"><span class="mini-label">ZJEDNOTENIE</span>P(A∪B) = P(A) + P(B) − P(A∩B)</div><div class="formula"><span class="mini-label">NEZÁVISLÉ JAVY</span>P(A∩B) = P(A) · P(B)</div><div class="formula"><span class="mini-label">BERNOULLIHO SCHÉMA</span>P(k) = (n nad k) · p^k · q^(n−k)</div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -113,7 +113,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie: klasická definícia P(A)=m/n. Zjednotenie P(A∪B)=P(A)+P(B)−P(A∩B) (nezlučiteľné: iba súčet). Nezávislé javy: P(A∩B)=P(A)·P(B). Bernoulliho schéma: P(k)=(n nad k)·p^k·q^(n−k).</p>',
+        html: '<div class="formula"><span class="mini-label">KLASICKÁ DEFINÍCIA</span>P(A) = m/n</div><div class="formula"><span class="mini-label">ZJEDNOTENIE</span>P(A∪B) = P(A) + P(B) − P(A∩B)<span class="formula-note">Nezlučiteľné javy: iba súčet P(A)+P(B).</span></div><div class="formula"><span class="mini-label">NEZÁVISLÉ JAVY</span>P(A∩B) = P(A) · P(B)</div><div class="formula"><span class="mini-label">BERNOULLIHO SCHÉMA</span>P(k) = (n nad k) · p^k · q^(n−k)</div>',
         continueLabel: 'Mám zapísané',
       },
       {

@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "PRECVIČ",
         "title": "Pravidlo konštrukcie",
-        "html": "<p>Ak poznáš dva body roviny rezu na tej istej stene kocky, spoj ich. Táto úsečka je časťou rezu. Potom pokračuj cez susedné steny. Výsledný rez musí byť uzavretý mnohouholník.</p>"
+        "html": "<ol class=\"steps\"><li>Ak poznáš dva body roviny rezu na tej istej stene kocky, spoj ich. Táto úsečka je časťou rezu.</li><li>Potom pokračuj cez susedné steny.</li><li>Výsledný rez musí byť uzavretý mnohouholník.</li></ol>"
       },
       {
         "id": "q0",
@@ -203,7 +203,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "PRECVIČ",
         "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>REZ KOCKY ROVINOU</strong></p><p>Rez telesa rovinou je prienik telesa s rovinou. Pri konštrukcii rezu kocky spájame dva body roviny rezu, ktoré ležia na tej istej stene. Postupujeme cez susedné steny, až vznikne uzavretý mnohouholník.</p><p><strong>Kontrola:</strong> každá strana rezu musí ležať v jednej stene kocky.</p>"
+        "html": "<p><strong>REZ KOCKY ROVINOU</strong></p><p>Rez telesa rovinou je prienik telesa s rovinou.</p><ol class=\"steps\"><li>Pri konštrukcii rezu kocky spájame dva body roviny rezu, ktoré ležia na tej istej stene.</li><li>Postupujeme cez susedné steny, až vznikne uzavretý mnohouholník.</li></ol><p><strong>Kontrola:</strong> každá strana rezu musí ležať v jednej stene kocky.</p>"
       },
       {
         "id": "r",

@@ -57,7 +57,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Ovplyvňuje jeden hod druhý?',
-        html: '<p>Hodíme kockou a mincou súčasne. To, čo padne na kocke, VÔBEC neovplyvňuje, čo padne na minci — tieto dva javy sú <strong>nezávislé</strong>.</p>',
+        html: '<p>Hodíme kockou a mincou súčasne. To, čo padne na kocke, <span class="hl">vôbec</span> neovplyvňuje, čo padne na minci — tieto dva javy sú <strong>nezávislé</strong>.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Súčinové pravidlo pre nezávislé javy',
-        html: '<p>Javy A a B sú <strong>nezávislé</strong>, ak nastanie jedného neovplyvňuje pravdepodobnosť druhého. Pre nezávislé javy platí <strong>P(A∩B) = P(A) · P(B)</strong>.</p><p>Príklad: výber gule z urny S VRÁTENÍM (guľu po prvom ťahu vrátime späť) — druhý ťah je nezávislý od prvého. Výber BEZ vrátenia — druhý ťah JE ovplyvnený prvým (v urne zostáva o jednu guľu menej), javy sú závislé.</p>',
+        html: '<p>Javy A a B sú <strong>nezávislé</strong>, ak nastanie jedného neovplyvňuje pravdepodobnosť druhého. Pre nezávislé javy platí:</p><div class="formula">P(A∩B) = P(A) · P(B)</div><div class="compare"><div><span class="mini-label">S VRÁTENÍM</span><p>Výber gule z urny — guľu po prvom ťahu vrátime späť. Druhý ťah je nezávislý od prvého.</p></div><div><span class="mini-label">BEZ VRÁTENIA</span><p>Druhý ťah <span class="hl">je</span> ovplyvnený prvým (v urne zostáva o jednu guľu menej) — javy sú závislé.</p></div></div>',
         remember: 'Nezávislé javy: P(A∩B)=P(A)·P(B). S vrátením → nezávislé. Bez vrátenia → závislé.',
       },
       {
@@ -102,7 +102,7 @@ MathPlatform.registerModule({
           'Mal namiesto násobenia čísla sčítať.',
         ],
         answer: 0,
-        correct: 'Presne. Bez vrátenia sa zloženie urny po prvom výbere zmení — druhý výber už nie je nezávislý od prvého, takže jednoduché P(A)·P(B) so ROVNAKÝMI pravdepodobnosťami nesedí (správny výpočet by použil kombinácie, ako na hodine 81).',
+        correct: 'Presne. Bez vrátenia sa zloženie urny po prvom výbere zmení — druhý výber už nie je nezávislý od prvého, takže jednoduché P(A)·P(B) so <span class="hl">rovnakými</span> pravdepodobnosťami nesedí (správny výpočet by použil kombinácie, ako na hodine 81).',
         hint: 'Zostáva v urne po prvom výbere rovnaký pomer červených gulí ako na začiatku?',
       },
       {
@@ -133,14 +133,14 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo je výber s vrátením nezávislý, kým výber bez vrátenia je závislý?',
-        model: 'Pri výbere s vrátením sa vybraný prvok po zaznamenaní výsledku vráti späť do pôvodnej množiny, takže zloženie množiny pred druhým výberom je úplne rovnaké ako pred prvým — pravdepodobnosť druhého výberu teda vôbec nezávisí od toho, čo sme vybrali prvýkrát. Pri výbere bez vrátenia vybraný prvok ZOSTÁVA mimo množiny, takže sa zmení jej zloženie (napr. ubudne jeden prvok, prípadne aj jeden z dôležitých typov) — pravdepodobnosť druhého výberu preto priamo závisí od toho, čo sa stalo pri prvom výbere.',
+        model: 'Pri výbere s vrátením sa vybraný prvok po zaznamenaní výsledku vráti späť do pôvodnej množiny, takže zloženie množiny pred druhým výberom je úplne rovnaké ako pred prvým — pravdepodobnosť druhého výberu teda vôbec nezávisí od toho, čo sme vybrali prvýkrát. Pri výbere bez vrátenia vybraný prvok <span class="hl">zostáva</span> mimo množiny, takže sa zmení jej zloženie (napr. ubudne jeden prvok, prípadne aj jeden z dôležitých typov) — pravdepodobnosť druhého výberu preto priamo závisí od toho, čo sa stalo pri prvom výbere.',
       },
       {
         id: 'manual',
         type: 'notebook',
         phase: 'BEZ MOBILU',
         title: 'Riešenie bez mobilu',
-        html: '<p>V zošite vypočítaj: <strong>a)</strong> Hodíme mincou 3-krát. Aká je pravdepodobnosť, že padnú tri lícami? <strong>b)</strong> Z urny s 10 guľami (4 červené) vyberáme guľu, VRÁTIME ju, a vyberáme znova. Aká je pravdepodobnosť, že OBIDVA výbery budú červené?</p>',
+        html: '<p>V zošite vypočítaj: <strong>a)</strong> Hodíme mincou 3-krát. Aká je pravdepodobnosť, že padnú tri lícami? <strong>b)</strong> Z urny s 10 guľami (4 červené) vyberáme guľu, <span class="hl">vrátime</span> ju, a vyberáme znova. Aká je pravdepodobnosť, že <span class="hl">obidva</span> výbery budú červené?</p>',
         continueLabel: 'Mám zapísané',
       },
       {

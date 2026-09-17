@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Kocka má 6 zhodných štvorcových stien: S=6a². Objem je V=a³. Jednotky povrchu sú štvorcové, objemu kubické.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<p>Kocka má 6 zhodných štvorcových stien.</p><div class=\"formula\">S = 6a²<span class=\"formula-note\">V = a³ — jednotky povrchu sú štvorcové, objemu kubické.</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

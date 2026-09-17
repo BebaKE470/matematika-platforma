@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Presne 3 líca z 5 hodov',
-        html: '<p>Hodíme mincou 5-krát. Aká je pravdepodobnosť, že padnú PRESNE 3 líca? Musíme spočítať, KOĽKÝMI spôsobmi môžu nastať 3 líca z 5 hodov (kombinačné číslo), a vynásobiť pravdepodobnosťou jednej konkrétnej postupnosti.</p>',
+        html: '<p>Hodíme mincou 5-krát. Aká je pravdepodobnosť, že padnú <span class="hl">presne</span> 3 líca? Musíme spočítať, <span class="hl">koľkými</span> spôsobmi môžu nastať 3 líca z 5 hodov (kombinačné číslo), a vynásobiť pravdepodobnosťou jednej konkrétnej postupnosti.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Vzorec Bernoulliho schémy',
-        html: '<p><strong>Bernoulliho pokus</strong> má dva výsledky: úspech (pravdepodobnosť p) a neúspech (pravdepodobnosť q=1−p). Pri n nezávislých opakovaniach je pravdepodobnosť PRESNE k úspechov:</p><p><strong>P(k) = (n nad k) · p^k · q^(n−k)</strong></p><p>Pre hod mincou 5-krát (p=q=1/2), presne 3 líca: P(3)=(5 nad 3)·(1/2)³·(1/2)²=10·(1/8)·(1/4)=10/32=5/16.</p>',
+        html: '<p><strong>Bernoulliho pokus</strong> má dva výsledky: úspech (pravdepodobnosť p) a neúspech (pravdepodobnosť q=1−p). Pri n nezávislých opakovaniach je pravdepodobnosť <span class="hl">presne</span> k úspechov:</p><div class="formula">P(k) = (n nad k) · p^k · q^(n−k)</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Hod mincou 5-krát (p=q=1/2), presne 3 líca:</p><p>P(3)=(5 nad 3)·(1/2)³·(1/2)²=10·(1/8)·(1/4)=10/32=5/16.</p></div>',
         remember: 'P(k)=(n nad k)·p^k·q^(n−k), kde n=počet opakovaní, k=počet úspechov, q=1−p.',
       },
       {
@@ -78,7 +78,7 @@ MathPlatform.registerModule({
         options: ['n=2, k=4', 'n=4, k=2', 'n=6, k=4'],
         answer: 1,
         correct: 'Správne. n=4 (počet hodov), k=2 (počet požadovaných úspechov — šestiek).',
-        hint: 'n je celkový počet opakovaní pokusu, k je počet POŽADOVANÝCH úspechov.',
+        hint: 'n je celkový počet opakovaní pokusu, k je počet <span class="hl">požadovaných</span> úspechov.',
       },
       {
         id: 'q-compute',
@@ -103,7 +103,7 @@ MathPlatform.registerModule({
           'Mal namiesto násobenia mocniny sčítať.',
         ],
         answer: 0,
-        correct: 'Presne. Výraz p^k·q^(n−k) dáva pravdepodobnosť IBA JEDNEJ konkrétnej postupnosti výsledkov (napr. líce-líce-rub) — kombinačné číslo (n nad k) vyjadruje, KOĽKO rôznych postupností s presne k úspechmi existuje.',
+        correct: 'Presne. Výraz p^k·q^(n−k) dáva pravdepodobnosť <span class="hl">iba jednej</span> konkrétnej postupnosti výsledkov (napr. líce-líce-rub) — kombinačné číslo (n nad k) vyjadruje, <span class="hl">koľko</span> rôznych postupností s presne k úspechmi existuje.',
         hint: 'Koľkými rôznymi spôsobmi (poradiami) môžu nastať presne 2 líca z 3 hodov?',
       },
       {
@@ -134,7 +134,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo je vo vzorci Bernoulliho schémy kombinačné číslo (n nad k), a nie napríklad variácia alebo permutácia?',
-        model: 'Pretože potrebujeme spočítať, KOĽKÝMI rôznymi spôsobmi (v ktorom poradí) môže nastať presne k úspechov medzi n pokusmi — a keďže nás nezaujíma, KTORÝ konkrétny pokus bol úspešný (iba to, že bolo presne k úspešných), ide o výber k pozícií z n BEZ OHĽADU NA PORADIE výberu — čo je presne definícia kombinácie. Variácia by sa použila, keby sme rozlišovali poradie výberu samotných pozícií, čo tu nie je potrebné.',
+        model: 'Pretože potrebujeme spočítať, <span class="hl">koľkými</span> rôznymi spôsobmi (v ktorom poradí) môže nastať presne k úspechov medzi n pokusmi — a keďže nás nezaujíma, <span class="hl">ktorý</span> konkrétny pokus bol úspešný (iba to, že bolo presne k úspešných), ide o výber k pozícií z n <span class="hl">bez ohľadu na poradie</span> výberu — čo je presne definícia kombinácie. Variácia by sa použila, keby sme rozlišovali poradie výberu samotných pozícií, čo tu nie je potrebné.',
       },
       {
         id: 'manual',

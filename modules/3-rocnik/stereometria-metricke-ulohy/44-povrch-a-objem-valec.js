@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Valec má V=πr²v a S=2πr²+2πrv. Rozvinutý plášť je obdĺžnik s jednou stranou 2πr.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"formula\">V = πr²v<span class=\"formula-note\">S = 2πr²+2πrv — rozvinutý plášť je obdĺžnik s jednou stranou 2πr.</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

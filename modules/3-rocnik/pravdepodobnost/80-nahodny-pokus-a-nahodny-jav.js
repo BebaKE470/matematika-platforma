@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Náhodný jav, istý jav, nemožný jav, opačný jav',
-        html: '<p><strong>Náhodný jav</strong> je množina elementárnych javov spĺňajúcich danú podmienku — napr. jav A=„padne párne číslo“={2,4,6}.</p><p><strong>Istý jav</strong> nastane vždy (napr. „padne číslo od 1 do 6“). <strong>Nemožný jav</strong> nenastane nikdy (napr. „padne 7“). <strong>Opačný jav</strong> Ā k javu A obsahuje presne tie elementárne javy, ktoré do A NEPATRIA (opačný jav k „padne párne číslo“ je „padne nepárne číslo“).</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Náhodný jav</div><p class="term-rule">Množina elementárnych javov spĺňajúcich danú podmienku.</p><p class="term-example">Príklad: <b>A=„padne párne číslo“={2,4,6}</b>.</p></div><div class="term-item no-symbol"><div class="term-name">Istý jav</div><p class="term-rule">Nastane vždy.</p><p class="term-example">Príklad: <b>„padne číslo od 1 do 6“</b>.</p></div><div class="term-item no-symbol"><div class="term-name">Nemožný jav</div><p class="term-rule">Nenastane nikdy.</p><p class="term-example">Príklad: <b>„padne 7“</b>.</p></div><div class="term-item no-symbol"><div class="term-name">Opačný jav</div><p class="term-rule">Jav Ā k javu A obsahuje presne tie elementárne javy, ktoré do A <span class="hl">nepatria</span>.</p><p class="term-example">Príklad: <b>opačný jav k „padne párne číslo“ je „padne nepárne číslo“</b>.</p></div></div>',
         remember: 'Elementárny jav = jeden výsledok. Náhodný jav = množina výsledkov spĺňajúcich podmienku. Istý jav nastane vždy, nemožný nikdy, opačný jav = doplnok.',
       },
       {
@@ -88,7 +88,7 @@ MathPlatform.registerModule({
         options: ['{2, 4, 6}', '{1, 2, 3, 4, 5, 6}', '{1, 3, 5}'],
         answer: 2,
         correct: 'Správne. Opačný jav obsahuje tie výsledky, ktoré do B nepatria — nepárne čísla {1,3,5}.',
-        hint: 'Opačný jav obsahuje presne tie elementárne javy, ktoré NIE SÚ v B.',
+        hint: 'Opačný jav obsahuje presne tie elementárne javy, ktoré <span class="hl">nie sú</span> v B.',
       },
       {
         id: 'q-error',

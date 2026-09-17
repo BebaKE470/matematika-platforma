@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Povrch modeluje množstvo materiálu na pokrytie; objem kapacitu alebo priestor vo vnútri.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Povrch</div><p class=\"term-rule\">Modeluje množstvo materiálu na pokrytie.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Objem</div><p class=\"term-rule\">Modeluje kapacitu alebo priestor vo vnútri.</p></div></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

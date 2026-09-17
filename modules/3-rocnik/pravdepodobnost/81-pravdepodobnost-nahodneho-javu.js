@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Klasická definícia pravdepodobnosti',
-        html: '<p>Ak má náhodný pokus n rovnako pravdepodobných elementárnych javov a jav A obsahuje m z nich (m priaznivých), pravdepodobnosť javu A je <strong>P(A) = m/n</strong>.</p><p>Platí 0≤P(A)≤1: P(nemožný jav)=0, P(istý jav)=1. Pri zložitejších pokusoch (napr. žrebovanie viacerých kariet naraz) sa m aj n počítajú pomocou kombinácií.</p>',
+        html: '<p>Ak má náhodný pokus n rovnako pravdepodobných elementárnych javov a jav A obsahuje m z nich (m priaznivých), pravdepodobnosť javu A je:</p><div class="formula">P(A) = m/n<span class="formula-note">Platí 0≤P(A)≤1: P(nemožný jav)=0, P(istý jav)=1.</span></div><p>Pri zložitejších pokusoch (napr. žrebovanie viacerých kariet naraz) sa m aj n počítajú pomocou kombinácií.</p>',
         remember: 'P(A) = m/n (m priaznivých, n všetkých rovnako pravdepodobných výsledkov). 0≤P(A)≤1.',
       },
       {
@@ -102,7 +102,7 @@ MathPlatform.registerModule({
           'Mal namiesto 1/6 napísať 1/5.',
         ],
         answer: 0,
-        correct: 'Presne. „Aspoň 5“ zahŕňa VŠETKY výsledky od 5 nahor, teda 5 aj 6 — m=2, nie iba m=1.',
+        correct: 'Presne. „Aspoň 5“ zahŕňa <span class="hl">všetky</span> výsledky od 5 nahor, teda 5 aj 6 — m=2, nie iba m=1.',
         hint: 'Ktoré čísla na kocke sú „aspoň 5“ (5 alebo väčšie)?',
       },
       {

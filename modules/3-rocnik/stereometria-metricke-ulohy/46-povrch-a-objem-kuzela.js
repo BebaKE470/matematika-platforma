@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Pre rotačný kužeľ V=(1/3)πr²v a S=πr²+πrs; tvorivka s spĺňa s²=r²+v².</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"formula\">V = (1/3)πr²v<span class=\"formula-note\">S = πr²+πrs; tvorivka s spĺňa s²=r²+v².</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

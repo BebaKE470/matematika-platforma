@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Zjednodušovanie výrazov s faktoriálmi',
-        html: '<p>Postup: rozpíš väčší faktoriál pomocou menšieho tak, aby sa dal skrátiť. Napríklad n! = n·(n−1)·(n−2)!, takže <strong>n!/(n−2)! = n·(n−1)</strong> (dva prvé členy zostanú, zvyšok sa skráti).</p><p>Overenie pre n=5: 5!/3! = 120/6 = 20, a n(n−1)=5·4=20 — sedí!</p>',
+        html: '<p>Postup: rozpíš väčší faktoriál pomocou menšieho tak, aby sa dal skrátiť. Napríklad n! = n·(n−1)·(n−2)!, takže:</p><div class="formula">n!/(n−2)! = n·(n−1)<span class="formula-note">Dva prvé členy zostanú, zvyšok sa skráti.</span></div><div class="example"><span class="mini-label">OVERENIE PRE n=5</span><p>5!/3! = 120/6 = 20</p><p>n(n−1) = 5·4 = 20 — sedí!</p></div>',
         remember: '(n+1)!=(n+1)·n!. n!=n·(n−1)·...·(n−k+1)·(n−k)! — rozpíš toľko členov, koľko treba na skrátenie.',
       },
       {
@@ -133,7 +133,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo je dosadenie konkrétneho čísla za n dobrý spôsob, ako overiť, či je zjednodušenie výrazu s faktoriálmi správne?',
-        model: 'Pretože ak je zjednodušenie správne, musí platiť pre AKÉKOĽVEK prípustné n — takže ak dosadíme konkrétnu hodnotu n do pôvodného aj do zjednodušeného výrazu, obe strany sa musia číselne zhodovať. Ak sa nezhodujú, vieme s istotou, že v zjednodušení je chyba. Táto kontrola je rýchla a spoľahlivá, hoci sama osebe nedokazuje správnosť pre všetky n — na to by bolo potrebné všeobecné odvodenie, no ako rýchla kontrola je veľmi užitočná.',
+        model: 'Pretože ak je zjednodušenie správne, musí platiť pre <span class="hl">akékoľvek</span> prípustné n — takže ak dosadíme konkrétnu hodnotu n do pôvodného aj do zjednodušeného výrazu, obe strany sa musia číselne zhodovať. Ak sa nezhodujú, vieme s istotou, že v zjednodušení je chyba. Táto kontrola je rýchla a spoľahlivá, hoci sama osebe nedokazuje správnosť pre všetky n — na to by bolo potrebné všeobecné odvodenie, no ako rýchla kontrola je veľmi užitočná.',
       },
       {
         id: 'manual',

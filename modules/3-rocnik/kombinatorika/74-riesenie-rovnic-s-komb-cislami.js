@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Riešenie rovnice (n nad 2)=k',
-        html: '<p>Rovnica (n nad 2)=15: n(n−1)/2=15 → n(n−1)=30 → n²−n−30=0. Diskriminant: D=1+120=121, √D=11. n=(1±11)/2, teda n=6 alebo n=−5.</p><p>Keďže n musí byť <strong>prirodzené číslo</strong> (a aspoň také veľké ako dolný index 2), riešenie n=−5 zamietame. Zostáva n=6. Skúška: (6 nad 2)=6·5/2=15 ✓.</p>',
+        html: '<div class="example"><span class="mini-label">RIEŠENIE ROVNICE (n nad 2)=15</span><p>n(n−1)/2 = 15 → n(n−1) = 30 → n² − n − 30 = 0</p><p>Diskriminant: D = 1+120 = 121, √D = 11</p><p>n = (1±11)/2, teda n=6 alebo n=−5</p></div><p>Keďže n musí byť <span class="hl">prirodzené číslo</span> (a aspoň také veľké ako dolný index 2), riešenie n=−5 zamietame. Zostáva n=6. Skúška: (6 nad 2)=6·5/2=15 ✓.</p>',
         remember: '(n nad 2)=n(n−1)/2 → kvadratická rovnica pre n → zamietni neprirodzené/záporné riešenie → skúška.',
       },
       {
@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Riešenie rovnice (n nad 2)=k: rozpíš (n nad 2)=n(n−1)/2, zostav kvadratickú rovnicu n²−n−2k=0, vyrieš ju, zamietni riešenie, ktoré nie je prirodzené číslo (alebo je menšie ako 2), over skúškou dosadením späť do (n nad 2).</p>',
+        html: '<ol class="steps"><li>Rozpíš (n nad 2) = n(n−1)/2.</li><li>Zostav kvadratickú rovnicu n² − n − 2k = 0.</li><li>Vyrieš rovnicu.</li><li>Zamietni riešenie, ktoré nie je prirodzené číslo (alebo je menšie ako 2).</li><li>Over skúškou dosadením späť do (n nad 2).</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -134,7 +134,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo pri riešení rovnice s kombinačným číslom vždy zamietame záporné riešenie, hoci je matematicky správnym koreňom kvadratickej rovnice?',
-        model: 'Pretože n v kombinačnom čísle (n nad k) predstavuje POČET PRVKOV nejakej skupiny (napríklad počet žiakov, kníh, možností), a počet prvkov nemôže byť záporné číslo — takýto význam premennej n vylučuje záporné hodnoty bez ohľadu na to, že sú matematicky platným koreňom kvadratickej rovnice, ktorá z rovnice s kombinačným číslom vznikla. Je to rovnaký princíp ako pri iných slovných úlohách, kde treba výsledok overiť voči reálnemu významu premennej.',
+        model: 'Pretože n v kombinačnom čísle (n nad k) predstavuje <span class="hl">počet prvkov</span> nejakej skupiny (napríklad počet žiakov, kníh, možností), a počet prvkov nemôže byť záporné číslo — takýto význam premennej n vylučuje záporné hodnoty bez ohľadu na to, že sú matematicky platným koreňom kvadratickej rovnice, ktorá z rovnice s kombinačným číslom vznikla. Je to rovnaký princíp ako pri iných slovných úlohách, kde treba výsledok overiť voči reálnemu významu premennej.',
       },
       {
         id: 'manual',

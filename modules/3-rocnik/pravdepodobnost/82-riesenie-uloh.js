@@ -55,7 +55,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie postupu',
-        html: '<p>P(A)=m/n. Postup: 1) urč n (počet všetkých rovnako pravdepodobných výsledkov, prípadne pravidlom súčinu alebo kombináciou), 2) urč m (počet priaznivých), 3) vypočítaj podiel.</p>',
+        html: '<div class="formula">P(A) = m/n</div><ol class="steps"><li>Urč n (počet všetkých rovnako pravdepodobných výsledkov, prípadne pravidlom súčinu alebo kombináciou).</li><li>Urč m (počet priaznivých).</li><li>Vypočítaj podiel.</li></ol>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -78,7 +78,7 @@ MathPlatform.registerModule({
         options: ['1/2', '2/4=1/2', '1/4'],
         answer: 2,
         correct: 'Správne. Priaznivý je iba 1 výsledok (líce-líce) zo 4 celkových: P=1/4.',
-        hint: 'Koľko zo 4 možných výsledkov má OBE líca?',
+        hint: 'Koľko zo 4 možných výsledkov má <span class="hl">obe</span> líca?',
       },
       {
         id: 'q-error',
@@ -92,7 +92,7 @@ MathPlatform.registerModule({
           'Mal namiesto 4 celkových výsledkov použiť 2.',
         ],
         answer: 0,
-        correct: 'Presne. „Aspoň jedno líce“ zahŕňa všetky výsledky OKREM „rub-rub“ — teda 3 zo 4 výsledkov, nie iba 1.',
+        correct: 'Presne. „Aspoň jedno líce“ zahŕňa všetky výsledky <span class="hl">okrem</span> „rub-rub“ — teda 3 zo 4 výsledkov, nie iba 1.',
         hint: 'Vypíš všetky 4 výsledky a skontroluj, v koľkých z nich je aspoň jedno líce.',
       },
       {
@@ -113,7 +113,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Pri riešení úlohy na pravdepodobnosť: 1) over, či sú výsledky rovnako pravdepodobné, 2) urč n (celkový počet, často pravidlom súčinu alebo kombináciou), 3) urč m (priaznivé, pozorne prečítaj zadanie — „aspoň“, „presne“, „obaja“ menia počet priaznivých výsledkov), 4) vypočítaj P=m/n.</p>',
+        html: '<ol class="steps"><li>Over, či sú výsledky rovnako pravdepodobné.</li><li>Urč n (celkový počet, často pravidlom súčinu alebo kombináciou).</li><li>Urč m (priaznivé, pozorne prečítaj zadanie — „aspoň“, „presne“, „obaja“ menia počet priaznivých výsledkov).</li><li>Vypočítaj P=m/n.</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -123,14 +123,14 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo je dôležité pozorne si prečítať slovné spojenia ako „aspoň jeden“, „presne dva“ alebo „obaja“ pri určovaní počtu priaznivých výsledkov?',
-        model: 'Pretože tieto slovné spojenia presne určujú, KTORÉ výsledky patria do daného javu, a teda aj koľko ich je (m). Napríklad „aspoň jedno líce“ zahŕňa oveľa viac výsledkov než „presne jedno líce“ — ak si zadanie nesprávne vyložíme, spočítame nesprávny počet priaznivých výsledkov a dostaneme nesprávnu pravdepodobnosť, hoci samotný výpočet podielu m/n urobíme správne.',
+        model: 'Pretože tieto slovné spojenia presne určujú, <span class="hl">ktoré</span> výsledky patria do daného javu, a teda aj koľko ich je (m). Napríklad „aspoň jedno líce“ zahŕňa oveľa viac výsledkov než „presne jedno líce“ — ak si zadanie nesprávne vyložíme, spočítame nesprávny počet priaznivých výsledkov a dostaneme nesprávnu pravdepodobnosť, hoci samotný výpočet podielu m/n urobíme správne.',
       },
       {
         id: 'manual',
         type: 'notebook',
         phase: 'BEZ MOBILU',
         title: 'Riešenie bez mobilu',
-        html: '<p>V zošite vypočítaj: <strong>a)</strong> V krabici je 6 guličiek (2 červené, 4 modré), vyberáme naraz 2. Aká je pravdepodobnosť, že OBE budú modré? (C(2,4), C(2,6)) <strong>b)</strong> Hodíme tromi mincami naraz — koľko je celkovo možných výsledkov?</p>',
+        html: '<p>V zošite vypočítaj: <strong>a)</strong> V krabici je 6 guličiek (2 červené, 4 modré), vyberáme naraz 2. Aká je pravdepodobnosť, že <span class="hl">obe</span> budú modré? (C(2,4), C(2,6)) <strong>b)</strong> Hodíme tromi mincami naraz — koľko je celkovo možných výsledkov?</p>',
         continueLabel: 'Mám zapísané',
       },
       {

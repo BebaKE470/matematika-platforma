@@ -56,7 +56,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie nástrojov',
-        html: '<p>Pravidlo súčinu: n₁·n₂·...·n_k pre nezávislé voľby. Faktoriál n!: počet usporiadaní n rôznych prvkov. Niektoré úlohy vyžadujú kombináciu oboch — napr. usporiadanie s dodatočným obmedzením.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Pravidlo súčinu</div><p class="term-rule">n₁·n₂·...·n_k pre nezávislé voľby.</p></div><div class="term-item no-symbol"><div class="term-name">Faktoriál n!</div><p class="term-rule">Počet usporiadaní n rôznych prvkov.</p></div></div><p>Niektoré úlohy vyžadujú kombináciu oboch nástrojov — napr. usporiadanie s dodatočným obmedzením.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -93,7 +93,7 @@ MathPlatform.registerModule({
           'Mal namiesto násobenia čísla sčítať.',
         ],
         answer: 0,
-        correct: 'Presne. Faktoriál n! obsahuje VŠETKY činitele od n do 1 — zastavenie v polovici výpočtu dáva neúplný (a preto nesprávny) výsledok.',
+        correct: 'Presne. Faktoriál n! obsahuje <span class="hl">všetky</span> činitele od n do 1 — zastavenie v polovici výpočtu dáva neúplný (a preto nesprávny) výsledok.',
         hint: 'Koľko činiteľov má mať 4! (od 4 po 1)?',
       },
       {
@@ -114,7 +114,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Pri riešení kombinatorickej úlohy najprv rozhodni: ide o nezávislé voľby (pravidlo súčinu), alebo o usporiadanie VŠETKÝCH prvkov danej skupiny (faktoriál)? Niekedy je potrebné oba nástroje skombinovať (napr. usporiadanie s dodatočným obmedzením).</p>',
+        html: '<p>Pri riešení kombinatorickej úlohy najprv rozhodni: ide o nezávislé voľby (pravidlo súčinu), alebo o usporiadanie <span class="hl">všetkých</span> prvkov danej skupiny (faktoriál)? Niekedy je potrebné oba nástroje skombinovať (napr. usporiadanie s dodatočným obmedzením).</p>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Ako rozhodneš, či daná kombinatorická úloha vyžaduje pravidlo súčinu, alebo faktoriál?',
-        model: 'Ak úloha pozostáva z niekoľkých NEZÁVISLÝCH volieb (napr. výber jedla a výber dezertu, kde počet možností v jednej voľbe nezávisí od druhej), použijem pravidlo súčinu a vynásobím počty možností. Ak úloha vyžaduje usporiadať VŠETKY prvky danej skupiny do poradia (napr. usporiadanie všetkých žiakov triedy do radu), použijem faktoriál, keďže na každé ďalšie miesto zostáva o jednu možnosť menej z tej istej skupiny prvkov.',
+        model: 'Ak úloha pozostáva z niekoľkých <span class="hl">nezávislých</span> volieb (napr. výber jedla a výber dezertu, kde počet možností v jednej voľbe nezávisí od druhej), použijem pravidlo súčinu a vynásobím počty možností. Ak úloha vyžaduje usporiadať <span class="hl">všetky</span> prvky danej skupiny do poradia (napr. usporiadanie všetkých žiakov triedy do radu), použijem faktoriál, keďže na každé ďalšie miesto zostáva o jednu možnosť menej z tej istej skupiny prvkov.',
       },
       {
         id: 'manual',
@@ -143,7 +143,7 @@ MathPlatform.registerModule({
         options: ['6·5=30', '6+5+4+3+2+1=21', '6!=720'],
         answer: 2,
         correct: 'Správne. Počet usporiadaní 6 rôznych prvkov je 6!=720.',
-        hint: 'Použi faktoriál — usporiadanie VŠETKÝCH 6 prvkov.',
+        hint: 'Použi faktoriál — usporiadanie <span class="hl">všetkých</span> 6 prvkov.',
       },
       {
         id: 'reflection',

@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Faktoriál čísla',
-        html: '<p><strong>Faktoriál</strong> prirodzeného čísla n (značíme n!) je súčin všetkých prirodzených čísel od n do 1: <strong>n! = n·(n−1)·(n−2)·...·2·1</strong>.</p><p>Podľa dohody platí <strong>0! = 1</strong>.</p><p>Príklad: 4! = 4·3·2·1 = 24.</p>',
+        html: '<p><strong>Faktoriál</strong> prirodzeného čísla n (značíme n!) je súčin všetkých prirodzených čísel od n do 1.</p><div class="formula"><span class="mini-label">FAKTORIÁL</span>n! = n·(n−1)·(n−2)·...·2·1<span class="formula-note">Podľa dohody platí 0! = 1.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>4! = 4·3·2·1 = 24.</p></div>',
         remember: 'n! = n·(n−1)·...·2·1. Dohoda: 0! = 1.',
       },
       {
@@ -102,7 +102,7 @@ MathPlatform.registerModule({
           'Nie, výsledok mal byť iný ako 24.',
         ],
         answer: 0,
-        correct: 'Presne. Faktoriál obsahuje VŠETKY činitele od n do 1 — vynechanie posledného (1) v zápise je nepresné, hoci na číselný výsledok toto konkrétne vynechanie nemalo vplyv.',
+        correct: 'Presne. Faktoriál obsahuje <span class="hl">všetky</span> činitele od n do 1 — vynechanie posledného (1) v zápise je nepresné, hoci na číselný výsledok toto konkrétne vynechanie nemalo vplyv.',
         hint: 'Vypíš si všetky činitele od 4 do 1 a skontroluj, či žiak žiadny nevynechal.',
       },
       {

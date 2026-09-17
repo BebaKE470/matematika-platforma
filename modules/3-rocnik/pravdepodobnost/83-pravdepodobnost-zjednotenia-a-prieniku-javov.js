@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Prečo nemôžeme len sčítať?',
-        html: '<p>Pri hode kockou: A=„párne číslo“={2,4,6}, B=„deliteľné 3“={3,6}. Číslo 6 patrí do OBOCH javov naraz. Ak by sme počítali P(A)+P(B)=1/2+1/3=5/6, číslo 6 by sme rátali dvakrát!</p>',
+        html: '<p>Pri hode kockou: A=„párne číslo“={2,4,6}, B=„deliteľné 3“={3,6}. Číslo 6 patrí do <span class="hl">oboch</span> javov naraz. Ak by sme počítali P(A)+P(B)=1/2+1/3=5/6, číslo 6 by sme rátali dvakrát!</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Vzorec pre zjednotenie javov',
-        html: '<p><strong>P(A∪B) = P(A) + P(B) − P(A∩B)</strong> — odpočítame prienik, aby sme ho nezapočítali dvakrát.</p><p>Pre náš príklad: A∩B={6}, P(A∩B)=1/6. P(A∪B)=1/2+1/3−1/6=3/6+2/6−1/6=4/6=2/3 (sedí s priamym počítaním: A∪B={2,3,4,6}, 4 z 6).</p><p><strong>Nezlučiteľné javy</strong> (A∩B=∅, nemôžu nastať súčasne): P(A∪B)=P(A)+P(B) (jednoduchšie, netreba nič odpočítať).</p>',
+        html: '<div class="formula">P(A∪B) = P(A) + P(B) − P(A∩B)<span class="formula-note">Odpočítame prienik, aby sme ho nezapočítali dvakrát.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>A∩B={6}, P(A∩B)=1/6.</p><p>P(A∪B)=1/2+1/3−1/6=3/6+2/6−1/6=4/6=2/3</p><p>(sedí s priamym počítaním: A∪B={2,3,4,6}, 4 z 6.)</p></div><p><strong>Nezlučiteľné javy</strong> (A∩B=∅, nemôžu nastať súčasne): P(A∪B)=P(A)+P(B) (jednoduchšie, netreba nič odpočítať).</p>',
         remember: 'P(A∪B)=P(A)+P(B)−P(A∩B). Nezlučiteľné javy (A∩B=∅): P(A∪B)=P(A)+P(B).',
       },
       {
@@ -134,7 +134,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo musíme pri výpočte P(A∪B) odpočítať P(A∩B), a nie iba jednoducho sčítať P(A) a P(B)?',
-        model: 'Pretože ak majú javy A a B spoločné elementárne javy (t. j. neprázdny prienik), tieto spoločné výsledky by sa pri jednoduchom sčítaní P(A)+P(B) započítali DVAKRÁT — raz ako súčasť P(A) a raz ako súčasť P(B). Aby sme každý výsledok patriaci do zjednotenia A∪B počítali presne raz, musíme túto duplicitu (prienik) odpočítať.',
+        model: 'Pretože ak majú javy A a B spoločné elementárne javy (t. j. neprázdny prienik), tieto spoločné výsledky by sa pri jednoduchom sčítaní P(A)+P(B) započítali <span class="hl">dvakrát</span> — raz ako súčasť P(A) a raz ako súčasť P(B). Aby sme každý výsledok patriaci do zjednotenia A∪B počítali presne raz, musíme túto duplicitu (prienik) odpočítať.',
       },
       {
         id: 'manual',

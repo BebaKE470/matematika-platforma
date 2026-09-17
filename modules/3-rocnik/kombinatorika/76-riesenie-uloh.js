@@ -56,7 +56,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie troch typov',
-        html: '<p>Usporadúvame VŠETKY prvky → permutácia P(n)=n!. Vyberáme a usporadúvame ČASŤ (poradie záleží) → variácia V(k,n)=n!/(n−k)!. Vyberáme ČASŤ bez ohľadu na poradie → kombinácia C(k,n)=(n nad k).</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Permutácia</div><p class="term-rule">Usporadúvame <span class="hl">všetky</span> prvky: P(n)=n!.</p></div><div class="term-item no-symbol"><div class="term-name">Variácia</div><p class="term-rule">Vyberáme a usporadúvame <span class="hl">časť</span> (poradie záleží): V(k,n)=n!/(n−k)!.</p></div><div class="term-item no-symbol"><div class="term-name">Kombinácia</div><p class="term-rule">Vyberáme časť bez ohľadu na poradie: C(k,n)=(n nad k).</p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -114,7 +114,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Rozhodovací postup: 1) Usporadúvam VŠETKY prvky, alebo iba časť? Všetky → permutácia. Časť → pokračuj. 2) Záleží na poradí výberu? Áno → variácia. Nie → kombinácia. 3) Môžu sa prvky opakovať? Podľa toho zvoľ variantu s/bez opakovania.</p>',
+        html: '<ol class="steps"><li>Usporadúvam <span class="hl">všetky</span> prvky, alebo iba časť? Všetky → permutácia. Časť → pokračuj.</li><li>Záleží na poradí výberu? Áno → variácia. Nie → kombinácia.</li><li>Môžu sa prvky opakovať? Podľa toho zvoľ variantu s/bez opakovania.</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {

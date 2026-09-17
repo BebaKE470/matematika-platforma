@@ -54,7 +54,7 @@ MathPlatform.registerModule({
         "type": "info",
         "phase": "POCHOP",
         "title": "Povrch a objem gule a jej častí",
-        "html": "<div class=\"logic-visual\"><svg viewBox=\"0 0 760 300\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"><path d=\"M220 70 L470 70 L590 135 L340 135 Z\"/><path d=\"M220 70 L220 220 L340 285 L340 135\"/><path d=\"M340 285 L590 220 L590 135\"/><path d=\"M220 220 L470 220 L590 285\" stroke-dasharray=\"7 7\" opacity=\".5\"/></g><g fill=\"currentColor\" font-family=\"system-ui\"><text x=\"180\" y=\"155\" font-size=\"20\">v</text><text x=\"350\" y=\"55\" font-size=\"20\">podstava</text><text x=\"455\" y=\"180\" font-size=\"20\">plášť</text></g></svg></div><p><strong>Dnešná otázka:</strong> Ako závisí povrch a objem gule od polomeru?</p>",
+        "html": "<div class=\"logic-visual\"><svg viewBox=\"0 0 760 300\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"><circle cx=\"380\" cy=\"150\" r=\"110\"/><ellipse cx=\"380\" cy=\"150\" rx=\"110\" ry=\"28\" stroke-dasharray=\"7 7\" opacity=\".5\"/><line x1=\"380\" y1=\"150\" x2=\"458\" y2=\"72\"/></g><circle cx=\"380\" cy=\"150\" r=\"4\" fill=\"currentColor\"/><g fill=\"currentColor\" font-family=\"system-ui\"><text x=\"426\" y=\"104\" font-size=\"20\">r</text></g></svg></div><p><strong>Dnešná otázka:</strong> Ako závisí povrch a objem gule od polomeru?</p>",
         "continueLabel": "Pokračovať"
       },
       {
@@ -62,7 +62,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p><strong>Guľa:</strong> S=4πr², V=(4/3)πr³.</p><p><strong>Polguľa:</strong> V=(2/3)πr³. Jej zakrivená plocha má obsah 2πr²; ak rátame aj kruhovú podstavu, celý povrch polgule je 3πr².</p><p>Pri slovnej úlohe vždy rozhodni, či sa pýta na zakrivenú plochu alebo na celý povrch vrátane podstavy.</p>"
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Guľa</div><p class=\"term-rule\">S = 4πr², V = (4/3)πr³.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Polguľa</div><p class=\"term-rule\">V = (2/3)πr³. Jej zakrivená plocha má obsah 2πr²; ak rátame aj kruhovú podstavu, celý povrch polgule je 3πr².</p></div></div><p>Pri slovnej úlohe vždy rozhodni, či sa pýta na zakrivenú plochu alebo na celý povrch vrátane podstavy.</p>"
       },
       {
         "id": "start",

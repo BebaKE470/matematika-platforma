@@ -113,7 +113,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Pri riešení úlohy s charakteristikami polohy: 1) urč, ktoré hodnoty tvoria súbor, 2) usporiadaj ich (pre medián), 3) vypočítaj priemer, medián a modus, 4) zváž, či nie je súbor ovplyvnený extrémnymi hodnotami (vtedy je medián spoľahlivejší ako priemer).</p>',
+        html: '<p>Pri riešení úlohy s charakteristikami polohy:</p><ol class="steps"><li>Urč, ktoré hodnoty tvoria súbor.</li><li>Usporiadaj ich (pre medián).</li><li>Vypočítaj priemer, medián a modus.</li><li>Zváž, či nie je súbor ovplyvnený extrémnymi hodnotami (vtedy je medián spoľahlivejší ako priemer).</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -123,7 +123,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo môže byť priemerný plat v jednej firme „zavádzajúci“, ak firma zamestnáva iba pár ľudí s veľmi vysokým platom a veľa ľudí s nízkym platom?',
-        model: 'Pretože priemer sčíta VŠETKY hodnoty a delí ich počtom, takže aj niekoľko extrémne vysokých platov výrazne zdvihne výslednú hodnotu priemeru, hoci väčšina zamestnancov v skutočnosti zarába oveľa menej. Priemer v takomto prípade nevystihuje, čo zarába „typický“ zamestnanec — medián (prostredná hodnota po usporiadaní) by v tomto prípade dal realistickejší obraz, keďže nie je takto citlivý na malý počet extrémnych hodnôt.',
+        model: 'Pretože priemer sčíta <span class="hl">všetky</span> hodnoty a delí ich počtom, takže aj niekoľko extrémne vysokých platov výrazne zdvihne výslednú hodnotu priemeru, hoci väčšina zamestnancov v skutočnosti zarába oveľa menej. Priemer v takomto prípade nevystihuje, čo zarába „typický“ zamestnanec — medián (prostredná hodnota po usporiadaní) by v tomto prípade dal realistickejší obraz, keďže nie je takto citlivý na malý počet extrémnych hodnôt.',
       },
       {
         id: 'manual',

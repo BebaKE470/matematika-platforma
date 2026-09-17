@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Pre kváder V=abc a S=2(ab+ac+bc). Každý typ obdĺžnikovej steny sa vyskytuje dvakrát.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"formula\">V = abc<span class=\"formula-note\">S = 2(ab+ac+bc) — každý typ obdĺžnikovej steny sa vyskytuje dvakrát.</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

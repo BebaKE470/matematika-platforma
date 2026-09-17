@@ -172,7 +172,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "PRECVIČ",
         "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>VZÁJOMNÁ POLOHA PRIAMOK V PRIESTORE</strong></p><p>• rovnobežné – ležia v jednej rovine a nemajú spoločný bod,<br>• rôznobežné – majú práve jeden spoločný bod,<br>• mimobežné – neležia v jednej rovine, nepretínajú sa a nie sú rovnobežné.</p><p>Dve rôzne roviny sú rovnobežné alebo sa pretínajú v priamke – ich priesečnici.</p>"
+        "html": "<p><strong>VZÁJOMNÁ POLOHA PRIAMOK V PRIESTORE</strong></p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">rovnobežné</div><p class=\"term-rule\">ležia v jednej rovine a nemajú spoločný bod</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">rôznobežné</div><p class=\"term-rule\">majú práve jeden spoločný bod</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">mimobežné</div><p class=\"term-rule\">neležia v jednej rovine, nepretínajú sa a nie sú rovnobežné</p></div></div><p>Dve rôzne roviny sú rovnobežné alebo sa pretínajú v priamke – ich priesečnici.</p>"
       },
       {
         "id": "r",

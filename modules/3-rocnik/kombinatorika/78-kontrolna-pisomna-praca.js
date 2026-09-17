@@ -74,7 +74,7 @@ MathPlatform.registerModule({
         options: ['4!=24', '4²=16', '4·3=12'],
         answer: 0,
         correct: 'Správne. Permutácia P(4)=4!=24.',
-        hint: 'Usporiadanie VŠETKÝCH 4 rôznych prvkov je P(n)=n!.',
+        hint: 'Usporiadanie <span class="hl">všetkých</span> 4 rôznych prvkov je P(n)=n!.',
       },
       {
         id: 'q3',

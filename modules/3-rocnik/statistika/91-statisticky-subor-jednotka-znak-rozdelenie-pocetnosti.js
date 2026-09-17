@@ -65,7 +65,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Tabuľka početnosti',
-        html: '<p><strong>Kvantitatívny znak</strong> je číselný (napr. známka, výška), <strong>kvalitatívny znak</strong> je nečíselný (napr. farba očí, obľúbený predmet).</p><p><strong>Absolútna početnosť</strong> hodnoty je počet jednotiek, ktoré túto hodnotu majú. <strong>Relatívna početnosť</strong> je podiel absolútnej početnosti a celkového počtu jednotiek (často v %).</p><p>Príklad: z 20 známok má hodnotu 2 celkom 6 žiakov → absolútna početnosť 6, relatívna 6/20=0,3=30%.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Kvantitatívny znak</div><p class="term-rule">Je číselný (napr. známka, výška).</p></div><div class="term-item no-symbol"><div class="term-name">Kvalitatívny znak</div><p class="term-rule">Je nečíselný (napr. farba očí, obľúbený predmet).</p></div><div class="term-item no-symbol"><div class="term-name">Absolútna početnosť hodnoty</div><p class="term-rule">Je počet jednotiek, ktoré túto hodnotu majú.</p></div><div class="term-item no-symbol"><div class="term-name">Relatívna početnosť</div><p class="term-rule">Je podiel absolútnej početnosti a celkového počtu jednotiek (často v %).</p></div></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Z 20 známok má hodnotu 2 celkom 6 žiakov → absolútna početnosť 6, relatívna 6/20=0,3=30%.</p></div>',
         remember: 'Absolútna početnosť = počet výskytov. Relatívna početnosť = absolútna početnosť / celkový počet jednotiek.',
       },
       {
@@ -102,7 +102,7 @@ MathPlatform.registerModule({
           'Mal namiesto 5 napísať 25.',
         ],
         answer: 0,
-        correct: 'Presne. Absolútna početnosť je samotný počet výskytov (5), relatívna početnosť je jeho PODIEL na celkovom počte jednotiek (5/25=0,2).',
+        correct: 'Presne. Absolútna početnosť je samotný počet výskytov (5), relatívna početnosť je jeho <span class="hl">podiel</span> na celkovom počte jednotiek (5/25=0,2).',
         hint: 'Je relatívna početnosť vždy celé číslo, alebo podiel (zlomok/desatinné číslo)?',
       },
       {
@@ -123,7 +123,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Štatistický súbor:</strong> množina skúmaných jednotiek. <strong>Štatistická jednotka:</strong> jeden prvok súboru. <strong>Štatistický znak:</strong> sledovaná vlastnosť (kvalitatívny — nečíselný, kvantitatívny — číselný). <strong>Absolútna početnosť:</strong> počet výskytov danej hodnoty. <strong>Relatívna početnosť:</strong> absolútna početnosť / celkový počet jednotiek.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Štatistický súbor</div><p class="term-rule">Množina skúmaných jednotiek.</p></div><div class="term-item no-symbol"><div class="term-name">Štatistická jednotka</div><p class="term-rule">Jeden prvok súboru.</p></div><div class="term-item no-symbol"><div class="term-name">Štatistický znak</div><p class="term-rule">Sledovaná vlastnosť (kvalitatívny — nečíselný, kvantitatívny — číselný).</p></div><div class="term-item no-symbol"><div class="term-name">Absolútna početnosť</div><p class="term-rule">Počet výskytov danej hodnoty.</p></div><div class="term-item no-symbol"><div class="term-name">Relatívna početnosť</div><p class="term-rule">Absolútna početnosť / celkový počet jednotiek.</p></div></div>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -133,7 +133,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo je relatívna početnosť užitočnejšia ako absolútna, keď chceme porovnať dva súbory rôznej veľkosti (napr. dve rôzne veľké triedy)?',
-        model: 'Pretože absolútna početnosť závisí od celkovej veľkosti súboru — napríklad 10 žiakov so známkou 1 znamená niečo úplne iné v triede s 15 žiakmi (veľmi veľa) ako v triede so 40 žiakmi (menej). Relatívna početnosť (podiel z celku) toto zohľadňuje a umožňuje priamo porovnať, aký PODIEL jednotiek má danú vlastnosť, bez ohľadu na to, aké veľké súbory porovnávame.',
+        model: 'Pretože absolútna početnosť závisí od celkovej veľkosti súboru — napríklad 10 žiakov so známkou 1 znamená niečo úplne iné v triede s 15 žiakmi (veľmi veľa) ako v triede so 40 žiakmi (menej). Relatívna početnosť (podiel z celku) toto zohľadňuje a umožňuje priamo porovnať, aký <span class="hl">podiel</span> jednotiek má danú vlastnosť, bez ohľadu na to, aké veľké súbory porovnávame.',
       },
       {
         id: 'manual',

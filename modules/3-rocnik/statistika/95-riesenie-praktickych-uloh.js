@@ -64,7 +64,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Priemer sám osebe nestačí',
-        html: '<p>Výrobca A je spoľahlivejší — jeho žiarovky vydržia BLÍZKO 1000 hodín takmer vždy (malá smerodajná odchýlka). Výrobca B má rovnaký priemer, ale niektoré žiarovky vydržia oveľa menej a niektoré oveľa viac — je nekonzistentný.</p><p>Preto pri porovnávaní súborov dát NIKDY nestačí iba priemer — vždy treba zohľadniť aj variabilitu.</p>',
+        html: '<div class="compare"><div class="good"><span class="mini-label">VÝROBCA A</span><p>Je spoľahlivejší — jeho žiarovky vydržia blízko 1000 hodín takmer vždy (malá smerodajná odchýlka).</p></div><div class="bad"><span class="mini-label">VÝROBCA B</span><p>Má rovnaký priemer, ale niektoré žiarovky vydržia oveľa menej a niektoré oveľa viac — je nekonzistentný.</p></div></div><p>Preto pri porovnávaní súborov dát <span class="hl">nikdy</span> nestačí iba priemer — vždy treba zohľadniť aj variabilitu.</p>',
         remember: 'Rovnaký priemer nemusí znamenať rovnakú kvalitu/spoľahlivosť — vždy zohľadni aj variabilitu (rozptyl, smerodajnú odchýlku).',
       },
       {
@@ -126,7 +126,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Pri interpretácii štatistických dát z praxe: priemer sám osebe NESTAČÍ — vždy zváž aj variabilitu (rozptyl, smerodajnú odchýlku, rozpätie). Pri voľbe grafu: stĺpcový/koláčový graf pre rozdelenie do kategórií, spojnicový graf pre vývoj v čase.</p>',
+        html: '<p>Pri interpretácii štatistických dát z praxe: priemer sám osebe <span class="hl">nestačí</span> — vždy zváž aj variabilitu (rozptyl, smerodajnú odchýlku, rozpätie). Pri voľbe grafu: stĺpcový/koláčový graf pre rozdelenie do kategórií, spojnicový graf pre vývoj v čase.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

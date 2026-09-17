@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Priestorový náčrt musí jasne rozlišovať geometrické veličiny; podobne vyzerajúce úsečky nemusia mať rovnaký význam.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"warning\"><strong>Pozor:</strong> Priestorový náčrt musí jasne rozlišovať geometrické veličiny — podobne vyzerajúce úsečky nemusia mať rovnaký význam.</div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

@@ -56,7 +56,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Rozhodovací postup',
-        html: '<p>Vyberáme VŠETKY prvky (usporiadanie) → permutácia P(n)=n!, alebo s opakovaním P\'(n;n₁,n₂,...)=n!/(n₁!·n₂!·...). Vyberáme iba ČASŤ prvkov (k z n) → variácia V(k,n)=n!/(n−k)!, alebo s opakovaním V\'(k,n)=n^k.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Vyberáme <span class="hl">všetky</span> prvky (usporiadanie)</div><p class="term-rule">Permutácia P(n)=n!, alebo s opakovaním P\'(n;n₁,n₂,...)=n!/(n₁!·n₂!·...).</p></div><div class="term-item no-symbol"><div class="term-name">Vyberáme iba <span class="hl">časť</span> prvkov (k z n)</div><p class="term-rule">Variácia V(k,n)=n!/(n−k)!, alebo s opakovaním V\'(k,n)=n^k.</p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -93,7 +93,7 @@ MathPlatform.registerModule({
           'Mal namiesto variácie použiť variáciu s opakovaním.',
         ],
         answer: 0,
-        correct: 'Presne. Kľúčové je, či usporadúvame VŠETKY prvky danej skupiny (permutácia), alebo iba niektoré z nich (variácia) — tu ide o všetkých 8 párov.',
+        correct: 'Presne. Kľúčové je, či usporadúvame <span class="hl">všetky</span> prvky danej skupiny (permutácia), alebo iba niektoré z nich (variácia) — tu ide o všetkých 8 párov.',
         hint: 'Koľko párov je v úlohe a koľko z nich sa má nastúpiť na parket?',
       },
       {
@@ -114,7 +114,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Prehľad: Permutácia (výber VŠETKÝCH n prvkov) — bez opakovania n!, s opakovaním n!/(n₁!·n₂!·...). Variácia (výber ČASTI, k z n prvkov) — bez opakovania n!/(n−k)!, s opakovaním n^k. Vždy najprv over: všetky, alebo iba časť? Opakovanie povolené?</p>',
+        html: '<div class="compare"><div><span class="mini-label">PERMUTÁCIA — VŠETKY n PRVKOV</span><p>Bez opakovania: n!</p><p>S opakovaním: n!/(n₁!·n₂!·...)</p></div><div><span class="mini-label">VARIÁCIA — ČASŤ, k Z n PRVKOV</span><p>Bez opakovania: n!/(n−k)!</p><p>S opakovaním: n^k</p></div></div><p>Vždy najprv over: všetky, alebo iba časť? Opakovanie povolené?</p>',
         continueLabel: 'Mám zapísané',
       },
       {
@@ -124,7 +124,7 @@ MathPlatform.registerModule({
         skill: 'argumentácia',
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Aké dve otázky si musíš vždy položiť, keď sa rozhoduješ, ktorý zo štyroch vzorcov (variácia/permutácia, s/bez opakovania) použiť?',
-        model: 'Po prvé: usporadúvam VŠETKY prvky danej skupiny, alebo iba ČASŤ z nich? Ak všetky, ide o permutáciu; ak iba časť, ide o variáciu. Po druhé: MÔŽU sa prvky v jednom usporiadaní opakovať, alebo sa každý prvok smie použiť najviac raz? Ak sa môžu opakovať, použijem variantu „s opakovaním“; ak nie, variantu „bez opakovania“. Kombinácia odpovedí na tieto dve otázky jednoznačne určí, ktorý zo štyroch vzorcov použiť.',
+        model: 'Po prvé: usporadúvam <span class="hl">všetky</span> prvky danej skupiny, alebo iba <span class="hl">časť</span> z nich? Ak všetky, ide o permutáciu; ak iba časť, ide o variáciu. Po druhé: <span class="hl">môžu</span> sa prvky v jednom usporiadaní opakovať, alebo sa každý prvok smie použiť najviac raz? Ak sa môžu opakovať, použijem variantu „s opakovaním“; ak nie, variantu „bez opakovania“. Kombinácia odpovedí na tieto dve otázky jednoznačne určí, ktorý zo štyroch vzorcov použiť.',
       },
       {
         id: 'manual',
@@ -142,7 +142,7 @@ MathPlatform.registerModule({
         question: 'Koľkými spôsobmi môže 6 hostí sadnúť na 6 očíslovaných stoličiek (všetci sedia, poradie záleží)?',
         options: ['V(2,6)=30', 'P(6)=6!=720', 'V\'(6,6)=6⁶'],
         answer: 1,
-        correct: 'Správne. Usporadúvame VŠETKÝCH 6 hostí bez opakovania — permutácia P(6)=6!=720.',
+        correct: 'Správne. Usporadúvame <span class="hl">všetkých</span> 6 hostí bez opakovania — permutácia P(6)=6!=720.',
         hint: 'Sedia všetci hostia, alebo iba časť? Môže jeden hosť sedieť na dvoch stoličkách naraz?',
       },
       {
