@@ -130,9 +130,16 @@ channel named `math-<6-char code>`. `core/live.js` makes the two roles use
 *disjoint* events specifically to avoid the fan-out described below:
 
 - **Teacher → student**, event `'teacher'`:
-  `{ action: 'grading', grading }` — the teacher's current grading
+  `{ action: 'grading', grading, lesson? }` — the teacher's current grading
   settings, sent once when the channel opens and again (debounced, see
   below) whenever a student joins or the teacher changes the setting.
+  `lesson` (`{ moduleId, reflectOnly, selectedActivityIndices }`, from
+  `teacherLive()`'s `lessonInfo()` in `core/views-teacher.js`) piggybacks on
+  this same message so it costs no extra broadcast — it's how a student who
+  typed the join code by hand (no QR link to bake it into) learns which
+  module and activity subset this lesson actually is; see `join()` in
+  `core/views-student.js`, which races this against a timeout before
+  starting the session.
   `{ action: 'ended' }` — sent once when the teacher ends the lesson.
 - **Student → teacher**, event `'progress'`:
   - On join: `{ nick, moduleId, stage: 'joined', score: 0, ts }`.

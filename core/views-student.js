@@ -145,29 +145,29 @@
 
   async function join(id, presetCode, presetReflect, presetActs) {
     const meta0 = id && MathPlatform.indexEntry(id);
-    const selected = (meta0 && meta0.status === 'ready') ? id : MathPlatform.defaultModuleId();
+    // A QR/join link always names its module, so it's shown up front. A
+    // manually-typed code (no link) might not — the "Máš kód od učiteľa?"
+    // button on the homepage sends no id at all — so there's nothing correct
+    // to show yet; the join button below asks the teacher's live channel for
+    // the real module once connected instead of guessing one.
+    const knownId = (meta0 && meta0.status === 'ready') ? id : null;
     const qrCode = (presetCode || '').trim().toUpperCase();
-    const topic = (MathPlatform.indexEntry(selected) || {}).topic || '';
+    const topic = knownId ? (MathPlatform.indexEntry(knownId) || {}).topic || '' : '';
     // Encoded by the teacher's activity picker (teacherLive() in
     // core/views-teacher.js) into the QR/join link as comma-separated
     // activity indices — only present when the teacher restricted the
-    // lesson to a subset. A student typing the code in by hand (no link)
-    // has no way to receive this, so they always get the full module.
+    // lesson to a subset and the student came in via that link.
     const presetActIndices = (presetActs || '').split(',').map(s => parseInt(s, 10)).filter(n => Number.isInteger(n) && n >= 0);
 
     app.innerHTML = `
       <div class="card">
         <div class="eyebrow">ŽIVÁ HODINA</div>
         <h1>Pripojiť sa k učiteľovi</h1>
-        <p class="muted">Modul: ${esc(topic)}</p>
+        <p class="muted">${knownId ? `Modul: ${esc(topic)}` : 'Zadaj kód hodiny — po pripojení sa modul aj výber aktivít nastavia presne podľa učiteľa/učiteľky.'}</p>
         <div class="field"><label>Nick alebo kód žiaka</label><input id="nick" placeholder="napr. 1C-07" maxlength="20" autocomplete="off"></div>
         ${qrCode
           ? `<div class="notice good"><strong>QR kód hodiny načítaný.</strong> Stačí zadať nick a pripojiť sa.${presetReflect ? ' Táto hodina je iba na záverečnú sebareflexiu.' : presetActIndices.length ? ' Učiteľ/učiteľka vybral/a pre túto hodinu iba časť aktivít.' : ''}</div><input id="code" type="hidden" value="${esc(qrCode)}">`
-          : `<div class="field"><label>Kód hodiny</label><input id="code" class="uppercase-input" placeholder="napr. K7M4Q2" maxlength="8"></div>
-             <div class="grading-toggle-row">
-               <input id="reflectOnly" type="checkbox">
-               <label for="reflectOnly">Iba záverečná sebareflexia (ak to tak povedal učiteľ/učiteľka)</label>
-             </div>`}
+          : `<div class="field"><label>Kód hodiny</label><input id="code" class="uppercase-input" placeholder="napr. K7M4Q2" maxlength="8"></div>`}
         <div id="joinInfo" class="notice">Výsledky sa používajú iba počas prebiehajúcej hodiny. Platforma nevytvára dlhodobý profil žiaka.</div>
         <button class="btn" id="joinBtn">Pripojiť</button>
       </div>
@@ -181,7 +181,9 @@
         $('#joinInfo').textContent = 'Vyplň nick aj kód hodiny (6 znakov).';
         return;
       }
-      const reflectionOnly = !!presetReflect || !!($('#reflectOnly') && $('#reflectOnly').checked);
+      $('#joinBtn').disabled = true;
+      let resolveLesson;
+      const lessonPromise = new Promise(r => { resolveLesson = r; });
       try {
         const handle = await MathLive.connectAsStudent(code, {
           onTeacher: msg => {
@@ -190,26 +192,63 @@
               MathSession.getState().mode = 'solo';
               handle.close();
             } else if (msg.action === 'grading') {
+              if (msg.lesson) resolveLesson(msg.lesson);
               MathSession.setGrading(msg.grading);
               const badge = document.getElementById('gradingBadge');
               if (badge) badge.outerHTML = MathScore.badgeHtml(MathSession.getState().mode, msg.grading);
             }
           },
         });
+
+        let moduleId = knownId;
+        let reflectionOnly = !!presetReflect;
+        let selectedActivityIndices = presetActIndices.length ? presetActIndices : null;
+
         // Send "joined" immediately, so the app has a chance to learn the
-        // current grading state before the first activity renders.
-        const joined = handle.send('progress', { nick, moduleId: selected, stage: 'joined', score: 0, ts: Date.now() });
+        // current grading state (and, for a manually-typed code below, the
+        // live lesson itself) before the first activity renders.
+        const joined = handle.send('progress', { nick, moduleId: moduleId || '', stage: 'joined', score: 0, ts: Date.now() });
+
+        if (!qrCode) {
+          // No link to read the lesson from — ask the teacher's live channel
+          // instead (teacherLive()'s lessonInfo() in core/views-teacher.js
+          // answers every "joined" ping with the module/reflectOnly/selected
+          // activities actually running). Give it a few seconds; the teacher
+          // may be mid-debounce on a burst of joins.
+          $('#joinInfo').textContent = 'Zisťujem, akú hodinu učiteľ/učiteľka spustil/-a…';
+          const lesson = await Promise.race([
+            lessonPromise,
+            new Promise(r => setTimeout(() => r(null), 8000)),
+          ]);
+          if (lesson && lesson.moduleId) {
+            moduleId = lesson.moduleId;
+            reflectionOnly = !!lesson.reflectOnly;
+            selectedActivityIndices = lesson.selectedActivityIndices || null;
+          } else if (!moduleId) {
+            handle.close();
+            $('#joinInfo').innerHTML = '<strong>Nepodarilo sa zistiť hodinu.</strong> Skontroluj kód, alebo požiadaj učiteľa/učiteľku o QR kód/odkaz.';
+            $('#joinBtn').disabled = false;
+            return;
+          }
+          // else: module already known (came from a module's "Mám kód
+          // hodiny"), teacher just unreachable in time — fall back to the
+          // full module rather than stranding the student, same as
+          // MathSession.start()'s own reflectionOnly/selectedActivityIndices
+          // fallbacks below.
+        }
+
         // start() first (it closes any stale connection from a previous
         // session as a safety net — see core/session.js), THEN attach this
         // brand-new handle; attaching before starting would have start()
         // immediately close the very handle we just opened.
-        await MathSession.start(selected, { mode: 'live', nick, session: code, reflectionOnly, selectedActivityIndices: presetActIndices.length ? presetActIndices : null });
+        await MathSession.start(moduleId, { mode: 'live', nick, session: code, reflectionOnly, selectedActivityIndices });
         MathSession.attachLive(handle);
         go('play');
         await joined;
       } catch (e) {
         console.error('Realtime chyba pri pripájaní žiaka:', e);
         $('#joinInfo').innerHTML = '<strong>Nepodarilo sa pripojiť k živej hodine.</strong> Skontroluj pripojenie a skús to znova.';
+        $('#joinBtn').disabled = false;
       }
     };
   }

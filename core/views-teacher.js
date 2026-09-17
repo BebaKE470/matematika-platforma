@@ -298,11 +298,19 @@
     const activities = (mod && mod.student && mod.student.activities) || [];
     const actLabel = a => a.title || a.skill || a.phase || a.id || a.type;
     // Which activities this live lesson includes — everything by default
-    // (no restriction). Only students who join via the QR code/link below
-    // receive this; a manually-typed join code always gets the full module,
-    // since there's no practical way for a student to replicate an arbitrary
-    // subset by hand (unlike the single reflectOnly checkbox below).
+    // (no restriction). The QR code/link below bakes this straight into the
+    // URL; a manually-typed join code has no URL to carry it, so the student's
+    // join screen instead asks for it over the live channel once connected —
+    // lessonInfo() below is what answers that ask (see core/views-student.js's
+    // join()), piggybacked on the existing debounced grading broadcast.
     const selectedActs = new Set(activities.map((_, i) => i));
+    const lessonInfo = () => ({
+      moduleId: id,
+      reflectOnly,
+      selectedActivityIndices: (!reflectOnly && activities.length && selectedActs.size > 0 && selectedActs.size < activities.length)
+        ? [...selectedActs].sort((a, b) => a - b)
+        : null,
+    });
     const buildJoinUrl = () => {
       let extra = '';
       if (reflectOnly) extra = '/reflect';
@@ -322,7 +330,7 @@
             <p class="muted">Po naskenovaní sa otvorí správny modul aj táto hodina. Žiak zadá už iba nick.</p>
             <p>Kód pre ručné pripojenie:</p>
             <div class="bigcode">${esc(code)}</div>
-            <p class="muted">Záloha: žiak môže otvoriť platformu → „Mám kód hodiny“ → zadať nick a tento kód. Pri ručnom zadávaní si na obrazovke pripojenia zaškrtne rovnakú voľbu ako nižšie.</p>
+            <p class="muted">Záloha: žiak môže otvoriť platformu → „Máš kód od učiteľa?“ (alebo v module „Mám kód hodiny“) → zadať nick a tento kód. Po pripojení si aplikácia sama zistí správny modul aj výber aktivít nastavený tu na tejto obrazovke.</p>
           </div>
         </div>
         <div class="grading-toggle-row">
@@ -331,7 +339,7 @@
         </div>
         <p class="muted small-note">${hasReflection ? 'Zapni pred tým, ako žiakom ukážeš QR kód/kód hodiny — QR kód aj kód sa prispôsobia. Sebareflexia sa nezapočítava do bodov ani do známky.' : 'Tento modul nemá sebareflexiu, túto voľbu nie je možné zapnúť.'}</p>
         <div class="acts-block" id="actsBlock">
-          <p class="muted small-note">Vyber, ktoré aktivity žiaci v tejto hodine uvidia (platí len pre pripojenie cez QR kód/odkaz vyššie — pri ručnom zadaní kódu hodiny dostanú celý modul).</p>
+          <p class="muted small-note">Vyber, ktoré aktivity žiaci v tejto hodine uvidia — platí pre pripojenie cez QR kód/odkaz aj cez ručne zadaný kód hodiny.</p>
           ${activities.length ? `
             <div id="actsList" class="acts-list">
               ${activities.map((a, i) => `<div class="acts-row"><input type="checkbox" class="actCheck" id="actCheck${i}" data-i="${i}" checked><label for="actCheck${i}">${i + 1}. ${esc(actLabel(a))} <span class="tag">${esc(a.type)}</span></label></div>`).join('')}
@@ -464,15 +472,16 @@
         onStudent: msg => {
           students[msg.nick] = Object.assign({}, students[msg.nick], msg);
           drawStudents(students, grading, hideScores, reflectOnly);
-          // A newly-joined student doesn't yet know whether today's lesson
-          // is graded — let them know right away.
-          if (msg.stage === 'joined') handle.announceGrading(grading);
+          // A newly-joined student doesn't yet know whether today's lesson is
+          // graded, nor (if they typed the code by hand) which module/activity
+          // subset this lesson actually is — let them know right away.
+          if (msg.stage === 'joined') handle.announceGrading(grading, false, lessonInfo());
         },
       });
       $('#connect').className = 'notice good';
       $('#connect').innerHTML = '<strong>Kanál je aktívny.</strong> Výsledky sa neukladajú do databázy.';
       $('#endLive').disabled = false;
-      handle.announceGrading(grading, true);
+      handle.announceGrading(grading, true, lessonInfo());
       $('#endLive').onclick = async () => {
         await handle.send('teacher', { action: 'ended' });
         handle.close();

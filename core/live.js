@@ -101,18 +101,24 @@
 
     let lastSentAt = 0;
     let pendingTimer = null;
-    function announceGrading(grading, force) {
+    // `lesson` (moduleId/reflectOnly/selectedActivityIndices — see teacherLive()'s
+    // lessonInfo() in core/views-teacher.js) piggybacks on this same debounced
+    // broadcast rather than sending a second message per join, so a
+    // manually-typed join code can learn the live lesson's actual module and
+    // restrictions at no extra realtime-message cost.
+    function announceGrading(grading, force, lesson) {
+      const payload = lesson ? { action: 'grading', grading, lesson } : { action: 'grading', grading };
       const now = Date.now();
       if (force || now - lastSentAt > GRADING_MIN_GAP_MS) {
         lastSentAt = now;
-        handle.send('teacher', { action: 'grading', grading }).catch(() => {});
+        handle.send('teacher', payload).catch(() => {});
         return;
       }
       if (pendingTimer) return;
       pendingTimer = setTimeout(() => {
         pendingTimer = null;
         lastSentAt = Date.now();
-        handle.send('teacher', { action: 'grading', grading }).catch(() => {});
+        handle.send('teacher', payload).catch(() => {});
       }, GRADING_DEBOUNCE_MS);
     }
 
