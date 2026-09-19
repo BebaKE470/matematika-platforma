@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Už vieš vypočítať pravdepodobnosť jedného javu (P(A)=m/n) aj pravdepodobnosť zjednotenia dvoch javov (P(A∪B)=P(A)+P(B)−P(A∩B)).</p><p>Dnes sa pozrieme na inú otázku: čo ak nás zaujíma, že nastanú <span class="hl">obidva</span> javy naraz?</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozpoznať, či sú dva javy nezávislé',
+          'vypočítať pravdepodobnosť prieniku nezávislých javov P(A∩B)=P(A)·P(B)',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

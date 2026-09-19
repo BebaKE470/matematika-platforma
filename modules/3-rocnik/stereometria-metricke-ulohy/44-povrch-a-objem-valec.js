@@ -49,6 +49,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Hranol z minulej hodiny mal za podstavu mnohouholník. Valec je jeho „okrúhla“ obdoba — podstavou je kruh. Vzorec pre objem V=Sp·v preto platí aj tu, len obsah podstavy počítame ako obsah kruhu.</p><p>Z Planimetrie už vieš: obsah kruhu S=πr², obvod kruhu o=2πr.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "použiť obsah a obvod kruhu na odvodenie vzorcov pre valec",
+          "vypočítať povrch valca ako dve podstavy a plášť (obdĺžnik)",
+          "vypočítať objem valca V=πr²·v"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

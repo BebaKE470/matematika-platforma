@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z 2. ročníka a zo ZŠ už poznáš pojem <strong>množina</strong> — vieme ju zapísať vymenovaním prvkov (napr. {2,4,6}) a poznáme operácie <strong>zjednotenie</strong> a <strong>prienik</strong> dvoch množín.</p><p>Dnes túto myšlienku použijeme inak: výsledky náhodného pokusu (napr. hodu kockou) budeme opisovať práve ako <strong>množiny</strong>.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozlíšiť náhodný pokus, elementárny jav a náhodný jav',
+          'vypísať všetky elementárne javy daného pokusu',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

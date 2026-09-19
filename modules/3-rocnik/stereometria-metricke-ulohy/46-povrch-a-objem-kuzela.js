@@ -49,6 +49,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Valec z minulej hodiny mal kruhovú podstavu a rovný plášť. Kužeľ má tiež kruhovú podstavu, ale namiesto rovného plášťa sa zbieha do jedného vrcholu.</p><p>Na výpočet dĺžky strany kužeľa (s) budeš potrebovať Pytagorovu vetu, ktorú už poznáš z Planimetrie — s je prepona pravouhlého trojuholníka s odvesnami r (polomer) a v (výška).</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vypočítať stranu kužeľa pomocou Pytagorovej vety",
+          "vypočítať povrch kužeľa (podstava + plášť)",
+          "vypočítať objem kužeľa V=(1/3)πr²v"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

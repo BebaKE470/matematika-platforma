@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Vieš už vypočítať <strong>kombinačné číslo</strong> (n nad k)=n!/(k!(n−k)!) a poznáš z 2. ročníka <strong>riešenie kvadratickej rovnice</strong> pomocou diskriminantu.</p><p>Dnes tieto dve zručnosti spojíme.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozpísať (n nad 2) na výraz n(n−1)/2 a vyriešiť rovnicu (n nad 2)=k ako kvadratickú rovnicu pre n',
+          'overiť, či riešenie spĺňa podmienku, že n je prirodzené číslo aspoň také veľké ako k',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

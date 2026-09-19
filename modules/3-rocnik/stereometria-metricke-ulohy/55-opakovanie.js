@@ -49,6 +49,13 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "prepojiť všetky prebrané telesá cez podstavu, výšku, plášť a vzorce"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

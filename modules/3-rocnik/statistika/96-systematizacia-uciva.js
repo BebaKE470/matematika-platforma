@@ -51,6 +51,14 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'utriediť si všetky doteraz naučené štatistické pojmy a vzorce',
+          'vyriešiť sériu úloh naprieč celým celkom pred písomnou prácou',
+        ],
+      },
+      {
         id: 'intro',
         type: 'info',
         phase: 'POCHOP',

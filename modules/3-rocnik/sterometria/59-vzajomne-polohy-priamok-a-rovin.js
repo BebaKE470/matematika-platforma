@@ -55,6 +55,22 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Na minulej hodine sme si zopakovali, že v priestore určujú dva rôzne body priamku a tri nekolineárne body rovinu, a naučili sme sa čítať označenie kocky ABCDEFGH.</p><p>Z rovinnej geometrie už vieš, že dve priamky v rovine sú buď rovnobežné, alebo rôznobežné (majú spoločný bod). Dnes uvidíme, že v priestore pribúda tretia možnosť, ktorá v rovine nemôže nastať.</p>"
+      },
+      {
+        "id": "intro",
+        "type": "intro",
+        "goals": [
+          "rozlíšiť rovnobežné, rôznobežné a mimobežné priamky",
+          "určiť vzájomnú polohu rovín v kocke",
+          "svoje rozhodnutie vedieť zdôvodniť"
+        ]
+      },
+      {
         "id": "v",
         "type": "info",
         "phase": "PRECVIČ",
@@ -166,6 +182,21 @@ MathPlatform.registerModule({
         "skill": "komunikácia",
         "prompt": "Vysvetli, podľa čoho spoznáš, že dve priamky v kocke sú mimobežné.",
         "model": "Mimobežné priamky nemajú spoločný bod, nie sú rovnobežné a nemožno ich vložiť do jednej roviny."
+      },
+      {
+        "id": "q-classify-combo",
+        "type": "matrix",
+        "phase": "MATURITNÝ FORMÁT",
+        "title": "Kocka ABCDEFGH: zaraď vzájomnú polohu",
+        "skill": "vzájomná poloha",
+        "labels": ["rovnobežné", "rôznobežné", "mimobežné"],
+        "items": [
+          { "text": "Hrana AD (horná stena) a hrana FG (dolná stena)", "answer": "rovnobežné" },
+          { "text": "Hrana BC (horná stena) a hrana CG (zvislá hrana)", "answer": "rôznobežné" },
+          { "text": "Hrana DA (horná stena) a hrana BF (zvislá hrana)", "answer": "mimobežné" },
+          { "text": "Rovina hornej steny ABCD a rovina dolnej steny EFGH", "answer": "rovnobežné" },
+          { "text": "Rovina hornej steny ABCD a rovina prednej steny ABFE", "answer": "rôznobežné" }
+        ]
       },
       {
         "id": "nb",

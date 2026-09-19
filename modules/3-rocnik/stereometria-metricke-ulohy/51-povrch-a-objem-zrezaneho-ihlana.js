@@ -49,6 +49,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Podobne ako sme z kužeľa odrezaním vrcholu dostali zrezaný kužeľ, aj z ihlana odrezaním vrcholu dostaneme zrezaný ihlan — teleso s dvoma podobnými mnohouholníkovými podstavami.</p><p>Postup je analogický zrezanému kužeľu, len namiesto kruhových podstáv pracujeme s obsahmi mnohouholníkov.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "opísať zrezaný ihlan ako ihlan so zrezaným vrcholom",
+          "vypočítať objem zrezaného ihlana pomocou obsahov oboch podstáv a výšky"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

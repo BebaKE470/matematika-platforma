@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Vieš už počítať s <strong>faktoriálom</strong> a zjednodušovať výrazy s faktoriálmi.</p><p>Dnes zavedieme nový pojem — kombinačné číslo — a ukážeme jeho súvis s Pascalovým trojuholníkom.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vypočítať kombinačné číslo (n nad k) pomocou vzorca aj pomocou Pascalovho trojuholníka',
+          'overiť vlastnosť symetrie (n nad k)=(n nad n−k) na konkrétnom príklade',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

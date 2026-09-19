@@ -51,11 +51,34 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Zo ZŠ poznáš základnú planimetriu, z 2. ročníka Pytagorovu vetu a goniometriu trojuholníka a z 1. ročníka logiku, množiny a algebraické úpravy. Z hodiny 29 vieš, ako sa počíta obvod a obsah lichobežníka.</p><p>Dnes prejdeme na kosoštvorec — všetky štyri strany má rovnako dlhé, ale uhly nie sú pravé.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vypočítať obsah kosoštvorca zo strany a výšky",
+          "vypočítať obvod kosoštvorca zo strany",
+          "interpretovať výsledok s jednotkou"
+        ]
+      },
+      {
         "id": "observe",
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",
         "title": "Obvod a obsah kosoštvorca",
         "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><polygon points=\"150,70 410,70 350,270 90,270\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><line x1=\"150\" y1=\"70\" x2=\"150\" y2=\"270\" stroke=\"#9b6b2f\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><text x=\"158\" y=\"175\">vₐ</text><text x=\"220\" y=\"292\">a</text></svg></div><div class=\"formula\">S = a · vₐ<span class=\"formula-note\">Pri kosoštvorci možno využiť aj uhlopriečky.</span></div>"
+      },
+      {
+        "id": "worked-example",
+        "type": "explain",
+        "phase": "PRÍKLAD",
+        "title": "Vyskúšajme to na čísle",
+        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Kosoštvorec má stranu a = 7 cm a k nej prislúchajúcu výšku vₐ = 5 cm.</p><p>S = a·vₐ = 7·5 = <strong>35 cm²</strong></p><p>o = 4a = 4·7 = <strong>28 cm</strong></p></div>"
       },
       {
         "id": "meaning",

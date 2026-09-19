@@ -49,6 +49,13 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "precvičiť výpočty povrchu a objemu zrezaného ihlana"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

@@ -51,11 +51,34 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Zo ZŠ poznáš základnú planimetriu, z 2. ročníka Pytagorovu vetu a goniometriu trojuholníka a z 1. ročníka logiku, množiny a algebraické úpravy. Z hodín 22–35 vieš, ako sa počíta obvod a obsah rôznych mnohouholníkov.</p><p>Dnes prejdeme na kruh a jeho časti (výsek).</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vypočítať obsah a obvod (dĺžku kružnice) kruhu z polomeru",
+          "vypočítať obsah kruhového výseku z jeho stredového uhla",
+          "interpretovať výsledok s jednotkou"
+        ]
+      },
+      {
         "id": "observe",
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",
         "title": "Obvod a obsah kruhu a jeho častí",
         "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><circle cx=\"250\" cy=\"170\" r=\"120\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><line x1=\"250\" y1=\"170\" x2=\"370\" y2=\"170\" stroke=\"#9b6b2f\" stroke-width=\"4\"/><text x=\"305\" y=\"160\">r</text><path d=\"M250 170 L370 170 A120 120 0 0 0 310 66 Z\" fill=\"rgba(155,107,47,.12)\" stroke=\"#9b6b2f\" stroke-width=\"2\"/><text x=\"325\" y=\"110\">α</text></svg></div><div class=\"formula\"><span class=\"mini-label\">KRUH</span>S=πr², o=2πr<span class=\"formula-note\">Pri výseku pracujeme s príslušnou časťou celého uhla 360°.</span></div>"
+      },
+      {
+        "id": "worked-example",
+        "type": "explain",
+        "phase": "PRÍKLAD",
+        "title": "Vyskúšajme to na čísle",
+        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Kruh má polomer r = 5 cm (počítame s π ≈ 3,14).</p><p>S = πr² = 3,14·25 = <strong>78,5 cm²</strong></p><p>o = 2πr = 2·3,14·5 = <strong>31,4 cm</strong></p></div>"
       },
       {
         "id": "meaning",

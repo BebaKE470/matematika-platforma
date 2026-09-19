@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulých hodín už vieš vypočítať pravdepodobnosť jedného javu podľa vzorca <strong>P(A)=m/n</strong>. Zo ZŠ tiež poznáš množinové operácie <strong>zjednotenie</strong> (A∪B) a <strong>prienik</strong> (A∩B).</p><p>Dnes tieto dve veci spojíme — naučíme sa vypočítať pravdepodobnosť, že nastane jav A <span class="hl">alebo</span> jav B.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vypočítať pravdepodobnosť zjednotenia dvoch javov P(A∪B)=P(A)+P(B)−P(A∩B)',
+          'rozpoznať nezlučiteľné javy',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

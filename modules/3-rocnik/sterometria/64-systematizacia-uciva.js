@@ -55,6 +55,14 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "intro",
+        "type": "intro",
+        "goals": [
+          "usporiadať poznatky o priestore do systému",
+          "odhaliť typické chyby v argumentácii"
+        ]
+      },
+      {
         "id": "v",
         "type": "info",
         "phase": "PRECVIČ",

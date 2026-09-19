@@ -50,6 +50,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Kužeľ z minulej hodiny má kruhovú podstavu, ktorá sa zbieha do vrcholu, a jeho objem je tretina objemu valca s rovnakou podstavou a výškou. Ihlan funguje rovnako, len podstavou je mnohouholník namiesto kruhu.</p><p>Obsah podstavy (Sp) počítaš rovnako ako pri hranole — podľa typu mnohouholníka, ktorý poznáš z Planimetrie.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "zovšeobecniť vzťah „objem = tretina hranola/valca“ na ihlan",
+          "vypočítať objem ihlana V=(1/3)Sp·v",
+          "vypočítať povrch ihlana ako podstavu a bočné steny"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

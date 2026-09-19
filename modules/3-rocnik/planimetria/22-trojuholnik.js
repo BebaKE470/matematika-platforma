@@ -50,6 +50,22 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Zo ZŠ poznáš základnú planimetriu, z 2. ročníka Pytagorovu vetu a goniometriu trojuholníka a z 1. ročníka logiku, množiny a algebraické úpravy. V tomto tematickom celku sme si zopakovali aj goniometrické funkcie.</p><p>Dnes sa pozrieme na trojuholník — jeho základné prvky (strany, výšku) a na to, ako z náčrtu spoznať, ktorý vzťah použiť.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "opísať základné prvky trojuholníka (strany, výšku)",
+          "z náčrtu rozhodnúť, ktorý vzťah pre obvod alebo obsah použiť",
+          "interpretovať výsledok s jednotkou"
+        ]
+      },
+      {
         "id": "observe",
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",

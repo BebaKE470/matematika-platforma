@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na predchádzajúcej hodine sme zaviedli <strong>štatistický súbor</strong>, <strong>štatistickú jednotku</strong>, <strong>štatistický znak</strong> a tabuľku absolútnej a relatívnej početnosti.</p><p>Zo základnej školy už vieš usporiadať čísla podľa veľkosti — to budeš dnes potrebovať pri výpočte mediánu.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vypočítať aritmetický priemer, medián a modus',
+          'správne usporiadať hodnoty pred výpočtom mediánu',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

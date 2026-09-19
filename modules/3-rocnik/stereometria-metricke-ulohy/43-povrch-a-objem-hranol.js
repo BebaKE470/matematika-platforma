@@ -49,6 +49,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Kocka aj kváder, ktoré sme počítali na predchádzajúcich hodinách, sú v skutočnosti špeciálne prípady hranola — hranola so štvorcovou, resp. obdĺžnikovou podstavou. Vo všeobecnom hranole môže byť podstavou ľubovoľný mnohouholník.</p><p>Z Planimetrie už vieš vypočítať obsah rôznych mnohouholníkov (trojuholník, štvoruholník, pravidelný mnohouholník) — presne to teraz použijeme ako obsah podstavy Sp.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "zovšeobecniť vzorec pre objem na ľubovoľný kolmý hranol: V=Sp·v",
+          "vypočítať povrch hranola ako súčet dvoch podstáv a plášťa",
+          "použiť vzorce z Planimetrie na výpočet obsahu podstavy"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

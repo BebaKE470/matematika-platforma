@@ -51,6 +51,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "precvičiť si výpočet obvodu a obsahu kosoštvorca a kosodĺžnika na úlohách"
+        ]
+      },
+      {
         "id": "observe",
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",

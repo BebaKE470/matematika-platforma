@@ -51,6 +51,30 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "utriediť si, ako spolu súvisia jednotlivé typy štvoruholníkov",
+          "zopakovať si vzťahy pre obvod a obsah zo všetkých predošlých hodín"
+        ]
+      },
+      {
+        "id": "q-classify-quads",
+        "type": "matrix",
+        "phase": "MATURITNÝ FORMÁT",
+        "skill": "klasifikácia štvoruholníkov",
+        "title": "Ktorý štvoruholník je to?",
+        "html": "<p>Úloha má testový formát maturity, ale používa iba pojmy, ktoré už poznáš. Priraď každý opis k správnemu typu štvoruholníka.</p>",
+        "labels": ["Rovnobežník", "Kosoštvorec", "Obdĺžnik", "Štvorec", "Lichobežník"],
+        "items": [
+          { "text": "Protiľahlé strany sú rovnobežné a rovnako dlhé (najvšeobecnejší prípad, zahŕňa napr. aj obdĺžnik aj kosoštvorec).", "answer": "Rovnobežník" },
+          { "text": "Všetky štyri strany sú rovnako dlhé, protiľahlé strany sú rovnobežné, ale uhly nemusia byť pravé.", "answer": "Kosoštvorec" },
+          { "text": "Protiľahlé strany sú rovnobežné a rovnako dlhé, všetky uhly sú pravé, ale strany nemusia byť navzájom rovnako dlhé.", "answer": "Obdĺžnik" },
+          { "text": "Všetky štyri strany sú rovnako dlhé a súčasne všetky uhly sú pravé — je to teda zároveň aj obdĺžnik, aj kosoštvorec.", "answer": "Štvorec" },
+          { "text": "Má práve jednu dvojicu rovnobežných strán (základne), druhá dvojica strán rovnobežná nie je.", "answer": "Lichobežník" }
+        ]
+      },
+      {
         "id": "observe",
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",

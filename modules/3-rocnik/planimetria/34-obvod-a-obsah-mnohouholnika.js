@@ -51,11 +51,34 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Zo ZŠ poznáš základnú planimetriu, z 2. ročníka Pytagorovu vetu a goniometriu trojuholníka a z 1. ročníka logiku, množiny a algebraické úpravy. Z hodín 22–33 už vieš, ako sa počíta obvod a obsah trojuholníka, štvorca, obdĺžnika, lichobežníka, kosoštvorca a kosodĺžnika.</p><p>Dnes tieto vzťahy spojíme — mnohouholník totiž rozdelíme na jednoduchšie útvary, ktoré už poznáš.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "rozdeliť mnohouholník na jednoduchšie útvary",
+          "obsahy jednotlivých častí sčítať (prípadne odčítať)",
+          "interpretovať výsledok s jednotkou"
+        ]
+      },
+      {
         "id": "observe",
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",
         "title": "Obvod a obsah mnohouholníka",
         "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><polygon points=\"100,80 390,80 430,270 70,270\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><text x=\"235\" y=\"300\">štvoruholník</text></svg></div><p>Mnohouholník často rozdelíme na jednoduchšie útvary a obsahy sčítame/odčítame.</p>"
+      },
+      {
+        "id": "worked-example",
+        "type": "explain",
+        "phase": "PRÍKLAD",
+        "title": "Vyskúšajme to na čísle",
+        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Pôdorys domčeka má tvar päťuholníka: obdĺžnik so stranami 6 cm a 4 cm, na ktorom je trojuholníková strecha so základňou 6 cm a výškou 3 cm.</p><p>S₁ (obdĺžnik) = 6·4 = 24 cm²</p><p>S₂ (strecha) = 6·3/2 = 9 cm²</p><p>S = S₁ + S₂ = 24 + 9 = <strong>33 cm²</strong></p></div>"
       },
       {
         "id": "meaning",

@@ -55,6 +55,10 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "intro",
+        "type": "intro"
+      },
+      {
         "id": "i",
         "type": "info",
         "phase": "PRECVIČ",

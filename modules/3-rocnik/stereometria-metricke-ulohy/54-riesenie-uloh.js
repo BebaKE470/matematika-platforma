@@ -49,6 +49,13 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "precvičiť výpočty povrchu a objemu gule a jej častí"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

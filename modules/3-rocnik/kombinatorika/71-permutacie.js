@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulej hodiny vieš, čo je <strong>variácia</strong> V(k,n)=n!/(n−k)! — usporiadaný výber k prvkov z n bez opakovania.</p><p>Dnes sa pozrieme, čo sa stane, keď k=n — usporadúvame úplne všetky prvky.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vypočítať počet permutácií n rôznych prvkov (P(n)=n!)',
+          'vypočítať počet permutácií s opakovaním pre prvky, ktoré sa medzi sebou nedajú rozlíšiť',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

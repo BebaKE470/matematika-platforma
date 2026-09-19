@@ -51,11 +51,34 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Zo ZŠ poznáš základnú planimetriu, z 2. ročníka Pytagorovu vetu a goniometriu trojuholníka a z 1. ročníka logiku, množiny a algebraické úpravy. Z hodiny 31 vieš, ako sa počíta obvod a obsah kosoštvorca, a z tohto tematického celku poznáš hodnoty sin pre bežné uhly.</p><p>Dnes prejdeme na kosodĺžnik — má dve dvojice rovnako dlhých strán namiesto štyroch rovnakých.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vypočítať obsah kosodĺžnika zo strany a výšky",
+          "vypočítať obsah kosodĺžnika zo strán a uhla medzi nimi",
+          "interpretovať výsledok s jednotkou"
+        ]
+      },
+      {
         "id": "observe",
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",
         "title": "Obvod a obsah kosodĺžnika",
         "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><polygon points=\"150,70 410,70 350,270 90,270\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><line x1=\"150\" y1=\"70\" x2=\"150\" y2=\"270\" stroke=\"#9b6b2f\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><text x=\"158\" y=\"175\">vₐ</text><text x=\"220\" y=\"292\">a</text></svg></div><div class=\"formula\">S=a·vₐ<span class=\"formula-note\">Pri známych stranách a uhle možno využiť S=a·b·sin α.</span></div>"
+      },
+      {
+        "id": "worked-example",
+        "type": "explain",
+        "phase": "PRÍKLAD",
+        "title": "Vyskúšajme to na čísle",
+        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Kosodĺžnik má strany a = 8 cm, b = 5 cm a uhol medzi nimi α = 30°.</p><p>S = a·b·sin α = 8·5·0,5 = <strong>20 cm²</strong></p><p>(sin 30° = 0,5)</p></div>"
       },
       {
         "id": "meaning",

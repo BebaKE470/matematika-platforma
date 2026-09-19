@@ -51,11 +51,34 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Zo ZŠ poznáš základnú planimetriu, z 2. ročníka Pytagorovu vetu a goniometriu trojuholníka a z 1. ročníka logiku, množiny a algebraické úpravy. Z hodiny 26 vieš, ako sa počíta obvod a obsah štvorca.</p><p>Dnes prejdeme na obdĺžnik — má dva rôzne rozmery namiesto jednej strany.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vypočítať obsah obdĺžnika z dvoch strán",
+          "vypočítať obvod obdĺžnika z dvoch strán",
+          "interpretovať výsledok s jednotkou"
+        ]
+      },
+      {
         "id": "observe",
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",
         "title": "Obvod a obsah obdĺžnika",
         "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><polygon points=\"100,80 390,80 430,270 70,270\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><text x=\"235\" y=\"300\">štvoruholník</text></svg></div><div class=\"formula\">S = a · b<span class=\"formula-note\">o = 2(a + b)</span></div>"
+      },
+      {
+        "id": "worked-example",
+        "type": "explain",
+        "phase": "PRÍKLAD",
+        "title": "Vyskúšajme to na čísle",
+        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Obdĺžnik má strany a = 9 cm a b = 4 cm.</p><p>S = a·b = 9·4 = <strong>36 cm²</strong></p><p>o = 2(a+b) = 2·13 = <strong>26 cm</strong></p></div>"
       },
       {
         "id": "meaning",

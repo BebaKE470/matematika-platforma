@@ -51,11 +51,34 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Zo ZŠ poznáš základnú planimetriu, z 2. ročníka Pytagorovu vetu a goniometriu trojuholníka a z 1. ročníka logiku, množiny a algebraické úpravy. Z hodiny 22 vieš, ktoré prvky trojuholníka (strana, výška) budeme potrebovať.</p><p>Dnes doplníme presný vzťah pre obvod a obsah trojuholníka a vyskúšame ho na čísle.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vypočítať obsah trojuholníka zo strany a výšky",
+          "vypočítať obvod ako súčet troch strán",
+          "interpretovať výsledok s jednotkou"
+        ]
+      },
+      {
         "id": "observe",
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",
         "title": "Obvod a obsah trojuholníka",
         "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><polygon points=\"90,270 250,60 420,270\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><line x1=\"250\" y1=\"60\" x2=\"250\" y2=\"270\" stroke=\"#9b6b2f\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><text x=\"258\" y=\"175\">v</text><text x=\"245\" y=\"292\">a</text></svg></div><div class=\"formula\">S = a·vₐ/2<span class=\"formula-note\">Obvod je súčet troch strán.</span></div>"
+      },
+      {
+        "id": "worked-example",
+        "type": "explain",
+        "phase": "PRÍKLAD",
+        "title": "Vyskúšajme to na čísle",
+        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Trojuholník má stranu a = 8 cm a k nej prislúchajúcu výšku vₐ = 5 cm. Ostatné dve strany sú 6 cm a 7 cm.</p><p>S = a·vₐ/2 = 8·5/2 = <strong>20 cm²</strong></p><p>o = 8 + 6 + 7 = <strong>21 cm</strong></p></div>"
       },
       {
         "id": "meaning",

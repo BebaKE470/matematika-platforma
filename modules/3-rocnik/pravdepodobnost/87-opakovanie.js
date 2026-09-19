@@ -51,6 +51,13 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'systematicky utriediť všetky pravdepodobnostné pojmy a vzorce tejto témy',
+        ],
+      },
+      {
         id: 'intro',
         type: 'info',
         phase: 'POCHOP',

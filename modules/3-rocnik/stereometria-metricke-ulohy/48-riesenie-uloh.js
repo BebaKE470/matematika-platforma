@@ -49,6 +49,14 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "precvičiť výpočty povrchu a objemu kužeľa a ihlana",
+          "vybrať správny vzorec podľa tvaru telesa"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

@@ -49,6 +49,14 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vybrať správne, či úloha žiada povrch alebo objem",
+          "precvičiť výpočty na telesách z predchádzajúcich hodín"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

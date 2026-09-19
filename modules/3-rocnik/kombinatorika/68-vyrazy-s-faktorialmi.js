@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulej hodiny vieš, čo je <strong>faktoriál</strong> (n! = n·(n−1)·...·2·1) a dohodu 0!=1.</p><p>Z 1. ročníka tiež vieš <strong>krátiť lomené výrazy</strong> — dnes túto zručnosť prenesieme na výrazy s faktoriálmi.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'zjednodušiť výraz s faktoriálmi obsahujúci premennú n rozpísaním faktoriálu na súčin',
+          'overiť zjednodušený výraz dosadením konkrétneho n',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

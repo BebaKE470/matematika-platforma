@@ -55,6 +55,22 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z predchádzajúcich hodín už vieš, ako určiť vzájomnú polohu priamok a rovín v kocke (rovnobežné, rôznobežné, mimobežné) a ako zostrojiť rez kocky rovinou.</p><p>Dnes tie isté nástroje použijeme na jednoduché technické a geodetické situácie.</p>"
+      },
+      {
+        "id": "intro",
+        "type": "intro",
+        "goals": [
+          "preniesť vzájomné polohy priamok a rovín do technickej situácie",
+          "použiť rovnaký postup rezu v praktickom kontexte",
+          "zdôvodniť rozhodnutie v jazyku geometrie"
+        ]
+      },
+      {
         "id": "v",
         "type": "info",
         "phase": "PRECVIČ",

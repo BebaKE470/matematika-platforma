@@ -52,6 +52,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na hodinách 92 a 94 sme sa naučili počítať <strong>priemer, medián, modus, rozptyl</strong> a <strong>smerodajnú odchýlku</strong>.</p><p>Dnes tieto nástroje použijeme na porovnávanie reálnych situácií a na výber vhodného typu grafu.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'porovnať dva súbory dát pomocou charakteristík polohy a variability',
+          'zvoliť vhodný typ grafu pre daný typ dát',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

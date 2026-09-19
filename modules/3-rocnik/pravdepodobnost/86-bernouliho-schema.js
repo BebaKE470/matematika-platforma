@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na minulej hodine sme zaviedli <strong>nezávislé javy</strong> a súčinové pravidlo P(A∩B)=P(A)·P(B). Z celku Kombinatorika už tiež poznáš <strong>kombinačné číslo</strong> (n nad k) a vieš, že vyjadruje počet spôsobov, ako vybrať k prvkov z n bez ohľadu na poradie.</p><p>Dnes tieto dve veci spojíme do jedného vzorca.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vypočítať pravdepodobnosť presne k úspechov pomocou Bernoulliho schémy',
+          'identifikovať n, k, p, q v slovnom zadaní',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',
@@ -118,6 +133,19 @@ MathPlatform.registerModule({
         success: 'Správne. (3 nad 0)=1, P(0)=1·1·(1/8)=1/8.',
         hint: '(3 nad 0)=1 (existuje iba jedna postupnosť — samé ruby), (1/2)⁰=1, (1/2)³=1/8.',
         reveal: '1·1·1/8=1/8.',
+      },
+      {
+        id: 'q-maturitny',
+        type: 'numberInput',
+        phase: 'MATURITNÝ FORMÁT',
+        skill: 'Bernoulliho schéma',
+        title: 'Precvičenie v štýle maturity',
+        prompt: 'Úloha má testový formát maturity, ale používa iba pojmy, ktoré už poznáš. Hodíme kockou 3-krát. Aká je pravdepodobnosť, že práve 2-krát padne číslo deliteľné tromi (teda 3 alebo 6, p=1/3)? P(2)=(3 nad 2)·(1/3)²·(2/3)¹. Zapíš výsledok v tvare x/27 (zapíš iba x).',
+        validate: 'exact',
+        answer: 6,
+        success: 'Správne. (3 nad 2)=3, P(2)=3·(1/9)·(2/3)=6/27=2/9.',
+        hint: '(3 nad 2)=3, (1/3)²=1/9, (2/3)¹=2/3 — vynásob všetky tri čísla.',
+        reveal: '3·1/9·2/3=6/27.',
       },
       {
         id: 'notebook',

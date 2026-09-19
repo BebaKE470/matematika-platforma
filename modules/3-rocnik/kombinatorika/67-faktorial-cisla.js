@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na minulej hodine sme sa naučili <strong>kombinatorické pravidlo súčinu</strong>: ak robíme viacero nezávislých volieb, celkový počet možností je súčin počtu možností v každej voľbe.</p><p>Dnes toto pravidlo použijeme na špeciálny prípad — usporadúvanie prvkov do radu — a zavedieme preň skratku.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vypočítať hodnotu n! pre malé prirodzené n a poznať dohodu 0!=1',
+          'zjednodušiť jednoduchý výraz obsahujúci faktoriály',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

@@ -50,6 +50,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Doteraz sme počítali telesá s rovnými alebo kužeľovito sa zbiehajúcimi stenami. Guľa je iná — každý jej bod je v rovnakej vzdialenosti (polomer r) od stredu, presne ako pri kružnici v rovine, ktorú poznáš z Planimetrie.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vypočítať povrch gule S=4πr²",
+          "vypočítať objem gule V=(4/3)πr³",
+          "vysvetliť, ako zmena polomeru ovplyvní povrch a objem"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

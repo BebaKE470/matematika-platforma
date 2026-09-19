@@ -52,6 +52,13 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozpoznať, ktorý zo štyroch vzorcov (permutácia/variácia, s opakovaním/bez opakovania) je pre danú úlohu vhodný',
+        ],
+      },
+      {
         id: 'intro',
         type: 'info',
         phase: 'POCHOP',

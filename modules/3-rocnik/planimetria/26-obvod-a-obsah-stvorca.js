@@ -51,11 +51,34 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Zo ZŠ poznáš základnú planimetriu, z 2. ročníka Pytagorovu vetu a goniometriu trojuholníka a z 1. ročníka logiku, množiny a algebraické úpravy. Z hodiny 25 vieš, čo je to štvoruholník.</p><p>Dnes doplníme presný vzťah pre obvod a obsah štvorca a vyskúšame ho na čísle.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vypočítať obsah štvorca zo strany",
+          "vypočítať obvod štvorca zo strany",
+          "interpretovať výsledok s jednotkou"
+        ]
+      },
+      {
         "id": "observe",
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",
         "title": "Obvod a obsah štvorca",
         "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><polygon points=\"100,80 390,80 430,270 70,270\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><text x=\"235\" y=\"300\">štvoruholník</text></svg></div><div class=\"formula\">S = a²<span class=\"formula-note\">o = 4a</span></div>"
+      },
+      {
+        "id": "worked-example",
+        "type": "explain",
+        "phase": "PRÍKLAD",
+        "title": "Vyskúšajme to na čísle",
+        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Štvorec má stranu a = 6 cm.</p><p>S = a² = 6² = <strong>36 cm²</strong></p><p>o = 4a = 4·6 = <strong>24 cm</strong></p></div>"
       },
       {
         "id": "meaning",

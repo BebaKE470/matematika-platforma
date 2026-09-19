@@ -49,6 +49,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Kužeľ, ktorý sme počítali skôr, má jeden vrchol. Ak vrchol kužeľa odrežeme rovinou rovnobežnou s podstavou, dostaneme zrezaný kužeľ s dvoma rôznymi kruhovými podstavami (polomery r₁ a r₂).</p><p>Vzorce pre zrezaný kužeľ vychádzajú presne z tých, ktoré si sa naučil/a pre celý kužeľ.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "opísať zrezaný kužeľ ako kužeľ so zrezaným vrcholom",
+          "vypočítať objem a povrch zrezaného kužeľa pomocou r₁, r₂ a výšky/strany"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

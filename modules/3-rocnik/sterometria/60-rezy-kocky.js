@@ -55,6 +55,22 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Na predchádzajúcej hodine sme si zopakovali vzájomné polohy priamok a rovín v kocke (rovnobežné, rôznobežné, mimobežné) a vieme, že dve rôzne roviny sa buď nepretínajú, alebo sa pretínajú práve v priamke.</p><p>Dnes túto myšlienku využijeme na zostrojenie rezu kocky rovinou.</p>"
+      },
+      {
+        "id": "intro",
+        "type": "intro",
+        "goals": [
+          "nájsť body, kde rovina rezu pretína hrany kocky",
+          "spájať tieto body úsečkami ležiacimi v jednej stene",
+          "zostaviť z nich uzavretý mnohouholník rezu"
+        ]
+      },
+      {
         "id": "v",
         "type": "info",
         "phase": "PRECVIČ",

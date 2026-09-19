@@ -52,6 +52,13 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozpoznať a vypočítať naprieč všetkými troma typmi kombinatorického výberu (permutácia, variácia, kombinácia)',
+        ],
+      },
+      {
         id: 'intro',
         type: 'info',
         phase: 'POCHOP',

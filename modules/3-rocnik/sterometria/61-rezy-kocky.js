@@ -55,6 +55,22 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Na predchádzajúcej hodine sme sa naučili základný postup: dva body roviny rezu na tej istej stene spojíme úsečkou a takto postupne zostavíme uzavretý mnohouholník.</p><p>Dnes tento postup použijeme na náročnejšie rezy a naučíme sa ho aj skontrolovať.</p>"
+      },
+      {
+        "id": "intro",
+        "type": "intro",
+        "goals": [
+          "dokončiť náročnejší rez kocky rovinou",
+          "využiť rovnobežnosť protiľahlých stien pri hľadaní smeru rezu",
+          "overiť, že každá strana rezu leží v jednej stene kocky"
+        ]
+      },
+      {
         "id": "v",
         "type": "info",
         "phase": "PRECVIČ",

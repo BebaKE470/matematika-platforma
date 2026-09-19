@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na minulej hodine sme zaviedli pojmy <strong>náhodný pokus</strong> (činnosť s neistým výsledkom), <strong>elementárny jav</strong> (jeden možný výsledok) a <strong>náhodný jav</strong> (množina elementárnych javov spĺňajúcich danú podmienku).</p><p>Dnes zistíme, ako z tohto opisu vypočítať konkrétne <strong>číslo</strong> — pravdepodobnosť.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vypočítať pravdepodobnosť podľa klasickej definície P(A)=m/n',
+          'použiť kombinatorické nástroje pri zložitejšom výpočte',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

@@ -49,6 +49,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Na predchádzajúcej hodine sme odvodili povrch kocky z jej 6 zhodných štvorcových stien. Kváder je podobné teleso, len jeho tri rozmery (a, b, c) môžu byť rôzne — steny sú preto obdĺžniky, nie štvorce.</p><p>Z rovinnej geometrie už vieš, že obsah obdĺžnika so stranami x, y je S=xy.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "odvodiť vzorec pre povrch kvádra S=2(ab+ac+bc)",
+          "vypočítať objem kvádra V=abc",
+          "aplikovať vzorce na kváder s tromi rôznymi rozmermi"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

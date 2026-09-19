@@ -55,6 +55,14 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "intro",
+        "type": "intro",
+        "goals": [
+          "rýchlo rozpoznať vzájomnú polohu priamok a rovín",
+          "vedieť skontrolovať hotový rez kocky"
+        ]
+      },
+      {
         "id": "v",
         "type": "info",
         "phase": "PRECVIČ",

@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Vieš už použiť <strong>pravidlo súčinu</strong> a poznáš <strong>faktoriál</strong> aj výrazy s ním (n!/(n−k)! sa dá zjednodušiť rozpísaním).</p><p>Dnes tieto nástroje použijeme na usporiadaný výber k prvkov z n — variáciu.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozpoznať, či úloha vyžaduje variáciu s opakovaním alebo bez opakovania',
+          'vypočítať počet variácií bez opakovania (n!/(n−k)!) aj s opakovaním (n^k)',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

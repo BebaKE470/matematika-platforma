@@ -51,6 +51,22 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Zo ZŠ poznáš základnú planimetriu, z 2. ročníka Pytagorovu vetu a goniometriu trojuholníka a z 1. ročníka logiku, množiny a algebraické úpravy. Z hodín 22–24 už vieš, ako postupovať pri obvode a obsahu trojuholníka.</p><p>Dnes prejdeme na štvoruholníky — v ďalších hodinách si postupne ukážeme štvorec, obdĺžnik, lichobežník, kosoštvorec aj kosodĺžnik.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "opísať základné prvky štvoruholníka",
+          "z náčrtu rozhodnúť, ktorý vzťah pre obvod alebo obsah použiť",
+          "interpretovať výsledok s jednotkou"
+        ]
+      },
+      {
         "id": "observe",
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",

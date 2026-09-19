@@ -51,11 +51,34 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Zo ZŠ poznáš základnú planimetriu, z 2. ročníka Pytagorovu vetu a goniometriu trojuholníka a z 1. ročníka logiku, množiny a algebraické úpravy. Z hodín 26–28 vieš, ako sa počíta obvod a obsah štvorca a obdĺžnika.</p><p>Dnes prejdeme na lichobežník — má dve rovnobežné strany (základne) rôznej dĺžky.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vypočítať obsah lichobežníka zo základní a výšky",
+          "vypočítať obvod lichobežníka zo všetkých štyroch strán",
+          "interpretovať výsledok s jednotkou"
+        ]
+      },
+      {
         "id": "observe",
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",
         "title": "Obvod a obsah lichobežníka",
         "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><polygon points=\"160,70 350,70 430,270 70,270\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><line x1=\"160\" y1=\"70\" x2=\"160\" y2=\"270\" stroke=\"#9b6b2f\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><text x=\"168\" y=\"175\">v</text><text x=\"245\" y=\"292\">a</text><text x=\"245\" y=\"60\">c</text></svg></div><div class=\"formula\">S = (a + c) · v / 2<span class=\"formula-note\">o = a + b + c + d</span></div>"
+      },
+      {
+        "id": "worked-example",
+        "type": "explain",
+        "phase": "PRÍKLAD",
+        "title": "Vyskúšajme to na čísle",
+        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Lichobežník má základne a = 10 cm, c = 6 cm a výšku v = 4 cm.</p><p>S = (a+c)·v/2 = (10+6)·4/2 = 16·2 = <strong>32 cm²</strong></p></div>"
       },
       {
         "id": "meaning",

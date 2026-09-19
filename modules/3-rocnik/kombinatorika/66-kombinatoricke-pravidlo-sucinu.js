@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Zo základnej školy vieš počítať a systematicky vypisovať možnosti — napríklad všetky spôsoby, ako si vybrať jednu vec z niekoľkých ponúkaných.</p><p>Dnes sa naučíme, ako spočítať možnosti <strong>rýchlejšie</strong> než ich všetky vypisovať — najmä keď je volieb viac a vypisovanie by trvalo dlho.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'použiť pravidlo súčinu na výpočet počtu možností pri viacerých nezávislých voľbách',
+          'overiť si pravidlo na malom príklade vypísaním všetkých možností',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',
@@ -117,6 +132,19 @@ MathPlatform.registerModule({
         success: 'Správne. 26·10=260 rôznych hesiel.',
         hint: 'Vynásob počet možností pre písmeno a pre číslicu.',
         reveal: '26·10=260.',
+      },
+      {
+        id: 'q-vylet',
+        type: 'numberInput',
+        phase: 'MATURITNÝ FORMÁT',
+        skill: 'pravidlo súčinu (tri nezávislé voľby)',
+        title: 'Školský výlet',
+        prompt: 'Úloha má testový formát maturity, ale používa iba pojmy, ktoré už poznáš. Škola organizuje výlet: žiaci si vyberajú z 3 termínov, 2 dopravných prostriedkov (autobus alebo vlak) a 4 cieľových miest. Koľko rôznych kombinácií výletu (termín + doprava + miesto) je možné takto zostaviť?',
+        validate: 'exact',
+        answer: 24,
+        success: 'Správne. 3·2·4=24 rôznych kombinácií výletu.',
+        hint: 'Tri nezávislé voľby — vynásob počty možností pre všetky tri: termín × doprava × miesto.',
+        reveal: '3·2·4=24.',
       },
       {
         id: 'notebook',

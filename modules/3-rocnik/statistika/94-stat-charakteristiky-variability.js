@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na hodine 92 sme zaviedli <strong>aritmetický priemer</strong>, <strong>medián</strong> a <strong>modus</strong> ako miery „stredu“ štatistického súboru.</p><p>Z 1. ročníka (Mocniny a odmocniny) už vieš, čo je <strong>druhá odmocnina</strong> — dnes ju použijeme na výpočet smerodajnej odchýlky.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vypočítať variačné rozpätie, rozptyl a smerodajnú odchýlku',
+          'porovnať variabilitu dvoch súborov s rovnakým priemerom',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',
@@ -118,6 +133,19 @@ MathPlatform.registerModule({
         success: 'Správne. Súčet mocnín=9+1+1+9=20, rozptyl=20/4=5.',
         hint: 'Sčítaj mocniny odchýlok (9+1+1+9=20) a vydeľ počtom hodnôt (4).',
         reveal: '20/4=5.',
+      },
+      {
+        id: 'q-matura',
+        type: 'numberInput',
+        phase: 'MATURITNÝ FORMÁT',
+        skill: 'rozptyl a smerodajná odchýlka',
+        title: 'Vypočítaj rozptyl',
+        prompt: 'Úloha má testový formát maturity, ale používa iba pojmy, ktoré už poznáš. Päť žiakov získalo z krátkeho testu (max. 10 bodov) tieto body: 6, 7, 8, 9, 10. Priemer je 8. Vypočítaj rozptyl tohto súboru.',
+        validate: 'exact',
+        answer: 2,
+        success: 'Správne. Odchýlky od priemeru (8) sú −2, −1, 0, 1, 2; ich mocniny 4, 1, 0, 1, 4; súčet=10; rozptyl=10/5=2. (Smerodajná odchýlka by bola √2≈1,41.)',
+        hint: 'Najprv nájdi odchýlku každej hodnoty od priemeru (8), potom ich umocni na druhú, sčítaj a vydeľ počtom hodnôt (5).',
+        reveal: 'Odchýlky: −2,−1,0,1,2 → mocniny 4,1,0,1,4 → súčet 10 → rozptyl=10/5=2.',
       },
       {
         id: 'notebook',

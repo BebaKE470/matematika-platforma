@@ -53,6 +53,22 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Štatistika je pre teba nová téma, na ktorú budeme počas nasledujúcich hodín postupne stavať. Budeš potrebovať len základné počtové zručnosti zo základnej školy — sčítanie, delenie a prevod zlomku na percentá.</p><p>Nová bude terminológia (štatistický súbor, jednotka, znak) a spôsob, akým usporiadame namerané údaje do prehľadnej tabuľky.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozlíšiť štatistický súbor, jednotku a znak',
+          'rozlíšiť kvalitatívny a kvantitatívny znak',
+          'zostaviť tabuľku absolútnej a relatívnej početnosti',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

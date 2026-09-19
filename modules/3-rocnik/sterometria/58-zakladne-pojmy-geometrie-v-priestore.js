@@ -55,6 +55,22 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Zo základnej školy už vieš, čo je bod, priamka a rovina, a z predchádzajúceho tematického celku (Stereometria – metrické úlohy) poznáš základné telesá ako kocku, hranol či ihlan a vieš počítať ich povrch a objem.</p><p>Dnes sa na kocku pozrieme inak — nie kvôli objemu, ale kvôli tomu, ako sú v nej navzájom uložené body, priamky a roviny.</p>"
+      },
+      {
+        "id": "intro",
+        "type": "intro",
+        "goals": [
+          "rozlíšiť bod, priamku a rovinu v priestore",
+          "určiť, koľko bodov určuje priamku a koľko rovinu",
+          "svoje rozhodnutie vedieť stručne zdôvodniť"
+        ]
+      },
+      {
         "id": "v",
         "type": "info",
         "phase": "PRECVIČ",

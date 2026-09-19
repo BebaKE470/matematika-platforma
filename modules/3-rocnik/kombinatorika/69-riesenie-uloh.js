@@ -52,6 +52,14 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'skombinovať pravidlo súčinu a faktoriál pri riešení zložitejšej úlohy',
+          'rozhodnúť, ktorý nástroj je pre danú úlohu vhodný',
+        ],
+      },
+      {
         id: 'intro',
         type: 'info',
         phase: 'POCHOP',

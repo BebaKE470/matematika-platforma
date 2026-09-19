@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Vieš už vypočítať <strong>kombinačné číslo</strong> (n nad k) a poznáš <strong>variáciu</strong> V(k,n) — usporiadaný výber k prvkov z n, kde na poradí záleží.</p><p>Dnes sa pozrieme, čo sa zmení, keď na poradí NEZÁLEŽÍ.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozpoznať úlohu vyžadujúcu kombináciu (výber bez ohľadu na poradie) a vypočítať jej počet pomocou (n nad k)',
+          'overiť vzťah medzi variáciou a kombináciou: V(k,n)=C(k,n)·k!',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

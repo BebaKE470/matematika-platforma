@@ -51,6 +51,14 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'samostatne vypočítať priemer, medián a modus v rôznych kontextoch',
+          'zvoliť charakteristiku, ktorá najlepšie vystihuje danú situáciu',
+        ],
+      },
+      {
         id: 'intro',
         type: 'info',
         phase: 'POCHOP',

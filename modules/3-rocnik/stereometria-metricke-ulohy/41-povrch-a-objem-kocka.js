@@ -49,6 +49,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z rovinnej geometrie už vieš, že obsah štvorca so stranou a je S = a². Kocka je teleso zložené zo 6 zhodných štvorcových stien — jej povrch preto vieme poskladať práve z tohto vzorca.</p><p>Pripomeň si aj rozdiel medzi jednotkami: dĺžka sa meria v cm, obsah (plocha) v cm², objem (priestor) v cm³.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "odvodiť vzorec pre povrch kocky S=6a² zo štvorcových stien",
+          "vypočítať povrch aj objem kocky",
+          "rozlíšiť, kedy počítať povrch a kedy objem"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",
@@ -62,6 +78,15 @@ MathPlatform.registerModule({
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
         "html": "<p>Kocka má 6 zhodných štvorcových stien.</p><div class=\"formula\">S = 6a²<span class=\"formula-note\">V = a³ — jednotky povrchu sú štvorcové, objemu kubické.</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+      },
+      {
+        "id": "matura-format",
+        "type": "selfWrite",
+        "phase": "MATURITNÝ FORMÁT",
+        "skill": "pojmy o telesách",
+        "title": "Vysvetli súvislosť",
+        "prompt": "Úloha má formu maturitnej otázky, ale používa iba pojmy, ktoré už poznáš: Vysvetli, čo je vrchol, hrana a stena telesa, a popíš, ako súvisí sieť kocky s výpočtom jej povrchu.",
+        "model": "Vrchol je bod, kde sa stretávajú aspoň tri hrany. Hrana je úsečka, kde sa stretávajú dve steny. Stena je rovinný útvar ohraničujúci teleso. Sieť kocky vznikne rozložením jej 6 stien do roviny — povrch kocky je preto rovný súčtu obsahov všetkých 6 štvorcov v sieti, teda S=6a²."
       },
       {
         "id": "start",

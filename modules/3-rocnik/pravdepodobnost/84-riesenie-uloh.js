@@ -51,6 +51,13 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'samostatne vypočítať pravdepodobnosť zjednotenia dvoch javov v rôznych kontextoch',
+        ],
+      },
+      {
         id: 'intro',
         type: 'info',
         phase: 'POCHOP',
