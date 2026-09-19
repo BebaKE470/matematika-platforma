@@ -63,7 +63,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Rozhodovací postup',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Vyberáme <span class="hl">všetky</span> prvky (usporiadanie)</div><p class="term-rule">Permutácia P(n)=n!, alebo s opakovaním P\'(n;n₁,n₂,...)=n!/(n₁!·n₂!·...).</p></div><div class="term-item no-symbol"><div class="term-name">Vyberáme iba <span class="hl">časť</span> prvkov (k z n)</div><p class="term-rule">Variácia V(k,n)=n!/(n−k)!, alebo s opakovaním V\'(k,n)=n^k.</p></div></div>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Vyberáme <span class="hl">všetky</span> prvky (usporiadanie)</div><p class="term-rule">Permutácia P(n)=n!, alebo s opakovaním P\'(n;n₁,n₂,...)=<span class="frac"><span class="frac-num">n!</span><span class="frac-den">n₁!·n₂!·...</span></span>.</p></div><div class="term-item no-symbol"><div class="term-name">Vyberáme iba <span class="hl">časť</span> prvkov (k z n)</div><p class="term-rule">Variácia V(k,n)=<span class="frac"><span class="frac-num">n!</span><span class="frac-den">(n−k)!</span></span>, alebo s opakovaním V\'(k,n)=n^k.</p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {

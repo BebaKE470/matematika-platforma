@@ -176,6 +176,46 @@ th:not(:first-child), td:not(:first-child) { text-align: center; }
 .math-list code { font-size: 20px; padding: 10px 12px; border-radius: 10px; background: #f3f5f2; }
 .table-wrap { overflow-x: auto; margin: 1rem 0; }
 
+/* A real stacked fraction (numerator / horizontal bar / denominator) for
+   inline use inside a sentence or a .formula — e.g. n!/(k!·(n−k)!) written
+   as a genuine fraction instead of a flat "/" that reads worse the more
+   nested the expression gets. */
+.frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 3px; font-size: .88em; line-height: 1.2; }
+.frac-num { padding: 0 3px 1px; border-bottom: 1.5px solid currentColor; }
+.frac-den { padding: 1px 3px 0; }
+
+/* Combination-number ("n nad k") notation: a tall pair of parentheses
+   (stretched with scaleY, a plain-CSS substitute for a real large-paren
+   glyph) around a two-row stack of n over k. */
+.combo { display: inline-flex; align-items: center; margin: 0 1px; }
+.combo-paren { font-size: 1.35em; font-weight: 300; display: inline-block; transform: scaleY(1.5); }
+.combo-stack { display: inline-flex; flex-direction: column; align-items: center; margin: 0 1px; font-size: .85em; line-height: 1.05; }
+
+/* Pascal's triangle, built to be looked at, not read as a sentence: one
+   .pascal-row per row, one .pascal-num badge per entry, reusing the same
+   ink-circle badge look as .term-symbol/.steps elsewhere in the app. */
+.pascal-triangle { display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 18px 0; }
+.pascal-row { display: flex; gap: 10px; }
+.pascal-num { min-width: 34px; height: 34px; padding: 0 6px; border-radius: 999px; background: var(--ink); color: #fff; font-size: .92rem; font-weight: 800; display: flex; align-items: center; justify-content: center; flex: none; }
+@media (max-width: 520px) {
+  .pascal-row { gap: 6px; }
+  .pascal-num { min-width: 28px; height: 28px; font-size: .82rem; }
+}
+
+/* Two Pascal's triangles side by side — one badge per position showing the
+   combinatorial number (n nad k) that lives there (.pascal-sym, outlined to
+   visually pair with .pascal-num's filled ink-circle look), the other its
+   computed value — so a position in the triangle and its combinatorial
+   number read as the same thing. */
+.pascal-dual { display: flex; flex-wrap: wrap; justify-content: center; gap: 32px; margin: 18px 0; }
+.pascal-dual > div { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.pascal-dual .pascal-triangle { margin: 0; }
+.pascal-sym { min-width: 40px; height: 34px; padding: 0 6px; border-radius: 10px; border: 1.5px solid var(--ink); background: #fff; display: flex; align-items: center; justify-content: center; flex: none; }
+.pascal-sym .combo { margin: 0; font-size: .8em; }
+@media (max-width: 520px) {
+  .pascal-sym { min-width: 34px; height: 28px; padding: 0 4px; }
+}
+
 @media (max-width: 720px) {
   .compare { grid-template-columns: 1fr; }
 }

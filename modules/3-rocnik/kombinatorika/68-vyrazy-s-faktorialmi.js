@@ -80,7 +80,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Zjednodušovanie výrazov s faktoriálmi',
-        html: '<p>Postup: rozpíš väčší faktoriál pomocou menšieho tak, aby sa dal skrátiť. Napríklad n! = n·(n−1)·(n−2)!, takže:</p><div class="formula">n!/(n−2)! = n·(n−1)<span class="formula-note">Dva prvé členy zostanú, zvyšok sa skráti.</span></div><div class="example"><span class="mini-label">OVERENIE PRE n=5</span><p>5!/3! = 120/6 = 20</p><p>n(n−1) = 5·4 = 20 — sedí!</p></div>',
+        html: '<p>Postup: rozpíš väčší faktoriál pomocou menšieho tak, aby sa dal skrátiť. Napríklad n! = n·(n−1)·(n−2)!, takže:</p><div class="formula"><span class="frac"><span class="frac-num">n!</span><span class="frac-den">(n−2)!</span></span> = n·(n−1)<span class="formula-note">Dva prvé členy zostanú, zvyšok sa skráti.</span></div><div class="example"><span class="mini-label">OVERENIE PRE n=5</span><p>5!/3! = 120/6 = 20</p><p>n(n−1) = 5·4 = 20 — sedí!</p></div>',
         remember: '(n+1)!=(n+1)·n!. n!=n·(n−1)·...·(n−k+1)·(n−k)! — rozpíš toľko členov, koľko treba na skrátenie.',
       },
       {

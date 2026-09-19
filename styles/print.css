@@ -74,7 +74,7 @@
   /* Most browsers don't print background fills by default — without this,
      .formula/.warning/.term-symbol/.steps-badge's WHITE text on a solid
      ink/amber fill would print as invisible white-on-white. */
-  .formula, .warning::before, .term-symbol, .steps > li::before, .tag.phase, .intro-band {
+  .formula, .warning::before, .term-symbol, .steps > li::before, .tag.phase, .intro-band, .pascal-num {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }

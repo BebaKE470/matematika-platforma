@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Permutácia — osobitný prípad variácie',
-        html: '<p>Variácia V(k,n)=n!/(n−k)! pre k=n dáva V(n,n)=n!/(n−n)!=n!/0!=n! (lebo 0!=1). Toto je <strong>permutácia</strong> — usporiadanie <span class="hl">všetkých</span> n prvkov: P(n)=n!.</p>',
+        html: '<p>Variácia V(k,n)=<span class="frac"><span class="frac-num">n!</span><span class="frac-den">(n−k)!</span></span> pre k=n dáva V(n,n)=<span class="frac"><span class="frac-num">n!</span><span class="frac-den">(n−n)!</span></span>=<span class="frac"><span class="frac-num">n!</span><span class="frac-den">0!</span></span>=n! (lebo 0!=1). Toto je <strong>permutácia</strong> — usporiadanie <span class="hl">všetkých</span> n prvkov: P(n)=n!.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -81,7 +81,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Permutácia s opakovaním',
-        html: '<p>Ak medzi n prvkami sú niektoré <span class="hl">nerozlíšiteľné</span> (rovnaké), počet ich rôznych usporiadaní je menší ako n!.</p><div class="formula"><span class="mini-label">PERMUTÁCIA S OPAKOVANÍM</span>P\'(n;n₁,n₂,...) = n!/(n₁!·n₂!·...)<span class="formula-note">n₁, n₂, ... sú počty opakovaní jednotlivých rozlíšiteľných prvkov.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Slovo MAMA má 4 písmená, z toho 2× M a 2× A.</p><p>Počet rôznych usporiadaní: 4!/(2!·2!) = 24/4 = 6.</p></div>',
+        html: '<p>Ak medzi n prvkami sú niektoré <span class="hl">nerozlíšiteľné</span> (rovnaké), počet ich rôznych usporiadaní je menší ako n!.</p><div class="formula"><span class="mini-label">PERMUTÁCIA S OPAKOVANÍM</span>P\'(n;n₁,n₂,...) = <span class="frac"><span class="frac-num">n!</span><span class="frac-den">n₁!·n₂!·...</span></span><span class="formula-note">n₁, n₂, ... sú počty opakovaní jednotlivých rozlíšiteľných prvkov.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Slovo MAMA má 4 písmená, z toho 2× M a 2× A.</p><p>Počet rôznych usporiadaní: 4!/(2!·2!) = 24/4 = 6.</p></div>',
         remember: 'Bez opakovania: P(n)=n!. S opakovaním (n₁, n₂,... opakovaní): P\'(n;n₁,n₂,...)=n!/(n₁!·n₂!·...).',
       },
       {
@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Permutácia bez opakovania:</strong> P(n)=n! (usporiadanie n rôznych prvkov, osobitný prípad variácie pre k=n). <strong>Permutácia s opakovaním:</strong> P\'(n;n₁,n₂,...)=n!/(n₁!·n₂!·...), keď sa niektoré prvky opakujú n₁-krát, n₂-krát atď.</p>',
+        html: '<p><strong>Permutácia bez opakovania:</strong> P(n)=n! (usporiadanie n rôznych prvkov, osobitný prípad variácie pre k=n). <strong>Permutácia s opakovaním:</strong> P\'(n;n₁,n₂,...)=<span class="frac"><span class="frac-num">n!</span><span class="frac-den">n₁!·n₂!·...</span></span>, keď sa niektoré prvky opakujú n₁-krát, n₂-krát atď.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

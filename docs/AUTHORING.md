@@ -83,6 +83,46 @@ not just "needs to look nicer."
 | one phrase to emphasise mid-sentence | `.hl` | ALL CAPS |
 | the single sentence to memorise for the whole activity | the `remember` field | a hand-written `<div class="remember">` |
 | a symbol table, truth table, or hand-drawn diagram | `.table-wrap`+`table.truth`, `.logic-visual`, `.math-list` | — |
+| a fraction inside a formula or sentence | `.frac` | a flat `a/b` |
+| a combination number ("n nad k") | `.combo` | the words "n nad k" as plain text |
+| Pascal's triangle | `.pascal-triangle` | a text description of the rows |
+
+### `.frac` — a real stacked fraction
+
+Renders as numerator, a horizontal bar, denominator — for inline use inside
+a sentence or a `.formula`, wherever a flat `a/b` would get hard to read
+(especially once the numerator or denominator is itself a product, like a
+combination-number formula).
+
+```html
+<div class="formula">(n nad k) = <span class="frac"><span class="frac-num">n!</span><span class="frac-den">k!·(n−k)!</span></span></div>
+```
+
+### `.combo` — combination-number ("n nad k") notation
+
+A tall pair of parentheses around a two-row stack of `n` over `k` — the
+usual printed form of a combination number, instead of spelling out "(n nad
+k)" as plain words every time.
+
+```html
+<span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>5</span><span>2</span></span><span class="combo-paren">)</span></span>
+```
+
+### `.pascal-triangle` — Pascal's triangle
+
+One `.pascal-row` per row, one `.pascal-num` badge per entry — reuses the
+same ink-circle badge look as `.term-symbol`/`.steps`. Don't describe the
+rows in a sentence ("Riadok 0: 1. Riadok 1: 1 1. …") — the whole point of
+Pascal's triangle is seeing the triangular shape and the "each number is
+the sum of the two above it" pattern, which a text description hides.
+
+```html
+<div class="pascal-triangle">
+  <div class="pascal-row"><span class="pascal-num">1</span></div>
+  <div class="pascal-row"><span class="pascal-num">1</span><span class="pascal-num">1</span></div>
+  <div class="pascal-row"><span class="pascal-num">1</span><span class="pascal-num">2</span><span class="pascal-num">1</span></div>
+</div>
+```
 
 ### `.formula` — a formula or rule on its own
 

@@ -63,7 +63,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie troch typov',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Permutácia</div><p class="term-rule">Usporadúvame <span class="hl">všetky</span> prvky: P(n)=n!.</p></div><div class="term-item no-symbol"><div class="term-name">Variácia</div><p class="term-rule">Vyberáme a usporadúvame <span class="hl">časť</span> (poradie záleží): V(k,n)=n!/(n−k)!.</p></div><div class="term-item no-symbol"><div class="term-name">Kombinácia</div><p class="term-rule">Vyberáme časť bez ohľadu na poradie: C(k,n)=(n nad k).</p></div></div>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Permutácia</div><p class="term-rule">Usporadúvame <span class="hl">všetky</span> prvky: P(n)=n!.</p></div><div class="term-item no-symbol"><div class="term-name">Variácia</div><p class="term-rule">Vyberáme a usporadúvame <span class="hl">časť</span> (poradie záleží): V(k,n)=<span class="frac"><span class="frac-num">n!</span><span class="frac-den">(n−k)!</span></span>.</p></div><div class="term-item no-symbol"><div class="term-name">Kombinácia</div><p class="term-rule">Vyberáme časť bez ohľadu na poradie: C(k,n)=<span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>n</span><span>k</span></span><span class="combo-paren">)</span></span>.</p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {

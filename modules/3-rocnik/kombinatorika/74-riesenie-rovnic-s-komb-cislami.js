@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Kombinačné číslo ako výraz s n',
-        html: '<p>(n nad 2) = n!/(2!·(n−2)!) = n(n−1)/2 (po skrátení faktoriálov). Toto je výraz obsahujúci n — ak zadáme, čomu sa má (n nad 2) rovnať, dostaneme rovnicu pre n.</p>',
+        html: '<p><span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>n</span><span>2</span></span><span class="combo-paren">)</span></span> = <span class="frac"><span class="frac-num">n!</span><span class="frac-den">2!·(n−2)!</span></span> = n(n−1)/2 (po skrátení faktoriálov). Toto je výraz obsahujúci n — ak zadáme, čomu sa má <span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>n</span><span>2</span></span><span class="combo-paren">)</span></span> rovnať, dostaneme rovnicu pre n.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<ol class="steps"><li>Rozpíš (n nad 2) = n(n−1)/2.</li><li>Zostav kvadratickú rovnicu n² − n − 2k = 0.</li><li>Vyrieš rovnicu.</li><li>Zamietni riešenie, ktoré nie je prirodzené číslo (alebo je menšie ako 2).</li><li>Over skúškou dosadením späť do (n nad 2).</li></ol>',
+        html: '<ol class="steps"><li>Rozpíš <span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>n</span><span>2</span></span><span class="combo-paren">)</span></span> = <span class="frac"><span class="frac-num">n(n−1)</span><span class="frac-den">2</span></span>.</li><li>Zostav kvadratickú rovnicu n² − n − 2k = 0.</li><li>Vyrieš rovnicu.</li><li>Zamietni riešenie, ktoré nie je prirodzené číslo (alebo je menšie ako 2).</li><li>Over skúškou dosadením späť do <span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>n</span><span>2</span></span><span class="combo-paren">)</span></span>.</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {
