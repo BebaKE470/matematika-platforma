@@ -79,6 +79,14 @@ MathPlatform.registerModule({
         "html": "<p><strong>Zrezaný kužeľ:</strong> polomery podstáv sú R a r, kolmá výška v a tvorivka s.</p><div class=\"formula\"><span class=\"mini-label\">ZREZANÝ KUŽEĽ</span>V = (πv/3)(R² + Rr + r²), S = πR² + πr² + π(R+r)s<span class=\"formula-note\">Platí s² = v² + (R−r)².</span></div><p>Najprv si v náčrte označ, ktorý údaj je polomer, výška a tvorivka.</p>"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli zrezaný kužeľ a označ R, r, v a tvorivku s.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Zrezaný kužeľ vznikne rovnobežným odrezaním vrcholu kužeľa. Treba rozlišovať dva polomery, výšku a tvorivku.</p>",
+        "model": "<strong>KONTROLA:</strong> Zrezaný kužeľ vznikne rovnobežným odrezaním vrcholu kužeľa. Treba rozlišovať dva polomery, výšku a tvorivku."
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -101,14 +109,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Povrch a objem zrezaného kužeľa“.",
         "model": "Zrezaný kužeľ vznikne rovnobežným odrezaním vrcholu kužeľa. Treba rozlišovať dva polomery, výšku a tvorivku."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli zrezaný kužeľ a označ R, r, v a tvorivku s.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Zrezaný kužeľ vznikne rovnobežným odrezaním vrcholu kužeľa. Treba rozlišovať dva polomery, výšku a tvorivku.</p>",
-        "model": "<strong>KONTROLA:</strong> Zrezaný kužeľ vznikne rovnobežným odrezaním vrcholu kužeľa. Treba rozlišovať dva polomery, výšku a tvorivku."
       },
       {
         "id": "transfer",

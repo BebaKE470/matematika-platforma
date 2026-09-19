@@ -79,6 +79,13 @@ MathPlatform.registerModule({
         "html": "<p>Systematizácia znamená rozpoznať typ úlohy, zvoliť prípustnú metódu, zapísať podmienky a interpretovať počet riešení.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "concept-note",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Systematizácia znamená rozpoznať typ úlohy, zvoliť prípustnú metódu, zapísať podmienky a interpretovať počet riešení.</p>"
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -107,8 +114,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Urob si mapu: bežná lineárna rovnica – menovateľ – absolútna hodnota – parameter – sústava. Ku každej napíš jednu kontrolnú otázku.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Systematizácia znamená rozpoznať typ úlohy, zvoliť prípustnú metódu, zapísať podmienky a interpretovať počet riešení.</p>",
-        "model": "<strong>KONTROLA:</strong> Systematizácia znamená rozpoznať typ úlohy, zvoliť prípustnú metódu, zapísať podmienky a interpretovať počet riešení."
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Urob si mapu: bežná lineárna rovnica – menovateľ – absolútna hodnota – parameter – sústava. Ku každej napíš jednu kontrolnú otázku.</p>"
       },
       {
         "id": "transfer",

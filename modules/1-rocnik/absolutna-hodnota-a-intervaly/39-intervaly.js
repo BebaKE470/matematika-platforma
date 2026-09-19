@@ -95,6 +95,14 @@ MathPlatform.registerModule({
         "continueLabel": "Pokračovať"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p><strong>Interval</strong> je súvislá časť reálnej číselnej osi.</p><p>⟨a; b⟩ – oba krajné body patria.<br>(a; b) – ani jeden krajný bod nepatrí.<br>⟨a; b) a (a; b⟩ – patrí práve jeden krajný bod.</p><p>Pri ±∞ používame otvorenú zátvorku.</p>",
+        "continueLabel": "Mám zapísané"
+      },
+      {
         "id": "read1",
         "type": "choice",
         "phase": "OVER",
@@ -152,14 +160,6 @@ MathPlatform.registerModule({
           { "text": "x > 2", "answer": "(2; ∞)" },
           { "text": "x ≤ 0", "answer": "(−∞; 0⟩" }
         ]
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>Interval</strong> je súvislá časť reálnej číselnej osi.</p><p>⟨a; b⟩ – oba krajné body patria.<br>(a; b) – ani jeden krajný bod nepatrí.<br>⟨a; b) a (a; b⟩ – patrí práve jeden krajný bod.</p><p>Pri ±∞ používame otvorenú zátvorku.</p>",
-        "continueLabel": "Mám zapísané"
       },
       {
         "id": "explain",

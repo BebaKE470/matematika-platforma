@@ -108,6 +108,14 @@ MathPlatform.registerModule({
         "ariaLabel": "Porovnanie grafov sin x a 2 krát sin 2x"
       },
       {
+        "id": "clean",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zložené goniometrické funkcie sin x a cos x",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Zložené goniometrické funkcie</strong></p><div class=\"formula\">y = a·sin(bx + c) + d<span class=\"formula-note\">rovnako y = a·cos(bx + c) + d — čísla a, b, c, d menia graf základnej funkcie.</span></div><div class=\"term-list\"><div class=\"term-item\"><span class=\"term-symbol\">a</span><div><div class=\"term-name\">Amplitúda</div><p class=\"term-rule\">|a| mení amplitúdu.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">b</span><div><div class=\"term-name\">Perióda</div><p class=\"term-rule\">b mení periódu; pre b ≠ 0 je perióda T = 2π/|b|.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">c</span><div><div class=\"term-name\">Vodorovný posun</div><p class=\"term-rule\">c spôsobuje vodorovný posun.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">d</span><div><div class=\"term-name\">Zvislý posun</div><p class=\"term-rule\">d spôsobuje zvislý posun.</p></div></div></div>",
+        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
+      },
+      {
         "id": "check",
         "type": "choice",
         "phase": "OVER SI",
@@ -155,14 +163,6 @@ MathPlatform.registerModule({
         "answer": 0,
         "correct": "sin(2x)=0 pre x=0, π/2, π, 3π/2, 2π, teda má päť priesečníkov.",
         "hint": "Priesečník s osou x znamená funkčnú hodnotu 0."
-      },
-      {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zložené goniometrické funkcie sin x a cos x",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Zložené goniometrické funkcie</strong></p><div class=\"formula\">y = a·sin(bx + c) + d<span class=\"formula-note\">rovnako y = a·cos(bx + c) + d — čísla a, b, c, d menia graf základnej funkcie.</span></div><div class=\"term-list\"><div class=\"term-item\"><span class=\"term-symbol\">a</span><div><div class=\"term-name\">Amplitúda</div><p class=\"term-rule\">|a| mení amplitúdu.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">b</span><div><div class=\"term-name\">Perióda</div><p class=\"term-rule\">b mení periódu; pre b ≠ 0 je perióda T = 2π/|b|.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">c</span><div><div class=\"term-name\">Vodorovný posun</div><p class=\"term-rule\">c spôsobuje vodorovný posun.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">d</span><div><div class=\"term-name\">Zvislý posun</div><p class=\"term-rule\">d spôsobuje zvislý posun.</p></div></div></div>",
-        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {
         "id": "reflection",

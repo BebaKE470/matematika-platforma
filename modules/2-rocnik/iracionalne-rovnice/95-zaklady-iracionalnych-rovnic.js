@@ -84,6 +84,14 @@ MathPlatform.registerModule({
         remember: 'Izoluj odmocninu → umocni → vyrieš → <span class="hl">skúška</span> do <span class="hl">pôvodnej</span> rovnice (povinná, nie voliteľná).',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Iracionálna rovnica</strong> obsahuje neznámu pod odmocninou.</p><ol class="steps"><li>Izoluj odmocninu.</li><li>Umocni obe strany.</li><li>Vyrieš.</li><li><span class="hl">Skúška</span> do pôvodnej rovnice — povinná, zamietni cudzie korene (riešenia vzniknuté umocnením, ktoré pôvodnú rovnicu v skutočnosti nespĺňajú).</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -132,14 +140,6 @@ MathPlatform.registerModule({
         success: 'Správne. 2x−1=9, teda x=5. Skúška: √(2·5−1)=√9=3 ✓.',
         hint: 'Umocni obe strany, vyrieš lineárnu rovnicu pre x a over skúškou.',
         reveal: '2x−1=9, x=5; skúška √9=3 sedí.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Iracionálna rovnica</strong> obsahuje neznámu pod odmocninou.</p><ol class="steps"><li>Izoluj odmocninu.</li><li>Umocni obe strany.</li><li>Vyrieš.</li><li><span class="hl">Skúška</span> do pôvodnej rovnice — povinná, zamietni cudzie korene (riešenia vzniknuté umocnením, ktoré pôvodnú rovnicu v skutočnosti nespĺňajú).</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

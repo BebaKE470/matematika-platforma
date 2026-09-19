@@ -84,6 +84,14 @@ MathPlatform.registerModule({
         remember: 'a/x − b/y = (ay − bx)/(xy). Zložitejší čitateľ ohraď zátvorkou.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="formula"><span class="mini-label">ROVNAKÝ MENOVATEĽ</span>a/c − b/c = (a−b)/c</div><div class="formula"><span class="mini-label">RÔZNY MENOVATEĽ</span>a/x − b/y = (ay−bx)/(xy)</div><div class="warning"><strong>Pozor:</strong> Zložitejší čitateľ pri odčítaní vždy ohraď zátvorkou, aby si nezabudol zmeniť znamienko celého výrazu.</div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-same-denom',
         type: 'choice',
         phase: 'OVER SI',
@@ -132,14 +140,6 @@ MathPlatform.registerModule({
         success: 'Správne. 8/x − 3/x = 5/x, pre x=5: 5/5 = 1.',
         hint: 'Najprv odčítaj čitatele (menovateľ je rovnaký), potom dosaď x=5.',
         reveal: '8/x − 3/x = 5/x, pre x=5: 1.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="mini-label">ROVNAKÝ MENOVATEĽ</span>a/c − b/c = (a−b)/c</div><div class="formula"><span class="mini-label">RÔZNY MENOVATEĽ</span>a/x − b/y = (ay−bx)/(xy)</div><div class="warning"><strong>Pozor:</strong> Zložitejší čitateľ pri odčítaní vždy ohraď zátvorkou, aby si nezabudol zmeniť znamienko celého výrazu.</div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

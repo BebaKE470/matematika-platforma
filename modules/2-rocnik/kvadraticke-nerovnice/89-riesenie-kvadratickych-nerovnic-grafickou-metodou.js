@@ -91,6 +91,14 @@ MathPlatform.registerModule({
         remember: 'Nad osou x → f(x)>0. Pod osou x → f(x)<0. Priesečníky (korene) → f(x)=0.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Grafická metóda: nájdi korene (priesečníky s osou x), načrtni tvar paraboly podľa znamienka a, a odčítaj, kde je graf nad osou x (f(x)&gt;0) a kde pod ňou (f(x)&lt;0). Pre parabolu nahor je to nad osou mimo koreňov; pre parabolu nadol naopak.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-read',
         type: 'choice',
         phase: 'OVER SI',
@@ -163,14 +171,6 @@ MathPlatform.registerModule({
         answer: 0,
         correct: 'Správne. Parabola je otvorená nahor, takže medzi koreňmi (−2 a 5) je graf pod osou x — tam je f(x)<0.',
         hint: 'Over dosadením x=0 (leží medzi koreňmi −2 a 5) do f(x)=x²−3x−10 — vyjde kladné, alebo záporné číslo?',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Grafická metóda: nájdi korene (priesečníky s osou x), načrtni tvar paraboly podľa znamienka a, a odčítaj, kde je graf nad osou x (f(x)&gt;0) a kde pod ňou (f(x)&lt;0). Pre parabolu nahor je to nad osou mimo koreňov; pre parabolu nadol naopak.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

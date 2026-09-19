@@ -81,6 +81,13 @@ MathPlatform.registerModule({
         "remember": "najprv sleduj symetriu grafu; potom ju vieš zapísať vzťahom."
       },
       {
+        "id": "clean-a",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Slovník vlastností funkcie",
+        "html": "<p>Do zošita stručne zapíš definície: <strong>párna</strong> a <strong>nepárna</strong> funkcia. Ku každej pridaj jednu grafickú alebo slovnú pomôcku.</p>"
+      },
+      {
         "id": "even-visual",
         "type": "coordinatePlot",
         "phase": "VIZUALIZÁCIA",
@@ -142,6 +149,13 @@ MathPlatform.registerModule({
         "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Zhora ohraničená</div><p class=\"term-rule\">Funkčné hodnoty neprekročia určitú hornú hranicu.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Zdola ohraničená</div><p class=\"term-rule\">Funkčné hodnoty neklesnú pod určitú dolnú hranicu.</p></div></div><p>Ak platí oboje, je funkcia ohraničená.</p><p>Ohraničenosť hovorí o výške hodnôt y, nie o šírke definičného oboru.</p>"
       },
       {
+        "id": "clean-b",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Slovník vlastností funkcie",
+        "html": "<p>Do zošita stručne zapíš definície: <strong>rastúca/klesajúca</strong>, <strong>maximum/minimum</strong>, <strong>prostá</strong>, <strong>zhora/zdola ohraničená</strong>. Ku každej pridaj jednu grafickú alebo slovnú pomôcku (napríklad: prostá → vodorovná priamka pretne graf najviac raz).</p>"
+      },
+      {
         "id": "matrix",
         "type": "matrix",
         "phase": "ROZLÍŠ",
@@ -189,14 +203,6 @@ MathPlatform.registerModule({
       {"id":"oddcheck","type":"choice","phase":"OVER SI","skill":"párnosť","stimulus":"g(−x)=−g(x) a graf je súmerný podľa začiatku súradnicovej sústavy.","question":"Ako funkciu označíme?","options":["nepárna","párna","prostá","konštantná"],"answer":0,"correct":"To je definujúca vlastnosť nepárnej funkcie.","hint":"Súmernosť podľa začiatku."},
       {"id":"extreme-language","type":"choice","phase":"PRESNÝ JAZYK","skill":"extrémy","stimulus":"Funkcia dosahuje v bode x=2 hodnotu 7 a vyššiu hodnotu už na skúmanej množine nemá.","question":"Ktorá veta je najpresnejšia?","options":["Maximum je x=2.","Maximum je 7 a dosahuje ho pri x=2.","Minimum je 7.","Funkcia je prostá."],"answer":1,"correct":"Maximum je funkčná hodnota 7; x=2 je miesto, kde sa dosahuje.","hint":"Rozlišuj hodnotu a miesto."},
       {"id":"inject-check","type":"choice","phase":"OVER SI","skill":"prostosť","stimulus":"f(−2)=5 a f(2)=5","question":"Čo z toho určite vyplýva?","options":["Funkcia je párna.","Funkcia je rastúca.","Funkcia nie je prostá.","Funkcia je zhora ohraničená."],"answer":2,"correct":"Dva rôzne vstupy −2 a 2 majú rovnaký výstup 5, preto funkcia nie je prostá.","hint":"Použi definíciu prostej funkcie."},
-      {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Slovník vlastností funkcie",
-        "html": "<p>Do zošita stručne zapíš definície: párna, nepárna, rastúca/klesajúca, maximum/minimum, prostá, zhora/zdola ohraničená. Ku každej pridaj jednu grafickú alebo slovnú pomôcku.</p>",
-        "model": "Príklad pomôcky: prostá → vodorovná priamka pretne graf najviac raz."
-      },
       {
         "id": "reflection",
         "type": "reflection",

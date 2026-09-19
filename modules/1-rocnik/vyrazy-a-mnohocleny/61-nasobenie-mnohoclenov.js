@@ -78,6 +78,14 @@ MathPlatform.registerModule({
         remember: '(a+b)(c+d) = ac + ad + bc + bd. Po roznásobení spoj podobné členy.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>(a + b)(c + d) = ac + ad + bc + bd</strong> — vzniknú štyri čiastkové súčiny, ktoré potom spojíme (podobné členy).</p><p>Príklad: (x+2)(x+3) = x² + 3x + 2x + 6 = x² + 5x + 6.</p><p>Pozor na znamienka — (x−2)(x+5) = x² + 5x − 2x − 10 = x² + 3x − 10.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -137,14 +145,6 @@ MathPlatform.registerModule({
         answer: 2,
         correct: 'Správne. Obsah obdĺžnika je súčin strán: (x+3)(x+1) = x² + x + 3x + 3 = x² + 4x + 3.',
         hint: 'Obsah obdĺžnika je súčin dĺžky a šírky — vynásob obe zátvorky.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>(a + b)(c + d) = ac + ad + bc + bd</strong> — vzniknú štyri čiastkové súčiny, ktoré potom spojíme (podobné členy).</p><p>Príklad: (x+2)(x+3) = x² + 3x + 2x + 6 = x² + 5x + 6.</p><p>Pozor na znamienka — (x−2)(x+5) = x² + 5x − 2x − 10 = x² + 3x − 10.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

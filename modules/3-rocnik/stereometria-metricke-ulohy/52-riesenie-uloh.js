@@ -71,6 +71,14 @@ MathPlatform.registerModule({
         "html": "<p>Rozklad telesa na jednoduchšie časti je legitímna stratégia, ak sa objemy neprekrývajú a spolu tvoria pôvodné teleso.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli veľký ihlan a vyznač odrezanú hornú časť; zapíš Vzrez=Vveľký−Vmalý.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Rozklad telesa na jednoduchšie časti je legitímna stratégia, ak sa objemy neprekrývajú a spolu tvoria pôvodné teleso.</p>",
+        "model": "<strong>KONTROLA:</strong> Rozklad telesa na jednoduchšie časti je legitímna stratégia, ak sa objemy neprekrývajú a spolu tvoria pôvodné teleso."
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -93,14 +101,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Riešenie úloh“.",
         "model": "Rozklad telesa na jednoduchšie časti je legitímna stratégia, ak sa objemy neprekrývajú a spolu tvoria pôvodné teleso."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli veľký ihlan a vyznač odrezanú hornú časť; zapíš Vzrez=Vveľký−Vmalý.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Rozklad telesa na jednoduchšie časti je legitímna stratégia, ak sa objemy neprekrývajú a spolu tvoria pôvodné teleso.</p>",
-        "model": "<strong>KONTROLA:</strong> Rozklad telesa na jednoduchšie časti je legitímna stratégia, ak sa objemy neprekrývajú a spolu tvoria pôvodné teleso."
       },
       {
         "id": "transfer",

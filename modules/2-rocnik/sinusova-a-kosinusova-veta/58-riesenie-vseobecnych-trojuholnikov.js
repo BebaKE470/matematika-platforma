@@ -74,6 +74,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Prehľad: strana a protiľahlý uhol → sínusová veta. Dve strany a uhol medzi nimi → kosínusová veta. Tri strany (hľadáme uhol) → kosínusová veta upravená na cos.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-choose1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -147,14 +155,6 @@ MathPlatform.registerModule({
           { text: 'Poznáme všetky tri strany a hľadáme niektorý uhol.', answer: 'Kosínusová veta' },
           { text: 'Poznáme dve strany a uhol, ktorý je protiľahlý jednej z nich.', answer: 'Sínusová veta' },
         ],
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Prehľad: strana a protiľahlý uhol → sínusová veta. Dve strany a uhol medzi nimi → kosínusová veta. Tri strany (hľadáme uhol) → kosínusová veta upravená na cos.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

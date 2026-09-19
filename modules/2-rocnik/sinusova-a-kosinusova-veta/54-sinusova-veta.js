@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'a/sin α = b/sin β = c/sin γ. Strana a jej protiľahlý uhol musia byť vo dvojici.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="formula"><span class="mini-label">SÍNUSOVÁ VETA</span>a/sin α = b/sin β = c/sin γ<span class="formula-note">V ľubovoľnom trojuholníku, nielen pravouhlom. Strana je vždy vo dvojici so svojím protiľahlým uhlom (a↔α, b↔β, c↔γ).</span></div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -133,14 +141,6 @@ MathPlatform.registerModule({
         success: 'Správne. b = a·sinβ/sinα = 6·1/0,5 = 12cm.',
         hint: 'Použi b = a·sinβ/sinα.',
         reveal: 'b = 6·1/0,5 = 12cm.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="mini-label">SÍNUSOVÁ VETA</span>a/sin α = b/sin β = c/sin γ<span class="formula-note">V ľubovoľnom trojuholníku, nielen pravouhlom. Strana je vždy vo dvojici so svojím protiľahlým uhlom (a↔α, b↔β, c↔γ).</span></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

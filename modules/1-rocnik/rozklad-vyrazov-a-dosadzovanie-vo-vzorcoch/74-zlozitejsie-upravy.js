@@ -84,6 +84,14 @@ MathPlatform.registerModule({
         remember: 'Rozklad je úplný, až keď sa už žiadna časť výrazu nedá ďalej rozložiť.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Postup pri zložitejšom rozklade: 1) vyjmi spoločný činiteľ, 2) skontroluj, či sa dá pokračovať vzorcom, 3) opakuj, kým rozklad nie je úplný.</p><p>Príklad: 2x² − 8 = 2(x²−4) = 2(x−2)(x+2). Príklad: 3x²+18x+27 = 3(x²+6x+9) = 3(x+3)².</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -132,14 +140,6 @@ MathPlatform.registerModule({
         success: 'Správne. 2x²−18 = 2(x²−9) = 2(x−3)(x+3), pre x=4: 2·(4−3)·(4+3) = 2·1·7 = 14.',
         hint: 'Najprv rozlož úplne na 2(x−3)(x+3), potom dosaď x=4.',
         reveal: '2(x−3)(x+3) pre x=4: 2·1·7 = 14.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Postup pri zložitejšom rozklade: 1) vyjmi spoločný činiteľ, 2) skontroluj, či sa dá pokračovať vzorcom, 3) opakuj, kým rozklad nie je úplný.</p><p>Príklad: 2x² − 8 = 2(x²−4) = 2(x−2)(x+2). Príklad: 3x²+18x+27 = 3(x²+6x+9) = 3(x+3)².</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'Ohraničená zhora: existuje h, f(x)≤h. Ohraničená zdola: existuje d, f(x)≥d.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Funkcia f je na množine M <strong>ohraničená zhora</strong>, ak existuje h také, že f(x) ≤ h pre všetky x z M. <strong>Ohraničená zdola</strong>, ak existuje d, f(x) ≥ d.</p><p>Horná/dolná hranica nemusí byť rovná maximu/minimu — stačí, že hodnoty ju neprekročia.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-bounded',
         type: 'choice',
         phase: 'OVER SI',
@@ -139,14 +147,6 @@ MathPlatform.registerModule({
         curves: [{ fn: x => x * x }],
         note: 'Číslo 0 je dolná hranica: p(x) ≥ 0 pre každé reálne x.',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Funkcia f je na množine M <strong>ohraničená zhora</strong>, ak existuje h také, že f(x) ≤ h pre všetky x z M. <strong>Ohraničená zdola</strong>, ak existuje d, f(x) ≥ d.</p><p>Horná/dolná hranica nemusí byť rovná maximu/minimu — stačí, že hodnoty ju neprekročia.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

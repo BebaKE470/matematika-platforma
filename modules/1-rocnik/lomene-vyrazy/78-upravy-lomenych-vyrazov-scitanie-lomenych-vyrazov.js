@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'a/x + b/y = (ay + bx)/(xy) — spoločný menovateľ je súčin oboch menovateľov.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="formula"><span class="mini-label">ROVNAKÝ MENOVATEĽ</span>a/c + b/c = (a+b)/c<span class="formula-note">Sčítaj iba čitatele.</span></div><div class="formula"><span class="mini-label">RÔZNY MENOVATEĽ</span>a/x + b/y = (ay+bx)/(xy)<span class="formula-note">Spoločný menovateľ je súčin oboch menovateľov.</span></div><p>Definičný obor: hodnoty, pre ktoré je niektorý z menovateľov nulový, sú vylúčené.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-same-denom',
         type: 'choice',
         phase: 'OVER SI',
@@ -133,14 +141,6 @@ MathPlatform.registerModule({
         success: 'Správne. 3/x + 1/x = 4/x, pre x=2: 4/2 = 2.',
         hint: 'Najprv sčítaj čitatele (menovateľ je rovnaký), potom dosaď x=2.',
         reveal: '3/x + 1/x = 4/x, pre x=2: 2.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="mini-label">ROVNAKÝ MENOVATEĽ</span>a/c + b/c = (a+b)/c<span class="formula-note">Sčítaj iba čitatele.</span></div><div class="formula"><span class="mini-label">RÔZNY MENOVATEĽ</span>a/x + b/y = (ay+bx)/(xy)<span class="formula-note">Spoločný menovateľ je súčin oboch menovateľov.</span></div><p>Definičný obor: hodnoty, pre ktoré je niektorý z menovateľov nulový, sú vylúčené.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

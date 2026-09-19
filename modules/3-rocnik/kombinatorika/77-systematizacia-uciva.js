@@ -66,6 +66,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Pravidlo súčinu</div><p class="term-rule">nezávislé voľby: n₁·n₂·...·n_k</p></div><div class="term-item no-symbol"><div class="term-name">Faktoriál</div><p class="term-rule">n! (súčin od n do 1)</p></div><div class="term-item no-symbol"><div class="term-name">Permutácia</div><p class="term-rule">P(n)=n! (usporiadanie všetkých)</p></div><div class="term-item no-symbol"><div class="term-name">Variácia</div><p class="term-rule">V(k,n)=n!/(n−k)! (výber časti, poradie záleží)</p></div><div class="term-item no-symbol"><div class="term-name">Kombinácia</div><p class="term-rule">C(k,n)=(n nad k)=n!/(k!(n−k)!) (výber časti, poradie nezáleží)</p></div></div><p>Pascalov trojuholník obsahuje kombinačné čísla, symetria (n nad k)=(n nad n−k).</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -114,14 +122,6 @@ MathPlatform.registerModule({
         success: 'Správne. (8 nad 2)=8·7/2=28, teda aj (8 nad 6)=28.',
         hint: 'Použi symetriu (n nad k)=(n nad n−k): (8 nad 6)=(8 nad 2).',
         reveal: '(8 nad 2)=8·7/2=28.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Pravidlo súčinu</div><p class="term-rule">nezávislé voľby: n₁·n₂·...·n_k</p></div><div class="term-item no-symbol"><div class="term-name">Faktoriál</div><p class="term-rule">n! (súčin od n do 1)</p></div><div class="term-item no-symbol"><div class="term-name">Permutácia</div><p class="term-rule">P(n)=n! (usporiadanie všetkých)</p></div><div class="term-item no-symbol"><div class="term-name">Variácia</div><p class="term-rule">V(k,n)=n!/(n−k)! (výber časti, poradie záleží)</p></div><div class="term-item no-symbol"><div class="term-name">Kombinácia</div><p class="term-rule">C(k,n)=(n nad k)=n!/(k!(n−k)!) (výber časti, poradie nezáleží)</p></div></div><p>Pascalov trojuholník obsahuje kombinačné čísla, symetria (n nad k)=(n nad n−k).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

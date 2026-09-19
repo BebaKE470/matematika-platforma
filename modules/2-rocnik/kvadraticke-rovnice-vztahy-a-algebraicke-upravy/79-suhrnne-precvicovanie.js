@@ -62,6 +62,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Postup pri kombinovanej úlohe:</p><ol class="steps"><li>Odhadni korene rovnice (Vietove vzťahy) alebo použi diskriminant.</li><li>Rozlož trojčlen na súčin a(x−x₁)(x−x₂).</li><li>Ak ide o lomený výraz, urč definičný obor a skráť spoločný činiteľ.</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -110,14 +118,6 @@ MathPlatform.registerModule({
         success: 'Správne. x₁+x₂ = −(−4)/2 = 2.',
         hint: 'Dosaď b=−4 a a=2 do vzťahu −b/a.',
         reveal: '−(−4)/2 = 2.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Postup pri kombinovanej úlohe:</p><ol class="steps"><li>Odhadni korene rovnice (Vietove vzťahy) alebo použi diskriminant.</li><li>Rozlož trojčlen na súčin a(x−x₁)(x−x₂).</li><li>Ak ide o lomený výraz, urč definičný obor a skráť spoločný činiteľ.</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

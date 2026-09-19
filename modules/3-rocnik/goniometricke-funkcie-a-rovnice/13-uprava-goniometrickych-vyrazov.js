@@ -100,6 +100,14 @@ MathPlatform.registerModule({
         "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 520 360\" role=\"img\" aria-label=\"Jednotková kružnica\"><line x1=\"50\" y1=\"180\" x2=\"470\" y2=\"180\" class=\"plot-axis\"/><line x1=\"260\" y1=\"25\" x2=\"260\" y2=\"335\" class=\"plot-axis\"/><circle cx=\"260\" cy=\"180\" r=\"125\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><circle cx=\"385\" cy=\"180\" r=\"6\" class=\"plot-point\"/><circle cx=\"260\" cy=\"55\" r=\"6\" class=\"plot-point\"/><circle cx=\"135\" cy=\"180\" r=\"6\" class=\"plot-point\"/><circle cx=\"260\" cy=\"305\" r=\"6\" class=\"plot-point\"/><text x=\"392\" y=\"174\" class=\"plot-point-label\">0, 2π</text><text x=\"270\" y=\"48\" class=\"plot-point-label\">π/2</text><text x=\"105\" y=\"174\" class=\"plot-point-label\">π</text><text x=\"270\" y=\"325\" class=\"plot-point-label\">3π/2</text><text x=\"445\" y=\"170\" class=\"plot-axis-name\">x</text><text x=\"270\" y=\"38\" class=\"plot-axis-name\">y</text></svg></div>"
       },
       {
+        "id": "clean",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Úprava goniometrických výrazov",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Úprava goniometrických výrazov</strong></p><p>Pri úprave najprv rozpoznaj vhodný vzorec, potom upravuj algebraicky.</p><p>Najčastejšie používame: <strong>sin²x + cos²x = 1</strong>, súčtové vzorce a vzorce pre dvojnásobný uhol.</p><div class=\"warning\"><strong>Pozor:</strong> Pri delení výrazom vždy skontroluj, kedy je deliteľ nenulový.</div>",
+        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
+      },
+      {
         "id": "check",
         "type": "choice",
         "phase": "OVER SI",
@@ -146,14 +154,6 @@ MathPlatform.registerModule({
         "answer": 3,
         "correct": "Najprv rozpoznaj matematickú štruktúru úlohy.",
         "hint": "Formát testu nemení matematiku."
-      },
-      {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Úprava goniometrických výrazov",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Úprava goniometrických výrazov</strong></p><p>Pri úprave najprv rozpoznaj vhodný vzorec, potom upravuj algebraicky.</p><p>Najčastejšie používame: <strong>sin²x + cos²x = 1</strong>, súčtové vzorce a vzorce pre dvojnásobný uhol.</p><div class=\"warning\"><strong>Pozor:</strong> Pri delení výrazom vždy skontroluj, kedy je deliteľ nenulový.</div>",
-        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {
         "id": "reflection",

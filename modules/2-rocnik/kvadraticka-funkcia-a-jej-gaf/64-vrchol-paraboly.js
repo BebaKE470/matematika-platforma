@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'x_v = −b/(2a). y_v = f(x_v).',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Vrchol paraboly V[x_v, y_v] pre f(x)=ax²+bx+c:</p><div class="formula">x_v = −b/(2a)<span class="formula-note">y_v = f(x_v)</span></div><p>Ak a&gt;0, vrchol je najnižší bod grafu (minimum). Ak a&lt;0, vrchol je najvyšší bod grafu (maximum).</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -145,14 +153,6 @@ MathPlatform.registerModule({
         success: 'Správne. x_v = −(−6)/(2·1) = 6/2 = 3.',
         hint: 'Dosaď a=1, b=−6 do vzorca x_v=−b/(2a).',
         reveal: 'x_v = 6/2 = 3.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Vrchol paraboly V[x_v, y_v] pre f(x)=ax²+bx+c:</p><div class="formula">x_v = −b/(2a)<span class="formula-note">y_v = f(x_v)</span></div><p>Ak a&gt;0, vrchol je najnižší bod grafu (minimum). Ak a&lt;0, vrchol je najvyšší bod grafu (maximum).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

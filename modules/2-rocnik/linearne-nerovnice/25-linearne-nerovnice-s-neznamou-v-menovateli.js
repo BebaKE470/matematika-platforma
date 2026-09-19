@@ -99,6 +99,14 @@ MathPlatform.registerModule({
         "html": "<p>Podiel je kladný, keď majú čitateľ a menovateľ rovnaké znamienko, a záporný, keď majú opačné znamienka. Kritické body rozdelia číselnú os na intervaly, na ktorých sa znamienko nemení.</p>"
       },
       {
+        "id": "n",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<span class=\"mini-label\">NEROVNICA S NEZNÁMOU V MENOVATELI</span><ol class=\"steps\"><li>Určíme definičné podmienky.</li><li>Nájdeme kritické body.</li><li>Rozdelíme číselnú os na intervaly.</li><li>Určíme znamienko výrazu na intervaloch.</li><li>Vyberieme intervaly spĺňajúce nerovnicu.</li><li>Skontrolujeme, že vylúčené hodnoty nie sú v riešení.</li></ol>",
+        "continueLabel": "Mám zapísané"
+      },
+      {
         "id": "c2",
         "type": "choice",
         "phase": "OVER",
@@ -127,14 +135,6 @@ MathPlatform.registerModule({
         "answer": 1,
         "correct": "Správne. x=2 je vylúčené a napravo je podiel kladný.",
         "hint": "Menovateľ nesmie byť nula."
-      },
-      {
-        "id": "n",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<span class=\"mini-label\">NEROVNICA S NEZNÁMOU V MENOVATELI</span><ol class=\"steps\"><li>Určíme definičné podmienky.</li><li>Nájdeme kritické body.</li><li>Rozdelíme číselnú os na intervaly.</li><li>Určíme znamienko výrazu na intervaloch.</li><li>Vyberieme intervaly spĺňajúce nerovnicu.</li><li>Skontrolujeme, že vylúčené hodnoty nie sú v riešení.</li></ol>",
-        "continueLabel": "Mám zapísané"
       },
       {
         "id": "sw",

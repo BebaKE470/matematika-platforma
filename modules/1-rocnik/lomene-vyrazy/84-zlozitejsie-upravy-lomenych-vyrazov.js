@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'Rozlož menovatele → nájdi spoločný menovateľ → priprav zlomky → sčítaj/odčítaj → skráť.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<ol class="steps"><li>Rozlož každý menovateľ na súčin.</li><li>Nájdi najmenší spoločný menovateľ.</li><li>Preveď zlomky naň.</li><li>Sčítaj/odčítaj čitatele.</li><li>Skráť výsledok.</li></ol><div class="example"><span class="mini-label">PRÍKLAD</span><p>1/(x−2) + x/(x²−4), kde x²−4 = (x−2)(x+2), teda spoločný menovateľ je (x−2)(x+2).</p></div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-recognize',
         type: 'choice',
         phase: 'OVER SI',
@@ -133,14 +141,6 @@ MathPlatform.registerModule({
         success: 'Správne. Výraz sa zjednoduší na (2x+3)/(x²−9), pre x=7: 17/40 = 0,425.',
         hint: 'Preveď na spoločný menovateľ (x−3)(x+3), sčítaj čitatele na (2x+3), potom dosaď x=7.',
         reveal: '(2x+3)/(x²−9) pre x=7: 17/40 = 0,425.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<ol class="steps"><li>Rozlož každý menovateľ na súčin.</li><li>Nájdi najmenší spoločný menovateľ.</li><li>Preveď zlomky naň.</li><li>Sčítaj/odčítaj čitatele.</li><li>Skráť výsledok.</li></ol><div class="example"><span class="mini-label">PRÍKLAD</span><p>1/(x−2) + x/(x²−4), kde x²−4 = (x−2)(x+2), teda spoločný menovateľ je (x−2)(x+2).</p></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

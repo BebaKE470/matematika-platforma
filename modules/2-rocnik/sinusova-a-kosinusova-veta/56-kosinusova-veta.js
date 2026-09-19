@@ -86,6 +86,14 @@ MathPlatform.registerModule({
         remember: 'a² = b²+c²−2bc·cosα. Pre α=90°: a²=b²+c² (Pytagorova veta).',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="formula"><span class="mini-label">KOSÍNUSOVÁ VETA</span>a² = b²+c²−2bc·cosα<span class="formula-note">(analogicky pre b², c²)</span></div><p>Použi ju, keď poznáš dve strany a uhol <span class="hl">medzi</span> nimi. Pre α=90° sa zjednoduší na Pytagorovu vetu (cos90°=0).</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -138,14 +146,6 @@ MathPlatform.registerModule({
         success: 'Správne. a²=3²+4²−2·3·4·0=9+16=25, a=√25=5cm (presne Pytagorova veta pre pravý uhol).',
         hint: 'Dosaď cos90°=0 do kosínusovej vety — člen s cosα zmizne.',
         reveal: 'a²=9+16=25, a=5cm.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="mini-label">KOSÍNUSOVÁ VETA</span>a² = b²+c²−2bc·cosα<span class="formula-note">(analogicky pre b², c²)</span></div><p>Použi ju, keď poznáš dve strany a uhol <span class="hl">medzi</span> nimi. Pre α=90° sa zjednoduší na Pytagorovu vetu (cos90°=0).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

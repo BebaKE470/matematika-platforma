@@ -76,6 +76,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Postup pri aplikačnej úlohe:</p><ol class="steps"><li>Urob náčrt trojuholníka s označenými známymi a hľadanými údajmi.</li><li>Ak poznáš iba dva uhly, dopočítaj tretí (súčet=180°).</li><li>Zostav úmeru sínusovej vety pre hľadanú stranu.</li><li>Vyrieš a interpretuj výsledok v kontexte úlohy.</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-setup',
         type: 'choice',
         phase: 'OVER SI',
@@ -128,14 +136,6 @@ MathPlatform.registerModule({
         success: 'Správne. 180°−35°−65°=80°.',
         hint: 'Súčet všetkých troch uhlov trojuholníka je 180°.',
         reveal: '180−35−65=80°.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Postup pri aplikačnej úlohe:</p><ol class="steps"><li>Urob náčrt trojuholníka s označenými známymi a hľadanými údajmi.</li><li>Ak poznáš iba dva uhly, dopočítaj tretí (súčet=180°).</li><li>Zostav úmeru sínusovej vety pre hľadanú stranu.</li><li>Vyrieš a interpretuj výsledok v kontexte úlohy.</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

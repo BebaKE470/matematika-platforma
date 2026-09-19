@@ -83,6 +83,14 @@ MathPlatform.registerModule({
         remember: 'Rovnaký priemer nemusí znamenať rovnakú kvalitu/spoľahlivosť — vždy zohľadni aj variabilitu (rozptyl, smerodajnú odchýlku).',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Pri interpretácii štatistických dát z praxe: priemer sám osebe <span class="hl">nestačí</span> — vždy zváž aj variabilitu (rozptyl, smerodajnú odchýlku, rozpätie). Pri voľbe grafu: stĺpcový/koláčový graf pre rozdelenie do kategórií, spojnicový graf pre vývoj v čase.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-interpret',
         type: 'choice',
         phase: 'OVER SI',
@@ -135,14 +143,6 @@ MathPlatform.registerModule({
         success: 'Správne. Rozpätie=21−18=3 °C — malý rozptyl teplôt.',
         hint: 'Rozpätie=najväčšia hodnota−najmenšia hodnota.',
         reveal: '21−18=3.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pri interpretácii štatistických dát z praxe: priemer sám osebe <span class="hl">nestačí</span> — vždy zváž aj variabilitu (rozptyl, smerodajnú odchýlku, rozpätie). Pri voľbe grafu: stĺpcový/koláčový graf pre rozdelenie do kategórií, spojnicový graf pre vývoj v čase.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

@@ -89,6 +89,14 @@ MathPlatform.registerModule({
         "model": "Vrchol je bod, kde sa stretávajú aspoň tri hrany. Hrana je úsečka, kde sa stretávajú dve steny. Stena je rovinný útvar ohraničujúci teleso. Sieť kocky vznikne rozložením jej 6 stien do roviny — povrch kocky je preto rovný súčtu obsahov všetkých 6 štvorcov v sieti, teda S=6a²."
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli sieť kocky a odvoď S=6a².</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Kocka má 6 zhodných štvorcových stien: S=6a². Objem je V=a³. Jednotky povrchu sú štvorcové, objemu kubické.</p>",
+        "model": "<strong>KONTROLA:</strong> Kocka má 6 zhodných štvorcových stien: S=6a². Objem je V=a³. Jednotky povrchu sú štvorcové, objemu kubické."
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -111,14 +119,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Povrch a objem - kocka“.",
         "model": "Kocka má 6 zhodných štvorcových stien: S=6a². Objem je V=a³. Jednotky povrchu sú štvorcové, objemu kubické."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli sieť kocky a odvoď S=6a².</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Kocka má 6 zhodných štvorcových stien: S=6a². Objem je V=a³. Jednotky povrchu sú štvorcové, objemu kubické.</p>",
-        "model": "<strong>KONTROLA:</strong> Kocka má 6 zhodných štvorcových stien: S=6a². Objem je V=a³. Jednotky povrchu sú štvorcové, objemu kubické."
       },
       {
         "id": "transfer",

@@ -260,6 +260,12 @@ just an instruction to write the definition themselves, per
 `PravidlaTvorbyModulov.txt`). Optional: `title` (default "Zapíš si do
 zošita"), `continueLabel` (default "Mám zapísané").
 
+**Placement**: right after the `explain`/`info` activity that introduces the
+concept it records, before the first `choice`/`numberInput`/`matrix`/
+`sortChoice` practice activity — not saved for after practice. Several
+sub-concepts explained in sequence get one `notebook` moment each, placed
+right after each one's own explanation, rather than a single one at the end.
+
 ### `taskList` — checklist of tasks, honour-system XP
 
 For a set of problems the student solves on paper while the app just tracks

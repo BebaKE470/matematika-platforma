@@ -62,6 +62,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Zhrnutie: Vietove vzťahy x₁+x₂=−b/a, x₁·x₂=c/a. Rozklad na súčin: ax²+bx+c=a(x−x₁)(x−x₂). Krátenie lomeného výrazu: definičný obor pred krátením, potom rozklad a skrátenie spoločného činiteľa.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -110,14 +118,6 @@ MathPlatform.registerModule({
         success: 'Správne. Dvojica so súčtom 6 a súčinom −16 je 8 a −2 — väčší koreň je 8.',
         hint: 'Hľadaj dvojicu čísel so súčtom 6 a súčinom −16.',
         reveal: 'Korene sú 8 a −2 (8+(−2)=6, 8·(−2)=−16).',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie: Vietove vzťahy x₁+x₂=−b/a, x₁·x₂=c/a. Rozklad na súčin: ax²+bx+c=a(x−x₁)(x−x₂). Krátenie lomeného výrazu: definičný obor pred krátením, potom rozklad a skrátenie spoločného činiteľa.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

@@ -100,6 +100,13 @@ MathPlatform.registerModule({
         "remember": "jeden dovolený vstup → práve jeden výstup"
       },
       {
+        "id": "clean-a",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p><strong>NADPIS:</strong> Funkcia – pojem a spôsoby určenia</p><p><strong>TEÓRIA:</strong> Funkcia každému dovolenému vstupu priraďuje práve jeden výstup.</p>"
+      },
+      {
         "id": "isfunction",
         "type": "sortChoice",
         "phase": "OVER SI",
@@ -142,6 +149,13 @@ MathPlatform.registerModule({
         "html": "<div class=\"compare\"><div><strong>slovne</strong><br>„vynásob 2 a pripočítaj 1“</div><div><strong>predpisom</strong><br>f(x)=2x+1</div><div><strong>tabuľkou</strong><br>x: 0, 1, 2<br>f(x): 1, 3, 5</div><div><strong>grafom</strong><br>body [0;1], [1;3], [2;5]</div></div><p class=\"keyidea\">Nie sú to štyri rôzne funkcie. Sú to štyri reprezentácie tej istej závislosti.</p>"
       },
       {
+        "id": "clean-b",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p><strong>TEÓRIA:</strong> Funkciu môžeme určiť slovne, tabuľkou, predpisom alebo grafom. Zápis f(x) označuje funkčnú hodnotu pri vstupe x, napríklad pre f(x)=2x+1 platí f(3)=7.</p>"
+      },
+      {
         "id": "repcheck",
         "type": "choice",
         "phase": "PREPOJ",
@@ -170,14 +184,6 @@ MathPlatform.registerModule({
       {"id":"same-output","type":"choice","phase":"PREMYSLI","skill":"jednoznačnosť","prompt":"Dvaja rôzni žiaci môžu mať rovnaký dátum narodenia.","question":"Porušuje to podmienku, aby priradenie žiak → dátum narodenia bolo funkciou?","options":["Áno, výstupy musia byť všetky rôzne.","Nie, dôležité je, aby každý jeden žiak mal práve jeden dátum.","Áno, funkcia nesmie mať rovnaké hodnoty.","Nedá sa rozhodnúť."],"answer":1,"correct":"Nie. Funkcia povoľuje rovnaký výstup pre rôzne vstupy. Zakázané sú dva rôzne výstupy pre ten istý vstup.","hint":"Sleduj jeden konkrétny vstup."},
       {"id":"table-to-rule","type":"choice","phase":"PREPOJ","skill":"reprezentácie","stimulus":"x: 0, 1, 2, 3  |  f(x): 2, 5, 8, 11","question":"Ktorý slovný opis zodpovedá tabuľke?","options":["Vynásob 2 a pripočítaj 3.","Pripočítaj 3.","Vynásob 3 a pripočítaj 2.","Umocni na druhú a pripočítaj 2."],"answer":2,"correct":"Hodnoty rastú vždy o 3 a pri x=0 je výstup 2: pravidlo je 3x+2.","hint":"Skontroluj najprv x=0 a x=1."},
       {"id":"explain-function","type":"selfWrite","phase":"VYSVETLI","title":"Definícia vlastnými slovami","promptHtml":"Spolužiak tvrdí: <strong>„Funkcia je priradenie, v ktorom sa žiadne dva výstupy nesmú opakovať.“</strong> Oprav jeho vetu.","model":"Funkcia je priradenie, v ktorom má každý dovolený vstup práve jeden výstup. Rôzne vstupy môžu mať rovnaký výstup."},
-      {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Čo si odnášam",
-        "html": "<p><strong>NADPIS:</strong> Funkcia – pojem a spôsoby určenia</p><p><strong>TEÓRIA:</strong> Funkcia každému dovolenému vstupu priraďuje práve jeden výstup. Funkciu môžeme určiť slovne, tabuľkou, predpisom alebo grafom. Zápis f(x) označuje funkčnú hodnotu pri vstupe x.</p>",
-        "model": "<strong>PRÍKLAD:</strong> f(x)=2x+1 ⇒ f(3)=7."
-      },
       {
         "id": "reflection",
         "type": "reflection",

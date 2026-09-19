@@ -62,6 +62,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Kvadratická nerovnica</div><p class="term-rule">Nájdi korene, urč interval podľa orientácie paraboly (výpočtom alebo z grafu).</p></div><div class="term-item no-symbol"><div class="term-name">D &lt; 0</div><p class="term-rule">Výraz má na celej osi znamienko podľa a.</p></div><div class="term-item no-symbol"><div class="term-name">Rovnica s parametrom</div><p class="term-rule">Vyjadri D(m) alebo dosaď daný koreň, rieš výslednú (ne)rovnicu pre parameter.</p></div></div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -110,14 +118,6 @@ MathPlatform.registerModule({
         success: 'Správne. (−3)²+2·(−3)+m=0 → 9−6+m=0 → m=−3.',
         hint: 'Dosaď x=−3 do rovnice a vyrieš lineárnu rovnicu pre m.',
         reveal: '9−6+m=0, m=−3.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Kvadratická nerovnica</div><p class="term-rule">Nájdi korene, urč interval podľa orientácie paraboly (výpočtom alebo z grafu).</p></div><div class="term-item no-symbol"><div class="term-name">D &lt; 0</div><p class="term-rule">Výraz má na celej osi znamienko podľa a.</p></div><div class="term-item no-symbol"><div class="term-name">Rovnica s parametrom</div><p class="term-rule">Vyjadri D(m) alebo dosaď daný koreň, rieš výslednú (ne)rovnicu pre parameter.</p></div></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

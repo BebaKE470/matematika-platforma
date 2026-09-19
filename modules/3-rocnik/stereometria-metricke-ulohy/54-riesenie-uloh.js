@@ -71,6 +71,14 @@ MathPlatform.registerModule({
         "html": "<p>Kontext rozhoduje o veličine: obal/náter → povrch, kapacita/množstvo vnútri → objem.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vymysli dve praktické situácie s guľou: jednu na povrch a jednu na objem.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Kontext rozhoduje o veličine: obal/náter → povrch, kapacita/množstvo vnútri → objem.</p>",
+        "model": "<strong>KONTROLA:</strong> Kontext rozhoduje o veličine: obal/náter → povrch, kapacita/množstvo vnútri → objem."
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -93,14 +101,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Riešenie úloh“.",
         "model": "Kontext rozhoduje o veličine: obal/náter → povrch, kapacita/množstvo vnútri → objem."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vymysli dve praktické situácie s guľou: jednu na povrch a jednu na objem.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Kontext rozhoduje o veličine: obal/náter → povrch, kapacita/množstvo vnútri → objem.</p>",
-        "model": "<strong>KONTROLA:</strong> Kontext rozhoduje o veličine: obal/náter → povrch, kapacita/množstvo vnútri → objem."
       },
       {
         "id": "transfer",

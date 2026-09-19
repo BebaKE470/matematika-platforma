@@ -66,6 +66,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Zhrnutie troch zručností: dosadzovanie (záporné čísla so zátvorkou), úprava vzorca (rovnaká operácia na oboch stranách), vyňatie spoločného činiteľa (ab+ac = a(b+c), vyjmi <span class="hl">najväčší</span> spoločný činiteľ).</p><p>Pri kombinovanej úlohe postupuj krok po kroku a po každom kroku si over výsledok.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-combo1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -114,14 +122,6 @@ MathPlatform.registerModule({
         success: 'Správne. a = o:2 − b = 20:2 − 3 = 10 − 3 = 7.',
         hint: 'Najprv vyjadri a zo vzorca, potom dosaď o=20 a b=3.',
         reveal: 'a = 20:2 − 3 = 10 − 3 = 7.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie troch zručností: dosadzovanie (záporné čísla so zátvorkou), úprava vzorca (rovnaká operácia na oboch stranách), vyňatie spoločného činiteľa (ab+ac = a(b+c), vyjmi <span class="hl">najväčší</span> spoločný činiteľ).</p><p>Pri kombinovanej úlohe postupuj krok po kroku a po každom kroku si over výsledok.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

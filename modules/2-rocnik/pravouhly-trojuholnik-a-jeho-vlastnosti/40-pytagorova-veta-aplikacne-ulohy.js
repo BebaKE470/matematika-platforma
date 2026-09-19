@@ -77,6 +77,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook-1',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Uhlopriečka obdĺžnika so stranami a, b:</p><div class="formula">u = √(a² + b²)</div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-diagonal',
         type: 'choice',
         phase: 'OVER SI',
@@ -94,6 +102,14 @@ MathPlatform.registerModule({
         title: 'Výška rovnoramenného trojuholníka',
         html: '<p>Výška na základňu rovnoramenného trojuholníka rozdeľuje základňu na dve rovnaké polovice a súčasne vytvára dva zhodné pravouhlé trojuholníky.</p><div class="formula">v = √(r² − (z/2)²)<span class="formula-note">Rameno r, základňa z.</span></div>',
         remember: 'Výška rovnoramenného trojuholníka: v = √(rameno² − (základňa/2)²).',
+      },
+      {
+        id: 'notebook-2',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Výška rovnoramenného trojuholníka s ramenom r a základňou z:</p><div class="formula">v = √(r² − (z/2)²)</div><p>V oboch prípadoch (obdĺžnik aj rovnoramenný trojuholník) najprv nájdi skrytý pravouhlý trojuholník náčrtom.</p>',
+        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-isoceles',
@@ -133,14 +149,6 @@ MathPlatform.registerModule({
         success: 'Správne. u = √(8²+15²) = √(64+225) = √289 = 17cm.',
         hint: 'Uhlopriečka je prepona pravouhlého trojuholníka so stranami obdĺžnika ako odvesnami.',
         reveal: 'u = √(64+225) = √289 = 17cm.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Uhlopriečka obdĺžnika so stranami a, b:</p><div class="formula">u = √(a² + b²)</div><p>Výška rovnoramenného trojuholníka s ramenom r a základňou z:</p><div class="formula">v = √(r² − (z/2)²)</div><p>V oboch prípadoch najprv nájdi skrytý pravouhlý trojuholník náčrtom.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

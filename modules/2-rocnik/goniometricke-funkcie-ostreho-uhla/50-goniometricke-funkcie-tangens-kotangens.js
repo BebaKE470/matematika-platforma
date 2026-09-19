@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'tg α = protiľahlá/priľahlá = sin α/cos α. cotg α = priľahlá/protiľahlá = 1/tg α.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>tg α = protiľahlá/priľahlá = sin α/cos α</strong>.</p><p><strong>cotg α = priľahlá/protiľahlá = 1/tg α</strong>.</p><p>Na rozdiel od sin α, cos α, tangens ani kotangens neobsahujú preponu.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-tan',
         type: 'choice',
         phase: 'OVER SI',
@@ -148,14 +156,6 @@ MathPlatform.registerModule({
         success: 'Správne. tg α = 6/8 = 0,75.',
         hint: 'Vydeľ protiľahlú odvesnu priľahlou.',
         reveal: 'tg α = 6/8 = 0,75.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>tg α = protiľahlá/priľahlá = sin α/cos α</strong>.</p><p><strong>cotg α = priľahlá/protiľahlá = 1/tg α</strong>.</p><p>Na rozdiel od sin α, cos α, tangens ani kotangens neobsahujú preponu.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

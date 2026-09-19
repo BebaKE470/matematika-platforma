@@ -72,6 +72,13 @@ MathPlatform.registerModule({
         "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">NSD</div><p class=\"term-rule\">Používame pri delení na čo najväčšie rovnaké časti.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">NSN</div><p class=\"term-rule\">Používame pri opakujúcich sa cykloch a pri prvom spoločnom termíne.</p></div></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "notebook-rule",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pri delení na čo najväčšie rovnaké časti typicky používame NSD; pri opakujúcich sa cykloch a prvom spoločnom termíne NSN.</p>"
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -100,7 +107,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Napíš pri každej slovnej úlohe najprv: „hľadám spoločný deliteľ/násobok, pretože...“</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pri delení na čo najväčšie rovnaké časti typicky používame NSD; pri opakujúcich sa cykloch a prvom spoločnom termíne NSN.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Napíš pri každej slovnej úlohe najprv: „hľadám spoločný deliteľ/násobok, pretože...“</p>",
         "model": "<strong>KONTROLA:</strong> Pri delení na čo najväčšie rovnaké časti typicky používame NSD; pri opakujúcich sa cykloch a prvom spoločnom termíne NSN."
       },
       {

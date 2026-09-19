@@ -62,6 +62,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Zhrnutie: sin α=protiľahlá/prepona, cos α=priľahlá/prepona, tg α=protiľahlá/priľahlá, cotg α=priľahlá/protiľahlá. Súčet ostrých uhlov=90°. Pytagorova veta na dopočítanie tretej strany.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -121,14 +129,6 @@ MathPlatform.registerModule({
         success: 'Správne. c=√(9²+40²)=√(81+1600)=√1681=41cm.',
         hint: 'Použi Pytagorovu vetu.',
         reveal: 'c=√1681=41cm.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie: sin α=protiľahlá/prepona, cos α=priľahlá/prepona, tg α=protiľahlá/priľahlá, cotg α=priľahlá/protiľahlá. Súčet ostrých uhlov=90°. Pytagorova veta na dopočítanie tretej strany.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

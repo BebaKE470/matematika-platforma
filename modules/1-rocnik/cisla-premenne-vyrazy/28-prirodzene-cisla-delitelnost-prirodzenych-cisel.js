@@ -80,6 +80,13 @@ MathPlatform.registerModule({
         "html": "<div class=\"formula\">Číslo je deliteľné 6 práve vtedy, keď je deliteľné 2 aj 3.<span class=\"formula-note\">Kritériá treba použiť obe.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Je číslo 522 deliteľné 6?</p><p>Deliteľnosť 2: posledná číslica je 2 (párna) → áno.</p><p>Deliteľnosť 3: súčet číslic 5+2+2=9, a 9 je deliteľné 3 → áno.</p><p>Obe podmienky platia, takže <strong>522 je deliteľné 6</strong>.</p></div>"
       },
       {
+        "id": "notebook-rule",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Číslo je deliteľné 6 práve vtedy, keď je deliteľné 2 aj 3. Kritériá treba použiť obe.</p>"
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",

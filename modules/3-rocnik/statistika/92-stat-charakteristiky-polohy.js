@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'Priemer=súčet/počet. Medián=prostredná hodnota po usporiadaní. Modus=najčastejšia hodnota.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Aritmetický priemer</div><p class="term-rule">Súčet hodnôt / počet hodnôt.</p></div><div class="term-item no-symbol"><div class="term-name">Medián</div><p class="term-rule">Prostredná hodnota po usporiadaní (pri párnom počte priemer dvoch prostredných).</p></div><div class="term-item no-symbol"><div class="term-name">Modus</div><p class="term-rule">Najčastejšia hodnota v súbore.</p></div></div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-mean',
         type: 'choice',
         phase: 'OVER SI',
@@ -133,14 +141,6 @@ MathPlatform.registerModule({
         success: 'Správne. Známka 2 sa vyskytuje 3-krát — najčastejšie zo všetkých.',
         hint: 'Spočítaj, koľkokrát sa vyskytuje každá známka.',
         reveal: 'Známka 2 sa vyskytuje 3-krát (najčastejšie).',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Aritmetický priemer</div><p class="term-rule">Súčet hodnôt / počet hodnôt.</p></div><div class="term-item no-symbol"><div class="term-name">Medián</div><p class="term-rule">Prostredná hodnota po usporiadaní (pri párnom počte priemer dvoch prostredných).</p></div><div class="term-item no-symbol"><div class="term-name">Modus</div><p class="term-rule">Najčastejšia hodnota v súbore.</p></div></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

@@ -95,6 +95,14 @@ MathPlatform.registerModule({
         remember: 'f(x) = ax² + bx + c, a ≠ 0. Graf je parabola.',
       },
       {
+        id: 'notebook-1',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="formula">f(x) = ax² + bx + c, a ≠ 0<span class="formula-note">Graf je vždy parabola.</span></div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-recognize',
         type: 'choice',
         phase: 'OVER SI',
@@ -112,6 +120,14 @@ MathPlatform.registerModule({
         title: 'Orientácia paraboly',
         html: '<p>Ak je koeficient <strong>a &gt; 0</strong>, parabola je otvorená <strong>nahor</strong> (ako miska).</p><p>Ak je <strong>a &lt; 0</strong>, parabola je otvorená <strong>nadol</strong> (ako strieška).</p>',
         remember: 'a>0: parabola nahor. a<0: parabola nadol.',
+      },
+      {
+        id: 'notebook-2',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>a &gt; 0 → parabola otvorená nahor. a &lt; 0 → parabola otvorená nadol.</p>',
+        continueLabel: 'Mám zapísané',
       },
       {
         id: 'sign-orientation-visual',
@@ -174,14 +190,6 @@ MathPlatform.registerModule({
         success: 'Správne. f(3) = 2·9 − 3 = 18 − 3 = 15.',
         hint: 'Dosaď x=3 do predpisu 2x²−3.',
         reveal: 'f(3) = 2·9 − 3 = 15.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula">f(x) = ax² + bx + c, a ≠ 0<span class="formula-note">Graf je vždy parabola.</span></div><p>a &gt; 0 → parabola otvorená nahor. a &lt; 0 → parabola otvorená nadol.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

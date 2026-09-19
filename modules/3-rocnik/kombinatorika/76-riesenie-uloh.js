@@ -67,6 +67,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<ol class="steps"><li>Usporadúvam <span class="hl">všetky</span> prvky, alebo iba časť? Všetky → permutácia. Časť → pokračuj.</li><li>Záleží na poradí výberu? Áno → variácia. Nie → kombinácia.</li><li>Môžu sa prvky opakovať? Podľa toho zvoľ variantu s/bez opakovania.</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -115,14 +123,6 @@ MathPlatform.registerModule({
         success: 'Správne. V(3,6)=6·5·4=120.',
         hint: 'Poradie záleží (rôzne miesta) — použi variáciu bez opakovania.',
         reveal: '6·5·4=120.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<ol class="steps"><li>Usporadúvam <span class="hl">všetky</span> prvky, alebo iba časť? Všetky → permutácia. Časť → pokračuj.</li><li>Záleží na poradí výberu? Áno → variácia. Nie → kombinácia.</li><li>Môžu sa prvky opakovať? Podľa toho zvoľ variantu s/bez opakovania.</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

@@ -80,6 +80,14 @@ MathPlatform.registerModule({
         "html": "<div class=\"formula\">V = πr²v<span class=\"formula-note\">S = 2πr²+2πrv — rozvinutý plášť je obdĺžnik s jednou stranou 2πr.</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli sieť valca: dva kruhy a obdĺžnik s rozmermi 2πr a v.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Valec má V=πr²v a S=2πr²+2πrv. Rozvinutý plášť je obdĺžnik s jednou stranou 2πr.</p>",
+        "model": "<strong>KONTROLA:</strong> Valec má V=πr²v a S=2πr²+2πrv. Rozvinutý plášť je obdĺžnik s jednou stranou 2πr."
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -102,14 +110,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Povrch a objem – valec“.",
         "model": "Valec má V=πr²v a S=2πr²+2πrv. Rozvinutý plášť je obdĺžnik s jednou stranou 2πr."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli sieť valca: dva kruhy a obdĺžnik s rozmermi 2πr a v.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Valec má V=πr²v a S=2πr²+2πrv. Rozvinutý plášť je obdĺžnik s jednou stranou 2πr.</p>",
-        "model": "<strong>KONTROLA:</strong> Valec má V=πr²v a S=2πr²+2πrv. Rozvinutý plášť je obdĺžnik s jednou stranou 2πr."
       },
       {
         "id": "transfer",

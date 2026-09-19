@@ -87,6 +87,14 @@ MathPlatform.registerModule({
         remember: 'ax²+c=0 → x²=−c/a → x=±√(−c/a) (ak je pravá strana ≥0).',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="formula"><span class="mini-label">RÝDZO KVADRATICKÁ ROVNICA</span>ax² + c = 0<span class="formula-note">a≠0, bez lineárneho člena</span></div><ol class="steps"><li>Izoluj x² (x²=−c/a).</li><li>Ak je pravá strana ≥0, riešenia sú x=±√(−c/a); ak je záporná, rovnica nemá reálne riešenie.</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -139,14 +147,6 @@ MathPlatform.registerModule({
         success: 'Správne. 2x²=18, x²=9, x=±3 — kladné riešenie je 3.',
         hint: 'Najprv izoluj x² (vydeľ 2), potom odmocni.',
         reveal: 'x²=9, x=±3, kladné riešenie je 3.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="mini-label">RÝDZO KVADRATICKÁ ROVNICA</span>ax² + c = 0<span class="formula-note">a≠0, bez lineárneho člena</span></div><ol class="steps"><li>Izoluj x² (x²=−c/a).</li><li>Ak je pravá strana ≥0, riešenia sú x=±√(−c/a); ak je záporná, rovnica nemá reálne riešenie.</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

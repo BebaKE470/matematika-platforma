@@ -86,6 +86,14 @@ MathPlatform.registerModule({
         remember: 'ax²+bx=0 → x(ax+b)=0 → x=0 alebo x=−b/a.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="formula"><span class="mini-label">ROVNICA BEZ ABSOLÚTNEHO ČLENA</span>ax² + bx = 0<span class="formula-note">a≠0 — vyjmi x pred zátvorku: x(ax+b)=0</span></div><p>Podľa pravidla o nulovom súčine: x=0 alebo ax+b=0 (teda x=−b/a). Rovnica má vždy dve riešenia.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-factor',
         type: 'choice',
         phase: 'OVER SI',
@@ -134,14 +142,6 @@ MathPlatform.registerModule({
         success: 'Správne. 2x²−8x=0 → 2x(x−4)=0 → x=0 alebo x=4 — nenulové riešenie je 4.',
         hint: 'Vyjmi 2x pred zátvorku, potom použi pravidlo o nulovom súčine.',
         reveal: '2x(x−4)=0, x=0 alebo x=4.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="mini-label">ROVNICA BEZ ABSOLÚTNEHO ČLENA</span>ax² + bx = 0<span class="formula-note">a≠0 — vyjmi x pred zátvorku: x(ax+b)=0</span></div><p>Podľa pravidla o nulovom súčine: x=0 alebo ax+b=0 (teda x=−b/a). Rovnica má vždy dve riešenia.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

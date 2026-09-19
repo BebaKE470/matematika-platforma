@@ -72,6 +72,13 @@ MathPlatform.registerModule({
         "html": "<p>Praktická úloha potrebuje:</p><ol class=\"steps\"><li>model,</li><li>správne jednotky,</li><li>výpočet,</li><li>záverečnú vetu v kontexte.</li></ol><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "notebook-rule",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Praktická úloha potrebuje model, správne jednotky, výpočet a záverečnú vetu v kontexte.</p>"
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -100,7 +107,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli jednoduchý plán obdĺžnikovej plochy, zapíš rozmery, jednotky a výpočet.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Praktická úloha potrebuje model, správne jednotky, výpočet a záverečnú vetu v kontexte.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli jednoduchý plán obdĺžnikovej plochy, zapíš rozmery, jednotky a výpočet.</p>",
         "model": "<strong>KONTROLA:</strong> Praktická úloha potrebuje model, správne jednotky, výpočet a záverečnú vetu v kontexte."
       },
       {

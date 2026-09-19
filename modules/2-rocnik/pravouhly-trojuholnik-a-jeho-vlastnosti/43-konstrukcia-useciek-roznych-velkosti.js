@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'Zvoľ ca=1, cb=n. Zostroj Tálesovu kružnicu nad úsečkou 1+n. Kolmica v bode vo vzdialenosti 1 má dĺžku √n.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Konštrukcia úsečky dĺžky √n: zvoľ úseky prepony ca=1, cb=n (súčin ca·cb=n). Zostroj Tálesovu kružnicu nad úsečkou dĺžky 1+n. Kolmica (výška) v bode vzdialenom 1 od kraja má dĺžku √n, podľa Euklidovej vety o výške v²=ca·cb=n.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-choose-segments',
         type: 'choice',
         phase: 'OVER SI',
@@ -135,14 +143,6 @@ MathPlatform.registerModule({
         answer: 2,
         correct: 'Správne. Kalkulačka dáva iba zaokrúhlenú desatinnú hodnotu, kým konštrukcia dáva geometricky presnú dĺžku, bez zaokrúhľovania.',
         hint: 'Zamysli sa nad rozdielom medzi „približnou hodnotou“ a „presnou dĺžkou“.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Konštrukcia úsečky dĺžky √n: zvoľ úseky prepony ca=1, cb=n (súčin ca·cb=n). Zostroj Tálesovu kružnicu nad úsečkou dĺžky 1+n. Kolmica (výška) v bode vzdialenom 1 od kraja má dĺžku √n, podľa Euklidovej vety o výške v²=ca·cb=n.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

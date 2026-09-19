@@ -81,6 +81,14 @@ MathPlatform.registerModule({
         "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Kosodĺžnik má strany a = 8 cm, b = 5 cm a uhol medzi nimi α = 30°.</p><p>S = a·b·sin α = 8·5·0,5 = <strong>20 cm²</strong></p><p>(sin 30° = 0,5)</p></div>"
       },
       {
+        "id": "clean",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Obvod a obsah kosodĺžnika",
+        "html": "<p><strong>TEÓRIA:</strong> S=a·vₐ; pri známych stranách a uhle možno využiť S=a·b·sin α.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
+        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
+      },
+      {
         "id": "meaning",
         "type": "explain",
         "phase": "VÝZNAM",
@@ -135,14 +143,6 @@ MathPlatform.registerModule({
         "answer": 3,
         "correct": "Obsah rovnobežníka zo strán a,b a uhla medzi nimi je S=a·b·sin α, teda 21·sin115° ≈ 19,03 cm².",
         "hint": "Výška k strane 7 je 3·sin115°."
-      },
-      {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Obvod a obsah kosodĺžnika",
-        "html": "<p><strong>TEÓRIA:</strong> S=a·vₐ; pri známych stranách a uhle možno využiť S=a·b·sin α.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
-        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
       },
       {
         "id": "reflection",

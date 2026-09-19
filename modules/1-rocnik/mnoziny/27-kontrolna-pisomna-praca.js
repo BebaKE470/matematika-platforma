@@ -84,14 +84,6 @@ MathPlatform.registerModule({
         "remember": "Písomka overuje aj samostatný matematický zápis, nie iba výber odpovede."
       },
       {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Upevni si podstatu",
-        "html": "<p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš názov témy: <strong>Kontrolná písomná práca</strong>. Pridaj definíciu alebo pravidlo vlastnými slovami a jeden správny príklad.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor vlastný príklad a vyrieš ho bez aplikácie.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis musí používať presné symboly a musí byť z neho jasné, prečo výsledok platí."
-      },
-      {
         "id": "explain",
         "type": "selfWrite",
         "phase": "VYSVETLI",

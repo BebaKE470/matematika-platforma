@@ -79,6 +79,13 @@ MathPlatform.registerModule({
         "html": "<p>Riešením sústavy je usporiadaná dvojica, ktorá spĺňa obe rovnice. Metódu volíme podľa tvaru rovníc.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "concept-note",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Riešením sústavy je usporiadaná dvojica, ktorá spĺňa obe rovnice. Metódu volíme podľa tvaru rovníc.</p>"
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -107,8 +114,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vyrieš x+y=10, x−y=4 sčítacou metódou a urob skúšku v oboch rovniciach.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Riešením sústavy je usporiadaná dvojica, ktorá spĺňa obe rovnice. Metódu volíme podľa tvaru rovníc.</p>",
-        "model": "<strong>KONTROLA:</strong> Riešením sústavy je usporiadaná dvojica, ktorá spĺňa obe rovnice. Metódu volíme podľa tvaru rovníc."
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vyrieš x+y=10, x−y=4 sčítacou metódou a urob skúšku v oboch rovniciach.</p>"
       },
       {
         "id": "transfer",

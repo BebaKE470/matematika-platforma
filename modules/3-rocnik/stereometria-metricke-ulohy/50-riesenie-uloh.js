@@ -71,6 +71,14 @@ MathPlatform.registerModule({
         "html": "<p>Hraničný prípad je silná kontrola: zložitejší vzorec sa má v špeciálnej situácii zmeniť na známy jednoduchší vzorec.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pri použitom vzorci skontroluj jednotky a jeden hraničný prípad.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Hraničný prípad je silná kontrola: zložitejší vzorec sa má v špeciálnej situácii zmeniť na známy jednoduchší vzorec.</p>",
+        "model": "<strong>KONTROLA:</strong> Hraničný prípad je silná kontrola: zložitejší vzorec sa má v špeciálnej situácii zmeniť na známy jednoduchší vzorec."
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -93,14 +101,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Riešenie úloh“.",
         "model": "Hraničný prípad je silná kontrola: zložitejší vzorec sa má v špeciálnej situácii zmeniť na známy jednoduchší vzorec."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pri použitom vzorci skontroluj jednotky a jeden hraničný prípad.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Hraničný prípad je silná kontrola: zložitejší vzorec sa má v špeciálnej situácii zmeniť na známy jednoduchší vzorec.</p>",
-        "model": "<strong>KONTROLA:</strong> Hraničný prípad je silná kontrola: zložitejší vzorec sa má v špeciálnej situácii zmeniť na známy jednoduchší vzorec."
       },
       {
         "id": "transfer",

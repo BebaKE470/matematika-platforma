@@ -83,6 +83,14 @@ MathPlatform.registerModule({
         remember: '√a (a ≥ 0) je nezáporné číslo b, pre ktoré platí b² = a. √(záporné číslo) nie je definovaná.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Pre a ≥ 0 je <strong>√a</strong> nezáporné číslo b, pre ktoré platí b² = a.</p><p>√(záporné číslo) nie je v tomto rozsahu definovaná.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>√25 = 5 (nie ±5) — odmocnina je vždy jedno konkrétne nezáporné číslo, na rozdiel od riešení rovnice x² = 25, ktorých je dvoje (5 aj −5).</p></div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -142,14 +150,6 @@ MathPlatform.registerModule({
         success: 'Správne. 12² = 144, preto √144 = 12.',
         hint: 'Hľadaj nezáporné číslo, ktoré po umocnení na druhú dá 144.',
         reveal: '√144 = 12, pretože 12² = 144.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pre a ≥ 0 je <strong>√a</strong> nezáporné číslo b, pre ktoré platí b² = a.</p><p>√(záporné číslo) nie je v tomto rozsahu definovaná.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>√25 = 5 (nie ±5) — odmocnina je vždy jedno konkrétne nezáporné číslo, na rozdiel od riešení rovnice x² = 25, ktorých je dvoje (5 aj −5).</p></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

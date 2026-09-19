@@ -98,9 +98,9 @@ MathPlatform.registerModule({
         "id": "notebook",
         "type": "notebook",
         "phase": "ZOŠIT",
-        "title": "Upevni si podstatu",
-        "html": "<p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš názov témy: <strong>Zložené úlohy – kombinované operácie</strong>. Pridaj definíciu alebo pravidlo vlastnými slovami a jeden správny príklad.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor vlastný príklad a vyrieš ho bez aplikácie.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis musí používať presné symboly a musí byť z neho jasné, prečo výsledok platí."
+        "title": "Toto si zapíš do zošita",
+        "html": "<p>Pri kombinovaných množinových výrazoch najprv rešpektuj zátvorky — presne ako pri číselných výrazoch.</p><p>Príklad: A={1,2,3,4}, B={3,4,5}, C={4,5,6}. Výraz (A∩B)∩C počítame v dvoch krokoch: najprv A∩B={3,4}, potom {3,4}∩C={4}.</p>",
+        "continueLabel": "Mám zapísané"
       },
       {
         "id": "explain",

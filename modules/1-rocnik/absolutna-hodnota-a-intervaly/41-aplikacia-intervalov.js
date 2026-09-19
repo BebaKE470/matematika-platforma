@@ -80,6 +80,14 @@ MathPlatform.registerModule({
         "continueLabel": "Pokračovať"
       },
       {
+        "id": "notebook-1",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p>Interval môže vyjadrovať <strong>rozsah prípustných hodnôt</strong>.</p><p>Pri praktickej úlohe: 1. urč dolnú a hornú hranicu, 2. rozhodni, či hranice patria, 3. zapíš interval, 4. výsledok interpretuj v kontexte a s jednotkou.</p>",
+        "continueLabel": "Mám zapísané"
+      },
+      {
         "id": "tech1",
         "type": "choice",
         "phase": "APLIKUJ",
@@ -118,6 +126,14 @@ MathPlatform.registerModule({
         "continueLabel": "Pokračovať"
       },
       {
+        "id": "notebook-2",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p>Ak majú platiť dve podmienky naraz, hľadáme ich <strong>prienik</strong>.</p>",
+        "continueLabel": "Mám zapísané"
+      },
+      {
         "id": "constraints",
         "type": "choice",
         "phase": "APLIKUJ",
@@ -146,14 +162,6 @@ MathPlatform.registerModule({
         "answer": 2,
         "correct": "Správne. Uzavretý koniec zahŕňa 25, nie hodnoty väčšie ako 25.",
         "hint": "Porovnaj nameranú hodnotu s presnou hornou hranicou."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p>Interval môže vyjadrovať <strong>rozsah prípustných hodnôt</strong>.</p><p>Pri praktickej úlohe: 1. urč dolnú a hornú hranicu, 2. rozhodni, či hranice patria, 3. zapíš interval, 4. výsledok interpretuj v kontexte a s jednotkou.</p><p>Ak majú platiť dve podmienky naraz, hľadáme ich <strong>prienik</strong>.</p>",
-        "continueLabel": "Mám zapísané"
       },
       {
         "id": "explain",

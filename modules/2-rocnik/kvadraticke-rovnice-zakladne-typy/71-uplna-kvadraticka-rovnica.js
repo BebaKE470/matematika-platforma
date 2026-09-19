@@ -86,6 +86,14 @@ MathPlatform.registerModule({
         remember: 'D = b²−4ac; D>0 → dve riešenia, D=0 → jedno riešenie, D<0 → žiadne reálne riešenie.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="formula"><span class="mini-label">ÚPLNÁ KVADRATICKÁ ROVNICA</span>ax² + bx + c = 0<span class="formula-note">a≠0, b≠0, c≠0 — diskriminant D = b² − 4ac, korene x = (−b ± √D) / (2a)</span></div><div class="term-list"><div class="term-item no-symbol"><div class="term-name">D &gt; 0</div><p class="term-rule">dve riešenia</p></div><div class="term-item no-symbol"><div class="term-name">D = 0</div><p class="term-rule">jedno riešenie</p></div><div class="term-item no-symbol"><div class="term-name">D &lt; 0</div><p class="term-rule">žiadne reálne riešenie</p></div></div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-discriminant',
         type: 'choice',
         phase: 'OVER SI',
@@ -134,14 +142,6 @@ MathPlatform.registerModule({
         success: 'Správne. D = 3² − 4·2·(−2) = 9 + 16 = 25.',
         hint: 'D=b²−4ac; pozor na znamienko pri c=−2.',
         reveal: 'D = 9 − 4·2·(−2) = 9+16 = 25.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="mini-label">ÚPLNÁ KVADRATICKÁ ROVNICA</span>ax² + bx + c = 0<span class="formula-note">a≠0, b≠0, c≠0 — diskriminant D = b² − 4ac, korene x = (−b ± √D) / (2a)</span></div><div class="term-list"><div class="term-item no-symbol"><div class="term-name">D &gt; 0</div><p class="term-rule">dve riešenia</p></div><div class="term-item no-symbol"><div class="term-name">D = 0</div><p class="term-rule">jedno riešenie</p></div><div class="term-item no-symbol"><div class="term-name">D &lt; 0</div><p class="term-rule">žiadne reálne riešenie</p></div></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

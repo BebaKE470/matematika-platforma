@@ -80,6 +80,14 @@ MathPlatform.registerModule({
         "html": "<div class=\"formula\">V = abc<span class=\"formula-note\">S = 2(ab+ac+bc) — každý typ obdĺžnikovej steny sa vyskytuje dvakrát.</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli kváder s rozmermi a,b,c a farebne/šrafovaním spáruj zhodné steny.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pre kváder V=abc a S=2(ab+ac+bc). Každý typ obdĺžnikovej steny sa vyskytuje dvakrát.</p>",
+        "model": "<strong>KONTROLA:</strong> Pre kváder V=abc a S=2(ab+ac+bc). Každý typ obdĺžnikovej steny sa vyskytuje dvakrát."
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -102,14 +110,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Povrch a objem - kváder“.",
         "model": "Pre kváder V=abc a S=2(ab+ac+bc). Každý typ obdĺžnikovej steny sa vyskytuje dvakrát."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli kváder s rozmermi a,b,c a farebne/šrafovaním spáruj zhodné steny.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pre kváder V=abc a S=2(ab+ac+bc). Každý typ obdĺžnikovej steny sa vyskytuje dvakrát.</p>",
-        "model": "<strong>KONTROLA:</strong> Pre kváder V=abc a S=2(ab+ac+bc). Každý typ obdĺžnikovej steny sa vyskytuje dvakrát."
       },
       {
         "id": "transfer",

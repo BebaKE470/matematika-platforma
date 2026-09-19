@@ -86,6 +86,14 @@ MathPlatform.registerModule({
         remember: 'ax²+bx+c = a(x−x₁)(x−x₂), kde x₁, x₂ sú korene rovnice ax²+bx+c=0.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Rozklad kvadratického trojčlena na súčin:</strong></p><div class="formula">ax² + bx + c = a(x − x₁)(x − x₂)<span class="formula-note">kde x₁, x₂ sú korene rovnice ax²+bx+c=0</span></div><p>Postup: nájdi korene, dosaď do vzorca, over roznásobením.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -134,14 +142,6 @@ MathPlatform.registerModule({
         success: 'Správne. 5²−3·5−10 = 25−15−10 = 0 — potvrdzuje, že x=5 je koreň a rozklad (x−5)(x+2) je správny.',
         hint: 'Dosaď x=5 do x²−3x−10 a vypočítaj.',
         reveal: '25−15−10 = 0.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Rozklad kvadratického trojčlena na súčin:</strong></p><div class="formula">ax² + bx + c = a(x − x₁)(x − x₂)<span class="formula-note">kde x₁, x₂ sú korene rovnice ax²+bx+c=0</span></div><p>Postup: nájdi korene, dosaď do vzorca, over roznásobením.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

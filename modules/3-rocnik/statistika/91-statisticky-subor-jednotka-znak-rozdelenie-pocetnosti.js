@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'Absolútna početnosť = počet výskytov. Relatívna početnosť = absolútna početnosť / celkový počet jednotiek.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Štatistický súbor</div><p class="term-rule">Množina skúmaných jednotiek.</p></div><div class="term-item no-symbol"><div class="term-name">Štatistická jednotka</div><p class="term-rule">Jeden prvok súboru.</p></div><div class="term-item no-symbol"><div class="term-name">Štatistický znak</div><p class="term-rule">Sledovaná vlastnosť (kvalitatívny — nečíselný, kvantitatívny — číselný).</p></div><div class="term-item no-symbol"><div class="term-name">Absolútna početnosť</div><p class="term-rule">Počet výskytov danej hodnoty.</p></div><div class="term-item no-symbol"><div class="term-name">Relatívna početnosť</div><p class="term-rule">Absolútna početnosť / celkový počet jednotiek.</p></div></div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -133,14 +141,6 @@ MathPlatform.registerModule({
         success: 'Správne. 8/40=0,2=20%.',
         hint: 'Vydeľ absolútnu početnosť (8) celkovým počtom (40) a preveď na percentá.',
         reveal: '8/40=0,2=20%.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Štatistický súbor</div><p class="term-rule">Množina skúmaných jednotiek.</p></div><div class="term-item no-symbol"><div class="term-name">Štatistická jednotka</div><p class="term-rule">Jeden prvok súboru.</p></div><div class="term-item no-symbol"><div class="term-name">Štatistický znak</div><p class="term-rule">Sledovaná vlastnosť (kvalitatívny — nečíselný, kvantitatívny — číselný).</p></div><div class="term-item no-symbol"><div class="term-name">Absolútna početnosť</div><p class="term-rule">Počet výskytov danej hodnoty.</p></div><div class="term-item no-symbol"><div class="term-name">Relatívna početnosť</div><p class="term-rule">Absolútna početnosť / celkový počet jednotiek.</p></div></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

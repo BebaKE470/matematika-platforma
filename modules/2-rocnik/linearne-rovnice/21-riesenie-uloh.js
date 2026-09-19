@@ -79,6 +79,13 @@ MathPlatform.registerModule({
         "html": "<p>Sčítacia, dosadzovacia aj porovnávacia metóda vedú pri správnom použití k rovnakému riešeniu; výber ovplyvňuje efektívnosť.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "concept-note",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Sčítacia, dosadzovacia aj porovnávacia metóda vedú pri správnom použití k rovnakému riešeniu; výber ovplyvňuje efektívnosť.</p>"
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -107,8 +114,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vyrieš y=x+2 a 2x+y=11 dosadením.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Sčítacia, dosadzovacia aj porovnávacia metóda vedú pri správnom použití k rovnakému riešeniu; výber ovplyvňuje efektívnosť.</p>",
-        "model": "<strong>KONTROLA:</strong> Sčítacia, dosadzovacia aj porovnávacia metóda vedú pri správnom použití k rovnakému riešeniu; výber ovplyvňuje efektívnosť."
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vyrieš y=x+2 a 2x+y=11 dosadením.</p>"
       },
       {
         "id": "transfer",

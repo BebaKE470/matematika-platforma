@@ -67,6 +67,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Zhrnutie postupu:</p><ol class="steps"><li>Skontroluj, ktoré členy (b, c) v rovnici chýbajú.</li><li>Zvoľ najrýchlejší postup — izolácia a odmocnenie (b=0), vyňatie x (c=0), alebo diskriminant a vzorec (všeobecný prípad, funguje vždy).</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -115,14 +123,6 @@ MathPlatform.registerModule({
         success: 'Správne. x=(4±6)/2, teda x=5 alebo x=−1 — kladné riešenie je 5.',
         hint: 'Použi vzorec x=(−b±√D)/(2a) s a=1, b=−4, c=−5.',
         reveal: 'x=(4±√36)/2=(4±6)/2, x=5 alebo x=−1.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie postupu:</p><ol class="steps"><li>Skontroluj, ktoré členy (b, c) v rovnici chýbajú.</li><li>Zvoľ najrýchlejší postup — izolácia a odmocnenie (b=0), vyňatie x (c=0), alebo diskriminant a vzorec (všeobecný prípad, funguje vždy).</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

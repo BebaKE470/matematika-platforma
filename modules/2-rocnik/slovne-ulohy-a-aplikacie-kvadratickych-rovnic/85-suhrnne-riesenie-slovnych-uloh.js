@@ -62,6 +62,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Zhrnutie postupu pri slovnej úlohe s kvadratickou rovnicou:</strong></p><ol class="steps"><li>Označ neznámu.</li><li>Prelož zadanie do rovnice.</li><li>Vyrieš rovnicu.</li><li>Over zmysluplnosť <span class="hl">každého</span> riešenia.</li></ol><p>Niektoré úlohy (napr. ekonomické) môžu mať aj dve zmysluplné riešenia.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -110,14 +118,6 @@ MathPlatform.registerModule({
         success: 'Správne. (x+3)²=64 → x+3=8 (kladný koreň) → x=5.',
         hint: 'Odmocni obe strany rovnice (x+3)²=64 a vyber kladné riešenie pre x+3.',
         reveal: 'x+3=±8, kladné riešenie x+3=8, teda x=5.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Zhrnutie postupu pri slovnej úlohe s kvadratickou rovnicou:</strong></p><ol class="steps"><li>Označ neznámu.</li><li>Prelož zadanie do rovnice.</li><li>Vyrieš rovnicu.</li><li>Over zmysluplnosť <span class="hl">každého</span> riešenia.</li></ol><p>Niektoré úlohy (napr. ekonomické) môžu mať aj dve zmysluplné riešenia.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

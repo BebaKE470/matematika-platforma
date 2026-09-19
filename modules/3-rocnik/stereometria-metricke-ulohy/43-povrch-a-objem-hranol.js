@@ -80,6 +80,14 @@ MathPlatform.registerModule({
         "html": "<div class=\"formula\">V = Sp·v<span class=\"formula-note\">S = 2Sp+Q — povrch tvorí dvojica podstáv a plášť.</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli hranol, označ podstavu, výšku a plášť.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Objem hranola je V=Sp·v. Povrch tvorí dvojica podstáv a plášť: S=2Sp+Q.</p>",
+        "model": "<strong>KONTROLA:</strong> Objem hranola je V=Sp·v. Povrch tvorí dvojica podstáv a plášť: S=2Sp+Q."
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -102,14 +110,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Povrch a objem – hranol“.",
         "model": "Objem hranola je V=Sp·v. Povrch tvorí dvojica podstáv a plášť: S=2Sp+Q."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli hranol, označ podstavu, výšku a plášť.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Objem hranola je V=Sp·v. Povrch tvorí dvojica podstáv a plášť: S=2Sp+Q.</p>",
-        "model": "<strong>KONTROLA:</strong> Objem hranola je V=Sp·v. Povrch tvorí dvojica podstáv a plášť: S=2Sp+Q."
       },
       {
         "id": "transfer",

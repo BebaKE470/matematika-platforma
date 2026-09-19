@@ -102,6 +102,13 @@ MathPlatform.registerModule({
         remember: "Funkcia = každému x priraď <span class=\"hl\">práve jednu</span> hodnotu y."
       },
       {
+        id: "notebook",
+        type: "notebook",
+        phase: "ZOŠIT",
+        title: "Zápis do zošita",
+        html: "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA</strong></p><p><strong>FUNKCIA</strong></p><p>Funkcia f je predpis, ktorý každému prvku x z množiny D priraďuje práve jeden prvok y.</p><p>Zapisujeme: y = f(x)</p><p><strong>x</strong> – argument (nezávislá premenná)<br><strong>y = f(x)</strong> – funkčná hodnota (závislá premenná)</p><p><strong>Definičný obor D(f)</strong> – množina všetkých hodnôt x, pre ktoré je funkcia definovaná.</p><p><strong>Obor hodnôt H(f)</strong> – množina všetkých hodnôt y = f(x), ktoré funkcia nadobúda.</p><p>Ak by niektorému x zodpovedali dve rôzne hodnoty y, nejde o funkciu.</p>"
+      },
+      {
         id: "is-function-check",
         type: "sortChoice",
         phase: "1. KROK",
@@ -244,14 +251,6 @@ MathPlatform.registerModule({
         title: "Jeden príklad, všetky pojmy",
         promptHtml: "Daná je funkcia f(x) = x² s definičným oborom D(f) = {−2, −1, 0, 1, 2}. Vlastnými slovami vysvetli, ako spolu súvisia pojmy <strong>argument</strong>, <strong>funkčná hodnota</strong>, <strong>definičný obor D(f)</strong>, <strong>obor hodnôt H(f)</strong> a <strong>graf funkcie</strong>. Vo vysvetlení uveď aspoň jednu konkrétnu dvojicu [x; f(x)] a napíš, akému bodu grafu by táto dvojica zodpovedala.",
         model: "Argument x je vstupná hodnota, napríklad x = −1. Funkčná hodnota f(−1) = (−1)² = 1 je hodnota, ktorú funkcia tomuto argumentu priradí. Definičný obor D(f) = {−2, −1, 0, 1, 2} je množina všetkých prípustných argumentov, obor hodnôt H(f) = {0, 1, 4} je množina všetkých funkčných hodnôt, ktoré funkcia skutočne nadobúda. Graf funkcie je množina všetkých bodov [x; f(x)] pre x z D(f) — dvojici x = −1, f(−1) = 1 zodpovedá v grafe bod [−1; 1]."
-      },
-      {
-        id: "notebook",
-        type: "notebook",
-        phase: "ZOŠIT",
-        title: "Zápis do zošita",
-        html: "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA</strong></p><p><strong>FUNKCIA</strong></p><p>Funkcia f je predpis, ktorý každému prvku x z množiny D priraďuje práve jeden prvok y.</p><p>Zapisujeme: y = f(x)</p><p><strong>x</strong> – argument (nezávislá premenná)<br><strong>y = f(x)</strong> – funkčná hodnota (závislá premenná)</p><p><strong>Definičný obor D(f)</strong> – množina všetkých hodnôt x, pre ktoré je funkcia definovaná.</p><p><strong>Obor hodnôt H(f)</strong> – množina všetkých hodnôt y = f(x), ktoré funkcia nadobúda.</p><p>Ak by niektorému x zodpovedali dve rôzne hodnoty y, nejde o funkciu.</p>",
-        model: "<strong>FUNKCIA</strong><br>Funkcia f je predpis, ktorý každému prvku x z množiny D priraďuje práve jeden prvok y.<br>Zapisujeme: y = f(x)<br>x – argument (nezávislá premenná); y = f(x) – funkčná hodnota (závislá premenná).<br>Definičný obor D(f) – množina všetkých hodnôt x, pre ktoré je funkcia definovaná.<br>Obor hodnôt H(f) – množina všetkých hodnôt y = f(x), ktoré funkcia nadobúda.<br>Ak by niektorému x zodpovedali dve rôzne hodnoty y, nejde o funkciu."
       },
       {
         id: "reflection",

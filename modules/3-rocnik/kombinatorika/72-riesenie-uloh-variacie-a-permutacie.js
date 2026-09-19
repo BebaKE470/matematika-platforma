@@ -67,6 +67,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="compare"><div><span class="mini-label">PERMUTÁCIA — VŠETKY n PRVKOV</span><p>Bez opakovania: n!</p><p>S opakovaním: n!/(n₁!·n₂!·...)</p></div><div><span class="mini-label">VARIÁCIA — ČASŤ, k Z n PRVKOV</span><p>Bez opakovania: n!/(n−k)!</p><p>S opakovaním: n^k</p></div></div><p>Vždy najprv over: všetky, alebo iba časť? Opakovanie povolené?</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -115,14 +123,6 @@ MathPlatform.registerModule({
         success: 'Správne. V\'(3,10)=10³=1000.',
         hint: 'Opakovanie je povolené — použi n^k.',
         reveal: '10³=1000.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="compare"><div><span class="mini-label">PERMUTÁCIA — VŠETKY n PRVKOV</span><p>Bez opakovania: n!</p><p>S opakovaním: n!/(n₁!·n₂!·...)</p></div><div><span class="mini-label">VARIÁCIA — ČASŤ, k Z n PRVKOV</span><p>Bez opakovania: n!/(n−k)!</p><p>S opakovaním: n^k</p></div></div><p>Vždy najprv over: všetky, alebo iba časť? Opakovanie povolené?</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

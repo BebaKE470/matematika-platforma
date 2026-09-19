@@ -80,6 +80,14 @@ MathPlatform.registerModule({
         "html": "<div class=\"formula\">V = (1/3)πr²v<span class=\"formula-note\">S = πr²+πrs; tvorivka s spĺňa s²=r²+v².</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli osový rez kužeľa a označ r, v a tvorivku s.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pre rotačný kužeľ V=(1/3)πr²v a S=πr²+πrs; tvorivka s spĺňa s²=r²+v².</p>",
+        "model": "<strong>KONTROLA:</strong> Pre rotačný kužeľ V=(1/3)πr²v a S=πr²+πrs; tvorivka s spĺňa s²=r²+v²."
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -102,14 +110,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Povrch a objem kužeľa“.",
         "model": "Pre rotačný kužeľ V=(1/3)πr²v a S=πr²+πrs; tvorivka s spĺňa s²=r²+v²."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli osový rez kužeľa a označ r, v a tvorivku s.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pre rotačný kužeľ V=(1/3)πr²v a S=πr²+πrs; tvorivka s spĺňa s²=r²+v².</p>",
-        "model": "<strong>KONTROLA:</strong> Pre rotačný kužeľ V=(1/3)πr²v a S=πr²+πrs; tvorivka s spĺňa s²=r²+v²."
       },
       {
         "id": "transfer",

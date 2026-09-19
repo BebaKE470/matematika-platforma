@@ -87,6 +87,14 @@ MathPlatform.registerModule({
         "html": "<p>Absolútnu hodnotu čísla <strong>x</strong> zapisujeme <strong>|x|</strong> a čítame „absolútna hodnota x“.</p><div class=\"formula\">|x| je vzdialenosť čísla x od nuly na číselnej osi.<span class=\"formula-note\">Preto nikdy nie je záporná.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLADY</span><p>|5| = 5, |−5| = 5, |0| = 0.</p></div>"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p><strong>Absolútna hodnota čísla x</strong> je jeho vzdialenosť od nuly na číselnej osi.</p><p>Zápis: <strong>|x|</strong>.</p><p>Platí: |x| ≥ 0; |5| = 5; |−5| = 5; |0| = 0.</p>",
+        "continueLabel": "Mám zapísané"
+      },
+      {
         "id": "abs1",
         "type": "choice",
         "phase": "OVER",
@@ -130,14 +138,6 @@ MathPlatform.registerModule({
         "answer": 0,
         "correct": "Opačné čísla −6 a 6 majú rovnakú vzdialenosť od nuly.",
         "hint": "Predstav si body na číselnej osi a porovnaj ich vzdialenosť od nuly."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>Absolútna hodnota čísla x</strong> je jeho vzdialenosť od nuly na číselnej osi.</p><p>Zápis: <strong>|x|</strong>.</p><p>Platí: |x| ≥ 0; |5| = 5; |−5| = 5; |0| = 0.</p>",
-        "continueLabel": "Mám zapísané"
       },
       {
         "id": "error",

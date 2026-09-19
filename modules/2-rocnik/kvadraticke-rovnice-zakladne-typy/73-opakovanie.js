@@ -65,6 +65,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Rýdzo kvadratická</div><p class="term-rule">b=0 — izolácia x²</p></div><div class="term-item no-symbol"><div class="term-name">Bez absolútneho člena</div><p class="term-rule">c=0 — vyňatie x</p></div><div class="term-item no-symbol"><div class="term-name">Úplná</div><p class="term-rule">D=b²−4ac, vzorec x=(−b±√D)/(2a)</p></div></div><p>Vždy najprv rozpoznaj typ, potom zvoľ postup.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -113,14 +121,6 @@ MathPlatform.registerModule({
         success: 'Správne. D = 2² − 4·1·(−8) = 4 + 32 = 36.',
         hint: 'D=b²−4ac; pozor na znamienko pri c=−8.',
         reveal: 'D = 4 − 4·1·(−8) = 4+32 = 36.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Rýdzo kvadratická</div><p class="term-rule">b=0 — izolácia x²</p></div><div class="term-item no-symbol"><div class="term-name">Bez absolútneho člena</div><p class="term-rule">c=0 — vyňatie x</p></div><div class="term-item no-symbol"><div class="term-name">Úplná</div><p class="term-rule">D=b²−4ac, vzorec x=(−b±√D)/(2a)</p></div></div><p>Vždy najprv rozpoznaj typ, potom zvoľ postup.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

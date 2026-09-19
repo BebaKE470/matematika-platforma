@@ -81,6 +81,14 @@ MathPlatform.registerModule({
         "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Obdĺžnik má strany a = 9 cm a b = 4 cm.</p><p>S = a·b = 9·4 = <strong>36 cm²</strong></p><p>o = 2(a+b) = 2·13 = <strong>26 cm</strong></p></div>"
       },
       {
+        "id": "clean",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Obvod a obsah obdĺžnika",
+        "html": "<p><strong>TEÓRIA:</strong> S=a·b, o=2(a+b).</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
+        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
+      },
+      {
         "id": "meaning",
         "type": "explain",
         "phase": "VÝZNAM",
@@ -135,14 +143,6 @@ MathPlatform.registerModule({
         "answer": 1,
         "correct": "Výsledok musí byť interpretovaný v kontexte a mať správnu jednotku.",
         "hint": "Matematický výsledok treba vrátiť do zadania."
-      },
-      {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Obvod a obsah obdĺžnika",
-        "html": "<p><strong>TEÓRIA:</strong> S=a·b, o=2(a+b).</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
-        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
       },
       {
         "id": "reflection",

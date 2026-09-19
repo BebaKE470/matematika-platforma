@@ -68,6 +68,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Pri riešení kombinatorickej úlohy najprv rozhodni: ide o nezávislé voľby (pravidlo súčinu), alebo o usporiadanie <span class="hl">všetkých</span> prvkov danej skupiny (faktoriál)? Niekedy je potrebné oba nástroje skombinovať (napr. usporiadanie s dodatočným obmedzením).</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -116,14 +124,6 @@ MathPlatform.registerModule({
         success: 'Správne. 26·26=676 kombinácií pre dve písmená (základ pre celý výpočet ŠPZ).',
         hint: 'Vynásob 26 dvakrát (raz za každé písmeno).',
         reveal: '26·26=676.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pri riešení kombinatorickej úlohy najprv rozhodni: ide o nezávislé voľby (pravidlo súčinu), alebo o usporiadanie <span class="hl">všetkých</span> prvkov danej skupiny (faktoriál)? Niekedy je potrebné oba nástroje skombinovať (napr. usporiadanie s dodatočným obmedzením).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

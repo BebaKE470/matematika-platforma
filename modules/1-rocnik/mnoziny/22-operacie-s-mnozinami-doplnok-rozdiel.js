@@ -88,6 +88,14 @@ MathPlatform.registerModule({
         "continueLabel": "Pokračovať"
       },
       {
+        "id": "notebook-1",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p><strong>Rozdiel A − B</strong> tvoria prvky, ktoré patria do A, ale nepatria do B.</p><p>Príklad: A={1,2,3,4}, B={3,4,5}. Potom A−B={1,2}. Na poradí záleží — A−B vo všeobecnosti nie je to isté ako B−A.</p>",
+        "continueLabel": "Mám zapísané"
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -111,12 +119,12 @@ MathPlatform.registerModule({
         "remember": "Bez určenej univerzálnej množiny nemusí byť doplnok jednoznačný."
       },
       {
-        "id": "notebook",
+        "id": "notebook-2",
         "type": "notebook",
         "phase": "ZOŠIT",
-        "title": "Upevni si podstatu",
-        "html": "<p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš názov témy: <strong>Operácie s množinami – doplnok, rozdiel</strong>. Pridaj definíciu alebo pravidlo vlastnými slovami a jeden správny príklad.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor vlastný príklad a vyrieš ho bez aplikácie.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis musí používať presné symboly a musí byť z neho jasné, prečo výsledok platí."
+        "title": "Toto si zapíš do zošita",
+        "html": "<p><strong>Doplnok množiny A</strong> (vzhľadom na univerzálnu množinu U) tvoria všetky prvky U, ktoré do A nepatria. Zapisujeme <strong>A′</strong>.</p><p>Príklad: U={1,2,3,4,5}, A={1,2}. Potom A′={3,4,5}.</p>",
+        "continueLabel": "Mám zapísané"
       },
       {
         "id": "explain",

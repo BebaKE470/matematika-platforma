@@ -79,6 +79,14 @@ MathPlatform.registerModule({
         remember: 'Pri odčítaní mnohočlena v zátvorke zmeň znamienko každého jeho člena.',
       },
       {
+        id: 'notebook-1',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Pri sčítaní/odčítaní mnohočlenov spájame podobné členy. Pri odčítaní zátvorky zmeníme znamienko <strong>každého</strong> jej člena.</p><p>Príklad: (3x+2) − (x−5) = 3x+2−x+5 = 2x+7.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-add',
         type: 'choice',
         phase: 'OVER SI',
@@ -124,6 +132,14 @@ MathPlatform.registerModule({
         remember: 'a(b + c) = ab + ac — jednočlenom násobíme každý člen mnohočlena.',
       },
       {
+        id: 'notebook-2',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Násobenie jednočlenom: <strong>a(b + c) = ab + ac</strong> — vynásobíme každý člen.</p><p>Príklad: 2x(3x−1) = 6x² − 2x.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-multiply',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -146,14 +162,6 @@ MathPlatform.registerModule({
         success: 'Správne. 4x(x−2) = 4x² − 8x, pre x=3: 4·9 − 8·3 = 36 − 24 = 12.',
         hint: 'Dosaď x = 3 priamo do pôvodného výrazu 4·3·(3−2) a vypočítaj.',
         reveal: '4·3·(3−2) = 12·1 = 12.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pri sčítaní/odčítaní mnohočlenov spájame podobné členy. Pri odčítaní zátvorky zmeníme znamienko <strong>každého</strong> jej člena.</p><p>Násobenie jednočlenom: <strong>a(b + c) = ab + ac</strong> — vynásobíme každý člen.</p><p>Príklad: (3x+2) − (x−5) = 3x+2−x+5 = 2x+7. Príklad: 2x(3x−1) = 6x² − 2x.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

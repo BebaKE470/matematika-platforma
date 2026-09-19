@@ -84,6 +84,14 @@ MathPlatform.registerModule({
         remember: 'Rovnaký postup ako pri iných iracionálnych rovniciach: umocni, vyrieš, over zmysluplnosť voči kontextu (kladná dĺžka/výška).',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Iracionálne rovnice sa objavujú aj v geometrii (Pytagorova veta: √(a²+b²)=c) a vo fyzike (voľný pád: t=√(h/5) pri g≈10 m/s²).</p><p>Postup riešenia je rovnaký:</p><ol class="steps"><li>Izoluj odmocninu.</li><li>Umocni.</li><li>Vyrieš.</li><li>Over zmysluplnosť riešenia (dĺžka aj výška musia byť kladné).</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-geometry',
         type: 'choice',
         phase: 'OVER SI',
@@ -132,14 +140,6 @@ MathPlatform.registerModule({
         success: 'Správne. √(h/5)=5 → h/5=25 → h=125.',
         hint: 'Umocni obe strany rovnice √(h/5)=5 a vyrieš pre h.',
         reveal: 'h/5=25, h=125.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Iracionálne rovnice sa objavujú aj v geometrii (Pytagorova veta: √(a²+b²)=c) a vo fyzike (voľný pád: t=√(h/5) pri g≈10 m/s²).</p><p>Postup riešenia je rovnaký:</p><ol class="steps"><li>Izoluj odmocninu.</li><li>Umocni.</li><li>Vyrieš.</li><li>Over zmysluplnosť riešenia (dĺžka aj výška musia byť kladné).</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

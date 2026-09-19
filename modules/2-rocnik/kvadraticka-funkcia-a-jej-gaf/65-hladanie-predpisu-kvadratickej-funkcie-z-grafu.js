@@ -84,6 +84,14 @@ MathPlatform.registerModule({
         remember: 'Dosaď vrchol do y=a(x−x_v)²+y_v, potom dosaď ďalší bod a vyrieš rovnicu pre a.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="formula">y = a(x−x_v)² + y_v<span class="formula-note">Vrcholový tvar predpisu.</span></div><ol class="steps"><li>Dosaď súradnice vrcholu.</li><li>Dosaď súradnice ďalšieho známeho bodu.</li><li>Vyrieš vzniknutú rovnicu pre a.</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'visual-example',
         type: 'coordinatePlot',
         phase: 'VIZUALIZÁCIA',
@@ -144,14 +152,6 @@ MathPlatform.registerModule({
         success: 'Správne. 11 = a·2² + 3 = 4a+3, teda 4a=8, a=2.',
         hint: 'Dosaď bod [2,11] do y=a·x²+3 a vyrieš pre a.',
         reveal: '11 = 4a + 3, a = 2.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula">y = a(x−x_v)² + y_v<span class="formula-note">Vrcholový tvar predpisu.</span></div><ol class="steps"><li>Dosaď súradnice vrcholu.</li><li>Dosaď súradnice ďalšieho známeho bodu.</li><li>Vyrieš vzniknutú rovnicu pre a.</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

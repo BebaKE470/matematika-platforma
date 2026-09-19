@@ -72,6 +72,14 @@ MathPlatform.registerModule({
         "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Povrch</div><p class=\"term-rule\">Modeluje množstvo materiálu na pokrytie.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Objem</div><p class=\"term-rule\">Modeluje kapacitu alebo priestor vo vnútri.</p></div></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pri troch situáciách (náter, naplnenie, obal) napíš, či potrebuješ S alebo V.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Povrch modeluje množstvo materiálu na pokrytie; objem kapacitu alebo priestor vo vnútri.</p>",
+        "model": "<strong>KONTROLA:</strong> Povrch modeluje množstvo materiálu na pokrytie; objem kapacitu alebo priestor vo vnútri."
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -94,14 +102,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Riešenie úloh“.",
         "model": "Povrch modeluje množstvo materiálu na pokrytie; objem kapacitu alebo priestor vo vnútri."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pri troch situáciách (náter, naplnenie, obal) napíš, či potrebuješ S alebo V.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Povrch modeluje množstvo materiálu na pokrytie; objem kapacitu alebo priestor vo vnútri.</p>",
-        "model": "<strong>KONTROLA:</strong> Povrch modeluje množstvo materiálu na pokrytie; objem kapacitu alebo priestor vo vnútri."
       },
       {
         "id": "transfer",

@@ -63,6 +63,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Krátenie</div><p class="term-rule">Rozlož, potom kráť činiteľ.</p></div><div class="term-item no-symbol"><div class="term-name">Sčítanie a odčítanie</div><p class="term-rule">Spoločný menovateľ, potom sčítaj/odčítaj čitatele.</p></div></div><p>Vždy over, či sa dá výraz naozaj rozložiť na súčin skôr, než skrátiš.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -122,14 +130,6 @@ MathPlatform.registerModule({
         success: 'Správne. (x²−9)/(x+3) = x−3 (pre x≠−3), pre x=5: 5−3 = 2.',
         hint: 'Rozlož čitateľa ako (x−3)(x+3) a vykráť (x+3).',
         reveal: '(x²−9)/(x+3) = x−3, pre x=5: 2.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Krátenie</div><p class="term-rule">Rozlož, potom kráť činiteľ.</p></div><div class="term-item no-symbol"><div class="term-name">Sčítanie a odčítanie</div><p class="term-rule">Spoločný menovateľ, potom sčítaj/odčítaj čitatele.</p></div></div><p>Vždy over, či sa dá výraz naozaj rozložiť na súčin skôr, než skrátiš.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

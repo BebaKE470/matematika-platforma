@@ -81,6 +81,13 @@ MathPlatform.registerModule({
         "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">NSD</div><p class=\"term-rule\">Najväčší spoločný deliteľ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">NSN</div><p class=\"term-rule\">Najmenší kladný spoločný násobok.</p></div></div><p>Prvočíselný rozklad pomáha oba určiť.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>NSD a NSN čísel 12 a 30:</p><p>12 = 2² · 3, 30 = 2 · 3 · 5</p><p>NSD berie <strong>najmenšiu</strong> mocninu každého spoločného prvočísla: 2¹ · 3¹ = <strong>6</strong>.</p><p>NSN berie <strong>najväčšiu</strong> mocninu každého prvočísla, ktoré sa vyskytuje aspoň raz: 2² · 3 · 5 = <strong>60</strong>.</p></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "notebook-rule",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>NSD je najväčší spoločný deliteľ; NSN najmenší kladný spoločný násobok. Prvočíselný rozklad pomáha oba určiť.</p>"
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -109,7 +116,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Rozlož 36 a 48 na prvočinitele a vyznač spoločné faktory.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>NSD je najväčší spoločný deliteľ; NSN najmenší kladný spoločný násobok. Prvočíselný rozklad pomáha oba určiť.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Rozlož 36 a 48 na prvočinitele a vyznač spoločné faktory.</p>",
         "model": "<strong>KONTROLA:</strong> NSD je najväčší spoločný deliteľ; NSN najmenší kladný spoločný násobok. Prvočíselný rozklad pomáha oba určiť."
       },
       {

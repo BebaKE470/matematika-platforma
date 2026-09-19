@@ -89,8 +89,8 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Súčtové vzorce",
-        "html": "<p>Vzorce pre sin(α±β) a cos(α±β) umožňujú pracovať so súčtom a rozdielom uhlov. Najprv si ujasníme štruktúru vzorca, potom počítame.</p><div class=\"formula\">sin(α + β) = sin α·cos β + cos α·sin β</div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>sin 75° = sin(45° + 30°) = sin 45°·cos 30° + cos 45°·sin 30°</p><p>= (√2/2)·(√3/2) + (√2/2)·(1/2) = (√6 + √2)/4</p></div>",
-        "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
+        "html": "<p>Vzorce pre sin(α±β) a cos(α±β) umožňujú pracovať so súčtom a rozdielom uhlov. Najprv si ujasníme štruktúru vzorca, potom počítame.</p><div class=\"formula\">sin(α + β) = sin α·cos β + cos α·sin β</div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>sin 75° = sin(45° + 30°) = sin 45°·cos 30° + cos 45°·sin 30°</p><p>= (√2/2)·(√3/2) + (√2/2)·(1/2) = (√6 + √2)/4</p></div><p>Ostatné tri súčtové vzorce majú rovnakú stavbu, iba so zmeneným znamienkom alebo funkciou:</p><div class=\"formula\">sin(α − β) = sin α·cos β − cos α·sin β</div><div class=\"formula\">cos(α + β) = cos α·cos β − sin α·sin β</div><div class=\"formula\">cos(α − β) = cos α·cos β + sin α·sin β</div><p>Všimni si vzor: pri <strong>sin</strong> ostáva znamienko rovnaké, aké je v zátvorke; pri <strong>cos</strong> sa vždy zmení na opačné.</p>",
+        "remember": "sin(α±β): znamienko ostáva rovnaké. cos(α±β): znamienko sa mení na opačné."
       },
       {
         "id": "visual",
@@ -98,6 +98,14 @@ MathPlatform.registerModule({
         "phase": "VIZUALIZÁCIA",
         "title": "Opora v reprezentácii",
         "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 520 360\" role=\"img\" aria-label=\"Jednotková kružnica\"><line x1=\"50\" y1=\"180\" x2=\"470\" y2=\"180\" class=\"plot-axis\"/><line x1=\"260\" y1=\"25\" x2=\"260\" y2=\"335\" class=\"plot-axis\"/><circle cx=\"260\" cy=\"180\" r=\"125\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><circle cx=\"385\" cy=\"180\" r=\"6\" class=\"plot-point\"/><circle cx=\"260\" cy=\"55\" r=\"6\" class=\"plot-point\"/><circle cx=\"135\" cy=\"180\" r=\"6\" class=\"plot-point\"/><circle cx=\"260\" cy=\"305\" r=\"6\" class=\"plot-point\"/><text x=\"392\" y=\"174\" class=\"plot-point-label\">0, 2π</text><text x=\"270\" y=\"48\" class=\"plot-point-label\">π/2</text><text x=\"105\" y=\"174\" class=\"plot-point-label\">π</text><text x=\"270\" y=\"325\" class=\"plot-point-label\">3π/2</text><text x=\"445\" y=\"170\" class=\"plot-axis-name\">x</text><text x=\"270\" y=\"38\" class=\"plot-axis-name\">y</text></svg></div>"
+      },
+      {
+        "id": "clean",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Súčtové vzorce",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Súčtové vzorce</strong></p><div class=\"formula\">sin(α + β) = sin α·cos β + cos α·sin β<br>sin(α − β) = sin α·cos β − cos α·sin β<br>cos(α + β) = cos α·cos β − sin α·sin β<br>cos(α − β) = cos α·cos β + sin α·sin β</div>",
+        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {
         "id": "check",
@@ -146,14 +154,6 @@ MathPlatform.registerModule({
         "answer": 2,
         "correct": "Najprv rozpoznaj matematickú štruktúru úlohy.",
         "hint": "Formát testu nemení matematiku."
-      },
-      {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Súčtové vzorce",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Súčtové vzorce</strong></p><div class=\"formula\">sin(α + β) = sin α·cos β + cos α·sin β<br>sin(α − β) = sin α·cos β − cos α·sin β<br>cos(α + β) = cos α·cos β − sin α·sin β<br>cos(α − β) = cos α·cos β + sin α·sin β</div>",
-        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {
         "id": "reflection",

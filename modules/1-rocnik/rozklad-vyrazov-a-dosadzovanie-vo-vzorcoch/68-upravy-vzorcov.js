@@ -86,6 +86,14 @@ MathPlatform.registerModule({
         remember: 'Úprava vzorca = rovnaká operácia na oboch stranách rovnosti, ako pri riešení rovnice.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Vzorec upravujeme rovnakou operáciou na oboch stranách rovnosti (rovnako ako pri riešení rovnice).</p><p>Príklad: zo S = a·b vyjadríme b = S:a (delenie ako opak násobenia). Zo o = 2(a+b) vyjadríme a = o:2 − b (najprv delenie, potom odčítanie).</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -157,14 +165,6 @@ MathPlatform.registerModule({
         success: 'Správne. t = s:v = 240:60 = 4 hodiny.',
         hint: 'Najprv vyjadri t = s:v, potom dosaď zadané čísla.',
         reveal: 't = s:v = 240:60 = 4 hodiny.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Vzorec upravujeme rovnakou operáciou na oboch stranách rovnosti (rovnako ako pri riešení rovnice).</p><p>Príklad: zo S = a·b vyjadríme b = S:a (delenie ako opak násobenia). Zo o = 2(a+b) vyjadríme a = o:2 − b (najprv delenie, potom odčítanie).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

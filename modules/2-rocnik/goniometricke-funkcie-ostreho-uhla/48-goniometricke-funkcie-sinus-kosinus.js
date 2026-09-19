@@ -86,6 +86,14 @@ MathPlatform.registerModule({
         remember: 'sin α = protiľahlá/prepona. cos α = priľahlá/prepona.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>V pravouhlom trojuholníku s ostrým uhlom α: <strong>sin α = protiľahlá odvesna / prepona</strong>, <strong>cos α = priľahlá odvesna / prepona</strong>.</p><p>Hodnota sin α aj cos α závisí iba od veľkosti uhla α (nie od veľkosti trojuholníka), lebo trojuholníky s rovnakým uhlom sú podobné.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-sin',
         type: 'choice',
         phase: 'OVER SI',
@@ -149,14 +157,6 @@ MathPlatform.registerModule({
         success: 'Správne. sin α = 6/10 = 0,6.',
         hint: 'Vydeľ protiľahlú odvesnu preponou.',
         reveal: 'sin α = 6/10 = 0,6.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>V pravouhlom trojuholníku s ostrým uhlom α: <strong>sin α = protiľahlá odvesna / prepona</strong>, <strong>cos α = priľahlá odvesna / prepona</strong>.</p><p>Hodnota sin α aj cos α závisí iba od veľkosti uhla α (nie od veľkosti trojuholníka), lebo trojuholníky s rovnakým uhlom sú podobné.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

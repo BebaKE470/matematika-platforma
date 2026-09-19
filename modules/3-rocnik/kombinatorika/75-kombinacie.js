@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'Kombinácia (poradie nezáleží): C(k,n)=(n nad k)=n!/(k!(n−k)!). Vzťah: V(k,n)=C(k,n)·k!.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Kombinácia k-tej triedy z n prvkov:</strong> výber k prvkov z n <span class="hl">bez ohľadu na poradie</span>. Počet: C(k,n)=(n nad k)=n!/(k!(n−k)!). Vzťah k variácii: V(k,n)=C(k,n)·k!. Kľúčová otázka pri rozlíšení: záleží na poradí výberu? Áno → variácia. Nie → kombinácia.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-recognize',
         type: 'choice',
         phase: 'OVER SI',
@@ -133,14 +141,6 @@ MathPlatform.registerModule({
         success: 'Správne. (6 nad 2)=6!/(2!·4!)=6·5/2=15.',
         hint: 'Vypočítaj V(2,6)=6·5=30, potom vydeľ 2!=2.',
         reveal: '6·5/2=15.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Kombinácia k-tej triedy z n prvkov:</strong> výber k prvkov z n <span class="hl">bez ohľadu na poradie</span>. Počet: C(k,n)=(n nad k)=n!/(k!(n−k)!). Vzťah k variácii: V(k,n)=C(k,n)·k!. Kľúčová otázka pri rozlíšení: záleží na poradí výberu? Áno → variácia. Nie → kombinácia.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

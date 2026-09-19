@@ -87,6 +87,14 @@ MathPlatform.registerModule({
         "html": "<p>Pri dvoch intervaloch si ich najprv predstav alebo zakresli na tú istú číselnú os.</p><p><strong>A ∩ B</strong>: nechaj iba spoločnú časť.<br><strong>A ∪ B</strong>: vezmi všetko, čo pokrýva A alebo B.</p><p>Pri krajných bodoch vždy skontroluj, či do výsledku patria.</p>"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p><strong>A ∩ B</strong> – prienik: čísla, ktoré patria do A aj do B.</p><p><strong>A ∪ B</strong> – zjednotenie: čísla, ktoré patria do A alebo do B (aspoň do jedného).</p><p>Postup: zakresli oba intervaly → nájdi spoločnú/celú pokrytú časť → skontroluj krajné body → zapíš výsledok.</p>",
+        "continueLabel": "Mám zapísané"
+      },
+      {
         "id": "intersection",
         "type": "choice",
         "phase": "OVER",
@@ -145,14 +153,6 @@ MathPlatform.registerModule({
         "answer": 2,
         "correct": "Presne. Spoločný bod musí patriť do oboch množín; tu 2 do B nepatrí.",
         "hint": "Pri prieniku nestačí, že sa konce stretnú. Bod musí patriť do oboch intervalov."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>A ∩ B</strong> – prienik: čísla, ktoré patria do A aj do B.</p><p><strong>A ∪ B</strong> – zjednotenie: čísla, ktoré patria do A alebo do B (aspoň do jedného).</p><p>Postup: zakresli oba intervaly → nájdi spoločnú/celú pokrytú časť → skontroluj krajné body → zapíš výsledok.</p>",
-        "continueLabel": "Mám zapísané"
       },
       {
         "id": "argument",

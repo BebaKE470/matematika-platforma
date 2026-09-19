@@ -49,6 +49,7 @@
 .print-mark-cell { text-align: center; width: 50px; }
 .print-blank-cell { width: 40%; }
 .print-reflection-table th:not(:first-child) { text-align: center; width: 50px; }
+.print-legend { color: var(--muted); font-size: .88rem; margin: 4px 0 8px; }
 
 .print-lines { margin: 6px 0; height: calc(2 * 1.7em); background-image: repeating-linear-gradient(to bottom, transparent, transparent calc(1.7em - 1px), var(--line) calc(1.7em - 1px), var(--line) 1.7em); }
 .print-answer-line { display: flex; align-items: baseline; gap: 8px; margin: 6px 0; }

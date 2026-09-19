@@ -67,6 +67,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Zhrnutie: absolútna/relatívna početnosť, priemer, medián, modus (charakteristiky polohy), variačné rozpätie, rozptyl, smerodajná odchýlka (charakteristiky variability). Priemer aj charakteristiky variability sa vždy dopĺňajú — samotný priemer nestačí na plný opis súboru.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -115,14 +123,6 @@ MathPlatform.registerModule({
         success: 'Správne. Súčet mocnín=9+1+1+9=20, rozptyl=20/4=5.',
         hint: 'Súčet mocnín=9+1+1+9=20, vydeľ počtom hodnôt (4).',
         reveal: '20/4=5.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie: absolútna/relatívna početnosť, priemer, medián, modus (charakteristiky polohy), variačné rozpätie, rozptyl, smerodajná odchýlka (charakteristiky variability). Priemer aj charakteristiky variability sa vždy dopĺňajú — samotný priemer nestačí na plný opis súboru.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

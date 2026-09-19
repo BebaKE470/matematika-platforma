@@ -76,20 +76,20 @@ MathPlatform.registerModule({
         "hint": "Nakresli si malý diagram alebo vypíš prvky."
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p>Pri úlohách typu „koľko je aspoň v jednej z dvoch množín“ platí:</p><div class=\"formula\">|A ∪ B| = |A| + |B| − |A ∩ B|</div><p>Spoločné prvky (A∩B) sa v súčte |A|+|B| započítajú dvakrát, preto ich raz odčítame.</p><p>Príklad: 12 žiakov hrá futbal, 8 volejbal, 3 oboje → 12 + 8 − 3 = 17 žiakov hrá aspoň jeden šport.</p>",
+        "continueLabel": "Mám zapísané"
+      },
+      {
         "id": "logiclink",
         "type": "explain",
         "phase": "SÚVISLOSŤ",
         "title": "Spojenie s výrokovou logikou",
         "html": "<p><strong>x ∈ A ∩ B</strong> znamená: x∈A <strong>a zároveň</strong> x∈B. <strong>x ∈ A ∪ B</strong> znamená: x∈A <strong>alebo</strong> x∈B (aspoň jedna z možností).</p>",
         "remember": "Prienik ↔ a zároveň. Zjednotenie ↔ alebo."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Upevni si podstatu",
-        "html": "<p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš názov témy: <strong>Riešenie úloh</strong>. Pridaj definíciu alebo pravidlo vlastnými slovami a jeden správny príklad.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor vlastný príklad a vyrieš ho bez aplikácie.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis musí používať presné symboly a musí byť z neho jasné, prečo výsledok platí."
       },
       {
         "id": "explain",

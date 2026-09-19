@@ -92,6 +92,14 @@ MathPlatform.registerModule({
         "remember": "Pri delení alebo násobení záporným číslom sa znak nerovnosti vždy otočí — to je presne to, čo rovnica nepozná."
       },
       {
+        "id": "n1",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<div class=\"formula\"><span class=\"mini-label\">LINEÁRNE NEROVNICE</span>Ekvivalentné úpravy: na obe strany môžeme pripočítať alebo odčítať rovnaké číslo. Pri násobení alebo delení kladným číslom sa znak nemení. Pri násobení alebo delení záporným číslom sa znak nerovnosti otočí.</div><p>Riešenie zapisujeme ako množinu riešení, napr. <strong>x &lt; 4</strong>, teda <strong>(−∞; 4)</strong>.</p>",
+        "continueLabel": "Mám zapísané"
+      },
+      {
         "id": "c1",
         "type": "choice",
         "phase": "OVER",
@@ -120,14 +128,6 @@ MathPlatform.registerModule({
         "answer": 0,
         "correct": "Áno. Pri delení záporným číslom sa znak otočí.",
         "hint": "−2 je záporné číslo."
-      },
-      {
-        "id": "n1",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<div class=\"formula\"><span class=\"mini-label\">LINEÁRNE NEROVNICE</span>Ekvivalentné úpravy: na obe strany môžeme pripočítať alebo odčítať rovnaké číslo. Pri násobení alebo delení kladným číslom sa znak nemení. Pri násobení alebo delení záporným číslom sa znak nerovnosti otočí.</div><p>Riešenie zapisujeme ako množinu riešení, napr. <strong>x &lt; 4</strong>, teda <strong>(−∞; 4)</strong>.</p>",
-        "continueLabel": "Mám zapísané"
       },
       {
         "id": "c3",

@@ -84,6 +84,14 @@ MathPlatform.registerModule({
         remember: 'n! = n·(n−1)·...·2·1. Dohoda: 0! = 1.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Faktoriál:</strong> n! = n·(n−1)·(n−2)·...·2·1, pre prirodzené n. Dohoda: 0!=1. Faktoriál n! udáva počet spôsobov, ako usporiadať n rôznych prvkov do radu.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -132,14 +140,6 @@ MathPlatform.registerModule({
         success: 'Správne. 6!/4! = (6·5·4·3·2·1)/(4·3·2·1) = 6·5 = 30.',
         hint: 'Väčšina činiteľov v čitateli a menovateli sa skráti — zostane iba 6·5.',
         reveal: '6!/4! = 6·5 = 30.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Faktoriál:</strong> n! = n·(n−1)·(n−2)·...·2·1, pre prirodzené n. Dohoda: 0!=1. Faktoriál n! udáva počet spôsobov, ako usporiadať n rôznych prvkov do radu.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

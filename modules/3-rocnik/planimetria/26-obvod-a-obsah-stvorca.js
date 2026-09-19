@@ -81,6 +81,14 @@ MathPlatform.registerModule({
         "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Štvorec má stranu a = 6 cm.</p><p>S = a² = 6² = <strong>36 cm²</strong></p><p>o = 4a = 4·6 = <strong>24 cm</strong></p></div>"
       },
       {
+        "id": "clean",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Obvod a obsah štvorca",
+        "html": "<p><strong>TEÓRIA:</strong> S=a², o=4a.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
+        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
+      },
+      {
         "id": "meaning",
         "type": "explain",
         "phase": "VÝZNAM",
@@ -135,14 +143,6 @@ MathPlatform.registerModule({
         "answer": 3,
         "correct": "Výsledok musí byť interpretovaný v kontexte a mať správnu jednotku.",
         "hint": "Matematický výsledok treba vrátiť do zadania."
-      },
-      {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Obvod a obsah štvorca",
-        "html": "<p><strong>TEÓRIA:</strong> S=a², o=4a.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
-        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
       },
       {
         "id": "reflection",

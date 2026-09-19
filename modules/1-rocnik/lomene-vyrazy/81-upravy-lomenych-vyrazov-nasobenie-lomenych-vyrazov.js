@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'a/b · c/d = (ac)/(bd). Kráť pred násobením, ak je to možné.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="formula">a/b · c/d = (ac)/(bd)<span class="formula-note">Čitateľ krát čitateľ, menovateľ krát menovateľ.</span></div><p>Kráť pred násobením, ak je to možné — je to jednoduchšie a rýchlejšie ako krátiť až po vynásobení veľkých výrazov.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -133,14 +141,6 @@ MathPlatform.registerModule({
         success: 'Správne. (x/4)·(8/x) = 8x/(4x) = 2 (pre x≠0), bez ohľadu na hodnotu x.',
         hint: 'Najprv vynásob a skráť výraz — čo zostane po vykrátení x aj čísel 8 a 4?',
         reveal: '(x/4)·(8/x) = 2 pre každé x≠0, teda aj pre x=3.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula">a/b · c/d = (ac)/(bd)<span class="formula-note">Čitateľ krát čitateľ, menovateľ krát menovateľ.</span></div><p>Kráť pred násobením, ak je to možné — je to jednoduchšie a rýchlejšie ako krátiť až po vynásobení veľkých výrazov.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

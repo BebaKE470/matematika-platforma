@@ -84,6 +84,14 @@ MathPlatform.registerModule({
         remember: 'Maximum/minimum = najväčšia/najmenšia hodnota y, ktorú funkcia nadobúda.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Maximum</strong> funkcie f na množine M je najväčšia hodnota, ktorú f na M nadobúda.</p><p><strong>Minimum</strong> funkcie f na množine M je najmenšia hodnota, ktorú f na M nadobúda.</p><p>Maximum aj minimum sú hodnoty y (funkčné hodnoty), nikdy nie hodnoty x.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-max',
         type: 'choice',
         phase: 'OVER SI',
@@ -130,14 +138,6 @@ MathPlatform.registerModule({
         answer: 2,
         correct: 'Správne. Najväčšia funkčná hodnota je 8, dosiahnutá pri x=2.',
         hint: 'Nájdi najväčšiu z hodnôt y, potom zisti, pri ktorom x sa dosahuje.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Maximum</strong> funkcie f na množine M je najväčšia hodnota, ktorú f na M nadobúda.</p><p><strong>Minimum</strong> funkcie f na množine M je najmenšia hodnota, ktorú f na M nadobúda.</p><p>Maximum aj minimum sú hodnoty y (funkčné hodnoty), nikdy nie hodnoty x.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

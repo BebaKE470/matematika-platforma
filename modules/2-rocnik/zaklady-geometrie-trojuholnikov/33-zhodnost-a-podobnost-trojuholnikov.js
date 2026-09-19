@@ -86,6 +86,14 @@ MathPlatform.registerModule({
         remember: 'Zhodnosť: sss, sus, usu. Podobnosť: sss, sus, uu. Koeficient podobnosti k = pomer zodpovedajúcich strán.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Zhodnosť trojuholníkov</div><p class="term-rule">(rovnaký tvar aj veľkosť): vety sss, sus, usu.</p></div><div class="term-item no-symbol"><div class="term-name">Podobnosť trojuholníkov</div><p class="term-rule">(rovnaký tvar, prípadne iná veľkosť): kritériá sss, sus, uu.</p></div></div><p><strong>Koeficient podobnosti k</strong> = pomer zodpovedajúcich strán podobných trojuholníkov.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-congruence',
         type: 'choice',
         phase: 'OVER SI',
@@ -136,14 +144,6 @@ MathPlatform.registerModule({
         answer: 0,
         correct: 'Správne. Slnečné lúče dopadajú pod rovnakým uhlom, preto sú oba trojuholníky (predmet-tieň) podobné a ich strany sú v rovnakom pomere.',
         hint: 'Rozmysli si, prečo majú oba trojuholníky (strom-tieň a palica-tieň) rovnaký uhol.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Zhodnosť trojuholníkov</div><p class="term-rule">(rovnaký tvar aj veľkosť): vety sss, sus, usu.</p></div><div class="term-item no-symbol"><div class="term-name">Podobnosť trojuholníkov</div><p class="term-rule">(rovnaký tvar, prípadne iná veľkosť): kritériá sss, sus, uu.</p></div></div><p><strong>Koeficient podobnosti k</strong> = pomer zodpovedajúcich strán podobných trojuholníkov.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

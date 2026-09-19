@@ -87,6 +87,14 @@ MathPlatform.registerModule({
         remember: 'a² − b² = (a − b)(a + b) — iba pri <span class="hl">rozdiele</span> druhých mocnín, nie pri súčte.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>a² − b² = (a − b)(a + b)</strong> — vzorec platí iba pre rozdiel (nie súčet) dvoch druhých mocnín.</p><p>Príklad: x² − 16 = (x−4)(x+4). Príklad so zložitejším a: 4x² − 9 = (2x)² − 3² = (2x−3)(2x+3).</p><p>Výsledok vždy over spätným roznásobením.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -135,14 +143,6 @@ MathPlatform.registerModule({
         success: 'Správne. x²−36 = (x−6)(x+6), pre x=8: (8−6)(8+6) = 2·14 = 28.',
         hint: 'Najprv rozlož na (x−6)(x+6), potom dosaď x=8.',
         reveal: '(8−6)(8+6) = 2·14 = 28.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>a² − b² = (a − b)(a + b)</strong> — vzorec platí iba pre rozdiel (nie súčet) dvoch druhých mocnín.</p><p>Príklad: x² − 16 = (x−4)(x+4). Príklad so zložitejším a: 4x² − 9 = (2x)² − 3² = (2x−3)(2x+3).</p><p>Výsledok vždy over spätným roznásobením.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

@@ -84,6 +84,14 @@ MathPlatform.registerModule({
         remember: 'Bez opakovania: V(k,n)=n!/(n−k)!. S opakovaním: V\'(k,n)=n^k.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Variácia k-tej triedy z n prvkov</strong> — usporiadaný výber, na poradí záleží. <strong>Bez opakovania:</strong> V(k,n)=n!/(n−k)!=n(n−1)...(n−k+1) (každý prvok najviac raz). <strong>S opakovaním:</strong> V\'(k,n)=n^k (prvky sa môžu opakovať).</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -132,14 +140,6 @@ MathPlatform.registerModule({
         success: 'Správne. 5·4·3=60.',
         hint: 'Na prvé miesto 5 možností, na druhé 4, na tretie 3 (bez opakovania).',
         reveal: '5·4·3=60.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Variácia k-tej triedy z n prvkov</strong> — usporiadaný výber, na poradí záleží. <strong>Bez opakovania:</strong> V(k,n)=n!/(n−k)!=n(n−1)...(n−k+1) (každý prvok najviac raz). <strong>S opakovaním:</strong> V\'(k,n)=n^k (prvky sa môžu opakovať).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

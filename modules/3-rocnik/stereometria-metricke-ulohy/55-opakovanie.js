@@ -71,6 +71,14 @@ MathPlatform.registerModule({
         "html": "<p>Namiesto izolovaného memorovania vzorcov hľadaj štruktúru.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Hranol, valec</div><p class=\"term-rule\">V = Sp · v</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Ihlan, kužeľ</div><p class=\"term-rule\">V = (1/3) · Sp · v</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Povrch (všeobecne)</div><p class=\"term-rule\">S = podstavy + plášť</p></div></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vytvor tabuľku: teleso – Sp – Q – S – V – potrebné rozmery.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Namiesto izolovaného memorovania vzorcov hľadaj štruktúru: hranol/valec Sp·v, ihlan/kužeľ tretina Sp·v, povrch = podstavy + plášť.</p>",
+        "model": "<strong>KONTROLA:</strong> Namiesto izolovaného memorovania vzorcov hľadaj štruktúru: hranol/valec Sp·v, ihlan/kužeľ tretina Sp·v, povrch = podstavy + plášť."
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -93,14 +101,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Opakovanie“.",
         "model": "Namiesto izolovaného memorovania vzorcov hľadaj štruktúru: hranol/valec Sp·v, ihlan/kužeľ tretina Sp·v, povrch = podstavy + plášť."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vytvor tabuľku: teleso – Sp – Q – S – V – potrebné rozmery.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Namiesto izolovaného memorovania vzorcov hľadaj štruktúru: hranol/valec Sp·v, ihlan/kužeľ tretina Sp·v, povrch = podstavy + plášť.</p>",
-        "model": "<strong>KONTROLA:</strong> Namiesto izolovaného memorovania vzorcov hľadaj štruktúru: hranol/valec Sp·v, ihlan/kužeľ tretina Sp·v, povrch = podstavy + plášť."
       },
       {
         "id": "transfer",

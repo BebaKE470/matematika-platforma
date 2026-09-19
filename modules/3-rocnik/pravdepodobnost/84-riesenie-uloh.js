@@ -66,6 +66,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<ol class="steps"><li>Presne urč, ktoré elementárne javy patria do A, do B a do A∩B.</li><li>Vypočítaj P(A), P(B), P(A∩B) so spoločným menovateľom.</li><li>Dosaď do P(A∪B)=P(A)+P(B)−P(A∩B) (alebo použi zjednodušený vzorec pre nezlučiteľné javy).</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -114,14 +122,6 @@ MathPlatform.registerModule({
         success: 'Správne. P(A∪B)=3/6+3/6−2/6=4/6.',
         hint: 'P(A)=3/6, P(B)=3/6, P(A∩B)=2/6 — dosaď do vzorca.',
         reveal: '3/6+3/6−2/6=4/6.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<ol class="steps"><li>Presne urč, ktoré elementárne javy patria do A, do B a do A∩B.</li><li>Vypočítaj P(A), P(B), P(A∩B) so spoločným menovateľom.</li><li>Dosaď do P(A∪B)=P(A)+P(B)−P(A∩B) (alebo použi zjednodušený vzorec pre nezlučiteľné javy).</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

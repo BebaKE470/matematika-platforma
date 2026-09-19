@@ -123,10 +123,15 @@
         ${a.note ? `<div class="notice">${a.note}</div>` : ''}
       </section>`;
     },
+    // The legend text below duplicates R.reflection's `levels` labels
+    // (core/renderers.js) on purpose — the interactive version shows them as
+    // button text, which doesn't exist on paper, so the meaning of each
+    // colour needs spelling out explicitly here. Keep the two in sync.
     reflection(a) {
       return `<section class="print-block print-reflection">
         <h2>${esc(a.title)}</h2>
         <p>${esc(a.prompt)}</p>
+        <p class="print-legend">🟢 Rozumiem a viem vysvetliť &nbsp;·&nbsp; 🟡 Asi rozumiem, potrebujem príklad &nbsp;·&nbsp; 🔴 Zatiaľ v tom nemám jasno</p>
         <table class="print-table print-reflection-table">
           <thead><tr><th>Zručnosť</th><th>🟢</th><th>🟡</th><th>🔴</th></tr></thead>
           <tbody>${a.skills.map(s => `<tr><td>${esc(s)}</td><td class="print-mark-cell"><span class="print-circle" aria-hidden="true"></span></td><td class="print-mark-cell"><span class="print-circle" aria-hidden="true"></span></td><td class="print-mark-cell"><span class="print-circle" aria-hidden="true"></span></td></tr>`).join('')}</tbody>

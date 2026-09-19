@@ -80,6 +80,13 @@ MathPlatform.registerModule({
         "html": "<p>Pri reálnych číslach platí poradie operácií; odhad pomáha zachytiť chybu znamienka alebo desatinnej čiarky.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Vypočítaj 5 + 3 · (−2).</p><p>Najprv násobenie: 3 · (−2) = −6</p><p>Potom sčítanie: 5 + (−6) = <strong>−1</strong></p></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "notebook-rule",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pri reálnych číslach platí poradie operácií; odhad pomáha zachytiť chybu znamienka alebo desatinnej čiarky.</p>"
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -108,7 +115,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pred presným výpočtom odhadni výsledok výrazu 19,8·5,1.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pri reálnych číslach platí poradie operácií; odhad pomáha zachytiť chybu znamienka alebo desatinnej čiarky.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pred presným výpočtom odhadni výsledok výrazu 19,8·5,1.</p>",
         "model": "<strong>KONTROLA:</strong> Pri reálnych číslach platí poradie operácií; odhad pomáha zachytiť chybu znamienka alebo desatinnej čiarky."
       },
       {

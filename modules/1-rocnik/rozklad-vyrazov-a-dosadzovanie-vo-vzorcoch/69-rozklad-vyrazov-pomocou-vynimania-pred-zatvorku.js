@@ -86,6 +86,14 @@ MathPlatform.registerModule({
         remember: 'ab + ac = a(b + c). Vyjmi <span class="hl">najväčší</span> spoločný činiteľ (číslo aj premennú).',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>ab + ac = a(b + c)</strong> — vyjmi najväčší spoločný číselný aj premenný činiteľ pred zátvorku.</p><p>Príklad: 6x² + 15x = 3x(2x + 5). Výsledok vždy over spätným roznásobením: 3x(2x+5) = 6x²+15x. ✓</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -149,14 +157,6 @@ MathPlatform.registerModule({
         success: 'Správne. 5x²+10x = 5x(x+2), pre x=2: 5·2·(2+2) = 10·4 = 40.',
         hint: 'Najprv rozlož výraz na 5x(x+2), potom dosaď x=2.',
         reveal: '5x(x+2) pre x=2: 10·4 = 40.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>ab + ac = a(b + c)</strong> — vyjmi najväčší spoločný číselný aj premenný činiteľ pred zátvorku.</p><p>Príklad: 6x² + 15x = 3x(2x + 5). Výsledok vždy over spätným roznásobením: 3x(2x+5) = 6x²+15x. ✓</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

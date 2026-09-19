@@ -59,6 +59,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Zhrnutie celku: zhodnosť (sss, sus, usu), podobnosť (sss, sus, uu, koeficient k), klasifikácia (strany: rovnostranný/rovnoramenný/rôznostranný; uhly: ostrouhlý/pravouhlý/tupouhlý), trojuholníková nerovnosť, radián (180°=π rad).</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -122,14 +130,6 @@ MathPlatform.registerModule({
         success: 'Správne. k = a\'/a = 15/5 = 3.',
         hint: 'Vydeľ stranu druhého trojuholníka stranou prvého.',
         reveal: 'k = 15/5 = 3.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie celku: zhodnosť (sss, sus, usu), podobnosť (sss, sus, uu, koeficient k), klasifikácia (strany: rovnostranný/rovnoramenný/rôznostranný; uhly: ostrouhlý/pravouhlý/tupouhlý), trojuholníková nerovnosť, radián (180°=π rad).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

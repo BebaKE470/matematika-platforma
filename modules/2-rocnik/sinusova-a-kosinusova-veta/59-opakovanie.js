@@ -62,6 +62,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Zhrnutie: sínusová veta pre pár strana-protiľahlý uhol, kosínusová veta pre dve strany a uhol medzi nimi (alebo tri strany bez uhla). Súčet uhlov trojuholníka je vždy 180°.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -110,14 +118,6 @@ MathPlatform.registerModule({
         success: 'Správne. 180°−40°−70°=70°.',
         hint: 'Súčet všetkých troch uhlov trojuholníka je 180°.',
         reveal: '180−40−70=70°.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie: sínusová veta pre pár strana-protiľahlý uhol, kosínusová veta pre dve strany a uhol medzi nimi (alebo tri strany bez uhla). Súčet uhlov trojuholníka je vždy 180°.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

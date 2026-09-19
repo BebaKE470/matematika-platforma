@@ -62,6 +62,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Funkcia</div><p class="term-rule">Jednoznačnosť priradenia.</p></div><div class="term-item no-symbol"><div class="term-name">D(f) / H(f)</div><p class="term-rule">Z tabuľky, predpisu, grafu.</p></div><div class="term-item no-symbol"><div class="term-name">Párna / nepárna</div><p class="term-rule">Porovnanie f(−x).</p></div><div class="term-item no-symbol"><div class="term-name">Rastúca / klesajúca</div><p class="term-rule">Porovnanie pri x₁&lt;x₂.</p></div><div class="term-item no-symbol"><div class="term-name">Extrémy</div><p class="term-rule">Najväčšia/najmenšia hodnota y.</p></div><div class="term-item no-symbol"><div class="term-name">Prostá</div><p class="term-rule">Rôzne x → rôzne y.</p></div><div class="term-item no-symbol"><div class="term-name">Ohraničená</div><p class="term-rule">Existencia hranice.</p></div></div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -116,14 +124,6 @@ MathPlatform.registerModule({
         answer: 0,
         correct: 'Presne. Hodnoty 1 a 2 majú rovnakú funkčnú hodnotu 4, čo porušuje definíciu prostej funkcie.',
         hint: 'Skontroluj, či sa niektorá funkčná hodnota opakuje.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Funkcia</div><p class="term-rule">Jednoznačnosť priradenia.</p></div><div class="term-item no-symbol"><div class="term-name">D(f) / H(f)</div><p class="term-rule">Z tabuľky, predpisu, grafu.</p></div><div class="term-item no-symbol"><div class="term-name">Párna / nepárna</div><p class="term-rule">Porovnanie f(−x).</p></div><div class="term-item no-symbol"><div class="term-name">Rastúca / klesajúca</div><p class="term-rule">Porovnanie pri x₁&lt;x₂.</p></div><div class="term-item no-symbol"><div class="term-name">Extrémy</div><p class="term-rule">Najväčšia/najmenšia hodnota y.</p></div><div class="term-item no-symbol"><div class="term-name">Prostá</div><p class="term-rule">Rôzne x → rôzne y.</p></div><div class="term-item no-symbol"><div class="term-name">Ohraničená</div><p class="term-rule">Existencia hranice.</p></div></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

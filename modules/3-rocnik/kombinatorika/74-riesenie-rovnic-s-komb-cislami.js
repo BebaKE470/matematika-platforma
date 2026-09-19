@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: '(n nad 2)=n(n−1)/2 → kvadratická rovnica pre n → zamietni neprirodzené/záporné riešenie → skúška.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<ol class="steps"><li>Rozpíš (n nad 2) = n(n−1)/2.</li><li>Zostav kvadratickú rovnicu n² − n − 2k = 0.</li><li>Vyrieš rovnicu.</li><li>Zamietni riešenie, ktoré nie je prirodzené číslo (alebo je menšie ako 2).</li><li>Over skúškou dosadením späť do (n nad 2).</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-expand',
         type: 'choice',
         phase: 'OVER SI',
@@ -133,14 +141,6 @@ MathPlatform.registerModule({
         success: 'Správne. D=1+168=169, √169=13, n=(1+13)/2=7 (n=−6 zamietame).',
         hint: 'Vypočítaj diskriminant rovnice n²−n−42=0 a vyber kladné celé riešenie.',
         reveal: 'n=(1±13)/2, platné riešenie n=7.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<ol class="steps"><li>Rozpíš (n nad 2) = n(n−1)/2.</li><li>Zostav kvadratickú rovnicu n² − n − 2k = 0.</li><li>Vyrieš rovnicu.</li><li>Zamietni riešenie, ktoré nie je prirodzené číslo (alebo je menšie ako 2).</li><li>Over skúškou dosadením späť do (n nad 2).</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

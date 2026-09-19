@@ -88,6 +88,13 @@ MathPlatform.registerModule({
         "ariaLabel": "Graf rastúcej funkcie f(x) = 2x + 1"
       },
       {
+        "id": "clean-a",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p><strong>TEÓRIA:</strong> Pre f(x)=ax+b: a&gt;0 rastúca, a&lt;0 klesajúca, a=0 konštantná.</p>"
+      },
+      {
         "id": "sign",
         "type": "choice",
         "phase": "OVER SI",
@@ -111,6 +118,13 @@ MathPlatform.registerModule({
         "title": "Priesečníky s osami a nulový bod",
         "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Priesečník s osou y</div><p class=\"term-rule\">Už ho poznáme: pri x=0 je to bod [0;b].</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nulový bod funkcie</div><p class=\"term-rule\">Hodnota x, pre ktorú f(x)=0. Graficky je to x-ová súradnica priesečníka grafu s osou x.</p></div></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Pre f(x)=2x−4 platí 2x−4=0, teda x=2.</p><p>Graf pretína os x v bode [2;0].</p></div>",
         "remember": "nulový bod hľadáme z podmienky f(x)=0."
+      },
+      {
+        "id": "clean-b",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p><strong>TEÓRIA:</strong> Bod [0;b] je priesečník s osou y. Nulový bod spĺňa f(x)=0.</p><p><strong>PRÍKLAD:</strong> f(x)=−2x+6 je klesajúca, pretína os y v [0;6] a os x v [3;0].</p>"
       },
       {
         "id": "zero-check",
@@ -164,14 +178,6 @@ MathPlatform.registerModule({
       {"id":"slope-change","type":"choice","phase":"INTERPRETUJ","skill":"smernica","stimulus":"f(x)=4x−7","question":"O koľko sa zmení f(x), keď x zväčšíme o 1?","options":["zväčší sa o 4","zmenší sa o 7","zväčší sa o 7","nezmení sa"],"answer":0,"correct":"Smernica a=4 znamená zmenu funkčnej hodnoty o +4 pri zvýšení x o 1.","hint":"Sleduj koeficient pri x."},
       {"id":"same-b","type":"choice","phase":"POROVNAJ","skill":"predpis","stimulus":"f(x)=3x+2, g(x)=−x+2","question":"Čo majú grafy spoločné?","options":["rovnakú smernicu","rovnaký priesečník s osou y","rovnaký nulový bod","sú rovnobežné"],"answer":1,"correct":"Obe majú b=2, preto obe prechádzajú bodom [0;2].","hint":"Čo znamená b?"},
       {"id":"zero-explain","type":"selfWrite","phase":"VYSVETLI","title":"Nulový bod nie je bod [0;b]","promptHtml":"Vysvetli rozdiel medzi <strong>nulovým bodom funkcie</strong> a <strong>priesečníkom s osou y</strong>.","model":"Nulový bod je hodnota x, pre ktorú f(x)=0, teda súvisí s priesečníkom s osou x. Priesečník s osou y získame pri x=0 a má tvar [0;b]."},
-      {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Vlastnosti lineárnej funkcie",
-        "html": "<p><strong>TEÓRIA:</strong> Pre f(x)=ax+b: a&gt;0 rastúca, a&lt;0 klesajúca, a=0 konštantná. Bod [0;b] je priesečník s osou y. Nulový bod spĺňa f(x)=0.</p>",
-        "model": "<strong>PRÍKLAD:</strong> f(x)=−2x+6 je klesajúca, pretína os y v [0;6] a os x v [3;0]."
-      },
       {
         "id": "reflection",
         "type": "reflection",

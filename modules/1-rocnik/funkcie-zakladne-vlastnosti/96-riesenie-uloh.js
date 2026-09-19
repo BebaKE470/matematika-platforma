@@ -63,6 +63,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Párna / nepárna</div><p class="term-rule">Porovnanie f(−x).</p></div><div class="term-item no-symbol"><div class="term-name">Rastúca / klesajúca</div><p class="term-rule">Porovnanie f(x₁), f(x₂) pri x₁&lt;x₂.</p></div><div class="term-item no-symbol"><div class="term-name">Extrémy</div><p class="term-rule">Najväčšia/najmenšia hodnota y.</p></div><div class="term-item no-symbol"><div class="term-name">Prostá</div><p class="term-rule">Rôzne x → rôzne y.</p></div><div class="term-item no-symbol"><div class="term-name">Ohraničená</div><p class="term-rule">Existencia hranice.</p></div></div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'classify',
         type: 'matrix',
         phase: 'OVER',
@@ -123,14 +131,6 @@ MathPlatform.registerModule({
         success: 'Správne. Najväčšia z hodnôt 6, 2, 9, 4 je 9.',
         hint: 'Hľadaj najväčšiu z funkčných hodnôt.',
         reveal: 'Maximum je 9 (dosiahnuté pri x=3).',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Párna / nepárna</div><p class="term-rule">Porovnanie f(−x).</p></div><div class="term-item no-symbol"><div class="term-name">Rastúca / klesajúca</div><p class="term-rule">Porovnanie f(x₁), f(x₂) pri x₁&lt;x₂.</p></div><div class="term-item no-symbol"><div class="term-name">Extrémy</div><p class="term-rule">Najväčšia/najmenšia hodnota y.</p></div><div class="term-item no-symbol"><div class="term-name">Prostá</div><p class="term-rule">Rôzne x → rôzne y.</p></div><div class="term-item no-symbol"><div class="term-name">Ohraničená</div><p class="term-rule">Existencia hranice.</p></div></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

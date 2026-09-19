@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'Priama veta: pravouhlý ⇒ a²+b²=c². Obrátená veta: a²+b²=c² ⇒ pravouhlý.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>V pravouhlom trojuholníku: <strong>odvesny</strong> (a, b) zvierajú pravý uhol, <strong>prepona</strong> (c, najdlhšia strana) je oproti pravému uhlu.</p><div class="formula"><span class="mini-label">PYTAGOROVA VETA</span>a² + b² = c²<span class="formula-note">v pravouhlom trojuholníku</span></div><div class="formula"><span class="mini-label">OBRÁTENÁ PYTAGOROVA VETA</span>ak a² + b² = c² (c najdlhšia), trojuholník je pravouhlý</div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -141,14 +149,6 @@ MathPlatform.registerModule({
         success: 'Správne. Odvesny sú 9 a 12 (prepona 15, keďže 9²+12²=81+144=225=15²). Obsah = (9·12)/2 = 54 cm².',
         hint: 'Najprv over, ktoré dve strany sú odvesny (kratšie strany), potom použi vzorec S=(a·b)/2.',
         reveal: 'Odvesny 9 a 12, obsah = (9·12)/2 = 54 cm².',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>V pravouhlom trojuholníku: <strong>odvesny</strong> (a, b) zvierajú pravý uhol, <strong>prepona</strong> (c, najdlhšia strana) je oproti pravému uhlu.</p><div class="formula"><span class="mini-label">PYTAGOROVA VETA</span>a² + b² = c²<span class="formula-note">v pravouhlom trojuholníku</span></div><div class="formula"><span class="mini-label">OBRÁTENÁ PYTAGOROVA VETA</span>ak a² + b² = c² (c najdlhšia), trojuholník je pravouhlý</div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

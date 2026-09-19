@@ -84,6 +84,14 @@ MathPlatform.registerModule({
         remember: 'P(A) = m/n (m priaznivých, n všetkých rovnako pravdepodobných výsledkov). 0≤P(A)≤1.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Klasická definícia pravdepodobnosti:</strong> P(A)=m/n, kde n je počet všetkých rovnako pravdepodobných elementárnych javov a m je počet tých, ktoré patria do javu A. Platí 0≤P(A)≤1. Pri zložitejších pokusoch sa m aj n počítajú pomocou kombinatorických nástrojov (pravidlo súčinu, kombinácie).</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -132,14 +140,6 @@ MathPlatform.registerModule({
         success: 'Správne. Existujú presne 3 dvojice so súčtom 10: (4,6), (5,5), (6,4).',
         hint: 'Vypíš všetky dvojice (prvá kocka, druhá kocka), ktorých súčet je 10.',
         reveal: '(4,6),(5,5),(6,4) — spolu 3 dvojice.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Klasická definícia pravdepodobnosti:</strong> P(A)=m/n, kde n je počet všetkých rovnako pravdepodobných elementárnych javov a m je počet tých, ktoré patria do javu A. Platí 0≤P(A)≤1. Pri zložitejších pokusoch sa m aj n počítajú pomocou kombinatorických nástrojov (pravidlo súčinu, kombinácie).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

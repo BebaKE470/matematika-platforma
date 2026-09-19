@@ -87,6 +87,14 @@ MathPlatform.registerModule({
         remember: 'a² ± 2ab + b² = (a ± b)². Skontroluj, že prostredný člen je presne 2ab.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>a² + 2ab + b² = (a + b)²</strong>,  <strong>a² − 2ab + b² = (a − b)²</strong>.</p><p>Pred použitím vzorca skontroluj, že prostredný člen trojčlena je presne 2ab. Príklad: x²+8x+16 = (x+4)², pretože 8x = 2·x·4.</p><p>Výsledok vždy over spätným roznásobením.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -135,14 +143,6 @@ MathPlatform.registerModule({
         success: 'Správne. x²+4x+4 = (x+2)², pre x=5: (5+2)² = 7² = 49.',
         hint: 'Najprv rozlož na (x+2)², potom dosaď x=5.',
         reveal: '(5+2)² = 49.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>a² + 2ab + b² = (a + b)²</strong>,  <strong>a² − 2ab + b² = (a − b)²</strong>.</p><p>Pred použitím vzorca skontroluj, že prostredný člen trojčlena je presne 2ab. Príklad: x²+8x+16 = (x+4)², pretože 8x = 2·x·4.</p><p>Výsledok vždy over spätným roznásobením.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

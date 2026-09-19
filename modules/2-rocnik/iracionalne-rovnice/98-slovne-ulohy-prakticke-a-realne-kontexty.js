@@ -83,6 +83,14 @@ MathPlatform.registerModule({
         remember: 'Praktický vzorec s odmocninou: dosaď, izoluj odmocninu, umocni, vyrieš, over zmysluplnosť výsledku.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Praktické vzorce s odmocninou: dohľadnosť na obzor d=3,57√h (h výška v m, d vzdialenosť v km), elektrický prúd I=√(P/R) (P výkon vo W, R odpor v Ω).</p><ol class="steps"><li>Dosaď.</li><li>Izoluj odmocninu.</li><li>Umocni.</li><li>Vyrieš.</li><li>Over zmysluplnosť (kladná hodnota).</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-horizon',
         type: 'choice',
         phase: 'OVER SI',
@@ -131,14 +139,6 @@ MathPlatform.registerModule({
         success: 'Správne. I=√(250/10)=√25=5 A.',
         hint: 'Vypočítaj podiel P/R a potom odmocninu z výsledku.',
         reveal: '√(250/10)=√25=5.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Praktické vzorce s odmocninou: dohľadnosť na obzor d=3,57√h (h výška v m, d vzdialenosť v km), elektrický prúd I=√(P/R) (P výkon vo W, R odpor v Ω).</p><ol class="steps"><li>Dosaď.</li><li>Izoluj odmocninu.</li><li>Umocni.</li><li>Vyrieš.</li><li>Over zmysluplnosť (kladná hodnota).</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

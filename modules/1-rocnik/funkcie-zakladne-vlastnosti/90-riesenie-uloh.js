@@ -63,6 +63,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Funkcia = jednoznačné priradenie (každému x práve jedno y). D(f) čítame z hodnôt x (tabuľka, predpis, os x grafu), H(f) z hodnôt y (bez opakovania).</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-is-function',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -113,14 +121,6 @@ MathPlatform.registerModule({
         answer: 0,
         correct: 'Presne. Aby išlo o funkciu, musí byť ku každému x priradené <span class="hl">práve jedno</span> číslo, nie ľubovoľné z nekonečne mnohých možností.',
         hint: 'Skús nájsť aspoň dve rôzne čísla, ktoré by mohli byť priradené k jednému x.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Funkcia = jednoznačné priradenie (každému x práve jedno y). D(f) čítame z hodnôt x (tabuľka, predpis, os x grafu), H(f) z hodnôt y (bez opakovania).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

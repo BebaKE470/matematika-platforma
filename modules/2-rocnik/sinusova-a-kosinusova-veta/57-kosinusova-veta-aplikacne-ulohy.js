@@ -76,6 +76,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="formula">cos α = (b²+c²−a²)/(2bc)<span class="formula-note">(analogicky pre β, γ)</span></div><p>Ak vyjde cos uhla = 0, uhol je 90°; ak vyjde záporné číslo, uhol je tupý.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-formula',
         type: 'choice',
         phase: 'OVER SI',
@@ -124,14 +132,6 @@ MathPlatform.registerModule({
         success: 'Správne. cosγ=(a²+b²−c²)/(2ab)=(9+16−25)/(24)=0/24=0 (γ=90°, keďže 3-4-5 je pravouhlý trojuholník).',
         hint: 'Dosaď a²=9, b²=16, c²=25 do vzorca cosγ=(a²+b²−c²)/(2ab).',
         reveal: 'cosγ=(9+16−25)/24=0.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula">cos α = (b²+c²−a²)/(2bc)<span class="formula-note">(analogicky pre β, γ)</span></div><p>Ak vyjde cos uhla = 0, uhol je 90°; ak vyjde záporné číslo, uhol je tupý.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

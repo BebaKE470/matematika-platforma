@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'P(k)=(n nad k)·p^k·q^(n−k), kde n=počet opakovaní, k=počet úspechov, q=1−p.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Bernoulliho schéma:</strong> pri n nezávislých opakovaniach pokusu s dvomi výsledkami (úspech s pravdepodobnosťou p, neúspech s q=1−p) je pravdepodobnosť presne k úspechov P(k)=(n nad k)·p^k·q^(n−k). Kombinačné číslo (n nad k) vyjadruje počet rôznych poradí, v ktorých môže nastať presne k úspechov.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-identify',
         type: 'choice',
         phase: 'OVER SI',
@@ -146,14 +154,6 @@ MathPlatform.registerModule({
         success: 'Správne. (3 nad 2)=3, P(2)=3·(1/9)·(2/3)=6/27=2/9.',
         hint: '(3 nad 2)=3, (1/3)²=1/9, (2/3)¹=2/3 — vynásob všetky tri čísla.',
         reveal: '3·1/9·2/3=6/27.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Bernoulliho schéma:</strong> pri n nezávislých opakovaniach pokusu s dvomi výsledkami (úspech s pravdepodobnosťou p, neúspech s q=1−p) je pravdepodobnosť presne k úspechov P(k)=(n nad k)·p^k·q^(n−k). Kombinačné číslo (n nad k) vyjadruje počet rôznych poradí, v ktorých môže nastať presne k úspechov.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

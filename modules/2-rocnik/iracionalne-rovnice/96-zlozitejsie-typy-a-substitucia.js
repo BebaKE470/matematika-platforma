@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 't=√x (t≥0) → kvadratická rovnica pre t → zamietni záporné t → x=t² → skúška.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Substitúcia pri iracionálnej rovnici:</strong></p><ol class="steps"><li>Zaveď t=√x (t≥0), x=t².</li><li>Prepíš rovnicu pomocou t.</li><li>Vyrieš kvadratickú rovnicu pre t.</li><li>Zamietni záporné t.</li><li>Z platných t vypočítaj x=t².</li><li>Over skúškou v pôvodnej rovnici.</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -133,14 +141,6 @@ MathPlatform.registerModule({
         success: 'Správne. t=−1 zamietame (t≥0), zostáva t=4, teda x=t²=16.',
         hint: 'Zamietni záporné t a vypočítaj x=t² z platnej hodnoty.',
         reveal: 't=4 (t=−1 zamietnuté), x=4²=16.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Substitúcia pri iracionálnej rovnici:</strong></p><ol class="steps"><li>Zaveď t=√x (t≥0), x=t².</li><li>Prepíš rovnicu pomocou t.</li><li>Vyrieš kvadratickú rovnicu pre t.</li><li>Zamietni záporné t.</li><li>Z platných t vypočítaj x=t².</li><li>Over skúškou v pôvodnej rovnici.</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

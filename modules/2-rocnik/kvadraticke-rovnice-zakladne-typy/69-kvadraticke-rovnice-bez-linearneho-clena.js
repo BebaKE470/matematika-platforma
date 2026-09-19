@@ -78,6 +78,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Ak rovnica na prvý pohľad nie je v tvare ax²+c=0, najprv ju priprav:</p><ol class="steps"><li>Roznásob zátvorky.</li><li>Presuň všetky členy na jednu stranu.</li><li>Spoj podobné členy.</li><li>Až potom rozpoznaj typ rovnice a vyrieš ju.</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-simplify',
         type: 'choice',
         phase: 'OVER SI',
@@ -126,14 +134,6 @@ MathPlatform.registerModule({
         success: 'Správne. 2x²−2=x²+7, x²=9, x=±3 — kladné riešenie je 3.',
         hint: 'Najprv roznásob a uprav na tvar ax²+c=0, potom vyrieš.',
         reveal: 'x²=9, kladné riešenie x=3.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Ak rovnica na prvý pohľad nie je v tvare ax²+c=0, najprv ju priprav:</p><ol class="steps"><li>Roznásob zátvorky.</li><li>Presuň všetky členy na jednu stranu.</li><li>Spoj podobné členy.</li><li>Až potom rozpoznaj typ rovnice a vyrieš ju.</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

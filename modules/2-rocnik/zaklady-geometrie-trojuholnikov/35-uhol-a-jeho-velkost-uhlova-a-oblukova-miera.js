@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: '1 rad = uhol, pri ktorom dĺžka oblúka = polomer. 180° = π rad.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Radián (oblúková miera)</strong> — veľkosť uhla, pri ktorej sa dĺžka prislúchajúceho oblúka rovná polomeru kružnice. Je to bezrozmerné číslo (pomer dvoch dĺžok).</p><div class="formula"><span class="mini-label">ZÁKLADNÝ VZŤAH</span>180° = π rad</div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -139,14 +147,6 @@ MathPlatform.registerModule({
         answer: 2,
         correct: 'Správne. Keďže radián priamo súvisí s dĺžkou oblúka a polomerom, viaceré vzorce (napr. s = r·φ) sú v radiánoch jednoduchšie, bez zbytočného prevodového koeficientu.',
         hint: 'Zamysli sa, prečo by mohlo byť výhodné mať uhol vyjadrený priamo cez pomer dĺžok.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Radián (oblúková miera)</strong> — veľkosť uhla, pri ktorej sa dĺžka prislúchajúceho oblúka rovná polomeru kružnice. Je to bezrozmerné číslo (pomer dvoch dĺžok).</p><div class="formula"><span class="mini-label">ZÁKLADNÝ VZŤAH</span>180° = π rad</div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

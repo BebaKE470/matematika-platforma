@@ -81,6 +81,14 @@ MathPlatform.registerModule({
         "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Lichobežník má základne a = 10 cm, c = 6 cm a výšku v = 4 cm.</p><p>S = (a+c)·v/2 = (10+6)·4/2 = 16·2 = <strong>32 cm²</strong></p></div>"
       },
       {
+        "id": "clean",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Obvod a obsah lichobežníka",
+        "html": "<p><strong>TEÓRIA:</strong> S=(a+c)·v/2; o=a+b+c+d.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
+        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
+      },
+      {
         "id": "meaning",
         "type": "explain",
         "phase": "VÝZNAM",
@@ -135,14 +143,6 @@ MathPlatform.registerModule({
         "answer": 1,
         "correct": "Výsledok musí byť interpretovaný v kontexte a mať správnu jednotku.",
         "hint": "Matematický výsledok treba vrátiť do zadania."
-      },
-      {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Obvod a obsah lichobežníka",
-        "html": "<p><strong>TEÓRIA:</strong> S=(a+c)·v/2; o=a+b+c+d.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
-        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
       },
       {
         "id": "reflection",

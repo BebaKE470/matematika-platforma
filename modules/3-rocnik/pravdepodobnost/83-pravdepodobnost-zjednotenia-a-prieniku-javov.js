@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'P(A∪B)=P(A)+P(B)−P(A∩B). Nezlučiteľné javy (A∩B=∅): P(A∪B)=P(A)+P(B).',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Pravdepodobnosť zjednotenia:</strong> P(A∪B)=P(A)+P(B)−P(A∩B) (odpočítame prienik, aby sme ho nepočítali dvakrát). <strong>Nezlučiteľné javy</strong> (A∩B=∅): P(A∪B)=P(A)+P(B).</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -133,14 +141,6 @@ MathPlatform.registerModule({
         success: 'Správne. P(A∪B)=2/6+3/6−1/6=4/6.',
         hint: 'Použi P(A∪B)=P(A)+P(B)−P(A∩B) v tvaroch so spoločným menovateľom 6.',
         reveal: '2/6+3/6−1/6=4/6, čiže x=4.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Pravdepodobnosť zjednotenia:</strong> P(A∪B)=P(A)+P(B)−P(A∩B) (odpočítame prienik, aby sme ho nepočítali dvakrát). <strong>Nezlučiteľné javy</strong> (A∩B=∅): P(A∪B)=P(A)+P(B).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

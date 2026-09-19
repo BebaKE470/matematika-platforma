@@ -83,6 +83,14 @@ MathPlatform.registerModule({
         remember: '√(a·b) = √a · √b,  √(a:b) = √a : √b  (a, b ≥ 0, b ≠ 0 pri podiele).',
       },
       {
+        id: 'notebook-1',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Pre a, b ≥ 0 (b ≠ 0 pri podiele):</p><div class="formula">√(a·b) = √a · √b<br>√(a:b) = √a : √b</div><div class="warning"><strong>Pozor:</strong> pre súčet a rozdiel podobný vzťah <strong>neplatí</strong> — √(a+b) ≠ √a + √b vo všeobecnosti.</div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-product',
         type: 'choice',
         phase: 'OVER SI',
@@ -115,6 +123,14 @@ MathPlatform.registerModule({
         title: 'Odmocnina druhej mocniny: √(a²) = |a|',
         html: '<p>Pre a ∈ ℝ platí:</p><div class="formula">√(a²) = |a|</div><p>Ak a ≥ 0, je to jasné: √(a²) = a.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>Ak je a záporné, napríklad a = −3, potom a² = 9 a √9 = 3, čo je |−3|, nie −3.</p></div>',
         remember: '√(a²) = |a| pre každé reálne a — nie automaticky a.',
+      },
+      {
+        id: 'notebook-2',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Pre ľubovoľné reálne a:</p><div class="formula">√(a²) = |a|</div>',
+        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-square',
@@ -154,14 +170,6 @@ MathPlatform.registerModule({
         answer: 1,
         correct: 'Správne. Veta o súčine umožňuje rozložiť číslo pod odmocninou na súčin ľahších štvorcov (4 a 900) a počítať naspamäť.',
         hint: 'Skús rozložiť 3600 ako súčin 4 a 900 a porovnaj, ktoré odmocniny vieš vypočítať naspamäť.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pre a, b ≥ 0 (b ≠ 0 pri podiele):</p><div class="formula">√(a·b) = √a · √b<br>√(a:b) = √a : √b</div><p>Pre ľubovoľné reálne a:</p><div class="formula">√(a²) = |a|</div><div class="warning"><strong>Pozor:</strong> pre súčet a rozdiel podobný vzťah <strong>neplatí</strong> — √(a+b) ≠ √a + √b vo všeobecnosti.</div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

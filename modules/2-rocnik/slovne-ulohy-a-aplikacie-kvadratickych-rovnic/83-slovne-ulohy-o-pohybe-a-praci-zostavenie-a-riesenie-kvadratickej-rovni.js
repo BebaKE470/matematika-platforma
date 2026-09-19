@@ -86,6 +86,14 @@ MathPlatform.registerModule({
         remember: 'Zostavenie rovnice → úprava na kvadratický tvar (na papieri) → riešenie a výber zmysluplného koreňa (tu).',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Slovné úlohy o pohybe (dráha=rýchlosť×čas) a o spoločnej práci často po úprave vedú na kvadratickú rovnicu. Postup: zostav a uprav rovnicu (podľa vzoru učiteľa), vyrieš ju, a z matematických riešení vyber iba to, ktoré zodpovedá reálnemu kontextu úlohy (rýchlosť, čas aj počet musia byť kladné).</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-solve-motion',
         type: 'choice',
         phase: 'OVER SI',
@@ -134,14 +142,6 @@ MathPlatform.registerModule({
         success: 'Správne. v=−8 zamietame (rýchlosť nemôže byť záporná), zostáva v=5.',
         hint: 'Over, ktorý z koreňov je kladný.',
         reveal: 'v=5 alebo v=−8; kladné (zmysluplné) riešenie je v=5.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Slovné úlohy o pohybe (dráha=rýchlosť×čas) a o spoločnej práci často po úprave vedú na kvadratickú rovnicu. Postup: zostav a uprav rovnicu (podľa vzoru učiteľa), vyrieš ju, a z matematických riešení vyber iba to, ktoré zodpovedá reálnemu kontextu úlohy (rýchlosť, čas aj počet musia byť kladné).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

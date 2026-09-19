@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'Definičný obor najprv, rozklad na súčin, krátenie spoločného činiteľa, podmienka pri výsledku.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Postup úpravy lomeného výrazu s kvadratickým trojčlenom:</strong></p><ol class="steps"><li>Urč definičný obor.</li><li>Rozlož trojčlen na súčin (pomocou koreňov).</li><li>Skráť spoločný činiteľ.</li><li>Zapíš výsledok s podmienkou definičného oboru.</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-domain',
         type: 'choice',
         phase: 'OVER SI',
@@ -133,14 +141,6 @@ MathPlatform.registerModule({
         success: 'Správne. x−3 pre x=5 dáva 5−3=2.',
         hint: 'Dosaď x=5 do zjednodušeného výrazu x−3.',
         reveal: '5−3=2.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Postup úpravy lomeného výrazu s kvadratickým trojčlenom:</strong></p><ol class="steps"><li>Urč definičný obor.</li><li>Rozlož trojčlen na súčin (pomocou koreňov).</li><li>Skráť spoločný činiteľ.</li><li>Zapíš výsledok s podmienkou definičného oboru.</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

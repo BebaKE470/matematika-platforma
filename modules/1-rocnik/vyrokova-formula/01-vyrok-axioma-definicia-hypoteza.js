@@ -91,6 +91,13 @@ MathPlatform.registerModule({
         "remember": "Výrok = oznamovacia veta s jednoznačnou pravdivostnou hodnotou 1 alebo 0."
       },
       {
+        "id": "notebook-vyrok",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zápis do zošita",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>VÝROKY</strong></p><p>Výrok je oznamovacia veta, o ktorej možno jednoznačne rozhodnúť, či je pravdivá alebo nepravdivá.</p><p>Výroky označujeme veľkými písmenami A, B, C, …</p><p><strong>Pravdivostná hodnota:</strong><br>1 – pravdivý výrok<br>0 – nepravdivý výrok</p><p><strong>Príklady:</strong><br>A: Číslo 13 je prvočíslo. – 1<br>B: Číslo 7 nie je prvočíslo. – 0</p><p>Otázka, príkaz ani otvorená veta s neurčenou premennou nie sú výrokom.</p><p><strong>Otvorená veta:</strong> x + 3 = 7 – jej pravdivosť závisí od hodnoty premennej x.</p>"
+      },
+      {
         "id": "classify-all",
         "type": "sortChoice",
         "phase": "2 · UKÁŽKA",
@@ -258,6 +265,13 @@ MathPlatform.registerModule({
         "remember": "Tieto pojmy rozlišuj podľa ich úlohy, nie iba podľa toho, ako veta vyzerá."
       },
       {
+        "id": "notebook-terms",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zápis do zošita",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Definícia</strong> – zavádza alebo vymedzuje matematický pojem.<br><strong>Tvrdenie</strong> – matematická veta, ktorej pravdivosť posudzujeme.<br><strong>Hypotéza</strong> – predpokladané tvrdenie, ktorého platnosť skúmame.<br><strong>Axióma</strong> – východiskové tvrdenie prijaté v matematickej teórii bez dôkazu.</p>"
+      },
+      {
         "id": "terms-check",
         "type": "matrix",
         "phase": "3 · OVER SI",
@@ -325,14 +339,6 @@ MathPlatform.registerModule({
         "title": "Vysvetli svoje rozhodnutie",
         "promptHtml": "Adam: „Koľko je 6 + 7?“ · Beáta: „Číslo 15 je párne.“ · Cyril: „Vypočítaj 6 + 7!“<br>Do zošita jednou až dvoma vetami vysvetli, prečo Adamova a Cyrilova veta nie sú výroky a prečo Beátina veta výrokom je.",
         "model": "Adam sa pýta, preto jeho veta nie je výrok. Cyril dáva príkaz, preto jeho veta tiež nie je výrok. Beáta vyslovila oznamovacie tvrdenie, o ktorom možno rozhodnúť, či je pravdivé alebo nepravdivé; je to teda výrok, v tomto prípade nepravdivý."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zápis do zošita",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>VÝROKY</strong></p><p>Výrok je oznamovacia veta, o ktorej možno jednoznačne rozhodnúť, či je pravdivá alebo nepravdivá.</p><p>Výroky označujeme veľkými písmenami A, B, C, …</p><p><strong>Pravdivostná hodnota:</strong><br>1 – pravdivý výrok<br>0 – nepravdivý výrok</p><p><strong>Príklady:</strong><br>A: Číslo 13 je prvočíslo. – 1<br>B: Číslo 7 nie je prvočíslo. – 0</p><p>Otázka, príkaz ani otvorená veta s neurčenou premennou nie sú výrokom.</p><p><strong>Otvorená veta:</strong> x + 3 = 7 – jej pravdivosť závisí od hodnoty premennej x.</p><p><strong>Definícia</strong> – zavádza alebo vymedzuje matematický pojem.<br><strong>Tvrdenie</strong> – matematická veta, ktorej pravdivosť posudzujeme.<br><strong>Hypotéza</strong> – predpokladané tvrdenie, ktorého platnosť skúmame.<br><strong>Axióma</strong> – východiskové tvrdenie prijaté v matematickej teórii bez dôkazu.</p>",
-        "model": "<strong>VÝROKY</strong><br>Výrok je oznamovacia veta, o ktorej možno jednoznačne rozhodnúť, či je pravdivá alebo nepravdivá.<br>Výroky označujeme veľkými písmenami A, B, C, …<br>Pravdivostná hodnota: 1 – pravdivý výrok; 0 – nepravdivý výrok.<br>Príklady: A: Číslo 13 je prvočíslo. – 1. B: Číslo 7 nie je prvočíslo. – 0.<br>Otázka, príkaz ani otvorená veta s neurčenou premennou nie sú výrokom.<br>Otvorená veta: x + 3 = 7 – jej pravdivosť závisí od hodnoty premennej x.<br>Definícia – zavádza alebo vymedzuje matematický pojem.<br>Tvrdenie – matematická veta, ktorej pravdivosť posudzujeme.<br>Hypotéza – predpokladané tvrdenie, ktorého platnosť skúmame.<br>Axióma – východiskové tvrdenie prijaté v matematickej teórii bez dôkazu."
       },
       {
         "id": "exit-1",

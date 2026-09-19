@@ -81,6 +81,14 @@ MathPlatform.registerModule({
         "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Trojuholník má stranu a = 8 cm a k nej prislúchajúcu výšku vₐ = 5 cm. Ostatné dve strany sú 6 cm a 7 cm.</p><p>S = a·vₐ/2 = 8·5/2 = <strong>20 cm²</strong></p><p>o = 8 + 6 + 7 = <strong>21 cm</strong></p></div>"
       },
       {
+        "id": "clean",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Obvod a obsah trojuholníka",
+        "html": "<p><strong>TEÓRIA:</strong> S = a·vₐ/2; obvod je súčet troch strán.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
+        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
+      },
+      {
         "id": "meaning",
         "type": "explain",
         "phase": "VÝZNAM",
@@ -135,14 +143,6 @@ MathPlatform.registerModule({
         "answer": 1,
         "correct": "Výsledok musí byť interpretovaný v kontexte a mať správnu jednotku.",
         "hint": "Matematický výsledok treba vrátiť do zadania."
-      },
-      {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Obvod a obsah trojuholníka",
-        "html": "<p><strong>TEÓRIA:</strong> S = a·vₐ/2; obvod je súčet troch strán.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
-        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
       },
       {
         "id": "reflection",

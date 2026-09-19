@@ -66,6 +66,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Zhrnutie:</p><div class="formula">f(x) = ax² + bx + c (a ≠ 0), graf je parabola<br>orientácia podľa znamienka a<br>vrchol: x_v = −b/(2a), y_v = f(x_v)<br>vrcholový tvar: y = a(x−x_v)² + y_v</div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -114,14 +122,6 @@ MathPlatform.registerModule({
         success: 'Správne. y_v = f(4) = 16−32+15 = −1.',
         hint: 'Dosaď x_v=4 späť do predpisu f(x)=x²−8x+15.',
         reveal: 'f(4) = 16−32+15 = −1.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie:</p><div class="formula">f(x) = ax² + bx + c (a ≠ 0), graf je parabola<br>orientácia podľa znamienka a<br>vrchol: x_v = −b/(2a), y_v = f(x_v)<br>vrcholový tvar: y = a(x−x_v)² + y_v</div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

@@ -80,6 +80,14 @@ MathPlatform.registerModule({
         "continueLabel": "Pokračovať"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p><strong>Zjednotenie A ∪ B</strong> — obsahuje prvky, ktoré patria aspoň do jednej z množín A, B.</p><p><strong>Prienik A ∩ B</strong> — obsahuje iba prvky, ktoré patria súčasne do A aj do B.</p><p>Príklad: A={1,2,3}, B={3,4}. Potom A∪B={1,2,3,4} a A∩B={3}.</p>",
+        "continueLabel": "Mám zapísané"
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -101,14 +109,6 @@ MathPlatform.registerModule({
         "title": "Spojenie s výrokovou logikou",
         "html": "<p><strong>x ∈ A ∩ B</strong> znamená: x∈A <strong>a zároveň</strong> x∈B. <strong>x ∈ A ∪ B</strong> znamená: x∈A <strong>alebo</strong> x∈B (aspoň jedna z možností).</p>",
         "remember": "Prienik ↔ a zároveň. Zjednotenie ↔ alebo."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Upevni si podstatu",
-        "html": "<p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš názov témy: <strong>Operácie s množinami – zjednotenie, prienik</strong>. Pridaj definíciu alebo pravidlo vlastnými slovami a jeden správny príklad.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor vlastný príklad a vyrieš ho bez aplikácie.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis musí používať presné symboly a musí byť z neho jasné, prečo výsledok platí."
       },
       {
         "id": "explain",

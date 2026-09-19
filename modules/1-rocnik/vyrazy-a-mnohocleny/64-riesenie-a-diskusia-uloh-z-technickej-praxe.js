@@ -70,6 +70,14 @@ MathPlatform.registerModule({
         ],
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Obsah obdĺžnika s rozmermi a, b: S = a·b. Obvod: O = 2a + 2b.</p><p>Ak sú rozmery vyjadrené výrazmi s premennou (napr. a = x, b = x+4), zostavíme výraz S = x(x+4) = x²+4x a O = 2x+2(x+4) = 4x+8.</p><p>Vždy skontroluj, či zvolená hodnota premennej dáva fyzicky zmysluplný (kladný) rozmer.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-area',
         type: 'choice',
         phase: 'OVER SI',
@@ -133,14 +141,6 @@ MathPlatform.registerModule({
         success: 'Správne. S = x(x+4) = x²+4x, pre x=6: 36+24 = 60 m².',
         hint: 'Dosaď x = 6 buď priamo do súčinu 6·(6+4), alebo do zjednodušeného výrazu x²+4x.',
         reveal: 'S = 6·10 = 60 m².',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Obsah obdĺžnika s rozmermi a, b: S = a·b. Obvod: O = 2a + 2b.</p><p>Ak sú rozmery vyjadrené výrazmi s premennou (napr. a = x, b = x+4), zostavíme výraz S = x(x+4) = x²+4x a O = 2x+2(x+4) = 4x+8.</p><p>Vždy skontroluj, či zvolená hodnota premennej dáva fyzicky zmysluplný (kladný) rozmer.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

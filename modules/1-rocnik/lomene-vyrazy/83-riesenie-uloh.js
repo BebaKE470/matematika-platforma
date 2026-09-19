@@ -63,6 +63,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Násobenie</div><p class="term-rule">Čitateľ krát čitateľ, menovateľ krát menovateľ.</p></div><div class="term-item no-symbol"><div class="term-name">Delenie</div><p class="term-rule">Obráť deliteľa, potom násob.</p></div></div><p>Vždy kráť, keď je to možné.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -111,14 +119,6 @@ MathPlatform.registerModule({
         success: 'Správne. (x²/5)·(10/x) = 10x²/(5x) = 2x, pre x=3: 2·3 = 6.',
         hint: 'Najprv zjednoduš výraz na 2x, potom dosaď x=3.',
         reveal: '(x²/5):(x/10) = 2x, pre x=3: 6.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Násobenie</div><p class="term-rule">Čitateľ krát čitateľ, menovateľ krát menovateľ.</p></div><div class="term-item no-symbol"><div class="term-name">Delenie</div><p class="term-rule">Obráť deliteľa, potom násob.</p></div></div><p>Vždy kráť, keď je to možné.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

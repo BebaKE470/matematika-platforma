@@ -86,6 +86,14 @@ MathPlatform.registerModule({
         remember: 'Záporné číslo pri dosadzovaní vždy ohraď zátvorkou: x = −3 → (−3).',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Pri dosadzovaní čísla za premennú vždy dodrž poradie operácií (najprv zátvorky a mocniny, potom násobenie/delenie, nakoniec sčítanie/odčítanie).</p><p>Záporné číslo pri dosadzovaní vždy ohraď zátvorkou: x = −3 → dosadíme ako (−3), nielen −3 bez zátvorky.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -145,14 +153,6 @@ MathPlatform.registerModule({
         success: 'Správne. (−1−2)² = (−3)² = 9.',
         hint: 'Najprv vypočítaj hodnotu vnútri zátvorky (x−2), potom výsledok umocni.',
         reveal: '(−1−2)² = (−3)² = 9.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pri dosadzovaní čísla za premennú vždy dodrž poradie operácií (najprv zátvorky a mocniny, potom násobenie/delenie, nakoniec sčítanie/odčítanie).</p><p>Záporné číslo pri dosadzovaní vždy ohraď zátvorkou: x = −3 → dosadíme ako (−3), nielen −3 bez zátvorky.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

@@ -72,6 +72,14 @@ MathPlatform.registerModule({
         "continueLabel": "Pokračovať"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p>Ako čítať Vennov diagram dvoch množín A, B v obdĺžniku U:</p><ul><li><strong>prekrytie kruhov</strong> = A ∩ B</li><li><strong>celá plocha oboch kruhov</strong> = A ∪ B</li><li><strong>časť A mimo B</strong> = A − B</li><li><strong>plocha mimo kruhu A (v rámci U)</strong> = doplnok A′</li></ul>",
+        "continueLabel": "Mám zapísané"
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -111,14 +119,6 @@ MathPlatform.registerModule({
             "answer": "rozdiel"
           }
         ]
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Upevni si podstatu",
-        "html": "<p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš názov témy: <strong>Vennove diagramy</strong>. Pridaj definíciu alebo pravidlo vlastnými slovami a jeden správny príklad.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor vlastný príklad a vyrieš ho bez aplikácie.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis musí používať presné symboly a musí byť z neho jasné, prečo výsledok platí."
       },
       {
         "id": "explain",

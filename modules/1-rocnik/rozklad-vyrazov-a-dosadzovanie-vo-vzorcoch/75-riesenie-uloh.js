@@ -66,6 +66,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Zhrnutie celého celku pred previerkou:</p><p>Dosadzovanie: záporné číslo ohraď zátvorkou. Úprava vzorca: rovnaká operácia na oboch stranách.</p><p>Rozklad: ab+ac=a(b+c) (vyňatie), a²−b²=(a−b)(a+b), a²±2ab+b²=(a±b)². Po vyňatí vždy skontroluj, či sa dá pokračovať vzorcom.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -121,14 +129,6 @@ MathPlatform.registerModule({
         success: 'Správne. 3x²−12 = 3(x²−4) = 3(x−2)(x+2), pre x=3: 3·(3−2)·(3+2) = 3·1·5 = 15.',
         hint: 'Najprv vyjmi spoločný činiteľ 3, potom skontroluj, či zostáva rozdiel druhých mocnín.',
         reveal: '3(x−2)(x+2) pre x=3: 3·1·5 = 15.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie celého celku pred previerkou:</p><p>Dosadzovanie: záporné číslo ohraď zátvorkou. Úprava vzorca: rovnaká operácia na oboch stranách.</p><p>Rozklad: ab+ac=a(b+c) (vyňatie), a²−b²=(a−b)(a+b), a²±2ab+b²=(a±b)². Po vyňatí vždy skontroluj, či sa dá pokračovať vzorcom.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

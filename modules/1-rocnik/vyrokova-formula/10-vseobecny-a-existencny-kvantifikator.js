@@ -69,6 +69,13 @@ MathPlatform.registerModule({
         "continueLabel": "Pokračovať"
       },
       {
+        "id": "notebook-symbols",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si značky",
+        "html": "<p><strong>ZAPÍŠ SI DO ZOŠITA:</strong></p><p>∀ = pre každý (všeobecný kvantifikátor)<br>∃ = existuje aspoň jeden (existenčný kvantifikátor)</p>"
+      },
+      {
         "id": "all",
         "type": "choice",
         "phase": "3 · OBJAVUJ",
@@ -126,7 +133,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Prelož medzi jazykmi",
-        "html": "<p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš význam symbolov ∀ a ∃.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Prepíš symbolicky: a) Každé reálne číslo má nezápornú druhú mocninu. b) Existuje prirodzené číslo väčšie ako 100.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Prepíš symbolicky: a) Každé reálne číslo má nezápornú druhú mocninu. b) Existuje prirodzené číslo väčšie ako 100.</p>",
         "model": "<strong>VZOR:</strong> ∀ = pre každý; ∃ = existuje aspoň jeden. a) ∀ x (x je reálne číslo): x² ≥ 0. b) ∃ n (n je prirodzené číslo): n &gt; 100."
       },
       {

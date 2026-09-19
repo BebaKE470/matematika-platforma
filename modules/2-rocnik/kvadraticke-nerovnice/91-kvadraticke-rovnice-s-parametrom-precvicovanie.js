@@ -77,6 +77,14 @@ MathPlatform.registerModule({
         remember: 'Poznáme koreň → dosaď priamo. Poznáme súčet/súčin koreňov → použi Vietove vzťahy.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Ak poznáme koreň rovnice</div><p class="term-rule">Dosaď ho priamo a vyrieš lineárnu rovnicu pre parameter.</p></div><div class="term-item no-symbol"><div class="term-name">Ak poznáme podmienku na súčet/súčin koreňov</div><p class="term-rule">Použi Vietove vzťahy x₁+x₂=−b/a, x₁·x₂=c/a.</p></div></div><p>Výsledok vždy over dosadením späť.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-substitute',
         type: 'choice',
         phase: 'OVER SI',
@@ -125,14 +133,6 @@ MathPlatform.registerModule({
         success: 'Správne. 4²−6·4+m=0 → 16−24+m=0 → m=8.',
         hint: 'Dosaď x=4 do rovnice a vyrieš lineárnu rovnicu pre m.',
         reveal: '16−24+m=0, m=8.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Ak poznáme koreň rovnice</div><p class="term-rule">Dosaď ho priamo a vyrieš lineárnu rovnicu pre parameter.</p></div><div class="term-item no-symbol"><div class="term-name">Ak poznáme podmienku na súčet/súčin koreňov</div><p class="term-rule">Použi Vietove vzťahy x₁+x₂=−b/a, x₁·x₂=c/a.</p></div></div><p>Výsledok vždy over dosadením späť.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

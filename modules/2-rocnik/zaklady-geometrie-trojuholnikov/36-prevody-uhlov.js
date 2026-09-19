@@ -84,6 +84,14 @@ MathPlatform.registerModule({
         remember: 'stupne → radiány: ·π/180.  radiány → stupne: ·180/π.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="formula"><span class="mini-label">STUPNE → RADIÁNY</span>α[rad] = α[°] · π/180</div><div class="formula"><span class="mini-label">RADIÁNY → STUPNE</span>α[°] = α[rad] · 180/π</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>60° = π/3 rad. Príklad opačne: π/4 rad = 45°.</p></div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-to-rad',
         type: 'choice',
         phase: 'OVER SI',
@@ -132,14 +140,6 @@ MathPlatform.registerModule({
         success: 'Správne. (π/2)·180/π = 180/2 = 90°.',
         hint: 'Vynásob π/2 zlomkom 180/π, π sa vykráti.',
         reveal: '(π/2)·(180/π) = 90°.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="mini-label">STUPNE → RADIÁNY</span>α[rad] = α[°] · π/180</div><div class="formula"><span class="mini-label">RADIÁNY → STUPNE</span>α[°] = α[rad] · 180/π</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>60° = π/3 rad. Príklad opačne: π/4 rad = 45°.</p></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

@@ -82,6 +82,14 @@ MathPlatform.registerModule({
         remember: 'a⁰ = 1 pre každé a ≠ 0.',
       },
       {
+        id: 'notebook-1',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Pre a ≠ 0 platí:</p><p><strong>a⁰ = 1</strong></p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-zero',
         type: 'choice',
         phase: 'OVER SI',
@@ -99,6 +107,14 @@ MathPlatform.registerModule({
         title: 'Záporný mocniteľ',
         html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Skús 5² : 5⁵ podľa pravidla: 5² : 5⁵ = 5²⁻⁵ = 5⁻³.</p><p>Na druhej strane 5² : 5⁵ = (5·5)/(5·5·5·5·5) = 1/5³ po skrátení.</p></div><div class="formula">a⁻ⁿ = 1/aⁿ<span class="formula-note">(a ≠ 0) — záporný mocniteľ znamená prevrátenú hodnotu príslušnej kladnej mocniny, nie záporný výsledok</span></div>',
         remember: 'a⁻ⁿ = 1/aⁿ (a ≠ 0). Záporný exponent ≠ záporný výsledok.',
+      },
+      {
+        id: 'notebook-2',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Pre a ≠ 0 a prirodzené číslo n platí:</p><p><strong>a⁻ⁿ = 1/aⁿ</strong></p><p>Príklad: 5⁻² = 1/5² = 1/25. Záporný exponent nemení znamienko výsledku, iba ho obráti (prevrátená hodnota).</p>',
+        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-negative1',
@@ -149,14 +165,6 @@ MathPlatform.registerModule({
         answer: 0,
         correct: 'Správne. Exponenty sa sčítajú aj so záporným exponentom: 2³ · 2⁻⁵ = 2³⁺⁽⁻⁵⁾ = 2⁻².',
         hint: 'Pravidlo aᵐ · aⁿ = aᵐ⁺ⁿ platí aj vtedy, keď je niektorý exponent záporný.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pre a ≠ 0 a prirodzené číslo n platí:</p><p><strong>a⁰ = 1</strong></p><p><strong>a⁻ⁿ = 1/aⁿ</strong></p><p>Príklad: 5⁻² = 1/5² = 1/25. Záporný exponent nemení znamienko výsledku, iba ho obráti (prevrátená hodnota).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

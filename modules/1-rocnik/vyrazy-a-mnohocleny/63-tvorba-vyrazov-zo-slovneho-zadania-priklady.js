@@ -69,6 +69,14 @@ MathPlatform.registerModule({
         ],
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Kľúčové slová pri prevode slovného textu na výraz:</p><p>„zväčšené o“, „súčet“ → +.  „zmenšené o“, „rozdiel“ → −.  „…-násobok“, „…-krát viac“ → ·.</p><p>Pozor na slová ako „súčtu“ pri „dvojnásobok súčtu x a 3“ — vtedy sa násobí celá zátvorka: 2(x + 3).</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic1',
         type: 'choice',
         phase: 'OVER SI',
@@ -128,14 +136,6 @@ MathPlatform.registerModule({
         success: 'Správne. x + 2x = 3x, pre x=4: 3·4 = 12.',
         hint: 'Zostav najprv výraz x + 2x, zjednoduš na 3x, potom dosaď x = 4.',
         reveal: 'x + 2x = 3x, pre x=4: 3·4 = 12.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Kľúčové slová pri prevode slovného textu na výraz:</p><p>„zväčšené o“, „súčet“ → +.  „zmenšené o“, „rozdiel“ → −.  „…-násobok“, „…-krát viac“ → ·.</p><p>Pozor na slová ako „súčtu“ pri „dvojnásobok súčtu x a 3“ — vtedy sa násobí celá zátvorka: 2(x + 3).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

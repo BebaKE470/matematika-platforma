@@ -84,6 +84,14 @@ MathPlatform.registerModule({
         remember: 'Elementárny jav = jeden výsledok. Náhodný jav = množina výsledkov spĺňajúcich podmienku. Istý jav nastane vždy, nemožný nikdy, opačný jav = doplnok.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Náhodný pokus:</strong> činnosť s vopred neistým výsledkom. <strong>Elementárny jav:</strong> jeden možný výsledok pokusu. <strong>Náhodný jav:</strong> množina elementárnych javov spĺňajúcich danú podmienku. <strong>Istý jav</strong> nastane vždy, <strong>nemožný jav</strong> nikdy. <strong>Opačný jav</strong> Ā obsahuje elementárne javy, ktoré nepatria do A.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -132,14 +140,6 @@ MathPlatform.registerModule({
         success: 'Správne. Čísla 1 až 6 deliteľné 3 sú 3 a 6 — jav C={3,6} obsahuje 2 elementárne javy.',
         hint: 'Ktoré čísla od 1 do 6 sú deliteľné 3?',
         reveal: 'C={3,6}, teda 2 elementárne javy.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Náhodný pokus:</strong> činnosť s vopred neistým výsledkom. <strong>Elementárny jav:</strong> jeden možný výsledok pokusu. <strong>Náhodný jav:</strong> množina elementárnych javov spĺňajúcich danú podmienku. <strong>Istý jav</strong> nastane vždy, <strong>nemožný jav</strong> nikdy. <strong>Opačný jav</strong> Ā obsahuje elementárne javy, ktoré nepatria do A.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

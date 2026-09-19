@@ -63,6 +63,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<ol class="steps"><li>Rozlož menovatele.</li><li>Nájdi spoločný menovateľ.</li><li>Priprav zlomky.</li><li>Sčítaj/odčítaj.</li><li>Skráť.</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -111,14 +119,6 @@ MathPlatform.registerModule({
         success: 'Správne. Výraz sa zjednoduší na (3x+8)/[(x−4)(x+4)], pre x=6: 26/(2·10) = 26/20 = 1,3.',
         hint: 'Preveď na (3x+8)/[(x−4)(x+4)], potom dosaď x=6.',
         reveal: '(3x+8)/[(x−4)(x+4)] pre x=6: 26/20 = 1,3.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<ol class="steps"><li>Rozlož menovatele.</li><li>Nájdi spoločný menovateľ.</li><li>Priprav zlomky.</li><li>Sčítaj/odčítaj.</li><li>Skráť.</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

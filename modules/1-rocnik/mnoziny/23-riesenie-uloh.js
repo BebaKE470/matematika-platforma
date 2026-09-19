@@ -87,9 +87,9 @@ MathPlatform.registerModule({
         "id": "notebook",
         "type": "notebook",
         "phase": "ZOŠIT",
-        "title": "Upevni si podstatu",
-        "html": "<p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš názov témy: <strong>Riešenie úloh</strong>. Pridaj definíciu alebo pravidlo vlastnými slovami a jeden správny príklad.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor vlastný príklad a vyrieš ho bez aplikácie.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis musí používať presné symboly a musí byť z neho jasné, prečo výsledok platí."
+        "title": "Toto si zapíš do zošita",
+        "html": "<p><strong>Štyri operácie s množinami:</strong></p><div class=\"term-list\"><div class=\"term-item\"><span class=\"term-symbol\">∪</span><div><div class=\"term-name\">Zjednotenie A ∪ B</div><p class=\"term-rule\">Prvky aspoň v jednej z množín.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">∩</span><div><div class=\"term-name\">Prienik A ∩ B</div><p class=\"term-rule\">Prvky súčasne v oboch množinách.</p></div></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Rozdiel A − B</div><p class=\"term-rule\">Prvky, ktoré sú v A, ale nie v B.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Doplnok A′</div><p class=\"term-rule\">Prvky univerzálnej množiny U, ktoré nie sú v A.</p></div></div>",
+        "continueLabel": "Mám zapísané"
       },
       {
         "id": "explain",

@@ -84,6 +84,14 @@ MathPlatform.registerModule({
         remember: '(n nad k)=n!/(k!(n−k)!). Krajné: (n nad 0)=(n nad n)=1. Symetria: (n nad k)=(n nad n−k).',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Kombinačné číslo:</strong> (n nad k)=n!/(k!·(n−k)!), pre 0≤k≤n. Vlastnosti: (n nad 0)=(n nad n)=1, symetria (n nad k)=(n nad n−k). Riadky Pascalovho trojuholníka obsahujú práve tieto čísla; každé vnútorné číslo je súčtom dvoch čísel priamo nad ním.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -132,14 +140,6 @@ MathPlatform.registerModule({
         success: 'Správne. 6!/(2!·4!)=720/(2·24)=720/48=15.',
         hint: 'Skráť: 6!/4!=6·5=30, potom vydeľ 2!=2, dostaneš 15.',
         reveal: '6·5/2=15.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Kombinačné číslo:</strong> (n nad k)=n!/(k!·(n−k)!), pre 0≤k≤n. Vlastnosti: (n nad 0)=(n nad n)=1, symetria (n nad k)=(n nad n−k). Riadky Pascalovho trojuholníka obsahujú práve tieto čísla; každé vnútorné číslo je súčtom dvoch čísel priamo nad ním.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

@@ -101,6 +101,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Funkcia f je <strong>párna</strong>, ak pre každé x z D(f) platí f(−x) = f(x).</p><p>Funkcia f je <strong>nepárna</strong>, ak pre každé x z D(f) platí f(−x) = −f(x).</p><p>Niektorá funkcia nemusí byť ani párna, ani nepárna. Vlastnosť vždy over výpočtom, nie odhadom.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-even',
         type: 'choice',
         phase: 'OVER SI',
@@ -151,14 +159,6 @@ MathPlatform.registerModule({
         answer: 0,
         correct: 'Presne. Párnosť/nepárnosť funkcie sa musí overiť výpočtom f(−x), nie odhadom podľa vzhľadu exponentu.',
         hint: 'Slovo „párna funkcia“ nemá nič spoločné s tým, či je <span class="hl">exponent</span> párne alebo nepárne číslo — over si to výpočtom.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Funkcia f je <strong>párna</strong>, ak pre každé x z D(f) platí f(−x) = f(x).</p><p>Funkcia f je <strong>nepárna</strong>, ak pre každé x z D(f) platí f(−x) = −f(x).</p><p>Niektorá funkcia nemusí byť ani párna, ani nepárna. Vlastnosť vždy over výpočtom, nie odhadom.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

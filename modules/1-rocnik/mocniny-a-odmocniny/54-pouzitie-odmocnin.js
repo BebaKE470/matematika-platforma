@@ -83,6 +83,14 @@ MathPlatform.registerModule({
         remember: 'c = √(a² + b²).  a = √(c² − b²).',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Pytagorova veta: a² + b² = c² (a, b odvesny, c prepona).</p><div class="formula"><span class="mini-label">VÝPOČET PREPONY</span>c = √(a² + b²)</div><div class="formula"><span class="mini-label">VÝPOČET ODVESNY</span>a = √(c² − b²)</div><ol class="steps"><li>dosaď čísla</li><li>umocni a sčítaj/odčítaj</li><li>až na záver odmocni</li></ol>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-hypotenuse',
         type: 'choice',
         phase: 'OVER SI',
@@ -146,14 +154,6 @@ MathPlatform.registerModule({
         answer: 2,
         correct: 'Správne. Vodorovná a výšková vzdialenosť sú odvesny pravouhlého trojuholníka, priama vzdialenosť je jeho prepona.',
         hint: 'Rozmysli si, ktorá strana trojuholníka je hľadaná priama vzdialenosť — odvesna, alebo prepona?',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pytagorova veta: a² + b² = c² (a, b odvesny, c prepona).</p><div class="formula"><span class="mini-label">VÝPOČET PREPONY</span>c = √(a² + b²)</div><div class="formula"><span class="mini-label">VÝPOČET ODVESNY</span>a = √(c² − b²)</div><ol class="steps"><li>dosaď čísla</li><li>umocni a sčítaj/odčítaj</li><li>až na záver odmocni</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

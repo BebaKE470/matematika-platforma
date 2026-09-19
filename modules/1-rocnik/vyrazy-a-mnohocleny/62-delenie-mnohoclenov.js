@@ -79,6 +79,14 @@ MathPlatform.registerModule({
         remember: '(a+b) : c = a:c + b:c — delíme každý člen zvlášť.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Mnohočlen delíme jednočlenom tak, že vydelíme <strong>každý</strong> jeho člen: (a+b):c = a:c + b:c.</p><p>Pri delení mocnín premennej platí aᵐ:aⁿ = aᵐ⁻ⁿ.</p><p>Príklad: (8x³+12x²):4x = 2x²+3x. Výsledok si over spätným násobením: 4x·(2x²+3x) = 8x³+12x².</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -131,14 +139,6 @@ MathPlatform.registerModule({
         success: 'Správne. (6x²+2x):2x = 3x+1, pre x=3: 3·3+1 = 10.',
         hint: 'Najprv zjednoduš výraz na 3x + 1, potom dosaď x = 3.',
         reveal: '(6x²+2x):2x = 3x+1, pre x=3: 9+1 = 10.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Mnohočlen delíme jednočlenom tak, že vydelíme <strong>každý</strong> jeho člen: (a+b):c = a:c + b:c.</p><p>Pri delení mocnín premennej platí aᵐ:aⁿ = aᵐ⁻ⁿ.</p><p>Príklad: (8x³+12x²):4x = 2x²+3x. Výsledok si over spätným násobením: 4x·(2x²+3x) = 8x³+12x².</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

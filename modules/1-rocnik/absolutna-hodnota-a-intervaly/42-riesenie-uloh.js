@@ -87,6 +87,14 @@ MathPlatform.registerModule({
         "html": "<div class=\"formula\">Zápis |x − a| vyjadruje vzdialenosť čísla x od čísla a.</div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>|x − 2| ≤ 3 znamená: x je od čísla 2 vzdialené najviac 3 jednotky.</p><p>Na osi sa dostaneme od 2 − 3 = −1 po 2 + 3 = 5, teda <strong>x ∈ ⟨−1; 5⟩</strong>.</p></div><div class=\"warning\"><strong>Pozor:</strong> Neuč sa to ako trik so znamienkami; vždy si predstav stred a vzdialenosť.</div>"
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p>|x| je vzdialenosť x od 0.</p><p>|x − a| je vzdialenosť x od a.</p><p>Príklad: |x − 2| ≤ 3 znamená, že x je od 2 vzdialené najviac 3, preto x ∈ ⟨−1; 5⟩.</p><p>Pri ostrej nerovnosti &lt; krajné body nepatria; pri ≤ patria.</p>",
+        "continueLabel": "Mám zapísané"
+      },
+      {
         "id": "abs-int1",
         "type": "choice",
         "phase": "PREPOJ",
@@ -145,14 +153,6 @@ MathPlatform.registerModule({
         "answer": 0,
         "correct": "Presne. Interval musí byť okolo čísla 3: (1; 5).",
         "hint": "Zisti, od ktorého bodu sa meria vzdialenosť."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p>|x| je vzdialenosť x od 0.</p><p>|x − a| je vzdialenosť x od a.</p><p>Príklad: |x − 2| ≤ 3 znamená, že x je od 2 vzdialené najviac 3, preto x ∈ ⟨−1; 5⟩.</p><p>Pri ostrej nerovnosti &lt; krajné body nepatria; pri ≤ patria.</p>",
-        "continueLabel": "Mám zapísané"
       },
       {
         "id": "argument",

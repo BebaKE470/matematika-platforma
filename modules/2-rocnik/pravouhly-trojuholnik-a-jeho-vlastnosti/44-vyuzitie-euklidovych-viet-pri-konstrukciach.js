@@ -84,6 +84,14 @@ MathPlatform.registerModule({
         remember: 'Geometrický priemer √(a·b) = strana štvorca s rovnakým obsahom ako obdĺžnik so stranami a, b.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Geometrický priemer</strong> úsečiek a, b:</p><div class="formula">√(a·b)</div><p>Zostrojíme ho ako výšku pravouhlého trojuholníka s úsekmi prepony a, b (Euklidova veta o výške). Štvorec so stranou √(a·b) má rovnaký obsah ako obdĺžnik so stranami a, b.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -132,14 +140,6 @@ MathPlatform.registerModule({
         success: 'Správne. √(8·18)=√144=12m.',
         hint: 'Vynásob obe strany obdĺžnika a z výsledku urob odmocninu.',
         reveal: '√(8·18)=√144=12m.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Geometrický priemer</strong> úsečiek a, b:</p><div class="formula">√(a·b)</div><p>Zostrojíme ho ako výšku pravouhlého trojuholníka s úsekmi prepony a, b (Euklidova veta o výške). Štvorec so stranou √(a·b) má rovnaký obsah ako obdĺžnik so stranami a, b.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

@@ -76,6 +76,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Pytagorova veta</div><p class="term-rule">Použi, keď poznáš dve strany.</p></div><div class="term-item no-symbol"><div class="term-name">sin / cos / tg</div><p class="term-rule">Použi, keď poznáš stranu a uhol.</p></div><div class="term-item no-symbol"><div class="term-name">Súčet ostrých uhlov = 90°</div><p class="term-rule">Použi na dopočítanie druhého uhla.</p></div></div><p>Výsledok si over kontrolou (napr. súčtom uhlov, alebo spätným dosadením do Pytagorovej vety).</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-angle-sum',
         type: 'choice',
         phase: 'OVER SI',
@@ -124,14 +132,6 @@ MathPlatform.registerModule({
         success: 'Správne. b=√(13²−5²)=√(169−25)=√144=12cm.',
         hint: 'Použi b=√(c²−a²).',
         reveal: 'b=√144=12cm.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Pytagorova veta</div><p class="term-rule">Použi, keď poznáš dve strany.</p></div><div class="term-item no-symbol"><div class="term-name">sin / cos / tg</div><p class="term-rule">Použi, keď poznáš stranu a uhol.</p></div><div class="term-item no-symbol"><div class="term-name">Súčet ostrých uhlov = 90°</div><p class="term-rule">Použi na dopočítanie druhého uhla.</p></div></div><p>Výsledok si over kontrolou (napr. súčtom uhlov, alebo spätným dosadením do Pytagorovej vety).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

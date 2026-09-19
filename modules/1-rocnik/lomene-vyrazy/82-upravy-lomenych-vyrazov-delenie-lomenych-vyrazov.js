@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'a/b : c/d = a/b · d/c. Deliteľa vždy obráť a preveď delenie na násobenie.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<div class="formula">a/b : c/d = a/b · d/c = (ad)/(bc)<span class="formula-note">Obráť deliaci výraz a zmeň delenie na násobenie.</span></div><p>Po prevode na násobenie vždy skontroluj, či sa dá výsledok ešte skrátiť.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -133,14 +141,6 @@ MathPlatform.registerModule({
         success: 'Správne. (x/2):(x/6) = (x/2)·(6/x) = 6x/(2x) = 3, bez ohľadu na hodnotu x.',
         hint: 'Obráť druhý zlomok, vynásob a skráť x.',
         reveal: '(x/2):(x/6) = 3 pre každé x≠0.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula">a/b : c/d = a/b · d/c = (ad)/(bc)<span class="formula-note">Obráť deliaci výraz a zmeň delenie na násobenie.</span></div><p>Po prevode na násobenie vždy skontroluj, či sa dá výsledok ešte skrátiť.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

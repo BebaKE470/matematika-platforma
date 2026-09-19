@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'sin30°=1/2, cos30°=√3/2. sin45°=cos45°=√2/2. sin60°=√3/2, cos60°=1/2.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Zo vzorcov sin α=a/c, cos α=b/c vieme vyjadriť: a=c·sin α, b=c·cos α, c=a/sin α=b/cos α.</p><p>Hodnoty: sin30°=1/2, cos30°=√3/2; sin45°=cos45°=√2/2; sin60°=√3/2, cos60°=1/2.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -133,14 +141,6 @@ MathPlatform.registerModule({
         success: 'Správne. b = c·cos α = 8·(1/2) = 4cm.',
         hint: 'Použi b = c·cos α a dosaď cos60°=1/2.',
         reveal: 'b = 8·(1/2) = 4cm.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zo vzorcov sin α=a/c, cos α=b/c vieme vyjadriť: a=c·sin α, b=c·cos α, c=a/sin α=b/cos α.</p><p>Hodnoty: sin30°=1/2, cos30°=√3/2; sin45°=cos45°=√2/2; sin60°=√3/2, cos60°=1/2.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

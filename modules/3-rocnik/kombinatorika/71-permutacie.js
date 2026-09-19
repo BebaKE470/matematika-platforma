@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'Bez opakovania: P(n)=n!. S opakovaním (n₁, n₂,... opakovaní): P\'(n;n₁,n₂,...)=n!/(n₁!·n₂!·...).',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Permutácia bez opakovania:</strong> P(n)=n! (usporiadanie n rôznych prvkov, osobitný prípad variácie pre k=n). <strong>Permutácia s opakovaním:</strong> P\'(n;n₁,n₂,...)=n!/(n₁!·n₂!·...), keď sa niektoré prvky opakujú n₁-krát, n₂-krát atď.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -133,14 +141,6 @@ MathPlatform.registerModule({
         success: 'Správne. P\'(4;2,2)=4!/(2!·2!)=24/4=6.',
         hint: 'Použi vzorec n!/(n₁!·n₂!) s n₁=2 (počet T), n₂=2 (počet A).',
         reveal: '4!/(2!·2!)=24/4=6.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Permutácia bez opakovania:</strong> P(n)=n! (usporiadanie n rôznych prvkov, osobitný prípad variácie pre k=n). <strong>Permutácia s opakovaním:</strong> P\'(n;n₁,n₂,...)=n!/(n₁!·n₂!·...), keď sa niektoré prvky opakujú n₁-krát, n₂-krát atď.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

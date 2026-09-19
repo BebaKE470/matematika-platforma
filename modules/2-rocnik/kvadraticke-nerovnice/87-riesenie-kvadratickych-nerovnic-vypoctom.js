@@ -85,6 +85,14 @@ MathPlatform.registerModule({
         remember: 'a>0: mimo koreňov kladné, medzi koreňmi záporné. a<0: naopak.',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p><strong>Riešenie kvadratickej nerovnice:</strong> nájdi korene x₁≤x₂ príslušnej rovnice. Ak a&gt;0: výraz je kladný mimo koreňov, záporný medzi nimi. Ak a&lt;0: naopak. Pri neostrej nerovnosti (≤,≥) sa korene zahŕňajú do riešenia (uzavretý interval), pri ostrej (&lt;,&gt;) nie.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',
@@ -131,14 +139,6 @@ MathPlatform.registerModule({
         answer: 2,
         correct: 'Správne. Neostrá nerovnosť ≤ zahŕňa aj hraničné body — uzavretý interval ⟨−4, 4⟩.',
         hint: 'Neostrá nerovnosť (≤, ≥) vždy zahŕňa aj samotné korene.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Riešenie kvadratickej nerovnice:</strong> nájdi korene x₁≤x₂ príslušnej rovnice. Ak a&gt;0: výraz je kladný mimo koreňov, záporný medzi nimi. Ak a&lt;0: naopak. Pri neostrej nerovnosti (≤,≥) sa korene zahŕňajú do riešenia (uzavretý interval), pri ostrej (&lt;,&gt;) nie.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

@@ -81,6 +81,14 @@ MathPlatform.registerModule({
         "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Kruh má polomer r = 5 cm (počítame s π ≈ 3,14).</p><p>S = πr² = 3,14·25 = <strong>78,5 cm²</strong></p><p>o = 2πr = 2·3,14·5 = <strong>31,4 cm</strong></p></div>"
       },
       {
+        "id": "clean",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Obvod a obsah kruhu a jeho častí",
+        "html": "<p><strong>TEÓRIA:</strong> Kruh: S=πr², o=2πr. Pri výseku pracujeme s príslušnou časťou celého uhla 360°.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
+        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
+      },
+      {
         "id": "meaning",
         "type": "explain",
         "phase": "VÝZNAM",
@@ -135,14 +143,6 @@ MathPlatform.registerModule({
         "answer": 3,
         "correct": "Pri rovnakom uhle sa obsahy menia so štvorcom polomeru: 18·(2/5)²=18·4/25=2,88 cm².",
         "hint": "Obsah výseku je úmerný r²."
-      },
-      {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Obvod a obsah kruhu a jeho častí",
-        "html": "<p><strong>TEÓRIA:</strong> Kruh: S=πr², o=2πr. Pri výseku pracujeme s príslušnou časťou celého uhla 360°.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
-        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
       },
       {
         "id": "reflection",

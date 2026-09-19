@@ -73,6 +73,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Pravidlá pre mocniny platia rovnako aj pre racionálny (zlomkový) mocniteľ:</p><div class="formula">aᵐ · aⁿ = aᵐ⁺ⁿ<br>aᵐ : aⁿ = aᵐ⁻ⁿ<br>(aᵐ)ⁿ = aᵐⁿ</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>8^(1/3) · 8^(1/3) = 8^(2/3) = ∛(8²) = ∛64 = 4.</p></div>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-multiply',
         type: 'choice',
         phase: 'OVER SI',
@@ -132,14 +140,6 @@ MathPlatform.registerModule({
         success: 'Správne. 9^(1/2) · 9^(1/2) = 9^(1/2+1/2) = 9¹ = 9.',
         hint: 'Sčítaj zlomkové exponenty a potom vypočítaj hodnotu výslednej mocniny.',
         reveal: '9^(1/2) · 9^(1/2) = 9¹ = 9.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pravidlá pre mocniny platia rovnako aj pre racionálny (zlomkový) mocniteľ:</p><div class="formula">aᵐ · aⁿ = aᵐ⁺ⁿ<br>aᵐ : aⁿ = aᵐ⁻ⁿ<br>(aᵐ)ⁿ = aᵐⁿ</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>8^(1/3) · 8^(1/3) = 8^(2/3) = ∛(8²) = ∛64 = 4.</p></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

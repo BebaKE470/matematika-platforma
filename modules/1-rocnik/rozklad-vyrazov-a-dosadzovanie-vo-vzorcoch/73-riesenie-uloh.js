@@ -66,6 +66,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Ako rozhodnúť, ktorý vzorec použiť:</p><p><strong>Dvojčlen</strong> (dva členy, rozdiel štvorcov) → a² − b² = (a−b)(a+b).</p><p><strong>Trojčlen</strong> s prostredným členom presne 2ab → a² ± 2ab + b² = (a±b)².</p><p>Ak výraz nezodpovedá ani jednému vzorcu presne, rozkladá sa iným spôsobom (napr. vyňatím pred zátvorku, alebo sa nedá rozložiť vôbec).</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-recognize1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -114,14 +122,6 @@ MathPlatform.registerModule({
         success: 'Správne. x²−4 = (x−2)(x+2), pre x=5: (5−2)(5+2) = 3·7 = 21.',
         hint: 'Najprv rozlož na (x−2)(x+2), potom dosaď x=5.',
         reveal: '(5−2)(5+2) = 3·7 = 21.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Ako rozhodnúť, ktorý vzorec použiť:</p><p><strong>Dvojčlen</strong> (dva členy, rozdiel štvorcov) → a² − b² = (a−b)(a+b).</p><p><strong>Trojčlen</strong> s prostredným členom presne 2ab → a² ± 2ab + b² = (a±b)².</p><p>Ak výraz nezodpovedá ani jednému vzorcu presne, rozkladá sa iným spôsobom (napr. vyňatím pred zátvorku, alebo sa nedá rozložiť vôbec).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

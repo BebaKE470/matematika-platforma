@@ -99,6 +99,13 @@ MathPlatform.registerModule({
         "continueLabel": "Teraz si to overím"
       },
       {
+        "id": "clean",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Čo si z dneška odnesiem",
+        "html": "<p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span></p><p><strong>NADPIS:</strong> Množina, prvok množiny, zápis množiny</p><p><strong>TEÓRIA:</strong> Množina je súbor objektov, pri ktorom vieme jednoznačne rozhodnúť, či objekt do množiny patrí. Objekty množiny nazývame prvky.</p><p><strong>SYMBOLY:</strong> x ∈ A – x patrí do A; &nbsp; x ∉ A – x nepatrí do A.</p><p><strong>PRÍKLAD:</strong> A = {2, 4, 6}; 4 ∈ A; 5 ∉ A.</p>"
+      },
+      {
         "id": "read",
         "type": "choice",
         "phase": "OVER",
@@ -135,14 +142,6 @@ MathPlatform.registerModule({
         "title": "ÚLOHA DO ZOŠITA – skús sám/sama",
         "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span></p><p>Nech B = {1, 3, 5, 7}. Bez aplikácie zapíš pomocou ∈ alebo ∉:</p><p>a) číslo 5 a množina B &nbsp;&nbsp; b) číslo 4 a množina B.</p><p>Potom oba zápisy prečítaj slovami.</p>",
         "model": "<strong>KONTROLA:</strong> 5 ∈ B, pretože 5 je prvkom B. 4 ∉ B, pretože 4 medzi prvkami B nie je."
-      },
-      {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Čo si z dneška odnesiem",
-        "html": "<p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span></p><p><strong>NADPIS:</strong> Množina, prvok množiny, zápis množiny</p><p><strong>TEÓRIA:</strong> Množina je súbor objektov, pri ktorom vieme jednoznačne rozhodnúť, či objekt do množiny patrí. Objekty množiny nazývame prvky.</p><p><strong>SYMBOLY:</strong> x ∈ A – x patrí do A; &nbsp; x ∉ A – x nepatrí do A.</p><p><strong>PRÍKLAD:</strong> A = {2, 4, 6}; 4 ∈ A; 5 ∉ A.</p>",
-        "model": "Toto je presný zápis, ku ktorému sa môžeš pri ďalších témach vrátiť."
       },
       {
         "id": "explain",

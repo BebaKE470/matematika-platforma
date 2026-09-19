@@ -73,6 +73,13 @@ MathPlatform.registerModule({
         "html": "<div class=\"compare\"><div><span class=\"mini-label\">ZĽAVA O 20 %</span><p>Násobíme pôvodnú cenu číslom 0,80.</p></div><div><span class=\"mini-label\">ZVÝŠENIE O 20 %</span><p>Násobíme pôvodnú cenu číslom 1,20.</p></div></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "notebook-rule",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pri zľave o 20 % násobíme pôvodnú cenu číslom 0,80; pri zvýšení o 20 % číslom 1,20.</p>"
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -101,7 +108,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pri každej úlohe podčiarkni základ. Potom zapíš, či percentovú hodnotu pripočítavaš alebo odpočítavaš.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pri zľave o 20 % násobíme pôvodnú cenu číslom 0,80; pri zvýšení o 20 % číslom 1,20.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pri každej úlohe podčiarkni základ. Potom zapíš, či percentovú hodnotu pripočítavaš alebo odpočítavaš.</p>",
         "model": "<strong>KONTROLA:</strong> Pri zľave o 20 % násobíme pôvodnú cenu číslom 0,80; pri zvýšení o 20 % číslom 1,20."
       },
       {

@@ -94,6 +94,13 @@ MathPlatform.registerModule({
         "remember": "graf lineárnej funkcie je priamka (pri a=0 vodorovná priamka)."
       },
       {
+        "id": "clean-a",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p><strong>TEÓRIA:</strong> Lineárna funkcia má predpis f(x)=ax+b. Jej grafom je priamka. Číslo b je f(0), takže graf pretína os y v bode [0;b].</p>"
+      },
+      {
         "id": "coeff",
         "type": "choice",
         "phase": "ROZPOZNAJ",
@@ -123,6 +130,13 @@ MathPlatform.registerModule({
           { "x": 2, "y": 1, "label": "[2; 1]" }
         ],
         "ariaLabel": "Graf funkcie f(x) = x − 1, priamka cez body [0; −1] a [2; 1]"
+      },
+      {
+        "id": "clean-b",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p><strong>POSTUP zostrojenia grafu:</strong> zvolím x → vypočítam f(x) → zapíšem body [x;f(x)] → zostrojím priamku.</p>"
       },
       {
         // Zdroj: zbierka úloh, 5.1.1–5.1.4 (výpočet funkčnej hodnoty).
@@ -199,14 +213,6 @@ MathPlatform.registerModule({
       {"id":"build-table","type":"choice","phase":"VYPOČÍTAJ","skill":"graf","stimulus":"g(x)=−x+2","question":"Ktorá trojica bodov patrí na graf?","options":["[0;−1], [1;0], [2;1]","[0;2], [1;1], [2;0]","[0;2], [1;2], [2;2]","[0;0], [1;1], [2;2]"],"answer":1,"correct":"g(0)=2, g(1)=1 a g(2)=0.","hint":"Dosadzuj postupne 0, 1 a 2."},
       {"id":"point-test","type":"sortChoice","phase":"OVER GRAF","skill":"graf","title":"Patrí bod na graf f(x)=2x−1?","items":[{"text":"[0;−1]","answer":true,"why":"f(0)=−1."},{"text":"[2;3]","answer":true,"why":"f(2)=4−1=3."},{"text":"[1;2]","answer":false,"why":"f(1)=1, nie 2."},{"text":"[−1;−3]","answer":true,"why":"f(−1)=−2−1=−3."}],"labels":["PATRÍ","NEPATRÍ"]},
       {"id":"why-line","type":"selfWrite","phase":"ARGUMENTUJ","title":"Ako overíš bod?","promptHtml":"Napíš presný postup, ako bez obrázka overíš, či bod <strong>[x₀;y₀]</strong> patrí na graf funkcie zadanej predpisom.","model":"Do predpisu dosadím x₀. Ak vypočítaná funkčná hodnota je y₀, bod na graf patrí; ak nie, nepatrí."},
-      {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Lineárna funkcia a jej graf",
-        "html": "<p><strong>TEÓRIA:</strong> Lineárna funkcia má predpis f(x)=ax+b. Jej grafom je priamka. Číslo b je f(0), takže graf pretína os y v bode [0;b].</p>",
-        "model": "<strong>POSTUP:</strong> zvolím x → vypočítam f(x) → zapíšem body [x;f(x)] → zostrojím priamku."
-      },
       {
         // Zdroj: zbierka úloh, 5.1.10 a 5.1.11 (Narysujte grafy lineárnych
         // funkcií) — prevzatá je iba časť „zostroj graf" (u 5.1.11 vrátane

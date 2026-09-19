@@ -76,6 +76,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Prehľad: poznáme obe odvesny alebo preponu+odvesnu → Pytagorova veta. Poznáme oba úseky prepony → veta o výške. Poznáme celú preponu a jeden úsek → veta o odvesne.</p><p>Obsah trojuholníka vyjadrený dvoma spôsobmi (z odvesien, z prepony a výšky) pomáha prepojiť vzťahy, keď priamy vzorec chýba.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-choose1',
         type: 'choice',
         phase: 'PRECVIČ',
@@ -139,14 +147,6 @@ MathPlatform.registerModule({
         success: 'Správne. c=√(9²+12²)=√(81+144)=√225=15cm.',
         hint: 'Použi Pytagorovu vetu c=√(a²+b²).',
         reveal: 'c=√(81+144)=√225=15cm.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Prehľad: poznáme obe odvesny alebo preponu+odvesnu → Pytagorova veta. Poznáme oba úseky prepony → veta o výške. Poznáme celú preponu a jeden úsek → veta o odvesne.</p><p>Obsah trojuholníka vyjadrený dvoma spôsobmi (z odvesien, z prepony a výšky) pomáha prepojiť vzťahy, keď priamy vzorec chýba.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

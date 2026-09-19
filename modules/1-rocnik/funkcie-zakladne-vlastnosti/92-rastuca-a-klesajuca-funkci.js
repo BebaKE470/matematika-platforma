@@ -93,6 +93,14 @@ MathPlatform.registerModule({
         remember: 'Rastúca: x₁<x₂ ⇒ f(x₁)<f(x₂). Klesajúca: x₁<x₂ ⇒ f(x₁)>f(x₂).',
       },
       {
+        id: 'notebook',
+        type: 'notebook',
+        phase: 'ZOŠIT',
+        title: 'Toto si zapíš do zošita',
+        html: '<p>Funkcia f je <strong>rastúca</strong> na množine, ak pre každé x₁ &lt; x₂ z tejto množiny platí f(x₁) &lt; f(x₂).</p><p>Funkcia f je <strong>klesajúca</strong>, ak pre x₁ &lt; x₂ platí f(x₁) &gt; f(x₂).</p><p>Vždy najprv usporiadaj body podľa x, až potom porovnaj hodnoty y.</p>',
+        continueLabel: 'Mám zapísané',
+      },
+      {
         id: 'q-increasing',
         type: 'choice',
         phase: 'OVER SI',
@@ -143,14 +151,6 @@ MathPlatform.registerModule({
         answer: 2,
         correct: 'Správne. Hodnoty y (1,2,4,6) sa so zväčšujúcim sa x stále zväčšujú — funkcia je rastúca.',
         hint: 'Sleduj, ako sa mení y od najmenšieho x k najväčšiemu.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Funkcia f je <strong>rastúca</strong> na množine, ak pre každé x₁ &lt; x₂ z tejto množiny platí f(x₁) &lt; f(x₂).</p><p>Funkcia f je <strong>klesajúca</strong>, ak pre x₁ &lt; x₂ platí f(x₁) &gt; f(x₂).</p><p>Vždy najprv usporiadaj body podľa x, až potom porovnaj hodnoty y.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'argument',

@@ -80,6 +80,13 @@ MathPlatform.registerModule({
         "html": "<p>Pri neznámej v menovateli najprv vylúčime hodnoty, ktoré robia menovateľ nulový; až potom riešime a výsledok porovnáme s podmienkou.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
+        "id": "concept-note",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Zapíš si do zošita",
+        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pri neznámej v menovateli najprv vylúčime hodnoty, ktoré robia menovateľ nulový; až potom riešime a výsledok porovnáme s podmienkou.</p>"
+      },
+      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -108,8 +115,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Zapíš podmienku a vyrieš 10/(x+1)=5.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pri neznámej v menovateli najprv vylúčime hodnoty, ktoré robia menovateľ nulový; až potom riešime a výsledok porovnáme s podmienkou.</p>",
-        "model": "<strong>KONTROLA:</strong> Pri neznámej v menovateli najprv vylúčime hodnoty, ktoré robia menovateľ nulový; až potom riešime a výsledok porovnáme s podmienkou."
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Zapíš podmienku a vyrieš 10/(x+1)=5.</p>"
       },
       {
         "id": "transfer",

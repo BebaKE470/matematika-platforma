@@ -88,6 +88,14 @@ MathPlatform.registerModule({
         "hint": "Nakresli si malý diagram alebo vypíš prvky."
       },
       {
+        "id": "notebook",
+        "type": "notebook",
+        "phase": "ZOŠIT",
+        "title": "Toto si zapíš do zošita",
+        "html": "<p>Pre dve množiny platí:</p><div class=\"formula\">|A ∪ B| = |A| + |B| − |A ∩ B|</div><p>Spoločné prvky (A∩B) sa v súčte |A|+|B| započítajú dvakrát, preto ich raz odčítame.</p><p>Príklad: 18 žiakov ide autobusom, 14 električkou, 6 oboma → |A∪B| = 18+14−6 = 26 žiakov používa aspoň jeden dopravný prostriedok.</p>",
+        "continueLabel": "Mám zapísané"
+      },
+      {
         "id": "matura",
         "type": "choice",
         "phase": "VÝZVA",
@@ -103,14 +111,6 @@ MathPlatform.registerModule({
         "answer": 0,
         "correct": "Správne: 33. V A∩B je 39 kladných násobkov 5 menších ako 200. Do C z nich patria 10, 45, 80, 115, 150 a 185, teda 6 čísel. Preto 39 − 6 = 33.",
         "hint": "Najprv vypíš alebo spočítaj násobky 5 menšie ako 200. Potom hľadaj tie, ktoré dávajú po delení 7 zvyšok 3."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Upevni si podstatu",
-        "html": "<p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš názov témy: <strong>Aplikačné úlohy s množinami</strong>. Pridaj definíciu alebo pravidlo vlastnými slovami a jeden správny príklad.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor vlastný príklad a vyrieš ho bez aplikácie.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis musí používať presné symboly a musí byť z neho jasné, prečo výsledok platí."
       },
       {
         "id": "explain",
