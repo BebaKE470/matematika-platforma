@@ -125,12 +125,19 @@ MathPlatform.registerModule({
         "hint": "Pozri jediný nepravdivý riadok implikácie v pravdivostnej tabuľke."
       },
       {
+        "id": "impneg-why",
+        "type": "explain",
+        "phase": "1 · POCHOP",
+        "title": "Negácia implikácie",
+        "html": "<p>Veta „Ak A, tak B“ (A ⇒ B) je nepravdivá práve v jedinom prípade: keď A platí a B neplatí. Presne to je jej negácia.</p><div class=\"formula\">¬(A ⇒ B) ⇔ A ∧ ¬B</div><p>Všimni si rozdiel oproti De Morganovým pravidlám: pri negácii implikácie sa spojka nemení na inú implikáciu, ale na konjunkciu.</p>",
+        "remember": "¬(A ⇒ B) ⇔ A ∧ ¬B — implikácia zlyhá jedine vtedy, keď A platí a B neplatí."
+      },
+      {
         "id": "nb",
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Tri pravidlá, ktoré majú zmysel",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Skús bez pozerania zapísať negácie: ¬(A ∧ B), ¬(A ∨ B), ¬(A ⇒ B).</p><p>Potom odkry kontrolu.</p>",
-        "model": "<strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong><br>¬(A ∧ B) ⇔ ¬A ∨ ¬B<br>¬(A ∨ B) ⇔ ¬A ∧ ¬B<br>¬(A ⇒ B) ⇔ A ∧ ¬B"
+        "html": "<p class=\"muted\">Skús si najprv v duchu premyslieť, ako znejú tieto tri negácie — potom si ich presne takto zapíš.</p><p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p>¬(A ∧ B) ⇔ ¬A ∨ ¬B<br>¬(A ∨ B) ⇔ ¬A ∧ ¬B<br>¬(A ⇒ B) ⇔ A ∧ ¬B</p>"
       },
       {
         "id": "check",
