@@ -53,6 +53,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Na Hodine 16 sme videli, že rovnicu treba najprv upraviť na základný tvar. Dnes si tento postup zhrnieme do piatich krokov, ktoré fungujú pri každej goniometrickej rovnici.</p><p>Dôležitá vec, ktorú si pripomeň: <strong>tg x</strong> má periódu <strong>π</strong> (nie 2π ako sin x a cos x) — z Hodiny 4.</p>"
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",
@@ -69,11 +76,20 @@ MathPlatform.registerModule({
         "hint": "Hľadaj zdôvodnenie."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "postupovať podľa piatich krokov: podmienky → úprava → základné riešenia → periodicita → kontrola",
+          "všimnúť si rozdielnu periódu pri tg x/cotg x",
+          "aplikovať postup na konkrétnu rovnicu"
+        ]
+      },
+      {
         "id": "intro",
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Rovnice – systematický postup",
-        "html": "<ol class=\"steps\"><li>Podmienky</li><li>Úprava</li><li>Základné riešenia</li><li>Periodicita</li><li>Kontrola</li></ol>",
+        "html": "<ol class=\"steps\"><li>Podmienky</li><li>Úprava</li><li>Základné riešenia</li><li>Periodicita</li><li>Kontrola</li></ol><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Rieš rovnicu tg x = 1 na intervale ⟨0; 2π⟩.</p><p>Základné riešenie: x = π/4. Keďže tg x má periódu π (nie 2π), ďalšie riešenie je x = π/4 + π = 5π/4.</p><p>Riešenie: <strong>x = π/4 alebo x = 5π/4</strong>.</p></div>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {

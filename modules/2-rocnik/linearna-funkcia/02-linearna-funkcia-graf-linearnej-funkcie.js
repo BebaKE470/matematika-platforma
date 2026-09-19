@@ -77,6 +77,15 @@ MathPlatform.registerModule({
         "hint": "Spomeň si na vstup a výstup."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "rozpoznať tvar f(x) = ax + b",
+          "zostrojiť graf lineárnej funkcie z tabuľky bodov",
+          "vysvetliť úlohu koeficientov a a b"
+        ]
+      },
+      {
         "id": "linear-intro",
         "type": "explain",
         "phase": "1 · NOVÝ POJEM",
@@ -103,10 +112,17 @@ MathPlatform.registerModule({
       },
       {
         "id": "graph-how",
-        "type": "info",
+        "type": "coordinatePlot",
         "phase": "2 · VIZUALIZÁCIA",
         "title": "Ako vznikne graf",
-        "html": "<p>Pre <strong>f(x)=x−1</strong> vypočítame niekoľko hodnôt a body [x; f(x)] zakreslíme. Keďže ide o lineárnu funkciu, ležia na jednej priamke.</p><div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 620 360\" role=\"img\"><line x1=\"45.0\" y1=\"45\" x2=\"45.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"98.0\" y1=\"45\" x2=\"98.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"151.0\" y1=\"45\" x2=\"151.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"204.0\" y1=\"45\" x2=\"204.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"257.0\" y1=\"45\" x2=\"257.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"310.0\" y1=\"45\" x2=\"310.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"363.0\" y1=\"45\" x2=\"363.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"416.0\" y1=\"45\" x2=\"416.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"469.0\" y1=\"45\" x2=\"469.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"522.0\" y1=\"45\" x2=\"522.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"575.0\" y1=\"45\" x2=\"575.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"45\" y1=\"315.0\" x2=\"575\" y2=\"315.0\" class=\"plot-grid\"/><line x1=\"45\" y1=\"290.5\" x2=\"575\" y2=\"290.5\" class=\"plot-grid\"/><line x1=\"45\" y1=\"265.9\" x2=\"575\" y2=\"265.9\" class=\"plot-grid\"/><line x1=\"45\" y1=\"241.4\" x2=\"575\" y2=\"241.4\" class=\"plot-grid\"/><line x1=\"45\" y1=\"216.8\" x2=\"575\" y2=\"216.8\" class=\"plot-grid\"/><line x1=\"45\" y1=\"192.3\" x2=\"575\" y2=\"192.3\" class=\"plot-grid\"/><line x1=\"45\" y1=\"167.7\" x2=\"575\" y2=\"167.7\" class=\"plot-grid\"/><line x1=\"45\" y1=\"143.2\" x2=\"575\" y2=\"143.2\" class=\"plot-grid\"/><line x1=\"45\" y1=\"118.6\" x2=\"575\" y2=\"118.6\" class=\"plot-grid\"/><line x1=\"45\" y1=\"94.1\" x2=\"575\" y2=\"94.1\" class=\"plot-grid\"/><line x1=\"45\" y1=\"69.5\" x2=\"575\" y2=\"69.5\" class=\"plot-grid\"/><line x1=\"45\" y1=\"45.0\" x2=\"575\" y2=\"45.0\" class=\"plot-grid\"/><line x1=\"257.0\" y1=\"45\" x2=\"257.0\" y2=\"315\" class=\"plot-axis\"/><line x1=\"45\" y1=\"192.3\" x2=\"575\" y2=\"192.3\" class=\"plot-axis\"/><text x=\"45.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-4</text><text x=\"98.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-3</text><text x=\"151.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-2</text><text x=\"204.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-1</text><text x=\"310.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">1</text><text x=\"363.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">2</text><text x=\"416.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">3</text><text x=\"469.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">4</text><text x=\"522.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">5</text><text x=\"575.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">6</text><text x=\"35\" y=\"319.0\" text-anchor=\"end\" class=\"plot-label\">-5</text><text x=\"35\" y=\"294.5\" text-anchor=\"end\" class=\"plot-label\">-4</text><text x=\"35\" y=\"269.9\" text-anchor=\"end\" class=\"plot-label\">-3</text><text x=\"35\" y=\"245.4\" text-anchor=\"end\" class=\"plot-label\">-2</text><text x=\"35\" y=\"220.8\" text-anchor=\"end\" class=\"plot-label\">-1</text><text x=\"35\" y=\"171.7\" text-anchor=\"end\" class=\"plot-label\">1</text><text x=\"35\" y=\"147.2\" text-anchor=\"end\" class=\"plot-label\">2</text><text x=\"35\" y=\"122.6\" text-anchor=\"end\" class=\"plot-label\">3</text><text x=\"35\" y=\"98.1\" text-anchor=\"end\" class=\"plot-label\">4</text><text x=\"35\" y=\"73.5\" text-anchor=\"end\" class=\"plot-label\">5</text><text x=\"35\" y=\"49.0\" text-anchor=\"end\" class=\"plot-label\">6</text><polyline points=\"45.0,315.0 575.0,69.5\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"257.0\" cy=\"216.8\" r=\"6\" fill=\"#173d35\"/><text x=\"266.0\" y=\"206.8\" class=\"plot-point-label\">[0; −1]</text><circle cx=\"363.0\" cy=\"167.7\" r=\"6\" fill=\"#173d35\"/><text x=\"372.0\" y=\"157.7\" class=\"plot-point-label\">[2; 1]</text><text x=\"589\" y=\"184.3\" class=\"plot-axis-name\">x</text><text x=\"266.0\" y=\"33\" class=\"plot-axis-name\">y</text></svg></div><p class=\"keyidea\">Na určenie priamky stačia dva rôzne body, ale tretí bod je dobrá kontrola výpočtu.</p>"
+        "html": "<p>Pre <strong>f(x)=x−1</strong> vypočítame niekoľko hodnôt a body [x; f(x)] zakreslíme. Keďže ide o lineárnu funkciu, ležia na jednej priamke.</p><p class=\"keyidea\">Na určenie priamky stačia dva rôzne body, ale tretí bod je dobrá kontrola výpočtu.</p>",
+        "xMin": -4, "xMax": 6, "yMin": -5, "yMax": 6,
+        "curves": [{ "fn": x => x - 1 }],
+        "points": [
+          { "x": 0, "y": -1, "label": "[0; −1]" },
+          { "x": 2, "y": 1, "label": "[2; 1]" }
+        ],
+        "ariaLabel": "Graf funkcie f(x) = x − 1, priamka cez body [0; −1] a [2; 1]"
       },
       {
         // Zdroj: zbierka úloh, 5.1.1–5.1.4 (výpočet funkčnej hodnoty).

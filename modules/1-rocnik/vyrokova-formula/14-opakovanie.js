@@ -59,6 +59,10 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "topic-intro", "type": "intro",
+        "goals": ["usporiadať pojmy celku do súvislostí", "identifikovať vlastné slabé miesto pred kontrolnou prácou"]
+      },
+      {
         "id": "map",
         "type": "info",
         "phase": "OPAKUJ",

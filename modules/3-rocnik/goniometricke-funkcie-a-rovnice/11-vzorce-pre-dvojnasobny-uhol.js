@@ -53,6 +53,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Na Hodine 10 sme odvodili súčtové vzorce pre sin(α+β) a cos(α+β).</p><p>Dnes ukážeme, čo dostaneme, keď do nich namiesto dvoch rôznych uhlov dosadíme <strong>ten istý</strong> uhol (β = α) — vzniknú vzorce pre dvojnásobný uhol.</p>"
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",
@@ -69,11 +76,20 @@ MathPlatform.registerModule({
         "hint": "Hľadaj zdôvodnenie."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "odvodiť vzorce sin 2α a cos 2α zo súčtových vzorcov",
+          "použiť ich vo výpočte",
+          "zdôvodniť krok odvodenia"
+        ]
+      },
+      {
         "id": "intro",
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Dvojnásobný uhol",
-        "html": "<p>Vzorce pre 2x vzniknú zo súčtových vzorcov dosadením α=β=x.</p>",
+        "html": "<p>Vzorce pre 2α vzniknú zo súčtových vzorcov dosadením β = α.</p><div class=\"example\"><span class=\"mini-label\">ODVODENIE</span><p>sin(α+β) = sin α cos β + cos α sin β</p><p>Dosadíme β = α:</p><p>sin(α+α) = sin α cos α + cos α sin α = 2 sin α cos α</p><p>Dostávame <strong>sin 2α = 2 sin α cos α</strong>.</p></div><div class=\"example\"><span class=\"mini-label\">ODVODENIE</span><p>cos(α+β) = cos α cos β − sin α sin β</p><p>Dosadíme β = α:</p><p>cos(α+α) = cos²α − sin²α</p><p>Dostávame <strong>cos 2α = cos²α − sin²α</strong>, čo sa dá pomocou sin²α + cos²α = 1 prepísať aj na tvary 2cos²α − 1 alebo 1 − 2sin²α (presne tie, ktoré si zapíšeš do zošita).</p></div>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {

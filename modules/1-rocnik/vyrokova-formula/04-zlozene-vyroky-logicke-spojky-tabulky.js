@@ -78,9 +78,17 @@ MathPlatform.registerModule({
         "continueLabel": "Idem na to"
       },
       {
+        "id": "topic-intro-4", "type": "intro",
+        "goals": ["rozpoznať konjunkciu, disjunkciu, implikáciu a ekvivalenciu", "priradiť spojkám symboly ∧, ∨, ⇒, ⇔", "určiť pravdivostnú hodnotu zloženého výroku z hodnôt A a B"]
+      },
+      {
         "id": "spojky-intro", "type": "explain", "phase": "1 · NOVÝ POJEM", "title": "Zložený výrok a logické spojky",
-        "html": "<p><strong>Zložený výrok</strong> vzniká spojením dvoch (alebo viacerých) jednoduchých výrokov pomocou <strong>logickej spojky</strong>.</p><div class=\"term-list\"><div class=\"term-item\"><span class=\"term-symbol\">∧</span><div><div class=\"term-name\">Konjunkcia — „A a B“</div><p class=\"term-rule\">Pravdivá iba vtedy, keď sú pravdivé obe časti naraz.</p><p class=\"term-example\">Príklad: <b>„Mám pero a mám zošit.“</b> Pravdivé, len keď mám aj pero, aj zošit.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">∨</span><div><div class=\"term-name\">Disjunkcia (alternatíva) — „A alebo B“</div><p class=\"term-rule\">Pravdivá, ak je pravdivá aspoň jedna časť.</p><p class=\"term-example\">Príklad: <b>„Idem autom alebo autobusom.“</b> Pravdivé, ak platí aspoň jedna z možností.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">⇒</span><div><div class=\"term-name\">Implikácia — „ak A, tak B“</div><p class=\"term-rule\">Nepravdivá iba v prípade 1 ⇒ 0.</p><p class=\"term-example\">Príklad: <b>„Ak prší, tak si vezmem dáždnik.“</b> Nepravdivé iba vtedy, keď prší a dáždnik si nevezmem.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">⇔</span><div><div class=\"term-name\">Ekvivalencia — „A práve vtedy, keď B“</div><p class=\"term-rule\">Pravdivá, keď majú A aj B rovnakú hodnotu.</p><p class=\"term-example\">Príklad: <b>„Vyhrám práve vtedy, keď hodím šesťku.“</b> Pravdivé, keď obe nastanú, alebo obe nenastanú.</p></div></div></div><p>Pre všetky štyri kombinácie hodnôt A a B to zhŕňa táto pravdivostná tabuľka:</p><div class=\"table-wrap\"><table class=\"truth\"><tr><th>A</th><th>B</th><th>A ∧ B</th><th>A ∨ B</th><th>A ⇒ B</th><th>A ⇔ B</th></tr><tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr><tr><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td></tr><tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td></tr></table></div>",
+        "html": "<p><strong>Zložený výrok</strong> vzniká spojením dvoch (alebo viacerých) jednoduchých výrokov pomocou <strong>logickej spojky</strong>.</p><div class=\"term-list\"><div class=\"term-item\"><span class=\"term-symbol\">∧</span><div><div class=\"term-name\">Konjunkcia — „A a B“</div><p class=\"term-rule\">Pravdivá iba vtedy, keď sú pravdivé obe časti naraz.</p><p class=\"term-example\">Príklad: <b>„Mám pero a mám zošit.“</b> Pravdivé, len keď mám aj pero, aj zošit.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">∨</span><div><div class=\"term-name\">Disjunkcia (alternatíva) — „A alebo B“</div><p class=\"term-rule\">Pravdivá, ak je pravdivá aspoň jedna časť.</p><p class=\"term-example\">Príklad: <b>„Idem autom alebo autobusom.“</b> Pravdivé, ak platí aspoň jedna z možností.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">⇒</span><div><div class=\"term-name\">Implikácia — „ak A, tak B“</div><p class=\"term-rule\">Nepravdivá iba v prípade 1 ⇒ 0.</p><p class=\"term-example\">Príklad: <b>„Ak prší, tak si vezmem dáždnik.“</b> Nepravdivé iba vtedy, keď prší a dáždnik si nevezmem.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">⇔</span><div><div class=\"term-name\">Ekvivalencia — „A práve vtedy, keď B“</div><p class=\"term-rule\">Pravdivá, keď majú A aj B rovnakú hodnotu.</p><p class=\"term-example\">Príklad: <b>„Vyhrám práve vtedy, keď hodím šesťku.“</b> Pravdivé, keď obe nastanú, alebo obe nenastanú.</p></div></div></div>",
         "remember": "Štyri spojky: ∧ (a), ∨ (alebo), ⇒ (ak..., tak...), ⇔ (práve vtedy, keď)."
+      },
+      {
+        "id": "spojky-tabulka", "type": "info", "phase": "1 · NOVÝ POJEM", "title": "Jedna tabuľka pre všetky štyri spojky",
+        "html": "<p>Pre všetky štyri kombinácie hodnôt A a B to zhŕňa táto pravdivostná tabuľka:</p><div class=\"table-wrap\"><table class=\"truth\"><tr><th>A</th><th>B</th><th>A ∧ B</th><th>A ∨ B</th><th>A ⇒ B</th><th>A ⇔ B</th></tr><tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr><tr><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td></tr><tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td></tr></table></div>"
       },
       {
         "id": "spojka-and",
@@ -269,6 +277,10 @@ MathPlatform.registerModule({
         "id": "kde-sme-5", "type": "info", "phase": "0 · KDE SME", "title": "5. hodina — pridávame negáciu do výrazu",
         "html": "<p>Spojky ∧, ∨, ⇒, ⇔ už poznáš zo 4. hodiny. Dnes ich skombinujeme s negáciou ¬, ktorú poznáš z 3. hodiny — v jednom výraze sa objavia obe naraz.</p><p class=\"keyidea\">Postup je vždy rovnaký: najprv medzikrok (negácia), až potom hlavná spojka.</p>",
         "continueLabel": "Idem na to"
+      },
+      {
+        "id": "topic-intro-5", "type": "intro",
+        "goals": ["systematicky vyhodnotiť výraz s negáciou aj spojkou", "nájsť medzikrok skôr než hlavnú spojku"]
       },
       {
         "id": "prechod-5",

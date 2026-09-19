@@ -51,6 +51,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Zo ZŠ už poznáš <strong>súradnicovú sústavu</strong> a vieš do nej zakresliť bod podľa dvoch súradníc.</p><p>Vieš tiež <strong>dosadiť</strong> číslo do jednoduchého výrazu (napr. za x dosadiť 4) a <strong>čítať údaje z tabuľky</strong>.</p><p>Dnes tieto zručnosti spojíme a naučíme sa, čo je <strong>funkcia</strong> a ako ju môžeme zapísať.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vysvetliť, čo je funkcia",
+          "naučiť sa čítať zápis f(x)",
+          "rozpoznať tú istú funkciu v slovnom opise, tabuľke, predpise aj grafe"
+        ]
+      },
+      {
         "id": "start",
         "type": "info",
         "phase": "ZAČÍNAME",

@@ -52,6 +52,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z predchádzajúcich hodín už vieš, že <strong>sin x</strong> a <strong>cos x</strong> sú súradnice bodu na jednotkovej kružnici, ktorý zodpovedá číslu x.</p><p>Dnes z nich zostavíme ďalšiu funkciu — <strong>tg x</strong> — ako ich podiel.</p>"
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",
@@ -68,6 +75,14 @@ MathPlatform.registerModule({
         "hint": "Obvod jednotkovej kružnice je 2π."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "zadefinovať funkciu tg x",
+          "načrtnúť jej graf a opísať vlastnosti"
+        ]
+      },
+      {
         "id": "define",
         "type": "explain",
         "phase": "NOVÝ POJEM",
@@ -77,10 +92,20 @@ MathPlatform.registerModule({
       },
       {
         "id": "visual",
-        "type": "info",
+        "type": "coordinatePlot",
         "phase": "VIZUALIZÁCIA",
         "title": "Graf tg x",
-        "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><line x1=\"40\" y1=\"180\" x2=\"470\" y2=\"180\" class=\"plot-axis\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"300\" class=\"plot-axis\"/><line x1=\"250\" y1=\"45\" x2=\"250\" y2=\"300\" stroke=\"#9b6b2f\" stroke-width=\"2\" stroke-dasharray=\"7 7\"/><polyline points=\"50.0,180.0 54.6,179.4 59.2,178.9 63.8,178.3 68.5,177.7 73.1,177.1 77.7,176.5 82.3,175.9 86.9,175.3 91.5,174.7 96.2,174.0 100.8,173.4 105.4,172.7 110.0,172.0 114.6,171.2 119.2,170.5 123.8,169.7 128.5,168.8 133.1,167.9 137.7,167.0 142.3,166.0 146.9,165.0 151.5,163.8 156.2,162.6 160.8,161.3 165.4,159.9 170.0,158.3 174.6,156.5 179.2,154.6 183.8,152.4 188.5,149.9 193.1,147.1 197.7,143.8 202.3,139.9 206.9,135.1 211.5,129.4 216.2,122.0 220.8,112.5 225.4,99.4 230.0,80.3 234.6,50.0\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"455\" y=\"170\" class=\"plot-axis-name\">x</text><text x=\"60\" y=\"50\" class=\"plot-axis-name\">y</text></svg></div><p>Graf je záznam toho, ako sa hodnota mení pri pohybe x po reálnej osi.</p>"
+        "html": "<p>Graf je záznam toho, ako sa hodnota mení pri pohybe x po reálnej osi. Tam, kde je cos x = 0, funkcia nie je definovaná — graf sa k tomuto miestu len približuje (prerušovaná čiara).</p>",
+        "xMin": -1.5707963267948966, "xMax": 4.71238898038469, "yMin": -4, "yMax": 4,
+        "xStep": 1.5707963267948966, "yStep": 2,
+        "xTickFormat": v => (({ '-1': '−π/2', '0': '0', '1': 'π/2', '2': 'π', '3': '3π/2' })[String(Math.round(v / (Math.PI / 2)))] ?? String(v)),
+        "asymptotes": [Math.PI / 2],
+        "curves": [{ "fn": x => { const y = Math.tan(x); return Math.abs(y) > 4.3 ? NaN : y; }, "label": "tg x" }],
+        "points": [
+          { "x": Math.PI / 4, "y": 1, "label": "(π/4; 1)" },
+          { "x": 0, "y": 0, "label": "(0; 0)" }
+        ],
+        "ariaLabel": "Graf funkcie tg x s dvoma zvislými asymptotami"
       },
       {
         "id": "value",

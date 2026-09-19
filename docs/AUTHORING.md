@@ -196,7 +196,7 @@ mechanism. The max per type (honoured unless the activity sets its own
 | `notebook` | 20 | flat, on acknowledging the note |
 | `selfWrite` | 30 | flat, on revealing the model sentence |
 | `taskList` | 100 | `100 × checkedItems / totalItems`, rounded (honour system — nothing is validated) |
-| `info`, `explain`, `coordinatePlot`, `reflection` | 0 | — |
+| `info`, `explain`, `intro`, `coordinatePlot`, `reflection` | 0 | — |
 
 ## Activity types
 
@@ -235,6 +235,23 @@ Required: `title`, `question`, `labels` (exactly 2 strings, `labels[0]` is
 the "true" bucket), `items` (array of `{ text, answer: boolean, why:
 string }` — `why` is shown next to every item, right or wrong, after
 checking).
+
+### `intro` — full-bleed lesson-title cover
+
+A standalone "curtain up" moment for the lesson's topic, meant to sit
+somewhere near the start of `student.activities` (after an opening recap,
+say) so the topic actually registers instead of blending into the quiet
+`module-topic-bar` every other screen repeats on every step. Unlike every
+other type, it takes **no title field** — the eyebrow and heading are drawn
+straight from the module's own registry entry (`ctx.unit`/`ctx.topic`, i.e.
+`modules/registry.js`'s `unit`/`topic`), so they can never drift out of sync
+with the catalog. It also skips the standard header chrome entirely — no
+phase tag, XP, progress bar, or "Krok X z Y".
+
+Optional: `goals` (array of short strings — rendered as a numbered "Na
+dnešnej hodine sa naučíš:" list; omit entirely rather than passing an empty
+array), `html` (trusted HTML, shown above the goals list, for a case a short
+list doesn't fit), `continueLabel` (default "Začíname").
 
 ### `notebook` — acknowledge a copy-to-notebook note
 
@@ -313,14 +330,35 @@ validator function to `NUMBER_VALIDATORS` (and the matching key to
 Required: `title`, `labels` (array of strings), `items` (array of `{ text,
 answer }` where `answer` is one of `labels`, matched by exact string).
 
-### `coordinatePlot` — plot points on labelled axes
+### `coordinatePlot` — plot points and/or function curves on labelled axes
 
 Required: `title`. Optional: `html` (text above the plot), `points` (array
 of `{ x, y, label? }`), `xMin`/`xMax`/`yMin`/`yMax` (default -1/5/-1/9),
-`ariaLabel`, `note`, `continueLabel`. Not used by any shipped module yet —
-kept and documented because several unwritten function-graph modules will
-need it; don't hand-roll an SVG in an `info` activity's `html` when this
-exists.
+`xStep`/`yStep` (default 1 — the spacing between grid lines/ticks; set this
+to something coarser than 1 for a wide domain, e.g. a 0–360° angle axis, or
+`Math.PI / 2` for a radian axis, rather than letting it draw a line per
+integer), `xTickFormat`/`yTickFormat` (a function mapping a tick's numeric
+value to its label string, e.g. `x => x + '°'` or a helper that renders
+multiples of π — default is the plain number), `ariaLabel`, `note`,
+`continueLabel`.
+
+`curves` (array of `{ fn, color?, label?, samples? }`) draws one or more
+continuous function graphs — `fn` is a real JS function (`x => Math.sin(x)`,
+or any composite expression; modules are plain classic scripts, so this
+needs no formula parser), sampled across `[xMin, xMax]` (`samples`, default
+120) and drawn as a smooth polyline. `color` overrides the default ink
+stroke (useful when overlaying more than one curve, e.g. sin x and cos x
+together); `label` draws a small tag at the curve's right end. A function
+with vertical asymptotes (tg x, cotg x) should have `fn` itself return `NaN`
+once the true value would leave a sane `yMin`/`yMax` window (e.g. `x => {
+const y = Math.tan(x); return Math.abs(y) > 4.2 ? NaN : y; }`) — the sampler
+drops non-finite points, so the curve stops cleanly instead of drawing a
+near-vertical line across the whole plot. `asymptotes` (array of x-values)
+draws a dashed vertical line at each — use it alongside that `NaN` guard to
+mark exactly where the function is undefined. Don't hand-roll a
+`<polyline>`/point-by-point SVG in an `info` activity's `html` for a
+function graph when this exists — it keeps the axis/grid/point plumbing
+(and its labelling) in one place instead of copy-pasted per module.
 
 ### `reflection` — closing self-assessment
 

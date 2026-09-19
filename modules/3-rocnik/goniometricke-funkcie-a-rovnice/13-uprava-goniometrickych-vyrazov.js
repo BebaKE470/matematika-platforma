@@ -53,6 +53,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Doteraz sme si postupne zbierali „nástroje“: základnú identitu <strong>sin²x + cos²x = 1</strong>, súčtové vzorce (Hodina 10) a vzorce pre dvojnásobný uhol (Hodina 11).</p><p>Dnes tieto vzťahy použijeme na to, aby sme goniometrický výraz upravili na jednoduchší tvar — bez toho, aby sme zmenili jeho hodnotu.</p>"
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",
@@ -69,11 +76,20 @@ MathPlatform.registerModule({
         "hint": "Hľadaj zdôvodnenie."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "rozpoznať, ktorý už známy vzorec sa na výraz hodí",
+          "upraviť výraz bez zmeny jeho hodnoty",
+          "skontrolovať podmienky platnosti úpravy"
+        ]
+      },
+      {
         "id": "intro",
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Úprava výrazov",
-        "html": "<p>Pri úprave nemeníme hodnotu výrazu:</p><ol class=\"steps\"><li>Volíme identitu.</li><li>Upravíme jednu stranu.</li><li>Kontrolujeme podmienky.</li></ol>",
+        "html": "<p>Pri úprave nemeníme hodnotu výrazu:</p><ol class=\"steps\"><li>Volíme identitu.</li><li>Upravíme jednu stranu.</li><li>Kontrolujeme podmienky.</li></ol><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Uprav výraz 2sin²x tak, aby neobsahoval druhú mocninu.</p><p>Z Hodiny 11 vieme: cos 2x = 1 − 2sin²x, teda 2sin²x = 1 − cos 2x.</p><p>Platí teda <strong>2sin²x = 1 − cos 2x</strong>.</p></div>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {

@@ -53,6 +53,15 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "prepojiť jednotkovú kružnicu, grafy a vzorce",
+          "vybrať vhodný postup pri rovnici",
+          "zdôvodniť zvolené riešenie"
+        ]
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",

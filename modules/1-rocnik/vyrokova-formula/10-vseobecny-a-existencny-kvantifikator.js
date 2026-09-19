@@ -57,6 +57,10 @@ MathPlatform.registerModule({
         "continueLabel": "Idem na to"
       },
       {
+        "id": "topic-intro", "type": "intro",
+        "goals": ["rozlíšiť význam ∀ a ∃", "preložiť jednoduchý slovný výrok do symbolického zápisu a späť", "rozpoznať zamlčaný všeobecný kvantifikátor v bežnom tvrdení"]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "1 · POCHOP",

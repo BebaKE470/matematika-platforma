@@ -105,6 +105,18 @@
   background: #f3f5f2;
 }
 
+/* --- intro (full-bleed lesson-title cover, core/renderers.js's R.intro) ---
+   Skips the shared header() chrome on purpose (see the renderer's comment):
+   .intro-band carries the topic name instead of blending into the quiet
+   .module-topic-bar every other screen shows on every step. .intro-card
+   zeroes .card's own padding and clips to its border-radius so the band can
+   run edge-to-edge and still meet the card's rounded corners. */
+.intro-card { padding: 0; overflow: hidden; }
+.intro-band { padding: 28px 24px 24px; background: var(--ink); color: #fff; }
+.intro-band h1 { margin: 8px 0 0; color: #fff; }
+.intro-body { padding: 22px 24px 26px; }
+.intro-goals-label { margin: 0 0 4px; color: var(--muted); font-weight: 650; }
+
 /* --- info / explain / notebook / selfWrite --- */
 
 .remember { margin: 18px 0; padding: 15px 17px; border-left: 4px solid var(--ink); border-radius: 8px; background: var(--soft); }
@@ -142,7 +154,11 @@
   justify-content: center;
 }
 .term-name { font-weight: 800; font-size: 1.08rem; color: var(--ink); }
-.term-rule { margin: 0; color: var(--muted); font-size: .92rem; }
+/* Was var(--muted) (a pale gray) — real classroom feedback: projected on a
+   board, this is the fact students actually need to read (the definition or
+   value itself, e.g. "D(sin) = R"), not a caption, so it needs full-contrast
+   text like .term-example already gets, not the quiet treatment. */
+.term-rule { margin: 0; color: #1c2c27; font-size: .92rem; }
 .term-example { margin: 3px 0 0; font-size: .92rem; }
 .term-example b { color: var(--ink); }
 @media (max-width: 520px) {
@@ -363,6 +379,9 @@ select.answer-good, select.answer-bad { opacity: 1; -webkit-text-fill-color: var
 .plot-axis-name { font-size: 16px; font-weight: 800; fill: #173d35; }
 .plot-point { fill: #173d35; }
 .plot-point-label { font-size: 13px; font-weight: 750; fill: #173d35; }
+.plot-curve { fill: none; stroke: #173d35; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.plot-curve-label { font-size: 14px; font-weight: 750; fill: #173d35; }
+.plot-asymptote { stroke: #9b6b2f; stroke-width: 2; stroke-dasharray: 7 7; }
 
 /* --- Hand-authored diagrams / truth tables inside activity `html` fields --- */
 

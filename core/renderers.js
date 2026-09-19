@@ -127,6 +127,30 @@
     wireContinue(ctx);
   };
 
+  // Full-bleed lesson-title cover — deliberately skips header()/shell()'s
+  // usual chrome (module-topic-bar, phase tag, XP, progress) so the topic
+  // name gets one loud, undistracted moment instead of the quiet bar every
+  // other screen repeats on every step. The eyebrow/heading come from
+  // ctx.unit/ctx.topic (ultimately modules/registry.js), never authored on
+  // the activity itself, so they can't drift from the catalog.
+  R.intro = (a, ctx) => {
+    const goals = Array.isArray(a.goals) && a.goals.length
+      ? `<p class="intro-goals-label">Na dnešnej hodine sa naučíš:</p><ol class="steps">${a.goals.map(g => `<li>${esc(g)}</li>`).join('')}</ol>`
+      : '';
+    ctx.app.innerHTML = `<article class="card learning-card intro-card">
+      <div class="intro-band">
+        <div class="eyebrow">${esc(ctx.unit || '')}</div>
+        <h1>${esc(ctx.topic || '')}</h1>
+      </div>
+      <div class="intro-body">
+        ${a.html || ''}
+        ${goals}
+        <div class="actions">${continueButtonHtml(a.continueLabel || 'Začíname')}</div>
+      </div>
+    </article>`;
+    wireContinue(ctx);
+  };
+
   R.notebook = (a, ctx) => {
     shell(ctx, a, `
       <div class="eyebrow">ZOŠIT</div>
@@ -368,29 +392,79 @@
     };
   };
 
-  // A coordinate-plane SVG for tasks that plot points on axes — used by no
-  // module yet, but kept and documented (docs/AUTHORING.md) because several
-  // unwritten function modules will need exactly this.
+  // A coordinate-plane SVG for tasks that plot points on axes, and/or one or
+  // more continuous function curves (a.curves — sampled from a real JS
+  // function, e.g. `fn: x => Math.sin(x)`; modules are plain classic scripts,
+  // so a composite function is just ordinary JS, no formula parser needed).
+  // xStep/yStep and the optional tick formatters exist because a fixed
+  // integer-per-gridline step (the only option before) draws 361 grid lines
+  // across a 0–360° domain — goniometric graphs need a coarser, often
+  // π-based, step.
+  // Returns one array of "x,y" pixel points per unbroken run — a run ends
+  // wherever fn(x) is non-finite (NaN/Infinity), e.g. right at a vertical
+  // asymptote. Kept as SEPARATE runs (rather than one point list with the
+  // bad samples merely omitted) on purpose: a single <polyline> connects
+  // every point it's given in order, so silently dropping only the points
+  // closest to an asymptote would still draw one straight connecting line
+  // from the top of one branch to the bottom of the next — exactly the
+  // spurious near-vertical line this whole guard exists to avoid.
+  function sampleCurveRuns(fn, xmin, xmax, sx, sy, samples) {
+    const n = samples || 120;
+    const runs = [];
+    let current = [];
+    for (let i = 0; i <= n; i++) {
+      const x = xmin + (xmax - xmin) * i / n;
+      const y = fn(x);
+      if (Number.isFinite(y)) {
+        current.push(`${sx(x)},${sy(y)}`);
+      } else if (current.length) {
+        runs.push(current);
+        current = [];
+      }
+    }
+    if (current.length) runs.push(current);
+    return runs;
+  }
+
   R.coordinatePlot = (a, ctx) => {
     const width = 620, height = 420, pad = 48;
     const xmin = a.xMin ?? -1, xmax = a.xMax ?? 5, ymin = a.yMin ?? -1, ymax = a.yMax ?? 9;
+    const xStep = a.xStep || 1, yStep = a.yStep || 1;
     const sx = x => pad + (x - xmin) * (width - 2 * pad) / (xmax - xmin);
     const sy = y => height - pad - (y - ymin) * (height - 2 * pad) / (ymax - ymin);
-    const xTicks = Array.from({ length: Math.floor(xmax - xmin) + 1 }, (_, i) => xmin + i);
-    const yTicks = Array.from({ length: Math.floor(ymax - ymin) + 1 }, (_, i) => ymin + i);
+    const xTicks = [];
+    for (let x = xmin; x <= xmax + 1e-9; x += xStep) xTicks.push(Math.abs(x) < 1e-9 ? 0 : x);
+    const yTicks = [];
+    for (let y = ymin; y <= ymax + 1e-9; y += yStep) yTicks.push(Math.abs(y) < 1e-9 ? 0 : y);
+    const xFmt = a.xTickFormat || (v => v);
+    const yFmt = a.yTickFormat || (v => v);
     const grid = [
       ...xTicks.map(x => `<line x1="${sx(x)}" y1="${pad}" x2="${sx(x)}" y2="${height - pad}" class="plot-grid"/>`),
       ...yTicks.map(y => `<line x1="${pad}" y1="${sy(y)}" x2="${width - pad}" y2="${sy(y)}" class="plot-grid"/>`),
     ].join('');
     const axes = `${xmin <= 0 && xmax >= 0 ? `<line x1="${sx(0)}" y1="${pad}" x2="${sx(0)}" y2="${height - pad}" class="plot-axis"/>` : ''}${ymin <= 0 && ymax >= 0 ? `<line x1="${pad}" y1="${sy(0)}" x2="${width - pad}" y2="${sy(0)}" class="plot-axis"/>` : ''}`;
-    const labels = `${xTicks.map(x => `<text x="${sx(x)}" y="${height - pad + 24}" text-anchor="middle" class="plot-label">${esc(x)}</text>`).join('')}${yTicks.map(y => `<text x="${pad - 12}" y="${sy(y) + 5}" text-anchor="end" class="plot-label">${esc(y)}</text>`).join('')}`;
+    // Vertical dashed lines for a function's undefined points (e.g. tg x at
+    // π/2 + kπ) — drawn under the curve so a curve crossing near one still
+    // reads clearly.
+    const asymptotes = (a.asymptotes || []).filter(x => x > xmin && x < xmax)
+      .map(x => `<line x1="${sx(x)}" y1="${pad}" x2="${sx(x)}" y2="${height - pad}" class="plot-asymptote"/>`).join('');
+    const labels = `${xTicks.map(x => `<text x="${sx(x)}" y="${height - pad + 24}" text-anchor="middle" class="plot-label">${esc(xFmt(x))}</text>`).join('')}${yTicks.map(y => `<text x="${pad - 12}" y="${sy(y) + 5}" text-anchor="end" class="plot-label">${esc(yFmt(y))}</text>`).join('')}`;
     const pts = (a.points || []).map(p => `<g><circle cx="${sx(p.x)}" cy="${sy(p.y)}" r="7" class="plot-point"/><text x="${sx(p.x) + 10}" y="${sy(p.y) - 10}" class="plot-point-label">${esc(p.label || `(${p.x}, ${p.y})`)}</text></g>`).join('');
+    const curves = (a.curves || []).map(c => {
+      const runs = sampleCurveRuns(c.fn, xmin, xmax, sx, sy, c.samples);
+      const style = c.color ? ` style="stroke:${esc(c.color)}"` : '';
+      const polylines = runs.map(pts => `<polyline points="${pts.join(' ')}" class="plot-curve"${style}/>`).join('');
+      const lastRun = runs[runs.length - 1];
+      const last = lastRun && lastRun[lastRun.length - 1];
+      const label = c.label && last ? `<text x="${Number(last.split(',')[0]) + 8}" y="${Number(last.split(',')[1])}" class="plot-curve-label"${style}>${esc(c.label)}</text>` : '';
+      return polylines + label;
+    }).join('');
     shell(ctx, a, `
       <h1>${esc(a.title)}</h1>
       ${a.html || ''}
       <div class="coordinate-wrap">
         <svg class="coordinate-plot" viewBox="0 0 ${width} ${height}" role="img" aria-label="${esc(a.ariaLabel || 'Body v karteziánskej súradnicovej sústave')}">
-          ${grid}${axes}${labels}${pts}
+          ${grid}${axes}${asymptotes}${curves}${labels}${pts}
           <text x="${width - pad + 16}" y="${sy(0) - 8}" class="plot-axis-name">x</text>
           <text x="${sx(0) + 10}" y="${pad - 14}" class="plot-axis-name">y</text>
         </svg>

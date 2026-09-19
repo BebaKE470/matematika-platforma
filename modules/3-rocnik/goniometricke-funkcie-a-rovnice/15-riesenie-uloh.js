@@ -53,6 +53,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Za sebou máme jednotkovú kružnicu, grafy sin x/cos x/tg x/cotg x, goniometrické vzorce a jednoduché goniometrické rovnice (Hodiny 1–14).</p><p>Dnes tieto vedomosti spájame — pri každej úlohe si najprv treba vybrať, ktorý z už známych vzťahov sa na ňu hodí.</p>"
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",
@@ -69,11 +76,20 @@ MathPlatform.registerModule({
         "hint": "Hľadaj zdôvodnenie."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vybrať vhodný goniometrický vzťah podľa zadania",
+          "vyriešiť úlohu podľa systematického postupu",
+          "overiť riešenie a podmienky"
+        ]
+      },
+      {
         "id": "intro",
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Prenos do úloh",
-        "html": "<p>Vyberáme vhodný vzťah podľa cieľa, nie podľa toho, ktorý vzorec si práve pamätáme.</p>",
+        "html": "<p>Vyberáme vhodný vzťah podľa cieľa, nie podľa toho, ktorý vzorec si práve pamätáme.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Rieš rovnicu 2sin x − 1 = 0 na intervale ⟨0; 2π⟩.</p><p>2sin x = 1 ⇒ sin x = 1/2</p><p>Základné riešenia na kružnici: x = π/6 a x = 5π/6 — obe ležia v zadanom intervale.</p><p>Riešenie: <strong>x = π/6 alebo x = 5π/6</strong>.</p></div>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {

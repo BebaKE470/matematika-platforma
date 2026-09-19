@@ -49,6 +49,10 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro"
+      },
+      {
         "id": "mix",
         "type": "matrix",
         "phase": "OPAKOVANIE",
@@ -98,10 +102,17 @@ MathPlatform.registerModule({
       },
       {
         "id": "graphread",
-        "type": "info",
+        "type": "coordinatePlot",
         "phase": "GRAF",
         "title": "Z jedného obrázka viac informácií",
-        "html": "<p>Na grafe je lineárna funkcia prechádzajúca bodmi [0;3] a [3;0].</p><div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 620 360\" role=\"img\"><line x1=\"45.0\" y1=\"45\" x2=\"45.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"111.2\" y1=\"45\" x2=\"111.2\" y2=\"315\" class=\"plot-grid\"/><line x1=\"177.5\" y1=\"45\" x2=\"177.5\" y2=\"315\" class=\"plot-grid\"/><line x1=\"243.8\" y1=\"45\" x2=\"243.8\" y2=\"315\" class=\"plot-grid\"/><line x1=\"310.0\" y1=\"45\" x2=\"310.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"376.2\" y1=\"45\" x2=\"376.2\" y2=\"315\" class=\"plot-grid\"/><line x1=\"442.5\" y1=\"45\" x2=\"442.5\" y2=\"315\" class=\"plot-grid\"/><line x1=\"508.8\" y1=\"45\" x2=\"508.8\" y2=\"315\" class=\"plot-grid\"/><line x1=\"575.0\" y1=\"45\" x2=\"575.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"45\" y1=\"315.0\" x2=\"575\" y2=\"315.0\" class=\"plot-grid\"/><line x1=\"45\" y1=\"285.0\" x2=\"575\" y2=\"285.0\" class=\"plot-grid\"/><line x1=\"45\" y1=\"255.0\" x2=\"575\" y2=\"255.0\" class=\"plot-grid\"/><line x1=\"45\" y1=\"225.0\" x2=\"575\" y2=\"225.0\" class=\"plot-grid\"/><line x1=\"45\" y1=\"195.0\" x2=\"575\" y2=\"195.0\" class=\"plot-grid\"/><line x1=\"45\" y1=\"165.0\" x2=\"575\" y2=\"165.0\" class=\"plot-grid\"/><line x1=\"45\" y1=\"135.0\" x2=\"575\" y2=\"135.0\" class=\"plot-grid\"/><line x1=\"45\" y1=\"105.0\" x2=\"575\" y2=\"105.0\" class=\"plot-grid\"/><line x1=\"45\" y1=\"75.0\" x2=\"575\" y2=\"75.0\" class=\"plot-grid\"/><line x1=\"45\" y1=\"45.0\" x2=\"575\" y2=\"45.0\" class=\"plot-grid\"/><line x1=\"177.5\" y1=\"45\" x2=\"177.5\" y2=\"315\" class=\"plot-axis\"/><line x1=\"45\" y1=\"225.0\" x2=\"575\" y2=\"225.0\" class=\"plot-axis\"/><text x=\"45.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-2</text><text x=\"111.2\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-1</text><text x=\"243.8\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">1</text><text x=\"310.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">2</text><text x=\"376.2\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">3</text><text x=\"442.5\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">4</text><text x=\"508.8\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">5</text><text x=\"575.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">6</text><text x=\"35\" y=\"319.0\" text-anchor=\"end\" class=\"plot-label\">-3</text><text x=\"35\" y=\"289.0\" text-anchor=\"end\" class=\"plot-label\">-2</text><text x=\"35\" y=\"259.0\" text-anchor=\"end\" class=\"plot-label\">-1</text><text x=\"35\" y=\"199.0\" text-anchor=\"end\" class=\"plot-label\">1</text><text x=\"35\" y=\"169.0\" text-anchor=\"end\" class=\"plot-label\">2</text><text x=\"35\" y=\"139.0\" text-anchor=\"end\" class=\"plot-label\">3</text><text x=\"35\" y=\"109.0\" text-anchor=\"end\" class=\"plot-label\">4</text><text x=\"35\" y=\"79.0\" text-anchor=\"end\" class=\"plot-label\">5</text><text x=\"35\" y=\"49.0\" text-anchor=\"end\" class=\"plot-label\">6</text><polyline points=\"45.0,75.0 575.0,315.0\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"177.5\" cy=\"135.0\" r=\"6\" fill=\"#173d35\"/><text x=\"186.5\" y=\"125.0\" class=\"plot-point-label\">[0;3]</text><circle cx=\"376.2\" cy=\"225.0\" r=\"6\" fill=\"#173d35\"/><text x=\"385.2\" y=\"215.0\" class=\"plot-point-label\">[3;0]</text><text x=\"589\" y=\"217.0\" class=\"plot-axis-name\">x</text><text x=\"186.5\" y=\"33\" class=\"plot-axis-name\">y</text></svg></div><p>Skús si ešte pred pokračovaním povedať: rastie alebo klesá? aké je b? aký je nulový bod?</p>"
+        "html": "<p>Na grafe je lineárna funkcia prechádzajúca bodmi [0;3] a [3;0]. Skús si ešte pred pokračovaním povedať: rastie alebo klesá? aké je b? aký je nulový bod?</p>",
+        "xMin": -2, "xMax": 6, "yMin": -3, "yMax": 6,
+        "curves": [{ "fn": x => -x + 3 }],
+        "points": [
+          { "x": 0, "y": 3, "label": "[0;3]" },
+          { "x": 3, "y": 0, "label": "[3;0]" }
+        ],
+        "ariaLabel": "Graf lineárnej funkcie prechádzajúcej bodmi [0;3] a [3;0]"
       },
       {
         "id": "graphq",

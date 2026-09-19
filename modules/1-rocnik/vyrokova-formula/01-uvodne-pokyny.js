@@ -66,6 +66,14 @@ MathPlatform.registerModule({
     "estimatedTime": "18–22 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "spoznať, ako budeme počas roka pracovať s aplikáciou a zošitom",
+          "zopakovať si kľúčové zručnosti zo základnej školy"
+        ]
+      },
+      {
         "id": "map",
         "type": "info",
         "phase": "ZAČÍNAME",

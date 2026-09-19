@@ -55,6 +55,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Na predchádzajúcej hodine sme na jednotkovej kružnici zobrazovali reálne čísla ako orientovaný oblúk od bodu [1; 0] — vedeli sme nájsť napr. body pre x = 0, π/2, π, 3π/2 a 2π.</p><p>Z 2. ročníka už vieš, čo sú sínus a kosínus ostrého uhla v pravouhlom trojuholníku, a poznáš pojmy definičný obor a obor hodnôt funkcie.</p><p>Dnes tieto veci spojíme: definujeme sin x pre <strong>ľubovoľné reálne číslo x</strong>, nielen pre ostrý uhol.</p>"
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",
@@ -64,6 +71,15 @@ MathPlatform.registerModule({
         "answer": 1,
         "correct": "Celý obeh má 2π radiánov.",
         "hint": "Obvod jednotkovej kružnice je 2π."
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "zadefinovať funkciu sin x pomocou jednotkovej kružnice",
+          "načrtnúť graf sin x na intervale ⟨0; 2π⟩",
+          "vyčítať z grafu jeho vlastnosti (D, H, periódu, nuly)"
+        ]
       },
       {
         "id": "define",

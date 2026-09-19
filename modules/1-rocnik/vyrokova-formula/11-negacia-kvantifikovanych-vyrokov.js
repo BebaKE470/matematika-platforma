@@ -61,6 +61,10 @@ MathPlatform.registerModule({
         "continueLabel": "Idem na to"
       },
       {
+        "id": "topic-intro", "type": "intro",
+        "goals": ["negovať jednoduchý všeobecný a existenčný výrok", "vysvetliť význam protipríkladu pri vyvrátení tvrdenia", "rozlíšiť „nie všetky“ od „žiadne“"]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "1 · ZAČÍNAME",

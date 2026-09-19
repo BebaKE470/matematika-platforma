@@ -58,6 +58,10 @@ MathPlatform.registerModule({
         "continueLabel": "Idem na to"
       },
       {
+        "id": "topic-intro", "type": "intro",
+        "goals": ["rozlíšiť tautológiu, kontradikciu a kontingenciu podľa tabuľky", "zostrojiť tabuľku jednoduchého zloženého výroku"]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "1 · POCHOP",

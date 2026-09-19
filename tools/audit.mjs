@@ -152,7 +152,7 @@ for (const entry of registry) {
 // ---------------------------------------------------------------------------
 
 const KNOWN_TYPES = new Set([
-  'info', 'explain', 'choice', 'sortChoice', 'notebook',
+  'info', 'explain', 'intro', 'choice', 'sortChoice', 'notebook',
   'selfWrite', 'numberInput', 'matrix', 'coordinatePlot', 'reflection',
   'taskList',
 ]);
@@ -244,6 +244,15 @@ for (const [id, mod] of modulesByEntry) {
         }
         break;
       }
+      case 'intro': {
+        if (a.goals !== undefined) {
+          if (!Array.isArray(a.goals) || !a.goals.length) fail('content', `${where}: intro.goals musí byť neprázdne pole (alebo pole úplne vynechaj)`);
+          else a.goals.forEach((g, j) => {
+            if (typeof g !== 'string' || !g.trim()) fail('content', `${where}: goals[${j}] nie je neprázdny reťazec`);
+          });
+        }
+        break;
+      }
       case 'taskList': {
         if (!a.title) fail('content', `${where}: taskList bez title`);
         if (!Array.isArray(a.items) || !a.items.length) fail('content', `${where}: taskList bez items`);
@@ -278,7 +287,7 @@ for (const [id, mod] of modulesByEntry) {
 const POINTS = {
   choice: 100, numberInput: 100, sortChoice: 100, matrix: 120,
   notebook: 20, selfWrite: 30, taskList: 100,
-  info: 0, explain: 0, coordinatePlot: 0, reflection: 0,
+  info: 0, explain: 0, intro: 0, coordinatePlot: 0, reflection: 0,
 };
 
 const scoringPath = path.join(ROOT, 'core/scoring.js');

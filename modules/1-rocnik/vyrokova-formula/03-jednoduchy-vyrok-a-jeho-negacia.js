@@ -71,6 +71,10 @@ MathPlatform.registerModule({
         "continueLabel": "Idem na to"
       },
       {
+        "id": "topic-intro", "type": "intro",
+        "goals": ["vysvetliť, čo znamená negovať jednoduchý výrok", "vytvoriť správnu negáciu bez zmeny vecného obsahu", "rozlíšiť správnu negáciu od iného, iba protikladne znejúceho tvrdenia"]
+      },
+      {
         "id": "neg-intro", "type": "explain", "phase": "1 · NOVÝ POJEM", "title": "Čo je negácia?",
         "html": "<p><strong>Negácia</strong> výroku A je výrok, ktorý tvrdí presný opak toho, čo tvrdí A. Zapisujeme ju <strong>¬A</strong> a čítame „nie A“.</p><p>Negácia mení pravdivostnú hodnotu na opačnú: ak je A pravdivý (1), potom ¬A je nepravdivý (0), a naopak.</p><div class=\"formula\">„Nie je pravda, že A.“<span class=\"formula-note\">Najbezpečnejší spôsob, ako negáciu sformulovať bez chyby — vetu potom jazykovo uprav, bez zmeny významu.</span></div>",
         "remember": "¬A poprie presne to, čo tvrdí A. A a ¬A majú vždy opačnú pravdivostnú hodnotu."

@@ -60,6 +60,10 @@ MathPlatform.registerModule({
         "continueLabel": "Idem na to"
       },
       {
+        "id": "topic-intro", "type": "intro",
+        "goals": ["vytvoriť negáciu konjunkcie a disjunkcie (De Morgan)", "správne negovať implikáciu", "overiť pravidlo pravdivostnou tabuľkou"]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "1 · ZAČÍNAME",

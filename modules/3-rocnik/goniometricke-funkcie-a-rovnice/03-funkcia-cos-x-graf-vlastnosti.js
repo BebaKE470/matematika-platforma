@@ -52,6 +52,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z predchádzajúcich hodín už poznáš jednotkovú kružnicu a vieš, že <strong>sin x</strong> je y-ová súradnica bodu, ktorý na kružnici zodpovedá číslu x.</p><p>Vieš tiež, čo sú goniometrické funkcie ostrého uhla z 2. ročníka.</p><p>Dnes rovnakým spôsobom zadefinujeme <strong>cos x</strong> — tentokrát pomocou druhej súradnice toho istého bodu.</p>"
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",
@@ -68,6 +75,14 @@ MathPlatform.registerModule({
         "hint": "Obvod jednotkovej kružnice je 2π."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "zadefinovať funkciu cos x",
+          "načrtnúť jej graf a opísať vlastnosti"
+        ]
+      },
+      {
         "id": "define",
         "type": "explain",
         "phase": "NOVÝ POJEM",
@@ -77,10 +92,20 @@ MathPlatform.registerModule({
       },
       {
         "id": "visual",
-        "type": "info",
+        "type": "coordinatePlot",
         "phase": "VIZUALIZÁCIA",
         "title": "Graf cos x",
-        "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 560 300\" role=\"img\" aria-label=\"Graf funkcie cos x na intervale od 0 do 2π\"><line x1=\"60\" y1=\"20\" x2=\"60\" y2=\"280\" class=\"plot-axis\"/><line x1=\"40\" y1=\"150\" x2=\"540\" y2=\"150\" class=\"plot-axis\"/><line x1=\"60\" y1=\"60\" x2=\"520\" y2=\"60\" class=\"plot-grid\" stroke-dasharray=\"4 4\"/><line x1=\"60\" y1=\"240\" x2=\"520\" y2=\"240\" class=\"plot-grid\" stroke-dasharray=\"4 4\"/><polyline points=\"60.0,60.0 79.2,63.1 98.3,72.1 117.5,86.4 136.7,105.0 155.8,126.7 175.0,150.0 194.2,173.3 213.3,195.0 232.5,213.6 251.7,227.9 270.8,236.9 290.0,240.0 309.2,236.9 328.3,227.9 347.5,213.6 366.7,195.0 385.8,173.3 405.0,150.0 424.2,126.7 443.3,105.0 462.5,86.4 481.7,72.1 500.8,63.1 520.0,60.0\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"175\" cy=\"150\" r=\"6\" class=\"plot-point\"/><circle cx=\"290\" cy=\"240\" r=\"6\" class=\"plot-point\"/><circle cx=\"405\" cy=\"150\" r=\"6\" class=\"plot-point\"/><text x=\"55\" y=\"172\" text-anchor=\"end\" class=\"plot-label\">0</text><text x=\"175\" y=\"172\" text-anchor=\"middle\" class=\"plot-label\">π/2</text><text x=\"290\" y=\"172\" text-anchor=\"middle\" class=\"plot-label\">π</text><text x=\"405\" y=\"172\" text-anchor=\"middle\" class=\"plot-label\">3π/2</text><text x=\"520\" y=\"172\" text-anchor=\"middle\" class=\"plot-label\">2π</text><text x=\"46\" y=\"65\" text-anchor=\"end\" class=\"plot-label\">1</text><text x=\"46\" y=\"245\" text-anchor=\"end\" class=\"plot-label\">−1</text><text x=\"188\" y=\"142\" class=\"plot-point-label\">(π/2; 0)</text><text x=\"296\" y=\"258\" class=\"plot-point-label\">(π; −1)</text><text x=\"418\" y=\"142\" class=\"plot-point-label\">(3π/2; 0)</text><text x=\"528\" y=\"146\" class=\"plot-axis-name\">x</text><text x=\"68\" y=\"30\" class=\"plot-axis-name\">y</text></svg></div><p>Graf je záznam toho, ako sa hodnota mení pri pohybe x po reálnej osi.</p>"
+        "html": "<p>Graf je záznam toho, ako sa hodnota mení pri pohybe x po reálnej osi.</p>",
+        "xMin": 0, "xMax": 2 * Math.PI, "yMin": -1, "yMax": 1,
+        "xStep": Math.PI / 2, "yStep": 1,
+        "xTickFormat": v => (['0', 'π/2', 'π', '3π/2', '2π'][Math.round(v / (Math.PI / 2))] ?? String(v)),
+        "curves": [{ "fn": x => Math.cos(x), "label": "cos x" }],
+        "points": [
+          { "x": Math.PI / 2, "y": 0, "label": "(π/2; 0)" },
+          { "x": Math.PI, "y": -1, "label": "(π; −1)" },
+          { "x": 3 * Math.PI / 2, "y": 0, "label": "(3π/2; 0)" }
+        ],
+        "ariaLabel": "Graf funkcie cos x na intervale od 0 do 2π"
       },
       {
         "id": "value",

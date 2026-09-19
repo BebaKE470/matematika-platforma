@@ -61,6 +61,14 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap", "type": "explain", "phase": "OPAKUJ", "title": "Čo už vieme",
+        "html": "<p>Na predošlých hodinách sme pracovali s výrokom, implikáciou a negáciou — vieš aj to, že na vyvrátenie všeobecného tvrdenia stačí jeden <strong>protipríklad</strong> (11. hodina).</p><p>Zo základnej školy vieš, čo je párne a nepárne celé číslo.</p><p>Dnes sa naučíme, ako vyzerá <strong>matematický dôkaz</strong> — reťazec platných krokov, ktorý ukáže, že tvrdenie musí platiť vo všetkých prípadoch.</p>"
+      },
+      {
+        "id": "topic-intro", "type": "intro",
+        "goals": ["opísať, ako funguje priamy dôkaz", "opísať dôkaz sporom", "rozlíšiť overenie príkladmi od všeobecného dôkazu"]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

@@ -53,6 +53,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Na Hodine 17 sme riešili rovnice, ktoré stačilo upraviť na jeden zo základných tvarov (sin x = a, cos x = a, tg x = a).</p><p>Niektoré rovnice ale obsahujú aj druhú mocninu alebo viac funkcií naraz — tam sa oplatí použiť identitu <strong>sin²x + cos²x = 1</strong> alebo substitúciu (napr. t = cos x), aby sme dostali rovnicu, ktorú už vieme riešiť (napr. kvadratickú).</p>"
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",
@@ -69,11 +76,20 @@ MathPlatform.registerModule({
         "hint": "Hľadaj zdôvodnenie."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "rozpoznať, či sa hodí rozklad, substitúcia alebo identita",
+          "previesť rovnicu substitúciou na známy tvar (napr. kvadratický)",
+          "vrátiť sa k pôvodnej premennej a skontrolovať všetky riešenia"
+        ]
+      },
+      {
         "id": "intro",
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Rovnice – viac stratégií",
-        "html": "<p>Porovnávame rozklad, substitúciu a použitie identít iba tam, kde sú už zavedené.</p>",
+        "html": "<p>Porovnávame rozklad, substitúciu a použitie identít iba tam, kde sú už zavedené.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD — substitúcia</span><p>Rieš rovnicu 2cos²x + cos x − 1 = 0.</p><p>Substitúcia t = cos x dáva kvadratickú rovnicu 2t² + t − 1 = 0, ktorej riešenia sú t = 1/2 a t = −1.</p><p>Späť k pôvodnej premennej: cos x = 1/2 ⇒ x = ±π/3 + 2kπ; cos x = −1 ⇒ x = π + 2kπ.</p></div>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {

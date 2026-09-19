@@ -51,6 +51,14 @@ MathPlatform.registerModule({
     "estimatedTime": "4–6 min digitálne + písomná práca",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "samostatne preukázať osvojené vedomosti",
+          "zapísať riešenie matematicky presne"
+        ]
+      },
+      {
         "id": "prep",
         "type": "info",
         "phase": "PRED PÍSOMKOU",

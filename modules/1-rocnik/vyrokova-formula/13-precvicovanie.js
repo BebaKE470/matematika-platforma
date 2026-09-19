@@ -59,6 +59,10 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "topic-intro", "type": "intro",
+        "goals": ["prepájať výroky, spojky, negáciu, kvantifikátory a dôkazové uvažovanie", "odhaľovať typické logické chyby"]
+      },
+      {
         "id": "map",
         "type": "info",
         "phase": "ZAČÍNAME",

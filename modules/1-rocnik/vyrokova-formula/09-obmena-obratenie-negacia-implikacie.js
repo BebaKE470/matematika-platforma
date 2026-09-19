@@ -59,6 +59,10 @@ MathPlatform.registerModule({
         "continueLabel": "Idem na to"
       },
       {
+        "id": "topic-intro", "type": "intro",
+        "goals": ["vytvoriť obrátenú implikáciu a obmenu", "vysvetliť, že implikácia je ekvivalentná so svojou obmenou", "správne vytvoriť negáciu implikácie"]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "1 · ZAČÍNAME",

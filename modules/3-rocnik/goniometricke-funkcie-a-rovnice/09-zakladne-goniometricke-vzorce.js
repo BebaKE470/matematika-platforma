@@ -53,6 +53,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z hodín 1–8 už poznáš definície sin x, cos x, tg x a cotg x pomocou jednotkovej kružnice a ich grafy.</p><p>Dnes medzi nimi nájdeme vzťahy, ktoré platia pre <strong>každé</strong> x — goniometrické identity.</p>"
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",
@@ -69,11 +76,20 @@ MathPlatform.registerModule({
         "hint": "Hľadaj zdôvodnenie."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "porozumieť dnešnému vzťahu/postupu",
+          "použiť ho v primeranej úlohe",
+          "zdôvodniť zvolený krok"
+        ]
+      },
+      {
         "id": "intro",
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Základné identity",
-        "html": "<p>Z jednotkovej kružnice vyplýva:</p><div class=\"formula\">sin²x + cos²x = 1</div><p>Ďalšie základné vzťahy odvodzujeme z definícií tg a cotg.</p>",
+        "html": "<p>Z jednotkovej kružnice vyplýva:</p><div class=\"formula\">sin²x + cos²x = 1</div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Bod na jednotkovej kružnici, ktorý zodpovedá číslu x, má súradnice [cos x; sin x] a je vzdialený od stredu O presne o polomer 1.</p><p>Pravouhlý trojuholník s odvesnami |cos x| a |sin x| má preponu dĺžky 1, takže podľa Pytagorovej vety: cos²x + sin²x = 1.</p></div><p>Ďalšie základné vzťahy odvodzujeme z definícií tg a cotg.</p>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {

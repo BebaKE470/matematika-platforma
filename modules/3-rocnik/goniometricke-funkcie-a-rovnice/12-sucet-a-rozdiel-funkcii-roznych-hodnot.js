@@ -53,6 +53,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Na Hodine 10 sme sa naučili súčtové vzorce pre sin(α+β) a cos(α+β).</p><p>Dnes ideme opačným smerom: zo <strong>súčtu</strong> alebo <strong>rozdielu</strong> dvoch hodnôt sínusu/kosínusu urobíme <strong>súčin</strong> — hodí sa to napríklad na zjednodušenie výrazu.</p>"
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",
@@ -69,11 +76,20 @@ MathPlatform.registerModule({
         "hint": "Hľadaj zdôvodnenie."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "zapísať vzorce pre súčet a rozdiel sin/cos",
+          "použiť ich na zjednodušenie výrazu",
+          "overiť výsledok na konkrétnom príklade"
+        ]
+      },
+      {
         "id": "intro",
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Súčet a rozdiel hodnôt",
-        "html": "<p>Vzťahy pre súčet/rozdiel goniometrických funkcií používame až po zvládnutí súčtových vzorcov.</p>",
+        "html": "<p>Vzťahy pre súčet/rozdiel goniometrických funkcií používame až po zvládnutí súčtových vzorcov.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>sin 90° + sin 30° = 2 sin((90°+30°)/2) cos((90°−30°)/2) = 2 sin 60° cos 30°</p><p>= 2 · (√3/2) · (√3/2) = <strong>3/2</strong></p><p>Kontrola: sin 90° + sin 30° = 1 + 1/2 = 3/2 ✓</p></div>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {

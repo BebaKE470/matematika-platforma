@@ -53,6 +53,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z hodín 1–5 už poznáš grafy funkcií <strong>sin x, cos x, tg x, cotg x</strong> a ich vlastnosti (definičný obor, obor hodnôt, periódu, nuly).</p><p>Dnes sa pozrieme na to, čo sa stane s grafom sin x alebo cos x, keď doň pridáme čísla — teda na funkcie tvaru y = a·sin(bx + c) + d.</p>"
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",
@@ -69,6 +76,15 @@ MathPlatform.registerModule({
         "hint": "Hľadaj zdôvodnenie."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "porozumieť dnešnému vzťahu/postupu",
+          "použiť ho v primeranej úlohe",
+          "zdôvodniť zvolený krok"
+        ]
+      },
+      {
         "id": "intro",
         "type": "explain",
         "phase": "NOVÝ KROK",
@@ -78,10 +94,18 @@ MathPlatform.registerModule({
       },
       {
         "id": "visual",
-        "type": "info",
+        "type": "coordinatePlot",
         "phase": "VIZUALIZÁCIA",
-        "title": "Opora v reprezentácii",
-        "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><line x1=\"40\" y1=\"180\" x2=\"470\" y2=\"180\" class=\"plot-axis\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"300\" class=\"plot-axis\"/><polyline points=\"50.0,180.0 60.0,158.4 70.0,138.9 80.0,123.4 90.0,113.4 100.0,110.0 110.0,113.4 120.0,123.4 130.0,138.9 140.0,158.4 150.0,180.0 160.0,201.6 170.0,221.1 180.0,236.6 190.0,246.6 200.0,250.0 210.0,246.6 220.0,236.6 230.0,221.1 240.0,201.6 250.0,180.0 260.0,158.4 270.0,138.9 280.0,123.4 290.0,113.4 300.0,110.0 310.0,113.4 320.0,123.4 330.0,138.9 340.0,158.4 350.0,180.0 360.0,201.6 370.0,221.1 380.0,236.6 390.0,246.6 400.0,250.0 410.0,246.6 420.0,236.6 430.0,221.1 440.0,201.6 450.0,180.0\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"455\" y=\"170\" class=\"plot-axis-name\">x</text><text x=\"60\" y=\"50\" class=\"plot-axis-name\">y</text></svg></div><p>Pri každej úprave sa pýtaj, čo zostáva rovnaké a čo sa mení.</p>"
+        "title": "Čo urobia čísla a, b s grafom",
+        "html": "<p>Porovnaj základný graf <strong>sin x</strong> s grafom <strong>2·sin(2x)</strong> (druhá farba): dvojnásobné <em>a</em> zdvojnásobí amplitúdu, dvojnásobné <em>b</em> skráti periódu na polovicu.</p>",
+        "xMin": 0, "xMax": 6.283185307179586, "yMin": -2, "yMax": 2,
+        "xStep": 1.5707963267948966, "yStep": 1,
+        "xTickFormat": v => (['0', 'π/2', 'π', '3π/2', '2π'][Math.round(v / (Math.PI / 2))] ?? String(v)),
+        "curves": [
+          { "fn": x => Math.sin(x) },
+          { "fn": x => 2 * Math.sin(2 * x), "color": "#5f8478", "label": "2·sin(2x)" }
+        ],
+        "ariaLabel": "Porovnanie grafov sin x a 2 krát sin 2x"
       },
       {
         "id": "check",

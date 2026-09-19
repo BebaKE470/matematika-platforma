@@ -53,6 +53,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z Hodín 1–7 vieš čítať hodnoty sin x, cos x, tg x a cotg x z jednotkovej kružnice alebo z ich grafu — vrátane toho, kde sú <strong>nulové</strong> a ako sa vďaka <strong>periodicite</strong> opakujú.</p><p>Dnes tieto vlastnosti použijeme opačne: z rovnice typu sin x = a nájdeme všetky x, ktoré ju spĺňajú.</p>"
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",
@@ -69,11 +76,20 @@ MathPlatform.registerModule({
         "hint": "Hľadaj zdôvodnenie."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "nájsť základné riešenie rovnice typu sin x = a, cos x = a alebo tg x = a",
+          "využiť periodicitu na zápis všetkých riešení",
+          "vybrať riešenia patriace do zadaného intervalu"
+        ]
+      },
+      {
         "id": "intro",
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Jednoduchá goniometrická rovnica",
-        "html": "<p>Najprv hľadáme základné riešenia na kružnici, potom využijeme periodicitu.</p>",
+        "html": "<p>Najprv hľadáme základné riešenia na kružnici, potom využijeme periodicitu.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Rieš rovnicu cos x = 0.</p><p>cos x je x-ová súradnica bodu na jednotkovej kružnici — tá je 0 v bodoch [0; 1] a [0; −1], teda pre x = π/2 a x = 3π/2. Tieto dve hodnoty sa líšia presne o π.</p><p>Riešenie: <strong>x = π/2 + kπ, k ∈ ℤ</strong>.</p></div>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {

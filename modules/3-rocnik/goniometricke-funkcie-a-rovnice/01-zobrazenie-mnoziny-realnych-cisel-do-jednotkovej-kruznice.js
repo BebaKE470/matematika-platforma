@@ -52,6 +52,22 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z 2. ročníka už poznáš goniometrické funkcie ostrého uhla (sínus, kosínus, tangens, kotangens v pravouhlom trojuholníku) a vieš pracovať s grafom funkcie.</p><p>Poznáš aj číslo <strong>π</strong> a bežné algebraické úpravy z predchádzajúceho štúdia.</p><p>Dnes tieto veci spojíme novým spôsobom: namiesto trojuholníka budeme reálne čísla zobrazovať na kružnici.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "poznať jednotkovú kružnicu",
+          "zobraziť základné reálne čísla na kružnici",
+          "vysvetliť periodicitu zobrazenia"
+        ]
+      },
+      {
         "id": "start",
         "type": "info",
         "phase": "NOVÁ MYŠLIENKA",

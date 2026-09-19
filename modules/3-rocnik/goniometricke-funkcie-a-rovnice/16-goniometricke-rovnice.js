@@ -53,6 +53,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Na Hodine 14 sme riešili rovnice, ktoré boli hneď v základnom tvare (sin x = a, cos x = a, tg x = a).</p><p>Dnes budeme riešiť rovnice, ktoré treba na tento základný tvar najprv algebraicky <strong>upraviť</strong> — a až potom hľadať riešenia na kružnici.</p>"
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",
@@ -69,11 +76,20 @@ MathPlatform.registerModule({
         "hint": "Hľadaj zdôvodnenie."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "upraviť rovnicu na základný tvar",
+          "nájsť základné riešenie",
+          "zapísať všeobecné riešenie pomocou periodicity"
+        ]
+      },
+      {
         "id": "intro",
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Goniometrické rovnice",
-        "html": "<p>Rovnicu najprv algebraicky upravíme na známy typ a až potom riešime na kružnici.</p>",
+        "html": "<p>Rovnicu najprv algebraicky upravíme na známy typ a až potom riešime na kružnici.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Rieš rovnicu 2 cos x − 1 = 0.</p><p>2 cos x = 1 ⇒ cos x = 1/2 — teraz je rovnica v základnom tvare.</p><p>Riešenie: <strong>x = π/3 + 2kπ alebo x = −π/3 + 2kπ, k ∈ ℤ</strong>.</p></div>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {

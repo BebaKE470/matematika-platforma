@@ -74,6 +74,15 @@ MathPlatform.registerModule({
         "continueLabel": "Idem na to"
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "rozlíšiť výrok od otázky, príkazu a otvorenej vety",
+          "určiť pravdivostnú hodnotu jednoduchého výroku",
+          "rozlíšiť definíciu, tvrdenie, hypotézu a axiómu"
+        ]
+      },
+      {
         "id": "vyrok-intro",
         "type": "explain",
         "phase": "1 · NOVÝ POJEM",

@@ -57,6 +57,9 @@ MathPlatform.registerModule({
     "estimatedTime": "4–6 min",
     "activities": [
       {
+        "id": "topic-intro", "type": "intro"
+      },
+      {
         "id": "off",
         "type": "info",
         "phase": "ZAČÍNAME",

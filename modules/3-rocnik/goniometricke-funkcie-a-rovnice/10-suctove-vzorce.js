@@ -53,6 +53,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z 2. ročníka poznáš hodnoty sin a cos pre uhly 30°, 45°, 60° a z hodiny 9 základné identity medzi sin x a cos x.</p><p>Dnes sa naučíme počítať sin a cos zo <strong>súčtu alebo rozdielu</strong> dvoch takýchto uhlov.</p>"
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",
@@ -69,11 +76,20 @@ MathPlatform.registerModule({
         "hint": "Hľadaj zdôvodnenie."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "porozumieť dnešnému vzťahu/postupu",
+          "použiť ho v primeranej úlohe",
+          "zdôvodniť zvolený krok"
+        ]
+      },
+      {
         "id": "intro",
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Súčtové vzorce",
-        "html": "<p>Vzorce pre sin(α±β) a cos(α±β) umožňujú pracovať so súčtom a rozdielom uhlov. Najprv si ujasníme štruktúru vzorca, potom počítame.</p>",
+        "html": "<p>Vzorce pre sin(α±β) a cos(α±β) umožňujú pracovať so súčtom a rozdielom uhlov. Najprv si ujasníme štruktúru vzorca, potom počítame.</p><div class=\"formula\">sin(α + β) = sin α·cos β + cos α·sin β</div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>sin 75° = sin(45° + 30°) = sin 45°·cos 30° + cos 45°·sin 30°</p><p>= (√2/2)·(√3/2) + (√2/2)·(1/2) = (√6 + √2)/4</p></div>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {

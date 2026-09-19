@@ -53,6 +53,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z predchádzajúcich dvoch hodín už poznáš pojem <strong>funkcia</strong>, zápis <strong>f(x)</strong> a predpis lineárnej funkcie <strong>f(x) = ax + b</strong> aj jej graf — priamku.</p><p>Zo ZŠ vieš aj vyriešiť jednoduchú <strong>lineárnu rovnicu</strong>.</p><p>Dnes sa naučíme z čísel a a b vyčítať ďalšie vlastnosti priamky.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "rozlíšiť rastúcu, klesajúcu a konštantnú lineárnu funkciu podľa a",
+          "nájsť priesečníky s osami a nulový bod",
+          "použiť tieto poznatky v jednoduchej maturitnej úlohe"
+        ]
+      },
+      {
         "id": "a-meaning",
         "type": "explain",
         "phase": "NOVÝ POJEM",
@@ -62,10 +78,14 @@ MathPlatform.registerModule({
       },
       {
         "id": "visual-up",
-        "type": "info",
+        "type": "coordinatePlot",
         "phase": "VIZUALIZÁCIA",
         "title": "Rastúca lineárna funkcia",
-        "html": "<p>Graf <strong>f(x)=2x+1</strong> pri pohybe zľava doprava stúpa. Keď x zväčšíme o 1, f(x) sa zväčší o 2.</p><div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 620 360\" role=\"img\"><line x1=\"45.0\" y1=\"45\" x2=\"45.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"120.7\" y1=\"45\" x2=\"120.7\" y2=\"315\" class=\"plot-grid\"/><line x1=\"196.4\" y1=\"45\" x2=\"196.4\" y2=\"315\" class=\"plot-grid\"/><line x1=\"272.1\" y1=\"45\" x2=\"272.1\" y2=\"315\" class=\"plot-grid\"/><line x1=\"347.9\" y1=\"45\" x2=\"347.9\" y2=\"315\" class=\"plot-grid\"/><line x1=\"423.6\" y1=\"45\" x2=\"423.6\" y2=\"315\" class=\"plot-grid\"/><line x1=\"499.3\" y1=\"45\" x2=\"499.3\" y2=\"315\" class=\"plot-grid\"/><line x1=\"575.0\" y1=\"45\" x2=\"575.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"45\" y1=\"315.0\" x2=\"575\" y2=\"315.0\" class=\"plot-grid\"/><line x1=\"45\" y1=\"295.7\" x2=\"575\" y2=\"295.7\" class=\"plot-grid\"/><line x1=\"45\" y1=\"276.4\" x2=\"575\" y2=\"276.4\" class=\"plot-grid\"/><line x1=\"45\" y1=\"257.1\" x2=\"575\" y2=\"257.1\" class=\"plot-grid\"/><line x1=\"45\" y1=\"237.9\" x2=\"575\" y2=\"237.9\" class=\"plot-grid\"/><line x1=\"45\" y1=\"218.6\" x2=\"575\" y2=\"218.6\" class=\"plot-grid\"/><line x1=\"45\" y1=\"199.3\" x2=\"575\" y2=\"199.3\" class=\"plot-grid\"/><line x1=\"45\" y1=\"180.0\" x2=\"575\" y2=\"180.0\" class=\"plot-grid\"/><line x1=\"45\" y1=\"160.7\" x2=\"575\" y2=\"160.7\" class=\"plot-grid\"/><line x1=\"45\" y1=\"141.4\" x2=\"575\" y2=\"141.4\" class=\"plot-grid\"/><line x1=\"45\" y1=\"122.1\" x2=\"575\" y2=\"122.1\" class=\"plot-grid\"/><line x1=\"45\" y1=\"102.9\" x2=\"575\" y2=\"102.9\" class=\"plot-grid\"/><line x1=\"45\" y1=\"83.6\" x2=\"575\" y2=\"83.6\" class=\"plot-grid\"/><line x1=\"45\" y1=\"64.3\" x2=\"575\" y2=\"64.3\" class=\"plot-grid\"/><line x1=\"45\" y1=\"45.0\" x2=\"575\" y2=\"45.0\" class=\"plot-grid\"/><line x1=\"272.1\" y1=\"45\" x2=\"272.1\" y2=\"315\" class=\"plot-axis\"/><line x1=\"45\" y1=\"218.6\" x2=\"575\" y2=\"218.6\" class=\"plot-axis\"/><text x=\"45.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-3</text><text x=\"120.7\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-2</text><text x=\"196.4\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-1</text><text x=\"347.9\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">1</text><text x=\"423.6\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">2</text><text x=\"499.3\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">3</text><text x=\"575.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">4</text><text x=\"35\" y=\"319.0\" text-anchor=\"end\" class=\"plot-label\">-5</text><text x=\"35\" y=\"299.7\" text-anchor=\"end\" class=\"plot-label\">-4</text><text x=\"35\" y=\"280.4\" text-anchor=\"end\" class=\"plot-label\">-3</text><text x=\"35\" y=\"261.1\" text-anchor=\"end\" class=\"plot-label\">-2</text><text x=\"35\" y=\"241.9\" text-anchor=\"end\" class=\"plot-label\">-1</text><text x=\"35\" y=\"203.3\" text-anchor=\"end\" class=\"plot-label\">1</text><text x=\"35\" y=\"184.0\" text-anchor=\"end\" class=\"plot-label\">2</text><text x=\"35\" y=\"164.7\" text-anchor=\"end\" class=\"plot-label\">3</text><text x=\"35\" y=\"145.4\" text-anchor=\"end\" class=\"plot-label\">4</text><text x=\"35\" y=\"126.1\" text-anchor=\"end\" class=\"plot-label\">5</text><text x=\"35\" y=\"106.9\" text-anchor=\"end\" class=\"plot-label\">6</text><text x=\"35\" y=\"87.6\" text-anchor=\"end\" class=\"plot-label\">7</text><text x=\"35\" y=\"68.3\" text-anchor=\"end\" class=\"plot-label\">8</text><text x=\"35\" y=\"49.0\" text-anchor=\"end\" class=\"plot-label\">9</text><polyline points=\"45.0,315.0 575.0,45.0\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"272.1\" cy=\"199.3\" r=\"6\" fill=\"#173d35\"/><text x=\"281.1\" y=\"189.3\" class=\"plot-point-label\">b=1</text><text x=\"589\" y=\"210.6\" class=\"plot-axis-name\">x</text><text x=\"281.1\" y=\"33\" class=\"plot-axis-name\">y</text></svg></div>"
+        "html": "<p>Graf <strong>f(x)=2x+1</strong> pri pohybe zľava doprava stúpa. Keď x zväčšíme o 1, f(x) sa zväčší o 2.</p>",
+        "xMin": -3, "xMax": 4, "yMin": -5, "yMax": 9,
+        "curves": [{ "fn": x => 2 * x + 1 }],
+        "points": [{ "x": 0, "y": 1, "label": "b=1" }],
+        "ariaLabel": "Graf rastúcej funkcie f(x) = 2x + 1"
       },
       {
         "id": "sign",
@@ -111,10 +131,17 @@ MathPlatform.registerModule({
       },
       {
         "id": "compare",
-        "type": "info",
+        "type": "coordinatePlot",
         "phase": "POROVNAJ",
         "title": "Čo vieme vyčítať už z predpisu",
-        "html": "<div class=\"compare\"><div><strong>f(x)=2x+1</strong><br>a=2 → rastúca<br>b=1 → os y v [0;1]</div><div><strong>g(x)=−2x+1</strong><br>a=−2 → klesajúca<br>b=1 → os y v [0;1]</div></div><div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 620 360\" role=\"img\"><line x1=\"45.0\" y1=\"45\" x2=\"45.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"120.7\" y1=\"45\" x2=\"120.7\" y2=\"315\" class=\"plot-grid\"/><line x1=\"196.4\" y1=\"45\" x2=\"196.4\" y2=\"315\" class=\"plot-grid\"/><line x1=\"272.1\" y1=\"45\" x2=\"272.1\" y2=\"315\" class=\"plot-grid\"/><line x1=\"347.9\" y1=\"45\" x2=\"347.9\" y2=\"315\" class=\"plot-grid\"/><line x1=\"423.6\" y1=\"45\" x2=\"423.6\" y2=\"315\" class=\"plot-grid\"/><line x1=\"499.3\" y1=\"45\" x2=\"499.3\" y2=\"315\" class=\"plot-grid\"/><line x1=\"575.0\" y1=\"45\" x2=\"575.0\" y2=\"315\" class=\"plot-grid\"/><line x1=\"45\" y1=\"315.0\" x2=\"575\" y2=\"315.0\" class=\"plot-grid\"/><line x1=\"45\" y1=\"295.7\" x2=\"575\" y2=\"295.7\" class=\"plot-grid\"/><line x1=\"45\" y1=\"276.4\" x2=\"575\" y2=\"276.4\" class=\"plot-grid\"/><line x1=\"45\" y1=\"257.1\" x2=\"575\" y2=\"257.1\" class=\"plot-grid\"/><line x1=\"45\" y1=\"237.9\" x2=\"575\" y2=\"237.9\" class=\"plot-grid\"/><line x1=\"45\" y1=\"218.6\" x2=\"575\" y2=\"218.6\" class=\"plot-grid\"/><line x1=\"45\" y1=\"199.3\" x2=\"575\" y2=\"199.3\" class=\"plot-grid\"/><line x1=\"45\" y1=\"180.0\" x2=\"575\" y2=\"180.0\" class=\"plot-grid\"/><line x1=\"45\" y1=\"160.7\" x2=\"575\" y2=\"160.7\" class=\"plot-grid\"/><line x1=\"45\" y1=\"141.4\" x2=\"575\" y2=\"141.4\" class=\"plot-grid\"/><line x1=\"45\" y1=\"122.1\" x2=\"575\" y2=\"122.1\" class=\"plot-grid\"/><line x1=\"45\" y1=\"102.9\" x2=\"575\" y2=\"102.9\" class=\"plot-grid\"/><line x1=\"45\" y1=\"83.6\" x2=\"575\" y2=\"83.6\" class=\"plot-grid\"/><line x1=\"45\" y1=\"64.3\" x2=\"575\" y2=\"64.3\" class=\"plot-grid\"/><line x1=\"45\" y1=\"45.0\" x2=\"575\" y2=\"45.0\" class=\"plot-grid\"/><line x1=\"272.1\" y1=\"45\" x2=\"272.1\" y2=\"315\" class=\"plot-axis\"/><line x1=\"45\" y1=\"180.0\" x2=\"575\" y2=\"180.0\" class=\"plot-axis\"/><text x=\"45.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-3</text><text x=\"120.7\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-2</text><text x=\"196.4\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">-1</text><text x=\"347.9\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">1</text><text x=\"423.6\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">2</text><text x=\"499.3\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">3</text><text x=\"575.0\" y=\"335\" text-anchor=\"middle\" class=\"plot-label\">4</text><text x=\"35\" y=\"319.0\" text-anchor=\"end\" class=\"plot-label\">-7</text><text x=\"35\" y=\"299.7\" text-anchor=\"end\" class=\"plot-label\">-6</text><text x=\"35\" y=\"280.4\" text-anchor=\"end\" class=\"plot-label\">-5</text><text x=\"35\" y=\"261.1\" text-anchor=\"end\" class=\"plot-label\">-4</text><text x=\"35\" y=\"241.9\" text-anchor=\"end\" class=\"plot-label\">-3</text><text x=\"35\" y=\"222.6\" text-anchor=\"end\" class=\"plot-label\">-2</text><text x=\"35\" y=\"203.3\" text-anchor=\"end\" class=\"plot-label\">-1</text><text x=\"35\" y=\"164.7\" text-anchor=\"end\" class=\"plot-label\">1</text><text x=\"35\" y=\"145.4\" text-anchor=\"end\" class=\"plot-label\">2</text><text x=\"35\" y=\"126.1\" text-anchor=\"end\" class=\"plot-label\">3</text><text x=\"35\" y=\"106.9\" text-anchor=\"end\" class=\"plot-label\">4</text><text x=\"35\" y=\"87.6\" text-anchor=\"end\" class=\"plot-label\">5</text><text x=\"35\" y=\"68.3\" text-anchor=\"end\" class=\"plot-label\">6</text><text x=\"35\" y=\"49.0\" text-anchor=\"end\" class=\"plot-label\">7</text><polyline points=\"45.0,45.0 575.0,315.0\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"272.1\" cy=\"160.7\" r=\"6\" fill=\"#173d35\"/><text x=\"281.1\" y=\"150.7\" class=\"plot-point-label\">b=1</text><text x=\"589\" y=\"172.0\" class=\"plot-axis-name\">x</text><text x=\"281.1\" y=\"33\" class=\"plot-axis-name\">y</text></svg></div>"
+        "html": "<div class=\"compare\"><div><strong>f(x)=2x+1</strong><br>a=2 → rastúca<br>b=1 → os y v [0;1]</div><div><strong>g(x)=−2x+1</strong><br>a=−2 → klesajúca<br>b=1 → os y v [0;1]</div></div>",
+        "xMin": -3, "xMax": 4, "yMin": -7, "yMax": 9,
+        "curves": [
+          { "fn": x => 2 * x + 1, "label": "f(x)=2x+1" },
+          { "fn": x => -2 * x + 1, "color": "#66766f", "label": "g(x)=−2x+1" }
+        ],
+        "points": [{ "x": 0, "y": 1, "label": "b=1" }],
+        "ariaLabel": "Grafy funkcií f(x) = 2x + 1 a g(x) = −2x + 1, obe pretínajú os y v bode [0; 1]"
       },
       {
         "id": "matura",

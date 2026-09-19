@@ -22,6 +22,7 @@
     taskList:       { max: 100, partial: true },
     info:           { max: 0 },
     explain:        { max: 0 },
+    intro:          { max: 0 },
     coordinatePlot: { max: 0 },
     reflection:     { max: 0 },
   };

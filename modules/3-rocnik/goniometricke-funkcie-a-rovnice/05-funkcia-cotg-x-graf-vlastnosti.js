@@ -52,6 +52,13 @@ MathPlatform.registerModule({
     "estimatedTime": "18–24 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z minulej hodiny vieš, že <strong>tg x = sin x / cos x</strong> a že táto funkcia nie je definovaná tam, kde cos x = 0.</p><p>Dnes zostavíme podobnú funkciu — <strong>cotg x</strong> — ako obrátený podiel.</p>"
+      },
+      {
         "id": "recall",
         "type": "choice",
         "phase": "OPAKUJ",
@@ -68,6 +75,14 @@ MathPlatform.registerModule({
         "hint": "Obvod jednotkovej kružnice je 2π."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "zadefinovať funkciu cotg x",
+          "načrtnúť jej graf a opísať vlastnosti"
+        ]
+      },
+      {
         "id": "define",
         "type": "explain",
         "phase": "NOVÝ POJEM",
@@ -77,10 +92,20 @@ MathPlatform.registerModule({
       },
       {
         "id": "visual",
-        "type": "info",
+        "type": "coordinatePlot",
         "phase": "VIZUALIZÁCIA",
         "title": "Graf cotg x",
-        "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><line x1=\"40\" y1=\"180\" x2=\"470\" y2=\"180\" class=\"plot-axis\"/><line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"300\" class=\"plot-axis\"/><line x1=\"250\" y1=\"45\" x2=\"250\" y2=\"300\" stroke=\"#9b6b2f\" stroke-width=\"2\" stroke-dasharray=\"7 7\"/><polyline points=\"65.3,49.1 69.9,79.8 74.5,99.1 79.1,112.2 83.8,121.9 88.4,129.2 93.0,135.1 97.6,139.8 102.2,143.7 106.8,147.0 111.5,149.9 116.1,152.4 120.7,154.6 125.3,156.5 129.9,158.3 134.5,159.8 139.2,161.3 143.8,162.6 148.4,163.8 153.0,165.0 157.6,166.0 162.3,167.0 166.9,167.9 171.5,168.8 176.1,169.7 180.7,170.5 185.3,171.2 190.0,172.0 194.6,172.7 199.2,173.3 203.8,174.0 208.4,174.7 213.1,175.3 217.7,175.9 222.3,176.5 226.9,177.1 231.5,177.7 236.1,178.3 240.8,178.9 245.4,179.4 250.0,180.0\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"455\" y=\"170\" class=\"plot-axis-name\">x</text><text x=\"60\" y=\"50\" class=\"plot-axis-name\">y</text></svg></div><p>Graf je záznam toho, ako sa hodnota mení pri pohybe x po reálnej osi.</p>"
+        "html": "<p>Graf je záznam toho, ako sa hodnota mení pri pohybe x po reálnej osi. Tam, kde je sin x = 0, funkcia nie je definovaná — graf sa k tomuto miestu len približuje (prerušovaná čiara).</p>",
+        "xMin": -1.5707963267948966, "xMax": 4.71238898038469, "yMin": -4, "yMax": 4,
+        "xStep": 1.5707963267948966, "yStep": 2,
+        "xTickFormat": v => (({ '-1': '−π/2', '0': '0', '1': 'π/2', '2': 'π', '3': '3π/2' })[String(Math.round(v / (Math.PI / 2)))] ?? String(v)),
+        "asymptotes": [0, Math.PI],
+        "curves": [{ "fn": x => { const y = 1 / Math.tan(x); return Math.abs(y) > 4.3 ? NaN : y; }, "label": "cotg x" }],
+        "points": [
+          { "x": Math.PI / 4, "y": 1, "label": "(π/4; 1)" },
+          { "x": Math.PI / 2, "y": 0, "label": "(π/2; 0)" }
+        ],
+        "ariaLabel": "Graf funkcie cotg x s dvoma zvislými asymptotami"
       },
       {
         "id": "value",
