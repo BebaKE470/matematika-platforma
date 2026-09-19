@@ -40,7 +40,7 @@
 
 .print-options { list-style: none; margin: 6px 0; padding: 0; display: grid; gap: 5px; }
 .print-options li { display: flex; align-items: center; gap: 8px; }
-.print-circle { display: inline-block; width: 13px; height: 13px; border: 2px solid #1c2c27; border-radius: 50%; flex: none; }
+.print-circle { display: inline-block; width: 13px; height: 13px; border: 2px solid #1c2c27; border-radius: 50%; flex: none; vertical-align: middle; }
 .print-checkbox { display: inline-block; width: 12px; height: 12px; border: 2px solid #1c2c27; flex: none; margin-top: 2px; }
 .print-check-row { display: flex; align-items: flex-start; gap: 8px; margin: 5px 0; }
 
@@ -48,7 +48,14 @@
 .print-table th, .print-table td { border: 1px solid var(--line); padding: 5px 8px; text-align: left; }
 .print-mark-cell { text-align: center; width: 50px; }
 .print-blank-cell { width: 40%; }
+/* table-layout: fixed pins column widths from this row once, so the header's
+   emoji columns and the body's circle columns share exactly the same
+   boundaries — with the default auto layout the two rows could compute
+   slightly different widths and the circles would drift out from under the
+   emoji above them. */
+.print-reflection-table { table-layout: fixed; }
 .print-reflection-table th:not(:first-child) { text-align: center; width: 50px; }
+.print-reflection-table td.print-mark-cell { text-align: center; vertical-align: middle; }
 .print-legend { color: var(--muted); font-size: .88rem; margin: 4px 0 8px; }
 
 .print-lines { margin: 6px 0; height: calc(2 * 1.7em); background-image: repeating-linear-gradient(to bottom, transparent, transparent calc(1.7em - 1px), var(--line) calc(1.7em - 1px), var(--line) 1.7em); }
