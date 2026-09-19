@@ -8,7 +8,7 @@
 // point every other core/*.js has attached its namespace to `window`.
 (function () {
   if (!window.MathPlatform || !window.MathAuth || !window.MathLive || !window.MathSession ||
-      !window.MathViews || !window.MathViews.student || !window.MathViews.teacher) {
+      !window.MathPrint || !window.MathViews || !window.MathViews.student || !window.MathViews.teacher) {
     throw new Error('core/app.js: chýba niektorý z core/*.js pred ním.');
   }
 
@@ -27,6 +27,7 @@
     { name: 'catalogYear', test: p => p[0] === 'catalog' && p[1] === 'year', view: p => S.catalogYear(p[2]) },
     { name: 'catalogUnit', test: p => p[0] === 'catalog' && p[1] === 'unit', view: p => S.catalogUnit(p[2], p.slice(3).join('/')) },
     { name: 'module', test: p => p[0] === 'module', keepsSession: true, view: p => S.moduleStart(p[1]) },
+    { name: 'print', test: p => p[0] === 'print', view: p => window.MathPrint.render(p[1]) },
     { name: 'play', test: p => p[0] === 'play', keepsSession: true, view: () => window.MathSession.play(app) },
     { name: 'join', test: p => p[0] === 'join', keepsSession: true, view: p => S.join(p[1], p[2], p[3] === 'reflect', p[3] === 'acts' ? p[4] : null) },
     { name: 'method', test: p => p[0] === 'method', teacher: true, view: p => T.method(p[1]) },

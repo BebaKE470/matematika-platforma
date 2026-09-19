@@ -426,7 +426,11 @@
     return runs;
   }
 
-  R.coordinatePlot = (a, ctx) => {
+  // Builds the `<div class="coordinate-wrap">...</div>` block alone (grid,
+  // axes, asymptotes, curves, points) — split out from R.coordinatePlot so
+  // core/print.js's static worksheet rendering can reuse the exact same
+  // axis-scaling/curve-sampling logic instead of duplicating it.
+  R.buildCoordinateWrap = a => {
     const width = 620, height = 420, pad = 48;
     const xmin = a.xMin ?? -1, xmax = a.xMax ?? 5, ymin = a.yMin ?? -1, ymax = a.yMax ?? 9;
     const xStep = a.xStep || 1, yStep = a.yStep || 1;
@@ -459,16 +463,20 @@
       const label = c.label && last ? `<text x="${Number(last.split(',')[0]) + 8}" y="${Number(last.split(',')[1])}" class="plot-curve-label"${style}>${esc(c.label)}</text>` : '';
       return polylines + label;
     }).join('');
-    shell(ctx, a, `
-      <h1>${esc(a.title)}</h1>
-      ${a.html || ''}
-      <div class="coordinate-wrap">
+    return `<div class="coordinate-wrap">
         <svg class="coordinate-plot" viewBox="0 0 ${width} ${height}" role="img" aria-label="${esc(a.ariaLabel || 'Body v karteziánskej súradnicovej sústave')}">
           ${grid}${axes}${asymptotes}${curves}${labels}${pts}
           <text x="${width - pad + 16}" y="${sy(0) - 8}" class="plot-axis-name">x</text>
           <text x="${sx(0) + 10}" y="${pad - 14}" class="plot-axis-name">y</text>
         </svg>
-      </div>
+      </div>`;
+  };
+
+  R.coordinatePlot = (a, ctx) => {
+    shell(ctx, a, `
+      <h1>${esc(a.title)}</h1>
+      ${a.html || ''}
+      ${R.buildCoordinateWrap(a)}
       ${a.note ? `<div class="notice">${a.note}</div>` : ''}
       ${continueButtonHtml(a.continueLabel)}
     `);

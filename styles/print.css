@@ -1,0 +1,80 @@
+/* styles/print.css
+   The paper worksheet view (core/print.js's MathPrint.render()) and the
+   narrow fix that keeps existing white-on-colour blocks (`.formula`,
+   `.warning`, badge circles) legible when a browser's print dialog has
+   "background graphics" switched off, which is the default in most
+   browsers. See styles/activity.css for the building-block classes this
+   view reuses as-is (.formula/.example/.steps/.term-list/.warning/.compare/
+   .remember/.coordinate-wrap/.plot-*).
+
+   Kept deliberately compact — a teacher prints these for a whole class, so
+   page count matters. Two rules do most of that work: `page-break-inside:
+   avoid` is scoped to the SHORT blocks only (a question, a reflection
+   table) rather than every block — put on a long theory/graph block, it
+   pushes the *whole thing* to the next page the moment it doesn't quite
+   fit, leaving the rest of the previous page blank; a long block is fine
+   to break mid-way, a table row or a single question is not. And `.print-
+   sheet` isn't wrapped in `.learning-card`, so its headings would
+   otherwise fall back to the browser's oversized H1/H2 defaults — sized
+   explicitly below instead.
+*/
+
+@page { margin: 1.2cm; }
+
+.print-toolbar { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 18px; }
+.print-sheet { max-width: 760px; margin: 0 auto; }
+.print-sheet h1 { font-size: 1.5rem; line-height: 1.25; margin: 0 0 6px; color: var(--ink); }
+.print-sheet h2 { font-size: 1.05rem; line-height: 1.3; margin: 0 0 6px; color: var(--ink); }
+.print-sheet h3 { font-size: .92rem; margin: 10px 0 4px; }
+
+.print-cover { margin-bottom: 14px; page-break-inside: avoid; }
+.print-eyebrow { font-size: 11px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+.print-goals-label { margin: 8px 0 2px; font-weight: 700; }
+
+.print-block { margin: 0 0 12px; }
+.print-task, .print-reflection { page-break-inside: avoid; }
+.print-label { font-size: 11px; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+.print-notebook { border: 2px dashed #c2a96e; border-radius: 12px; padding: 10px 14px; background: none; }
+
+.print-q { font-weight: 750; font-size: .98rem; margin: 6px 0; }
+
+.print-options { list-style: none; margin: 6px 0; padding: 0; display: grid; gap: 5px; }
+.print-options li { display: flex; align-items: center; gap: 8px; }
+.print-circle { display: inline-block; width: 13px; height: 13px; border: 2px solid #1c2c27; border-radius: 50%; flex: none; }
+.print-checkbox { display: inline-block; width: 12px; height: 12px; border: 2px solid #1c2c27; flex: none; margin-top: 2px; }
+.print-check-row { display: flex; align-items: flex-start; gap: 8px; margin: 5px 0; }
+
+.print-table { width: 100%; border-collapse: collapse; margin: 6px 0; font-size: .92rem; }
+.print-table th, .print-table td { border: 1px solid var(--line); padding: 5px 8px; text-align: left; }
+.print-mark-cell { text-align: center; width: 50px; }
+.print-blank-cell { width: 40%; }
+.print-reflection-table th:not(:first-child) { text-align: center; width: 50px; }
+
+.print-lines { margin: 6px 0; height: calc(2 * 1.7em); background-image: repeating-linear-gradient(to bottom, transparent, transparent calc(1.7em - 1px), var(--line) calc(1.7em - 1px), var(--line) 1.7em); }
+.print-answer-line { display: flex; align-items: baseline; gap: 8px; margin: 6px 0; }
+.print-blank-line { flex: 1; border-bottom: 1px solid #1c2c27; min-width: 120px; }
+
+/* Building blocks reused from activity.css read fine at this smaller scale;
+   only the coordinate-plot SVG needs a cap — activity.css gives it a
+   520px min-width for the on-screen player, which is far more than a
+   printed page needs. */
+.print-block .coordinate-wrap { margin: 6px auto; max-width: 340px; }
+.print-block .coordinate-plot { min-width: 0; max-width: 100%; }
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+  /* Most of the reused activity.css typography (.term-name, .formula,
+     .example, my own .print-* rules above, …) is sized in rem, relative to
+     the root element, not body — shrinking the root font-size is what
+     actually scales all of it down together for print, rather than each
+     component individually. */
+  html { font-size: 14px; }
+  /* Most browsers don't print background fills by default — without this,
+     .formula/.warning/.term-symbol/.steps-badge's WHITE text on a solid
+     ink/amber fill would print as invisible white-on-white. */
+  .formula, .warning::before, .term-symbol, .steps > li::before, .tag.phase, .intro-band {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

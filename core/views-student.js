@@ -136,6 +136,7 @@
           <div class="actions">
             <button class="btn" id="startSolo">Začať samostatne</button>
             <button class="ghost" data-go="join/${id}">Mám kód hodiny</button>
+            <button class="ghost" data-go="print/${id}">Stiahnuť ako PDF (tlač)</button>
           </div>
         </div>
       `;

@@ -18,6 +18,7 @@ core/scoring.js               window.MathScore
 core/auth.js                  window.MathAuth
 core/live.js                  window.MathLive
 core/renderers.js             window.ActivityRenderers
+core/print.js                 window.MathPrint
 core/ui.js                    window.MathUI
 core/session.js               window.MathSession
 core/views-student.js         window.MathViews.student
@@ -66,10 +67,13 @@ scope, so a name collision from any later script would be a page-killing
    `docs/AUTHORING.md` for the full shape.
 3. **`core/`** — the platform: catalog queries + lazy loader
    (`platform.js`), scoring (`scoring.js`), auth (`auth.js`), realtime
-   (`live.js`), the activity renderers (`renderers.js`), shared view
-   fragments (`ui.js`), the session/player engine (`session.js`), the two
-   screen sets (`views-student.js`, `views-teacher.js`), and the router
-   (`app.js`).
+   (`live.js`), the activity renderers (`renderers.js`), a static
+   answer-free print/PDF worksheet rendering of a whole module (`print.js`,
+   route `#print/<id>` — a parallel, read-only counterpart to
+   `renderers.js` for a student without a device or internet; see its file
+   comment for the exact per-type mapping), shared view fragments
+   (`ui.js`), the session/player engine (`session.js`), the two screen sets
+   (`views-student.js`, `views-teacher.js`), and the router (`app.js`).
 
 ## Routing
 
