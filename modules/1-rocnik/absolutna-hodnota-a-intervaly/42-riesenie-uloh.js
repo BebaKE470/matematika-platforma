@@ -56,6 +56,22 @@ MathPlatform.registerModule({
     "estimatedTime": "16–20 min",
     "activities": [
       {
+        "id": "opakovanie",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Vieš, že |x| je vzdialenosť čísla x od nuly, a vieš zapísať aj spájať intervaly.</p><p>Dnes tieto dve myšlienky spojíme: absolútnu hodnotu použijeme na opísanie intervalu okolo nejakého bodu.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "prepojiť absolútnu hodnotu s intervalovým zápisom",
+          "riešiť podmienky typu |x| ≤ r a |x − a| < r pomocou číselnej osi",
+          "zdôvodniť výsledok vzdialenosťou od stredu"
+        ]
+      },
+      {
         "id": "bridge",
         "type": "info",
         "phase": "POCHOP",

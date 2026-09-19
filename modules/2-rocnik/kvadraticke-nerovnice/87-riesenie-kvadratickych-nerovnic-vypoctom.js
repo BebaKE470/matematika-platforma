@@ -53,6 +53,22 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Už vieš nájsť korene kvadratickej rovnice pomocou diskriminantu a vieš, že znamienko koeficientu a rozhoduje, či je parabola otvorená nahor (a&gt;0), alebo nadol (a&lt;0).</p><p>Dnes tieto dve veci spojíme a naučíme sa riešiť kvadratickú <strong>nerovnicu</strong> — nie rovnicu.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'nájsť korene príslušnej kvadratickej rovnice',
+          'podľa orientácie paraboly určiť interval riešenia',
+          'zapísať riešenie ako interval',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

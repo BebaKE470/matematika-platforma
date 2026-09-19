@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulej hodiny vieš, že kvadratická funkcia má predpis f(x)=ax²+bx+c (a≠0) a jej grafom je parabola — otvorená nahor, ak a&gt;0, alebo nadol, ak a&lt;0.</p><p>Z 1. ročníka vieš vyjadriť neznámu zo vzorca — dnes to využiješ pri vzorci pre súradnice vrcholu.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vypočítať súradnice vrcholu paraboly V[x_v; y_v] podľa vzorca x_v=−b/(2a), y_v=f(x_v)',
+          'rozhodnúť, či je vrchol minimom alebo maximom funkcie',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',
@@ -90,6 +105,18 @@ MathPlatform.registerModule({
         answer: 2,
         correct: 'Správne. y_v = f(2) = 2²−4·2+3 = 4−8+3 = −1.',
         hint: 'Dosaď x_v=2 späť do pôvodného predpisu f(x)=x²−4x+3.',
+      },
+      {
+        id: 'vertex-visual',
+        type: 'coordinatePlot',
+        phase: 'VIZUALIZÁCIA',
+        title: 'Vrchol na grafe',
+        html: '<p>Práve sme vypočítali, že funkcia f(x) = x² − 4x + 3 má vrchol V[2; −1]. Pozri sa, ako to vyzerá na grafe.</p>',
+        xMin: 0, xMax: 4, yMin: -2, yMax: 6,
+        curves: [{ fn: x => x * x - 4 * x + 3 }],
+        points: [{ x: 2, y: -1, label: 'V[2; −1]' }],
+        note: 'Vrchol je najnižší bod grafu — presne tam, kde parabola „mení smer“.',
+        continueLabel: 'Pokračovať',
       },
       {
         id: 'q-error',

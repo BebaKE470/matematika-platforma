@@ -55,6 +55,22 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na predchádzajúcej hodine si sa naučil/a rozložiť rozdiel druhých mocnín pomocou vzorca a² − b² = (a − b)(a + b).</p><p>Vieš tiež roznásobiť dvojčlen dvojčlenom, napríklad (x + a)(x + a).</p><p>Dnes pridáme ďalšie dva vzorce na rozklad — pre druhú mocninu súčtu a rozdielu.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozpoznať trojčlen, ktorý je druhou mocninou dvojčlena',
+          'rozložiť a² ± 2ab + b² na (a ± b)²',
+          'skontrolovať prostredný člen pred použitím vzorca',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

@@ -55,6 +55,18 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcich hodín poznáš definíciu druhej a tretej odmocniny.</p><p>Z celku Absolútna hodnota a intervaly poznáš pojem absolútnej hodnoty.</p><p>Dnes ukážeme, ako sa odmocnina správa pri súčine, podiele a druhej mocnine.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: ['používať vzťahy √(a·b) = √a · √b a √(a:b) = √a : √b', 'vysvetliť, prečo √(a²) = |a|', 'rozlíšiť, že podobný vzťah pre súčet neplatí'],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

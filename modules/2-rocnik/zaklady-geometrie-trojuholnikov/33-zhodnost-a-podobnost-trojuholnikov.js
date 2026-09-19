@@ -55,6 +55,21 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Zo základnej školy poznáš trojuholník a jeho základné prvky — vrcholy, strany, uhly — a máš neformálnu predstavu o tom, kedy sú dva útvary „rovnaké“ a kedy len „podobné“.</p><p>Z 1. ročníka už vieš pracovať s pomerom a mierkou.</p><p>Dnes tieto poznatky spresníme: presne určíme, kedy sú dva trojuholníky <strong>zhodné</strong> a kedy iba <strong>podobné</strong>.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozhodnúť, či sú dva trojuholníky zhodné (sss, sus, usu) alebo podobné (sss, sus, uu)',
+          'vypočítať koeficient podobnosti',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

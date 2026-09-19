@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Už vieš riešiť iracionálnu rovnicu vrátane skúšky, a z geometrie poznáš Pytagorovu vetu.</p><p>Dnes tieto zručnosti použijeme na riešenie reálnych úloh z geometrie a fyziky.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'zostaviť iracionálnu rovnicu z geometrického zadania (Pytagorova veta)',
+          'zostaviť iracionálnu rovnicu z fyzikálneho zadania (voľný pád)',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

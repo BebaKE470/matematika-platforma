@@ -54,6 +54,22 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Doteraz sme riešili kvadratické rovnice, kde chýbal buď lineárny, alebo absolútny člen (hodiny 68–70). Z 1. ročníka už tiež vieš, čo je <strong>druhá odmocnina</strong> a kedy má zmysel (iba z nezáporného čísla).</p><p>Dnes sa naučíme riešiť <strong>úplnú</strong> kvadratickú rovnicu, kde sú prítomné všetky tri členy naraz.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vypočítať diskriminant D = b² − 4ac',
+          'podľa znamienka D určiť počet riešení',
+          'vyriešiť úplnú kvadratickú rovnicu pomocou vzorca pre korene',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',
@@ -154,6 +170,19 @@ MathPlatform.registerModule({
         answer: 1,
         correct: 'Správne. D=0 znamená jedno (dvojnásobné) riešenie.',
         hint: 'Použi pravidlo pre D=0.',
+      },
+      {
+        id: 'q-connections',
+        type: 'matrix',
+        phase: 'SÚVISLOSTI',
+        title: 'Diskriminant prezradí počet riešení vopred',
+        labels: ['dve riešenia', 'jedno riešenie', 'žiadne reálne riešenie'],
+        items: [
+          { text: 'x² − 7x + 10 = 0', answer: 'dve riešenia' },
+          { text: '4x² − 12x + 9 = 0', answer: 'jedno riešenie' },
+          { text: '3x² − 2x + 5 = 0', answer: 'žiadne reálne riešenie' },
+          { text: '2x² + x − 6 = 0', answer: 'dve riešenia' },
+        ],
       },
       {
         id: 'reflection',

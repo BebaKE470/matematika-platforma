@@ -49,6 +49,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z minulej hodiny už vieš, že |L(x)|=k rieš rozdelením na prípady podľa znamienka čísla k.</p><p>Vieš tiež riešiť lineárne rovnice ekvivalentnými úpravami.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "rozpoznať počet riešení rovnice s absolútnou hodnotou",
+          "riešiť rovnicu s absolútnou hodnotou systematicky"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

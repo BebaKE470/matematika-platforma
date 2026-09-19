@@ -61,6 +61,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'previesť slovný opis situácie na algebraický výraz',
+          'určiť poradie operácií podľa významu vety, nie podľa poradia slov',
+        ],
+      },
+      {
         id: 'q-basic1',
         type: 'choice',
         phase: 'OVER SI',

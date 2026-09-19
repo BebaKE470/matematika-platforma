@@ -54,6 +54,10 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'topic-intro',
+        type: 'intro',
+      },
+      {
         id: 'q1',
         type: 'choice',
         phase: 'OVER',

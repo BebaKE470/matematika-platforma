@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulej témy poznáš <strong>sin, cos, tg</strong> a vieš nimi riešiť <strong>pravouhlý</strong> trojuholník. Z geometrie trojuholníkov vieš, ako sa trojuholníky klasifikujú (ostrouhlý, tupouhlý...).</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'sformulovať sínusovú vetu a/sin α = b/sin β = c/sin γ',
+          'použiť ju na výpočet chýbajúcej strany alebo uhla v ľubovoľnom trojuholníku',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

@@ -56,6 +56,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "opakovanie",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Zo základnej školy vieš porovnávať reálne čísla a pracovať s číselnou osou aj so základnými nerovnosťami.</p><p>Z predchádzajúcich hodín 1. ročníka už poznáš množiny, ich operácie a presný matematický zápis.</p><p>Dnes k tomu pridáme nový pojem — vzdialenosť čísla od nuly.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vysvetliť absolútnu hodnotu ako vzdialenosť od nuly",
+          "správne prečítať a použiť zápis |x|",
+          "zdôvodniť výsledok pomocou číselnej osi"
+        ]
+      },
+      {
         "id": "distance",
         "type": "info",
         "phase": "POCHOP",

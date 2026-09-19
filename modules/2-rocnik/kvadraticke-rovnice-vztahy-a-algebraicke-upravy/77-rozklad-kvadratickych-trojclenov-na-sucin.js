@@ -55,6 +55,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Už vieme vypočítať korene kvadratickej rovnice pomocou diskriminantu a vzorca (hodina 71), a odhadnúť ich rýchlo pomocou Vietových vzťahov (hodiny 75–76). Z 1. ročníka tiež vieme, čo znamená rozložiť výraz na súčin (napr. vyňatím spoločného činiteľa).</p><p>Dnes tieto poznatky spojíme: korene rovnice použijeme na rozklad samotného kvadratického výrazu na súčin.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozložiť kvadratický trojčlen ax²+bx+c na súčin a(x−x₁)(x−x₂) pomocou koreňov',
+          'overiť správnosť rozkladu roznásobením',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

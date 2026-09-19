@@ -54,6 +54,14 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vybrať správny postup pre daný typ nerovnice",
+          "precvičiť si zápis riešenia ako intervalu"
+        ]
+      },
+      {
         "id": "start",
         "type": "explain",
         "phase": "POCHOP",

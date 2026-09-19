@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulej hodiny už poznáš pojem radián a základný vzťah <strong>180° = π rad</strong>.</p><p>Dnes z tohto jedného vzťahu odvodíme prevodový vzorec pre <strong>ľubovoľný</strong> uhol, nielen pre 90°, 180° a 360°.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'previesť uhol zo stupňov na radiány',
+          'previesť uhol z radiánov na stupne',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

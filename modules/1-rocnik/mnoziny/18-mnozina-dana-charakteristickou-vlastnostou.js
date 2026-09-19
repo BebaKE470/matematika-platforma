@@ -50,6 +50,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Doteraz sme množinu vždy zapisovali <strong>vymenovaním prvkov</strong>, napríklad A = {2, 4, 6, 8}, a poznáme aj symboly ∈, ∉ a ⊆.</p><p>Čo ak by sme chceli opísať množinu, ktorá má veľmi veľa (alebo nekonečne veľa) prvkov? Vymenovať by sme ich nestihli — dnes sa naučíme iný spôsob zápisu.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "zapísať množinu charakteristickou vlastnosťou {x ∈ U; podmienka}",
+          "prevádzať medzi opisom vlastnosťou a vymenovaním prvkov"
+        ]
+      },
+      {
         "id": "from-list",
         "type": "info",
         "phase": "OBJAVUJ",

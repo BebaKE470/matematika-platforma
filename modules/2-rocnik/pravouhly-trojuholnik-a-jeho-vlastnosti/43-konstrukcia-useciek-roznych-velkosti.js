@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '18–24 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcich hodín poznáš Euklidovu vetu o výške v²=ca·cb.</p><p>Zo základnej školy vieš, že uhol nad priemerom Tálesovej kružnice je vždy pravý.</p><p>Dnes tieto dve veci spojíme a naplánujeme, ako presne zostrojiť úsečku iracionálnej dĺžky, napr. √5.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vysvetliť princíp konštrukcie úsečky dĺžky √n pomocou Euklidovej vety o výške a Tálesovej kružnice',
+          'naplánovať a zostrojiť úsečku dĺžky √n',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulej hodiny poznáš terminológiu odvesna/prepona a obrátenú Pytagorovu vetu.</p><p>Z 1. ročníka vieš základný výpočet chýbajúcej strany pomocou a²+b²=c².</p><p>Dnes nájdeme pravouhlý trojuholník <strong>skrytý</strong> v zložitejšom útvare — v obdĺžniku alebo v rovnoramennom trojuholníku.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'nájsť skrytý pravouhlý trojuholník v obdĺžniku alebo rovnoramennom trojuholníku',
+          'vypočítať uhlopriečku obdĺžnika a výšku rovnoramenného trojuholníka',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

@@ -49,6 +49,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Už vieme množinu zapísať vymenovaním prvkov aj charakteristickou vlastnosťou a poznáme symboly ∈, ∉ a ⊆.</p><p>Dnes sa spýtame na jednoduchú, ale dôležitú vec: <strong>koľko prvkov množina vlastne má?</strong></p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vysvetliť pojem kardinalita množiny a zápis |A|",
+          "správne spočítať prvky množiny aj pri opakovanom zápise toho istého prvku"
+        ]
+      },
+      {
         "id": "cardinality-intro",
         "type": "explain",
         "phase": "NOVÝ ZÁPIS",

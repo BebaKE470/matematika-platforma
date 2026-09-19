@@ -49,6 +49,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Poznáme už zjednotenie A ∪ B (aspoň v jednej množine) a prienik A ∩ B (v oboch súčasne).</p><p>Dnes pridáme dve ďalšie operácie — jednu, ktorá porovnáva dve množiny, a jednu, ktorá pracuje s tým, čo do množiny <em>nepatrí</em>.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vysvetliť rozdiel množín A − B",
+          "vysvetliť doplnok množiny A′ vzhľadom na univerzálnu množinu U"
+        ]
+      },
+      {
         "id": "difference-intro",
         "type": "explain",
         "phase": "NOVÝ POJEM",

@@ -49,6 +49,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Prirodzené čísla (1, 2, 3, …) a základné počtové operácie – sčítanie, odčítanie, násobenie, delenie – už dobre poznáš zo základnej školy.</p><p>Dnes sa naučíme rýchlo spoznať, či je číslo deliteľné niektorým z čísel 2, 3, 4, 5, 6, 9 alebo 10 – bez toho, aby sme museli reálne deliť.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "spoznať znaky deliteľnosti 2, 3, 4, 5, 6, 9 a 10",
+          "overiť deliteľnosť čísla bez delenia",
+          "skombinovať viac znakov naraz (napr. deliteľnosť 6)"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",
@@ -61,7 +77,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<div class=\"formula\">Číslo je deliteľné 6 práve vtedy, keď je deliteľné 2 aj 3.<span class=\"formula-note\">Kritériá treba použiť obe.</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"formula\">Číslo je deliteľné 6 práve vtedy, keď je deliteľné 2 aj 3.<span class=\"formula-note\">Kritériá treba použiť obe.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Je číslo 522 deliteľné 6?</p><p>Deliteľnosť 2: posledná číslica je 2 (párna) → áno.</p><p>Deliteľnosť 3: súčet číslic 5+2+2=9, a 9 je deliteľné 3 → áno.</p><p>Obe podmienky platia, takže <strong>522 je deliteľné 6</strong>.</p></div>"
       },
       {
         "id": "start",

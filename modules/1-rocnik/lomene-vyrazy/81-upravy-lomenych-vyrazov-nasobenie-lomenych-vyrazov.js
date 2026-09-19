@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na predchádzajúcich hodinách sme sa naučili určiť definičný obor, krátiť, sčítať a odčítať lomené výrazy.</p><p>Zo základnej školy vieš násobiť číselné zlomky: čitateľ s čitateľom, menovateľ s menovateľom, napríklad 2/3 · 4/5 = 8/15.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vynásobiť dva lomené výrazy',
+          'krátiť spoločné činitele pred násobením',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

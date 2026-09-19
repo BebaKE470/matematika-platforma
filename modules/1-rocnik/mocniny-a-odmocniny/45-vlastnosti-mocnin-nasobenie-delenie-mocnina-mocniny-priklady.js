@@ -55,6 +55,18 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcej hodiny poznáš definíciu mocniny aⁿ, vieš pomenovať základ a mocniteľ a vieš vyhodnotiť mocninu so záporným základom.</p><p>Zo základnej školy vieš násobiť a poznáš poradie operácií.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: ['odvodiť pravidlo pre násobenie a delenie mocnín s rovnakým základom', 'odvodiť pravidlo pre mocninu mocniny', 'zjednodušiť výraz s mocninami rovnakého základu'],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',
@@ -69,6 +81,15 @@ MathPlatform.registerModule({
         title: 'Násobenie a delenie mocnín s rovnakým základom',
         html: '<div class="formula">aᵐ · aⁿ = aᵐ⁺ⁿ<span class="formula-note">pri násobení mocnín s rovnakým základom sa exponenty sčítajú</span></div><div class="formula">aᵐ : aⁿ = aᵐ⁻ⁿ<span class="formula-note">(pre m &gt; n) — pri delení sa exponenty odčítajú</span></div><p>Obe pravidlá platia iba vtedy, keď je <strong>základ rovnaký</strong>. Výraz 2³ · 3² sa takto zjednodušiť nedá.</p>',
         remember: 'aᵐ · aⁿ = aᵐ⁺ⁿ,  aᵐ : aⁿ = aᵐ⁻ⁿ (rovnaký základ, m > n).',
+      },
+      {
+        id: 'zdovodni-priklad',
+        type: 'selfWrite',
+        phase: 'ZDÔVODNI',
+        skill: 'argumentácia',
+        title: 'Over pravidlo na konkrétnom príklade',
+        prompt: 'Over pravidlo aᵐ · aⁿ = aᵐ⁺ⁿ na konkrétnom príklade 3² · 3³: obe strany rozpíš ako súčin trojok a spočítaj, koľko trojok je celkovo. Zapíš svoj postup tak, ako keby si to vysvetľoval/a spolužiakovi.',
+        model: '3² · 3³ = (3 · 3) · (3 · 3 · 3) = 3 · 3 · 3 · 3 · 3 = 3⁵. Vľavo aj vpravo je spolu 5 trojok — presne toľko, koľko dáva súčet exponentov 2 + 3. Preto platí 3² · 3³ = 3²⁺³ = 3⁵, a rovnaká úvaha funguje pre ľubovoľný základ a ľubovoľné exponenty.',
       },
       {
         id: 'q-multiply',

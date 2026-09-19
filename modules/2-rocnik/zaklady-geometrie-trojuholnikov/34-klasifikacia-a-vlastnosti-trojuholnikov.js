@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulej hodiny už vieš, kedy sú dva trojuholníky zhodné a kedy podobné.</p><p>Zo základnej školy poznáš, že súčet vnútorných uhlov trojuholníka je vždy <strong>180°</strong>, a máš základnú predstavu o typoch trojuholníkov.</p><p>Dnes si túto klasifikáciu spresníme a zistíme, kedy tri úsečky vôbec môžu tvoriť trojuholník.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'klasifikovať trojuholník podľa strán aj podľa uhlov',
+          'overiť trojuholníkovú nerovnosť',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',
@@ -124,6 +139,24 @@ MathPlatform.registerModule({
         answer: 2,
         correct: 'Správne. Má jeden pravý uhol (90°) — pravouhlý, a dve rovnaké strany — rovnoramenný.',
         hint: 'Over si klasifikáciu podľa uhlov a podľa strán samostatne.',
+      },
+      {
+        id: 'q-classify-combo',
+        type: 'matrix',
+        phase: 'SÚVISLOSTI',
+        title: 'Zaraď trojuholník podľa strán aj podľa uhlov',
+        labels: [
+          'rovnostranný a ostrouhlý',
+          'rovnoramenný a pravouhlý',
+          'rôznostranný a tupouhlý',
+          'rovnoramenný a ostrouhlý',
+        ],
+        items: [
+          { text: 'Strany 6cm, 6cm, 6cm', answer: 'rovnostranný a ostrouhlý' },
+          { text: 'Uhly 90°, 45°, 45°, dve rovnaké strany', answer: 'rovnoramenný a pravouhlý' },
+          { text: 'Strany 5cm, 7cm, 10cm (uhol oproti strane 10cm je tupý)', answer: 'rôznostranný a tupouhlý' },
+          { text: 'Strany 5cm, 5cm, 6cm (najväčší uhol je približne 74°)', answer: 'rovnoramenný a ostrouhlý' },
+        ],
       },
       {
         id: 'notebook',

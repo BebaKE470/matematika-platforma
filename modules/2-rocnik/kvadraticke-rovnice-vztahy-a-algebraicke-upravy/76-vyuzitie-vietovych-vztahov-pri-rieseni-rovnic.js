@@ -52,6 +52,21 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na minulej hodine sme si ukázali Vietove vzťahy: pre rovnicu ax²+bx+c=0 (a≠0) s koreňmi x₁, x₂ platí x₁+x₂=−b/a a x₁·x₂=c/a — a to bez toho, aby sme korene museli počítať.</p><p>Dnes tieto vzťahy využijeme dvoma smermi: na rýchly odhad celočíselných koreňov a na zostavenie rovnice, keď korene poznáme.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'odhadnúť celočíselné korene rovnice x²+bx+c=0 bez počítania diskriminantu',
+          'zostaviť kvadratickú rovnicu, keď poznáme jej korene',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

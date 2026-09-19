@@ -54,6 +54,18 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcich hodín poznáš mocniny s celočíselným mocniteľom a ich pravidlá, druhú a tretiu odmocninu a vety o odmocninách.</p><p>Z celku Čísla, premenné, výrazy poznáš pojem racionálneho čísla (zlomok).</p><p>Dnes spojíme mocniny a odmocniny do jedného zápisu.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: ['vysvetliť a^(1/n) = ⁿ√a a a^(m/n) = ⁿ√(aᵐ)', 'prepísať odmocninu na mocninu s racionálnym mocniteľom a naopak'],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

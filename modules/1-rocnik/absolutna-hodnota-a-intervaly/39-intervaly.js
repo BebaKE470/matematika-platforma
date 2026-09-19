@@ -56,6 +56,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "opakovanie",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Na minulej hodine sme zaviedli absolútnu hodnotu ako vzdialenosť čísla od nuly a zápis |x|.</p><p>Už tiež vieš porovnávať reálne čísla pomocou nerovností a pracovať s číselnou osou.</p><p>Dnes tieto nerovnosti spojíme do jedného zápisu — intervalu.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vysvetliť pojem interval a rozlíšiť otvorený, uzavretý a polootvorený interval",
+          "prechádzať medzi zápisom nerovnosťou a intervalom",
+          "zakresliť interval na číselnej osi"
+        ]
+      },
+      {
         "id": "situation",
         "type": "info",
         "phase": "POCHOP",
@@ -122,6 +138,20 @@ MathPlatform.registerModule({
         "answer": 1,
         "correct": "Správne. Pri −∞ je zátvorka otvorená a číslo 4 do množiny patrí.",
         "hint": "Nekonečno nie je reálne číslo, preto pri ňom nemôže byť uzavretý koniec."
+      },
+      {
+        "id": "preklad-zapisov",
+        "type": "matrix",
+        "phase": "PRECVIČ",
+        "skill": "prevod medzi zápismi",
+        "title": "Rovnaká množina, rôzny zápis",
+        "labels": ["⟨−4; 6)", "(−5; 5)", "(2; ∞)", "(−∞; 0⟩", "⟨−5; 5⟩", "(−∞; 2)"],
+        "items": [
+          { "text": "−4 ≤ x < 6", "answer": "⟨−4; 6)" },
+          { "text": "|x| < 5", "answer": "(−5; 5)" },
+          { "text": "x > 2", "answer": "(2; ∞)" },
+          { "text": "x ≤ 0", "answer": "(−∞; 0⟩" }
+        ]
       },
       {
         "id": "notebook",

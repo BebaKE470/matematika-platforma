@@ -54,6 +54,18 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcich hodín poznáš definíciu mocniny aⁿ a pravidlá aᵐ · aⁿ = aᵐ⁺ⁿ a aᵐ : aⁿ = aᵐ⁻ⁿ pre mocniny s rovnakým základom.</p><p>Dnes sa spýtame, čo sa stane, ak je exponent nula alebo záporné číslo.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: ['odvodiť a⁰ = 1 z pravidla pre delenie mocnín', 'odvodiť a⁻ⁿ = 1/aⁿ', 'vypočítať hodnotu mocniny so záporným celočíselným exponentom'],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

@@ -55,6 +55,18 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcich hodín poznáš definíciu druhej a tretej odmocniny a vety o odmocninách.</p><p>Zo základnej školy poznáš Pytagorovu vetu a² + b² = c² v pravouhlom trojuholníku.</p><p>Dnes tieto dve veci spojíme pri výpočte dĺžky strany.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: ['vyjadriť neznámu stranu z Pytagorovej vety', 'vypočítať dĺžku prepony alebo odvesny pomocou odmocniny', 'použiť postup v jednoduchej technickej úlohe'],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

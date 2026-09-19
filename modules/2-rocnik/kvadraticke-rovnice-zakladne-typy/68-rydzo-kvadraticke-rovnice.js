@@ -55,6 +55,22 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>V predchádzajúcej téme sme sa venovali <strong>kvadratickej funkcii a jej grafu</strong> — parabole. Z 1. ročníka už vieš, čo je <strong>druhá odmocnina</strong> čísla (napr. √9 = 3) a ako <strong>upraviť vzorec</strong> podľa zadanej premennej (napr. vyjadriť x² z rovnice).</p><p>Dnes tieto dva poznatky spojíme a vyriešime prvý (najjednoduchší) typ kvadratickej rovnice.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozpoznať rýdzo kvadratickú rovnicu ax² + c = 0',
+          'vyriešiť ju izoláciou x² a odmocnením',
+          'vysvetliť, prečo má rovnica x² = k (k>0) dve riešenia',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

@@ -54,6 +54,22 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcich hodín poznáš pojmy konštanta, premenná, výraz a mnohočlen, a vieš s výrazmi počítať.</p><p>Zo základnej školy vieš dosadiť konkrétne číslo do jednoduchého vzorca (napríklad do vzorca pre obsah alebo objem).</p><p>Dnes túto zručnosť rozšírime aj na zložitejšie výrazy s viacerými premennými — vrátane dosadzovania záporných čísel.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'dosadiť čísla za premenné do výrazu',
+          'správne dosadiť záporné číslo (so zátvorkou)',
+          'vypočítať hodnotu výrazu s viacerými premennými',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

@@ -55,6 +55,18 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Zo základnej školy poznáš druhú a tretiu mocninu čísla — používal/a si ich pri výpočte obsahu štvorca (a²) aj objemu kocky (a³).</p><p>Z predchádzajúceho učiva 1. ročníka poznáš aj reálne čísla a presný symbolický zápis (celok Čísla, premenné, výrazy).</p><p>Dnes tento zápis zovšeobecníme na mocninu s ľubovoľným kladným prirodzeným mocniteľom.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: ['vysvetliť mocninu aⁿ ako súčin n rovnakých činiteľov', 'pomenovať základ a mocniteľ (exponent)', 'vypočítať hodnotu mocniny aj so záporným základom'],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

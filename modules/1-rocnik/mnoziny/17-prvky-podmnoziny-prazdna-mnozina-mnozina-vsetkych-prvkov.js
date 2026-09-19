@@ -57,6 +57,15 @@ MathPlatform.registerModule({
         "remember": "∈ používame medzi prvkom a množinou. Pre vzťah dvoch množín zavedieme nový symbol."
       },
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vysvetliť, čo je podmnožina, a používať symbol ⊆",
+          "rozlíšiť prázdnu a univerzálnu množinu",
+          "prepojiť slovný, symbolický a grafický zápis"
+        ]
+      },
+      {
         "id": "subset-symbol",
         "type": "info",
         "phase": "NOVÝ SYMBOL",

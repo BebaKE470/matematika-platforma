@@ -54,6 +54,22 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z 1. ročníka poznáš číselnú os, zápis nerovnosti a intervalu aj absolútnu hodnotu. Z tohto ročníka už vieš riešiť lineárnu <strong>rovnicu</strong> ekvivalentnými úpravami a zapísať lineárnu funkciu.</p><p>Dnes uvidíš, čo sa stane, keď namiesto rovnice riešime <strong>nerovnicu</strong> — a prečo tam pribudne jedno nové pravidlo, ktoré rovnica nepozná.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "riešiť lineárnu nerovnicu ekvivalentnými úpravami",
+          "zapísať riešenie ako interval a znázorniť ho na číselnej osi",
+          "vedieť, kedy sa znak nerovnosti otočí"
+        ]
+      },
+      {
         "id": "meaning",
         "type": "explain",
         "phase": "POCHOP",
@@ -66,6 +82,14 @@ MathPlatform.registerModule({
         "phase": "POCHOP",
         "title": "Kedy sa zmení znak?",
         "html": "<p>Pri pripočítaní alebo odčítaní rovnakého čísla na oboch stranách sa smer nerovnosti nemení.</p><div class=\"warning\"><strong>Pozor:</strong> Pri násobení alebo delení <strong>záporným</strong> číslom sa znak nerovnosti <strong>otočí</strong>.</div>"
+      },
+      {
+        "id": "compare-otocenie",
+        "type": "explain",
+        "phase": "NÁJDI CHYBU",
+        "title": "Čo je tu zle?",
+        "html": "<p>Riešime nerovnicu <strong>−3x &lt; 12</strong>. Porovnaj dva postupy delenia číslom −3:</p><div class=\"compare\"><div class=\"bad\"><span class=\"mini-label\">CHYBA</span><p>−3x &lt; 12&nbsp;&nbsp;/ : (−3)</p><p>x &lt; −4</p></div><div class=\"good\"><span class=\"mini-label\">SPRÁVNE</span><p>−3x &lt; 12&nbsp;&nbsp;/ : (−3)</p><p>x &gt; −4</p></div></div><p>Delíme záporným číslom −3, preto sa znak &lt; musí otočiť na &gt;. Rovnica by znak nezmenila — nerovnica áno.</p>",
+        "remember": "Pri delení alebo násobení záporným číslom sa znak nerovnosti vždy otočí — to je presne to, čo rovnica nepozná."
       },
       {
         "id": "c1",

@@ -54,6 +54,22 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z minulej hodiny už vieš riešiť lineárnu nerovnicu ekvivalentnými úpravami a vieš, že sa znak otočí pri násobení/delení záporným číslom. Z lomených výrazov (1. ročník) poznáš pojem definičný obor — kedy menovateľ nesmie byť nula.</p><p>Dnes tieto dve veci spojíme: v nerovnici sa objaví neznáma priamo v menovateli.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "určiť definičnú podmienku pri neznámej v menovateli",
+          "zistiť znamienko výrazu na jednotlivých intervaloch",
+          "zapísať riešenie nerovnice ako interval"
+        ]
+      },
+      {
         "id": "domain",
         "type": "explain",
         "phase": "POCHOP",

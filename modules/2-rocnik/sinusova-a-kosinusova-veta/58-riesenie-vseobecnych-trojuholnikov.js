@@ -51,6 +51,21 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulých hodín poznáš samostatne <strong>sínusovú vetu</strong> aj <strong>kosínusovú vetu</strong>. Dnes ich dáme dokopy — naučíme sa rozhodnúť, ktorú z nich na danú úlohu použiť.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozhodnúť, ktorú vetu použiť podľa zadaných údajov',
+          'vyriešiť ľubovoľný trojuholník',
+        ],
+      },
+      {
         id: 'intro',
         type: 'info',
         phase: 'POCHOP',
@@ -118,6 +133,20 @@ MathPlatform.registerModule({
         success: 'Správne. c²=6²+8²−2·6·8·0=36+64=100, c=√100=10cm.',
         hint: 'Použi kosínusovú vetu c²=a²+b²−2ab·cosγ.',
         reveal: 'c²=36+64=100, c=10cm.',
+      },
+      {
+        id: 'q-decision-map',
+        type: 'matrix',
+        phase: 'ZHRNUTIE',
+        skill: 'výber vzťahu',
+        title: 'Zoraď situácie k vhodnej vete',
+        labels: ['Sínusová veta', 'Kosínusová veta'],
+        items: [
+          { text: 'Poznáme jeden uhol, jemu protiľahlú stranu a ešte druhý uhol.', answer: 'Sínusová veta' },
+          { text: 'Poznáme dve strany a uhol medzi nimi.', answer: 'Kosínusová veta' },
+          { text: 'Poznáme všetky tri strany a hľadáme niektorý uhol.', answer: 'Kosínusová veta' },
+          { text: 'Poznáme dve strany a uhol, ktorý je protiľahlý jednej z nich.', answer: 'Sínusová veta' },
+        ],
       },
       {
         id: 'notebook',

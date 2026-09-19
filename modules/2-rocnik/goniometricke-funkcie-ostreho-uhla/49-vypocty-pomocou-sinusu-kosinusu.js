@@ -53,6 +53,22 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulej hodiny vieš, že v pravouhlom trojuholníku platí <strong>sin α = protiľahlá/prepona</strong> a <strong>cos α = priľahlá/prepona</strong>.</p><p>Z 1. ročníka vieš aj to, ako sa zo vzorca vyjadruje iná neznáma (napr. z S=a·b vyjadríš a=S/b).</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vyjadriť zo vzorca pre sin α alebo cos α neznámu stranu',
+          'poznať hodnoty sin/cos pre 30°, 45°, 60°',
+          'vypočítať chýbajúcu stranu pravouhlého trojuholníka',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

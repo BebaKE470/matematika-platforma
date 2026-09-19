@@ -55,6 +55,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na minulej hodine sme sa naučili zostaviť kvadratickú rovnicu zo slovného zadania a overiť, ktoré riešenie má reálny zmysel. Z 1. ročníka tiež vieme upravovať lomené výrazy (napr. súčty zlomkov s premennou v menovateli).</p><p>Dnes tieto zručnosti použijeme na klasické úlohy o pohybe (dráha=rýchlosť×čas) a o spoločnej práci, ktoré po úprave vedú na kvadratickú rovnicu.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'sledovať zostavenie kvadratickej rovnice z úlohy o pohybe alebo o spoločnej práci',
+          'z dvoch matematických riešení vybrať to, ktoré zodpovedá reálnej situácii',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

@@ -54,6 +54,14 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "prehľadne si utriediť všetky typy lineárnych nerovníc z tohto celku",
+          "vybrať správny postup podľa typu úlohy"
+        ]
+      },
+      {
         "id": "map",
         "type": "explain",
         "phase": "POCHOP",

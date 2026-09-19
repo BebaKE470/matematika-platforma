@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>V predchádzajúcich hodinách sme riešili úplnú kvadratickú rovnicu ax²+bx+c=0 (a≠0) pomocou diskriminantu D=b²−4ac a vzorca pre korene x₁,₂=(−b±√D)/(2a).</p><p>Dnes sa pozrieme na to, čo nám o koreňoch prezradia priamo koeficienty a, b, c — bez toho, aby sme korene museli počítať.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vypočítať súčet a súčin koreňov kvadratickej rovnice priamo z jej koeficientov',
+          'overiť platnosť Vietových vzťahov na konkrétnej rovnici, ktorej korene poznáme',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

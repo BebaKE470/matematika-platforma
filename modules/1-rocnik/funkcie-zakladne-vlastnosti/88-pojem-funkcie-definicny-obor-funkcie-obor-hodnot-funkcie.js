@@ -70,6 +70,22 @@ MathPlatform.registerModule({
     estimatedTime: "≈ 15 min",
     activities: [
       {
+        id: "recap",
+        type: "explain",
+        phase: "OPAKUJ",
+        title: "Čo už vieme",
+        html: "<p>Už vieš dosadzovať hodnoty do výrazu a pracovať s premennou, poznáš základné pojmy o množinách a zápis intervalu reálnych čísel, a vieš, čo je odmocnina.</p><p>Zo základnej školy poznáš pravouhlú súradnicovú sústavu a vieš čítať jednoduchú tabuľku závislosti dvoch veličín.</p><p>Dnes tieto zručnosti spojíme a zavedieme pojem <strong>funkcie</strong>.</p>"
+      },
+      {
+        id: "topic-intro",
+        type: "intro",
+        goals: [
+          "vysvetliť, čo je funkcia",
+          "rozhodnúť, či dané priradenie je funkciou",
+          "určiť definičný obor D(f) a obor hodnôt H(f)"
+        ]
+      },
+      {
         id: "intro-dependency",
         type: "explain",
         phase: "NA ÚVOD",
@@ -219,6 +235,15 @@ MathPlatform.registerModule({
         title: "Vysvetli rozdiel",
         promptHtml: "Vlastnými slovami vysvetli, aký je rozdiel medzi definičným oborom D(f) a oborom hodnôt H(f) funkcie. Použi vo vysvetlení slová argument a funkčná hodnota.",
         model: "Definičný obor D(f) je množina všetkých hodnôt argumentu x, pre ktoré je funkcia definovaná. Obor hodnôt H(f) je množina všetkých funkčných hodnôt f(x), ktoré funkcia pre tieto hodnoty x skutočne nadobúda."
+      },
+      {
+        id: "concept-map",
+        type: "selfWrite",
+        phase: "SÚVISLOSTI",
+        skill: "Súvislosti medzi pojmami",
+        title: "Jeden príklad, všetky pojmy",
+        promptHtml: "Daná je funkcia f(x) = x² s definičným oborom D(f) = {−2, −1, 0, 1, 2}. Vlastnými slovami vysvetli, ako spolu súvisia pojmy <strong>argument</strong>, <strong>funkčná hodnota</strong>, <strong>definičný obor D(f)</strong>, <strong>obor hodnôt H(f)</strong> a <strong>graf funkcie</strong>. Vo vysvetlení uveď aspoň jednu konkrétnu dvojicu [x; f(x)] a napíš, akému bodu grafu by táto dvojica zodpovedala.",
+        model: "Argument x je vstupná hodnota, napríklad x = −1. Funkčná hodnota f(−1) = (−1)² = 1 je hodnota, ktorú funkcia tomuto argumentu priradí. Definičný obor D(f) = {−2, −1, 0, 1, 2} je množina všetkých prípustných argumentov, obor hodnôt H(f) = {0, 1, 4} je množina všetkých funkčných hodnôt, ktoré funkcia skutočne nadobúda. Graf funkcie je množina všetkých bodov [x; f(x)] pre x z D(f) — dvojici x = −1, f(−1) = 1 zodpovedá v grafe bod [−1; 1]."
       },
       {
         id: "notebook",

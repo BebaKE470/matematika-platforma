@@ -53,6 +53,14 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'nájsť parameter dosadením daného koreňa do rovnice',
+          'použiť Vietove vzťahy pri úlohách s parametrom',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

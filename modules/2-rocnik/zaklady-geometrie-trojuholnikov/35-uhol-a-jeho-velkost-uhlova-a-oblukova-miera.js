@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Zo základnej školy vieš merať uhol v <strong>stupňoch</strong> pomocou uhlomera.</p><p>Z predchádzajúcich dvoch hodín (33–34) už poznáš zhodnosť, podobnosť a klasifikáciu trojuholníkov.</p><p>Dnes spoznáme <strong>druhú</strong> jednotku na meranie tej istej veličiny — uhla.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vysvetliť, čo je radián (oblúková miera uhla)',
+          'poznať vzťah 180° = π rad',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

@@ -49,6 +49,10 @@ MathPlatform.registerModule({
     "estimatedTime": "8–10 min digitálne + písomná práca",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro"
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

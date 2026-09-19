@@ -49,6 +49,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Zo základnej školy už vieš, čo je zlomok a desatinné číslo, a vieš ich medzi sebou prevádzať.</p><p>Percento je len iný zápis zlomku so menovateľom 100 – dnes si zopakujeme, ako s ním počítať.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vysvetliť, čo znamená p % zo základu",
+          "vypočítať percentovú časť z daného základu",
+          "rozlíšiť základ, počet percent a percentovú hodnotu v zadaní"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",
@@ -61,7 +77,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<div class=\"formula\">p % znamená p stotín zo základu.<span class=\"formula-note\">Pred výpočtom treba určiť základ, počet percent a percentovú hodnotu.</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"formula\">p % znamená p stotín zo základu.<span class=\"formula-note\">Pred výpočtom treba určiť základ, počet percent a percentovú hodnotu.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Vypočítaj 20 % z 150.</p><p>20 % = 20/100 = 0,20</p><p>0,20 · 150 = <strong>30</strong></p></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

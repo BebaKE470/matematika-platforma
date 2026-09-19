@@ -54,11 +54,34 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z 1. ročníka poznáš absolútnu hodnotu |x−a| ako vzdialenosť čísla x od bodu a na číselnej osi. Z tohto celku už vieš riešiť lineárnu nerovnicu ekvivalentnými úpravami a zapísať riešenie ako interval.</p><p>Dnes tieto dve veci spojíme pri nerovniciach s absolútnou hodnotou.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "čítať |x−a| < r a |x−a| > r ako vzdialenosť na číselnej osi",
+          "prepísať nerovnicu s absolútnou hodnotou na dvojitú nerovnicu alebo dva samostatné prípady",
+          "zapísať riešenie ako interval"
+        ]
+      },
+      {
         "id": "distance",
         "type": "explain",
         "phase": "POCHOP",
         "title": "Absolútna hodnota ako vzdialenosť",
         "html": "<p>Z 1. ročníka poznáš: <strong>|x−a|</strong> je vzdialenosť čísla x od bodu a. Preto <strong>|x−a| &lt; r</strong> znamená „x je od a vzdialené menej ako r“ a <strong>|x−a| &gt; r</strong> znamená „x je od a vzdialené viac ako r“.</p>"
+      },
+      {
+        "id": "number-line",
+        "type": "info",
+        "phase": "VIZUALIZÁCIA",
+        "title": "Ako to vyzerá na číselnej osi?",
+        "html": "<div class=\"logic-visual\"><svg viewBox=\"0 0 560 140\" role=\"img\" aria-label=\"Číselná os s vyznačeným intervalom (1;5) okolo bodu 3\"><line x1=\"30\" y1=\"70\" x2=\"530\" y2=\"70\" stroke=\"#173d35\" stroke-width=\"2\"/><line x1=\"140\" y1=\"55\" x2=\"420\" y2=\"55\" stroke=\"#173d35\" stroke-width=\"6\" stroke-linecap=\"round\"/><circle cx=\"140\" cy=\"55\" r=\"7\" fill=\"#fff\" stroke=\"#173d35\" stroke-width=\"3\"/><circle cx=\"420\" cy=\"55\" r=\"7\" fill=\"#fff\" stroke=\"#173d35\" stroke-width=\"3\"/><circle cx=\"280\" cy=\"70\" r=\"5\" fill=\"#173d35\"/><text x=\"140\" y=\"100\" text-anchor=\"middle\" font-size=\"16\" fill=\"#173d35\">1</text><text x=\"280\" y=\"100\" text-anchor=\"middle\" font-size=\"16\" fill=\"#173d35\">3</text><text x=\"420\" y=\"100\" text-anchor=\"middle\" font-size=\"16\" fill=\"#173d35\">5</text><text x=\"280\" y=\"30\" text-anchor=\"middle\" font-size=\"15\" fill=\"#173d35\">|x−3| &lt; 2</text></svg></div><p>Prázdne krúžky pri 1 a 5 znamenajú, že tieto krajné body do riešenia nepatria (ostrá nerovnosť). Bodka pri 3 je stred, od ktorého meriame vzdialenosť.</p>"
       },
       {
         "id": "c1",

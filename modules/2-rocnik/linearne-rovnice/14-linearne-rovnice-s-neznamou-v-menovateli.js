@@ -49,6 +49,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z minulej hodiny už vieš riešiť lineárnu rovnicu ekvivalentnými úpravami a skontrolovať výsledok dosadením.</p><p>Z predchádzajúceho učiva tiež vieš, že <strong>delenie nulou nie je definované</strong>.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "určiť podmienku, pri ktorej je zlomkový výraz definovaný",
+          "riešiť lineárnu rovnicu s neznámou v menovateli",
+          "porovnať riešenie s podmienkou"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

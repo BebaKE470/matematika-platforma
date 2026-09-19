@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: "<p>Z predchádzajúcich hodín (88–91) už poznáš pojem funkcie, D(f)/H(f), graf funkcie a vieš rozhodnúť, či je funkcia párna alebo nepárna.</p><p>Vieš tiež porovnávať reálne čísla.</p><p>Dnes zistíme, ako sa funkčná hodnota mení, keď sa argument x zväčšuje.</p>",
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozhodnúť, či je funkcia rastúca alebo klesajúca',
+          'overiť monotónnosť porovnaním dvojice bodov',
+        ],
+      },
+      {
         id: 'plot',
         type: 'coordinatePlot',
         phase: 'POCHOP',

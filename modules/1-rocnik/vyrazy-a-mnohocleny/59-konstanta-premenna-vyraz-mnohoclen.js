@@ -63,6 +63,15 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozlíšiť konštantu, premennú, jednočlen a mnohočlen',
+          'pomenovať koeficient a člen mnohočlena',
+          'identifikovať tieto súčasti v danom výraze',
+        ],
+      },
+      {
         id: 'new-concept',
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
@@ -128,6 +137,22 @@ MathPlatform.registerModule({
         answer: 0,
         correct: 'Správne. Najprv x vynásobíme tromi (3x), potom pripočítame 5.',
         hint: 'Rozmysli si poradie operácií podľa slovného opisu — najprv násobenie, potom sčítanie.',
+      },
+      {
+        id: 'q-classify',
+        type: 'matrix',
+        phase: 'OVER',
+        skill: 'klasifikácia výrazov',
+        title: 'Konštanta, jednočlen, alebo mnohočlen?',
+        labels: ['Konštanta', 'Jednočlen', 'Mnohočlen'],
+        items: [
+          { text: '9', answer: 'Konštanta' },
+          { text: '−2x⁵', answer: 'Jednočlen' },
+          { text: '3x² + 7', answer: 'Mnohočlen' },
+          { text: '0,25', answer: 'Konštanta' },
+          { text: '8x', answer: 'Jednočlen' },
+          { text: 'x² − 5x + 4', answer: 'Mnohočlen' },
+        ],
       },
       {
         id: 'notebook',

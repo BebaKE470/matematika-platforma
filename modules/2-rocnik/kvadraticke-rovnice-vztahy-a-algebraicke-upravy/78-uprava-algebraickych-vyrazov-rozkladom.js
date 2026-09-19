@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na minulej hodine sme sa naučili rozložiť kvadratický trojčlen na súčin pomocou koreňov: ax²+bx+c=a(x−x₁)(x−x₂). Z 1. ročníka (Lomené výrazy) tiež vieme, že lomený výraz vieme krátiť spoločným činiteľom a treba určiť jeho definičný obor.</p><p>Dnes tieto dve zručnosti spojíme: rozklad na súčin použijeme na zjednodušenie lomeného výrazu.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'zjednodušiť lomený výraz s kvadratickým trojčlenom rozkladom na súčin a krátením',
+          'určiť definičný obor výrazu ešte pred krátením',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

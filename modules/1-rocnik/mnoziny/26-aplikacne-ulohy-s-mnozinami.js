@@ -50,6 +50,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Poznáme štyri operácie s množinami aj to, ako ich čítať vo Vennovom diagrame a kombinovať v jednom zápise.</p><p>Dnes ich použijeme na <strong>reálne situácie</strong> — napríklad na počítanie, koľko ľudí patrí aspoň do jednej z dvoch skupín.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "preložiť slovnú úlohu na jazyk množín",
+          "použiť vzorec |A∪B| = |A|+|B|−|A∩B| v praktickej situácii"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

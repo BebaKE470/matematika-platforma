@@ -53,6 +53,22 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulých dvoch hodín vieš, že <strong>sin α = protiľahlá/prepona</strong> a <strong>cos α = priľahlá/prepona</strong> — obe vždy obsahujú preponu.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'definovať tg α ako pomer protiľahlej a priľahlej odvesny',
+          'definovať cotg α ako prevrátenú hodnotu tg α',
+          'vypočítať tg α a cotg α z daných strán',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

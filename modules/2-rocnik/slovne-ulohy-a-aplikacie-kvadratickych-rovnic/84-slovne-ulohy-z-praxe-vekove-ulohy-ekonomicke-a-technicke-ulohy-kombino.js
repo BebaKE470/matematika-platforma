@@ -52,6 +52,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na predchádzajúcich hodinách sme sa naučili zostaviť kvadratickú rovnicu zo slovného zadania (napr. o pohybe alebo o spoločnej práci) a vybrať z riešení to, ktoré má reálny zmysel.</p><p>Dnes rovnaký postup použijeme na vekové a ekonomické úlohy — a uvidíme, že niekedy majú zmysel OBE matematické riešenia.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'zostaviť a vyriešiť kvadratickú rovnicu z vekovej aj ekonomickej úlohy',
+          'rozpoznať, kedy má úloha jedno a kedy dve zmysluplné riešenia',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

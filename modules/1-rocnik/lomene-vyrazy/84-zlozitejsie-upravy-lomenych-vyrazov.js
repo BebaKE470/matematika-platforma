@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Doteraz sme sa v tejto téme naučili určiť definičný obor, krátiť, sčítať, odčítať, násobiť a deliť lomené výrazy — vždy s menovateľmi, ktoré sme priamo videli.</p><p>Z predchádzajúcej témy vieš rozložiť výraz na súčin, napríklad pomocou vzorca pre rozdiel druhých mocnín a²−b² = (a−b)(a+b).</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozpoznať, kedy treba menovateľ najprv rozložiť na súčin',
+          'zjednodušiť zložitejší lomený výraz krok po kroku',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

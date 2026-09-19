@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulej hodiny poznáš <strong>sínusovú vetu</strong>: a/sin α = b/sin β = c/sin γ, a vieš ju použiť na výpočet chýbajúcej strany v ľubovoľnom trojuholníku.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'matematizovať reálnu situáciu pomocou sínusovej vety',
+          'vyriešiť aplikačnú úlohu (napr. meranie vzdialenosti cez prekážku)',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

@@ -51,6 +51,14 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'riešiť kvadratické nerovnice aj vtedy, keď rovnica nemá reálne korene (D<0)',
+          'rozlíšiť, kedy je riešením celé R a kedy nerovnica nemá žiadne riešenie',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

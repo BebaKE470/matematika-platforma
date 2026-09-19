@@ -55,6 +55,18 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcej hodiny poznáš vedecký zápis čísla a · 10ⁿ (1 ≤ a &lt; 10) a z hodiny 48 prevody jednotiek pomocou mocnín.</p><p>Dnes to precvičíme na reálnych technických a fyzikálnych hodnotách a naučíme sa porovnávať čísla vo vedeckom zápise a odhadovať rád veľkosti výsledku.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: ['používať vedecký zápis pri reálnych technických a fyzikálnych veličinách', 'porovnať dve veličiny zapísané vo vedeckom zápise', 'odhadnúť rád veľkosti výsledku bez presného výpočtu'],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

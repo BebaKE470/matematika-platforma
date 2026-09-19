@@ -54,6 +54,22 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na minulej hodine sme sa naučili riešiť <strong>rýdzo kvadratickú rovnicu</strong> ax² + c = 0 — izoláciou x² a odmocnením, s dvomi riešeniami ±.</p><p>Z 1. ročníka už tiež vieš <strong>roznásobiť zátvorku</strong> a spojiť podobné členy (distributívny zákon a(b+c)=ab+ac).</p><p>Dnes tieto dve zručnosti spojíme: niektoré rovnice bez lineárneho člena na prvý pohľad tak nevyzerajú, kým ich neupravíme.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'upraviť rovnicu so zátvorkami/členmi na oboch stranách do tvaru ax² + c = 0',
+          'rozpoznať, že ide o rýdzo kvadratickú rovnicu, až po úprave',
+          'vyriešiť takúto rovnicu',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

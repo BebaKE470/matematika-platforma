@@ -54,6 +54,22 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúceho celku už poznáš pojem funkcie: pre každé x z definičného oboru D(f) priradí funkcia práve jednu hodnotu f(x), a všetky tieto hodnoty tvoria obor hodnôt H(f). Graf funkcie je množina bodov [x; f(x)] v súradnicovej sústave.</p><p>Z 1. ročníka vieš počítať s mocninami s prirodzeným exponentom, napríklad x² = x·x.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'definovať kvadratickú funkciu f(x)=ax²+bx+c (a≠0)',
+          'rozpoznať, či je parabola otvorená nahor alebo nadol podľa znamienka a',
+          'zostaviť tabuľku hodnôt a načrtnúť graf',
+        ],
+      },
+      {
         id: 'plot',
         type: 'coordinatePlot',
         phase: 'POCHOP',
@@ -96,6 +112,29 @@ MathPlatform.registerModule({
         title: 'Orientácia paraboly',
         html: '<p>Ak je koeficient <strong>a &gt; 0</strong>, parabola je otvorená <strong>nahor</strong> (ako miska).</p><p>Ak je <strong>a &lt; 0</strong>, parabola je otvorená <strong>nadol</strong> (ako strieška).</p>',
         remember: 'a>0: parabola nahor. a<0: parabola nadol.',
+      },
+      {
+        id: 'sign-orientation-visual',
+        type: 'coordinatePlot',
+        phase: 'SÚVISLOSTI',
+        title: 'Znamienko a a tvar paraboly',
+        html: '<p>Porovnaj dve paraboly: <strong>f(x) = x² − 1</strong> (a = 1, kladné) a <strong>g(x) = −x² + 3</strong> (a = −1, záporné).</p>',
+        xMin: -2.2, xMax: 2.2, yMin: -3, yMax: 5,
+        curves: [
+          { fn: x => x * x - 1, label: 'f(x)=x²−1' },
+          { fn: x => -x * x + 3, color: '#66766f', label: 'g(x)=−x²+3' },
+        ],
+        note: 'f má najnižší bod (minimum) v [0; −1] a otvára sa nahor. g má najvyšší bod (maximum) v [0; 3] a otvára sa nadol.',
+        continueLabel: 'Pokračovať',
+      },
+      {
+        id: 'sign-orientation-explain',
+        type: 'selfWrite',
+        phase: 'ARGUMENTUJ',
+        skill: 'súvislosť znamienka a orientácie',
+        title: 'Prečo to tak je?',
+        prompt: 'Pozri sa na oba grafy z predošlej obrazovky. Vysvetli vlastnými slovami, prečo znamienko koeficientu a rozhoduje, či je parabola otvorená nahor alebo nadol.',
+        model: 'Pri kladnom a (napr. a=1 vo f(x)=x²−1) sú hodnoty ax² pre x≠0 vždy kladné, takže funkcia rastie smerom od stredu na obe strany — parabola je otvorená nahor. Pri zápornom a (napr. a=−1 v g(x)=−x²+3) sú hodnoty ax² vždy záporné, takže funkcia klesá smerom od stredu na obe strany — parabola je otvorená nadol.',
       },
       {
         id: 'q-orientation',

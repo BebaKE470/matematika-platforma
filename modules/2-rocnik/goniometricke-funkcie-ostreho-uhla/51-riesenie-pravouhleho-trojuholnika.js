@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulých troch hodín poznáš všetky štyri goniometrické funkcie ostrého uhla: <strong>sin, cos, tg, cotg</strong>. Z minulého celku vieš aj <strong>Pytagorovu vetu</strong> a to, že súčet ostrých uhlov v pravouhlom trojuholníku je 90°.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'systematicky vybrať vhodný vzťah podľa zadaných údajov',
+          'z dvoch daných údajov vypočítať všetky zvyšné strany a uhly',
+        ],
+      },
+      {
         id: 'intro',
         type: 'info',
         phase: 'POCHOP',

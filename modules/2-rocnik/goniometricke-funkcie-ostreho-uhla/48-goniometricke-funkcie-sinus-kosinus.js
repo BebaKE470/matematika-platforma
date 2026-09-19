@@ -54,6 +54,22 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulej témy (Pravouhlý trojuholník a jeho vlastnosti) už poznáš pojmy <strong>odvesna</strong> a <strong>prepona</strong> — prepona je najdlhšia strana, oproti pravému uhlu.</p><p>Vieš tiež, čo je to <strong>pomer</strong> dvoch čísel (napr. pomer strán podobných trojuholníkov je vždy rovnaký).</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozlíšiť protiľahlú a priľahlú odvesnu vzhľadom na daný ostrý uhol',
+          'definovať sin α a cos α ako pomer strán',
+          'vypočítať sin α a cos α z dĺžok strán trojuholníka',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

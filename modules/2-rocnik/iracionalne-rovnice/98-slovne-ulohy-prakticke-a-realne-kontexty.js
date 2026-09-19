@@ -52,6 +52,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulej hodiny už vieš zostaviť a vyriešiť iracionálnu rovnicu z geometrického a fyzikálneho zadania.</p><p>Dnes rovnaký postup použijeme na ďalšie praktické vzorce — dohľadnosť na obzor a elektrický prúd.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'dosadiť do praktického vzorca a vyriešiť iracionálnu rovnicu pre neznámu veličinu',
+          'overiť, že riešenie dáva v danom kontexte zmysel',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

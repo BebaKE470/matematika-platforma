@@ -49,6 +49,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z minulej hodiny už vieš, že sčítacia, dosadzovacia aj porovnávacia metóda vedú pri sústave dvoch rovníc k rovnakému riešeniu.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vybrať pre daný tvar sústavy najvýhodnejšiu metódu",
+          "zdôvodniť voľbu metódy"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

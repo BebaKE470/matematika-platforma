@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Už vieš, že diskriminant D rozhoduje o počte riešení kvadratickej rovnice (D&gt;0 dve, D=0 jedno, D&lt;0 žiadne), a vieš riešiť lineárnu nerovnicu.</p><p>Dnes tieto dve zručnosti spojíme pri rovnici, ktorá namiesto konkrétneho čísla obsahuje neznámy <strong>parameter</strong>.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vyjadriť diskriminant rovnice s parametrom',
+          'určiť, pre ktoré hodnoty parametra má rovnica dve, jedno alebo žiadne riešenie',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

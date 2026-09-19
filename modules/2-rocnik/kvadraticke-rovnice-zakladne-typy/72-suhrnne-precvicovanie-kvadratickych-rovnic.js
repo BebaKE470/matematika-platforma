@@ -51,6 +51,14 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozpoznať typ kvadratickej rovnice (rýdzo, bez absolútneho člena, úplná)',
+          'zvoliť a použiť vhodný postup riešenia',
+        ],
+      },
+      {
         id: 'intro',
         type: 'info',
         phase: 'POCHOP',

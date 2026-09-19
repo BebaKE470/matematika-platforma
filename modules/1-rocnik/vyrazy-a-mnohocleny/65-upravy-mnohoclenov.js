@@ -60,6 +60,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'zjednodušiť výraz kombinujúci všetky štyri operácie s mnohočlenmi',
+          'pripraviť sa na previerku z celej témy',
+        ],
+      },
+      {
         id: 'q-combo1',
         type: 'choice',
         phase: 'PRECVIČ',

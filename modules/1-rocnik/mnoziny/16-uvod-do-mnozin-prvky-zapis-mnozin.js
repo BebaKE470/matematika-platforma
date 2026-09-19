@@ -51,6 +51,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Na predchádzajúcom celku sme sa naučili pracovať s výrokmi a presne rozhodovať, či niečo platí, alebo neplatí — táto presnosť sa nám zíde aj teraz.</p><p>Zo základnej školy už vieš zoskupovať objekty podľa spoločnej vlastnosti — napríklad „párne čísla“ alebo „hlavné mestá Európy“. Dnes si takéto zoskupenie pomenujeme presným matematickým slovom a naučíme sa ho zapisovať.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vysvetliť pojem množina a prvok množiny na konkrétnych príkladoch",
+          "zapísať konečnú množinu vymenovaním prvkov",
+          "správne používať symboly ∈ a ∉"
+        ]
+      },
+      {
         "id": "idea",
         "type": "info",
         "phase": "OBJAVUJ",

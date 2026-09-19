@@ -49,6 +49,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Zo ZŠ vieš riešiť jednoduché lineárne rovnice (napr. 2x+3=9) a overiť riešenie dosadením.</p><p>Vieš tiež, že rovnicu môžeš upravovať — sčítať, odčítať, násobiť, deliť obe strany rovnakým číslom.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "rozlíšiť ekvivalentnú a neekvivalentnú úpravu rovnice",
+          "riešiť lineárnu rovnicu ekvivalentnými úpravami",
+          "skontrolovať riešenie dosadením"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",
@@ -141,6 +157,15 @@ MathPlatform.registerModule({
         "title": "Ceruzka má posledné slovo",
         "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor alebo vyrieš podobný príklad v zošite bez aplikácie. Výsledok skontroluj iným spôsobom, ak je to možné.</p>",
         "model": "<strong>KONTROLA:</strong> Zápis má byť čitateľný, s medzikrokmi, jednotkami alebo podmienkami podľa typu úlohy."
+      },
+      {
+        "id": "equivalent-or-not",
+        "type": "selfWrite",
+        "phase": "SÚVISLOSTI",
+        "skill": "ekvivalentné úpravy",
+        "title": "Ekvivalentná, alebo nie?",
+        "promptHtml": "Porovnaj dve úpravy:<br><strong>A)</strong> z rovnice x + 4 = 9 odčítaním 4 na oboch stranách dostaneme x = 5.<br><strong>B)</strong> z rovnice x = 3 umocnením oboch strán na druhú dostaneme x² = 9, ktorá má okrem x=3 aj riešenie x=−3.<br>Vysvetli, ktorá úprava je ekvivalentná a ktorá nie, a prečo.",
+        "model": "Úprava A je ekvivalentná — odčítanie rovnakého čísla na oboch stranách nemení množinu riešení, takže x+4=9 a x=5 majú presne tie isté riešenia. Úprava B nie je ekvivalentná — umocnenie oboch strán môže pridať tzv. cudzí koreň (x=−3), ktorý pôvodná rovnica x=3 nemala. Preto po umocnení musíme každé riešenie overiť dosadením do pôvodnej rovnice."
       },
       {
         "id": "reflection",

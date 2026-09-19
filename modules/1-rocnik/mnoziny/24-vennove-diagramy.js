@@ -49,6 +49,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Doteraz sme sa naučili štyri operácie s množinami: zjednotenie A ∪ B, prienik A ∩ B, rozdiel A − B a doplnok A′.</p><p>Dnes si všetky štyri prepojíme s <strong>Vennovým diagramom</strong> — obrázkom, ktorý ich zobrazí naraz.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "prečítať vo Vennovom diagrame zjednotenie, prienik, rozdiel a doplnok",
+          "prepojiť obrázok so symbolickým zápisom"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",
@@ -153,6 +168,15 @@ MathPlatform.registerModule({
         "title": "Diagram ako preklad",
         "prompt": "Vysvetli, ako ti Vennov diagram pomáha rozlíšiť zjednotenie a prienik.",
         "model": "Pri zjednotení sledujem celé oblasti oboch množín; pri prieniku iba ich spoločný prekryv."
+      },
+      {
+        "id": "vsetky-operacie",
+        "type": "selfWrite",
+        "phase": "ZHRNUTIE",
+        "skill": "Matematická komunikácia",
+        "title": "Všetky štyri operácie na jednom príklade",
+        "promptHtml": "<span class=\"mini-label\">ÚLOHA</span><br>Máme univerzálnu množinu U = {1, 2, 3, …, 10}, množinu prvočísel do 10 A = {2, 3, 5, 7} a množinu B = {1, 2, 3, 4, 5}.<br><br>Nakresli si k tomu Vennov diagram a vlastnými slovami vysvetli, prečo platí:<br>a) A ∪ B = {1, 2, 3, 4, 5, 7}<br>b) A ∩ B = {2, 3, 5}<br>c) A − B = {7}<br>d) doplnok A′ v U = {1, 4, 6, 8, 9, 10}",
+        "model": "<strong>MOŽNÁ FORMULÁCIA:</strong> a) Zjednotenie obsahuje všetko, čo je aspoň v jednej z množín — preto tam chýba iba 6, 8, 9, 10, ktoré nie sú ani v A, ani v B. b) Prienik obsahuje iba prvočísla z A, ktoré sú súčasne aj v B (2, 3, 5 sú ≤5, ale 7 už nie). c) Rozdiel A−B necháva z A iba to, čo v B chýba — jediné také číslo je 7. d) Doplnok A′ berie všetko z U okrem prvočísel v A."
       },
       {
         "id": "reflection",

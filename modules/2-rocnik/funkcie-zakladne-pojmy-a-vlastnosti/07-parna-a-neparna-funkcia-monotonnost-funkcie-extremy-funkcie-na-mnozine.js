@@ -51,6 +51,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z minulej hodiny už vieš čítať <strong>D(f)</strong> a <strong>H(f)</strong> z grafu funkcie.</p><p>Zo ZŠ a 1. ročníka poznáš aj pojem <strong>súmernosti</strong> — útvar môže byť súmerný podľa priamky alebo podľa bodu.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "rozlíšiť párnu a nepárnu funkciu",
+          "rozumieť monotónnosti, extrémom, prostosti a ohraničenosti"
+        ]
+      },
+      {
         "id": "overview",
         "type": "info",
         "phase": "MAPA HODINY",
@@ -64,6 +79,20 @@ MathPlatform.registerModule({
         "title": "Párna a nepárna funkcia",
         "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Párna funkcia</div><p class=\"term-rule\">Graf je súmerný podľa osi y. Ak sú x aj −x v D(f), platí f(−x)=f(x).</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nepárna funkcia</div><p class=\"term-rule\">Graf je súmerný podľa začiatku súradnicovej sústavy. Platí f(−x)=−f(x).</p></div></div><p>Nie každá funkcia musí byť párna alebo nepárna.</p>",
         "remember": "najprv sleduj symetriu grafu; potom ju vieš zapísať vzťahom."
+      },
+      {
+        "id": "even-visual",
+        "type": "coordinatePlot",
+        "phase": "VIZUALIZÁCIA",
+        "title": "Ako to vyzerá v grafe?",
+        "html": "<p>Graf párnej funkcie f(x) = x² je súmerný podľa osi y. Graf nepárnej funkcie g(x) = x³ je súmerný podľa začiatku súradnicovej sústavy [0;0].</p>",
+        "xMin": -2, "xMax": 2, "yMin": -9, "yMax": 9, "xStep": 1, "yStep": 3,
+        "curves": [
+          { "fn": x => x * x, "label": "f(x)=x²" },
+          { "fn": x => x * x * x, "color": "#66766f", "label": "g(x)=x³" }
+        ],
+        "note": "Skús si predstaviť, že graf preklopíš podľa osi y (f) alebo otočíš o 180° okolo bodu [0;0] (g) — dostaneš späť ten istý graf.",
+        "continueLabel": "Pokračovať"
       },
       {
         "id": "evencheck",

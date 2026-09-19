@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na predchádzajúcej hodine sme sa naučili násobiť lomené výrazy — čitateľ s čitateľom, menovateľ s menovateľom, a kráti sa najlepšie pred násobením.</p><p>Zo základnej školy vieš, že delenie zlomkom znamená násobenie jeho prevráteným tvarom, napríklad 2/3 : 4/5 = 2/3 · 5/4.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vydeliť dva lomené výrazy prevodom na násobenie',
+          'skrátiť výsledok, ak je to možné',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

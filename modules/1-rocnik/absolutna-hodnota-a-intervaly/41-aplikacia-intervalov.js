@@ -56,6 +56,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "opakovanie",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Už vieš zapísať interval, rozlíšiť jeho krajné body a určiť prienik aj zjednotenie dvoch intervalov.</p><p>Dnes tieto zručnosti použijeme na reálne situácie — napríklad povolené rozmery alebo teploty.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "preložiť praktickú podmienku na interval a naopak",
+          "rozhodnúť, či nameraná hodnota patrí do prípustného rozsahu",
+          "spojiť dve súčasné podmienky pomocou prieniku"
+        ]
+      },
+      {
         "id": "context",
         "type": "info",
         "phase": "POCHOP",

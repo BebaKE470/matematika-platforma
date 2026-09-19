@@ -52,6 +52,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Už vieme vyriešiť ľubovoľnú kvadratickú rovnicu pomocou diskriminantu a nájsť jej korene.</p><p>Dnes sa naučíme opačný smer: zo slovného zadania zostaviť samotnú rovnicu — a hlavne overiť, či matematické riešenie dáva zmysel aj v reálnej situácii.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'zostaviť kvadratickú rovnicu z jednoduchého slovného zadania',
+          'overiť, ktoré z matematických riešení má zmysel v kontexte úlohy',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

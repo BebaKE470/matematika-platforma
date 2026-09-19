@@ -54,6 +54,10 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro"
+      },
+      {
         "id": "after",
         "type": "explain",
         "phase": "POCHOP",

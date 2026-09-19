@@ -54,6 +54,22 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulých hodín poznáš <strong>sínusovú vetu</strong> a z Pravouhlého trojuholníka aj <strong>Pytagorovu vetu</strong> a²=b²+c².</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'sformulovať kosínusovú vetu a²=b²+c²−2bc·cos α',
+          'použiť ju, keď poznáme dve strany a uhol medzi nimi',
+          'vidieť súvis s Pytagorovou vetou',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

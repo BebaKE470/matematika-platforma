@@ -54,6 +54,22 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na predchádzajúcej hodine si sa naučil/a presne dosadzovať čísla za premenné do výrazu, vrátane záporných čísel so zátvorkou.</p><p>Zo základnej školy poznáš jednoduché fyzikálne a geometrické vzorce, napríklad dráhu s = v·t.</p><p>Dnes sa naučíme z jedného vzorca vyjadriť inú premennú, než akú sme si zvykli počítať.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vyjadriť zo vzorca inú premennú',
+          'upraviť vzorec so zátvorkou alebo súčinom premenných',
+          'použiť upravený vzorec na výpočet',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',
@@ -116,6 +132,18 @@ MathPlatform.registerModule({
         answer: 1,
         correct: 'Správne. Najprv odčítame 2a z oboch strán: o − 2a = 2b, potom vydelíme dvomi: b = (o−2a):2.',
         hint: 'Postupuj po krokoch: najprv osamostatni člen s b (odčítaním 2a), potom ho vydeľ jeho koeficientom.',
+      },
+      {
+        id: 'maturita-samostatne',
+        type: 'taskList',
+        phase: 'PRECVIČ',
+        title: 'Skús samostatne: vyjadri neznámu',
+        html: '<p>Presne takéto úlohy — vyjadriť neznámu veličinu zo vzorca — sa objavujú aj pri maturite z matematiky. Skús každý vzorec upraviť sám/sama, až potom si over riešenie.</p>',
+        items: [
+          { text: 'Z Ohmovho zákona U = I · R vyjadri odpor R.', answer: '<p>Vydelíme obe strany prúdom I: <strong>R = U : I</strong>.</p>' },
+          { text: 'Obsah lichobežníka je S = ((a + b) : 2) · v. Vyjadri z tohto vzorca výšku v.', answer: '<p>Vynásobíme obe strany dvomi: 2S = (a + b)·v. Vydelíme súčtom (a+b): <strong>v = 2S : (a + b)</strong>.</p>' },
+        ],
+        note: 'Tieto úlohy si iba skontroluješ sám/sama — netreba ich odovzdávať.',
       },
       {
         id: 'q-eval',

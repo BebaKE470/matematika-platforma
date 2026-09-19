@@ -53,6 +53,18 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcej hodiny poznáš mocninu s racionálnym mocniteľom a^(m/n) = ⁿ√(aᵐ).</p><p>Z hodín 45–46 poznáš pravidlá aᵐ·aⁿ = aᵐ⁺ⁿ, aᵐ:aⁿ = aᵐ⁻ⁿ, (aᵐ)ⁿ = aᵐⁿ.</p><p>Dnes ukážeme, že tie isté pravidlá platia aj vtedy, keď je exponent zlomok.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: ['používať pravidlá pre mocniny aj vtedy, keď sú exponenty zlomky', 'zjednodušiť výraz s mocninami rovnakého základu a zlomkovými exponentmi'],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

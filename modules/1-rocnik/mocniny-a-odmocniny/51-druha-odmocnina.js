@@ -55,6 +55,18 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Zo základnej školy poznáš druhú mocninu čísla a mal/a si prvý neformálny kontakt s odmocninou, napríklad pri Pytagorovej vete.</p><p>Z 1. ročníka poznáš racionálne, iracionálne a reálne čísla a pravidlá pre mocniny (hodiny 44–50).</p><p>Dnes si druhú odmocninu presne zadefinujeme.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: ['vysvetliť druhú odmocninu √a ako nezáporné číslo, ktorého druhá mocnina sa rovná a', 'vypočítať druhú odmocninu z presného štvorca', 'odhadnúť druhú odmocninu z čísla, ktoré nie je presný štvorec'],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

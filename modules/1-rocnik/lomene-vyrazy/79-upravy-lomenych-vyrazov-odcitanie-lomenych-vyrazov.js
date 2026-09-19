@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na predchádzajúcej hodine sme sčítavali lomené výrazy: pri rovnakom menovateli sme sčítali iba čitatele, pri rôznom sme previedli oba výrazy na spoločný menovateľ (súčin oboch menovateľov).</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'odčítať lomené výrazy s rovnakým aj rôznym menovateľom',
+          'dať pozor na znamienko pri zložitejšom čitateli',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

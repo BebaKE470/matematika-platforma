@@ -63,6 +63,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vydeliť mnohočlen jednočlenom',
+          'overiť výsledok spätným násobením',
+        ],
+      },
+      {
         id: 'rule-divide',
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',

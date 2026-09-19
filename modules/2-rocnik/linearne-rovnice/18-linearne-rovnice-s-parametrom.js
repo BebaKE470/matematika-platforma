@@ -49,6 +49,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Už vieš riešiť lineárnu rovnicu ekvivalentnými úpravami vrátane delenia oboch strán rovnakým číslom.</p><p>Vieš tiež, že <strong>delenie nulou nie je definované</strong>.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "rozlíšiť parameter od neznámej",
+          "riešiť rovnicu s parametrom oddelene pre prípad, keď je koeficient nulový a nenulový"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

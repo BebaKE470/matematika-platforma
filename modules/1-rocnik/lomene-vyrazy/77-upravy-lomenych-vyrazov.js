@@ -55,6 +55,21 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na predchádzajúcej téme sme sa naučili rozložiť mnohočlen na súčin — vyňatím pred zátvorku aj pomocou vzorcov (napríklad rozdiel druhých mocnín a²−b² = (a−b)(a+b)).</p><p>Zo základnej školy vieš krátiť číselné zlomky: napríklad 6/9 skrátime na 2/3, lebo 6 = 2·3 a 9 = 3·3, spoločný činiteľ 3 vykrátime.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'skrátiť lomený výraz rozkladom čitateľa a menovateľa na súčin',
+          'určiť definičný obor lomeného výrazu',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',
@@ -163,6 +178,22 @@ MathPlatform.registerModule({
         answer: 0,
         correct: 'Správne. (x²−49)/(x−7) = (x−7)(x+7)/(x−7) = x+7 (pre x≠7).',
         hint: 'Rozlož čitateľa ako rozdiel druhých mocnín a vykráť spoločný činiteľ.',
+      },
+      {
+        id: 'domain-quadratic',
+        type: 'choice',
+        phase: 'OVER',
+        skill: 'definičný obor',
+        question: 'Pre ktoré hodnoty x NIE JE definovaný výraz 12/(x²−36)?',
+        options: [
+          'x = 6 a x = −6',
+          'x = 36 a x = −36',
+          'iba x = 6',
+          'x = 0',
+        ],
+        answer: 0,
+        correct: 'Správne. x²−36 = 0 znamená x² = 36, teda x = 6 alebo x = −6 — menovateľ je nulový pri OBOCH hodnotách, nielen pri jednej.',
+        hint: 'Menovateľ x²−36 rozlož ako rozdiel druhých mocnín (x−6)(x+6) a zisti, kedy je súčin nulový.',
       },
       {
         id: 'reflection',

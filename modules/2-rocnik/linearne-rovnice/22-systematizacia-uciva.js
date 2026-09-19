@@ -49,6 +49,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>V tomto celku si sa naučil/a riešiť bežnú lineárnu rovnicu, rovnicu s neznámou v menovateli, rovnicu s absolútnou hodnotou, rovnicu s parametrom aj sústavu dvoch rovníc.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "rozpoznať, o ktorý typ rovnice ide",
+          "zvoliť vhodnú metódu a skontrolovať podmienky a výsledok"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

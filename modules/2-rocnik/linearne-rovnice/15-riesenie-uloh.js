@@ -50,6 +50,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Už vieš riešiť lineárne rovnice ekvivalentnými úpravami vrátane rovníc s neznámou v menovateli.</p><p>Zo ZŠ vieš aj násobiť zátvorku číslom a zjednodušovať výraz.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "riešiť rovnicu so zátvorkami na oboch stranách",
+          "rozpoznať, kedy má rovnica nekonečne veľa riešení"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

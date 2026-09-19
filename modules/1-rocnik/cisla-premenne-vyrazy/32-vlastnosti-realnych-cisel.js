@@ -49,6 +49,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Sčítanie, odčítanie, násobenie aj delenie reálnych čísel už bezpečne ovládaš z predchádzajúcich hodín a zo základnej školy.</p><p>Dnes pomenujeme pravidlá, podľa ktorých smieme poradie alebo zoskupenie čísel vo výpočte meniť – a využijeme ich na rýchlejšie počítanie.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "pomenovať komutatívny, asociatívny a distributívny zákon",
+          "rozpoznať, ktorý zákon je použitý v danom zápise",
+          "použiť tieto zákony na rýchlejší výpočet"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",
@@ -61,7 +77,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Komutatívnosť</div><p class=\"term-rule\">Mení poradie.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Asociatívnosť</div><p class=\"term-rule\">Mení zoskupenie.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Distributívnosť</div><p class=\"term-rule\">Rozdeľuje násobenie cez súčet alebo rozdiel.</p></div></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Komutatívnosť</div><p class=\"term-rule\">Mení poradie.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Asociatívnosť</div><p class=\"term-rule\">Mení zoskupenie.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Distributívnosť</div><p class=\"term-rule\">Rozdeľuje násobenie cez súčet alebo rozdiel.</p></div></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Komutatívnosť: 7 + 9 = 9 + 7</p><p>Asociatívnosť: (2 + 3) + 4 = 2 + (3 + 4)</p><p>Distributívnosť: 3 · (10 + 2) = 3 · 10 + 3 · 2</p></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

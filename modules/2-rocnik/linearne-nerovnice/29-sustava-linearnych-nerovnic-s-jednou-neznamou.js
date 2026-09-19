@@ -54,6 +54,22 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Už vieš vyriešiť jednu lineárnu nerovnicu a zapísať jej riešenie ako interval. Z množín (1. ročník) poznáš pojem <strong>prienik</strong> — spoločnú časť dvoch množín.</p><p>Dnes tieto dve veci spojíme: vyriešime dve nerovnice naraz.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vyriešiť dve lineárne nerovnice zvlášť",
+          "nájsť prienik ich riešení na číselnej osi",
+          "zapísať výsledok ako jeden interval"
+        ]
+      },
+      {
         "id": "intersection",
         "type": "explain",
         "phase": "POCHOP",

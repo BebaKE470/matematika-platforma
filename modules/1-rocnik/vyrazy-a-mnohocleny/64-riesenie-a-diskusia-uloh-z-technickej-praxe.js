@@ -62,6 +62,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'zostaviť výraz pre obsah/obvod útvaru s premennými rozmermi',
+          'interpretovať výsledný výraz v reálnom (technickom) kontexte',
+        ],
+      },
+      {
         id: 'q-area',
         type: 'choice',
         phase: 'OVER SI',

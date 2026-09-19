@@ -49,6 +49,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Už poznáš prirodzené čísla N, celé čísla Z a vieš pracovať so zlomkami aj desatinnými číslami.</p><p>Dnes tieto skupiny čísel usporiadame do jedného celku a pridáme čísla, ktoré sa zlomkom vôbec zapísať nedajú.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "rozlíšiť racionálne a iracionálne číslo podľa zápisu",
+          "zaradiť dané číslo medzi N, Z, Q, Ir alebo R",
+          "vedieť, že N ⊂ Z ⊂ Q ⊂ R a iracionálne čísla dopĺňajú R"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",
@@ -61,7 +77,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Racionálne číslo</div><p class=\"term-rule\">Možno ho zapísať ako zlomok celých čísel s nenulovým menovateľom.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Iracionálne číslo</div><p class=\"term-rule\">Takto ho zapísať nemožno.</p></div></div><p>Obe skupiny patria medzi reálne čísla.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Racionálne číslo</div><p class=\"term-rule\">Možno ho zapísať ako zlomok celých čísel s nenulovým menovateľom.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Iracionálne číslo</div><p class=\"term-rule\">Takto ho zapísať nemožno.</p></div></div><p>Obe skupiny patria medzi reálne čísla.</p><div class=\"formula\">N ⊆ Z ⊆ Q ⊆ R<span class=\"formula-note\">Každé prirodzené číslo je aj celé, každé celé je aj racionálne. Iracionálne čísla (Ir) do Q nepatria, ale spolu s Q dopĺňajú celú množinu R.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>0,75 = 3/4 (končí sa) → racionálne.</p><p>0,333… = 1/3 (opakuje sa) → racionálne.</p><p>1,41421356… (nekončí sa a neopakuje sa) → iracionálne, je to √2.</p></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",
@@ -109,6 +125,22 @@ MathPlatform.registerModule({
         "answer": 0,
         "correct": "Periodický desatinný rozvoj je racionálny.",
         "hint": "Skús náčrt, odhad alebo spätnú kontrolu."
+      },
+      {
+        "id": "cisla-zaradenie",
+        "type": "matrix",
+        "phase": "SÚVISLOSTI",
+        "skill": "číselné obory",
+        "title": "Zaraď každé číslo do jeho vlastnej skupiny",
+        "labels": ["Prirodzené číslo", "Celé záporné číslo", "Racionálne, nie celé", "Iracionálne číslo"],
+        "items": [
+          { "text": "8", "answer": "Prirodzené číslo" },
+          { "text": "−5", "answer": "Celé záporné číslo" },
+          { "text": "0,4", "answer": "Racionálne, nie celé" },
+          { "text": "5/8", "answer": "Racionálne, nie celé" },
+          { "text": "√5", "answer": "Iracionálne číslo" },
+          { "text": "π", "answer": "Iracionálne číslo" }
+        ]
       },
       {
         "id": "error",

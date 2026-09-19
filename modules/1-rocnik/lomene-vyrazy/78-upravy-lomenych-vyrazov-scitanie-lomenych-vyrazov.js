@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na predchádzajúcej hodine sme sa naučili určiť definičný obor lomeného výrazu a krátiť ho rozkladom čitateľa aj menovateľa na súčin.</p><p>Zo základnej školy vieš sčítať číselné zlomky s rôznym menovateľom — najprv ich prevedieš na spoločný menovateľ (napríklad 1/2 + 1/3 = 3/6 + 2/6 = 5/6).</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'sčítať lomené výrazy s rovnakým menovateľom',
+          'nájsť spoločný menovateľ a sčítať lomené výrazy s rôznym menovateľom',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

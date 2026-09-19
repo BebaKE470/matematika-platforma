@@ -49,6 +49,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Poradie počtových operácií (najprv zátvorky a mocniny, potom násobenie a delenie, nakoniec sčítanie a odčítanie) a prácu so zápornými číslami už poznáš.</p><p>Dnes si toto poradie precvičíme na zložitejších výrazoch a naučíme sa výsledok vopred odhadnúť.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "dodržať správne poradie operácií vo výraze",
+          "počítať so zápornými a desatinnými číslami",
+          "urobiť rozumný odhad výsledku pred presným výpočtom"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",
@@ -61,7 +77,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Pri reálnych číslach platí poradie operácií; odhad pomáha zachytiť chybu znamienka alebo desatinnej čiarky.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<p>Pri reálnych číslach platí poradie operácií; odhad pomáha zachytiť chybu znamienka alebo desatinnej čiarky.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Vypočítaj 5 + 3 · (−2).</p><p>Najprv násobenie: 3 · (−2) = −6</p><p>Potom sčítanie: 5 + (−6) = <strong>−1</strong></p></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

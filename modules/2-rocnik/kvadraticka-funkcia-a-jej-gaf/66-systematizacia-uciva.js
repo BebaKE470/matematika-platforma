@@ -50,6 +50,14 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'zopakovať definíciu, orientáciu, vrchol a vrcholový tvar kvadratickej funkcie',
+          'precvičiť kombinované úlohy pred písomnou prácou',
+        ],
+      },
+      {
         id: 'intro',
         type: 'info',
         phase: 'POCHOP',

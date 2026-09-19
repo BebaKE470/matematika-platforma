@@ -50,6 +50,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z hodín 6 a 7 už poznáš pojmy <strong>D(f), H(f), párnosť/nepárnosť, monotónnosť, extrémy, prostosť</strong> a <strong>ohraničenosť</strong>.</p><p>Dnes ich všetky použiješ naraz — na jednom grafe.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "systematicky určiť vlastnosti funkcie z grafu",
+          "zdôvodniť prostosť alebo neprostosť a monotónnosť"
+        ]
+      },
+      {
         "id": "graph",
         "type": "info",
         "phase": "ANALÝZA GRAFU",

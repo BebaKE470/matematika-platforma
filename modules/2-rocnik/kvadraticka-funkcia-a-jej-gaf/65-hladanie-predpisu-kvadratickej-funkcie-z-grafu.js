@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulých hodín vieš, že kvadratická funkcia má predpis f(x)=ax²+bx+c a jej vrchol V[x_v; y_v] vieme vypočítať zo vzorca x_v=−b/(2a), y_v=f(x_v).</p><p>Dnes to otočíme: z vrcholu a jedného ďalšieho bodu grafu zostavíme predpis funkcie.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'zapísať kvadratickú funkciu vo vrcholovom tvare y=a(x−x_v)²+y_v',
+          'z vrcholu a jedného ďalšieho bodu grafu vypočítať koeficient a',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',
@@ -67,6 +82,18 @@ MathPlatform.registerModule({
         title: 'Zostavenie predpisu z vrcholu a bodu',
         html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Vrchol V[1, −4], graf prechádza aj bodom [3, 0].</p><p>Dosadíme vrchol: y = a(x−1)² − 4.</p><p>Dosadíme bod [3,0]: 0 = a(3−1)² − 4, teda 0 = 4a − 4, a = 1.</p><p>Predpis: <strong>y = (x−1)² − 4</strong>.</p></div>',
         remember: 'Dosaď vrchol do y=a(x−x_v)²+y_v, potom dosaď ďalší bod a vyrieš rovnicu pre a.',
+      },
+      {
+        id: 'visual-example',
+        type: 'coordinatePlot',
+        phase: 'VIZUALIZÁCIA',
+        title: 'Graf funkcie y = (x−1)² − 4',
+        html: '<p>Toto je graf funkcie, ktorú sme práve zostavili z vrcholu V[1; −4] a bodu [3; 0].</p>',
+        xMin: -1, xMax: 3, yMin: -5, yMax: 1,
+        curves: [{ fn: x => (x - 1) * (x - 1) - 4 }],
+        points: [{ x: 1, y: -4, label: 'V[1; −4]' }, { x: 3, y: 0, label: '[3; 0]' }],
+        note: 'Vrchol aj druhý bod ležia presne na grafe — to potvrdzuje, že predpis sme zostavili správne.',
+        continueLabel: 'Pokračovať',
       },
       {
         id: 'q-basic',

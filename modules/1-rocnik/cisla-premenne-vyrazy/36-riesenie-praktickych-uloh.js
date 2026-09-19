@@ -49,6 +49,14 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "premeniť reálnu situáciu na výpočet so správnymi jednotkami",
+          "výsledok interpretovať v kontexte úlohy"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

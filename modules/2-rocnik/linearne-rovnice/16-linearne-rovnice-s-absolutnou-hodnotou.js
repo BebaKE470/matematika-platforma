@@ -56,6 +56,22 @@ MathPlatform.registerModule({
     estimatedTime: '15–20 min + ručné riešenie',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z 1. ročníka poznáš <strong>absolútnu hodnotu</strong> ako vzdialenosť na číselnej osi a vieš overiť, či číslo patrí do intervalu.</p><p>Z predchádzajúcich hodín vieš riešiť lineárne rovnice ekvivalentnými úpravami a dosadením overiť riešenie.</p>'
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'interpretovať |x| ako vzdialenosť a odvodiť z nej počet riešení',
+          'riešiť rovnice typu |L(x)|=k a |L(x)|=R(x)',
+          'riešiť rovnice s viacerými absolútnymi hodnotami pomocou intervalov'
+        ]
+      },
+      {
         id: 'distance-visual',
         type: 'info',
         phase: 'POCHOP',

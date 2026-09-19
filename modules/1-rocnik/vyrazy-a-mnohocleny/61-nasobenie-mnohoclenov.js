@@ -62,6 +62,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vynásobiť dvojčlen dvojčlenom',
+          'systematicky spočítať všetky štyri čiastkové súčiny',
+        ],
+      },
+      {
         id: 'rule-multiply',
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',

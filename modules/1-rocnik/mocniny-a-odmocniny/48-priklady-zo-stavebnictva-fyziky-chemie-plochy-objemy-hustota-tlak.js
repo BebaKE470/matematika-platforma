@@ -54,6 +54,18 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcich hodín poznáš definíciu mocniny a pravidlá pre počítanie s mocninami, vrátane nultého a záporného mocniteľa.</p><p>Zo základnej školy poznáš obsah štvorca/obdĺžnika, objem kocky/kvádra a prevody jednotiek dĺžky.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: ['rozpoznať, že jednotky obsahu majú druhú a jednotky objemu tretiu mocninu dĺžkovej jednotky', 'previesť jednotky obsahu a objemu', 'vypočítať hustotu alebo tlak v jednoduchej úlohe'],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

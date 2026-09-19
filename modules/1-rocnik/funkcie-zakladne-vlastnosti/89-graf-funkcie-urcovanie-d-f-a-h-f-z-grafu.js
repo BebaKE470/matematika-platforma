@@ -55,6 +55,22 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: "<p>Na predchádzajúcej hodine sme zaviedli pojem <strong>funkcie</strong>: každému x je priradené práve jedno y, funkčná hodnota f(x). Vedeli sme určiť definičný obor D(f) a obor hodnôt H(f) z tabuľky.</p><p>Zo základnej školy poznáš pravouhlú súradnicovú sústavu a zakresľovanie bodov podľa súradníc.</p><p>Dnes tú istú funkciu prečítame priamo z <strong>grafu</strong>.</p>",
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'prečítať z grafu funkcie definičný obor D(f)',
+          'prečítať z grafu funkcie obor hodnôt H(f)',
+          'prepojiť bod grafu s funkčnou hodnotou',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

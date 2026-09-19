@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcich hodín poznáš tri spôsoby rozkladu výrazu na súčin: vyňatie spoločného činiteľa, rozdiel druhých mocnín a druhú mocninu dvojčlena.</p><p>Doteraz sme ich vždy použili samostatne. Dnes uvidíme, že niekedy treba viac spôsobov skombinovať v jednej úlohe.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'skombinovať vyňatie pred zátvorku s rozkladom podľa vzorca',
+          'rozložiť výraz úplne, kým to ešte ide ďalej',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

@@ -54,6 +54,14 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "preložiť slovné zadanie na sústavu nerovníc",
+          "precvičiť hľadanie prieniku riešení"
+        ]
+      },
+      {
         "id": "model",
         "type": "explain",
         "phase": "POCHOP",

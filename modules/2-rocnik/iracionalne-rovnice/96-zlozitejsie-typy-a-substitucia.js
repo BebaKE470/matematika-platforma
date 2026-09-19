@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulej hodiny už vieš riešiť jednoduchú iracionálnu rovnicu umocnením a vieš, prečo je skúška nutná (cudzí koreň).</p><p>Dnes sa naučíme substitúciou previesť náročnejší typ rovnice na už známu kvadratickú rovnicu.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'previesť rovnicu s odmocninou na kvadratickú rovnicu substitúciou t=√x',
+          'vrátiť sa od t späť k pôvodnej neznámej x',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

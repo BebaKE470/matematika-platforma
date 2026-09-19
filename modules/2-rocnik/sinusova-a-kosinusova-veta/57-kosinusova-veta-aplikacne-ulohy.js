@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulej hodiny poznáš <strong>kosínusovú vetu</strong> a²=b²+c²−2bc·cos α a vieš z nej vypočítať chýbajúcu stranu.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'upraviť kosínusovú vetu na výpočet uhla zo známych troch strán',
+          'vyriešiť aplikačnú úlohu vedúcu na kosínusovú vetu',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

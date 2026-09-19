@@ -49,6 +49,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Už vieš riešiť jednu lineárnu rovnicu s jednou neznámou ekvivalentnými úpravami.</p><p>Z geometrie vieš, že graf lineárnej funkcie je priamka.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vysvetliť, čo je riešením sústavy dvoch rovníc",
+          "vyriešiť sústavu sčítacou, dosadzovacou alebo porovnávacou metódou"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

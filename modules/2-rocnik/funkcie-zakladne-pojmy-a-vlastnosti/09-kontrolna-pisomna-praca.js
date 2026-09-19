@@ -47,6 +47,10 @@ MathPlatform.registerModule({
     "estimatedTime": "5–7 min + papierová práca",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro"
+      },
+      {
         "id": "intro",
         "type": "info",
         "phase": "KONTROLNÁ PRÁCA",

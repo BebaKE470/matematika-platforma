@@ -49,6 +49,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z minulej hodiny už vieš, že parameter je pevná, ale bližšie neurčená hodnota, a že pri delení výrazom s parametrom musíme rozlíšiť, kedy je nulový.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "systematicky rozlíšiť prípady pri rovnici s parametrom",
+          "zapísať riešenie pre každý prípad osobitne"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

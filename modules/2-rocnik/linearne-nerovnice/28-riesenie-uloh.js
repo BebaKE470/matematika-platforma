@@ -54,6 +54,14 @@ MathPlatform.registerModule({
     "estimatedTime": "cca 15 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "precvičiť nerovnice s absolútnou hodnotou",
+          "overiť riešenie na číselnej osi"
+        ]
+      },
+      {
         "id": "strategy",
         "type": "explain",
         "phase": "POCHOP",

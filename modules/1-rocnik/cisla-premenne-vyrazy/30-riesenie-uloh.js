@@ -49,6 +49,14 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "rozhodnúť, či slovná úloha vyžaduje NSD alebo NSN",
+          "precvičiť si oba postupy na praktických príkladoch"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

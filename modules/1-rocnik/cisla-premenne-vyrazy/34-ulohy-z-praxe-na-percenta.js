@@ -50,6 +50,14 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "použiť percentá pri zľave a pri zvýšení ceny",
+          "vypočítať pôvodnú cenu, keď poznáme cenu po zmene"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

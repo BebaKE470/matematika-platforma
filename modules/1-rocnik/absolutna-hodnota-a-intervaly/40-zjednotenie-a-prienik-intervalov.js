@@ -56,6 +56,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "opakovanie",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Už vieš, čo je absolútna hodnota, aj ako zapísať interval — otvorený, uzavretý alebo polootvorený.</p><p>Z tematického celku Množiny poznáš aj operácie prienik (∩) a zjednotenie (∪).</p><p>Dnes tieto dve operácie použijeme na intervaly, teda na súvislé časti číselnej osi.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vysvetliť význam prieniku a zjednotenia intervalov",
+          "určiť výsledok pri prekrývajúcich sa aj disjunktných intervaloch",
+          "skontrolovať hraničné body pri spájaní intervalov"
+        ]
+      },
+      {
         "id": "recap",
         "type": "info",
         "phase": "POCHOP",

@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Už vieš, čo je druhá odmocnina a že je vždy nezáporná, a vieš riešiť kvadratickú rovnicu pomocou diskriminantu.</p><p>Dnes sa naučíme riešiť rovnicu, v ktorej je neznáma <strong>priamo pod odmocninou</strong>.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vyriešiť jednoduchú iracionálnu rovnicu izoláciou odmocniny a umocnením',
+          'vykonať skúšku a rozpoznať cudzí koreň',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

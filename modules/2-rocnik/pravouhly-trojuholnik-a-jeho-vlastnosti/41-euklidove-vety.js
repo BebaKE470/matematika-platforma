@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcich dvoch hodín poznáš odvesnu, preponu a Pytagorovu vetu a²+b²=c² aj jej použitie v zložitejších útvaroch.</p><p>Z geometrie trojuholníkov vieš, čo je výška trojuholníka a päta výšky.</p><p>Dnes spoznáme <strong>ďalšie dva</strong> vzťahy medzi stranami pravouhlého trojuholníka — tentoraz s výškou na preponu.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vysvetliť a použiť Euklidovu vetu o výške (v² = ca·cb)',
+          'vysvetliť a použiť Euklidovu vetu o odvesne (a² = c·ca, b² = c·cb)',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',
@@ -135,6 +150,15 @@ MathPlatform.registerModule({
         title: 'Vysvetli vlastnými slovami',
         prompt: 'Prečo pri Euklidovej vete o odvesne priraďujeme úsek ca práve k odvesne a, a nie k odvesne b?',
         model: 'Pretože úsek ca je ten úsek prepony, ktorý leží „pod“ odvesnou a — je to priemet odvesny a na preponu, ktorý vzniká pätou výšky. Odvesna a a jej priľahlý úsek ca spolu s výškou tvoria menší pravouhlý trojuholník, podobný pôvodnému, a práve z tejto podobnosti vzťah a²=c·ca vyplýva.',
+      },
+      {
+        id: 'q-consistency',
+        type: 'selfWrite',
+        phase: 'SÚVISLOSTI',
+        skill: 'súvislosť s Pytagorovou vetou',
+        title: 'Overenie na jednom trojuholníku',
+        prompt: 'Trojuholník so stranami a=3cm, b=4cm, c=5cm je pravouhlý (vieš z minulej hodiny). Vypočítaj úseky prepony ca=a²/c a cb=b²/c, over, že ca+cb=c, a porovnaj a²+b² s c². Čo to hovorí o vzťahu medzi Pytagorovou vetou a Euklidovými vetami?',
+        model: 'ca = 3²/5 = 9/5 = 1,8cm, cb = 4²/5 = 16/5 = 3,2cm. Súčet: 1,8+3,2 = 5cm = c ✓. Zároveň a²+b² = 9+16 = 25 = 5² = c² ✓. Oba výpočty (Pytagorova aj Euklidove vety) opisujú ten istý pravouhlý trojuholník, len rôznymi vzťahmi medzi jeho stranami a úsekmi prepony — preto musia dať navzájom súhlasiace výsledky.',
       },
       {
         id: 'manual',

@@ -55,6 +55,22 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcich hodín vieš vyňať spoločný činiteľ pred zátvorku a poznáš násobenie dvojčlena dvojčlenom — najmä súčin (a − b)(a + b).</p><p>Dnes sa pozrieme, čo sa stane, keď tento konkrétny súčin roznásobíme, a využijeme to na rozklad opačným smerom.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozpoznať rozdiel dvoch druhých mocnín',
+          'rozložiť a² − b² na súčin (a − b)(a + b)',
+          'overiť rozklad spätným roznásobením',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

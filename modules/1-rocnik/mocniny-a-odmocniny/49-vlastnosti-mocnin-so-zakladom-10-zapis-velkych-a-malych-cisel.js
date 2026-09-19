@@ -54,6 +54,18 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcich hodín poznáš mocniny s celočíselným mocniteľom, vrátane nultého a záporného — teda aj mocniny čísla 10 ako 10³ alebo 10⁻².</p><p>Dnes ukážeme, ako sa mocniny desiatky používajú na prehľadný zápis veľmi veľkých aj veľmi malých čísel.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: ['zapísať veľmi veľké aj veľmi malé číslo vo vedeckom zápise a · 10ⁿ', 'previesť číslo medzi bežným a vedeckým zápisom oboma smermi'],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

@@ -63,6 +63,14 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'sčítať a odčítať mnohočleny spojením podobných členov',
+          'vynásobiť mnohočlen jednočlenom pomocou distributívneho zákona',
+        ],
+      },
+      {
         id: 'rule-add',
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',

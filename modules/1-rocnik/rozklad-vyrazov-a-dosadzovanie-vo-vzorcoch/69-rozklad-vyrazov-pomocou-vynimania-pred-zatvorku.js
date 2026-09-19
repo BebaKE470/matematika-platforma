@@ -54,6 +54,22 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcej témy poznáš násobenie mnohočlena jednočlenom a distributívny zákon: a(b + c) = ab + ac.</p><p>Dnes pôjdeme opačným smerom — zo súčtu ab + ac sa naučíme dostať späť súčin a(b + c).</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vyňať spoločný číselný aj premenný činiteľ pred zátvorku',
+          'nájsť NAJVÄČŠÍ spoločný činiteľ',
+          'overiť rozklad spätným roznásobením',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

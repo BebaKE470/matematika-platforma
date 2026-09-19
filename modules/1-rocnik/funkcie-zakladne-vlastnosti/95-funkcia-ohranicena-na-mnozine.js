@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: "<p>Z predchádzajúcich hodín (88–94) už poznáš pojem funkcie, D(f)/H(f), monotónnosť, extrémy funkcie a prostú funkciu.</p><p>Zo zápisu intervalu reálnych čísel poznáš aj pojmy horná a dolná hranica.</p><p>Dnes zistíme, kedy má funkcia hodnoty obmedzené nejakou hranicou zhora alebo zdola.</p>",
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozhodnúť, či je funkcia ohraničená zhora a/alebo zdola',
+          'rozlíšiť ohraničenosť od maxima/minima',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',
@@ -113,6 +128,17 @@ MathPlatform.registerModule({
         answer: 0,
         correct: 'Správne. x² je vždy nezáporné (x² ≥ 0), preto je funkcia p(x)=x² ohraničená zdola číslom 0.',
         hint: 'Rozmysli si, akú najmenšiu hodnotu môže x² vôbec nadobudnúť.',
+      },
+      {
+        id: 'visual-bounded',
+        type: 'coordinatePlot',
+        phase: 'VIZUALIZÁCIA',
+        title: 'Ako to vidno v grafe?',
+        html: "<p>Graf funkcie p(x) = x² nikdy neklesne pod vodorovnú čiaru y = 0 — to je presne to, čo znamená byť ohraničená zdola.</p>",
+        xMin: -3, xMax: 3, yMin: -1, yMax: 9,
+        curves: [{ fn: x => x * x }],
+        note: 'Číslo 0 je dolná hranica: p(x) ≥ 0 pre každé reálne x.',
+        continueLabel: 'Pokračovať',
       },
       {
         id: 'notebook',

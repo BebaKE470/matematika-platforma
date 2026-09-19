@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z minulej hodiny vieš zostrojiť úsečku dĺžky √n pomocou Euklidovej vety o výške, keď je jeden úsek prepony rovný 1.</p><p>Dnes tento postup zovšeobecníme na dve <strong>ľubovoľné</strong> dané úsečky a, b.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'zostrojiť geometrický priemer √(a·b) dvoch daných úsečiek',
+          'zostrojiť štvorec s rovnakým obsahom ako daný obdĺžnik',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

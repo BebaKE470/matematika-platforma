@@ -52,6 +52,21 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: "<p>Z celej témy (hodiny 88–96) už vieš z grafu určiť D(f) a H(f), rozhodnúť o párnosti, monotónnosti, extrémoch, prostote aj ohraničenosti funkcie — každú vlastnosť samostatne.</p><p>Dnes všetky tieto vlastnosti prečítame naraz z <strong>jedného</strong> grafu.</p>",
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'systematicky prejsť graf zľava doprava',
+          'určiť z jedného grafu D(f), H(f), monotónnosť, extrémy aj prostotu',
+        ],
+      },
+      {
         id: 'plot',
         type: 'coordinatePlot',
         phase: 'POCHOP',

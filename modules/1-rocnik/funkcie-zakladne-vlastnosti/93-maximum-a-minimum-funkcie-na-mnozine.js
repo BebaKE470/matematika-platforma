@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: "<p>Z predchádzajúcich hodín (88–92) už poznáš pojem funkcie, D(f)/H(f), graf funkcie a vieš rozhodnúť, či je funkcia rastúca alebo klesajúca.</p><p>Dnes nájdeme najväčšiu (maximum) a najmenšiu (minimum) hodnotu, ktorú funkcia na danej množine nadobúda.</p>",
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'nájsť maximum a minimum funkcie na danej množine',
+          'rozlíšiť maximum/minimum od hodnoty x',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

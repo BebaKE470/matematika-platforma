@@ -54,6 +54,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z 1. ročníka poznáš Pytagorovu vetu a²+b²=c² na výpočet prepony pravouhlého trojuholníka.</p><p>Z predchádzajúcej témy vieš klasifikovať trojuholník podľa uhlov (ostrouhlý, pravouhlý, tupouhlý).</p><p>Dnes tú istú vetu použijeme <strong>opačne</strong> — na zistenie, či je trojuholník vôbec pravouhlý.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'pomenovať odvesny a preponu pravouhlého trojuholníka',
+          'overiť pomocou obrátenej Pytagorovej vety, či je trojuholník pravouhlý',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

@@ -50,6 +50,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z minulej hodiny už vieš rozložiť prirodzené číslo na súčin prvočísel a rozoznať, kedy je jedno číslo deliteľom druhého.</p><p>Dnes tento rozklad využijeme na nájdenie najväčšieho spoločného deliteľa (NSD) a najmenšieho spoločného násobku (NSN) dvoch čísel.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "nájsť NSD dvoch čísel pomocou prvočíselného rozkladu",
+          "nájsť NSN dvoch čísel pomocou prvočíselného rozkladu",
+          "rozhodnúť, kedy úloha vyžaduje NSD a kedy NSN"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",
@@ -62,7 +78,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">NSD</div><p class=\"term-rule\">Najväčší spoločný deliteľ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">NSN</div><p class=\"term-rule\">Najmenší kladný spoločný násobok.</p></div></div><p>Prvočíselný rozklad pomáha oba určiť.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">NSD</div><p class=\"term-rule\">Najväčší spoločný deliteľ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">NSN</div><p class=\"term-rule\">Najmenší kladný spoločný násobok.</p></div></div><p>Prvočíselný rozklad pomáha oba určiť.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>NSD a NSN čísel 12 a 30:</p><p>12 = 2² · 3, 30 = 2 · 3 · 5</p><p>NSD berie <strong>najmenšiu</strong> mocninu každého spoločného prvočísla: 2¹ · 3¹ = <strong>6</strong>.</p><p>NSN berie <strong>najväčšiu</strong> mocninu každého prvočísla, ktoré sa vyskytuje aspoň raz: 2² · 3 · 5 = <strong>60</strong>.</p></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "start",

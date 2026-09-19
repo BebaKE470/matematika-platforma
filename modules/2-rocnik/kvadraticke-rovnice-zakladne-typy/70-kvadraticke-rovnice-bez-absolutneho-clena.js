@@ -54,6 +54,22 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Na predchádzajúcich hodinách sme riešili <strong>rýdzo kvadratickú rovnicu</strong> ax²+c=0 izoláciou x² a odmocnením.</p><p>Z 1. ročníka už tiež vieš <strong>vyňať spoločný činiteľ pred zátvorku</strong> (napr. x²+3x = x(x+3)).</p><p>Dnes narazíme na rovnicu, ktorú takto odmocniť nemôžeme — ale vyňatie pred zátvorku nám pomôže.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozpoznať rovnicu tvaru ax² + bx = 0 (bez absolútneho člena)',
+          'vyriešiť ju vyňatím x pred zátvorku a pravidlom o nulovom súčine',
+          'uvedomiť si, že takáto rovnica má vždy riešenie x = 0',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',

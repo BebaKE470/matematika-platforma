@@ -55,6 +55,22 @@ MathPlatform.registerModule({
     estimatedTime: '22–28 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: "<p>Z predchádzajúcich hodín (88–90) už poznáš pojem funkcie, funkčnú hodnotu f(x), definičný obor D(f) a obor hodnôt H(f), a vieš čítať funkciu z tabuľky, predpisu aj grafu.</p><p>Vieš tiež dosadiť záporné číslo do výrazu so zátvorkou.</p><p>Dnes porovnáme, čo sa stane s funkčnou hodnotou, keď zmeníme znamienko argumentu x na opačné.</p>",
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vypočítať f(−x) pre daný predpis',
+          'rozhodnúť, či je funkcia párna, nepárna, alebo ani jedno',
+          'overiť vlastnosť výpočtom, nie odhadom',
+        ],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',
@@ -69,6 +85,20 @@ MathPlatform.registerModule({
         title: 'Definícia párnej a nepárnej funkcie',
         html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Párna funkcia</div><p class="term-rule">Funkcia f je párna, ak pre každé x z D(f) platí f(−x) = f(x).</p></div><div class="term-item no-symbol"><div class="term-name">Nepárna funkcia</div><p class="term-rule">Funkcia f je nepárna, ak pre každé x z D(f) platí f(−x) = −f(x).</p></div></div><p>Niektoré funkcie nie sú ani párne, ani nepárne.</p>',
         remember: 'Párna: f(−x) = f(x). Nepárna: f(−x) = −f(x).',
+      },
+      {
+        id: 'visual-symmetry',
+        type: 'coordinatePlot',
+        phase: 'VIZUALIZÁCIA',
+        title: 'Ako to vyzerá v grafe?',
+        html: "<p>Graf párnej funkcie f(x) = x² je súmerný podľa osi y (zrkadlový obraz vľavo a vpravo od nej). Graf nepárnej funkcie g(x) = x³ je súmerný podľa začiatku súradnicovej sústavy (bod [0;0]).</p>",
+        xMin: -2.5, xMax: 2.5, yMin: -9, yMax: 9, xStep: 1, yStep: 3,
+        curves: [
+          { fn: x => x * x, label: 'f(x)=x²' },
+          { fn: x => x * x * x, color: '#66766f', label: 'g(x)=x³' },
+        ],
+        note: 'Skús si predstaviť, že graf preklopíš podľa osi y (f) alebo otočíš o 180° okolo bodu [0;0] (g) — dostaneš späť ten istý graf.',
+        continueLabel: 'Pokračovať',
       },
       {
         id: 'q-even',

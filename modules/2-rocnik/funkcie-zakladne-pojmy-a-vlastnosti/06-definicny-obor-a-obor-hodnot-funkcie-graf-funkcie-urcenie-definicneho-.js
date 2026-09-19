@@ -51,6 +51,22 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Z 1. ročníka už vieš, čo je <strong>funkcia</strong> a jej <strong>graf</strong> — vstupu x priraďuje práve jeden výstup f(x).</p><p>Poznáš aj zápis <strong>intervalov</strong> (napr. ⟨−3;4⟩) a vieš čítať súradnice bodu v súradnicovej sústave.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "zaviesť a správne čítať D(f) a H(f)",
+          "určiť D(f) a H(f) z grafu",
+          "rozlišovať vstup x a funkčnú hodnotu y=f(x)"
+        ]
+      },
+      {
         "id": "idea",
         "type": "explain",
         "phase": "NOVÉ POJMY",

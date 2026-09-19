@@ -49,6 +49,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Vieme zapísať množinu vymenovaním prvkov aj charakteristickou vlastnosťou a poznáme kardinalitu |A|.</p><p>Z výrokovej logiky si pamätáme spojky <strong>a zároveň</strong> (konjunkcia) a <strong>alebo</strong> (disjunkcia) — dnes uvidíme, že rovnaké myšlienky fungujú aj pri množinách.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vysvetliť pojmy zjednotenie A ∪ B a prienik A ∩ B",
+          "prepojiť ∪ so spojkou „alebo“ a ∩ so spojkou „a zároveň“"
+        ]
+      },
+      {
         "id": "operations-intro",
         "type": "explain",
         "phase": "NOVÉ POJMY",

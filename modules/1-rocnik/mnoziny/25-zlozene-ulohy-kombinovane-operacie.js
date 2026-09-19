@@ -49,6 +49,21 @@ MathPlatform.registerModule({
     "estimatedTime": "15–18 min",
     "activities": [
       {
+        "id": "recap",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Čo už vieme",
+        "html": "<p>Poznáme už všetky štyri operácie s množinami: zjednotenie, prienik, rozdiel a doplnok.</p><p>Dnes ich budeme <strong>kombinovať v jednom zápise</strong>, napríklad A ∩ (B ∪ C) — a uvidíme, že na poradí a zátvorkách záleží.</p>"
+      },
+      {
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "vyhodnotiť zložený zápis s viacerými množinovými operáciami",
+          "správne používať zátvorky pri kombinovaní operácií"
+        ]
+      },
+      {
         "id": "visual",
         "type": "info",
         "phase": "POCHOP",

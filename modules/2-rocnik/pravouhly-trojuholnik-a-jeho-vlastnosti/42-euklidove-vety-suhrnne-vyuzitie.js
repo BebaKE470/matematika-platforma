@@ -53,6 +53,21 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcich troch hodín poznáš tri vzťahy medzi stranami pravouhlého trojuholníka: Pytagorovu vetu a obe Euklidove vety.</p><p>Dnes ich skombinujeme — rozhodneme, ktorý vzťah je vhodný podľa toho, aké údaje o trojuholníku poznáme.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vybrať vhodný vzťah (Pytagorova veta, veta o výške, veta o odvesne) podľa zadaných údajov',
+          'skombinovať dva vzťahy v jednej úlohe',
+        ],
+      },
+      {
         id: 'intro',
         type: 'info',
         phase: 'POCHOP',

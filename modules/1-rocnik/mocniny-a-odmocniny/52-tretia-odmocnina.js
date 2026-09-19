@@ -55,6 +55,18 @@ MathPlatform.registerModule({
     estimatedTime: '20–26 min',
     activities: [
       {
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Z predchádzajúcej hodiny poznáš definíciu druhej odmocniny √a (a ≥ 0) ako nezáporného čísla.</p><p>Zo základnej školy poznáš tretiu mocninu čísla (objem kocky).</p><p>Dnes zavedieme tretiu odmocninu a uvidíme, čím sa líši od druhej.</p>',
+      },
+      {
+        id: 'topic-intro',
+        type: 'intro',
+        goals: ['vysvetliť tretiu odmocninu ∛a ako číslo, ktorého tretia mocnina sa rovná a', 'vypočítať tretiu odmocninu aj zo záporného čísla', 'vysvetliť rozdiel medzi druhou a treťou odmocninou'],
+      },
+      {
         id: 'bridge',
         type: 'info',
         phase: 'POCHOP',
