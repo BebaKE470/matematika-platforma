@@ -77,14 +77,6 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
-        id: 'notebook-1',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Uhlopriečka obdĺžnika so stranami a, b:</p><div class="formula">u = √(a² + b²)</div>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-diagonal',
         type: 'choice',
         phase: 'OVER SI',
@@ -100,16 +92,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Výška rovnoramenného trojuholníka',
-        html: '<p>Výška na základňu rovnoramenného trojuholníka rozdeľuje základňu na dve rovnaké polovice a súčasne vytvára dva zhodné pravouhlé trojuholníky.</p><div class="formula">v = √(r² − <span class="frac"><span class="frac-num">z</span><span class="frac-den">2</span></span>²)<span class="formula-note">Rameno r, základňa z.</span></div>',
+        html: '<p>Výška na základňu rovnoramenného trojuholníka rozdeľuje základňu na dve rovnaké polovice a súčasne vytvára dva zhodné pravouhlé trojuholníky.</p><div class="formula">v = √(r² − <span class="frac"><span class="frac-num">z</span><span class="frac-den">2</span></span>²)<span class="formula-note">Rameno r, základňa z.</span></div><p>V oboch prípadoch (obdĺžnik aj rovnoramenný trojuholník) najprv nájdi skrytý pravouhlý trojuholník náčrtom.</p>',
         remember: 'Výška rovnoramenného trojuholníka: v = √(rameno² − (základňa/2)²).',
-      },
-      {
-        id: 'notebook-2',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Výška rovnoramenného trojuholníka s ramenom r a základňou z:</p><div class="formula">v = √(r² − <span class="frac"><span class="frac-num">z</span><span class="frac-den">2</span></span>²)</div><p>V oboch prípadoch (obdĺžnik aj rovnoramenný trojuholník) najprv nájdi skrytý pravouhlý trojuholník náčrtom.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-isoceles',

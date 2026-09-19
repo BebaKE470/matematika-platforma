@@ -90,15 +90,6 @@ MathPlatform.registerModule({
         "continueLabel": "Pokračovať"
       },
       {
-        "id": "notes",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "skill": "Zápis do zošita",
-        "title": "Dva typy zápisu",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Skús vlastnými slovami napísať, na čo by ti mohla byť logika v matematike užitočná. Pokojne nepresne.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br><strong>Výroková logika</strong></p>",
-        "model": "<strong>ZAPÍŠ SI DO ZOŠITA:</strong> ÚLOHA DO ZOŠITA = môžem sa mýliť. ZAPÍŠ SI DO ZOŠITA = presná formulácia, ktorú si mám odniesť z hodiny."
-      },
-      {
         "id": "xp",
         "type": "choice",
         "phase": "OVER SI",

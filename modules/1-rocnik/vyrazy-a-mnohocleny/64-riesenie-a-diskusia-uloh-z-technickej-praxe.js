@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Pozemok s premennými rozmermi',
-        html: '<p>Obdĺžnikový pozemok má dĺžku x metrov a šírku (x + 4) metre. Obsah pozemku je S = x · (x + 4).</p><p>Tento výraz vieme zjednodušiť roznásobením: S = x² + 4x.</p>',
+        html: '<p>Obdĺžnikový pozemok má dĺžku x metrov a šírku (x + 4) metre. Obsah pozemku je S = x · (x + 4).</p><p>Tento výraz vieme zjednodušiť roznásobením: S = x² + 4x.</p><p>Rovnako vieme zostaviť aj výraz pre <strong>obvod</strong>: O = 2·x + 2·(x+4) = 4x + 8. Obvod obdĺžnika so stranami a, b je vždy O = 2a + 2b.</p><p>Vždy skontroluj, či zvolená hodnota premennej dáva fyzicky zmysluplný (kladný) rozmer.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -68,14 +68,6 @@ MathPlatform.registerModule({
           'zostaviť výraz pre obsah/obvod útvaru s premennými rozmermi',
           'interpretovať výsledný výraz v reálnom (technickom) kontexte',
         ],
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Obsah obdĺžnika s rozmermi a, b: S = a·b. Obvod: O = 2a + 2b.</p><p>Ak sú rozmery vyjadrené výrazmi s premennou (napr. a = x, b = x+4), zostavíme výraz S = x(x+4) = x²+4x a O = 2x+2(x+4) = 4x+8.</p><p>Vždy skontroluj, či zvolená hodnota premennej dáva fyzicky zmysluplný (kladný) rozmer.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-area',

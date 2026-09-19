@@ -84,14 +84,6 @@ MathPlatform.registerModule({
         remember: 'Vyjadri D(m), potom rieš D>0 / D=0 / D<0 ako (ne)rovnicu pre m.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Rovnica s parametrom:</strong> okrem neznámej x obsahuje aj parameter (napr. m), ktorého konkrétnu hodnotu nepoznáme. Postup: vyjadri diskriminant D ako výraz v m, potom vyrieš príslušnú (ne)rovnicu D&gt;0 / D=0 / D&lt;0 ako lineárnu (ne)rovnicu pre m.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-express',
         type: 'choice',
         phase: 'OVER SI',

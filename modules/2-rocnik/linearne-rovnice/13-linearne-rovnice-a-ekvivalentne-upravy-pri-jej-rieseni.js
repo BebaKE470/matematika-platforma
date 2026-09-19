@@ -80,13 +80,6 @@ MathPlatform.registerModule({
         "html": "<p>Ekvivalentná úprava zachováva riešenia rovnice; rovnakú prípustnú operáciu vykonáme na oboch stranách.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
-        "id": "concept-note",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Ekvivalentná úprava zachováva riešenia rovnice; rovnakú prípustnú operáciu vykonáme na oboch stranách.</p>"
-      },
-      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -113,7 +106,7 @@ MathPlatform.registerModule({
       {
         "id": "notebook",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Zapíš si do zošita",
         "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vyrieš 4x−7=13 a urob skúšku dosadením.</p>"
       },

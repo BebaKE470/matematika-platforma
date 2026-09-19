@@ -149,11 +149,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
+        "type": "explain",
+        "phase": "VLASTNOSTI",
         "title": "cos x – definícia a vlastnosti",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>FUNKCIA y = cos x</strong></p><p>Na jednotkovej kružnici je <strong>cos x</strong> x-ová súradnica bodu, ktorý zodpovedá číslu x.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Definičný obor</div><p class=\"term-rule\">D(cos) = ℝ</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obor hodnôt</div><p class=\"term-rule\">H(cos) = ⟨−1; 1⟩</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Perióda</div><p class=\"term-rule\">2π, teda cos(x + 2kπ) = cos x, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nuly</div><p class=\"term-rule\">x = π/2 + kπ, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Párnosť</div><p class=\"term-rule\">cos(−x) = cos x.</p></div></div><p>Maximum funkcie je 1 pre x = 2kπ a minimum je −1 pre x = π + 2kπ, k ∈ ℤ.</p>",
-        "model": "Teoretický zápis je zobrazený celý v poli html; model sa v zjednodušenom notebook rendereri nezobrazuje."
+        "html": "<p><strong>FUNKCIA y = cos x</strong></p><p>Na jednotkovej kružnici je <strong>cos x</strong> x-ová súradnica bodu, ktorý zodpovedá číslu x.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Definičný obor</div><p class=\"term-rule\">D(cos) = ℝ</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obor hodnôt</div><p class=\"term-rule\">H(cos) = ⟨−1; 1⟩</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Perióda</div><p class=\"term-rule\">2π, teda cos(x + 2kπ) = cos x, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nuly</div><p class=\"term-rule\">x = π/2 + kπ, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Párnosť</div><p class=\"term-rule\">cos(−x) = cos x.</p></div></div><p>Maximum funkcie je 1 pre x = 2kπ a minimum je −1 pre x = π + 2kπ, k ∈ ℤ.</p>"
       },
       {
         "id": "reflection",

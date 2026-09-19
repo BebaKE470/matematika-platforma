@@ -148,7 +148,7 @@ MathPlatform.registerModule({
       {
         "id": "nb",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Skús krátky priamy dôkaz",
         "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Dokáž: Súčet dvoch nepárnych celých čísel je párny. Použi zápis a=2k+1, b=2m+1.</p>",
         "model": "<strong>VZOROVÝ DÔKAZ:</strong> a+b=(2k+1)+(2m+1)=2k+2m+2=2(k+m+1). Keďže k+m+1 je celé číslo, a+b je párne."

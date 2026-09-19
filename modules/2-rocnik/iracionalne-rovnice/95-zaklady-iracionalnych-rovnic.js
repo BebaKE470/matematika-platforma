@@ -80,16 +80,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Postup riešenia iracionálnej rovnice',
-        html: '<p><strong>Iracionálna rovnica</strong> obsahuje neznámu pod odmocninou.</p><ol class="steps"><li>Izoluj odmocninu na jednu stranu rovnice.</li><li>Umocni <span class="hl">obe</span> strany na druhú.</li><li>Vyrieš výslednú rovnicu.</li><li>Vykonaj skúšku <span class="hl">každého</span> riešenia dosadením do <span class="hl">pôvodnej</span> rovnice — zamietni cudzie korene.</li></ol><div class="warning"><strong>Pozor:</strong> skúška je nutná — √výraz je vždy nezáporné číslo, takže ak by pravá strana rovnice po umocnení vyšla záporná, pôvodná rovnica pre toto x nikdy nemohla platiť.</div>',
+        html: '<p><strong>Iracionálna rovnica</strong> obsahuje neznámu pod odmocninou.</p><ol class="steps"><li>Izoluj odmocninu na jednu stranu rovnice.</li><li>Umocni <span class="hl">obe</span> strany na druhú.</li><li>Vyrieš výslednú rovnicu.</li><li>Vykonaj skúšku <span class="hl">každého</span> riešenia dosadením do <span class="hl">pôvodnej</span> rovnice — zamietni cudzie korene (riešenia vzniknuté umocnením, ktoré pôvodnú rovnicu v skutočnosti nespĺňajú).</li></ol><div class="warning"><strong>Pozor:</strong> skúška je nutná — √výraz je vždy nezáporné číslo, takže ak by pravá strana rovnice po umocnení vyšla záporná, pôvodná rovnica pre toto x nikdy nemohla platiť.</div>',
         remember: 'Izoluj odmocninu → umocni → vyrieš → <span class="hl">skúška</span> do <span class="hl">pôvodnej</span> rovnice (povinná, nie voliteľná).',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Iracionálna rovnica</strong> obsahuje neznámu pod odmocninou.</p><ol class="steps"><li>Izoluj odmocninu.</li><li>Umocni obe strany.</li><li>Vyrieš.</li><li><span class="hl">Skúška</span> do pôvodnej rovnice — povinná, zamietni cudzie korene (riešenia vzniknuté umocnením, ktoré pôvodnú rovnicu v skutočnosti nespĺňajú).</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-basic',

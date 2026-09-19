@@ -83,14 +83,6 @@ MathPlatform.registerModule({
         remember: 'Označ neznámu → zostav rovnicu → vyrieš → over zmysluplnosť <span class="hl">každého</span> riešenia.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Postup riešenia slovnej úlohy s kvadratickou rovnicou:</strong></p><ol class="steps"><li>Označ neznámu x.</li><li>Prelož podmienku zo zadania do rovnice.</li><li>Vyrieš rovnicu.</li><li>Over <span class="hl">každé</span> riešenie voči kontextu úlohy — zamietni riešenia, ktoré nedávajú zmysel (napr. záporná dĺžka alebo vek).</li></ol>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-setup',
         type: 'choice',
         phase: 'OVER SI',

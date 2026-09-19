@@ -82,14 +82,6 @@ MathPlatform.registerModule({
         remember: 'a · 10ⁿ, kde 1 ≤ a < 10. Veľké číslo → n kladné. Malé číslo (< 1) → n záporné.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Vedecký zápis:</strong> a · 10ⁿ, kde 1 ≤ a &lt; 10, n je celé číslo.</p><p>Veľké číslo → kladný exponent (napr. 3 400 = 3,4 · 10³).</p><p>Malé číslo (menšie ako 1) → záporný exponent (napr. 0,0034 = 3,4 · 10⁻³).</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-big',
         type: 'choice',
         phase: 'OVER SI',

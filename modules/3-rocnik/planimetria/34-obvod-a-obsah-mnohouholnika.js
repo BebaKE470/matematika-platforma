@@ -81,14 +81,6 @@ MathPlatform.registerModule({
         "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Pôdorys domčeka má tvar päťuholníka: obdĺžnik so stranami 6 cm a 4 cm, na ktorom je trojuholníková strecha so základňou 6 cm a výškou 3 cm.</p><p>S₁ (obdĺžnik) = 6·4 = 24 cm²</p><p>S₂ (strecha) = <span class=\"frac\"><span class=\"frac-num\">6·3</span><span class=\"frac-den\">2</span></span> = 9 cm²</p><p>S = S₁ + S₂ = 24 + 9 = <strong>33 cm²</strong></p></div>"
       },
       {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Obvod a obsah mnohouholníka",
-        "html": "<p><strong>TEÓRIA:</strong> Mnohouholník často rozdelíme na jednoduchšie útvary a obsahy sčítame/odčítame.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
-        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
-      },
-      {
         "id": "meaning",
         "type": "explain",
         "phase": "VÝZNAM",
@@ -115,7 +107,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Náčrt a riešenie",
         "html": "<p>Do zošita si načrtni situáciu k téme <strong>Obvod a obsah mnohouholníka</strong>, označ známe a hľadané veličiny a vyrieš jeden číselný príklad. Jednotky zapisuj pri medzivýsledkoch aj výsledku.</p>",
         "model": "Kontrola: náčrt → údaje → vzťah → dosadenie → výpočet → jednotka → odpoveď."

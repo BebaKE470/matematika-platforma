@@ -117,11 +117,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<ol class="steps"><li>Over, či sú výsledky rovnako pravdepodobné.</li><li>Urč n (celkový počet, často pravidlom súčinu alebo kombináciou).</li><li>Urč m (priaznivé, pozorne prečítaj zadanie — „aspoň“, „presne“, „obaja“ menia počet priaznivých výsledkov).</li><li>Vypočítaj P=<span class="frac"><span class="frac-num">m</span><span class="frac-den">n</span></span>.</li></ol>',
-        continueLabel: 'Mám zapísané',
+        type: 'explain',
+        phase: 'POCHOP',
+        title: 'Presný postup krok za krokom',
+        html: '<p>Po predchádzajúcej chybe si postup spresníme:</p><ol class="steps"><li>Over, či sú výsledky rovnako pravdepodobné.</li><li>Urč n (celkový počet, často pravidlom súčinu alebo kombináciou).</li><li>Urč m (priaznivé, pozorne prečítaj zadanie — „aspoň“, „presne“, „obaja“ menia počet priaznivých výsledkov).</li><li>Vypočítaj P=<span class="frac"><span class="frac-num">m</span><span class="frac-den">n</span></span>.</li></ol>',
       },
       {
         id: 'argument',

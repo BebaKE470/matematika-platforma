@@ -62,14 +62,6 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie celku: Pytagorova veta a²+b²=c² (priama aj obrátená), Euklidova veta o výške v²=ca·cb, o odvesne a²=c·ca, geometrický priemer √(a·b) = strana štvorca s rovnakým obsahom ako obdĺžnik a×b.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',

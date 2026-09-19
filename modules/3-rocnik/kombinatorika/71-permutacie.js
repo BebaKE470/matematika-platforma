@@ -86,11 +86,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Permutácia bez opakovania:</strong> P(n)=n! (usporiadanie n rôznych prvkov, osobitný prípad variácie pre k=n). <strong>Permutácia s opakovaním:</strong> P\'(n;n₁,n₂,...)=<span class="frac"><span class="frac-num">n!</span><span class="frac-den">n₁!·n₂!·...</span></span>, keď sa niektoré prvky opakujú n₁-krát, n₂-krát atď.</p>',
-        continueLabel: 'Mám zapísané',
+        type: 'explain',
+        phase: 'NOVÝ POJEM / PRAVIDLO',
+        title: 'Oba typy permutácie spolu',
+        html: '<p>Zhrnutie oboch typov: bez opakovania ide o osobitný prípad variácie pre k=n, s opakovaním delíme faktoriálmi počtov opakovaní.</p><div class="formula">P(n) = n!<span class="formula-note">usporiadanie n rôznych prvkov</span></div><div class="formula">P\'(n;n₁,n₂,...) = <span class="frac"><span class="frac-num">n!</span><span class="frac-den">n₁!·n₂!·...</span></span><span class="formula-note">keď sa niektoré prvky opakujú n₁-krát, n₂-krát atď.</span></div>',
       },
       {
         id: 'q-basic',

@@ -79,16 +79,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Výpočet prepony a odvesny',
-        html: '<div class="formula"><span class="mini-label">PREPONA</span>c = √(a² + b²)</div><div class="formula"><span class="mini-label">ODVESNA</span>a = √(c² − b²)<span class="formula-note">keď poznáme preponu a druhú odvesnu</span></div><p>Vždy najprv dosaď do vzorca a spočítaj súčet/rozdiel pod odmocninou, až potom odmocni.</p>',
+        html: '<p>Pytagorova veta: a² + b² = c² (a, b odvesny, c prepona).</p><div class="formula"><span class="mini-label">PREPONA</span>c = √(a² + b²)</div><div class="formula"><span class="mini-label">ODVESNA</span>a = √(c² − b²)<span class="formula-note">keď poznáme preponu a druhú odvesnu</span></div><ol class="steps"><li>dosaď čísla</li><li>umocni a sčítaj/odčítaj</li><li>až na záver odmocni</li></ol>',
         remember: 'c = √(a² + b²).  a = √(c² − b²).',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pytagorova veta: a² + b² = c² (a, b odvesny, c prepona).</p><div class="formula"><span class="mini-label">VÝPOČET PREPONY</span>c = √(a² + b²)</div><div class="formula"><span class="mini-label">VÝPOČET ODVESNY</span>a = √(c² − b²)</div><ol class="steps"><li>dosaď čísla</li><li>umocni a sčítaj/odčítaj</li><li>až na záver odmocni</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-hypotenuse',

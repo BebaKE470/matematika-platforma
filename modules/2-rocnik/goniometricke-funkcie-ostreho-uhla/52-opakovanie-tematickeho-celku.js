@@ -58,16 +58,8 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie celého celku',
-        html: '<div class="term-list"><div class="term-item"><span class="term-symbol">sin</span><div><div class="term-name">sin α</div><p class="term-rule">protiľahlá/prepona</p></div></div><div class="term-item"><span class="term-symbol">cos</span><div><div class="term-name">cos α</div><p class="term-rule">priľahlá/prepona</p></div></div><div class="term-item"><span class="term-symbol">tg</span><div><div class="term-name">tg α</div><p class="term-rule">protiľahlá/priľahlá</p></div></div><div class="term-item"><span class="term-symbol">cotg</span><div><div class="term-name">cotg α</div><p class="term-rule">priľahlá/protiľahlá = <span class="frac"><span class="frac-num">1</span><span class="frac-den">tg α</span></span></p></div></div><div class="term-item no-symbol"><div class="term-name">Súčet ostrých uhlov</div><p class="term-rule">90°</p></div></div>',
+        html: '<div class="term-list"><div class="term-item"><span class="term-symbol">sin</span><div><div class="term-name">sin α</div><p class="term-rule">protiľahlá/prepona</p></div></div><div class="term-item"><span class="term-symbol">cos</span><div><div class="term-name">cos α</div><p class="term-rule">priľahlá/prepona</p></div></div><div class="term-item"><span class="term-symbol">tg</span><div><div class="term-name">tg α</div><p class="term-rule">protiľahlá/priľahlá</p></div></div><div class="term-item"><span class="term-symbol">cotg</span><div><div class="term-name">cotg α</div><p class="term-rule">priľahlá/protiľahlá = <span class="frac"><span class="frac-num">1</span><span class="frac-den">tg α</span></span></p></div></div><div class="term-item no-symbol"><div class="term-name">Súčet ostrých uhlov</div><p class="term-rule">90°</p></div><div class="term-item no-symbol"><div class="term-name">Pytagorova veta</div><p class="term-rule">Na dopočítanie tretej strany, keď poznáš zvyšné dve.</p></div></div>',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie: sin α=protiľahlá/prepona, cos α=priľahlá/prepona, tg α=protiľahlá/priľahlá, cotg α=priľahlá/protiľahlá. Súčet ostrých uhlov=90°. Pytagorova veta na dopočítanie tretej strany.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q1',

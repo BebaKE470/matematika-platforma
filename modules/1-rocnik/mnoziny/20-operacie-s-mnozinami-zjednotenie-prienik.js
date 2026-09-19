@@ -68,7 +68,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÉ POJMY",
         "title": "Dve operácie, dva významy",
-        "html": "<div class=\"term-list\"><div class=\"term-item\"><span class=\"term-symbol\">∪</span><div><div class=\"term-name\">Zjednotenie A ∪ B</div><p class=\"term-rule\">Obsahuje prvky, ktoré patria <strong>aspoň do jednej</strong> z množín A, B.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">∩</span><div><div class=\"term-name\">Prienik A ∩ B</div><p class=\"term-rule\">Obsahuje iba prvky, ktoré patria <strong>súčasne do A aj do B</strong>.</p></div></div></div><p>Symboly čítame: <strong>∪ – zjednotenie</strong>, <strong>∩ – prienik</strong>.</p>",
+        "html": "<div class=\"term-list\"><div class=\"term-item\"><span class=\"term-symbol\">∪</span><div><div class=\"term-name\">Zjednotenie A ∪ B</div><p class=\"term-rule\">Obsahuje prvky, ktoré patria <strong>aspoň do jednej</strong> z množín A, B.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">∩</span><div><div class=\"term-name\">Prienik A ∩ B</div><p class=\"term-rule\">Obsahuje iba prvky, ktoré patria <strong>súčasne do A aj do B</strong>.</p></div></div></div><p>Symboly čítame: <strong>∪ – zjednotenie</strong>, <strong>∩ – prienik</strong>.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>A={1,2,3}, B={3,4}. Potom A∪B={1,2,3,4} a A∩B={3}.</p></div>",
         "remember": "∪ = aspoň v jednej. ∩ = v oboch."
       },
       {
@@ -78,14 +78,6 @@ MathPlatform.registerModule({
         "title": "Alebo a zároveň v jazyku množín",
         "html": "<div class=\"logic-visual\"><svg viewBox=\"0 0 760 290\"><g font-family=\"system-ui\" text-anchor=\"middle\"><circle cx=\"315\" cy=\"130\" r=\"100\" fill=\"currentColor\" opacity=\".10\" stroke=\"currentColor\" stroke-width=\"3\"/><circle cx=\"445\" cy=\"130\" r=\"100\" fill=\"currentColor\" opacity=\".10\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"250\" y=\"55\" font-size=\"20\">A</text><text x=\"510\" y=\"55\" font-size=\"20\">B</text><text x=\"380\" y=\"260\" font-size=\"19\">∪ = aspoň v jednej · ∩ = v oboch</text></g></svg></div>",
         "continueLabel": "Pokračovať"
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>Zjednotenie A ∪ B</strong> — obsahuje prvky, ktoré patria aspoň do jednej z množín A, B.</p><p><strong>Prienik A ∩ B</strong> — obsahuje iba prvky, ktoré patria súčasne do A aj do B.</p><p>Príklad: A={1,2,3}, B={3,4}. Potom A∪B={1,2,3,4} a A∩B={3}.</p>",
-        "continueLabel": "Mám zapísané"
       },
       {
         "id": "start",

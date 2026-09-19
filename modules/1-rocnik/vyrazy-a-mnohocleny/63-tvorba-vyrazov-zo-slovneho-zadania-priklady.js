@@ -57,7 +57,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Kľúčové slová a operácie',
-        html: '<p>Slová v zadaní naznačujú, akú operáciu použiť: <strong>súčet</strong>/„o … viac“ → sčítanie, <strong>rozdiel</strong>/„o … menej“ → odčítanie, „<strong>…-krát viac</strong>“ → násobenie.</p><p>Príklad: „číslo x zväčšené o 7“ znamená <strong>x + 7</strong>.</p>',
+        html: '<p>Slová v zadaní naznačujú, akú operáciu použiť: <strong>súčet</strong>/„o … viac“ → sčítanie, <strong>rozdiel</strong>/„o … menej“ → odčítanie, „<strong>…-krát viac</strong>“ → násobenie.</p><p>Príklad: „číslo x zväčšené o 7“ znamená <strong>x + 7</strong>.</p><p>Pozor na slová ako „súčtu“ pri „dvojnásobok súčtu x a 3“ — vtedy sa násobí celá zátvorka: 2(x + 3).</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -67,14 +67,6 @@ MathPlatform.registerModule({
           'previesť slovný opis situácie na algebraický výraz',
           'určiť poradie operácií podľa významu vety, nie podľa poradia slov',
         ],
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Kľúčové slová pri prevode slovného textu na výraz:</p><p>„zväčšené o“, „súčet“ → +.  „zmenšené o“, „rozdiel“ → −.  „…-násobok“, „…-krát viac“ → ·.</p><p>Pozor na slová ako „súčtu“ pri „dvojnásobok súčtu x a 3“ — vtedy sa násobí celá zátvorka: 2(x + 3).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-basic1',

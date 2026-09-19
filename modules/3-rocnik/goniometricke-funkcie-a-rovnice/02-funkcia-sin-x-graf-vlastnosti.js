@@ -155,11 +155,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
+        "type": "explain",
+        "phase": "VLASTNOSTI",
         "title": "sin x – definícia a vlastnosti",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>FUNKCIA y = sin x</strong></p><p>Na jednotkovej kružnici je <strong>sin x</strong> y-ová súradnica bodu, ktorý zodpovedá číslu x.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Definičný obor</div><p class=\"term-rule\">D(sin) = ℝ</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obor hodnôt</div><p class=\"term-rule\">H(sin) = ⟨−1; 1⟩</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Perióda</div><p class=\"term-rule\">2π, teda sin(x + 2kπ) = sin x, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nuly</div><p class=\"term-rule\">x = kπ, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nepárnosť</div><p class=\"term-rule\">sin(−x) = −sin x.</p></div></div><p>Maximum funkcie je 1 pre x = π/2 + 2kπ a minimum je −1 pre x = 3π/2 + 2kπ, k ∈ ℤ.</p>",
-        "model": "Teoretický zápis je zobrazený celý v poli html; model sa v zjednodušenom notebook rendereri nezobrazuje."
+        "html": "<p><strong>FUNKCIA y = sin x</strong></p><p>Na jednotkovej kružnici je <strong>sin x</strong> y-ová súradnica bodu, ktorý zodpovedá číslu x.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Definičný obor</div><p class=\"term-rule\">D(sin) = ℝ</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obor hodnôt</div><p class=\"term-rule\">H(sin) = ⟨−1; 1⟩</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Perióda</div><p class=\"term-rule\">2π, teda sin(x + 2kπ) = sin x, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nuly</div><p class=\"term-rule\">x = kπ, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nepárnosť</div><p class=\"term-rule\">sin(−x) = −sin x.</p></div></div><p>Maximum funkcie je 1 pre x = π/2 + 2kπ a minimum je −1 pre x = 3π/2 + 2kπ, k ∈ ℤ.</p>"
       },
       {
         "id": "reflection",

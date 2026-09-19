@@ -78,16 +78,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Mocnina s racionálnym mocniteľom',
-        html: '<p>Pre a > 0 definujeme:</p><div class="formula">a^(1/n) = ⁿ√a<span class="formula-note">n-tá odmocnina z a</span></div><div class="formula">a^(m/n) = ⁿ√(aᵐ)<span class="formula-note">menovateľ n hovorí, akého stupňa je odmocnina, čitateľ m hovorí, na akú mocninu sa a najprv umocní</span></div>',
+        html: '<p>Pre a > 0 definujeme:</p><div class="formula">a^(1/n) = ⁿ√a<span class="formula-note">n-tá odmocnina z a</span></div><div class="formula">a^(m/n) = ⁿ√(aᵐ)<span class="formula-note">menovateľ n hovorí, akého stupňa je odmocnina, čitateľ m hovorí, na akú mocninu sa a najprv umocní</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>4^(3/2) = √(4³) = √64 = 8.</p></div>',
         remember: 'a^(1/n) = ⁿ√a.  a^(m/n) = ⁿ√(aᵐ)  (a > 0).',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pre a > 0:</p><div class="formula">a^(1/n) = ⁿ√a</div><div class="formula">a^(m/n) = ⁿ√(aᵐ)</div><p>Menovateľ zlomkového exponentu udáva stupeň odmocniny, čitateľ udáva, na akú mocninu sa základ umocní.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>4^(3/2) = √(4³) = √64 = 8.</p></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-half',

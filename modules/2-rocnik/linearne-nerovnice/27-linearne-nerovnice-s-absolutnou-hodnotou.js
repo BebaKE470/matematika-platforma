@@ -103,15 +103,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "POCHOP",
         "title": "Dva základné tvary",
-        "html": "<p>Pre r &gt; 0:</p><div class=\"formula\">|x−a| &lt; r ⇔ a−r &lt; x &lt; a+r<span class=\"formula-note\">Pri „viac ako“ dostaneme dve vonkajšie časti: |x−a| &gt; r ⇔ x &lt; a−r alebo x &gt; a+r. Pri ≤ a ≥ sa krajné body zahrnú.</span></div>"
-      },
-      {
-        "id": "n",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<span class=\"mini-label\">NEROVNICE S ABSOLÚTNOU HODNOTOU – VZDIALENOSŤ</span><p>Pre r &gt; 0:</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">|x−a| &lt; r</div><p class=\"term-rule\">⇔ a−r &lt; x &lt; a+r</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">|x−a| ≤ r</div><p class=\"term-rule\">⇔ a−r ≤ x ≤ a+r</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">|x−a| &gt; r</div><p class=\"term-rule\">⇔ x &lt; a−r alebo x &gt; a+r</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">|x−a| ≥ r</div><p class=\"term-rule\">⇔ x ≤ a−r alebo x ≥ a+r</p></div></div>",
-        "continueLabel": "Mám zapísané"
+        "html": "<p>Pre r &gt; 0:</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">|x−a| &lt; r</div><p class=\"term-rule\">⇔ a−r &lt; x &lt; a+r</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">|x−a| ≤ r</div><p class=\"term-rule\">⇔ a−r ≤ x ≤ a+r</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">|x−a| &gt; r</div><p class=\"term-rule\">⇔ x &lt; a−r alebo x &gt; a+r</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">|x−a| ≥ r</div><p class=\"term-rule\">⇔ x ≤ a−r alebo x ≥ a+r</p></div></div>"
       },
       {
         "id": "c2",

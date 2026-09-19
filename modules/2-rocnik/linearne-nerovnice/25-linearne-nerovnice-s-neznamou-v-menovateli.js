@@ -100,11 +100,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "n",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<span class=\"mini-label\">NEROVNICA S NEZNÁMOU V MENOVATELI</span><ol class=\"steps\"><li>Určíme definičné podmienky.</li><li>Nájdeme kritické body.</li><li>Rozdelíme číselnú os na intervaly.</li><li>Určíme znamienko výrazu na intervaloch.</li><li>Vyberieme intervaly spĺňajúce nerovnicu.</li><li>Skontrolujeme, že vylúčené hodnoty nie sú v riešení.</li></ol>",
-        "continueLabel": "Mám zapísané"
+        "type": "explain",
+        "phase": "POCHOP",
+        "title": "Postup pri neznámej v menovateli",
+        "html": "<ol class=\"steps\"><li>Určíme definičné podmienky.</li><li>Nájdeme kritické body.</li><li>Rozdelíme číselnú os na intervaly.</li><li>Určíme znamienko výrazu na intervaloch.</li><li>Vyberieme intervaly spĺňajúce nerovnicu.</li><li>Skontrolujeme, že vylúčené hodnoty nie sú v riešení.</li></ol>"
       },
       {
         "id": "c2",

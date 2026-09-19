@@ -72,16 +72,8 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Úprava vzorca na výpočet uhla',
-        html: '<p>Z kosínusovej vety a²=b²+c²−2bc·cosα vyjadríme cos α:</p><div class="formula">cos α = <span class="frac"><span class="frac-num">b²+c²−a²</span><span class="frac-den">2bc</span></span></div><p>Keď poznáme všetky tri strany, vieme takto dopočítať ktorýkoľvek uhol.</p>',
+        html: '<p>Z kosínusovej vety a²=b²+c²−2bc·cosα vyjadríme cos α:</p><div class="formula">cos α = <span class="frac"><span class="frac-num">b²+c²−a²</span><span class="frac-den">2bc</span></span></div><p>Keď poznáme všetky tri strany, vieme takto dopočítať ktorýkoľvek uhol. Ak vyjde cos uhla = 0, uhol je 90°; ak vyjde záporné číslo, uhol je tupý.</p>',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula">cos α = <span class="frac"><span class="frac-num">b²+c²−a²</span><span class="frac-den">2bc</span></span><span class="formula-note">(analogicky pre β, γ)</span></div><p>Ak vyjde cos uhla = 0, uhol je 90°; ak vyjde záporné číslo, uhol je tupý.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-formula',

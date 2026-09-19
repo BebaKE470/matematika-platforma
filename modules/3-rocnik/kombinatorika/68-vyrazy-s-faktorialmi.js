@@ -84,14 +84,6 @@ MathPlatform.registerModule({
         remember: '(n+1)!=(n+1)·n!. n!=n·(n−1)·...·(n−k+1)·(n−k)! — rozpíš toľko členov, koľko treba na skrátenie.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zjednodušovanie výrazov s faktoriálmi: rozpíš väčší faktoriál na súčin tak, aby sa dal skrátiť s menším faktoriálom v menovateli. (n+1)!=(n+1)·n!. n!=n·(n−1)·...·(n−k+1)·(n−k)!. Výsledok vždy over dosadením konkrétneho n.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',

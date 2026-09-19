@@ -75,14 +75,6 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
-        id: 'notebook-1',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Predpony jednotiek ako mocniny desiatky: kilo- = 10³, mili- = 10⁻³, mikro- = 10⁻⁶.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-prefix',
         type: 'choice',
         phase: 'OVER SI',
@@ -100,14 +92,6 @@ MathPlatform.registerModule({
         title: 'Porovnávanie čísel vo vedeckom zápise',
         html: '<p>Ak sú obe čísla vo vedeckom zápise s koeficientom medzi 1 a 10, väčšie je to, ktoré má <strong>väčší exponent</strong>. Pri rovnakom exponente rozhoduje väčší koeficient.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>3 · 10⁵ &lt; 2 · 10⁷, pretože exponent 7 je väčší ako 5, hoci koeficient 2 je menší ako 3.</p></div>',
         remember: 'Väčší exponent = väčšie číslo (pri koeficiente 1–10). Pri rovnakom exponente rozhoduje koeficient.',
-      },
-      {
-        id: 'notebook-2',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pri porovnávaní čísel vo vedeckom zápise (koeficient 1–10) rozhoduje najprv exponent, potom koeficient.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-compare',
@@ -161,11 +145,11 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook-3',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pri násobení čísel vo vedeckom zápise sa koeficienty násobia a exponenty sčítajú.</p>',
-        continueLabel: 'Mám zapísané',
+        type: 'explain',
+        phase: 'NOVÝ POJEM / PRAVIDLO',
+        title: 'Násobenie čísel vo vedeckom zápise',
+        html: '<p>Pri násobení čísel vo vedeckom zápise sa koeficienty násobia medzi sebou a exponenty sa sčítajú.</p><div class="formula">(a · 10ᵐ) · (b · 10ⁿ) = (a · b) · 10ᵐ⁺ⁿ</div>',
+        remember: 'Pri násobení čísel vo vedeckom zápise: koeficienty sa násobia, exponenty sa sčítajú.',
       },
       {
         id: 'argument',

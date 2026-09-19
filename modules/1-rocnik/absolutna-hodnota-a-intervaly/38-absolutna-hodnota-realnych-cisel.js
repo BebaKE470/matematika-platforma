@@ -84,15 +84,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Nový zápis: absolútna hodnota",
-        "html": "<p>Absolútnu hodnotu čísla <strong>x</strong> zapisujeme <strong>|x|</strong> a čítame „absolútna hodnota x“.</p><div class=\"formula\">|x| je vzdialenosť čísla x od nuly na číselnej osi.<span class=\"formula-note\">Preto nikdy nie je záporná.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLADY</span><p>|5| = 5, |−5| = 5, |0| = 0.</p></div>"
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>Absolútna hodnota čísla x</strong> je jeho vzdialenosť od nuly na číselnej osi.</p><p>Zápis: <strong>|x|</strong>.</p><p>Platí: |x| ≥ 0; |5| = 5; |−5| = 5; |0| = 0.</p>",
-        "continueLabel": "Mám zapísané"
+        "html": "<p>Absolútnu hodnotu čísla <strong>x</strong> zapisujeme <strong>|x|</strong> a čítame „absolútna hodnota x“.</p><div class=\"formula\">|x| je vzdialenosť čísla x od nuly na číselnej osi.<span class=\"formula-note\">Preto platí |x| ≥ 0 — nikdy nie je záporná.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLADY</span><p>|5| = 5, |−5| = 5, |0| = 0.</p></div>"
       },
       {
         "id": "abs1",
@@ -166,7 +158,7 @@ MathPlatform.registerModule({
       {
         "id": "manual",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Bez mobilu",
         "html": "<p>Do zošita zakresli číselnú os a vyznač body −6, −2, 0, 2, 6. Ku každému zapíš absolútnu hodnotu. Potom jednou vetou opíš, čo si všimol/a pri opačných číslach.</p>",
         "continueLabel": "Mám zapísané"

@@ -101,11 +101,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
+        "type": "explain",
+        "phase": "NOVÝ KROK",
         "title": "Riešenie goniometrických rovníc",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Kontrola riešenia goniometrickej rovnice</strong></p><p>Po vyriešení rovnice skontrolujeme: podmienky, všeobecné riešenie, periodicitu a prípadný zadaný interval.</p><div class=\"warning\"><strong>Pozor:</strong> Ak sme pri úpravách delili výrazom s neznámou, osobitne preveríme hodnoty, pri ktorých je tento výraz nulový.</div>",
-        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
+        "html": "<p><strong>Kontrola riešenia goniometrickej rovnice</strong></p><p>Po vyriešení rovnice skontrolujeme: podmienky, všeobecné riešenie, periodicitu a prípadný zadaný interval.</p><div class=\"warning\"><strong>Pozor:</strong> Ak sme pri úpravách delili výrazom s neznámou, osobitne preveríme hodnoty, pri ktorých je tento výraz nulový.</div>"
       },
       {
         "id": "check",
@@ -126,7 +125,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Rieš ručne",
         "html": "<p>Vytvor v zošite jeden vlastný príklad k téme <strong>Riešenie goniometrických rovníc</strong>. Každý krok označ vzťahom alebo dôvodom, ktorý používaš.</p>",
         "model": "Zápis do zošita môže obsahovať opravu. Dôležité je, aby bolo vidieť, prečo jednotlivé kroky platia."

@@ -84,15 +84,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Vzdialenosť od iného bodu",
-        "html": "<div class=\"formula\">Zápis |x − a| vyjadruje vzdialenosť čísla x od čísla a.</div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>|x − 2| ≤ 3 znamená: x je od čísla 2 vzdialené najviac 3 jednotky.</p><p>Na osi sa dostaneme od 2 − 3 = −1 po 2 + 3 = 5, teda <strong>x ∈ ⟨−1; 5⟩</strong>.</p></div><div class=\"warning\"><strong>Pozor:</strong> Neuč sa to ako trik so znamienkami; vždy si predstav stred a vzdialenosť.</div>"
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p>|x| je vzdialenosť x od 0.</p><p>|x − a| je vzdialenosť x od a.</p><p>Príklad: |x − 2| ≤ 3 znamená, že x je od 2 vzdialené najviac 3, preto x ∈ ⟨−1; 5⟩.</p><p>Pri ostrej nerovnosti &lt; krajné body nepatria; pri ≤ patria.</p>",
-        "continueLabel": "Mám zapísané"
+        "html": "<div class=\"formula\">Zápis |x − a| vyjadruje vzdialenosť čísla x od čísla a.</div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>|x − 2| ≤ 3 znamená: x je od čísla 2 vzdialené najviac 3 jednotky.</p><p>Na osi sa dostaneme od 2 − 3 = −1 po 2 + 3 = 5, teda <strong>x ∈ ⟨−1; 5⟩</strong>.</p></div><div class=\"warning\"><strong>Pozor:</strong> Neuč sa to ako trik so znamienkami; vždy si predstav stred a vzdialenosť.</div><p>Pri ostrej nerovnosti &lt; krajné body nepatria; pri ≤ patria.</p>"
       },
       {
         "id": "abs-int1",
@@ -166,7 +158,7 @@ MathPlatform.registerModule({
       {
         "id": "manual",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Riešenie bez mobilu",
         "html": "<p>V zošite vyrieš pomocou číselnej osi: <strong>a) |x| ≤ 5, b) |x − 4| &lt; 2, c) |x + 2| ≤ 1</strong>. Pri každej úlohe vyznač stred, vzdialenosť, krajné body a výsledný interval.</p>",
         "continueLabel": "Mám zapísané"

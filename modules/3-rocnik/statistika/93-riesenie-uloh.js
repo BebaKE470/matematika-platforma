@@ -68,11 +68,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
+        type: 'explain',
+        phase: 'POCHOP',
+        title: 'Postup krok za krokom',
         html: '<p>Pri riešení úlohy s charakteristikami polohy:</p><ol class="steps"><li>Urč, ktoré hodnoty tvoria súbor.</li><li>Usporiadaj ich (pre medián).</li><li>Vypočítaj priemer, medián a modus.</li><li>Zváž, či nie je súbor ovplyvnený extrémnymi hodnotami (vtedy je medián spoľahlivejší ako priemer).</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q1',

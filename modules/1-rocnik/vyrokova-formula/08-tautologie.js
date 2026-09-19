@@ -117,7 +117,7 @@ MathPlatform.registerModule({
       {
         "id": "nb",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Over si tautológiu ručne",
         "html": "<p>Vytvor pravdivostnú tabuľku pre <strong>A ⇒ A</strong> a podľa výsledného stĺpca rozhodni, o aký typ výroku ide.</p>",
         "model": "<strong>VZOR:</strong> pri A=1 je 1⇒1 pravdivé; pri A=0 je 0⇒0 pravdivé. Výsledný stĺpec je 1, 1, preto ide o tautológiu."

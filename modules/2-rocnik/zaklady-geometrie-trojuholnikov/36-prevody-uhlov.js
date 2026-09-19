@@ -80,16 +80,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Prevodové vzorce',
-        html: '<div class="formula"><span class="mini-label">STUPNE → RADIÁNY</span>α[rad] = α[°] · <span class="frac"><span class="frac-num">π</span><span class="frac-den">180</span></span></div><div class="formula"><span class="mini-label">RADIÁNY → STUPNE</span>α[°] = α[rad] · <span class="frac"><span class="frac-num">180</span><span class="frac-den">π</span></span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>60° = 60 · <span class="frac"><span class="frac-num">π</span><span class="frac-den">180</span></span> = <span class="frac"><span class="frac-num">π</span><span class="frac-den">3</span></span> rad</p></div>',
+        html: '<div class="formula"><span class="mini-label">STUPNE → RADIÁNY</span>α[rad] = α[°] · <span class="frac"><span class="frac-num">π</span><span class="frac-den">180</span></span></div><div class="formula"><span class="mini-label">RADIÁNY → STUPNE</span>α[°] = α[rad] · <span class="frac"><span class="frac-num">180</span><span class="frac-den">π</span></span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>60° = 60 · <span class="frac"><span class="frac-num">π</span><span class="frac-den">180</span></span> = <span class="frac"><span class="frac-num">π</span><span class="frac-den">3</span></span> rad. Opačne: <span class="frac"><span class="frac-num">π</span><span class="frac-den">4</span></span> rad = 45°.</p></div>',
         remember: 'stupne → radiány: ·π/180.  radiány → stupne: ·180/π.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="mini-label">STUPNE → RADIÁNY</span>α[rad] = α[°] · <span class="frac"><span class="frac-num">π</span><span class="frac-den">180</span></span></div><div class="formula"><span class="mini-label">RADIÁNY → STUPNE</span>α[°] = α[rad] · <span class="frac"><span class="frac-num">180</span><span class="frac-den">π</span></span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>60° = <span class="frac"><span class="frac-num">π</span><span class="frac-den">3</span></span> rad. Príklad opačne: <span class="frac"><span class="frac-num">π</span><span class="frac-den">4</span></span> rad = 45°.</p></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-to-rad',

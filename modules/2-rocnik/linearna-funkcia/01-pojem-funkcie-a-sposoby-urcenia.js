@@ -100,13 +100,6 @@ MathPlatform.registerModule({
         "remember": "jeden dovolený vstup → práve jeden výstup"
       },
       {
-        "id": "clean-a",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>NADPIS:</strong> Funkcia – pojem a spôsoby určenia</p><p><strong>TEÓRIA:</strong> Funkcia každému dovolenému vstupu priraďuje práve jeden výstup.</p>"
-      },
-      {
         "id": "isfunction",
         "type": "sortChoice",
         "phase": "OVER SI",
@@ -150,10 +143,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean-b",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>TEÓRIA:</strong> Funkciu môžeme určiť slovne, tabuľkou, predpisom alebo grafom. Zápis f(x) označuje funkčnú hodnotu pri vstupe x, napríklad pre f(x)=2x+1 platí f(3)=7.</p>"
+        "type": "explain",
+        "phase": "REPREZENTÁCIE",
+        "title": "Zhrnutie: zápis a reprezentácie funkcie",
+        "html": "<p>Funkciu môžeme určiť slovne, tabuľkou, predpisom alebo grafom. Zápis f(x) označuje funkčnú hodnotu pri vstupe x, napríklad pre f(x)=2x+1 platí f(3)=7.</p>"
       },
       {
         "id": "repcheck",
@@ -175,7 +168,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Prepoj reprezentácie",
         "html": "<p>Do zošita si vytvor malú tabuľku pre <strong>f(x)=2x+1</strong> a vstupy −1, 0, 1, 2. Potom body zakresli do súradnicovej sústavy.</p>",
         "model": "<strong>KONTROLA:</strong> hodnoty sú −1, 1, 3, 5. Body: [−1;−1], [0;1], [1;3], [2;5]."

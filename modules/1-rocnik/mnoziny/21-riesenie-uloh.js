@@ -77,11 +77,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p>Pri úlohách typu „koľko je aspoň v jednej z dvoch množín“ platí:</p><div class=\"formula\">|A ∪ B| = |A| + |B| − |A ∩ B|</div><p>Spoločné prvky (A∩B) sa v súčte |A|+|B| započítajú dvakrát, preto ich raz odčítame.</p><p>Príklad: 12 žiakov hrá futbal, 8 volejbal, 3 oboje → 12 + 8 − 3 = 17 žiakov hrá aspoň jeden šport.</p>",
-        "continueLabel": "Mám zapísané"
+        "type": "explain",
+        "phase": "NOVÝ ZÁPIS",
+        "title": "Vzorec „aspoň v jednej z dvoch“",
+        "html": "<p>Pri úlohách typu „koľko je aspoň v jednej z dvoch množín“ platí:</p><div class=\"formula\">|A ∪ B| = |A| + |B| − |A ∩ B|</div><p>Spoločné prvky (A∩B) sa v súčte |A|+|B| započítajú dvakrát, preto ich raz odčítame.</p><p>Príklad: 12 žiakov hrá futbal, 8 volejbal, 3 oboje → 12 + 8 − 3 = 17 žiakov hrá aspoň jeden šport.</p>"
       },
       {
         "id": "logiclink",

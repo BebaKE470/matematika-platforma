@@ -81,14 +81,6 @@ MathPlatform.registerModule({
         "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Kosodĺžnik má strany a = 8 cm, b = 5 cm a uhol medzi nimi α = 30°.</p><p>S = a·b·sin α = 8·5·0,5 = <strong>20 cm²</strong></p><p>(sin 30° = 0,5)</p></div>"
       },
       {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Obvod a obsah kosodĺžnika",
-        "html": "<p><strong>TEÓRIA:</strong> S=a·vₐ; pri známych stranách a uhle možno využiť S=a·b·sin α.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
-        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
-      },
-      {
         "id": "meaning",
         "type": "explain",
         "phase": "VÝZNAM",
@@ -115,7 +107,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Náčrt a riešenie",
         "html": "<p>Do zošita si načrtni situáciu k téme <strong>Obvod a obsah kosodĺžnika</strong>, označ známe a hľadané veličiny a vyrieš jeden číselný príklad. Jednotky zapisuj pri medzivýsledkoch aj výsledku.</p>",
         "model": "Kontrola: náčrt → údaje → vzťah → dosadenie → výpočet → jednotka → odpoveď."

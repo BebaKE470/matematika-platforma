@@ -81,14 +81,6 @@ MathPlatform.registerModule({
         "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Trojuholník má stranu a = 8 cm a k nej prislúchajúcu výšku vₐ = 5 cm. Ostatné dve strany sú 6 cm a 7 cm.</p><p>S = <span class=\"frac\"><span class=\"frac-num\">a·vₐ</span><span class=\"frac-den\">2</span></span> = <span class=\"frac\"><span class=\"frac-num\">8·5</span><span class=\"frac-den\">2</span></span> = <strong>20 cm²</strong></p><p>o = 8 + 6 + 7 = <strong>21 cm</strong></p></div>"
       },
       {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Obvod a obsah trojuholníka",
-        "html": "<p><strong>TEÓRIA:</strong> S = <span class=\"frac\"><span class=\"frac-num\">a·vₐ</span><span class=\"frac-den\">2</span></span>; obvod je súčet troch strán.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
-        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
-      },
-      {
         "id": "meaning",
         "type": "explain",
         "phase": "VÝZNAM",
@@ -115,7 +107,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Náčrt a riešenie",
         "html": "<p>Do zošita si načrtni situáciu k téme <strong>Obvod a obsah trojuholníka</strong>, označ známe a hľadané veličiny a vyrieš jeden číselný príklad. Jednotky zapisuj pri medzivýsledkoch aj výsledku.</p>",
         "model": "Kontrola: náčrt → údaje → vzťah → dosadenie → výpočet → jednotka → odpoveď."

@@ -81,16 +81,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Postup riešenia kvadratickej nerovnice',
-        html: '<p>Pre nerovnicu ax²+bx+c &gt; 0 (alebo &lt;, ≥, ≤):</p><ol class="steps"><li>Nájdi korene x₁≤x₂ rovnice ax²+bx+c=0.</li><li>Podľa orientácie paraboly urči znak na intervaloch.</li></ol><div class="term-list"><div class="term-item no-symbol"><div class="term-name">a &gt; 0 (nahor)</div><p class="term-rule">Výraz je <span class="hl">záporný medzi koreňmi</span> (x₁,x₂), <span class="hl">kladný mimo nich</span> (x&lt;x₁ alebo x&gt;x₂).</p></div><div class="term-item no-symbol"><div class="term-name">a &lt; 0 (nadol)</div><p class="term-rule">Naopak — kladný medzi koreňmi, záporný mimo nich.</p></div></div>',
-        remember: 'a>0: mimo koreňov kladné, medzi koreňmi záporné. a<0: naopak.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Riešenie kvadratickej nerovnice:</strong> nájdi korene x₁≤x₂ príslušnej rovnice. Ak a&gt;0: výraz je kladný mimo koreňov, záporný medzi nimi. Ak a&lt;0: naopak. Pri neostrej nerovnosti (≤,≥) sa korene zahŕňajú do riešenia (uzavretý interval), pri ostrej (&lt;,&gt;) nie.</p>',
-        continueLabel: 'Mám zapísané',
+        html: '<p>Pre nerovnicu ax²+bx+c &gt; 0 (alebo &lt;, ≥, ≤):</p><ol class="steps"><li>Nájdi korene x₁≤x₂ rovnice ax²+bx+c=0.</li><li>Podľa orientácie paraboly urči znak na intervaloch.</li></ol><div class="term-list"><div class="term-item no-symbol"><div class="term-name">a &gt; 0 (nahor)</div><p class="term-rule">Výraz je <span class="hl">záporný medzi koreňmi</span> (x₁,x₂), <span class="hl">kladný mimo nich</span> (x&lt;x₁ alebo x&gt;x₂).</p></div><div class="term-item no-symbol"><div class="term-name">a &lt; 0 (nadol)</div><p class="term-rule">Naopak — kladný medzi koreňmi, záporný mimo nich.</p></div></div><p>Pri neostrej nerovnosti (≤, ≥) sa korene zahŕňajú do riešenia (uzavretý interval), pri ostrej (&lt;, &gt;) nie.</p>',
+        remember: 'a>0: mimo koreňov kladné, medzi koreňmi záporné. a<0: naopak. Neostrá nerovnosť zahŕňa korene, ostrá nie.',
       },
       {
         id: 'q-basic',

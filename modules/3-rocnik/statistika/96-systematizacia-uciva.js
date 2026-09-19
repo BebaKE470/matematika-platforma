@@ -63,16 +63,8 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie celého celku',
-        html: '<p>Absolútna/relatívna početnosť. Priemer=súčet/počet. Medián=prostredná hodnota po usporiadaní. Modus=najčastejšia hodnota. Rozpätie=max−min. Rozptyl=priemer druhých mocnín odchýlok. Smerodajná odchýlka=√rozptyl.</p>',
+        html: '<p>Absolútna/relatívna početnosť. Priemer=súčet/počet. Medián=prostredná hodnota po usporiadaní. Modus=najčastejšia hodnota. Rozpätie=max−min. Rozptyl=priemer druhých mocnín odchýlok. Smerodajná odchýlka=√rozptyl.</p><p>Charakteristiky polohy a variability sa vždy dopĺňajú — samotný priemer nestačí na plný opis súboru.</p>',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie: absolútna/relatívna početnosť, priemer, medián, modus (charakteristiky polohy), variačné rozpätie, rozptyl, smerodajná odchýlka (charakteristiky variability). Priemer aj charakteristiky variability sa vždy dopĺňajú — samotný priemer nestačí na plný opis súboru.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q1',

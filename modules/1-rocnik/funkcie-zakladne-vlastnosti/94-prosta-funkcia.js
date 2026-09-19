@@ -84,14 +84,6 @@ MathPlatform.registerModule({
         remember: 'Prostá funkcia: x₁ ≠ x₂ ⇒ f(x₁) ≠ f(x₂). Stačí jeden protipríklad, aby funkcia nebola prostá.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Funkcia f je <strong>prostá</strong>, ak rôznym hodnotám x vždy zodpovedajú rôzne hodnoty f(x): x₁ ≠ x₂ ⇒ f(x₁) ≠ f(x₂).</p><p>Na to, aby funkcia NEBOLA prostá, stačí nájsť JEDEN protipríklad — dve rôzne x s rovnakou funkčnou hodnotou.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-not-prosta',
         type: 'choice',
         phase: 'OVER SI',

@@ -82,16 +82,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Dosadzovanie záporného čísla',
-        html: '<p>Ak dosadzuješ záporné číslo, vždy ho <strong>ohraď zátvorkou</strong>, aby si sa vyhol chybe v znamienku.</p><p>Príklad: pre výraz x² dosaď x = −3.</p><div class="compare"><div class="bad"><span class="mini-label">ČASTÁ CHYBA</span><p>−3² = −9</p></div><div class="good"><span class="mini-label">SPRÁVNE</span><p>(−3)² = 9</p></div></div>',
+        html: '<p>Pri dosadzovaní čísla za premennú vždy dodrž poradie operácií (najprv zátvorky a mocniny, potom násobenie/delenie, nakoniec sčítanie/odčítanie).</p><p>Ak dosadzuješ záporné číslo, vždy ho <strong>ohraď zátvorkou</strong>, aby si sa vyhol chybe v znamienku.</p><p>Príklad: pre výraz x² dosaď x = −3.</p><div class="compare"><div class="bad"><span class="mini-label">ČASTÁ CHYBA</span><p>−3² = −9</p></div><div class="good"><span class="mini-label">SPRÁVNE</span><p>(−3)² = 9</p></div></div>',
         remember: 'Záporné číslo pri dosadzovaní vždy ohraď zátvorkou: x = −3 → (−3).',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pri dosadzovaní čísla za premennú vždy dodrž poradie operácií (najprv zátvorky a mocniny, potom násobenie/delenie, nakoniec sčítanie/odčítanie).</p><p>Záporné číslo pri dosadzovaní vždy ohraď zátvorkou: x = −3 → dosadíme ako (−3), nielen −3 bez zátvorky.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-basic',

@@ -85,14 +85,6 @@ MathPlatform.registerModule({
         remember: 'Rozpätie=max−min. Rozptyl=priemer druhých mocnín odchýlok od priemeru. Smerodajná odchýlka=√rozptyl.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Variačné rozpätie</div><p class="term-rule">Max−min.</p></div><div class="term-item no-symbol"><div class="term-name">Rozptyl</div><p class="term-rule">Priemer druhých mocnín odchýlok jednotlivých hodnôt od aritmetického priemeru.</p></div><div class="term-item no-symbol"><div class="term-name">Smerodajná odchýlka</div><p class="term-rule">Odmocnina z rozptylu — vyjadruje typickú veľkosť odchýlky v pôvodných jednotkách.</p></div></div>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-range',
         type: 'choice',
         phase: 'OVER SI',

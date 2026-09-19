@@ -81,16 +81,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Definícia tangensu a kotangensu',
-        html: '<div class="term-list"><div class="term-item"><span class="term-symbol">tg</span><div><div class="term-name">tg α</div><p class="term-rule">protiľahlá odvesna / priľahlá odvesna = <span class="frac"><span class="frac-num">sin α</span><span class="frac-den">cos α</span></span></p></div></div><div class="term-item"><span class="term-symbol">cotg</span><div><div class="term-name">cotg α</div><p class="term-rule">priľahlá odvesna / protiľahlá odvesna = <span class="frac"><span class="frac-num">1</span><span class="frac-den">tg α</span></span></p></div></div></div>',
+        html: '<div class="term-list"><div class="term-item"><span class="term-symbol">tg</span><div><div class="term-name">tg α</div><p class="term-rule">protiľahlá odvesna / priľahlá odvesna = <span class="frac"><span class="frac-num">sin α</span><span class="frac-den">cos α</span></span></p></div></div><div class="term-item"><span class="term-symbol">cotg</span><div><div class="term-name">cotg α</div><p class="term-rule">priľahlá odvesna / protiľahlá odvesna = <span class="frac"><span class="frac-num">1</span><span class="frac-den">tg α</span></span></p></div></div></div><p>Na rozdiel od sin α, cos α, tangens ani kotangens neobsahujú preponu.</p>',
         remember: 'tg α = protiľahlá/priľahlá = sin α/cos α. cotg α = priľahlá/protiľahlá = 1/tg α.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>tg α = protiľahlá/priľahlá = <span class="frac"><span class="frac-num">sin α</span><span class="frac-den">cos α</span></span></strong>.</p><p><strong>cotg α = priľahlá/protiľahlá = <span class="frac"><span class="frac-num">1</span><span class="frac-den">tg α</span></span></strong>.</p><p>Na rozdiel od sin α, cos α, tangens ani kotangens neobsahujú preponu.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-tan',

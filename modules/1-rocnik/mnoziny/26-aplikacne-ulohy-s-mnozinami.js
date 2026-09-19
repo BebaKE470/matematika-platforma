@@ -89,11 +89,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p>Pre dve množiny platí:</p><div class=\"formula\">|A ∪ B| = |A| + |B| − |A ∩ B|</div><p>Spoločné prvky (A∩B) sa v súčte |A|+|B| započítajú dvakrát, preto ich raz odčítame.</p><p>Príklad: 18 žiakov ide autobusom, 14 električkou, 6 oboma → |A∪B| = 18+14−6 = 26 žiakov používa aspoň jeden dopravný prostriedok.</p>",
-        "continueLabel": "Mám zapísané"
+        "type": "explain",
+        "phase": "NOVÝ ZÁPIS",
+        "title": "Vzorec „aspoň v jednej z dvoch“",
+        "html": "<p>Pre dve množiny platí:</p><div class=\"formula\">|A ∪ B| = |A| + |B| − |A ∩ B|</div><p>Spoločné prvky (A∩B) sa v súčte |A|+|B| započítajú dvakrát, preto ich raz odčítame.</p><p>Príklad: 18 žiakov ide autobusom, 14 električkou, 6 oboma → |A∪B| = 18+14−6 = 26 žiakov používa aspoň jeden dopravný prostriedok.</p>"
       },
       {
         "id": "matura",

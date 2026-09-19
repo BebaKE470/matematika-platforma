@@ -101,11 +101,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
+        "type": "explain",
+        "phase": "NOVÝ KROK",
         "title": "Základné goniometrické vzorce",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Základné goniometrické vzorce</strong></p><div class=\"formula\">sin²x + cos²x = 1<span class=\"formula-note\">odtiaľ: sin²x = 1 − cos²x a cos²x = 1 − sin²x.</span></div><div class=\"formula\">tg x = <span class=\"frac\"><span class=\"frac-num\">sin x</span><span class=\"frac-den\">cos x</span></span><span class=\"formula-note\">platí, ak cos x ≠ 0.</span></div>",
-        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
+        "html": "<p><strong>Základné goniometrické vzorce</strong></p><div class=\"formula\">sin²x + cos²x = 1<span class=\"formula-note\">odtiaľ: sin²x = 1 − cos²x a cos²x = 1 − sin²x.</span></div><div class=\"formula\">tg x = <span class=\"frac\"><span class=\"frac-num\">sin x</span><span class=\"frac-den\">cos x</span></span><span class=\"formula-note\">platí, ak cos x ≠ 0.</span></div>"
       },
       {
         "id": "check",
@@ -126,7 +125,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Rieš ručne",
         "html": "<p>Vytvor v zošite jeden vlastný príklad k téme <strong>Základné goniometrické vzorce</strong>. Každý krok označ vzťahom alebo dôvodom, ktorý používaš.</p>",
         "model": "Zápis do zošita môže obsahovať opravu. Dôležité je, aby bolo vidieť, prečo jednotlivé kroky platia."

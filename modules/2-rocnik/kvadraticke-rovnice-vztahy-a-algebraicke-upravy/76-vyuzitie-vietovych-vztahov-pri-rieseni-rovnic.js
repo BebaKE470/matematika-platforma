@@ -83,14 +83,6 @@ MathPlatform.registerModule({
         remember: 'Odhad: p+q=−b, p·q=c → korene. Zostavenie: x²−(x₁+x₂)x+x₁·x₂=0.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Odhad koreňov</strong> (a=1): pre x²+bx+c=0 hľadaj dve čísla p, q so súčtom −b a súčinom c.</p><p><strong>Zostavenie rovnice z koreňov:</strong> x²−(x₁+x₂)x+x₁·x₂=0.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-guess',
         type: 'choice',
         phase: 'OVER SI',

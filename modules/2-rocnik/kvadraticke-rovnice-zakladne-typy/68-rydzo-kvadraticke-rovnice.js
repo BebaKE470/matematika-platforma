@@ -87,14 +87,6 @@ MathPlatform.registerModule({
         remember: 'ax²+c=0 → x²=−c/a → x=±√(−c/a) (ak je pravá strana ≥0).',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="mini-label">RÝDZO KVADRATICKÁ ROVNICA</span>ax² + c = 0<span class="formula-note">a≠0, bez lineárneho člena</span></div><ol class="steps"><li>Izoluj x² (x²=<span class="frac"><span class="frac-num">−c</span><span class="frac-den">a</span></span>).</li><li>Ak je pravá strana ≥0, riešenia sú x=±√<span class="frac"><span class="frac-num">−c</span><span class="frac-den">a</span></span>; ak je záporná, rovnica nemá reálne riešenie.</li></ol>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',

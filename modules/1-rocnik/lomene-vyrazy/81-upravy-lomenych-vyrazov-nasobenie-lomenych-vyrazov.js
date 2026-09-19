@@ -85,14 +85,6 @@ MathPlatform.registerModule({
         remember: 'a/b · c/d = (ac)/(bd). Kráť pred násobením, ak je to možné.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> · <span class="frac"><span class="frac-num">c</span><span class="frac-den">d</span></span> = <span class="frac"><span class="frac-num">ac</span><span class="frac-den">bd</span></span><span class="formula-note">Čitateľ krát čitateľ, menovateľ krát menovateľ.</span></div><p>Kráť pred násobením, ak je to možné — je to jednoduchšie a rýchlejšie ako krátiť až po vynásobení veľkých výrazov.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',

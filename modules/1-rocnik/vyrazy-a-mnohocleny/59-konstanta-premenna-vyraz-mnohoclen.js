@@ -80,14 +80,6 @@ MathPlatform.registerModule({
         remember: 'Jednočlen = koeficient · premenná (v mocnine). Mnohočlen = súčet jednočlenov (členov).',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Konštanta</strong> — pevné číslo (nemení sa). <strong>Premenná</strong> — písmeno zastupujúce ľubovoľné číslo.</p><p><strong>Jednočlen</strong> — súčin koeficientu a premennej (v mocnine), napr. 4x².</p><p><strong>Mnohočlen</strong> — súčet viacerých jednočlenov (členov), napr. 4x² + 3x − 7.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-coefficient',
         type: 'choice',
         phase: 'OVER SI',

@@ -88,13 +88,6 @@ MathPlatform.registerModule({
         "ariaLabel": "Graf rastúcej funkcie f(x) = 2x + 1"
       },
       {
-        "id": "clean-a",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>TEÓRIA:</strong> Pre f(x)=ax+b: a&gt;0 rastúca, a&lt;0 klesajúca, a=0 konštantná.</p>"
-      },
-      {
         "id": "sign",
         "type": "choice",
         "phase": "OVER SI",
@@ -121,10 +114,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean-b",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>TEÓRIA:</strong> Bod [0;b] je priesečník s osou y. Nulový bod spĺňa f(x)=0.</p><p><strong>PRÍKLAD:</strong> f(x)=−2x+6 je klesajúca, pretína os y v [0;6] a os x v [3;0].</p>"
+        "type": "explain",
+        "phase": "NOVÝ POJEM",
+        "title": "Príklad: monotónnosť aj priesečníky spolu",
+        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Funkcia f(x)=−2x+6 je klesajúca (a=−2&lt;0), pretína os y v bode [0;6] a os x (nulový bod) v bode [3;0].</p></div>"
       },
       {
         "id": "zero-check",

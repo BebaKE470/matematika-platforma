@@ -83,14 +83,6 @@ MathPlatform.registerModule({
         remember: 'aᵐ · aⁿ = aᵐ⁺ⁿ,  aᵐ : aⁿ = aᵐ⁻ⁿ (rovnaký základ, m > n).',
       },
       {
-        id: 'notebook-1',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pre mocniny s rovnakým základom platí (a je základ, m, n prirodzené čísla):</p><p><strong>aᵐ · aⁿ = aᵐ⁺ⁿ</strong> — pri násobení sa exponenty sčítajú.</p><p><strong>aᵐ : aⁿ = aᵐ⁻ⁿ</strong> (m &gt; n) — pri delení sa exponenty odčítajú.</p><p>Pravidlá platia iba vtedy, keď je základ v oboch mocninách rovnaký.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'zdovodni-priklad',
         type: 'selfWrite',
         phase: 'ZDÔVODNI',
@@ -128,14 +120,6 @@ MathPlatform.registerModule({
         title: 'Mocnina mocniny',
         html: '<p>Výraz (2³)² znamená „druhá mocnina čísla 2³“, teda 2³ · 2³ = 2³⁺³ = 2⁶.</p><div class="formula">(aᵐ)ⁿ = aᵐⁿ<span class="formula-note">pri mocnine mocniny sa exponenty násobia</span></div>',
         remember: '(aᵐ)ⁿ = aᵐⁿ — exponenty sa násobia.',
-      },
-      {
-        id: 'notebook-2',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>(aᵐ)ⁿ = aᵐⁿ</strong> — pri mocnine mocniny sa exponenty násobia.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-power-of-power',

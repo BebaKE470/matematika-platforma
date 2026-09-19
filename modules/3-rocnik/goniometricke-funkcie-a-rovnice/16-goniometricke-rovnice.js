@@ -101,11 +101,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
+        "type": "explain",
+        "phase": "NOVÝ KROK",
         "title": "Goniometrické rovnice",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Goniometrická rovnica</strong></p><p>Goniometrická rovnica je rovnica, v ktorej sa neznáma nachádza v argumente goniometrickej funkcie.</p><p>Riešenie využíva periodicitu goniometrických funkcií. Po úprave na základný tvar zapíšeme všeobecné riešenia a potom ich obmedzíme na zadaný interval.</p>",
-        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
+        "html": "<p><strong>Goniometrická rovnica</strong></p><p>Goniometrická rovnica je rovnica, v ktorej sa neznáma nachádza v argumente goniometrickej funkcie.</p><p>Riešenie využíva periodicitu goniometrických funkcií. Po úprave na základný tvar zapíšeme všeobecné riešenia a potom ich obmedzíme na zadaný interval.</p>"
       },
       {
         "id": "check",
@@ -126,7 +125,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Rieš ručne",
         "html": "<p>Vytvor v zošite jeden vlastný príklad k téme <strong>Goniometrické rovnice</strong>. Každý krok označ vzťahom alebo dôvodom, ktorý používaš.</p>",
         "model": "Zápis do zošita môže obsahovať opravu. Dôležité je, aby bolo vidieť, prečo jednotlivé kroky platia."

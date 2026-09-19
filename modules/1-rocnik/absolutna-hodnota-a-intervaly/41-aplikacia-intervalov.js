@@ -81,11 +81,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "notebook-1",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p>Interval môže vyjadrovať <strong>rozsah prípustných hodnôt</strong>.</p><p>Pri praktickej úlohe: 1. urč dolnú a hornú hranicu, 2. rozhodni, či hranice patria, 3. zapíš interval, 4. výsledok interpretuj v kontexte a s jednotkou.</p>",
-        "continueLabel": "Mám zapísané"
+        "type": "explain",
+        "phase": "NOVÝ POJEM / PRAVIDLO",
+        "title": "Postup pri praktickej úlohe",
+        "html": "<p>Interval môže vyjadrovať <strong>rozsah prípustných hodnôt</strong>.</p><p>Pri praktickej úlohe: 1. urč dolnú a hornú hranicu, 2. rozhodni, či hranice patria, 3. zapíš interval, 4. výsledok interpretuj v kontexte a s jednotkou.</p>"
       },
       {
         "id": "tech1",
@@ -124,14 +123,6 @@ MathPlatform.registerModule({
         "title": "Keď platia dve podmienky naraz",
         "html": "<p>Ak musí hodnota spĺňať <strong>dve podmienky súčasne</strong>, hľadáme prienik intervalov.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Projektová podmienka: x ∈ ⟨2; 8⟩.</p><p>Podmienka materiálu: x ∈ ⟨5; 10).</p><p>Spoločne teda musí platiť <strong>x ∈ ⟨5; 8⟩</strong>.</p></div>",
         "continueLabel": "Pokračovať"
-      },
-      {
-        "id": "notebook-2",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p>Ak majú platiť dve podmienky naraz, hľadáme ich <strong>prienik</strong>.</p>",
-        "continueLabel": "Mám zapísané"
       },
       {
         "id": "constraints",
@@ -175,7 +166,7 @@ MathPlatform.registerModule({
       {
         "id": "manual",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Bez mobilu",
         "html": "<p>Vymysli vlastnú technickú alebo bežnú situáciu, v ktorej je povolený určitý rozsah hodnôt. Zapíš slovnú podmienku, interval, jednoduchú číselnú os a jednu hodnotu, ktorá podmienku nespĺňa.</p>",
         "continueLabel": "Mám zapísané"

@@ -75,14 +75,6 @@ MathPlatform.registerModule({
         remember: 'D<0: a>0 → výraz je vždy kladný (celé R alebo žiadne riešenie); a<0 → výraz je vždy záporný.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Ak D&lt;0, rovnica ax²+bx+c=0 nemá reálne korene a výraz má na <span class="hl">celej</span> číselnej osi rovnaké znamienko ako koeficient a: pre a&gt;0 je výraz vždy kladný, pre a&lt;0 vždy záporný. Podľa toho je riešením nerovnice buď celé R, alebo nerovnica nemá žiadne riešenie.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',

@@ -262,9 +262,9 @@ MathPlatform.registerModule({
       {
         id: 'notebook-main',
         type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Čistý algoritmus do zošita',
-        html: '<p><span class="mini-label">ÚLOHA DO ZOŠITA</span><br>Rieš v zošite <strong>|x−2| + |x+4| = 10</strong>. Najprv bez pomoci nájdi kritické body, urob číselnú os a rozdeľ riešenie na intervaly.</p><p><span class="mini-label">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Postup pre rovnicu s viacerými absolútnymi hodnotami:</p><ol class="steps"><li>Nájdi všetky výrazy v absolútnych hodnotách.</li><li>Každý polož rovný nule – dostaneš kritické body.</li><li>Kritické body zoradi a rozdeľ nimi číselnú os na intervaly.</li><li>Na každom intervale urči znamienko každého vnútorného výrazu.</li><li>Podľa znamienka odstráň absolútne hodnoty.</li><li>Vyrieš vzniknutú lineárnu rovnicu.</li><li>Kandidát prijmi iba vtedy, ak patrí do práve riešeného intervalu.</li><li>Všetky prijaté kandidáty dosaď do pôvodnej rovnice.</li><li>Zapíš množinu riešení.</li></ol><p>Pod postup zapíš svoje opravené riešenie úlohy vyššie.</p>',
+        phase: 'BEZ MOBILU',
+        title: 'Vyskúšaj bez pomoci',
+        html: '<p><span class="mini-label">ÚLOHA DO ZOŠITA</span><br>Rieš v zošite <strong>|x−2| + |x+4| = 10</strong>. Najprv bez pomoci nájdi kritické body, urob číselnú os a rozdeľ riešenie na intervaly — postupuj podľa univerzálneho postupu z predchádzajúceho kroku.</p>',
         model: '<strong>KONTROLA:</strong> Kritické body sú x=2 a x=−4. Intervaly: x&lt;−4, −4≤x&lt;2, x≥2. V strednom intervale je súčet vzdialeností medzi bodmi −4 a 2 stále 6, takže tam riešenie nevznikne. V krajných intervaloch vyjdú x=−6 a x=4. Obe hodnoty po dosadení dávajú 10.'
       },
       {

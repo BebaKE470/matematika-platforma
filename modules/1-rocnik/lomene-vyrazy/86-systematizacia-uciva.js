@@ -64,14 +64,6 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Definičný obor</div><p class="term-rule">Menovateľ ≠ 0.</p></div><div class="term-item no-symbol"><div class="term-name">Krátenie</div><p class="term-rule">Rozlož, potom kráť.</p></div><div class="term-item no-symbol"><div class="term-name">Sčítanie/odčítanie</div><p class="term-rule">Spoločný menovateľ.</p></div><div class="term-item no-symbol"><div class="term-name">Násobenie/delenie</div><p class="term-rule">Delenie = násobenie prevráteným.</p></div><div class="term-item no-symbol"><div class="term-name">Zložitejšie výrazy</div><p class="term-rule">Rozlož menovateľ najprv.</p></div></div>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'classify',
         type: 'sortChoice',
         phase: 'OVER',

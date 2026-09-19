@@ -141,11 +141,11 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
+        type: 'explain',
+        phase: 'ZHRŇ POSTUP',
+        title: 'Postup pri zloženom výraze',
         html: '<p>Postup pri zložitejšom výraze s mocninami: 1) uprav zátvorky (mocnina mocniny), 2) vykonaj násobenie/delenie mocnín rovnakého základu sčítaním/odčítaním exponentov, 3) až na záver dosaď číselnú hodnotu.</p><p>Príklad: (2⁻¹)² · 2⁴ = 2⁻² · 2⁴ = 2⁻²⁺⁴ = 2² = 4.</p>',
-        continueLabel: 'Mám zapísané',
+        remember: 'Poradie krokov: najprv mocnina mocniny, potom násobenie/delenie exponentov, na záver dosaď číslo.',
       },
       {
         id: 'argument',

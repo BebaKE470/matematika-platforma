@@ -72,14 +72,6 @@ MathPlatform.registerModule({
         "html": "<div class=\"warning\"><strong>Pozor:</strong> Priestorový náčrt musí jasne rozlišovať geometrické veličiny — podobne vyzerajúce úsečky nemusia mať rovnaký význam.</div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Do náčrtu ihlana zakresli tri rôzne úsečky: výšku telesa, bočnú hranu, výšku bočnej steny.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Priestorový náčrt musí jasne rozlišovať geometrické veličiny; podobne vyzerajúce úsečky nemusia mať rovnaký význam.</p>",
-        "model": "<strong>KONTROLA:</strong> Priestorový náčrt musí jasne rozlišovať geometrické veličiny; podobne vyzerajúce úsečky nemusia mať rovnaký význam."
-      },
-      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -147,8 +139,8 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "BEZ MOBILU",
         "title": "Ceruzka má posledné slovo",
-        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor alebo vyrieš podobný príklad v zošite bez aplikácie. Výsledok skontroluj iným spôsobom, ak je to možné.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis má byť čitateľný, s medzikrokmi, jednotkami alebo podmienkami podľa typu úlohy."
+        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Do náčrtu ihlana zakresli tri rôzne úsečky: výšku telesa, bočnú hranu, výšku bočnej steny.</p>",
+        "model": "<strong>KONTROLA:</strong> Priestorový náčrt musí jasne rozlišovať geometrické veličiny; podobne vyzerajúce úsečky nemusia mať rovnaký význam."
       },
       {
         "id": "reflection",

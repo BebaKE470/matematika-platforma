@@ -84,14 +84,6 @@ MathPlatform.registerModule({
         remember: 'x₁+x₂ = −b/a, x₁·x₂ = c/a.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Vietove vzťahy:</strong> pre rovnicu ax²+bx+c=0 (a≠0) s koreňmi x₁, x₂ platí:</p><div class="formula">x₁ + x₂ = <span class="frac"><span class="frac-num">−b</span><span class="frac-den">a</span></span><span class="formula-note">x₁ · x₂ = <span class="frac"><span class="frac-num">c</span><span class="frac-den">a</span></span></span></div><p>Platia vždy, aj bez toho, aby sme korene samostatne počítali.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-verify',
         type: 'choice',
         phase: 'OVER SI',

@@ -83,16 +83,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Vzorce pre druhú mocninu dvojčlena',
-        html: '<div class="formula"><span class="mini-label">SÚČET</span>a² + 2ab + b² = (a + b)²</div><div class="formula"><span class="mini-label">ROZDIEL</span>a² − 2ab + b² = (a − b)²</div><p>Trojčlen takto rozložíme len vtedy, keď prostredný člen je presne 2ab.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>x² + 8x + 16 = x² + 2·x·4 + 4² = (x+4)²</p></div>',
+        html: '<div class="formula"><span class="mini-label">SÚČET</span>a² + 2ab + b² = (a + b)²</div><div class="formula"><span class="mini-label">ROZDIEL</span>a² − 2ab + b² = (a − b)²</div><p>Trojčlen takto rozložíme len vtedy, keď prostredný člen je presne 2ab.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>x² + 8x + 16 = x² + 2·x·4 + 4² = (x+4)²</p></div><p>Výsledok vždy over spätným roznásobením.</p>',
         remember: 'a² ± 2ab + b² = (a ± b)². Skontroluj, že prostredný člen je presne 2ab.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>a² + 2ab + b² = (a + b)²</strong>,  <strong>a² − 2ab + b² = (a − b)²</strong>.</p><p>Pred použitím vzorca skontroluj, že prostredný člen trojčlena je presne 2ab. Príklad: x²+8x+16 = (x+4)², pretože 8x = 2·x·4.</p><p>Výsledok vždy over spätným roznásobením.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-basic',

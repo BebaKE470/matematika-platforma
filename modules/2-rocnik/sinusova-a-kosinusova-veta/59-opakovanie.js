@@ -58,16 +58,8 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie celého celku',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Sínusová veta</div><p class="term-rule"><span class="frac"><span class="frac-num">a</span><span class="frac-den">sinα</span></span> = <span class="frac"><span class="frac-num">b</span><span class="frac-den">sinβ</span></span> = <span class="frac"><span class="frac-num">c</span><span class="frac-den">sinγ</span></span> (strana a protiľahlý uhol).</p></div><div class="term-item no-symbol"><div class="term-name">Kosínusová veta</div><p class="term-rule">a²=b²+c²−2bc·cosα (dve strany a uhol medzi nimi, alebo tri strany).</p></div></div>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Sínusová veta</div><p class="term-rule"><span class="frac"><span class="frac-num">a</span><span class="frac-den">sinα</span></span> = <span class="frac"><span class="frac-num">b</span><span class="frac-den">sinβ</span></span> = <span class="frac"><span class="frac-num">c</span><span class="frac-den">sinγ</span></span> (strana a protiľahlý uhol).</p></div><div class="term-item no-symbol"><div class="term-name">Kosínusová veta</div><p class="term-rule">a²=b²+c²−2bc·cosα (dve strany a uhol medzi nimi, alebo tri strany).</p></div></div><p>Pripomeň si tiež: súčet uhlov trojuholníka je vždy 180°.</p>',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie: sínusová veta pre pár strana-protiľahlý uhol, kosínusová veta pre dve strany a uhol medzi nimi (alebo tri strany bez uhla). Súčet uhlov trojuholníka je vždy 180°.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q1',

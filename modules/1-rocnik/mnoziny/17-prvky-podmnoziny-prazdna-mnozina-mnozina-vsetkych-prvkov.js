@@ -121,11 +121,11 @@ MathPlatform.registerModule({
       },
       {
         "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Upevni si podstatu",
-        "html": "<p><span class=\"mini-label\">ZAPÍŠ SI DO ZOŠITA</span><br>Zapíš názov témy: <strong>Prvky, podmnožiny, prázdna množina, množina všetkých prvkov</strong>. Pridaj definíciu alebo pravidlo vlastnými slovami a jeden správny príklad.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor vlastný príklad a vyrieš ho bez aplikácie.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis musí používať presné symboly a musí byť z neho jasné, prečo výsledok platí."
+        "type": "explain",
+        "phase": "ZHRNUTIE",
+        "title": "Podmnožina, prázdna a univerzálna množina",
+        "html": "<p>Zhrňme si dnešné pojmy: ak každý prvok množiny A patrí aj do množiny B, hovoríme, že A je <strong>podmnožinou</strong> B, a píšeme A ⊆ B (napríklad {1,2} ⊆ {1,2,3}). <strong>Prázdna množina</strong> ∅ nemá žiadny prvok. <strong>Univerzálna množina</strong> U je dohodnutý súbor všetkých prvkov, o ktorých v danej úlohe uvažujeme.</p>",
+        "remember": "A ⊆ B: každý prvok A je aj v B. ∅ nemá prvky. U = všetky prvky danej úlohy."
       },
       {
         "id": "explain",

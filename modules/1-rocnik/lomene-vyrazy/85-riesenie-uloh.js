@@ -63,14 +63,6 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<ol class="steps"><li>Rozlož menovatele.</li><li>Nájdi spoločný menovateľ.</li><li>Priprav zlomky.</li><li>Sčítaj/odčítaj.</li><li>Skráť.</li></ol>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',

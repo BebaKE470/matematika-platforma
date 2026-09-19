@@ -59,16 +59,8 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Dve operácie spolu',
-        html: '<div class="formula"><span class="mini-label">NÁSOBENIE</span><span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> · <span class="frac"><span class="frac-num">c</span><span class="frac-den">d</span></span> = <span class="frac"><span class="frac-num">ac</span><span class="frac-den">bd</span></span></div><div class="formula"><span class="mini-label">DELENIE</span><span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> : <span class="frac"><span class="frac-num">c</span><span class="frac-den">d</span></span> = <span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> · <span class="frac"><span class="frac-num">d</span><span class="frac-den">c</span></span> = <span class="frac"><span class="frac-num">ad</span><span class="frac-den">bc</span></span><span class="formula-note">Obráť deliteľa.</span></div>',
+        html: '<div class="formula"><span class="mini-label">NÁSOBENIE</span><span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> · <span class="frac"><span class="frac-num">c</span><span class="frac-den">d</span></span> = <span class="frac"><span class="frac-num">ac</span><span class="frac-den">bd</span></span></div><div class="formula"><span class="mini-label">DELENIE</span><span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> : <span class="frac"><span class="frac-num">c</span><span class="frac-den">d</span></span> = <span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> · <span class="frac"><span class="frac-num">d</span><span class="frac-den">c</span></span> = <span class="frac"><span class="frac-num">ad</span><span class="frac-den">bc</span></span><span class="formula-note">Obráť deliteľa.</span></div><p>Vždy kráť, keď je to možné.</p>',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Násobenie</div><p class="term-rule">Čitateľ krát čitateľ, menovateľ krát menovateľ.</p></div><div class="term-item no-symbol"><div class="term-name">Delenie</div><p class="term-rule">Obráť deliteľa, potom násob.</p></div></div><p>Vždy kráť, keď je to možné.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q1',

@@ -72,13 +72,6 @@ MathPlatform.registerModule({
         "html": "<p>Praktická úloha potrebuje:</p><ol class=\"steps\"><li>model,</li><li>správne jednotky,</li><li>výpočet,</li><li>záverečnú vetu v kontexte.</li></ol><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
-        "id": "notebook-rule",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Praktická úloha potrebuje model, správne jednotky, výpočet a záverečnú vetu v kontexte.</p>"
-      },
-      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -101,14 +94,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Riešenie praktických úloh“.",
         "model": "Praktická úloha potrebuje model, správne jednotky, výpočet a záverečnú vetu v kontexte."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli jednoduchý plán obdĺžnikovej plochy, zapíš rozmery, jednotky a výpočet.</p>",
-        "model": "<strong>KONTROLA:</strong> Praktická úloha potrebuje model, správne jednotky, výpočet a záverečnú vetu v kontexte."
       },
       {
         "id": "transfer",
@@ -178,7 +163,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "BEZ MOBILU",
         "title": "Ceruzka má posledné slovo",
-        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor alebo vyrieš podobný príklad v zošite bez aplikácie. Výsledok skontroluj iným spôsobom, ak je to možné.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Nakresli jednoduchý plán obdĺžnikovej plochy, zapíš rozmery, jednotky a výpočet.</p>",
         "model": "<strong>KONTROLA:</strong> Zápis má byť čitateľný, s medzikrokmi, jednotkami alebo podmienkami podľa typu úlohy."
       },
       {

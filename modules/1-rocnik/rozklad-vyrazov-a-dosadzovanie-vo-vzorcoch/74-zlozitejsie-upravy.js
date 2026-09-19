@@ -80,16 +80,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Postup pri úplnom rozklade',
-        html: '<ol class="steps"><li>Skús najprv vyňať spoločný činiteľ.</li><li>Skontroluj, či sa dá výraz v zátvorke rozložiť ešte ďalej pomocou vzorca.</li><li>Opakuj, kým sa už nedá pokračovať.</li></ol>',
+        html: '<ol class="steps"><li>Skús najprv vyňať spoločný činiteľ.</li><li>Skontroluj, či sa dá výraz v zátvorke rozložiť ešte ďalej pomocou vzorca.</li><li>Opakuj, kým sa už nedá pokračovať.</li></ol><div class="example"><span class="mini-label">PRÍKLAD S DRUHOU MOCNINOU DVOJČLENA</span><p>3x²+18x+27 = 3(x²+6x+9) = 3(x+3)²</p></div>',
         remember: 'Rozklad je úplný, až keď sa už žiadna časť výrazu nedá ďalej rozložiť.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Postup pri zložitejšom rozklade: 1) vyjmi spoločný činiteľ, 2) skontroluj, či sa dá pokračovať vzorcom, 3) opakuj, kým rozklad nie je úplný.</p><p>Príklad: 2x² − 8 = 2(x²−4) = 2(x−2)(x+2). Príklad: 3x²+18x+27 = 3(x²+6x+9) = 3(x+3)².</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-basic',

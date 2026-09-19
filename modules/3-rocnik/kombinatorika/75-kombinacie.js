@@ -81,16 +81,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Kombinácia a jej vzťah k variácii',
-        html: '<p><strong>Kombinácia k-tej triedy z n prvkov</strong> je výber k prvkov z n <span class="hl">bez ohľadu na poradie</span>.</p><div class="formula">C(k,n) = <span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>n</span><span>k</span></span><span class="combo-paren">)</span></span> = <span class="frac"><span class="frac-num">n!</span><span class="frac-den">k!(n−k)!</span></span><span class="formula-note">Vzťah k variácii: V(k,n) = C(k,n) · k! — každú k-prvkovú kombináciu možno usporiadať k! spôsobmi, čím vzniknú všetky variácie.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Výber 2 z 5 kamarátov: variácia V(2,5)=20, delené 2!=2, dáva C(2,5)=10.</p></div>',
+        html: '<p><strong>Kombinácia k-tej triedy z n prvkov</strong> je výber k prvkov z n <span class="hl">bez ohľadu na poradie</span>.</p><div class="formula">C(k,n) = <span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>n</span><span>k</span></span><span class="combo-paren">)</span></span> = <span class="frac"><span class="frac-num">n!</span><span class="frac-den">k!(n−k)!</span></span><span class="formula-note">Vzťah k variácii: V(k,n) = C(k,n) · k! — každú k-prvkovú kombináciu možno usporiadať k! spôsobmi, čím vzniknú všetky variácie.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Výber 2 z 5 kamarátov: variácia V(2,5)=20, delené 2!=2, dáva C(2,5)=10.</p></div><p>Kľúčová otázka pri rozlíšení: záleží na poradí výberu? Áno → variácia. Nie → kombinácia.</p>',
         remember: 'Kombinácia (poradie nezáleží): C(k,n)=(n nad k)=n!/(k!(n−k)!). Vzťah: V(k,n)=C(k,n)·k!.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Kombinácia k-tej triedy z n prvkov:</strong> výber k prvkov z n <span class="hl">bez ohľadu na poradie</span>. Počet: C(k,n)=<span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>n</span><span>k</span></span><span class="combo-paren">)</span></span>=<span class="frac"><span class="frac-num">n!</span><span class="frac-den">k!(n−k)!</span></span>. Vzťah k variácii: V(k,n)=C(k,n)·k!. Kľúčová otázka pri rozlíšení: záleží na poradí výberu? Áno → variácia. Nie → kombinácia.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-recognize',

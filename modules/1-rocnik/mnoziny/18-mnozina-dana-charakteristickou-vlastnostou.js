@@ -114,14 +114,6 @@ MathPlatform.registerModule({
         "placeholder": "Množina B obsahuje..."
       },
       {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zápis do zošita až po porozumení",
-        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Zapíš význam charakteristickej vlastnosti a schému <strong>{x ∈ U; podmienka}</strong>.</p><p><span class=\"mini-label\">ÚLOHA</span><br>Pre U={1,2,3,4,5,6,7,8,9,10} zapíš charakteristickou vlastnosťou množinu {3,6,9}.</p>",
-        "model": "<strong>VZOR:</strong> Charakteristická vlastnosť opisuje spoločnú podmienku, ktorú spĺňajú práve prvky množiny. Jedna možnosť úlohy: {x ∈ U; x je deliteľné 3}."
-      },
-      {
         "id": "explain",
         "type": "selfWrite",
         "phase": "VYSVETLI",

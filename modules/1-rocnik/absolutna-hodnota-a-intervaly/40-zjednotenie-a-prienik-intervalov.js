@@ -84,15 +84,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv prekrytie, potom zápis",
-        "html": "<p>Pri dvoch intervaloch si ich najprv predstav alebo zakresli na tú istú číselnú os.</p><p><strong>A ∩ B</strong>: nechaj iba spoločnú časť.<br><strong>A ∪ B</strong>: vezmi všetko, čo pokrýva A alebo B.</p><p>Pri krajných bodoch vždy skontroluj, či do výsledku patria.</p>"
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>A ∩ B</strong> – prienik: čísla, ktoré patria do A aj do B.</p><p><strong>A ∪ B</strong> – zjednotenie: čísla, ktoré patria do A alebo do B (aspoň do jedného).</p><p>Postup: zakresli oba intervaly → nájdi spoločnú/celú pokrytú časť → skontroluj krajné body → zapíš výsledok.</p>",
-        "continueLabel": "Mám zapísané"
+        "html": "<p>Pri dvoch intervaloch si ich najprv predstav alebo zakresli na tú istú číselnú os.</p><p><strong>A ∩ B</strong>: nechaj iba spoločnú časť.<br><strong>A ∪ B</strong>: vezmi všetko, čo pokrýva A alebo B.</p><p>Pri krajných bodoch vždy skontroluj, či do výsledku patria.</p><p><strong>Postup:</strong> zakresli oba intervaly → nájdi spoločnú/celú pokrytú časť → skontroluj krajné body → zapíš výsledok.</p>"
       },
       {
         "id": "intersection",
@@ -166,7 +158,7 @@ MathPlatform.registerModule({
       {
         "id": "manual",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Bez mobilu",
         "html": "<p>V zošite zakresli na jednu číselnú os <strong>A = (−3; 2⟩</strong> a <strong>B = ⟨0; 5)</strong>. Urči <strong>A ∩ B</strong> aj <strong>A ∪ B</strong> a pri každom výsledku skontroluj oba krajné body.</p>",
         "continueLabel": "Mám zapísané"

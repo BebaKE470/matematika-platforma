@@ -83,7 +83,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Definícia párnej a nepárnej funkcie',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Párna funkcia</div><p class="term-rule">Funkcia f je párna, ak pre každé x z D(f) platí f(−x) = f(x).</p></div><div class="term-item no-symbol"><div class="term-name">Nepárna funkcia</div><p class="term-rule">Funkcia f je nepárna, ak pre každé x z D(f) platí f(−x) = −f(x).</p></div></div><p>Niektoré funkcie nie sú ani párne, ani nepárne.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Párna funkcia</div><p class="term-rule">Funkcia f je párna, ak pre každé x z D(f) platí f(−x) = f(x).</p></div><div class="term-item no-symbol"><div class="term-name">Nepárna funkcia</div><p class="term-rule">Funkcia f je nepárna, ak pre každé x z D(f) platí f(−x) = −f(x).</p></div></div><p>Niektoré funkcie nie sú ani párne, ani nepárne. Vlastnosť vždy over výpočtom, nie odhadom.</p>',
         remember: 'Párna: f(−x) = f(x). Nepárna: f(−x) = −f(x).',
       },
       {
@@ -99,14 +99,6 @@ MathPlatform.registerModule({
         ],
         note: 'Skús si predstaviť, že graf preklopíš podľa osi y (f) alebo otočíš o 180° okolo bodu [0;0] (g) — dostaneš späť ten istý graf.',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Funkcia f je <strong>párna</strong>, ak pre každé x z D(f) platí f(−x) = f(x).</p><p>Funkcia f je <strong>nepárna</strong>, ak pre každé x z D(f) platí f(−x) = −f(x).</p><p>Niektorá funkcia nemusí byť ani párna, ani nepárna. Vlastnosť vždy over výpočtom, nie odhadom.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-even',

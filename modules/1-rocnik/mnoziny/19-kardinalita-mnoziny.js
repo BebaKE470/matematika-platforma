@@ -68,7 +68,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ ZÁPIS",
         "title": "Počet prvkov množiny",
-        "html": "<p>Počet prvkov konečnej množiny nazývame <strong>kardinalita množiny</strong>.</p><div class=\"formula\">|A|<span class=\"formula-note\">Počet prvkov množiny A.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>A={2,4,6}, teda |A|=3. Počítame rôzne prvky množiny, nie počet znakov v zápise.</p></div>",
+        "html": "<p>Počet prvkov konečnej množiny nazývame <strong>kardinalita množiny</strong>.</p><div class=\"formula\">|A|<span class=\"formula-note\">Počet prvkov množiny A.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>A={2,4,6}, teda |A|=3. Počítame rôzne prvky množiny, nie počet znakov v zápise. Opakovaný zápis toho istého prvku nezvyšuje počet prvkov (napr. {1,1,2,2,3} má iba 3 rôzne prvky, teda |A|=3).</p></div>",
         "remember": "|A| znamená počet prvkov množiny A."
       },
       {
@@ -78,14 +78,6 @@ MathPlatform.registerModule({
         "title": "Koľko prvkov má množina?",
         "html": "<div class=\"logic-visual\"><svg viewBox=\"0 0 760 250\" role=\"img\" aria-label=\"Množina a jej prvky\"><rect x=\"70\" y=\"35\" width=\"620\" height=\"175\" rx=\"70\" fill=\"currentColor\" opacity=\".06\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"100\" y=\"65\" font-size=\"22\" font-weight=\"700\">A</text><g font-family=\"system-ui\" text-anchor=\"middle\"><circle cx=\"220\" cy=\"120\" r=\"25\" fill=\"currentColor\" opacity=\".16\"/><text x=\"220\" y=\"127\" font-size=\"20\">2</text><circle cx=\"380\" cy=\"120\" r=\"25\" fill=\"currentColor\" opacity=\".16\"/><text x=\"380\" y=\"127\" font-size=\"20\">4</text><circle cx=\"540\" cy=\"120\" r=\"25\" fill=\"currentColor\" opacity=\".16\"/><text x=\"540\" y=\"127\" font-size=\"20\">6</text><text x=\"380\" y=\"190\" font-size=\"18\">A = {2, 4, 6}</text></g></svg></div>",
         "continueLabel": "Pokračovať"
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>Kardinalita množiny</strong> — počet prvkov konečnej množiny A označujeme <strong>|A|</strong>.</p><p>Príklad: A={2,4,6}, teda |A|=3. Opakovaný zápis toho istého prvku nezvyšuje počet prvkov (napr. {1,1,2,2,3} má iba 3 rôzne prvky, teda |A|=3).</p>",
-        "continueLabel": "Mám zapísané"
       },
       {
         "id": "start",

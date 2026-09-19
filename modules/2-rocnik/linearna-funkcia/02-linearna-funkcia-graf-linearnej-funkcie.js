@@ -94,13 +94,6 @@ MathPlatform.registerModule({
         "remember": "graf lineárnej funkcie je priamka (pri a=0 vodorovná priamka)."
       },
       {
-        "id": "clean-a",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>TEÓRIA:</strong> Lineárna funkcia má predpis f(x)=ax+b. Jej grafom je priamka. Číslo b je f(0), takže graf pretína os y v bode [0;b].</p>"
-      },
-      {
         "id": "coeff",
         "type": "choice",
         "phase": "ROZPOZNAJ",
@@ -133,10 +126,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean-b",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>POSTUP zostrojenia grafu:</strong> zvolím x → vypočítam f(x) → zapíšem body [x;f(x)] → zostrojím priamku.</p>"
+        "type": "explain",
+        "phase": "2 · VIZUALIZÁCIA",
+        "title": "Postup zostrojenia grafu",
+        "html": "<p><strong>Postup:</strong> zvolím x → vypočítam f(x) → zapíšem body [x;f(x)] → zostrojím priamku.</p>"
       },
       {
         // Zdroj: zbierka úloh, 5.1.1–5.1.4 (výpočet funkčnej hodnoty).
@@ -196,7 +189,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Zostroj graf ručne",
         "html": "<p>Pre <strong>g(x)=−2x+4</strong> si zvoľ aspoň tri hodnoty x, vypočítaj g(x), zapíš body a zostroj graf v zošite.</p>",
         "model": "Jedna možnosť: [0;4], [1;2], [2;0]. Všetky tri body ležia na jednej priamke."

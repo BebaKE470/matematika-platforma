@@ -84,11 +84,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pri interpretácii štatistických dát z praxe: priemer sám osebe <span class="hl">nestačí</span> — vždy zváž aj variabilitu (rozptyl, smerodajnú odchýlku, rozpätie). Pri voľbe grafu: stĺpcový/koláčový graf pre rozdelenie do kategórií, spojnicový graf pre vývoj v čase.</p>',
-        continueLabel: 'Mám zapísané',
+        type: 'explain',
+        phase: 'NOVÝ POJEM / PRAVIDLO',
+        title: 'Aký graf zvoliť',
+        html: '<p>Pri interpretácii štatistických dát z praxe priemer sám osebe <span class="hl">nestačí</span> — vždy zváž aj variabilitu (rozptyl, smerodajnú odchýlku, rozpätie).</p><p>Pri voľbe grafu: <strong>stĺpcový</strong> alebo <strong>koláčový</strong> graf pre rozdelenie hodnôt do kategórií, <strong>spojnicový</strong> graf pre vývoj v čase.</p>',
       },
       {
         id: 'q-interpret',

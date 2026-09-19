@@ -75,16 +75,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Delenie mnohočlena jednočlenom',
-        html: '<p>Mnohočlen delíme jednočlenom tak, že vydelíme <strong>každý</strong> jeho člen:</p><div class="formula">(a + b) : c = a:c + b:c</div><p>Pri delení premenných s mocninou platí pravidlo aᵐ : aⁿ = aᵐ⁻ⁿ.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>(8x³ + 12x²) : 4x = 8x³:4x + 12x²:4x = 2x² + 3x</p></div>',
+        html: '<p>Mnohočlen delíme jednočlenom tak, že vydelíme <strong>každý</strong> jeho člen:</p><div class="formula">(a + b) : c = a:c + b:c</div><p>Pri delení premenných s mocninou platí pravidlo aᵐ : aⁿ = aᵐ⁻ⁿ.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>(8x³ + 12x²) : 4x = 8x³:4x + 12x²:4x = 2x² + 3x</p><p>Výsledok si over spätným násobením: 4x·(2x²+3x) = 8x³+12x².</p></div>',
         remember: '(a+b) : c = a:c + b:c — delíme každý člen zvlášť.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Mnohočlen delíme jednočlenom tak, že vydelíme <strong>každý</strong> jeho člen: (a+b):c = a:c + b:c.</p><p>Pri delení mocnín premennej platí aᵐ:aⁿ = aᵐ⁻ⁿ.</p><p>Príklad: (8x³+12x²):4x = 2x²+3x. Výsledok si over spätným násobením: 4x·(2x²+3x) = 8x³+12x².</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-basic',

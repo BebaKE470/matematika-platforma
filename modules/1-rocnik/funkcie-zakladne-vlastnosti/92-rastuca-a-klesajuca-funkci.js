@@ -89,16 +89,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Definícia rastúcej a klesajúcej funkcie',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Rastúca funkcia</div><p class="term-rule">Funkcia f je rastúca na množine, ak pre každé dve hodnoty x₁ &lt; x₂ z tejto množiny platí f(x₁) &lt; f(x₂) — väčšiemu x zodpovedá väčšie f(x).</p></div><div class="term-item no-symbol"><div class="term-name">Klesajúca funkcia</div><p class="term-rule">Funkcia f je klesajúca, ak pre x₁ &lt; x₂ platí f(x₁) &gt; f(x₂) — väčšiemu x zodpovedá menšie f(x).</p></div></div>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Rastúca funkcia</div><p class="term-rule">Funkcia f je rastúca na množine, ak pre každé dve hodnoty x₁ &lt; x₂ z tejto množiny platí f(x₁) &lt; f(x₂) — väčšiemu x zodpovedá väčšie f(x).</p></div><div class="term-item no-symbol"><div class="term-name">Klesajúca funkcia</div><p class="term-rule">Funkcia f je klesajúca, ak pre x₁ &lt; x₂ platí f(x₁) &gt; f(x₂) — väčšiemu x zodpovedá menšie f(x).</p></div></div><p>Vždy najprv usporiadaj body podľa x, až potom porovnaj hodnoty y.</p>',
         remember: 'Rastúca: x₁<x₂ ⇒ f(x₁)<f(x₂). Klesajúca: x₁<x₂ ⇒ f(x₁)>f(x₂).',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Funkcia f je <strong>rastúca</strong> na množine, ak pre každé x₁ &lt; x₂ z tejto množiny platí f(x₁) &lt; f(x₂).</p><p>Funkcia f je <strong>klesajúca</strong>, ak pre x₁ &lt; x₂ platí f(x₁) &gt; f(x₂).</p><p>Vždy najprv usporiadaj body podľa x, až potom porovnaj hodnoty y.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-increasing',

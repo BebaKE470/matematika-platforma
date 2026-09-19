@@ -85,14 +85,6 @@ MathPlatform.registerModule({
         remember: 'Rozlož menovatele → nájdi spoločný menovateľ → priprav zlomky → sčítaj/odčítaj → skráť.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<ol class="steps"><li>Rozlož každý menovateľ na súčin.</li><li>Nájdi najmenší spoločný menovateľ.</li><li>Preveď zlomky naň.</li><li>Sčítaj/odčítaj čitatele.</li><li>Skráť výsledok.</li></ol><div class="example"><span class="mini-label">PRÍKLAD</span><p><span class="frac"><span class="frac-num">1</span><span class="frac-den">x−2</span></span> + <span class="frac"><span class="frac-num">x</span><span class="frac-den">x²−4</span></span>, kde x²−4 = (x−2)(x+2), teda spoločný menovateľ je (x−2)(x+2).</p></div>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-recognize',
         type: 'choice',
         phase: 'OVER SI',

@@ -94,11 +94,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
+        "type": "explain",
+        "phase": "NOVÝ KROK",
         "title": "Opakovanie",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Opakovanie – goniometria</strong></p><p>Pri riešení úloh prepájame grafy goniometrických funkcií, základné vzorce, súčtové vzorce, vzorce pre dvojnásobný uhol a goniometrické rovnice.</p><p>Vždy kontrolujeme definičné podmienky, znamienka, periodicitu a zadaný interval.</p>",
-        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
+        "html": "<p><strong>Opakovanie – goniometria</strong></p><p>Pri riešení úloh prepájame grafy goniometrických funkcií, základné vzorce, súčtové vzorce, vzorce pre dvojnásobný uhol a goniometrické rovnice.</p><p>Vždy kontrolujeme definičné podmienky, znamienka, periodicitu a zadaný interval.</p>"
       },
       {
         "id": "check",
@@ -119,7 +118,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Rieš ručne",
         "html": "<p>Vytvor v zošite jeden vlastný príklad k téme <strong>Opakovanie</strong>. Každý krok označ vzťahom alebo dôvodom, ktorý používaš.</p>",
         "model": "Zápis do zošita môže obsahovať opravu. Dôležité je, aby bolo vidieť, prečo jednotlivé kroky platia."

@@ -248,7 +248,7 @@ mechanism. The max per type (honoured unless the activity sets its own
 | `numberInput` | 100 | 100 on the first try, 60 on the second |
 | `sortChoice` | 100 | `100 × correctItems / totalItems`, rounded |
 | `matrix` | 120 | `120 × correctItems / totalItems`, rounded |
-| `notebook` | 20 | flat, on acknowledging the note |
+| `notebook` | 20 | flat, on acknowledging the pen-and-paper task |
 | `selfWrite` | 30 | flat, on revealing the model sentence |
 | `taskList` | 100 | `100 × checkedItems / totalItems`, rounded (honour system — nothing is validated) |
 | `info`, `explain`, `intro`, `coordinatePlot`, `reflection` | 0 | — |
@@ -271,7 +271,16 @@ Required: `title`, `html`. Optional: `continueLabel` (default
 Required: `title`, `html`. Optional: `remember` (trusted HTML, shown in a
 highlighted "Zapamätaj si" box) and `rememberLabel` (plain text, overrides
 the "Zapamätaj si:" prefix; set to `false` to drop the label entirely — e.g.
-when the box holds something other than a single fact to memorise).
+when the box holds something other than a single fact to memorise). Scores 0
+XP — it's informational, same as `info`.
+
+This is also where a theoretical note to copy into the notebook lives (rule
+6) — either folded into the `explain`/`info` activity that already teaches
+the concept, or, when it recaps ideas spanning more than one prior activity,
+as its own `explain` with a real, specific title (never "Toto si zapíš do
+zošita" — that framing belongs to the removed `notebook`/`ZOŠIT` pattern).
+The exact wording still needs to be exact, just without a dedicated
+copy-instruction step around it.
 
 ### `choice` — single-select, up to two tries
 
@@ -308,18 +317,21 @@ dnešnej hodine sa naučíš:" list; omit entirely rather than passing an empty
 array), `html` (trusted HTML, shown above the goals list, for a case a short
 list doesn't fit), `continueLabel` (default "Začíname").
 
-### `notebook` — acknowledge a copy-to-notebook note
+### `notebook` — an independent pen-and-paper task
 
-Required: `html` (the **exact** finished text the student copies — never
-just an instruction to write the definition themselves, per
-`PravidlaTvorbyModulov.txt`). Optional: `title` (default "Zapíš si do
-zošita"), `continueLabel` (default "Mám zapísané").
+The **only** pattern this type is for: a task the student solves without the
+phone, typically `phase: 'BEZ MOBILU'` (also seen: `'PRECVIČ'`,
+`'PÍSOMNÁ PRÁCA'`, `'ODLOŽ ZARIADENIE'`). Required: `html` (the **exact**
+task statement — never the solution). Optional: `title` (default "Zapíš si
+do zošita"), `continueLabel` (default "Mám zapísané").
 
-**Placement**: right after the `explain`/`info` activity that introduces the
-concept it records, before the first `choice`/`numberInput`/`matrix`/
-`sortChoice` practice activity — not saved for after practice. Several
-sub-concepts explained in sequence get one `notebook` moment each, placed
-right after each one's own explanation, rather than a single one at the end.
+Theoretical notes to copy are *not* a `notebook` activity — see `explain`
+below and rule 6 in `CLAUDE.md`. An earlier iteration of this project used a
+dedicated `notebook` step (`phase: 'ZOŠIT'`) purely to show finished text for
+copying; that pattern was removed because scoring a copy-it-down step as if
+it were a task was fake credit — students copy the definition into their
+notebook regardless of how the app frames it. If you find `phase: 'ZOŠIT'`
+anywhere, it's leftover from that pattern and should be converted per rule 6.
 
 ### `taskList` — checklist of tasks, honour-system XP
 
@@ -356,10 +368,13 @@ reveals it on click (never auto-checked, purely a self-check the student
 requests; leave `answer` unset on an item that shouldn't be revealable).
 
 **Choosing between `notebook`, `taskList` and `selfWrite`** (rule 6): use
-`notebook` when the student must copy an *exact finished text* you wrote;
+`notebook` for one independent pen-and-paper task, done without the phone;
 `taskList` when the student solves *your exact task statements* on paper and
-just tracks progress; `selfWrite` when the student must *formulate an idea in
-their own words*. Never use one as a stand-in for another.
+tracks progress across several of them; `selfWrite` when the student must
+*formulate an idea in their own words*. A theoretical note to copy is none of
+these — fold it into the `explain`/`info` activity that teaches the concept,
+or give it its own `explain` when it recaps more than one prior activity.
+Never use one as a stand-in for another.
 
 ### `selfWrite` — formulate an idea in your own words
 
@@ -433,10 +448,15 @@ result screen and the teacher's CSV export, never a grade.
 
 `phase` is free text shown as a small tag in the activity header and used to
 group the teacher's live diagnostics. It has drifted over 279 modules to
-117 distinct values, most used only once or twice. There's no enforced
+134 distinct values, most used only once or twice. There's no enforced
 list, but before inventing a new one, check whether one of the common ones
 already fits: `POCHOP`, `NOVÝ POJEM` / `NOVÝ POJEM / PRAVIDLO`, `OBJAVUJ`,
 `OVER` / `OVER SI`, `PRECVIČ`, `PRENES`, `ARGUMENTUJ`, `NÁJDI CHYBU`,
-`VYSVETLI`, `ZOŠIT`, `BEZ MOBILU`, `SEBAHODNOTENIE`, `ZÁVER`. Consolidating
+`VYSVETLI`, `BEZ MOBILU`, `SEBAHODNOTENIE`, `ZÁVER`. Consolidating
 the long tail is an editorial cleanup, not something `tools/audit.mjs`
-enforces — it only reports the vocabulary size and the singletons.
+enforces — it only reports the vocabulary size and the singletons. (`ZOŠIT`
+used to be common too, back when `notebook` covered copy-to-notes content —
+that pattern is gone, see the `notebook`/`explain` sections above; a
+`phase: 'ZOŠIT'` you find on a `notebook` activity should be `BEZ MOBILU`
+instead if the content is a real independent task, or the whole activity
+converted to `explain` if it's theory to copy.)

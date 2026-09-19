@@ -72,16 +72,8 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Tri vzťahy vedľa seba',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Pytagorova veta</div><p class="term-rule">a²+b²=c² (poznáme odvesny alebo preponu a odvesnu)</p></div><div class="term-item no-symbol"><div class="term-name">Veta o výške</div><p class="term-rule">v²=ca·cb (poznáme úseky prepony)</p></div><div class="term-item no-symbol"><div class="term-name">Veta o odvesne</div><p class="term-rule">a²=c·ca (poznáme celú preponu a úsek)</p></div></div>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Pytagorova veta</div><p class="term-rule">a²+b²=c² (poznáme odvesny alebo preponu a odvesnu)</p></div><div class="term-item no-symbol"><div class="term-name">Veta o výške</div><p class="term-rule">v²=ca·cb (poznáme úseky prepony)</p></div><div class="term-item no-symbol"><div class="term-name">Veta o odvesne</div><p class="term-rule">a²=c·ca (poznáme celú preponu a úsek)</p></div></div><p>Trik navyše: obsah trojuholníka sa dá vyjadriť dvoma spôsobmi (z odvesien, aj z prepony a výšky) — to pomôže prepojiť vzťahy, keď priamy vzorec chýba.</p>',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Prehľad: poznáme obe odvesny alebo preponu+odvesnu → Pytagorova veta. Poznáme oba úseky prepony → veta o výške. Poznáme celú preponu a jeden úsek → veta o odvesne.</p><p>Obsah trojuholníka vyjadrený dvoma spôsobmi (z odvesien, z prepony a výšky) pomáha prepojiť vzťahy, keď priamy vzorec chýba.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-choose1',

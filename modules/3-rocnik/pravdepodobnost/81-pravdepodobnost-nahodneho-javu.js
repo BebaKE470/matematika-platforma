@@ -84,14 +84,6 @@ MathPlatform.registerModule({
         remember: 'P(A) = m/n (m priaznivých, n všetkých rovnako pravdepodobných výsledkov). 0≤P(A)≤1.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Klasická definícia pravdepodobnosti:</strong> P(A)=<span class="frac"><span class="frac-num">m</span><span class="frac-den">n</span></span>, kde n je počet všetkých rovnako pravdepodobných elementárnych javov a m je počet tých, ktoré patria do javu A. Platí 0≤P(A)≤1. Pri zložitejších pokusoch sa m aj n počítajú pomocou kombinatorických nástrojov (pravidlo súčinu, kombinácie).</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',

@@ -81,14 +81,6 @@ MathPlatform.registerModule({
         "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Lichobežník má základne a = 10 cm, c = 6 cm a výšku v = 4 cm.</p><p>S = <span class=\"frac\"><span class=\"frac-num\">(a+c)·v</span><span class=\"frac-den\">2</span></span> = <span class=\"frac\"><span class=\"frac-num\">(10+6)·4</span><span class=\"frac-den\">2</span></span> = 16·2 = <strong>32 cm²</strong></p></div>"
       },
       {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Obvod a obsah lichobežníka",
-        "html": "<p><strong>TEÓRIA:</strong> S=<span class=\"frac\"><span class=\"frac-num\">(a+c)·v</span><span class=\"frac-den\">2</span></span>; o=a+b+c+d.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
-        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
-      },
-      {
         "id": "meaning",
         "type": "explain",
         "phase": "VÝZNAM",
@@ -115,7 +107,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Náčrt a riešenie",
         "html": "<p>Do zošita si načrtni situáciu k téme <strong>Obvod a obsah lichobežníka</strong>, označ známe a hľadané veličiny a vyrieš jeden číselný príklad. Jednotky zapisuj pri medzivýsledkoch aj výsledku.</p>",
         "model": "Kontrola: náčrt → údaje → vzťah → dosadenie → výpočet → jednotka → odpoveď."

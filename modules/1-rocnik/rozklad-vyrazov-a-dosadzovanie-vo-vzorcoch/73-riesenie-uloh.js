@@ -62,16 +62,8 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Dva vzorce vedľa seba',
-        html: '<div class="formula">a² − b² = (a − b)(a + b)<span class="formula-note">Dvojčlen — rozdiel dvoch štvorcov.</span></div><div class="formula">a² ± 2ab + b² = (a ± b)²<span class="formula-note">Trojčlen s prostredným členom 2ab.</span></div><p>Rozhoduje, koľko členov výraz má a či je prostredný člen prítomný.</p>',
+        html: '<div class="formula">a² − b² = (a − b)(a + b)<span class="formula-note">Dvojčlen — rozdiel dvoch štvorcov.</span></div><div class="formula">a² ± 2ab + b² = (a ± b)²<span class="formula-note">Trojčlen s prostredným členom 2ab.</span></div><p>Rozhoduje, koľko členov výraz má a či je prostredný člen prítomný. Ak výraz nezodpovedá ani jednému vzorcu presne, rozkladá sa iným spôsobom (napr. vyňatím pred zátvorku), alebo sa nedá rozložiť vôbec.</p>',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Ako rozhodnúť, ktorý vzorec použiť:</p><p><strong>Dvojčlen</strong> (dva členy, rozdiel štvorcov) → a² − b² = (a−b)(a+b).</p><p><strong>Trojčlen</strong> s prostredným členom presne 2ab → a² ± 2ab + b² = (a±b)².</p><p>Ak výraz nezodpovedá ani jednému vzorcu presne, rozkladá sa iným spôsobom (napr. vyňatím pred zátvorku, alebo sa nedá rozložiť vôbec).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-recognize1',

@@ -73,13 +73,6 @@ MathPlatform.registerModule({
         "html": "<div class=\"compare\"><div><span class=\"mini-label\">ZĽAVA O 20 %</span><p>Násobíme pôvodnú cenu číslom 0,80.</p></div><div><span class=\"mini-label\">ZVÝŠENIE O 20 %</span><p>Násobíme pôvodnú cenu číslom 1,20.</p></div></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
-        "id": "notebook-rule",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pri zľave o 20 % násobíme pôvodnú cenu číslom 0,80; pri zvýšení o 20 % číslom 1,20.</p>"
-      },
-      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -102,14 +95,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Úlohy z praxe na percentá“.",
         "model": "Pri zľave o 20 % násobíme pôvodnú cenu číslom 0,80; pri zvýšení o 20 % číslom 1,20."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Pri každej úlohe podčiarkni základ. Potom zapíš, či percentovú hodnotu pripočítavaš alebo odpočítavaš.</p>",
-        "model": "<strong>KONTROLA:</strong> Pri zľave o 20 % násobíme pôvodnú cenu číslom 0,80; pri zvýšení o 20 % číslom 1,20."
       },
       {
         "id": "transfer",
@@ -171,7 +156,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "BEZ MOBILU",
         "title": "Ceruzka má posledné slovo",
-        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor alebo vyrieš podobný príklad v zošite bez aplikácie. Výsledok skontroluj iným spôsobom, ak je to možné.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Pri každej úlohe podčiarkni základ. Potom zapíš, či percentovú hodnotu pripočítavaš alebo odpočítavaš.</p>",
         "model": "<strong>KONTROLA:</strong> Zápis má byť čitateľný, s medzikrokmi, jednotkami alebo podmienkami podľa typu úlohy."
       },
       {

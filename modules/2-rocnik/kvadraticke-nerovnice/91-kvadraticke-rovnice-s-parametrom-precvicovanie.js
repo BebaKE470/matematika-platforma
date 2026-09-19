@@ -73,16 +73,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Vietove vzťahy s parametrom',
-        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Ak chceme, aby korene rovnice x²+mx+8=0 mali daný súčet, použijeme Vietov vzťah x₁+x₂=−m/a=−m (a=1).</p><p>Napríklad, ak má byť súčet koreňov rovný 6: −m=6, teda m=−6.</p></div><div class="term-list"><div class="term-item no-symbol"><div class="term-name">Dosadenie koreňa</div><p class="term-rule">Ak poznáme koreň, dosaď ho priamo do rovnice.</p></div><div class="term-item no-symbol"><div class="term-name">Vietove vzťahy</div><p class="term-rule">Ak poznáme podmienku na súčet/súčin koreňov, použi −b/a alebo c/a.</p></div></div>',
-        remember: 'Poznáme koreň → dosaď priamo. Poznáme súčet/súčin koreňov → použi Vietove vzťahy.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Ak poznáme koreň rovnice</div><p class="term-rule">Dosaď ho priamo a vyrieš lineárnu rovnicu pre parameter.</p></div><div class="term-item no-symbol"><div class="term-name">Ak poznáme podmienku na súčet/súčin koreňov</div><p class="term-rule">Použi Vietove vzťahy x₁+x₂=−b/a, x₁·x₂=c/a.</p></div></div><p>Výsledok vždy over dosadením späť.</p>',
-        continueLabel: 'Mám zapísané',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Ak chceme, aby korene rovnice x²+mx+8=0 mali daný súčet, použijeme Vietov vzťah x₁+x₂=−m/a=−m (a=1).</p><p>Napríklad, ak má byť súčet koreňov rovný 6: −m=6, teda m=−6.</p></div><div class="term-list"><div class="term-item no-symbol"><div class="term-name">Dosadenie koreňa</div><p class="term-rule">Ak poznáme koreň, dosaď ho priamo do rovnice.</p></div><div class="term-item no-symbol"><div class="term-name">Vietove vzťahy</div><p class="term-rule">Ak poznáme podmienku na súčet/súčin koreňov, použi −b/a alebo c/a.</p></div></div><p>Výsledok vždy over dosadením späť.</p>',
+        remember: 'Poznáme koreň → dosaď priamo. Poznáme súčet/súčin koreňov → použi Vietove vzťahy. Vždy over dosadením.',
       },
       {
         id: 'q-substitute',

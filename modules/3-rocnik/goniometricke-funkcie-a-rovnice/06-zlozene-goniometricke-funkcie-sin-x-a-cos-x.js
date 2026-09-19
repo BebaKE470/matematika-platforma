@@ -109,11 +109,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
+        "type": "explain",
+        "phase": "VLASTNOSTI",
         "title": "Zložené goniometrické funkcie sin x a cos x",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Zložené goniometrické funkcie</strong></p><div class=\"formula\">y = a·sin(bx + c) + d<span class=\"formula-note\">rovnako y = a·cos(bx + c) + d — čísla a, b, c, d menia graf základnej funkcie.</span></div><div class=\"term-list\"><div class=\"term-item\"><span class=\"term-symbol\">a</span><div><div class=\"term-name\">Amplitúda</div><p class=\"term-rule\">|a| mení amplitúdu.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">b</span><div><div class=\"term-name\">Perióda</div><p class=\"term-rule\">b mení periódu; pre b ≠ 0 je perióda T = <span class=\"frac\"><span class=\"frac-num\">2π</span><span class=\"frac-den\">|b|</span></span>.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">c</span><div><div class=\"term-name\">Vodorovný posun</div><p class=\"term-rule\">c spôsobuje vodorovný posun.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">d</span><div><div class=\"term-name\">Zvislý posun</div><p class=\"term-rule\">d spôsobuje zvislý posun.</p></div></div></div>",
-        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
+        "html": "<p><strong>Zložené goniometrické funkcie</strong></p><div class=\"formula\">y = a·sin(bx + c) + d<span class=\"formula-note\">rovnako y = a·cos(bx + c) + d — čísla a, b, c, d menia graf základnej funkcie.</span></div><div class=\"term-list\"><div class=\"term-item\"><span class=\"term-symbol\">a</span><div><div class=\"term-name\">Amplitúda</div><p class=\"term-rule\">|a| mení amplitúdu.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">b</span><div><div class=\"term-name\">Perióda</div><p class=\"term-rule\">b mení periódu; pre b ≠ 0 je perióda T = <span class=\"frac\"><span class=\"frac-num\">2π</span><span class=\"frac-den\">|b|</span></span>.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">c</span><div><div class=\"term-name\">Vodorovný posun</div><p class=\"term-rule\">c spôsobuje vodorovný posun.</p></div></div><div class=\"term-item\"><span class=\"term-symbol\">d</span><div><div class=\"term-name\">Zvislý posun</div><p class=\"term-rule\">d spôsobuje zvislý posun.</p></div></div></div>"
       },
       {
         "id": "check",
@@ -134,7 +133,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Rieš ručne",
         "html": "<p>Vytvor v zošite jeden vlastný príklad k téme <strong>Zložené goniometrické funkcie sin x a cos x</strong>. Každý krok označ vzťahom alebo dôvodom, ktorý používaš.</p>",
         "model": "Zápis do zošita môže obsahovať opravu. Dôležité je, aby bolo vidieť, prečo jednotlivé kroky platia."

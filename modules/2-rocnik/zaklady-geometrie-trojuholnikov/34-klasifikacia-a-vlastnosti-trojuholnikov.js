@@ -85,14 +85,6 @@ MathPlatform.registerModule({
         remember: 'Trojuholníková nerovnosť: súčet ľubovoľných dvoch strán > tretia strana (treba overiť všetky tri dvojice).',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Podľa strán</div><p class="term-rule"><strong>rovnostranný</strong> (všetky strany rovnaké), <strong>rovnoramenný</strong> (aspoň dve strany rovnaké), <strong>rôznostranný</strong> (všetky strany rôzne).</p></div><div class="term-item no-symbol"><div class="term-name">Podľa uhlov</div><p class="term-rule"><strong>ostrouhlý</strong> (všetky uhly ostré), <strong>pravouhlý</strong> (jeden uhol pravý), <strong>tupouhlý</strong> (jeden uhol tupý).</p></div></div><div class="formula">a + b > c, a + c > b, b + c > a<span class="formula-note">Trojuholníková nerovnosť: súčet ľubovoľných dvoch strán musí byť väčší ako tretia strana.</span></div>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-classify-sides',
         type: 'choice',
         phase: 'OVER SI',

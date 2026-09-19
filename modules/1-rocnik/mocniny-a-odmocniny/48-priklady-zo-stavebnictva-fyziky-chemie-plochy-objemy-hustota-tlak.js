@@ -82,14 +82,6 @@ MathPlatform.registerModule({
         remember: 'Pri prevode jednotiek obsahu a objemu sa umocňuje aj prevodové číslo, nielen jednotka.',
       },
       {
-        id: 'notebook-1',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pri prevode jednotky obsahu alebo objemu sa umocňuje aj prevodové číslo:</p><p>1 m² = 100² cm² = 10 000 cm²  ·  1 m³ = 100³ cm³ = 1 000 000 cm³</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-convert-area',
         type: 'choice',
         phase: 'OVER SI',
@@ -118,14 +110,6 @@ MathPlatform.registerModule({
         title: 'Hustota a tlak',
         html: '<div class="term-list"><div class="term-item"><span class="term-symbol">ρ</span><div><div class="term-name">Hustota</div><p class="term-rule">ρ = <span class="frac"><span class="frac-num">m</span><span class="frac-den">V</span></span> sa udáva v kg/m³ — hmotnosť pripadajúca na jednotku objemu.</p></div></div><div class="term-item"><span class="term-symbol">p</span><div><div class="term-name">Tlak</div><p class="term-rule">p = <span class="frac"><span class="frac-num">F</span><span class="frac-den">S</span></span> sa udáva v Pa = N/m² — sila pripadajúca na jednotku obsahu.</p></div></div></div><p>V oboch prípadoch je v menovateli mocnina dĺžkovej jednotky (m² alebo m³), takže pri prevode jednotiek treba mocninu zohľadniť aj tu.</p>',
         remember: 'Hustota ρ = m/V [kg/m³]. Tlak p = F/S [Pa = N/m²].',
-      },
-      {
-        id: 'notebook-2',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Hustota: ρ = <span class="frac"><span class="frac-num">m</span><span class="frac-den">V</span></span> [kg/m³]. Tlak: p = <span class="frac"><span class="frac-num">F</span><span class="frac-den">S</span></span> [Pa = N/m²].</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-density',

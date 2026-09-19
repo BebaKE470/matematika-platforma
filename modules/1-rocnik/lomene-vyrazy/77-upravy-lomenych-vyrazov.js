@@ -86,14 +86,6 @@ MathPlatform.registerModule({
         remember: 'Definičný obor lomeného výrazu vylučuje hodnoty, pre ktoré je menovateľ nulový.',
       },
       {
-        id: 'notebook-1',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Lomený výraz</div><p class="term-rule">Podiel dvoch mnohočlenov.</p></div><div class="term-item no-symbol"><div class="term-name">Definičný obor</div><p class="term-rule">Vylučuje hodnoty, pre ktoré je menovateľ nulový.</p></div></div>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-domain',
         type: 'choice',
         phase: 'OVER SI',
@@ -111,14 +103,6 @@ MathPlatform.registerModule({
         title: 'Krátenie lomeného výrazu',
         html: '<p>Aby sme lomený výraz skrátili, musíme najprv čitateľa aj menovateľa <strong>rozložiť na súčin</strong>.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p><span class="frac"><span class="frac-num">x²−4</span><span class="frac-den">x−2</span></span> = <span class="frac"><span class="frac-num">(x−2)(x+2)</span><span class="frac-den">x−2</span></span> = x+2 (pre x ≠ 2)</p></div><div class="warning"><strong>Pozor:</strong> Krátiť môžeme iba celé činitele (súčinové zložky), nie jednotlivé sčítance.</div>',
         remember: 'Najprv rozlož čitateľa aj menovateľa na súčin, potom kráť spoločné činitele.',
-      },
-      {
-        id: 'notebook-2',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Krátenie:</strong> najprv rozlož čitateľa aj menovateľa na súčin, potom vykráť spoločný činiteľ.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p><span class="frac"><span class="frac-num">x²−4</span><span class="frac-den">x−2</span></span> = <span class="frac"><span class="frac-num">(x−2)(x+2)</span><span class="frac-den">x−2</span></span> = x+2 (x≠2)</p></div><div class="warning"><strong>Pozor:</strong> Krátiť sa dajú iba činitele súčinu, nie jednotlivé sčítance.</div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-simplify',

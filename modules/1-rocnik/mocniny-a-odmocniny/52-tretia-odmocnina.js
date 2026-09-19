@@ -83,14 +83,6 @@ MathPlatform.registerModule({
         remember: '∛a existuje pre každé reálne a. Znamienko výsledku sa zhoduje so znamienkom a.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pre <strong>ľubovoľné reálne a</strong> je <strong>∛a</strong> číslo b, pre ktoré platí b³ = a.</p><p>Na rozdiel od druhej odmocniny je tretia odmocnina definovaná aj pre záporné a — znamienko výsledku sa zhoduje so znamienkom a.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>∛(−8) = −2.</p></div>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',

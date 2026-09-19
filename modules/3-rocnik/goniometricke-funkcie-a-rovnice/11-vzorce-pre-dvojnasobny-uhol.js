@@ -101,11 +101,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
+        "type": "explain",
+        "phase": "NOVÝ KROK",
         "title": "Vzorce pre dvojnásobný uhol",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Vzorce pre dvojnásobný uhol</strong></p><div class=\"formula\">sin 2α = 2 sin α cos α</div><div class=\"formula\">cos 2α = cos²α − sin²α<span class=\"formula-note\">cos 2α = 2cos²α − 1 = 1 − 2sin²α</span></div>",
-        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
+        "html": "<p><strong>Vzorce pre dvojnásobný uhol</strong></p><div class=\"formula\">sin 2α = 2 sin α cos α</div><div class=\"formula\">cos 2α = cos²α − sin²α<span class=\"formula-note\">cos 2α = 2cos²α − 1 = 1 − 2sin²α</span></div>"
       },
       {
         "id": "check",
@@ -126,7 +125,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Rieš ručne",
         "html": "<p>Vytvor v zošite jeden vlastný príklad k téme <strong>Vzorce pre dvojnásobný uhol</strong>. Každý krok označ vzťahom alebo dôvodom, ktorý používaš.</p>",
         "model": "Zápis do zošita môže obsahovať opravu. Dôležité je, aby bolo vidieť, prečo jednotlivé kroky platia."

@@ -62,16 +62,8 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Tri zručnosti spolu',
-        html: '<p>Doteraz sme sa naučili: dosadzovanie do výrazu (aj so zápornými číslami), úpravu vzorca podľa inej premennej a vyňatie spoločného činiteľa pred zátvorku.</p><p>V praxi sa tieto zručnosti často kombinujú — napríklad najprv výraz rozložíme, aby sme ho jednoduchšie vyčíslili.</p>',
+        html: '<p>Doteraz sme sa naučili: dosadzovanie do výrazu (aj so zápornými číslami), úpravu vzorca podľa inej premennej a vyňatie spoločného činiteľa pred zátvorku.</p><p>V praxi sa tieto zručnosti často kombinujú — napríklad najprv výraz rozložíme, aby sme ho jednoduchšie vyčíslili.</p><p>Pri kombinovanej úlohe postupuj krok po kroku a po každom kroku si over výsledok.</p>',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie troch zručností: dosadzovanie (záporné čísla so zátvorkou), úprava vzorca (rovnaká operácia na oboch stranách), vyňatie spoločného činiteľa (ab+ac = a(b+c), vyjmi <span class="hl">najväčší</span> spoločný činiteľ).</p><p>Pri kombinovanej úlohe postupuj krok po kroku a po každom kroku si over výsledok.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-combo1',

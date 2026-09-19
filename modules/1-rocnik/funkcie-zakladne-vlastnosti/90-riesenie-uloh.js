@@ -59,16 +59,8 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Tri reprezentácie tej istej funkcie',
-        html: '<p>Funkciu môžeme zadať tabuľkou, predpisom (napr. f(x) = 2x+1) alebo grafom — vždy platí rovnaká podmienka jednoznačnosti a rovnaký spôsob čítania D(f)/H(f).</p>',
+        html: '<p>Funkciu môžeme zadať tabuľkou, predpisom (napr. f(x) = 2x+1) alebo grafom — vždy platí rovnaká podmienka jednoznačnosti a rovnaký spôsob čítania D(f)/H(f).</p><p>Funkcia = jednoznačné priradenie (každému x práve jedno y). D(f) čítame z hodnôt x (tabuľka, predpis, os x grafu), H(f) z hodnôt y (bez opakovania).</p>',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Funkcia = jednoznačné priradenie (každému x práve jedno y). D(f) čítame z hodnôt x (tabuľka, predpis, os x grafu), H(f) z hodnôt y (bez opakovania).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-is-function',

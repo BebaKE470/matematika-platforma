@@ -66,14 +66,6 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie:</p><div class="formula">f(x) = ax² + bx + c (a ≠ 0), graf je parabola<br>orientácia podľa znamienka a<br>vrchol: x_v = <span class="frac"><span class="frac-num">−b</span><span class="frac-den">2a</span></span>, y_v = f(x_v)<br>vrcholový tvar: y = a(x−x_v)² + y_v</div>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',

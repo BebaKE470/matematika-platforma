@@ -63,14 +63,6 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie: iracionálna rovnica —</p><ol class="steps"><li>Izoluj odmocninu.</li><li>Umocni.</li><li>Vyrieš.</li><li><span class="hl">Skúška</span> (povinná) do pôvodnej rovnice.</li></ol><p>Substitúcia t=√x (t≥0) prevádza zložitejšiu rovnicu na kvadratickú.</p><p>V aplikáciách (geometria, fyzika, prax) vždy over aj zmysluplnosť výsledku voči kontextu.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',

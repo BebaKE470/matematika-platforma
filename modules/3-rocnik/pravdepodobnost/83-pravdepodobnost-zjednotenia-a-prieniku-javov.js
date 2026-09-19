@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Prečo nemôžeme len sčítať?',
-        html: '<p>Pri hode kockou: A=„párne číslo“={2,4,6}, B=„deliteľné 3“={3,6}. Číslo 6 patrí do <span class="hl">oboch</span> javov naraz. Ak by sme počítali P(A)+P(B)=<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>+<span class="frac"><span class="frac-num">1</span><span class="frac-den">3</span></span>=<span class="frac"><span class="frac-num">5</span><span class="frac-den">6</span></span>, číslo 6 by sme rátali dvakrát!</p>',
+        html: '<p>Pri hode kockou: A=„párne číslo“={2,4,6}, B=„deliteľné 3“={3,6}. Číslo 6 patrí do <span class="hl">oboch</span> javov naraz. Ak by sme počítali P(A)+P(B)=<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>+<span class="frac"><span class="frac-num">1</span><span class="frac-den">3</span></span>=<span class="frac"><span class="frac-num">5</span><span class="frac-den">6</span></span>, číslo 6 by sme rátali dvakrát!</p><div class="logic-visual"><svg viewBox="0 0 640 340" role="img" aria-label="Vennov diagram: A a B pri hode kockou"><g font-family="system-ui" text-anchor="middle"><rect x="15" y="15" width="610" height="310" rx="16" fill="none" stroke="currentColor" stroke-width="2" opacity=".35"/><circle cx="240" cy="170" r="110" fill="currentColor" opacity=".10"/><circle cx="400" cy="170" r="110" fill="currentColor" opacity=".10"/><circle cx="240" cy="170" r="110" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="400" cy="170" r="110" fill="none" stroke="currentColor" stroke-width="2"/><text x="150" y="50" font-size="26" font-weight="700">A</text><text x="490" y="50" font-size="26" font-weight="700">B</text><text x="170" y="178" font-size="24">2</text><text x="190" y="228" font-size="24">4</text><text x="320" y="178" font-size="24" font-weight="700">6</text><text x="460" y="178" font-size="24">3</text><text x="70" y="88" font-size="24">1</text><text x="560" y="288" font-size="24">5</text><text x="35" y="310" font-size="16" text-anchor="start" opacity=".7">Základný priestor: {1,2,3,4,5,6}</text></g></svg></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -83,14 +83,6 @@ MathPlatform.registerModule({
         title: 'Vzorec pre zjednotenie javov',
         html: '<div class="formula">P(A∪B) = P(A) + P(B) − P(A∩B)<span class="formula-note">Odpočítame prienik, aby sme ho nezapočítali dvakrát.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>A∩B={6}, P(A∩B)=<span class="frac"><span class="frac-num">1</span><span class="frac-den">6</span></span>.</p><p>P(A∪B)=<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>+<span class="frac"><span class="frac-num">1</span><span class="frac-den">3</span></span>−<span class="frac"><span class="frac-num">1</span><span class="frac-den">6</span></span>=<span class="frac"><span class="frac-num">3</span><span class="frac-den">6</span></span>+<span class="frac"><span class="frac-num">2</span><span class="frac-den">6</span></span>−<span class="frac"><span class="frac-num">1</span><span class="frac-den">6</span></span>=<span class="frac"><span class="frac-num">4</span><span class="frac-den">6</span></span>=<span class="frac"><span class="frac-num">2</span><span class="frac-den">3</span></span></p><p>(sedí s priamym počítaním: A∪B={2,3,4,6}, 4 z 6.)</p></div><p><strong>Nezlučiteľné javy</strong> (A∩B=∅, nemôžu nastať súčasne): P(A∪B)=P(A)+P(B) (jednoduchšie, netreba nič odpočítať).</p>',
         remember: 'P(A∪B)=P(A)+P(B)−P(A∩B). Nezlučiteľné javy (A∩B=∅): P(A∪B)=P(A)+P(B).',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Pravdepodobnosť zjednotenia:</strong> P(A∪B)=P(A)+P(B)−P(A∩B) (odpočítame prienik, aby sme ho nepočítali dvakrát). <strong>Nezlučiteľné javy</strong> (A∩B=∅): P(A∪B)=P(A)+P(B).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-basic',

@@ -91,14 +91,6 @@ MathPlatform.registerModule({
         remember: 'Nad osou x → f(x)>0. Pod osou x → f(x)<0. Priesečníky (korene) → f(x)=0.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Grafická metóda: nájdi korene (priesečníky s osou x), načrtni tvar paraboly podľa znamienka a, a odčítaj, kde je graf nad osou x (f(x)&gt;0) a kde pod ňou (f(x)&lt;0). Pre parabolu nahor je to nad osou mimo koreňov; pre parabolu nadol naopak.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-read',
         type: 'choice',
         phase: 'OVER SI',

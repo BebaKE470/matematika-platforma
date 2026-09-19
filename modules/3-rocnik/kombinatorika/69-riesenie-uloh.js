@@ -64,16 +64,8 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie nástrojov',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Pravidlo súčinu</div><p class="term-rule">n₁·n₂·...·n_k pre nezávislé voľby.</p></div><div class="term-item no-symbol"><div class="term-name">Faktoriál n!</div><p class="term-rule">Počet usporiadaní n rôznych prvkov.</p></div></div><p>Niektoré úlohy vyžadujú kombináciu oboch nástrojov — napr. usporiadanie s dodatočným obmedzením.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Pravidlo súčinu</div><p class="term-rule">n₁·n₂·...·n_k pre nezávislé voľby.</p></div><div class="term-item no-symbol"><div class="term-name">Faktoriál n!</div><p class="term-rule">Počet usporiadaní n rôznych prvkov.</p></div></div><p>Pri riešení úlohy si najprv polož otázku: ide o nezávislé voľby (pravidlo súčinu), alebo o usporiadanie <span class="hl">všetkých</span> prvkov danej skupiny (faktoriál)? Niektoré úlohy vyžadujú kombináciu oboch nástrojov — napr. usporiadanie s dodatočným obmedzením.</p>',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pri riešení kombinatorickej úlohy najprv rozhodni: ide o nezávislé voľby (pravidlo súčinu), alebo o usporiadanie <span class="hl">všetkých</span> prvkov danej skupiny (faktoriál)? Niekedy je potrebné oba nástroje skombinovať (napr. usporiadanie s dodatočným obmedzením).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q1',

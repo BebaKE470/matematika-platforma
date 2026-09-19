@@ -91,7 +91,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Náčrt a riešenie",
         "html": "<p>Do zošita si načrtni situáciu k téme <strong>Riešenie praktických úloh</strong>, označ známe a hľadané veličiny a vyrieš jeden číselný príklad. Jednotky zapisuj pri medzivýsledkoch aj výsledku.</p>",
         "model": "Kontrola: náčrt → údaje → vzťah → dosadenie → výpočet → jednotka → odpoveď."
@@ -119,14 +119,6 @@ MathPlatform.registerModule({
         "answer": 3,
         "correct": "Výsledok musí byť interpretovaný v kontexte a mať správnu jednotku.",
         "hint": "Matematický výsledok treba vrátiť do zadania."
-      },
-      {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Riešenie praktických úloh",
-        "html": "<p><strong>TEÓRIA:</strong> Najprv vytvor náčrt, označ známe údaje a rozhodni, ktorý útvar alebo rozklad v úlohe vidíš.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
-        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
       },
       {
         "id": "reflection",

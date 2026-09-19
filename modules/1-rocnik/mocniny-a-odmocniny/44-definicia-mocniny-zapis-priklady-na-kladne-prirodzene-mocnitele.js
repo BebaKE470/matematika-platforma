@@ -83,14 +83,6 @@ MathPlatform.registerModule({
         remember: 'aⁿ = a · a · … · a (n činiteľov). a je základ, n je mocniteľ (exponent).',
       },
       {
-        id: 'notebook-1',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Mocnina:</strong> aⁿ = a · a · … · a (n činiteľov), n je kladné prirodzené číslo.</p><p>a — <strong>základ</strong> mocniny, n — <strong>mocniteľ (exponent)</strong>.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-parts',
         type: 'choice',
         phase: 'OVER SI',
@@ -121,16 +113,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'PREPOJ',
         title: 'Znamienko pri zápornom základe',
-        html: '<p>Ak je základ záporný, dôležité je, koľkokrát sa násobí.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p><strong>(−2)³ = (−2) · (−2) · (−2) = −8</strong> (nepárny počet záporných činiteľov dáva záporný výsledok)</p><p><strong>(−2)⁴ = 16</strong> (párny počet dáva kladný výsledok)</p></div><div class="warning"><strong>Pozor:</strong> <strong>−2³</strong> bez zátvorky znamená „mínus (2³)“, teda −8, nie (−2)³.</div>',
+        html: '<p>Ak je základ záporný, dôležité je, koľkokrát sa násobí.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p><strong>(−2)³ = (−2) · (−2) · (−2) = −8</strong> (nepárny počet záporných činiteľov dáva záporný výsledok)</p><p><strong>(−2)⁴ = 16</strong> (párny počet dáva kladný výsledok)</p></div><div class="warning"><strong>Pozor:</strong> <strong>−2³</strong> bez zátvorky znamená „mínus (2³)“, teda −8, nie (−2)³.</div><p>Pri nepárnom mocniteli tu vyšlo rovnaké číslo (−8), no pri párnom mocniteli sa (−a)ⁿ a −aⁿ líšia: (−2)⁴ = 16, zatiaľ čo −2⁴ = −(2⁴) = −16.</p>',
         remember: '(−a)ⁿ ≠ −aⁿ vo všeobecnosti. Zátvorka rozhoduje, čo sa umocňuje.',
-      },
-      {
-        id: 'notebook-2',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Príklad: (−2)³ = −8, ale −2³ = −(2³) = −8 — v tomto prípade sa výsledok zhoduje, no pri párnom mocniteli sa (−a)ⁿ a −aⁿ líšia: (−2)⁴ = 16, zatiaľ čo −2⁴ = −16.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-sign1',

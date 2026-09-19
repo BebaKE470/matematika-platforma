@@ -62,14 +62,6 @@ MathPlatform.registerModule({
         continueLabel: 'Pokračovať',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie: Vietove vzťahy x₁+x₂=<span class="frac"><span class="frac-num">−b</span><span class="frac-den">a</span></span>, x₁·x₂=<span class="frac"><span class="frac-num">c</span><span class="frac-den">a</span></span>. Rozklad na súčin: ax²+bx+c=a(x−x₁)(x−x₂). Krátenie lomeného výrazu: definičný obor pred krátením, potom rozklad a skrátenie spoločného činiteľa.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q1',
         type: 'choice',
         phase: 'PRECVIČ',

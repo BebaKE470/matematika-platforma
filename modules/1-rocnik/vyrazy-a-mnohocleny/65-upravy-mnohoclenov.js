@@ -119,11 +119,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie celej témy pred previerkou:</p><p>Sčítanie/odčítanie: spoj podobné členy, pri odčítaní zátvorky zmeň znamienko každého jej člena.</p><p>Násobenie: a(b+c) = ab+ac (jednočlenom), (a+b)(c+d) = ac+ad+bc+bd (dvojčlenom).</p><p>Delenie jednočlenom: (a+b):c = a:c + b:c.</p><p>Pri kombinovanom výraze postupuj krok po kroku: najprv zátvorky (násobenie/delenie), potom sčítanie/odčítanie.</p>',
-        continueLabel: 'Mám zapísané',
+        type: 'explain',
+        phase: 'ZHRNUTIE',
+        title: 'Štyri operácie pohromade',
+        html: '<p>Predtým, než sa pustíš do kombinovaných výrazov, si zhrňme všetky štyri operácie:</p><p>Sčítanie/odčítanie: spoj podobné členy, pri odčítaní zátvorky zmeň znamienko každého jej člena.</p><p>Násobenie: a(b+c) = ab+ac (jednočlenom), (a+b)(c+d) = ac+ad+bc+bd (dvojčlenom).</p><p>Delenie jednočlenom: (a+b):c = a:c + b:c.</p><p>Pri kombinovanom výraze postupuj krok po kroku: najprv zátvorky (násobenie/delenie), potom sčítanie/odčítanie.</p>',
       },
       {
         id: 'argument',

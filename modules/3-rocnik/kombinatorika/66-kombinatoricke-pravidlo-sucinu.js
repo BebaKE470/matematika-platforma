@@ -84,14 +84,6 @@ MathPlatform.registerModule({
         remember: 'Nezávislé voľby s n₁, n₂, ..., n_k možnosťami → celkový počet možností = n₁·n₂·...·n_k.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Kombinatorické pravidlo súčinu:</strong> ak robíme viacero nezávislých volieb s n₁, n₂, ..., n_k možnosťami, celkový počet spôsobov, ako urobiť všetky voľby spolu, je n₁·n₂·...·n_k.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',

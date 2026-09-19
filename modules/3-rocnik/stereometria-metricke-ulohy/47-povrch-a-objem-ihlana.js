@@ -81,14 +81,6 @@ MathPlatform.registerModule({
         "html": "<p>Ihlan má jednu podstavu a trojuholníkové bočné steny.</p><div class=\"formula\">V = <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">3</span></span>Sp·v<span class=\"formula-note\">S = Sp+Q</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli ihlan, označ podstavu a kolmú výšku telesa; odlíš ju od bočnej hrany.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Ihlan má jednu podstavu a trojuholníkové bočné steny. Objem je tretina Sp·v; povrch S=Sp+Q.</p>",
-        "model": "<strong>KONTROLA:</strong> Ihlan má jednu podstavu a trojuholníkové bočné steny. Objem je tretina Sp·v; povrch S=Sp+Q."
-      },
-      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -172,8 +164,8 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "BEZ MOBILU",
         "title": "Ceruzka má posledné slovo",
-        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor alebo vyrieš podobný príklad v zošite bez aplikácie. Výsledok skontroluj iným spôsobom, ak je to možné.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis má byť čitateľný, s medzikrokmi, jednotkami alebo podmienkami podľa typu úlohy."
+        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Nakresli ihlan, označ podstavu a kolmú výšku telesa; odlíš ju od bočnej hrany.</p>",
+        "model": "<strong>KONTROLA:</strong> Ihlan má jednu podstavu a trojuholníkové bočné steny. Objem je tretina Sp·v; povrch S=Sp+Q."
       },
       {
         "id": "reflection",

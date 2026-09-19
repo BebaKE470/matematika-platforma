@@ -80,13 +80,6 @@ MathPlatform.registerModule({
         "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Racionálne číslo</div><p class=\"term-rule\">Možno ho zapísať ako zlomok celých čísel s nenulovým menovateľom.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Iracionálne číslo</div><p class=\"term-rule\">Takto ho zapísať nemožno.</p></div></div><p>Obe skupiny patria medzi reálne čísla.</p><div class=\"formula\">N ⊆ Z ⊆ Q ⊆ R<span class=\"formula-note\">Každé prirodzené číslo je aj celé, každé celé je aj racionálne. Iracionálne čísla (Ir) do Q nepatria, ale spolu s Q dopĺňajú celú množinu R.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>0,75 = <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">4</span></span> (končí sa) → racionálne.</p><p>0,333… = <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">3</span></span> (opakuje sa) → racionálne.</p><p>1,41421356… (nekončí sa a neopakuje sa) → iracionálne, je to √2.</p></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
-        "id": "notebook-rule",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Racionálne číslo možno zapísať ako zlomok celých čísel s nenulovým menovateľom. Iracionálne číslo takto zapísať nemožno; obe skupiny patria medzi reálne čísla.</p>"
-      },
-      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -109,14 +102,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Racionálne, iracionálne, reálne čísla“.",
         "model": "Racionálne číslo možno zapísať ako zlomok celých čísel s nenulovým menovateľom. Iracionálne číslo takto zapísať nemožno; obe skupiny patria medzi reálne čísla."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Na číselnú os približne umiestni <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">2</span></span>, √2 a <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">2</span></span>.</p>",
-        "model": "<strong>KONTROLA:</strong> Racionálne číslo možno zapísať ako zlomok celých čísel s nenulovým menovateľom. Iracionálne číslo takto zapísať nemožno; obe skupiny patria medzi reálne čísla."
       },
       {
         "id": "transfer",
@@ -178,7 +163,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "BEZ MOBILU",
         "title": "Ceruzka má posledné slovo",
-        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor alebo vyrieš podobný príklad v zošite bez aplikácie. Výsledok skontroluj iným spôsobom, ak je to možné.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Na číselnú os približne umiestni <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">2</span></span>, √2 a <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">2</span></span>.</p>",
         "model": "<strong>KONTROLA:</strong> Zápis má byť čitateľný, s medzikrokmi, jednotkami alebo podmienkami podľa typu úlohy."
       },
       {

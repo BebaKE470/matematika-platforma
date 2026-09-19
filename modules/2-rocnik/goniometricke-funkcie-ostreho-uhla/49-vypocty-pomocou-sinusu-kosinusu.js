@@ -86,11 +86,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Zo vzorcov sin α=<span class="frac"><span class="frac-num">a</span><span class="frac-den">c</span></span>, cos α=<span class="frac"><span class="frac-num">b</span><span class="frac-den">c</span></span> vieme vyjadriť: a=c·sin α, b=c·cos α, c=<span class="frac"><span class="frac-num">a</span><span class="frac-den">sin α</span></span>=<span class="frac"><span class="frac-num">b</span><span class="frac-den">cos α</span></span>.</p><p>Hodnoty: sin30°=<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>, cos30°=<span class="frac"><span class="frac-num">√3</span><span class="frac-den">2</span></span>; sin45°=cos45°=<span class="frac"><span class="frac-num">√2</span><span class="frac-den">2</span></span>; sin60°=<span class="frac"><span class="frac-num">√3</span><span class="frac-den">2</span></span>, cos60°=<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>.</p>',
-        continueLabel: 'Mám zapísané',
+        type: 'explain',
+        phase: 'NOVÝ POJEM / PRAVIDLO',
+        title: 'Vzorce a hodnoty prehľadne',
+        html: '<p>Zo vzorcov sin α=<span class="frac"><span class="frac-num">a</span><span class="frac-den">c</span></span>, cos α=<span class="frac"><span class="frac-num">b</span><span class="frac-den">c</span></span> vieme vyjadriť ktorúkoľvek stranu: a=c·sin α, b=c·cos α, c=<span class="frac"><span class="frac-num">a</span><span class="frac-den">sin α</span></span>=<span class="frac"><span class="frac-num">b</span><span class="frac-den">cos α</span></span>.</p><p>Hodnoty: sin30°=<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>, cos30°=<span class="frac"><span class="frac-num">√3</span><span class="frac-den">2</span></span>; sin45°=cos45°=<span class="frac"><span class="frac-num">√2</span><span class="frac-den">2</span></span>; sin60°=<span class="frac"><span class="frac-num">√3</span><span class="frac-den">2</span></span>, cos60°=<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>.</p>',
       },
       {
         id: 'q-basic',

@@ -81,16 +81,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Ohraničená funkcia',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Ohraničená zhora</div><p class="term-rule">Existuje číslo h také, že f(x) ≤ h pre všetky x z M.</p></div><div class="term-item no-symbol"><div class="term-name">Ohraničená zdola</div><p class="term-rule">Existuje číslo d také, že f(x) ≥ d pre všetky x z M.</p></div><div class="term-item no-symbol"><div class="term-name">Ohraničená</div><p class="term-rule">Funkcia je ohraničená zhora aj zdola súčasne.</p></div></div>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Ohraničená zhora</div><p class="term-rule">Existuje číslo h také, že f(x) ≤ h pre všetky x z M.</p></div><div class="term-item no-symbol"><div class="term-name">Ohraničená zdola</div><p class="term-rule">Existuje číslo d také, že f(x) ≥ d pre všetky x z M.</p></div><div class="term-item no-symbol"><div class="term-name">Ohraničená</div><p class="term-rule">Funkcia je ohraničená zhora aj zdola súčasne.</p></div></div><p>Horná/dolná hranica nemusí byť rovná maximu/minimu — stačí, že hodnoty ju neprekročia.</p>',
         remember: 'Ohraničená zhora: existuje h, f(x)≤h. Ohraničená zdola: existuje d, f(x)≥d.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Funkcia f je na množine M <strong>ohraničená zhora</strong>, ak existuje h také, že f(x) ≤ h pre všetky x z M. <strong>Ohraničená zdola</strong>, ak existuje d, f(x) ≥ d.</p><p>Horná/dolná hranica nemusí byť rovná maximu/minimu — stačí, že hodnoty ju neprekročia.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-bounded',

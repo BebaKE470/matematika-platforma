@@ -85,11 +85,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Iracionálne rovnice sa objavujú aj v geometrii (Pytagorova veta: √(a²+b²)=c) a vo fyzike (voľný pád: t=√(<span class="frac"><span class="frac-num">h</span><span class="frac-den">5</span></span>) pri g≈10 m/s²).</p><p>Postup riešenia je rovnaký:</p><ol class="steps"><li>Izoluj odmocninu.</li><li>Umocni.</li><li>Vyrieš.</li><li>Over zmysluplnosť riešenia (dĺžka aj výška musia byť kladné).</li></ol>',
-        continueLabel: 'Mám zapísané',
+        type: 'explain',
+        phase: 'NOVÝ POJEM / PRAVIDLO',
+        title: 'Rovnaký postup, dva kontexty',
+        html: '<p>Iracionálne rovnice sa objavujú aj v geometrii (Pytagorova veta: √(a²+b²)=c) a vo fyzike (voľný pád: t=√(<span class="frac"><span class="frac-num">h</span><span class="frac-den">5</span></span>) pri g≈10 m/s²).</p><p>Postup riešenia je v oboch prípadoch rovnaký:</p><ol class="steps"><li>Izoluj odmocninu.</li><li>Umocni.</li><li>Vyrieš.</li><li>Over zmysluplnosť riešenia (dĺžka aj výška musia byť kladné).</li></ol>',
       },
       {
         id: 'q-geometry',

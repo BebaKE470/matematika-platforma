@@ -87,15 +87,8 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "1 · NOVÝ POJEM",
         "title": "Čo je výrok?",
-        "html": "<p><strong>Výrok</strong> je oznamovacia veta, o ktorej vieme jednoznačne rozhodnúť, či je pravdivá alebo nepravdivá.</p><p>Výroky označujeme veľkými písmenami A, B, C, … Pravdivostnú hodnotu zapisujeme <strong>1</strong> (pravdivý) alebo <strong>0</strong> (nepravdivý).</p><p>Napríklad: „Číslo 13 je prvočíslo.“ je výrok s hodnotou 1. „Číslo 7 nie je prvočíslo.“ je tiež výrok, ale s hodnotou 0 — aj nepravdivá veta môže byť výrok.</p><p><strong>Otázka, príkaz a otvorená veta s neurčenou premennou nie sú výrok</strong> — pri nich nevieme jednoznačne rozhodnúť pravdivostnú hodnotu, kým premenná nie je určená.</p>",
+        "html": "<p><strong>Výrok</strong> je oznamovacia veta, o ktorej vieme jednoznačne rozhodnúť, či je pravdivá alebo nepravdivá.</p><p>Výroky označujeme veľkými písmenami A, B, C, … Pravdivostnú hodnotu zapisujeme <strong>1</strong> (pravdivý) alebo <strong>0</strong> (nepravdivý).</p><p>Napríklad: „Číslo 13 je prvočíslo.“ je výrok s hodnotou 1. „Číslo 7 nie je prvočíslo.“ je tiež výrok, ale s hodnotou 0 — aj nepravdivá veta môže byť výrok.</p><p><strong>Otázka, príkaz a otvorená veta s neurčenou premennou nie sú výrok</strong> — pri nich nevieme jednoznačne rozhodnúť pravdivostnú hodnotu, kým premenná nie je určená.</p><p><strong>Príklad otvorenej vety:</strong> x + 3 = 7 — jej pravdivosť závisí od hodnoty premennej x.</p>",
         "remember": "Výrok = oznamovacia veta s jednoznačnou pravdivostnou hodnotou 1 alebo 0."
-      },
-      {
-        "id": "notebook-vyrok",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zápis do zošita",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>VÝROKY</strong></p><p>Výrok je oznamovacia veta, o ktorej možno jednoznačne rozhodnúť, či je pravdivá alebo nepravdivá.</p><p>Výroky označujeme veľkými písmenami A, B, C, …</p><p><strong>Pravdivostná hodnota:</strong><br>1 – pravdivý výrok<br>0 – nepravdivý výrok</p><p><strong>Príklady:</strong><br>A: Číslo 13 je prvočíslo. – 1<br>B: Číslo 7 nie je prvočíslo. – 0</p><p>Otázka, príkaz ani otvorená veta s neurčenou premennou nie sú výrokom.</p><p><strong>Otvorená veta:</strong> x + 3 = 7 – jej pravdivosť závisí od hodnoty premennej x.</p>"
       },
       {
         "id": "classify-all",
@@ -263,13 +256,6 @@ MathPlatform.registerModule({
         "title": "Štyri pojmy z dnešnej hodiny",
         "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Definícia</div><p class=\"term-rule\">Zavádza alebo vymedzuje matematický pojem.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Tvrdenie</div><p class=\"term-rule\">Matematická veta, ktorej pravdivosť posudzujeme.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Hypotéza</div><p class=\"term-rule\">Predpokladané tvrdenie, ktorého platnosť skúmame.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Axióma</div><p class=\"term-rule\">Východiskové tvrdenie prijaté v rámci matematickej teórie bez dôkazu.</p></div></div>",
         "remember": "Tieto pojmy rozlišuj podľa ich úlohy, nie iba podľa toho, ako veta vyzerá."
-      },
-      {
-        "id": "notebook-terms",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zápis do zošita",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Definícia</strong> – zavádza alebo vymedzuje matematický pojem.<br><strong>Tvrdenie</strong> – matematická veta, ktorej pravdivosť posudzujeme.<br><strong>Hypotéza</strong> – predpokladané tvrdenie, ktorého platnosť skúmame.<br><strong>Axióma</strong> – východiskové tvrdenie prijaté v matematickej teórii bez dôkazu.</p>"
       },
       {
         "id": "terms-check",

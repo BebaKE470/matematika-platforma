@@ -145,11 +145,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "n",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<span class=\"mini-label\">SYSTEMATIZÁCIA – LINEÁRNE NEROVNICE</span><ol class=\"steps\"><li>Urč typ nerovnice.</li><li>Zapíš podmienky.</li><li>Zvoľ správny postup.</li><li>Vykonaj úpravy a sleduj smer nerovnosti.</li><li>Zapíš množinu riešení.</li><li>Skontroluj krajné/vylúčené body a význam výsledku.</li></ol>",
-        "continueLabel": "Mám zapísané"
+        "type": "explain",
+        "phase": "ZHRNUTIE",
+        "title": "Univerzálny postup pre lineárne nerovnice",
+        "html": "<ol class=\"steps\"><li>Urč typ nerovnice.</li><li>Zapíš podmienky.</li><li>Zvoľ správny postup.</li><li>Vykonaj úpravy a sleduj smer nerovnosti.</li><li>Zapíš množinu riešení.</li><li>Skontroluj krajné/vylúčené body a význam výsledku.</li></ol>"
       },
       {
         "id": "sw",

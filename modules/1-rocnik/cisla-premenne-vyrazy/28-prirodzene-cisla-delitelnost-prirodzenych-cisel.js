@@ -80,13 +80,6 @@ MathPlatform.registerModule({
         "html": "<div class=\"formula\">Číslo je deliteľné 6 práve vtedy, keď je deliteľné 2 aj 3.<span class=\"formula-note\">Kritériá treba použiť obe.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Je číslo 522 deliteľné 6?</p><p>Deliteľnosť 2: posledná číslica je 2 (párna) → áno.</p><p>Deliteľnosť 3: súčet číslic 5+2+2=9, a 9 je deliteľné 3 → áno.</p><p>Obe podmienky platia, takže <strong>522 je deliteľné 6</strong>.</p></div>"
       },
       {
-        "id": "notebook-rule",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Číslo je deliteľné 6 práve vtedy, keď je deliteľné 2 aj 3. Kritériá treba použiť obe.</p>"
-      },
-      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -109,14 +102,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Prirodzené čísla, Deliteľnosť prirodzených čísel“.",
         "model": "Číslo je deliteľné 6 práve vtedy, keď je deliteľné 2 aj 3. Kritériá treba použiť obe."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Over 234 pomocou kritérií deliteľnosti 2, 3 a 6.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Číslo je deliteľné 6 práve vtedy, keď je deliteľné 2 aj 3. Kritériá treba použiť obe.</p>",
-        "model": "<strong>KONTROLA:</strong> Číslo je deliteľné 6 práve vtedy, keď je deliteľné 2 aj 3. Kritériá treba použiť obe."
       },
       {
         "id": "transfer",
@@ -162,7 +147,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "BEZ MOBILU",
         "title": "Ceruzka má posledné slovo",
-        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor alebo vyrieš podobný príklad v zošite bez aplikácie. Výsledok skontroluj iným spôsobom, ak je to možné.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Over 234 pomocou kritérií deliteľnosti 2, 3 a 6.</p>",
         "model": "<strong>KONTROLA:</strong> Zápis má byť čitateľný, s medzikrokmi, jednotkami alebo podmienkami podľa typu úlohy."
       },
       {

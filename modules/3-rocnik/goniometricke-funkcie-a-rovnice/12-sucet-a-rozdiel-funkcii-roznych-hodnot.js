@@ -101,11 +101,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
+        "type": "explain",
+        "phase": "NOVÝ KROK",
         "title": "Súčet a rozdiel funkcií rôznych hodnôt",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Súčet a rozdiel sínusov a kosínusov</strong></p><div class=\"formula\">sin α + sin β = 2 sin(<span class=\"frac\"><span class=\"frac-num\">α+β</span><span class=\"frac-den\">2</span></span>) cos(<span class=\"frac\"><span class=\"frac-num\">α−β</span><span class=\"frac-den\">2</span></span>)<span class=\"formula-note\">sin α − sin β = 2 cos(<span class=\"frac\"><span class=\"frac-num\">α+β</span><span class=\"frac-den\">2</span></span>) sin(<span class=\"frac\"><span class=\"frac-num\">α−β</span><span class=\"frac-den\">2</span></span>)</span></div><div class=\"formula\">cos α + cos β = 2 cos(<span class=\"frac\"><span class=\"frac-num\">α+β</span><span class=\"frac-den\">2</span></span>) cos(<span class=\"frac\"><span class=\"frac-num\">α−β</span><span class=\"frac-den\">2</span></span>)<span class=\"formula-note\">cos α − cos β = −2 sin(<span class=\"frac\"><span class=\"frac-num\">α+β</span><span class=\"frac-den\">2</span></span>) sin(<span class=\"frac\"><span class=\"frac-num\">α−β</span><span class=\"frac-den\">2</span></span>)</span></div>",
-        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
+        "html": "<p><strong>Súčet a rozdiel sínusov a kosínusov</strong></p><div class=\"formula\">sin α + sin β = 2 sin(<span class=\"frac\"><span class=\"frac-num\">α+β</span><span class=\"frac-den\">2</span></span>) cos(<span class=\"frac\"><span class=\"frac-num\">α−β</span><span class=\"frac-den\">2</span></span>)<span class=\"formula-note\">sin α − sin β = 2 cos(<span class=\"frac\"><span class=\"frac-num\">α+β</span><span class=\"frac-den\">2</span></span>) sin(<span class=\"frac\"><span class=\"frac-num\">α−β</span><span class=\"frac-den\">2</span></span>)</span></div><div class=\"formula\">cos α + cos β = 2 cos(<span class=\"frac\"><span class=\"frac-num\">α+β</span><span class=\"frac-den\">2</span></span>) cos(<span class=\"frac\"><span class=\"frac-num\">α−β</span><span class=\"frac-den\">2</span></span>)<span class=\"formula-note\">cos α − cos β = −2 sin(<span class=\"frac\"><span class=\"frac-num\">α+β</span><span class=\"frac-den\">2</span></span>) sin(<span class=\"frac\"><span class=\"frac-num\">α−β</span><span class=\"frac-den\">2</span></span>)</span></div>"
       },
       {
         "id": "check",
@@ -126,7 +125,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Rieš ručne",
         "html": "<p>Vytvor v zošite jeden vlastný príklad k téme <strong>Súčet a rozdiel funkcií rôznych hodnôt</strong>. Každý krok označ vzťahom alebo dôvodom, ktorý používaš.</p>",
         "model": "Zápis do zošita môže obsahovať opravu. Dôležité je, aby bolo vidieť, prečo jednotlivé kroky platia."

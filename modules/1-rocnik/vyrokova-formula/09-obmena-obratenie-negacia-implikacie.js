@@ -133,7 +133,7 @@ MathPlatform.registerModule({
       {
         "id": "nb",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Štyri tvary vedľa seba",
         "html": "<p>Pre vetu <strong>Ak je n deliteľné 6, potom je n deliteľné 3</strong> zapíš: pôvodnú implikáciu, obrátenú, obmenu a negáciu. Pri každej rozhodni, či je pravdivá.</p>",
         "model": "<strong>VZOR:</strong> pôvodná: 6|n ⇒ 3|n (P); obrátená: 3|n ⇒ 6|n (N, napr. n=9); obmena: 3∤n ⇒ 6∤n (P); negácia: 6|n ∧ 3∤n (nepravdivé tvrdenie)."

@@ -82,16 +82,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Vyňatie spoločného činiteľa',
-        html: '<p>Nájdeme najväčší spoločný činiteľ všetkých členov mnohočlena a vyjmeme ho pred zátvorku:</p><div class="formula">ab + ac = a(b + c)</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>6x² + 15x — spoločný činiteľ je 3x (najväčšie číslo aj premenná spoločná obom členom).</p><p>6x² + 15x = 3x(2x + 5)</p></div>',
+        html: '<p>Nájdeme najväčší spoločný činiteľ všetkých členov mnohočlena a vyjmeme ho pred zátvorku:</p><div class="formula">ab + ac = a(b + c)</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>6x² + 15x — spoločný činiteľ je 3x (najväčšie číslo aj premenná spoločná obom členom).</p><p>6x² + 15x = 3x(2x + 5)</p><p>Výsledok vždy over spätným roznásobením: 3x(2x+5) = 6x²+15x. ✓</p></div>',
         remember: 'ab + ac = a(b + c). Vyjmi <span class="hl">najväčší</span> spoločný činiteľ (číslo aj premennú).',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>ab + ac = a(b + c)</strong> — vyjmi najväčší spoločný číselný aj premenný činiteľ pred zátvorku.</p><p>Príklad: 6x² + 15x = 3x(2x + 5). Výsledok vždy over spätným roznásobením: 3x(2x+5) = 6x²+15x. ✓</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-basic',

@@ -131,7 +131,7 @@ MathPlatform.registerModule({
       {
         "id": "manual",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Úloha do zošita",
         "html": "<span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><p>Rieš ručne nerovnicu <strong>4x − 7 > 2x + 5</strong>. Zapíš všetky úpravy, výsledok ako nerovnosť aj interval a vyznač ho na číselnej osi.</p>",
         "continueLabel": "Mám zapísané"

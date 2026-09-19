@@ -86,14 +86,6 @@ MathPlatform.registerModule({
         remember: 'ax²+bx+c = a(x−x₁)(x−x₂), kde x₁, x₂ sú korene rovnice ax²+bx+c=0.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Rozklad kvadratického trojčlena na súčin:</strong></p><div class="formula">ax² + bx + c = a(x − x₁)(x − x₂)<span class="formula-note">kde x₁, x₂ sú korene rovnice ax²+bx+c=0</span></div><p>Postup: nájdi korene, dosaď do vzorca, over roznásobením.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-basic',
         type: 'choice',
         phase: 'OVER SI',

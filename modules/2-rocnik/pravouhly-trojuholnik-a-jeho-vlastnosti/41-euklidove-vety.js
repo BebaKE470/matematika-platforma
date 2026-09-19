@@ -85,14 +85,6 @@ MathPlatform.registerModule({
         remember: 'v² = ca·cb (výška). a² = c·ca, b² = c·cb (odvesna).',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Výška na preponu v pravouhlom trojuholníku rozdeľuje preponu c na úseky ca (pri odvesne a) a cb (pri odvesne b), c = ca+cb.</p><div class="formula"><span class="mini-label">EUKLIDOVA VETA O VÝŠKE</span>v² = ca · cb</div><div class="formula"><span class="mini-label">EUKLIDOVA VETA O ODVESNE</span>a² = c · ca<br>b² = c · cb</div>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-height',
         type: 'choice',
         phase: 'OVER SI',

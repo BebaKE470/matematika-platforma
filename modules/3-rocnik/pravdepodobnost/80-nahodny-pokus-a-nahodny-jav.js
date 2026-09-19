@@ -85,11 +85,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Náhodný pokus:</strong> činnosť s vopred neistým výsledkom. <strong>Elementárny jav:</strong> jeden možný výsledok pokusu. <strong>Náhodný jav:</strong> množina elementárnych javov spĺňajúcich danú podmienku. <strong>Istý jav</strong> nastane vždy, <strong>nemožný jav</strong> nikdy. <strong>Opačný jav</strong> Ā obsahuje elementárne javy, ktoré nepatria do A.</p>',
-        continueLabel: 'Mám zapísané',
+        type: 'explain',
+        phase: 'NOVÝ POJEM / PRAVIDLO',
+        title: 'Päť pojmov pohromade',
+        html: '<p>Máš teraz všetkých päť pojmov pohromade:</p><p><strong>Náhodný pokus:</strong> činnosť s vopred neistým výsledkom. <strong>Elementárny jav:</strong> jeden možný výsledok pokusu. <strong>Náhodný jav:</strong> množina elementárnych javov spĺňajúcich danú podmienku. <strong>Istý jav</strong> nastane vždy, <strong>nemožný jav</strong> nikdy. <strong>Opačný jav</strong> Ā obsahuje elementárne javy, ktoré nepatria do A.</p>',
       },
       {
         id: 'q-basic',

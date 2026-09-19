@@ -86,11 +86,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
+        type: 'explain',
+        phase: 'POCHOP',
+        title: 'Päť pojmov pohromade',
         html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Štatistický súbor</div><p class="term-rule">Množina skúmaných jednotiek.</p></div><div class="term-item no-symbol"><div class="term-name">Štatistická jednotka</div><p class="term-rule">Jeden prvok súboru.</p></div><div class="term-item no-symbol"><div class="term-name">Štatistický znak</div><p class="term-rule">Sledovaná vlastnosť (kvalitatívny — nečíselný, kvantitatívny — číselný).</p></div><div class="term-item no-symbol"><div class="term-name">Absolútna početnosť</div><p class="term-rule">Počet výskytov danej hodnoty.</p></div><div class="term-item no-symbol"><div class="term-name">Relatívna početnosť</div><p class="term-rule">Absolútna početnosť / celkový počet jednotiek.</p></div></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-basic',

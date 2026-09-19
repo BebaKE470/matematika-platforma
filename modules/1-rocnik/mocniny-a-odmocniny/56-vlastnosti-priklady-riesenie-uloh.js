@@ -74,11 +74,11 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
+        type: 'explain',
+        phase: 'NOVÝ POJEM / PRAVIDLO',
+        title: 'Tri pravidlá platia aj pre zlomkový exponent',
         html: '<p>Pravidlá pre mocniny platia rovnako aj pre racionálny (zlomkový) mocniteľ:</p><div class="formula">aᵐ · aⁿ = aᵐ⁺ⁿ<br>aᵐ : aⁿ = aᵐ⁻ⁿ<br>(aᵐ)ⁿ = aᵐⁿ</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>8^(1/3) · 8^(1/3) = 8^(2/3) = ∛(8²) = ∛64 = 4.</p></div>',
-        continueLabel: 'Mám zapísané',
+        remember: 'aᵐ·aⁿ=aᵐ⁺ⁿ, aᵐ:aⁿ=aᵐ⁻ⁿ, (aᵐ)ⁿ=aᵐⁿ — platí aj keď m, n sú zlomky.',
       },
       {
         id: 'q-multiply',

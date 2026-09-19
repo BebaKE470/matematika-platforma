@@ -80,13 +80,6 @@ MathPlatform.registerModule({
         "html": "<div class=\"formula\">p % znamená p stotín zo základu.<span class=\"formula-note\">Pred výpočtom treba určiť základ, počet percent a percentovú hodnotu.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Vypočítaj 20 % z 150.</p><p>20 % = <span class=\"frac\"><span class=\"frac-num\">20</span><span class=\"frac-den\">100</span></span> = 0,20</p><p>0,20 · 150 = <strong>30</strong></p></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
-        "id": "notebook-rule",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>p % znamená p stotín zo základu. Pred výpočtom treba určiť základ, počet percent a percentovú hodnotu.</p>"
-      },
-      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -109,14 +102,6 @@ MathPlatform.registerModule({
         "title": "Povedz to presne",
         "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Percentá“.",
         "model": "p % znamená p stotín zo základu. Pred výpočtom treba určiť základ, počet percent a percentovú hodnotu."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Zapíš 12 % ako zlomok aj desatinné číslo a vypočítaj 12 % z 350.</p>",
-        "model": "<strong>KONTROLA:</strong> p % znamená p stotín zo základu. Pred výpočtom treba určiť základ, počet percent a percentovú hodnotu."
       },
       {
         "id": "transfer",
@@ -162,7 +147,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "BEZ MOBILU",
         "title": "Ceruzka má posledné slovo",
-        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor alebo vyrieš podobný príklad v zošite bez aplikácie. Výsledok skontroluj iným spôsobom, ak je to možné.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Zapíš 12 % ako zlomok aj desatinné číslo a vypočítaj 12 % z 350.</p>",
         "model": "<strong>KONTROLA:</strong> Zápis má byť čitateľný, s medzikrokmi, jednotkami alebo podmienkami podľa typu úlohy."
       },
       {

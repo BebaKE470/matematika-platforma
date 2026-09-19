@@ -68,11 +68,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
+        type: 'explain',
+        phase: 'POCHOP',
+        title: 'Ako sa rozhodnúť',
         html: '<ol class="steps"><li>Usporadúvam <span class="hl">všetky</span> prvky, alebo iba časť? Všetky → permutácia. Časť → pokračuj.</li><li>Záleží na poradí výberu? Áno → variácia. Nie → kombinácia.</li><li>Môžu sa prvky opakovať? Podľa toho zvoľ variantu s/bez opakovania.</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q1',

@@ -68,7 +68,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM",
         "title": "Rozdiel množín",
-        "html": "<p><strong>Rozdiel A − B</strong> tvoria tie prvky, ktoré patria do A, ale nepatria do B.</p><p>Pri rozdiele záleží na poradí: A − B vo všeobecnosti nie je to isté ako B − A.</p>",
+        "html": "<p><strong>Rozdiel A − B</strong> tvoria tie prvky, ktoré patria do A, ale nepatria do B.</p><p>Pri rozdiele záleží na poradí: A − B vo všeobecnosti nie je to isté ako B − A.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>X={2,3,5,7}, Y={3,7}. Potom X−Y={2,5}, ale Y−X=∅ (v Y nie je nič, čo by nebolo aj v X).</p></div>",
         "remember": "A − B: začínam v A a vynechám všetko, čo patrí do B."
       },
       {
@@ -86,14 +86,6 @@ MathPlatform.registerModule({
         "title": "Čo zostane?",
         "html": "<div class=\"logic-visual\"><svg viewBox=\"0 0 760 290\"><rect x=\"70\" y=\"25\" width=\"620\" height=\"210\" rx=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"/><circle cx=\"315\" cy=\"130\" r=\"90\" fill=\"currentColor\" opacity=\".14\" stroke=\"currentColor\" stroke-width=\"3\"/><circle cx=\"445\" cy=\"130\" r=\"90\" fill=\"white\" opacity=\".9\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"110\" y=\"55\" font-size=\"20\">U</text><text x=\"250\" y=\"65\" font-size=\"20\">A</text><text x=\"500\" y=\"65\" font-size=\"20\">B</text><text x=\"380\" y=\"270\" text-anchor=\"middle\" font-size=\"18\">A − B: v A, ale nie v B</text></svg></div>",
         "continueLabel": "Pokračovať"
-      },
-      {
-        "id": "notebook-1",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>Rozdiel A − B</strong> tvoria prvky, ktoré patria do A, ale nepatria do B.</p><p>Príklad: A={1,2,3,4}, B={3,4,5}. Potom A−B={1,2}. Na poradí záleží — A−B vo všeobecnosti nie je to isté ako B−A.</p>",
-        "continueLabel": "Mám zapísané"
       },
       {
         "id": "start",
@@ -117,14 +109,6 @@ MathPlatform.registerModule({
         "title": "Doplnok potrebuje univerzum",
         "html": "<p>Doplnok A′ tvoríme vzhľadom na dohodnutú univerzálnu množinu U: sú to prvky U, ktoré nie sú v A.</p>",
         "remember": "Bez určenej univerzálnej množiny nemusí byť doplnok jednoznačný."
-      },
-      {
-        "id": "notebook-2",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p><strong>Doplnok množiny A</strong> (vzhľadom na univerzálnu množinu U) tvoria všetky prvky U, ktoré do A nepatria. Zapisujeme <strong>A′</strong>.</p><p>Príklad: U={1,2,3,4,5}, A={1,2}. Potom A′={3,4,5}.</p>",
-        "continueLabel": "Mám zapísané"
       },
       {
         "id": "explain",

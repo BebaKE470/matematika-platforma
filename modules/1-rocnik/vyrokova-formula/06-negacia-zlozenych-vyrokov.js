@@ -134,10 +134,11 @@ MathPlatform.registerModule({
       },
       {
         "id": "nb",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Tri pravidlá, ktoré majú zmysel",
-        "html": "<p class=\"muted\">Skús si najprv v duchu premyslieť, ako znejú tieto tri negácie — potom si ich presne takto zapíš.</p><p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p>¬(A ∧ B) ⇔ ¬A ∨ ¬B<br>¬(A ∨ B) ⇔ ¬A ∧ ¬B<br>¬(A ⇒ B) ⇔ A ∧ ¬B</p>"
+        "type": "explain",
+        "phase": "1 · POCHOP",
+        "title": "Tri pravidlá pohromade",
+        "html": "<p>Teraz vidíš všetky tri pravidlá vedľa seba — všimni si, čo sa v každom z nich vymieňa.</p><div class=\"formula\">¬(A ∧ B) ⇔ ¬A ∨ ¬B</div><div class=\"formula\">¬(A ∨ B) ⇔ ¬A ∧ ¬B</div><div class=\"formula\">¬(A ⇒ B) ⇔ A ∧ ¬B</div>",
+        "remember": "Pri ∧ aj ∨ sa spojka vymení a obe časti sa negujú. Pri ⇒ sa mení na ∧: prvá časť zostáva, druhá sa neguje."
       },
       {
         "id": "check",

@@ -58,16 +58,8 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie postupov',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Nerovnica</div><p class="term-rule">Nájdi korene, urč interval podľa orientácie paraboly (a&gt;0 kladné mimo koreňov, a&lt;0 naopak).</p></div><div class="term-item no-symbol"><div class="term-name">D &lt; 0</div><p class="term-rule">Výraz má na celej osi znamienko podľa a.</p></div><div class="term-item no-symbol"><div class="term-name">Parameter</div><p class="term-rule">Vyjadri D(m), rieš (ne)rovnicu pre m.</p></div></div>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Nerovnica</div><p class="term-rule">Nájdi korene, urč interval podľa orientácie paraboly (a&gt;0 kladné mimo koreňov, a&lt;0 naopak) — výpočtom alebo z grafu.</p></div><div class="term-item no-symbol"><div class="term-name">D &lt; 0</div><p class="term-rule">Výraz má na celej osi znamienko podľa a.</p></div><div class="term-item no-symbol"><div class="term-name">Parameter</div><p class="term-rule">Vyjadri D(m) alebo dosaď daný koreň, rieš výslednú (ne)rovnicu pre m.</p></div></div>',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Kvadratická nerovnica</div><p class="term-rule">Nájdi korene, urč interval podľa orientácie paraboly (výpočtom alebo z grafu).</p></div><div class="term-item no-symbol"><div class="term-name">D &lt; 0</div><p class="term-rule">Výraz má na celej osi znamienko podľa a.</p></div><div class="term-item no-symbol"><div class="term-name">Rovnica s parametrom</div><p class="term-rule">Vyjadri D(m) alebo dosaď daný koreň, rieš výslednú (ne)rovnicu pre parameter.</p></div></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q1',

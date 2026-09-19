@@ -80,16 +80,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Variácia bez opakovania a s opakovaním',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Variácia BEZ opakovania</div><p class="term-rule">Usporiadaný výber k rôznych prvkov z n: V(k,n) = <span class="frac"><span class="frac-num">n!</span><span class="frac-den">(n−k)!</span></span> = n(n−1)...(n−k+1).</p></div><div class="term-item no-symbol"><div class="term-name">Variácia S opakovaním</div><p class="term-rule">Usporiadaný výber k prvkov z n, pričom sa prvky <span class="hl">môžu</span> opakovať: V\'(k,n) = n^k.</p></div></div><div class="example"><span class="mini-label">PRÍKLAD S OPAKOVANÍM</span><p>PIN kód so 4 číslicami (0–9, opakovanie povolené): 10⁴=10000.</p></div>',
+        html: '<p><strong>Variácia k-tej triedy z n prvkov</strong> je usporiadaný výber k prvkov z n, pričom na poradí záleží.</p><div class="term-list"><div class="term-item no-symbol"><div class="term-name">Variácia BEZ opakovania</div><p class="term-rule">Usporiadaný výber k rôznych prvkov z n: V(k,n) = <span class="frac"><span class="frac-num">n!</span><span class="frac-den">(n−k)!</span></span> = n(n−1)...(n−k+1).</p></div><div class="term-item no-symbol"><div class="term-name">Variácia S opakovaním</div><p class="term-rule">Usporiadaný výber k prvkov z n, pričom sa prvky <span class="hl">môžu</span> opakovať: V\'(k,n) = n^k.</p></div></div><div class="example"><span class="mini-label">PRÍKLAD S OPAKOVANÍM</span><p>PIN kód so 4 číslicami (0–9, opakovanie povolené): 10⁴=10000.</p></div>',
         remember: 'Bez opakovania: V(k,n)=n!/(n−k)!. S opakovaním: V\'(k,n)=n^k.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Variácia k-tej triedy z n prvkov</strong> — usporiadaný výber, na poradí záleží. <strong>Bez opakovania:</strong> V(k,n)=<span class="frac"><span class="frac-num">n!</span><span class="frac-den">(n−k)!</span></span>=n(n−1)...(n−k+1) (každý prvok najviac raz). <strong>S opakovaním:</strong> V\'(k,n)=n^k (prvky sa môžu opakovať).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-basic',

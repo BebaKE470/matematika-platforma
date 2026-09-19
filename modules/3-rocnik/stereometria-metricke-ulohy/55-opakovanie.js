@@ -71,14 +71,6 @@ MathPlatform.registerModule({
         "html": "<p>Namiesto izolovaného memorovania vzorcov hľadaj štruktúru.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Hranol, valec</div><p class=\"term-rule\">V = Sp · v</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Ihlan, kužeľ</div><p class=\"term-rule\">V = <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">3</span></span> · Sp · v</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Povrch (všeobecne)</div><p class=\"term-rule\">S = podstavy + plášť</p></div></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vytvor tabuľku: teleso – Sp – Q – S – V – potrebné rozmery.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Namiesto izolovaného memorovania vzorcov hľadaj štruktúru: hranol/valec Sp·v, ihlan/kužeľ tretina Sp·v, povrch = podstavy + plášť.</p>",
-        "model": "<strong>KONTROLA:</strong> Namiesto izolovaného memorovania vzorcov hľadaj štruktúru: hranol/valec Sp·v, ihlan/kužeľ tretina Sp·v, povrch = podstavy + plášť."
-      },
-      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -146,8 +138,8 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "BEZ MOBILU",
         "title": "Ceruzka má posledné slovo",
-        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor alebo vyrieš podobný príklad v zošite bez aplikácie. Výsledok skontroluj iným spôsobom, ak je to možné.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis má byť čitateľný, s medzikrokmi, jednotkami alebo podmienkami podľa typu úlohy."
+        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor tabuľku: teleso – Sp – Q – S – V – potrebné rozmery.</p>",
+        "model": "<strong>KONTROLA:</strong> Namiesto izolovaného memorovania vzorcov hľadaj štruktúru: hranol/valec Sp·v, ihlan/kužeľ tretina Sp·v, povrch = podstavy + plášť."
       },
       {
         "id": "reflection",

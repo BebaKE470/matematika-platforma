@@ -58,16 +58,8 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie postupu',
-        html: '<ol class="steps"><li>Označ neznámu x.</li><li>Prelož zadanie do rovnice.</li><li>Vyrieš rovnicu.</li><li>Over <span class="hl">každé</span> riešenie voči kontextu úlohy — zamietni to, čo nedáva zmysel.</li></ol>',
+        html: '<ol class="steps"><li>Označ neznámu x.</li><li>Prelož zadanie do rovnice.</li><li>Vyrieš rovnicu.</li><li>Over <span class="hl">každé</span> riešenie voči kontextu úlohy — zamietni to, čo nedáva zmysel.</li></ol><p>Niektoré úlohy (napr. ekonomické) môžu mať aj dve zmysluplné riešenia.</p>',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Zhrnutie postupu pri slovnej úlohe s kvadratickou rovnicou:</strong></p><ol class="steps"><li>Označ neznámu.</li><li>Prelož zadanie do rovnice.</li><li>Vyrieš rovnicu.</li><li>Over zmysluplnosť <span class="hl">každého</span> riešenia.</li></ol><p>Niektoré úlohy (napr. ekonomické) môžu mať aj dve zmysluplné riešenia.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q1',

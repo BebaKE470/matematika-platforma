@@ -59,16 +59,8 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Päť vlastností funkcie',
-        html: '<p>Párna (f(−x)=f(x)) / nepárna (f(−x)=−f(x)). Rastúca / klesajúca. Maximum / minimum (najväčšia/najmenšia hodnota y). Prostá (rôzne x → rôzne y). Ohraničená (existuje hranica zhora/zdola).</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Párna / nepárna</div><p class="term-rule">Porovnanie f(−x) s f(x): párna f(−x)=f(x), nepárna f(−x)=−f(x).</p></div><div class="term-item no-symbol"><div class="term-name">Rastúca / klesajúca</div><p class="term-rule">Porovnanie f(x₁), f(x₂) pri x₁&lt;x₂.</p></div><div class="term-item no-symbol"><div class="term-name">Extrémy</div><p class="term-rule">Najväčšia/najmenšia hodnota y, ktorú funkcia nadobúda.</p></div><div class="term-item no-symbol"><div class="term-name">Prostá</div><p class="term-rule">Rôzne x → rôzne y.</p></div><div class="term-item no-symbol"><div class="term-name">Ohraničená</div><p class="term-rule">Existuje hranica zhora a/alebo zdola, ktorú hodnoty neprekročia.</p></div></div>',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Párna / nepárna</div><p class="term-rule">Porovnanie f(−x).</p></div><div class="term-item no-symbol"><div class="term-name">Rastúca / klesajúca</div><p class="term-rule">Porovnanie f(x₁), f(x₂) pri x₁&lt;x₂.</p></div><div class="term-item no-symbol"><div class="term-name">Extrémy</div><p class="term-rule">Najväčšia/najmenšia hodnota y.</p></div><div class="term-item no-symbol"><div class="term-name">Prostá</div><p class="term-rule">Rôzne x → rôzne y.</p></div><div class="term-item no-symbol"><div class="term-name">Ohraničená</div><p class="term-rule">Existencia hranice.</p></div></div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'classify',

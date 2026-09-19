@@ -79,13 +79,6 @@ MathPlatform.registerModule({
         "html": "<p>Parameter je pevná, ale bližšie neurčená hodnota. Pri delení výrazom s parametrom musíme rozlíšiť prípad, keď je nulový.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
-        "id": "concept-note",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Parameter je pevná, ale bližšie neurčená hodnota. Pri delení výrazom s parametrom musíme rozlíšiť prípad, keď je nulový.</p>"
-      },
-      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -112,7 +105,7 @@ MathPlatform.registerModule({
       {
         "id": "notebook",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Zapíš si do zošita",
         "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Preskúmaj ax=6 osobitne pre a=0 a a≠0.</p>"
       },

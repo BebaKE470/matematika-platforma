@@ -109,11 +109,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
+        "type": "explain",
+        "phase": "VLASTNOSTI",
         "title": "Grafy goniometrických funkcií – precvičovanie",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Grafy sínusu a kosínusu</strong></p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">y = sin x</div><p class=\"term-rule\">obor hodnôt ⟨−1;1⟩, perióda 2π, nuly x = kπ, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">y = cos x</div><p class=\"term-rule\">obor hodnôt ⟨−1;1⟩, perióda 2π, nuly x = π/2 + kπ, k ∈ ℤ.</p></div></div><p>Pri čítaní grafu sleduj amplitúdu, periódu, posun a priesečníky s osami.</p>",
-        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
+        "html": "<p><strong>Grafy sínusu a kosínusu</strong></p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">y = sin x</div><p class=\"term-rule\">obor hodnôt ⟨−1;1⟩, perióda 2π, nuly x = kπ, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">y = cos x</div><p class=\"term-rule\">obor hodnôt ⟨−1;1⟩, perióda 2π, nuly x = π/2 + kπ, k ∈ ℤ.</p></div></div><p>Pri čítaní grafu sleduj amplitúdu, periódu, posun a priesečníky s osami.</p>"
       },
       {
         "id": "check",
@@ -134,7 +133,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Rieš ručne",
         "html": "<p>Vytvor v zošite jeden vlastný príklad k téme <strong>Grafy goniometrických funkcií – precvičovanie</strong>. Každý krok označ vzťahom alebo dôvodom, ktorý používaš.</p>",
         "model": "Zápis do zošita môže obsahovať opravu. Dôležité je, aby bolo vidieť, prečo jednotlivé kroky platia."

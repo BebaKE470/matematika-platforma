@@ -149,11 +149,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
+        "type": "explain",
+        "phase": "VLASTNOSTI",
         "title": "tg x – definícia a vlastnosti",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>FUNKCIA y = tg x</strong></p><p>Pre cos x ≠ 0 platí <strong>tg x = <span class=\"frac\"><span class=\"frac-num\">sin x</span><span class=\"frac-den\">cos x</span></span></strong>.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Definičný obor</div><p class=\"term-rule\">D(tg) = ℝ \ {π/2 + kπ; k ∈ ℤ}</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obor hodnôt</div><p class=\"term-rule\">H(tg) = ℝ</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Perióda</div><p class=\"term-rule\">π, teda tg(x + kπ) = tg x, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nuly</div><p class=\"term-rule\">x = kπ, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nepárnosť</div><p class=\"term-rule\">tg(−x) = −tg x.</p></div></div><p>Priamky x = π/2 + kπ sú zvislé asymptoty grafu funkcie tg x.</p>",
-        "model": "Teoretický zápis je zobrazený celý v poli html; model sa v zjednodušenom notebook rendereri nezobrazuje."
+        "html": "<p><strong>FUNKCIA y = tg x</strong></p><p>Pre cos x ≠ 0 platí <strong>tg x = <span class=\"frac\"><span class=\"frac-num\">sin x</span><span class=\"frac-den\">cos x</span></span></strong>.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Definičný obor</div><p class=\"term-rule\">D(tg) = ℝ \ {π/2 + kπ; k ∈ ℤ}</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obor hodnôt</div><p class=\"term-rule\">H(tg) = ℝ</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Perióda</div><p class=\"term-rule\">π, teda tg(x + kπ) = tg x, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nuly</div><p class=\"term-rule\">x = kπ, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nepárnosť</div><p class=\"term-rule\">tg(−x) = −tg x.</p></div></div><p>Priamky x = π/2 + kπ sú zvislé asymptoty grafu funkcie tg x.</p>"
       },
       {
         "id": "reflection",

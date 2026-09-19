@@ -81,13 +81,6 @@ MathPlatform.registerModule({
         "remember": "najprv sleduj symetriu grafu; potom ju vieš zapísať vzťahom."
       },
       {
-        "id": "clean-a",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Slovník vlastností funkcie",
-        "html": "<p>Do zošita stručne zapíš definície: <strong>párna</strong> a <strong>nepárna</strong> funkcia. Ku každej pridaj jednu grafickú alebo slovnú pomôcku.</p>"
-      },
-      {
         "id": "even-visual",
         "type": "coordinatePlot",
         "phase": "VIZUALIZÁCIA",
@@ -150,10 +143,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean-b",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Slovník vlastností funkcie",
-        "html": "<p>Do zošita stručne zapíš definície: <strong>rastúca/klesajúca</strong>, <strong>maximum/minimum</strong>, <strong>prostá</strong>, <strong>zhora/zdola ohraničená</strong>. Ku každej pridaj jednu grafickú alebo slovnú pomôcku (napríklad: prostá → vodorovná priamka pretne graf najviac raz).</p>"
+        "type": "explain",
+        "phase": "NOVÝ POJEM",
+        "title": "Štyri vlastnosti v skratke",
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Rastúca / klesajúca</div><p class=\"term-rule\">Pri pohybe zľava doprava funkčné hodnoty rastú, resp. klesajú (vždy na konkrétnej časti definičného oboru).</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Maximum / minimum</div><p class=\"term-rule\">Najväčšia, resp. najmenšia funkčná hodnota, ktorú funkcia na danej množine dosiahne.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Prostá</div><p class=\"term-rule\">Rôzne vstupy majú vždy rôzne výstupy — vodorovná priamka pretne graf najviac raz.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Ohraničená</div><p class=\"term-rule\">Funkčné hodnoty neprekročia hornú hranicu (zhora) a/alebo neklesnú pod dolnú hranicu (zdola).</p></div></div>"
       },
       {
         "id": "matrix",

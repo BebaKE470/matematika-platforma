@@ -74,16 +74,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Násobenie dvojčlena dvojčlenom',
-        html: '<div class="formula">(a + b)(c + d) = ac + ad + bc + bd<span class="formula-note">Každý člen prvého dvojčlena vynásobíme každým členom druhého.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>(x + 2)(x + 3) = x·x + x·3 + 2·x + 2·3 = x² + 3x + 2x + 6 = x² + 5x + 6</p><p>(po spojení podobných členov 3x a 2x)</p></div>',
+        html: '<div class="formula">(a + b)(c + d) = ac + ad + bc + bd<span class="formula-note">Každý člen prvého dvojčlena vynásobíme každým členom druhého.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>(x + 2)(x + 3) = x·x + x·3 + 2·x + 2·3 = x² + 3x + 2x + 6 = x² + 5x + 6</p><p>(po spojení podobných členov 3x a 2x)</p></div><p>Pozor na znamienka — (x−2)(x+5) = x² + 5x − 2x − 10 = x² + 3x − 10.</p>',
         remember: '(a+b)(c+d) = ac + ad + bc + bd. Po roznásobení spoj podobné členy.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>(a + b)(c + d) = ac + ad + bc + bd</strong> — vzniknú štyri čiastkové súčiny, ktoré potom spojíme (podobné členy).</p><p>Príklad: (x+2)(x+3) = x² + 3x + 2x + 6 = x² + 5x + 6.</p><p>Pozor na znamienka — (x−2)(x+5) = x² + 5x − 2x − 10 = x² + 3x − 10.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-basic',

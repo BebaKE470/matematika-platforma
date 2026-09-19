@@ -80,16 +80,8 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Faktoriál čísla',
-        html: '<p><strong>Faktoriál</strong> prirodzeného čísla n (značíme n!) je súčin všetkých prirodzených čísel od n do 1.</p><div class="formula"><span class="mini-label">FAKTORIÁL</span>n! = n·(n−1)·(n−2)·...·2·1<span class="formula-note">Podľa dohody platí 0! = 1.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>4! = 4·3·2·1 = 24.</p></div>',
+        html: '<p><strong>Faktoriál</strong> prirodzeného čísla n (značíme n!) je súčin všetkých prirodzených čísel od n do 1.</p><div class="formula"><span class="mini-label">FAKTORIÁL</span>n! = n·(n−1)·(n−2)·...·2·1<span class="formula-note">Podľa dohody platí 0! = 1.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>4! = 4·3·2·1 = 24.</p></div><p>Faktoriál n! udáva počet spôsobov, ako usporiadať n rôznych prvkov do radu.</p>',
         remember: 'n! = n·(n−1)·...·2·1. Dohoda: 0! = 1.',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Faktoriál:</strong> n! = n·(n−1)·(n−2)·...·2·1, pre prirodzené n. Dohoda: 0!=1. Faktoriál n! udáva počet spôsobov, ako usporiadať n rôznych prvkov do radu.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-basic',

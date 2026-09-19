@@ -90,16 +90,8 @@ MathPlatform.registerModule({
           { x: 3, y: 4 },
           { x: 5, y: 9 },
         ],
-        note: 'D(f) sa číta na vodorovnej osi x, H(f) na zvislej osi y.',
+        note: 'Graf funkcie f je množina bodov [x, f(x)]. D(f) sa číta na vodorovnej osi x, H(f) na zvislej osi y (opakujúca sa hodnota sa v H(f) píše iba raz).',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Graf funkcie f je množina bodov [x, f(x)] v súradnicovej sústave.</p><p><strong>D(f)</strong> — čítame ako priemet všetkých bodov grafu na os x.</p><p><strong>H(f)</strong> — čítame ako priemet všetkých bodov grafu na os y (opakujúca sa hodnota sa v množine píše iba raz).</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-domain',

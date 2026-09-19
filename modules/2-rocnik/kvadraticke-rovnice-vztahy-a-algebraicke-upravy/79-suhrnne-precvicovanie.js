@@ -58,16 +58,8 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie postupov',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Vietove vzťahy</div><p class="term-rule">x₁+x₂=<span class="frac"><span class="frac-num">−b</span><span class="frac-den">a</span></span>, x₁·x₂=<span class="frac"><span class="frac-num">c</span><span class="frac-den">a</span></span>.</p></div><div class="term-item no-symbol"><div class="term-name">Rozklad</div><p class="term-rule">ax²+bx+c=a(x−x₁)(x−x₂).</p></div><div class="term-item no-symbol"><div class="term-name">Krátenie</div><p class="term-rule">Rozlož, potom skráť spoločný činiteľ (s podmienkou definičného oboru).</p></div></div>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Vietove vzťahy</div><p class="term-rule">x₁+x₂=<span class="frac"><span class="frac-num">−b</span><span class="frac-den">a</span></span>, x₁·x₂=<span class="frac"><span class="frac-num">c</span><span class="frac-den">a</span></span>.</p></div><div class="term-item no-symbol"><div class="term-name">Rozklad</div><p class="term-rule">ax²+bx+c=a(x−x₁)(x−x₂).</p></div><div class="term-item no-symbol"><div class="term-name">Krátenie</div><p class="term-rule">Rozlož, potom skráť spoločný činiteľ (s podmienkou definičného oboru).</p></div></div><p>Postup pri kombinovanej úlohe: najprv odhadni korene (Vietove vzťahy) alebo použi diskriminant, potom rozlož trojčlen na súčin a napokon — ak ide o lomený výraz — urč definičný obor a skráť spoločný činiteľ.</p>',
         continueLabel: 'Pokračovať',
-      },
-      {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Postup pri kombinovanej úlohe:</p><ol class="steps"><li>Odhadni korene rovnice (Vietove vzťahy) alebo použi diskriminant.</li><li>Rozlož trojčlen na súčin a(x−x₁)(x−x₂).</li><li>Ak ide o lomený výraz, urč definičný obor a skráť spoločný činiteľ.</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q1',

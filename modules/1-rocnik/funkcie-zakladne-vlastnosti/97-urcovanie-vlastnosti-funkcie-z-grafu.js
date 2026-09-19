@@ -142,11 +142,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Postup pri komplexnom čítaní grafu:</p><ol class="steps"><li>D(f) — priemet na os x.</li><li>H(f) — priemet na os y.</li><li>Monotónnosť — sleduj zľava doprava, či y rastie alebo klesá (môže sa meniť po úsekoch).</li><li>Extrémy — najväčšia/najmenšia hodnota y.</li><li>Prostota — sleduj, či sa niektorá hodnota y opakuje.</li></ol>',
-        continueLabel: 'Mám zapísané',
+        type: 'explain',
+        phase: 'ZHRNUTIE POSTUPU',
+        title: 'Postup pri čítaní grafu',
+        html: '<p>Keď máš pred sebou graf funkcie, oplatí sa prejsť ho vždy v rovnakom poradí:</p><ol class="steps"><li>D(f) — priemet na os x.</li><li>H(f) — priemet na os y.</li><li>Monotónnosť — sleduj zľava doprava, či y rastie alebo klesá (môže sa meniť po úsekoch).</li><li>Extrémy — najväčšia/najmenšia hodnota y.</li><li>Prostota — sleduj, či sa niektorá hodnota y opakuje.</li></ol>',
       },
       {
         id: 'argument',

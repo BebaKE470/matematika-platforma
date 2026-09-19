@@ -85,11 +85,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
+        type: 'explain',
+        phase: 'NOVÝ POJEM / PRAVIDLO',
+        title: 'Obe pravidlá spolu',
         html: '<div class="formula"><span class="mini-label">ROVNAKÝ MENOVATEĽ</span><span class="frac"><span class="frac-num">a</span><span class="frac-den">c</span></span> − <span class="frac"><span class="frac-num">b</span><span class="frac-den">c</span></span> = <span class="frac"><span class="frac-num">a−b</span><span class="frac-den">c</span></span></div><div class="formula"><span class="mini-label">RÔZNY MENOVATEĽ</span><span class="frac"><span class="frac-num">a</span><span class="frac-den">x</span></span> − <span class="frac"><span class="frac-num">b</span><span class="frac-den">y</span></span> = <span class="frac"><span class="frac-num">ay−bx</span><span class="frac-den">xy</span></span></div><div class="warning"><strong>Pozor:</strong> Zložitejší čitateľ pri odčítaní vždy ohraď zátvorkou, aby si nezabudol zmeniť znamienko celého výrazu.</div>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-same-denom',

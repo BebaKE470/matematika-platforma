@@ -149,11 +149,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
+        "type": "explain",
+        "phase": "VLASTNOSTI",
         "title": "cotg x – definícia a vlastnosti",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>FUNKCIA y = cotg x</strong></p><p>Pre sin x ≠ 0 platí <strong>cotg x = <span class=\"frac\"><span class=\"frac-num\">cos x</span><span class=\"frac-den\">sin x</span></span></strong>.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Definičný obor</div><p class=\"term-rule\">D(cotg) = ℝ \ {kπ; k ∈ ℤ}</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obor hodnôt</div><p class=\"term-rule\">H(cotg) = ℝ</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Perióda</div><p class=\"term-rule\">π, teda cotg(x + kπ) = cotg x, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nuly</div><p class=\"term-rule\">x = π/2 + kπ, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nepárnosť</div><p class=\"term-rule\">cotg(−x) = −cotg x.</p></div></div><p>Priamky x = kπ sú zvislé asymptoty grafu funkcie cotg x.</p>",
-        "model": "Teoretický zápis je zobrazený celý v poli html; model sa v zjednodušenom notebook rendereri nezobrazuje."
+        "html": "<p><strong>FUNKCIA y = cotg x</strong></p><p>Pre sin x ≠ 0 platí <strong>cotg x = <span class=\"frac\"><span class=\"frac-num\">cos x</span><span class=\"frac-den\">sin x</span></span></strong>.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Definičný obor</div><p class=\"term-rule\">D(cotg) = ℝ \ {kπ; k ∈ ℤ}</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obor hodnôt</div><p class=\"term-rule\">H(cotg) = ℝ</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Perióda</div><p class=\"term-rule\">π, teda cotg(x + kπ) = cotg x, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nuly</div><p class=\"term-rule\">x = π/2 + kπ, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nepárnosť</div><p class=\"term-rule\">cotg(−x) = −cotg x.</p></div></div><p>Priamky x = kπ sú zvislé asymptoty grafu funkcie cotg x.</p>"
       },
       {
         "id": "reflection",

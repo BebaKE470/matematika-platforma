@@ -80,14 +80,6 @@ MathPlatform.registerModule({
         "html": "<div class=\"formula\">V = <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">3</span></span>πr²v<span class=\"formula-note\">S = πr²+πrs; tvorivka s spĺňa s²=r²+v².</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli osový rez kužeľa a označ r, v a tvorivku s.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pre rotačný kužeľ V=<span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">3</span></span>πr²v a S=πr²+πrs; tvorivka s spĺňa s²=r²+v².</p>",
-        "model": "<strong>KONTROLA:</strong> Pre rotačný kužeľ V=(1/3)πr²v a S=πr²+πrs; tvorivka s spĺňa s²=r²+v²."
-      },
-      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -155,8 +147,8 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "BEZ MOBILU",
         "title": "Ceruzka má posledné slovo",
-        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor alebo vyrieš podobný príklad v zošite bez aplikácie. Výsledok skontroluj iným spôsobom, ak je to možné.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis má byť čitateľný, s medzikrokmi, jednotkami alebo podmienkami podľa typu úlohy."
+        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Nakresli osový rez kužeľa a označ r, v a tvorivku s.</p>",
+        "model": "<strong>KONTROLA:</strong> Pre rotačný kužeľ V=(1/3)πr²v a S=πr²+πrs; tvorivka s spĺňa s²=r²+v²."
       },
       {
         "id": "reflection",

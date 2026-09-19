@@ -86,11 +86,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
+        type: 'explain',
+        phase: 'NOVÝ POJEM / PRAVIDLO',
+        title: 'Všeobecný postup riešenia',
         html: '<ol class="steps"><li>Rozpíš <span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>n</span><span>2</span></span><span class="combo-paren">)</span></span> = <span class="frac"><span class="frac-num">n(n−1)</span><span class="frac-den">2</span></span>.</li><li>Zostav kvadratickú rovnicu n² − n − 2k = 0.</li><li>Vyrieš rovnicu.</li><li>Zamietni riešenie, ktoré nie je prirodzené číslo (alebo je menšie ako 2).</li><li>Over skúškou dosadením späť do <span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>n</span><span>2</span></span><span class="combo-paren">)</span></span>.</li></ol>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-expand',

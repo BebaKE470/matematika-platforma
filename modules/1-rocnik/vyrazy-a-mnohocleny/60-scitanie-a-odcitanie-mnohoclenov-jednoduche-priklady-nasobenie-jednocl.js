@@ -79,14 +79,6 @@ MathPlatform.registerModule({
         remember: 'Pri odčítaní mnohočlena v zátvorke zmeň znamienko každého jeho člena.',
       },
       {
-        id: 'notebook-1',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Pri sčítaní/odčítaní mnohočlenov spájame podobné členy. Pri odčítaní zátvorky zmeníme znamienko <strong>každého</strong> jej člena.</p><p>Príklad: (3x+2) − (x−5) = 3x+2−x+5 = 2x+7.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-add',
         type: 'choice',
         phase: 'OVER SI',
@@ -130,14 +122,6 @@ MathPlatform.registerModule({
         title: 'Násobenie mnohočlena jednočlenom',
         html: '<p>Podľa distributívneho zákona vynásobíme jednočlenom <strong>každý</strong> člen mnohočlena:</p><div class="formula">a(b + c) = ab + ac</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>3x(2x + 5) = 3x · 2x + 3x · 5 = 6x² + 15x</p></div>',
         remember: 'a(b + c) = ab + ac — jednočlenom násobíme každý člen mnohočlena.',
-      },
-      {
-        id: 'notebook-2',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Násobenie jednočlenom: <strong>a(b + c) = ab + ac</strong> — vynásobíme každý člen.</p><p>Príklad: 2x(3x−1) = 6x² − 2x.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q-multiply',

@@ -81,14 +81,6 @@ MathPlatform.registerModule({
         "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Kosoštvorec má stranu a = 7 cm a k nej prislúchajúcu výšku vₐ = 5 cm.</p><p>S = a·vₐ = 7·5 = <strong>35 cm²</strong></p><p>o = 4a = 4·7 = <strong>28 cm</strong></p></div>"
       },
       {
-        "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Obvod a obsah kosoštvorca",
-        "html": "<p><strong>TEÓRIA:</strong> S=a·vₐ; pri kosoštvorci možno využiť aj uhlopriečky.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
-        "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
-      },
-      {
         "id": "meaning",
         "type": "explain",
         "phase": "VÝZNAM",
@@ -115,7 +107,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Náčrt a riešenie",
         "html": "<p>Do zošita si načrtni situáciu k téme <strong>Obvod a obsah kosoštvorca</strong>, označ známe a hľadané veličiny a vyrieš jeden číselný príklad. Jednotky zapisuj pri medzivýsledkoch aj výsledku.</p>",
         "model": "Kontrola: náčrt → údaje → vzťah → dosadenie → výpočet → jednotka → odpoveď."

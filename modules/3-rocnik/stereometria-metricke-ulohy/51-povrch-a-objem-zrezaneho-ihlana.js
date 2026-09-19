@@ -79,14 +79,6 @@ MathPlatform.registerModule({
         "html": "<p><strong>Zrezaný ihlan:</strong> má dve podobné rovnobežné podstavy s obsahmi S₁ a S₂ a kolmú výšku v.</p><div class=\"formula\"><span class=\"mini-label\">ZREZANÝ IHLAN</span>V = <span class=\"frac\"><span class=\"frac-num\">v</span><span class=\"frac-den\">3</span></span>(S₁ + √(S₁S₂) + S₂), S = S₁ + S₂ + Q<span class=\"formula-note\">Q je obsah plášťa; pri konkrétnom telese ho treba určiť z obsahov bočných lichobežníkov.</span></div>"
       },
       {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli zrezaný štvorboký ihlan a označ obe podstavy a výšku.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Zrezaný ihlan má dve podobné rovnobežné podstavy. Pri výpočtoch treba presne určiť obsahy oboch podstáv a kolmú výšku.</p>",
-        "model": "<strong>KONTROLA:</strong> Zrezaný ihlan má dve podobné rovnobežné podstavy. Pri výpočtoch treba presne určiť obsahy oboch podstáv a kolmú výšku."
-      },
-      {
         "id": "start",
         "type": "choice",
         "phase": "OBJAVUJ",
@@ -154,8 +146,8 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "BEZ MOBILU",
         "title": "Ceruzka má posledné slovo",
-        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor alebo vyrieš podobný príklad v zošite bez aplikácie. Výsledok skontroluj iným spôsobom, ak je to možné.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis má byť čitateľný, s medzikrokmi, jednotkami alebo podmienkami podľa typu úlohy."
+        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Nakresli zrezaný štvorboký ihlan a označ obe podstavy a výšku.</p>",
+        "model": "<strong>KONTROLA:</strong> Zrezaný ihlan má dve podobné rovnobežné podstavy. Pri výpočtoch treba presne určiť obsahy oboch podstáv a kolmú výšku."
       },
       {
         "id": "reflection",

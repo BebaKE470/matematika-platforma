@@ -77,11 +77,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Postup pri aplikačnej úlohe:</p><ol class="steps"><li>Urob náčrt trojuholníka s označenými známymi a hľadanými údajmi.</li><li>Ak poznáš iba dva uhly, dopočítaj tretí (súčet=180°).</li><li>Zostav úmeru sínusovej vety pre hľadanú stranu.</li><li>Vyrieš a interpretuj výsledok v kontexte úlohy.</li></ol>',
-        continueLabel: 'Mám zapísané',
+        type: 'explain',
+        phase: 'POCHOP',
+        title: 'Postup pri aplikačnej úlohe',
+        html: '<p>Pri riešení takejto úlohy postupuj systematicky:</p><ol class="steps"><li>Urob náčrt trojuholníka s označenými známymi a hľadanými údajmi.</li><li>Ak poznáš iba dva uhly, dopočítaj tretí (súčet=180°).</li><li>Zostav úmeru sínusovej vety pre hľadanú stranu.</li><li>Vyrieš a interpretuj výsledok v kontexte úlohy.</li></ol>',
       },
       {
         id: 'q-setup',

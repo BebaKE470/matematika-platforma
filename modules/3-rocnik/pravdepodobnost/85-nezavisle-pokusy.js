@@ -84,14 +84,6 @@ MathPlatform.registerModule({
         remember: 'Nezávislé javy: P(A∩B)=P(A)·P(B). S vrátením → nezávislé. Bez vrátenia → závislé.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Nezávislé javy:</strong> nastanie jedného neovplyvňuje pravdepodobnosť druhého. Súčinové pravidlo: P(A∩B)=P(A)·P(B). Výber S vrátením je nezávislý, výber BEZ vrátenia je závislý (pravdepodobnosť druhého výberu sa mení podľa výsledku prvého).</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-recognize',
         type: 'choice',
         phase: 'OVER SI',

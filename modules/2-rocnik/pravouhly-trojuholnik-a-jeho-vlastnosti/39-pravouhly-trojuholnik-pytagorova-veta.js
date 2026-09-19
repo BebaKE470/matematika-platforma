@@ -86,11 +86,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>V pravouhlom trojuholníku: <strong>odvesny</strong> (a, b) zvierajú pravý uhol, <strong>prepona</strong> (c, najdlhšia strana) je oproti pravému uhlu.</p><div class="formula"><span class="mini-label">PYTAGOROVA VETA</span>a² + b² = c²<span class="formula-note">v pravouhlom trojuholníku</span></div><div class="formula"><span class="mini-label">OBRÁTENÁ PYTAGOROVA VETA</span>ak a² + b² = c² (c najdlhšia), trojuholník je pravouhlý</div>',
-        continueLabel: 'Mám zapísané',
+        type: 'explain',
+        phase: 'ZHRNUTIE',
+        title: 'Obe vety spolu',
+        html: '<p>V pravouhlom trojuholníku sú <strong>odvesny</strong> (a, b) strany, ktoré zvierajú pravý uhol, a <strong>prepona</strong> (c) je strana oproti pravému uhlu — vždy najdlhšia. Teraz vidíš obe Pytagorove vety vedľa seba — všimni si, že hovoria opačným smerom.</p><div class="formula"><span class="mini-label">PYTAGOROVA VETA</span>a² + b² = c²<span class="formula-note">ak je trojuholník pravouhlý</span></div><div class="formula"><span class="mini-label">OBRÁTENÁ PYTAGOROVA VETA</span>ak a² + b² = c² (c najdlhšia), trojuholník je pravouhlý</div>',
       },
       {
         id: 'q-basic',

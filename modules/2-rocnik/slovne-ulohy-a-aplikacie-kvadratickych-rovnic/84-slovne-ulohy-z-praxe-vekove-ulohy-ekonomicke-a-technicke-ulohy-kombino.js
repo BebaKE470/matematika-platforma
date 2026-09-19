@@ -83,14 +83,6 @@ MathPlatform.registerModule({
         remember: 'Vekové úlohy majú zvyčajne jedno zmysluplné riešenie; ekonomické úlohy môžu mať aj dve.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<p>Veková úloha: súčin vekov vedie na kvadratickú rovnicu, zvyčajne s <span class="hl">jedným</span> zmysluplným (kladným) riešením. Ekonomická úloha (tržba=cena×množstvo) môže mať <span class="hl">dve</span> zmysluplné riešenia, ak obe hodnoty dávajú kladnú cenu aj kladné množstvo — rozhoduje o tom ďalší kontext úlohy.</p>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'q-age-solve',
         type: 'choice',
         phase: 'OVER SI',

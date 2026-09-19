@@ -74,11 +74,11 @@ MathPlatform.registerModule({
       },
       {
         "id": "vzory",
-        "type": "notebook",
-        "phase": "1 · ZOŠIT",
+        "type": "explain",
+        "phase": "1 · POCHOP",
         "title": "Slovné vzory negácie",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><div class=\"table-wrap\"><table class=\"truth\"><tr><th>Výrok</th><th>Negácia výroku</th></tr><tr><td>každý ... je ...</td><td>aspoň jeden ... nie je ...</td></tr><tr><td>aspoň jeden je ...</td><td>ani jeden ... nie je ...</td></tr><tr><td>aspoň n ... je ... (n&gt;1)</td><td>najviac (n−1) ... je ...</td></tr><tr><td>najviac n ... je ...</td><td>aspoň (n+1) ... je ...</td></tr><tr><td>najmenej n ... je ...</td><td>najviac (n−1) ... je ...</td></tr><tr><td>žiadny ... je ...</td><td>aspoň jeden ... nie je ...</td></tr><tr><td>práve jeden ... je ...</td><td>nikto alebo aspoň dvaja ... sú ...</td></tr><tr><td>práve dvaja ... sú ...</td><td>najviac jeden alebo aspoň traja ... sú ...</td></tr><tr><td>ani jeden ... nie je ...</td><td>aspoň jeden ... je ...</td></tr></table></div>",
-        "model": "<strong>VZORY NEGÁCIE (skrátene):</strong><br>každý → aspoň jeden nie je · aspoň jeden → ani jeden nie je · aspoň n (n&gt;1) → najviac n−1 · najviac n → aspoň n+1 · najmenej n → najviac n−1 · žiadny → aspoň jeden · práve jeden → nikto alebo aspoň dvaja · práve dvaja → najviac jeden alebo aspoň traja · ani jeden nie je → aspoň jeden je."
+        "html": "<p>Okrem samotných značiek ∀ a ∃ sa oplatí poznať aj bežné slovné vzory ich negácie — v slovných výrokoch sa kvantifikátor väčšinou vôbec nepíše symbolicky:</p><div class=\"table-wrap\"><table class=\"truth\"><tr><th>Výrok</th><th>Negácia výroku</th></tr><tr><td>každý ... je ...</td><td>aspoň jeden ... nie je ...</td></tr><tr><td>aspoň jeden je ...</td><td>ani jeden ... nie je ...</td></tr><tr><td>aspoň n ... je ... (n&gt;1)</td><td>najviac (n−1) ... je ...</td></tr><tr><td>najviac n ... je ...</td><td>aspoň (n+1) ... je ...</td></tr><tr><td>najmenej n ... je ...</td><td>najviac (n−1) ... je ...</td></tr><tr><td>žiadny ... je ...</td><td>aspoň jeden ... nie je ...</td></tr><tr><td>práve jeden ... je ...</td><td>nikto alebo aspoň dvaja ... sú ...</td></tr><tr><td>práve dvaja ... sú ...</td><td>najviac jeden alebo aspoň traja ... sú ...</td></tr><tr><td>ani jeden ... nie je ...</td><td>aspoň jeden ... je ...</td></tr></table></div>",
+        "remember": "Pri negácii sa kvantifikátor mení (∀↔∃) a vlastnosť sa neguje — tabuľka ukazuje, ako to vyzerá v bežných slovných vzoroch."
       },
       {
         "id": "na",
@@ -137,7 +137,7 @@ MathPlatform.registerModule({
       {
         "id": "nb",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Neguj presne",
         "html": "<p>Neguj a zapíš slovne aj symbolicky:<br>a) ∀ x (x je reálne číslo): x² ≥ 0<br>b) ∃ n (n je prirodzené číslo): n² = 2</p>",
         "model": "<strong>VZOR:</strong><br>a) ∃ x (x je reálne číslo): x² &lt; 0 – existuje reálne číslo so zápornou druhou mocninou.<br>b) ∀ n (n je prirodzené číslo): n² ≠ 2 – pre každé prirodzené n platí n² ≠ 2."

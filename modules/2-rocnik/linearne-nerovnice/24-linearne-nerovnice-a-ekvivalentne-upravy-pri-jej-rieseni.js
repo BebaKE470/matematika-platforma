@@ -93,11 +93,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "n1",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<div class=\"formula\"><span class=\"mini-label\">LINEÁRNE NEROVNICE</span>Ekvivalentné úpravy: na obe strany môžeme pripočítať alebo odčítať rovnaké číslo. Pri násobení alebo delení kladným číslom sa znak nemení. Pri násobení alebo delení záporným číslom sa znak nerovnosti otočí.</div><p>Riešenie zapisujeme ako množinu riešení, napr. <strong>x &lt; 4</strong>, teda <strong>(−∞; 4)</strong>.</p>",
-        "continueLabel": "Mám zapísané"
+        "type": "explain",
+        "phase": "POCHOP",
+        "title": "Zhrnutie: znak nerovnosti a zápis riešenia",
+        "html": "<div class=\"formula\">Ekvivalentné úpravy: na obe strany môžeme pripočítať alebo odčítať rovnaké číslo. Pri násobení alebo delení kladným číslom sa znak nemení. Pri násobení alebo delení záporným číslom sa znak nerovnosti otočí.</div><p>Riešenie zapisujeme ako množinu riešení, napr. <strong>x &lt; 4</strong>, teda <strong>(−∞; 4)</strong>.</p>"
       },
       {
         "id": "c1",

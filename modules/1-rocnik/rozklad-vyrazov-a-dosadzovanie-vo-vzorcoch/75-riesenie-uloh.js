@@ -67,11 +67,10 @@ MathPlatform.registerModule({
       },
       {
         id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
+        type: 'explain',
+        phase: 'POCHOP',
+        title: 'Všetky vzorce spolu',
         html: '<p>Zhrnutie celého celku pred previerkou:</p><p>Dosadzovanie: záporné číslo ohraď zátvorkou. Úprava vzorca: rovnaká operácia na oboch stranách.</p><p>Rozklad: ab+ac=a(b+c) (vyňatie), a²−b²=(a−b)(a+b), a²±2ab+b²=(a±b)². Po vyňatí vždy skontroluj, či sa dá pokračovať vzorcom.</p>',
-        continueLabel: 'Mám zapísané',
       },
       {
         id: 'q1',

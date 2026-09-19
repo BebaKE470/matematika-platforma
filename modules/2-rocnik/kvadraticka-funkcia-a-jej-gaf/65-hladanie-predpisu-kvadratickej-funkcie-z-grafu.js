@@ -84,14 +84,6 @@ MathPlatform.registerModule({
         remember: 'Dosaď vrchol do y=a(x−x_v)²+y_v, potom dosaď ďalší bod a vyrieš rovnicu pre a.',
       },
       {
-        id: 'notebook',
-        type: 'notebook',
-        phase: 'ZOŠIT',
-        title: 'Toto si zapíš do zošita',
-        html: '<div class="formula">y = a(x−x_v)² + y_v<span class="formula-note">Vrcholový tvar predpisu.</span></div><ol class="steps"><li>Dosaď súradnice vrcholu.</li><li>Dosaď súradnice ďalšieho známeho bodu.</li><li>Vyrieš vzniknutú rovnicu pre a.</li></ol>',
-        continueLabel: 'Mám zapísané',
-      },
-      {
         id: 'visual-example',
         type: 'coordinatePlot',
         phase: 'VIZUALIZÁCIA',

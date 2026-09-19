@@ -163,7 +163,7 @@ MathPlatform.registerModule({
       {
         "id": "summary",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Jedna strana, ktorú má zmysel mať",
         "html": "<p>Vytvor si <span class=\"hl\">čistý súhrn</span> maximálne na jednu stranu: symboly ¬, ∧, ∨, ⇒, ⇔, ∀, ∃; De Morganove pravidlá; negácia implikácie; obmena; negácia kvantifikátorov; veta o protipríklade.</p><p>Neopisuj vysvetľujúce odseky. Píš stručne a presne.</p>",
         "model": "<strong>KONTROLNÝ ZOZNAM:</strong> ¬(A∧B)=¬A∨¬B; ¬(A∨B)=¬A∧¬B; ¬(A⇒B)=A∧¬B; A⇒B ⇔ ¬B⇒¬A; ¬∀P ⇔ ∃¬P; ¬∃P ⇔ ∀¬P; všeobecné tvrdenie vyvracia jeden protipríklad."

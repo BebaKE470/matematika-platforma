@@ -101,11 +101,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
+        "type": "explain",
+        "phase": "NOVÝ KROK",
         "title": "Úprava goniometrických výrazov",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Úprava goniometrických výrazov</strong></p><p>Pri úprave najprv rozpoznaj vhodný vzorec, potom upravuj algebraicky.</p><p>Najčastejšie používame: <strong>sin²x + cos²x = 1</strong>, súčtové vzorce a vzorce pre dvojnásobný uhol.</p><div class=\"warning\"><strong>Pozor:</strong> Pri delení výrazom vždy skontroluj, kedy je deliteľ nenulový.</div>",
-        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
+        "html": "<p><strong>Úprava goniometrických výrazov</strong></p><p>Pri úprave najprv rozpoznaj vhodný vzorec, potom upravuj algebraicky.</p><p>Najčastejšie používame: <strong>sin²x + cos²x = 1</strong>, súčtové vzorce a vzorce pre dvojnásobný uhol.</p><div class=\"warning\"><strong>Pozor:</strong> Pri delení výrazom vždy skontroluj, kedy je deliteľ nenulový.</div>"
       },
       {
         "id": "check",
@@ -126,7 +125,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Rieš ručne",
         "html": "<p>Vytvor v zošite jeden vlastný príklad k téme <strong>Úprava goniometrických výrazov</strong>. Každý krok označ vzťahom alebo dôvodom, ktorý používaš.</p>",
         "model": "Zápis do zošita môže obsahovať opravu. Dôležité je, aby bolo vidieť, prečo jednotlivé kroky platia."

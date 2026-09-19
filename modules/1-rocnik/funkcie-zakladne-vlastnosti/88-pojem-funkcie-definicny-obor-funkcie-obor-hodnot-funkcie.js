@@ -103,10 +103,11 @@ MathPlatform.registerModule({
       },
       {
         id: "notebook",
-        type: "notebook",
-        phase: "ZOŠIT",
-        title: "Zápis do zošita",
-        html: "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA</strong></p><p><strong>FUNKCIA</strong></p><p>Funkcia f je predpis, ktorý každému prvku x z množiny D priraďuje práve jeden prvok y.</p><p>Zapisujeme: y = f(x)</p><p><strong>x</strong> – argument (nezávislá premenná)<br><strong>y = f(x)</strong> – funkčná hodnota (závislá premenná)</p><p><strong>Definičný obor D(f)</strong> – množina všetkých hodnôt x, pre ktoré je funkcia definovaná.</p><p><strong>Obor hodnôt H(f)</strong> – množina všetkých hodnôt y = f(x), ktoré funkcia nadobúda.</p><p>Ak by niektorému x zodpovedali dve rôzne hodnoty y, nejde o funkciu.</p>"
+        type: "explain",
+        phase: "NOVÝ POJEM",
+        title: "Definičný obor a obor hodnôt",
+        html: "<p>Ku každej funkcii patria dve dôležité množiny.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Definičný obor D(f)</div><p class=\"term-rule\">množina všetkých hodnôt x, pre ktoré je funkcia definovaná.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obor hodnôt H(f)</div><p class=\"term-rule\">množina všetkých hodnôt y = f(x), ktoré funkcia nadobúda.</p></div></div>",
+        remember: "D(f) — možné hodnoty x. H(f) — hodnoty y, ktoré funkcia skutočne nadobúda."
       },
       {
         id: "is-function-check",

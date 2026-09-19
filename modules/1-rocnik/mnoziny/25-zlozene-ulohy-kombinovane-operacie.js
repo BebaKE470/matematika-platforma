@@ -91,16 +91,8 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "POCHOP",
         "title": "Zátvorky nie sú dekorácia",
-        "html": "<p>Pri kombinovaných operáciách najprv rešpektuj zátvorky. Najistejšia kontrola je vypísať medzivýsledok alebo ho vyznačiť vo Vennovom diagrame.</p>",
+        "html": "<p>Pri kombinovaných operáciách najprv rešpektuj zátvorky. Najistejšia kontrola je vypísať medzivýsledok alebo ho vyznačiť vo Vennovom diagrame.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>A={1,2,3,4}, B={3,4,5}, C={4,5,6}. Výraz (A∩B)∩C počítame v dvoch krokoch: najprv A∩B={3,4}, potom {3,4}∩C={4}.</p></div>",
         "remember": "Jedna operácia → medzivýsledok → ďalšia operácia."
-      },
-      {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "ZOŠIT",
-        "title": "Toto si zapíš do zošita",
-        "html": "<p>Pri kombinovaných množinových výrazoch najprv rešpektuj zátvorky — presne ako pri číselných výrazoch.</p><p>Príklad: A={1,2,3,4}, B={3,4,5}, C={4,5,6}. Výraz (A∩B)∩C počítame v dvoch krokoch: najprv A∩B={3,4}, potom {3,4}∩C={4}.</p>",
-        "continueLabel": "Mám zapísané"
       },
       {
         "id": "explain",

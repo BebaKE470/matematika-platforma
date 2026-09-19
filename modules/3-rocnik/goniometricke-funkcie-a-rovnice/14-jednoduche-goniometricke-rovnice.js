@@ -101,11 +101,10 @@ MathPlatform.registerModule({
       },
       {
         "id": "clean",
-        "type": "notebook",
-        "phase": "ZOŠIT",
+        "type": "explain",
+        "phase": "NOVÝ KROK",
         "title": "Jednoduché goniometrické rovnice",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Jednoduché goniometrické rovnice</strong></p><div class=\"formula\">sin x = 0 ⇔ x = kπ, k ∈ ℤ.</div><div class=\"formula\">cos x = 0 ⇔ x = π/2 + kπ, k ∈ ℤ.</div><div class=\"formula\">tg x = 0 ⇔ x = kπ, k ∈ ℤ.</div><p>Pri riešení na zadanom intervale z všeobecných riešení vyberieme iba tie, ktoré do intervalu patria.</p>",
-        "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
+        "html": "<p><strong>Jednoduché goniometrické rovnice</strong></p><div class=\"formula\">sin x = 0 ⇔ x = kπ, k ∈ ℤ.</div><div class=\"formula\">cos x = 0 ⇔ x = π/2 + kπ, k ∈ ℤ.</div><div class=\"formula\">tg x = 0 ⇔ x = kπ, k ∈ ℤ.</div><p>Pri riešení na zadanom intervale z všeobecných riešení vyberieme iba tie, ktoré do intervalu patria.</p>"
       },
       {
         "id": "check",
@@ -126,7 +125,7 @@ MathPlatform.registerModule({
       {
         "id": "work",
         "type": "notebook",
-        "phase": "ZOŠIT",
+        "phase": "BEZ MOBILU",
         "title": "Rieš ručne",
         "html": "<p>Vytvor v zošite jeden vlastný príklad k téme <strong>Jednoduché goniometrické rovnice</strong>. Každý krok označ vzťahom alebo dôvodom, ktorý používaš.</p>",
         "model": "Zápis do zošita môže obsahovať opravu. Dôležité je, aby bolo vidieť, prečo jednotlivé kroky platia."
