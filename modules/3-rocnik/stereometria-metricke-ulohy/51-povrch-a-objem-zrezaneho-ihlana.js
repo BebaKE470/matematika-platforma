@@ -76,7 +76,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p><strong>Zrezaný ihlan:</strong> má dve podobné rovnobežné podstavy s obsahmi S₁ a S₂ a kolmú výšku v.</p><div class=\"formula\"><span class=\"mini-label\">ZREZANÝ IHLAN</span>V = (v/3)(S₁ + √(S₁S₂) + S₂), S = S₁ + S₂ + Q<span class=\"formula-note\">Q je obsah plášťa; pri konkrétnom telese ho treba určiť z obsahov bočných lichobežníkov.</span></div>"
+        "html": "<p><strong>Zrezaný ihlan:</strong> má dve podobné rovnobežné podstavy s obsahmi S₁ a S₂ a kolmú výšku v.</p><div class=\"formula\"><span class=\"mini-label\">ZREZANÝ IHLAN</span>V = <span class=\"frac\"><span class=\"frac-num\">v</span><span class=\"frac-den\">3</span></span>(S₁ + √(S₁S₂) + S₂), S = S₁ + S₂ + Q<span class=\"formula-note\">Q je obsah plášťa; pri konkrétnom telese ho treba určiť z obsahov bočných lichobežníkov.</span></div>"
       },
       {
         "id": "notebook",

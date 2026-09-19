@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Vyjadrenie strany zo vzorca',
-        html: '<p>Zo vzorca sin α = a/c vieme vyjadriť preponu:</p><div class="formula">c = a/sin α<span class="formula-note">alebo protiľahlú odvesnu: a = c·sin α</span></div>',
+        html: '<p>Zo vzorca sin α = <span class="frac"><span class="frac-num">a</span><span class="frac-den">c</span></span> vieme vyjadriť preponu:</p><div class="formula">c = <span class="frac"><span class="frac-num">a</span><span class="frac-den">sin α</span></span><span class="formula-note">alebo protiľahlú odvesnu: a = c·sin α</span></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -81,7 +81,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Hodnoty pre 30°, 45°, 60°',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">30°</div><p class="term-rule">sin 30° = 1/2, cos 30° = √3/2.</p></div><div class="term-item no-symbol"><div class="term-name">45°</div><p class="term-rule">sin 45° = cos 45° = √2/2.</p></div><div class="term-item no-symbol"><div class="term-name">60°</div><p class="term-rule">sin 60° = √3/2, cos 60° = 1/2.</p></div></div><p>Tieto hodnoty sa dajú odvodiť z rovnostranného trojuholníka (30°, 60°) a rovnoramenného pravouhlého trojuholníka (45°).</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">30°</div><p class="term-rule">sin 30° = <span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>, cos 30° = <span class="frac"><span class="frac-num">√3</span><span class="frac-den">2</span></span>.</p></div><div class="term-item no-symbol"><div class="term-name">45°</div><p class="term-rule">sin 45° = cos 45° = <span class="frac"><span class="frac-num">√2</span><span class="frac-den">2</span></span>.</p></div><div class="term-item no-symbol"><div class="term-name">60°</div><p class="term-rule">sin 60° = <span class="frac"><span class="frac-num">√3</span><span class="frac-den">2</span></span>, cos 60° = <span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>.</p></div></div><p>Tieto hodnoty sa dajú odvodiť z rovnostranného trojuholníka (30°, 60°) a rovnoramenného pravouhlého trojuholníka (45°).</p>',
         remember: 'sin30°=1/2, cos30°=√3/2. sin45°=cos45°=√2/2. sin60°=√3/2, cos60°=1/2.',
       },
       {
@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Zo vzorcov sin α=a/c, cos α=b/c vieme vyjadriť: a=c·sin α, b=c·cos α, c=a/sin α=b/cos α.</p><p>Hodnoty: sin30°=1/2, cos30°=√3/2; sin45°=cos45°=√2/2; sin60°=√3/2, cos60°=1/2.</p>',
+        html: '<p>Zo vzorcov sin α=<span class="frac"><span class="frac-num">a</span><span class="frac-den">c</span></span>, cos α=<span class="frac"><span class="frac-num">b</span><span class="frac-den">c</span></span> vieme vyjadriť: a=c·sin α, b=c·cos α, c=<span class="frac"><span class="frac-num">a</span><span class="frac-den">sin α</span></span>=<span class="frac"><span class="frac-num">b</span><span class="frac-den">cos α</span></span>.</p><p>Hodnoty: sin30°=<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>, cos30°=<span class="frac"><span class="frac-num">√3</span><span class="frac-den">2</span></span>; sin45°=cos45°=<span class="frac"><span class="frac-num">√2</span><span class="frac-den">2</span></span>; sin60°=<span class="frac"><span class="frac-num">√3</span><span class="frac-den">2</span></span>, cos60°=<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

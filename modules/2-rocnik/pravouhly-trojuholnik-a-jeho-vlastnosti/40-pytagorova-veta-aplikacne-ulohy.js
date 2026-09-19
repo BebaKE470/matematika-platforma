@@ -100,7 +100,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Výška rovnoramenného trojuholníka',
-        html: '<p>Výška na základňu rovnoramenného trojuholníka rozdeľuje základňu na dve rovnaké polovice a súčasne vytvára dva zhodné pravouhlé trojuholníky.</p><div class="formula">v = √(r² − (z/2)²)<span class="formula-note">Rameno r, základňa z.</span></div>',
+        html: '<p>Výška na základňu rovnoramenného trojuholníka rozdeľuje základňu na dve rovnaké polovice a súčasne vytvára dva zhodné pravouhlé trojuholníky.</p><div class="formula">v = √(r² − <span class="frac"><span class="frac-num">z</span><span class="frac-den">2</span></span>²)<span class="formula-note">Rameno r, základňa z.</span></div>',
         remember: 'Výška rovnoramenného trojuholníka: v = √(rameno² − (základňa/2)²).',
       },
       {
@@ -108,7 +108,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Výška rovnoramenného trojuholníka s ramenom r a základňou z:</p><div class="formula">v = √(r² − (z/2)²)</div><p>V oboch prípadoch (obdĺžnik aj rovnoramenný trojuholník) najprv nájdi skrytý pravouhlý trojuholník náčrtom.</p>',
+        html: '<p>Výška rovnoramenného trojuholníka s ramenom r a základňou z:</p><div class="formula">v = √(r² − <span class="frac"><span class="frac-num">z</span><span class="frac-den">2</span></span>²)</div><p>V oboch prípadoch (obdĺžnik aj rovnoramenný trojuholník) najprv nájdi skrytý pravouhlý trojuholník náčrtom.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

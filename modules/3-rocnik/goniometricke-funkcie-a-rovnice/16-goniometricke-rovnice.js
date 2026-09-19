@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Goniometrické rovnice",
-        "html": "<p>Rovnicu najprv algebraicky upravíme na známy typ a až potom riešime na kružnici.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Rieš rovnicu 2 cos x − 1 = 0.</p><p>2 cos x = 1 ⇒ cos x = 1/2 — teraz je rovnica v základnom tvare.</p><p>Riešenie: <strong>x = π/3 + 2kπ alebo x = −π/3 + 2kπ, k ∈ ℤ</strong>.</p></div>",
+        "html": "<p>Rovnicu najprv algebraicky upravíme na známy typ a až potom riešime na kružnici.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Rieš rovnicu 2 cos x − 1 = 0.</p><p>2 cos x = 1 ⇒ cos x = <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">2</span></span> — teraz je rovnica v základnom tvare.</p><p>Riešenie: <strong>x = π/3 + 2kπ alebo x = −π/3 + 2kπ, k ∈ ℤ</strong>.</p></div>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {

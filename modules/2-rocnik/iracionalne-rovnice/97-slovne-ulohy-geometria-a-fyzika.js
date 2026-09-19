@@ -80,7 +80,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Fyzikálna úloha — voľný pád',
-        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Čas voľného pádu z výšky h je daný vzťahom t=√(h/5) (pri g≈10 m/s²).</p><p>Ak kameň padal 3 sekundy: √(h/5)=3, umocnením h/5=9, teda h=45 m.</p></div><p>Postup je rovnaký ako doteraz:</p><ol class="steps"><li>Izoluj odmocninu (často už je izolovaná).</li><li>Umocni.</li><li>Vyrieš.</li><li>Over zmysluplnosť riešenia (dĺžka a výška musia byť kladné).</li></ol>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Čas voľného pádu z výšky h je daný vzťahom t=√(<span class="frac"><span class="frac-num">h</span><span class="frac-den">5</span></span>) (pri g≈10 m/s²).</p><p>Ak kameň padal 3 sekundy: √(h/5)=3, umocnením h/5=9, teda h=45 m.</p></div><p>Postup je rovnaký ako doteraz:</p><ol class="steps"><li>Izoluj odmocninu (často už je izolovaná).</li><li>Umocni.</li><li>Vyrieš.</li><li>Over zmysluplnosť riešenia (dĺžka a výška musia byť kladné).</li></ol>',
         remember: 'Rovnaký postup ako pri iných iracionálnych rovniciach: umocni, vyrieš, over zmysluplnosť voči kontextu (kladná dĺžka/výška).',
       },
       {
@@ -88,7 +88,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Iracionálne rovnice sa objavujú aj v geometrii (Pytagorova veta: √(a²+b²)=c) a vo fyzike (voľný pád: t=√(h/5) pri g≈10 m/s²).</p><p>Postup riešenia je rovnaký:</p><ol class="steps"><li>Izoluj odmocninu.</li><li>Umocni.</li><li>Vyrieš.</li><li>Over zmysluplnosť riešenia (dĺžka aj výška musia byť kladné).</li></ol>',
+        html: '<p>Iracionálne rovnice sa objavujú aj v geometrii (Pytagorova veta: √(a²+b²)=c) a vo fyzike (voľný pád: t=√(<span class="frac"><span class="frac-num">h</span><span class="frac-den">5</span></span>) pri g≈10 m/s²).</p><p>Postup riešenia je rovnaký:</p><ol class="steps"><li>Izoluj odmocninu.</li><li>Umocni.</li><li>Vyrieš.</li><li>Over zmysluplnosť riešenia (dĺžka aj výška musia byť kladné).</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {

@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Čo robiť bez pravého uhla?',
-        html: '<p>Ak trojuholník nemá pravý uhol, doterajšie vzorce sin α=a/c (kde c je prepona) nefungujú — pravouhlý trojuholník nemá preponu.</p><p>Sínusová veta funguje pre <span class="hl">ľubovoľný</span> trojuholník, nielen pravouhlý.</p>',
+        html: '<p>Ak trojuholník nemá pravý uhol, doterajšie vzorce sin α=<span class="frac"><span class="frac-num">a</span><span class="frac-den">c</span></span> (kde c je prepona) nefungujú — pravouhlý trojuholník nemá preponu.</p><p>Sínusová veta funguje pre <span class="hl">ľubovoľný</span> trojuholník, nielen pravouhlý.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -81,7 +81,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Sínusová veta',
-        html: '<p>V trojuholníku ABC so stranami a, b, c (oproti uhlom α, β, γ) platí:</p><div class="formula">a/sin α = b/sin β = c/sin γ</div><p>Strana je vždy „oproti“ svojmu uhlu — a oproti α, b oproti β, c oproti γ.</p>',
+        html: '<p>V trojuholníku ABC so stranami a, b, c (oproti uhlom α, β, γ) platí:</p><div class="formula"><span class="frac"><span class="frac-num">a</span><span class="frac-den">sin α</span></span> = <span class="frac"><span class="frac-num">b</span><span class="frac-den">sin β</span></span> = <span class="frac"><span class="frac-num">c</span><span class="frac-den">sin γ</span></span></div><p>Strana je vždy „oproti“ svojmu uhlu — a oproti α, b oproti β, c oproti γ.</p>',
         remember: 'a/sin α = b/sin β = c/sin γ. Strana a jej protiľahlý uhol musia byť vo dvojici.',
       },
       {
@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="mini-label">SÍNUSOVÁ VETA</span>a/sin α = b/sin β = c/sin γ<span class="formula-note">V ľubovoľnom trojuholníku, nielen pravouhlom. Strana je vždy vo dvojici so svojím protiľahlým uhlom (a↔α, b↔β, c↔γ).</span></div>',
+        html: '<div class="formula"><span class="mini-label">SÍNUSOVÁ VETA</span><span class="frac"><span class="frac-num">a</span><span class="frac-den">sin α</span></span> = <span class="frac"><span class="frac-num">b</span><span class="frac-den">sin β</span></span> = <span class="frac"><span class="frac-num">c</span><span class="frac-den">sin γ</span></span><span class="formula-note">V ľubovoľnom trojuholníku, nielen pravouhlom. Strana je vždy vo dvojici so svojím protiľahlým uhlom (a↔α, b↔β, c↔γ).</span></div>',
         continueLabel: 'Mám zapísané',
       },
       {

@@ -62,7 +62,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie celého celku',
-        html: '<div class="formula"><span class="mini-label">KLASICKÁ DEFINÍCIA</span>P(A) = m/n</div><div class="formula"><span class="mini-label">ZJEDNOTENIE</span>P(A∪B) = P(A) + P(B) − P(A∩B)</div><div class="formula"><span class="mini-label">NEZÁVISLÉ JAVY</span>P(A∩B) = P(A) · P(B)</div><div class="formula"><span class="mini-label">BERNOULLIHO SCHÉMA</span>P(k) = (n nad k) · p^k · q^(n−k)</div>',
+        html: '<div class="formula"><span class="mini-label">KLASICKÁ DEFINÍCIA</span>P(A) = <span class="frac"><span class="frac-num">m</span><span class="frac-den">n</span></span></div><div class="formula"><span class="mini-label">ZJEDNOTENIE</span>P(A∪B) = P(A) + P(B) − P(A∩B)</div><div class="formula"><span class="mini-label">NEZÁVISLÉ JAVY</span>P(A∩B) = P(A) · P(B)</div><div class="formula"><span class="mini-label">BERNOULLIHO SCHÉMA</span>P(k) = <span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>n</span><span>k</span></span><span class="combo-paren">)</span></span> · p^k · q^(n−k)</div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -70,7 +70,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="mini-label">KLASICKÁ DEFINÍCIA</span>P(A) = m/n</div><div class="formula"><span class="mini-label">ZJEDNOTENIE</span>P(A∪B) = P(A) + P(B) − P(A∩B)<span class="formula-note">Nezlučiteľné javy: iba súčet P(A)+P(B).</span></div><div class="formula"><span class="mini-label">NEZÁVISLÉ JAVY</span>P(A∩B) = P(A) · P(B)</div><div class="formula"><span class="mini-label">BERNOULLIHO SCHÉMA</span>P(k) = (n nad k) · p^k · q^(n−k)</div>',
+        html: '<div class="formula"><span class="mini-label">KLASICKÁ DEFINÍCIA</span>P(A) = <span class="frac"><span class="frac-num">m</span><span class="frac-den">n</span></span></div><div class="formula"><span class="mini-label">ZJEDNOTENIE</span>P(A∪B) = P(A) + P(B) − P(A∩B)<span class="formula-note">Nezlučiteľné javy: iba súčet P(A)+P(B).</span></div><div class="formula"><span class="mini-label">NEZÁVISLÉ JAVY</span>P(A∩B) = P(A) · P(B)</div><div class="formula"><span class="mini-label">BERNOULLIHO SCHÉMA</span>P(k) = <span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>n</span><span>k</span></span><span class="combo-paren">)</span></span> · p^k · q^(n−k)</div>',
         continueLabel: 'Mám zapísané',
       },
       {

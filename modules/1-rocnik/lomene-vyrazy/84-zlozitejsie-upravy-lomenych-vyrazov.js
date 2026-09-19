@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Skrytý spoločný menovateľ',
-        html: '<p>Chceme sčítať 1/(x−2) + x/(x²−4). Menovatele vyzerajú rôzne, ale x²−4 = (x−2)(x+2) — obsahuje menovateľ prvého zlomku!</p><p>Spoločný menovateľ je teda (x−2)(x+2), nie súčin oboch pôvodných menovateľov.</p>',
+        html: '<p>Chceme sčítať <span class="frac"><span class="frac-num">1</span><span class="frac-den">x−2</span></span> + <span class="frac"><span class="frac-num">x</span><span class="frac-den">x²−4</span></span>. Menovatele vyzerajú rôzne, ale x²−4 = (x−2)(x+2) — obsahuje menovateľ prvého zlomku!</p><p>Spoločný menovateľ je teda (x−2)(x+2), nie súčin oboch pôvodných menovateľov.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<ol class="steps"><li>Rozlož každý menovateľ na súčin.</li><li>Nájdi najmenší spoločný menovateľ.</li><li>Preveď zlomky naň.</li><li>Sčítaj/odčítaj čitatele.</li><li>Skráť výsledok.</li></ol><div class="example"><span class="mini-label">PRÍKLAD</span><p>1/(x−2) + x/(x²−4), kde x²−4 = (x−2)(x+2), teda spoločný menovateľ je (x−2)(x+2).</p></div>',
+        html: '<ol class="steps"><li>Rozlož každý menovateľ na súčin.</li><li>Nájdi najmenší spoločný menovateľ.</li><li>Preveď zlomky naň.</li><li>Sčítaj/odčítaj čitatele.</li><li>Skráť výsledok.</li></ol><div class="example"><span class="mini-label">PRÍKLAD</span><p><span class="frac"><span class="frac-num">1</span><span class="frac-den">x−2</span></span> + <span class="frac"><span class="frac-num">x</span><span class="frac-den">x²−4</span></span>, kde x²−4 = (x−2)(x+2), teda spoločný menovateľ je (x−2)(x+2).</p></div>',
         continueLabel: 'Mám zapísané',
       },
       {

@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Tri rôzne pohľady na „stred“',
-        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Známky žiaka: 1, 2, 2, 3, 5. Priemer (1+2+2+3+5)/5=13/5=2,6. Medián (prostredná hodnota po usporiadaní): 2. Modus (najčastejšia hodnota): 2.</p></div><p>Priemer a medián/modus dávajú tu rôzne čísla!</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Známky žiaka: 1, 2, 2, 3, 5. Priemer <span class="frac"><span class="frac-num">1+2+2+3+5</span><span class="frac-den">5</span></span>=<span class="frac"><span class="frac-num">13</span><span class="frac-den">5</span></span>=2,6. Medián (prostredná hodnota po usporiadaní): 2. Modus (najčastejšia hodnota): 2.</p></div><p>Priemer a medián/modus dávajú tu rôzne čísla!</p>',
         continueLabel: 'Pokračovať',
       },
       {

@@ -62,7 +62,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie celého celku',
-        html: '<p>Zhrnutie celého celku:</p><div class="formula">f(x) = ax² + bx + c, a ≠ 0 → graf je parabola<br>a &gt; 0 nahor, a &lt; 0 nadol<br>vrchol: x_v = −b/(2a), y_v = f(x_v)<br>vrcholový tvar: y = a(x−x_v)² + y_v</div>',
+        html: '<p>Zhrnutie celého celku:</p><div class="formula">f(x) = ax² + bx + c, a ≠ 0 → graf je parabola<br>a &gt; 0 nahor, a &lt; 0 nadol<br>vrchol: x_v = <span class="frac"><span class="frac-num">−b</span><span class="frac-den">2a</span></span>, y_v = f(x_v)<br>vrcholový tvar: y = a(x−x_v)² + y_v</div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -70,7 +70,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie:</p><div class="formula">f(x) = ax² + bx + c (a ≠ 0), graf je parabola<br>orientácia podľa znamienka a<br>vrchol: x_v = −b/(2a), y_v = f(x_v)<br>vrcholový tvar: y = a(x−x_v)² + y_v</div>',
+        html: '<p>Zhrnutie:</p><div class="formula">f(x) = ax² + bx + c (a ≠ 0), graf je parabola<br>orientácia podľa znamienka a<br>vrchol: x_v = <span class="frac"><span class="frac-num">−b</span><span class="frac-den">2a</span></span>, y_v = f(x_v)<br>vrcholový tvar: y = a(x−x_v)² + y_v</div>',
         continueLabel: 'Mám zapísané',
       },
       {

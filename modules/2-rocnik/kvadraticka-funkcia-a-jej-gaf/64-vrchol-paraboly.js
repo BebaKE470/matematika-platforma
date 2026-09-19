@@ -81,7 +81,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Vzorec pre súradnice vrcholu',
-        html: '<p>Vrchol paraboly V[x_v, y_v] pre f(x)=ax²+bx+c:</p><div class="formula">x_v = −b/(2a)<span class="formula-note">y_v = f(x_v) — dosadíme x_v späť do predpisu.</span></div>',
+        html: '<p>Vrchol paraboly V[x_v, y_v] pre f(x)=ax²+bx+c:</p><div class="formula">x_v = <span class="frac"><span class="frac-num">−b</span><span class="frac-den">2a</span></span><span class="formula-note">y_v = f(x_v) — dosadíme x_v späť do predpisu.</span></div>',
         remember: 'x_v = −b/(2a). y_v = f(x_v).',
       },
       {
@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Vrchol paraboly V[x_v, y_v] pre f(x)=ax²+bx+c:</p><div class="formula">x_v = −b/(2a)<span class="formula-note">y_v = f(x_v)</span></div><p>Ak a&gt;0, vrchol je najnižší bod grafu (minimum). Ak a&lt;0, vrchol je najvyšší bod grafu (maximum).</p>',
+        html: '<p>Vrchol paraboly V[x_v, y_v] pre f(x)=ax²+bx+c:</p><div class="formula">x_v = <span class="frac"><span class="frac-num">−b</span><span class="frac-den">2a</span></span><span class="formula-note">y_v = f(x_v)</span></div><p>Ak a&gt;0, vrchol je najnižší bod grafu (minimum). Ak a&lt;0, vrchol je najvyšší bod grafu (maximum).</p>',
         continueLabel: 'Mám zapísané',
       },
       {

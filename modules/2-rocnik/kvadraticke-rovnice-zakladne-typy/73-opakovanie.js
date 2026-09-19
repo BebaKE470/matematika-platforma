@@ -61,7 +61,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie celého celku',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Rýdzo kvadratická (b=0)</div><p class="term-rule">x² = −c/a, x = ±√(−c/a)</p></div><div class="term-item no-symbol"><div class="term-name">Bez absolútneho člena (c=0)</div><p class="term-rule">x(ax+b) = 0, x = 0 alebo x = −b/a</p></div><div class="term-item no-symbol"><div class="term-name">Úplná (a,b,c≠0)</div><p class="term-rule">D = b² − 4ac, x = (−b ± √D) / (2a)</p></div></div>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Rýdzo kvadratická (b=0)</div><p class="term-rule">x² = <span class="frac"><span class="frac-num">−c</span><span class="frac-den">a</span></span>, x = ±√<span class="frac"><span class="frac-num">−c</span><span class="frac-den">a</span></span></p></div><div class="term-item no-symbol"><div class="term-name">Bez absolútneho člena (c=0)</div><p class="term-rule">x(ax+b) = 0, x = 0 alebo x = <span class="frac"><span class="frac-num">−b</span><span class="frac-den">a</span></span></p></div><div class="term-item no-symbol"><div class="term-name">Úplná (a,b,c≠0)</div><p class="term-rule">D = b² − 4ac, x = <span class="frac"><span class="frac-num">−b ± √D</span><span class="frac-den">2a</span></span></p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -69,7 +69,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Rýdzo kvadratická</div><p class="term-rule">b=0 — izolácia x²</p></div><div class="term-item no-symbol"><div class="term-name">Bez absolútneho člena</div><p class="term-rule">c=0 — vyňatie x</p></div><div class="term-item no-symbol"><div class="term-name">Úplná</div><p class="term-rule">D=b²−4ac, vzorec x=(−b±√D)/(2a)</p></div></div><p>Vždy najprv rozpoznaj typ, potom zvoľ postup.</p>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Rýdzo kvadratická</div><p class="term-rule">b=0 — izolácia x²</p></div><div class="term-item no-symbol"><div class="term-name">Bez absolútneho člena</div><p class="term-rule">c=0 — vyňatie x</p></div><div class="term-item no-symbol"><div class="term-name">Úplná</div><p class="term-rule">D=b²−4ac, vzorec x=<span class="frac"><span class="frac-num">−b ± √D</span><span class="frac-den">2a</span></span></p></div></div><p>Vždy najprv rozpoznaj typ, potom zvoľ postup.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

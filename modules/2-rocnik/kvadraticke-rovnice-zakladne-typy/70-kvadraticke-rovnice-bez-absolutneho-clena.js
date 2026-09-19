@@ -82,7 +82,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Pravidlo o nulovom súčine',
-        html: '<div class="formula"><span class="mini-label">PRAVIDLO O NULOVOM SÚČINE</span>Súčin sa rovná nule práve vtedy, keď aspoň jeden z jeho činiteľov je nula.</div><p>Rovnicu ax²+bx=0 (a≠0) upravíme vyňatím x pred zátvorku: x(ax+b)=0. Podľa pravidla o nulovom súčine platí x=0 <span class="hl">alebo</span> ax+b=0 (odkiaľ x=−b/a). Rovnica má teda <span class="hl">vždy</span> dve riešenia: x=0 a x=−b/a.</p>',
+        html: '<div class="formula"><span class="mini-label">PRAVIDLO O NULOVOM SÚČINE</span>Súčin sa rovná nule práve vtedy, keď aspoň jeden z jeho činiteľov je nula.</div><p>Rovnicu ax²+bx=0 (a≠0) upravíme vyňatím x pred zátvorku: x(ax+b)=0. Podľa pravidla o nulovom súčine platí x=0 <span class="hl">alebo</span> ax+b=0 (odkiaľ x=<span class="frac"><span class="frac-num">−b</span><span class="frac-den">a</span></span>). Rovnica má teda <span class="hl">vždy</span> dve riešenia: x=0 a x=<span class="frac"><span class="frac-num">−b</span><span class="frac-den">a</span></span>.</p>',
         remember: 'ax²+bx=0 → x(ax+b)=0 → x=0 alebo x=−b/a.',
       },
       {
@@ -90,7 +90,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="mini-label">ROVNICA BEZ ABSOLÚTNEHO ČLENA</span>ax² + bx = 0<span class="formula-note">a≠0 — vyjmi x pred zátvorku: x(ax+b)=0</span></div><p>Podľa pravidla o nulovom súčine: x=0 alebo ax+b=0 (teda x=−b/a). Rovnica má vždy dve riešenia.</p>',
+        html: '<div class="formula"><span class="mini-label">ROVNICA BEZ ABSOLÚTNEHO ČLENA</span>ax² + bx = 0<span class="formula-note">a≠0 — vyjmi x pred zátvorku: x(ax+b)=0</span></div><p>Podľa pravidla o nulovom súčine: x=0 alebo ax+b=0 (teda x=<span class="frac"><span class="frac-num">−b</span><span class="frac-den">a</span></span>). Rovnica má vždy dve riešenia.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

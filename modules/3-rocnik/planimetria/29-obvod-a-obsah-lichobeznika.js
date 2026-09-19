@@ -71,21 +71,21 @@ MathPlatform.registerModule({
         "type": "info",
         "phase": "NAJPRV OBRÁZOK",
         "title": "Obvod a obsah lichobežníka",
-        "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><polygon points=\"160,70 350,70 430,270 70,270\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><line x1=\"160\" y1=\"70\" x2=\"160\" y2=\"270\" stroke=\"#9b6b2f\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><text x=\"168\" y=\"175\">v</text><text x=\"245\" y=\"292\">a</text><text x=\"245\" y=\"60\">c</text></svg></div><div class=\"formula\">S = (a + c) · v / 2<span class=\"formula-note\">o = a + b + c + d</span></div>"
+        "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 500 330\" role=\"img\"><polygon points=\"160,70 350,70 430,270 70,270\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><line x1=\"160\" y1=\"70\" x2=\"160\" y2=\"270\" stroke=\"#9b6b2f\" stroke-width=\"3\" stroke-dasharray=\"7 6\"/><text x=\"168\" y=\"175\">v</text><text x=\"245\" y=\"292\">a</text><text x=\"245\" y=\"60\">c</text></svg></div><div class=\"formula\">S = <span class=\"frac\"><span class=\"frac-num\">(a + c) · v</span><span class=\"frac-den\">2</span></span><span class=\"formula-note\">o = a + b + c + d</span></div>"
       },
       {
         "id": "worked-example",
         "type": "explain",
         "phase": "PRÍKLAD",
         "title": "Vyskúšajme to na čísle",
-        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Lichobežník má základne a = 10 cm, c = 6 cm a výšku v = 4 cm.</p><p>S = (a+c)·v/2 = (10+6)·4/2 = 16·2 = <strong>32 cm²</strong></p></div>"
+        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Lichobežník má základne a = 10 cm, c = 6 cm a výšku v = 4 cm.</p><p>S = <span class=\"frac\"><span class=\"frac-num\">(a+c)·v</span><span class=\"frac-den\">2</span></span> = <span class=\"frac\"><span class=\"frac-num\">(10+6)·4</span><span class=\"frac-den\">2</span></span> = 16·2 = <strong>32 cm²</strong></p></div>"
       },
       {
         "id": "clean",
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Obvod a obsah lichobežníka",
-        "html": "<p><strong>TEÓRIA:</strong> S=(a+c)·v/2; o=a+b+c+d.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
+        "html": "<p><strong>TEÓRIA:</strong> S=<span class=\"frac\"><span class=\"frac-num\">(a+c)·v</span><span class=\"frac-den\">2</span></span>; o=a+b+c+d.</p><p>Doplň presný náčrt a jeden vzorový príklad po spoločnej kontrole.</p>",
         "model": "Zápis do zošita: názov útvaru → označenie → vzťahy → jednotky → jeden modelový príklad."
       },
       {

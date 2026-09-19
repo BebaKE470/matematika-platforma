@@ -87,7 +87,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Praktické vzorce s odmocninou: dohľadnosť na obzor d=3,57√h (h výška v m, d vzdialenosť v km), elektrický prúd I=√(P/R) (P výkon vo W, R odpor v Ω).</p><ol class="steps"><li>Dosaď.</li><li>Izoluj odmocninu.</li><li>Umocni.</li><li>Vyrieš.</li><li>Over zmysluplnosť (kladná hodnota).</li></ol>',
+        html: '<p>Praktické vzorce s odmocninou: dohľadnosť na obzor d=3,57√h (h výška v m, d vzdialenosť v km), elektrický prúd I=√(<span class="frac"><span class="frac-num">P</span><span class="frac-den">R</span></span>) (P výkon vo W, R odpor v Ω).</p><ol class="steps"><li>Dosaď.</li><li>Izoluj odmocninu.</li><li>Umocni.</li><li>Vyrieš.</li><li>Over zmysluplnosť (kladná hodnota).</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {

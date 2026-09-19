@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie celého celku',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Vietove vzťahy</div><p class="term-rule">x₁+x₂=−b/a, x₁·x₂=c/a.</p></div><div class="term-item no-symbol"><div class="term-name">Rozklad</div><p class="term-rule">ax²+bx+c=a(x−x₁)(x−x₂).</p></div><div class="term-item no-symbol"><div class="term-name">Krátenie lomeného výrazu</div><p class="term-rule">Definičný obor → rozklad → krátenie.</p></div></div>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Vietove vzťahy</div><p class="term-rule">x₁+x₂=<span class="frac"><span class="frac-num">−b</span><span class="frac-den">a</span></span>, x₁·x₂=<span class="frac"><span class="frac-num">c</span><span class="frac-den">a</span></span>.</p></div><div class="term-item no-symbol"><div class="term-name">Rozklad</div><p class="term-rule">ax²+bx+c=a(x−x₁)(x−x₂).</p></div><div class="term-item no-symbol"><div class="term-name">Krátenie lomeného výrazu</div><p class="term-rule">Definičný obor → rozklad → krátenie.</p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -66,7 +66,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Zhrnutie: Vietove vzťahy x₁+x₂=−b/a, x₁·x₂=c/a. Rozklad na súčin: ax²+bx+c=a(x−x₁)(x−x₂). Krátenie lomeného výrazu: definičný obor pred krátením, potom rozklad a skrátenie spoločného činiteľa.</p>',
+        html: '<p>Zhrnutie: Vietove vzťahy x₁+x₂=<span class="frac"><span class="frac-num">−b</span><span class="frac-den">a</span></span>, x₁·x₂=<span class="frac"><span class="frac-num">c</span><span class="frac-den">a</span></span>. Rozklad na súčin: ax²+bx+c=a(x−x₁)(x−x₂). Krátenie lomeného výrazu: definičný obor pred krátením, potom rozklad a skrátenie spoločného činiteľa.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

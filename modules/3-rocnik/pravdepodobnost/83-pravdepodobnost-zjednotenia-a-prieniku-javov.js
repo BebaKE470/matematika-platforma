@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Prečo nemôžeme len sčítať?',
-        html: '<p>Pri hode kockou: A=„párne číslo“={2,4,6}, B=„deliteľné 3“={3,6}. Číslo 6 patrí do <span class="hl">oboch</span> javov naraz. Ak by sme počítali P(A)+P(B)=1/2+1/3=5/6, číslo 6 by sme rátali dvakrát!</p>',
+        html: '<p>Pri hode kockou: A=„párne číslo“={2,4,6}, B=„deliteľné 3“={3,6}. Číslo 6 patrí do <span class="hl">oboch</span> javov naraz. Ak by sme počítali P(A)+P(B)=<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>+<span class="frac"><span class="frac-num">1</span><span class="frac-den">3</span></span>=<span class="frac"><span class="frac-num">5</span><span class="frac-den">6</span></span>, číslo 6 by sme rátali dvakrát!</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -81,7 +81,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Vzorec pre zjednotenie javov',
-        html: '<div class="formula">P(A∪B) = P(A) + P(B) − P(A∩B)<span class="formula-note">Odpočítame prienik, aby sme ho nezapočítali dvakrát.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>A∩B={6}, P(A∩B)=1/6.</p><p>P(A∪B)=1/2+1/3−1/6=3/6+2/6−1/6=4/6=2/3</p><p>(sedí s priamym počítaním: A∪B={2,3,4,6}, 4 z 6.)</p></div><p><strong>Nezlučiteľné javy</strong> (A∩B=∅, nemôžu nastať súčasne): P(A∪B)=P(A)+P(B) (jednoduchšie, netreba nič odpočítať).</p>',
+        html: '<div class="formula">P(A∪B) = P(A) + P(B) − P(A∩B)<span class="formula-note">Odpočítame prienik, aby sme ho nezapočítali dvakrát.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>A∩B={6}, P(A∩B)=<span class="frac"><span class="frac-num">1</span><span class="frac-den">6</span></span>.</p><p>P(A∪B)=<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>+<span class="frac"><span class="frac-num">1</span><span class="frac-den">3</span></span>−<span class="frac"><span class="frac-num">1</span><span class="frac-den">6</span></span>=<span class="frac"><span class="frac-num">3</span><span class="frac-den">6</span></span>+<span class="frac"><span class="frac-num">2</span><span class="frac-den">6</span></span>−<span class="frac"><span class="frac-num">1</span><span class="frac-den">6</span></span>=<span class="frac"><span class="frac-num">4</span><span class="frac-den">6</span></span>=<span class="frac"><span class="frac-num">2</span><span class="frac-den">3</span></span></p><p>(sedí s priamym počítaním: A∪B={2,3,4,6}, 4 z 6.)</p></div><p><strong>Nezlučiteľné javy</strong> (A∩B=∅, nemôžu nastať súčasne): P(A∪B)=P(A)+P(B) (jednoduchšie, netreba nič odpočítať).</p>',
         remember: 'P(A∪B)=P(A)+P(B)−P(A∩B). Nezlučiteľné javy (A∩B=∅): P(A∪B)=P(A)+P(B).',
       },
       {

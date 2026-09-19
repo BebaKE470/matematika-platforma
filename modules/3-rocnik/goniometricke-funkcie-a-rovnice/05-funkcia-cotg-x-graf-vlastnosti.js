@@ -87,7 +87,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM",
         "title": "Funkcia cotg x",
-        "html": "<p>Pre reálne číslo x najprv nájdeme príslušný bod jednotkovej kružnice.</p><div class=\"formula\">cotg x = cos x / sin x</div><p>Hodnoty cotg x neexistujú tam, kde sin x=0.</p>",
+        "html": "<p>Pre reálne číslo x najprv nájdeme príslušný bod jednotkovej kružnice.</p><div class=\"formula\">cotg x = <span class=\"frac\"><span class=\"frac-num\">cos x</span><span class=\"frac-den\">sin x</span></span></div><p>Hodnoty cotg x neexistujú tam, kde sin x=0.</p>",
         "remember": "Najprv definícia na kružnici, až potom vlastnosti grafu."
       },
       {
@@ -152,7 +152,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "cotg x – definícia a vlastnosti",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>FUNKCIA y = cotg x</strong></p><p>Pre sin x ≠ 0 platí <strong>cotg x = cos x / sin x</strong>.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Definičný obor</div><p class=\"term-rule\">D(cotg) = ℝ \ {kπ; k ∈ ℤ}</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obor hodnôt</div><p class=\"term-rule\">H(cotg) = ℝ</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Perióda</div><p class=\"term-rule\">π, teda cotg(x + kπ) = cotg x, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nuly</div><p class=\"term-rule\">x = π/2 + kπ, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nepárnosť</div><p class=\"term-rule\">cotg(−x) = −cotg x.</p></div></div><p>Priamky x = kπ sú zvislé asymptoty grafu funkcie cotg x.</p>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>FUNKCIA y = cotg x</strong></p><p>Pre sin x ≠ 0 platí <strong>cotg x = <span class=\"frac\"><span class=\"frac-num\">cos x</span><span class=\"frac-den\">sin x</span></span></strong>.</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Definičný obor</div><p class=\"term-rule\">D(cotg) = ℝ \ {kπ; k ∈ ℤ}</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Obor hodnôt</div><p class=\"term-rule\">H(cotg) = ℝ</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Perióda</div><p class=\"term-rule\">π, teda cotg(x + kπ) = cotg x, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nuly</div><p class=\"term-rule\">x = π/2 + kπ, k ∈ ℤ.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nepárnosť</div><p class=\"term-rule\">cotg(−x) = −cotg x.</p></div></div><p>Priamky x = kπ sú zvislé asymptoty grafu funkcie cotg x.</p>",
         "model": "Teoretický zápis je zobrazený celý v poli html; model sa v zjednodušenom notebook rendereri nezobrazuje."
       },
       {

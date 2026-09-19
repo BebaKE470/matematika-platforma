@@ -62,7 +62,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie postupu',
-        html: '<div class="formula">P(A) = m/n</div><ol class="steps"><li>Urč n (počet všetkých rovnako pravdepodobných výsledkov, prípadne pravidlom súčinu alebo kombináciou).</li><li>Urč m (počet priaznivých).</li><li>Vypočítaj podiel.</li></ol>',
+        html: '<div class="formula">P(A) = <span class="frac"><span class="frac-num">m</span><span class="frac-den">n</span></span></div><ol class="steps"><li>Urč n (počet všetkých rovnako pravdepodobných výsledkov, prípadne pravidlom súčinu alebo kombináciou).</li><li>Urč m (počet priaznivých).</li><li>Vypočítaj podiel.</li></ol>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -120,7 +120,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<ol class="steps"><li>Over, či sú výsledky rovnako pravdepodobné.</li><li>Urč n (celkový počet, často pravidlom súčinu alebo kombináciou).</li><li>Urč m (priaznivé, pozorne prečítaj zadanie — „aspoň“, „presne“, „obaja“ menia počet priaznivých výsledkov).</li><li>Vypočítaj P=m/n.</li></ol>',
+        html: '<ol class="steps"><li>Over, či sú výsledky rovnako pravdepodobné.</li><li>Urč n (celkový počet, často pravidlom súčinu alebo kombináciou).</li><li>Urč m (priaznivé, pozorne prečítaj zadanie — „aspoň“, „presne“, „obaja“ menia počet priaznivých výsledkov).</li><li>Vypočítaj P=<span class="frac"><span class="frac-num">m</span><span class="frac-den">n</span></span>.</li></ol>',
         continueLabel: 'Mám zapísané',
       },
       {

@@ -59,7 +59,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Dve operácie spolu',
-        html: '<div class="formula"><span class="mini-label">NÁSOBENIE</span>a/b · c/d = (ac)/(bd)</div><div class="formula"><span class="mini-label">DELENIE</span>a/b : c/d = a/b · d/c = (ad)/(bc)<span class="formula-note">Obráť deliteľa.</span></div>',
+        html: '<div class="formula"><span class="mini-label">NÁSOBENIE</span><span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> · <span class="frac"><span class="frac-num">c</span><span class="frac-den">d</span></span> = <span class="frac"><span class="frac-num">ac</span><span class="frac-den">bd</span></span></div><div class="formula"><span class="mini-label">DELENIE</span><span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> : <span class="frac"><span class="frac-num">c</span><span class="frac-den">d</span></span> = <span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> · <span class="frac"><span class="frac-num">d</span><span class="frac-den">c</span></span> = <span class="frac"><span class="frac-num">ad</span><span class="frac-den">bc</span></span><span class="formula-note">Obráť deliteľa.</span></div>',
         continueLabel: 'Pokračovať',
       },
       {

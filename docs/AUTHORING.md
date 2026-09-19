@@ -84,6 +84,7 @@ not just "needs to look nicer."
 | the single sentence to memorise for the whole activity | the `remember` field | a hand-written `<div class="remember">` |
 | a symbol table, truth table, or hand-drawn diagram | `.table-wrap`+`table.truth`, `.logic-visual`, `.math-list` | — |
 | a fraction inside a formula or sentence | `.frac` | a flat `a/b` |
+| a fractional exponent (a^(1/n)) | `.frac` inside `.pow-exp` | a flat `a^(1/n)` |
 | a combination number ("n nad k") | `.combo` | the words "n nad k" as plain text |
 | Pascal's triangle | `.pascal-triangle` | a text description of the rows |
 
@@ -96,6 +97,20 @@ combination-number formula).
 
 ```html
 <div class="formula">(n nad k) = <span class="frac"><span class="frac-num">n!</span><span class="frac-den">k!·(n−k)!</span></span></div>
+```
+
+### `.pow-exp` — a fractional exponent
+
+Nests `.frac` inside a raised, shrunk exponent slot right after the base —
+for a rational-exponent expression like a^(1/n) or a^(m/n), where the
+fraction itself needs to sit *in the exponent position*, not at full size
+next to the base the way a plain `.frac` would render. Put the `.pow-exp`
+span directly after the base, with no space — it supplies its own raise and
+shrink, so the nested `.frac` doesn't need `vertical-align` or a font-size
+override.
+
+```html
+a<span class="pow-exp"><span class="frac"><span class="frac-num">1</span><span class="frac-den">n</span></span></span> = <sup>n</sup>√a
 ```
 
 ### `.combo` — combination-number ("n nad k") notation

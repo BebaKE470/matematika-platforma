@@ -244,8 +244,8 @@ MathPlatform.registerModule({
         "phase": "ROZCVIČKA",
         "skill": "Matematické vyjadrovanie",
         "title": "Vysvetli vlastnými slovami",
-        "promptHtml": "Vysvetli spolužiakovi, ktorý bol chorý, prečo je zlomok <strong>1/2</strong> to isté číslo ako <strong>0,5</strong> aj ako <strong>50 %</strong>.",
-        "model": "Napríklad: 1/2 znamená jeden diel z dvoch rovnakých dielov celku. Keď 1 vydelíme 2, dostaneme desatinné číslo 0,5. A 50 % znamená 50 zo 100, čo je tiež presne polovica – ide teda o rovnaké množstvo zapísané tromi rôznymi spôsobmi."
+        "promptHtml": "Vysvetli spolužiakovi, ktorý bol chorý, prečo je zlomok <strong><span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">2</span></span></strong> to isté číslo ako <strong>0,5</strong> aj ako <strong>50 %</strong>.",
+        "model": "Napríklad: <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">2</span></span> znamená jeden diel z dvoch rovnakých dielov celku. Keď 1 vydelíme 2, dostaneme desatinné číslo 0,5. A 50 % znamená 50 zo 100, čo je tiež presne polovica – ide teda o rovnaké množstvo zapísané tromi rôznymi spôsobmi."
       },
       {
         "id": "reflection",

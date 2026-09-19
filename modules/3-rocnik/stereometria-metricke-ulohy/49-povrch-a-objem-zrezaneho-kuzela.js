@@ -76,7 +76,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p><strong>Zrezaný kužeľ:</strong> polomery podstáv sú R a r, kolmá výška v a tvorivka s.</p><div class=\"formula\"><span class=\"mini-label\">ZREZANÝ KUŽEĽ</span>V = (πv/3)(R² + Rr + r²), S = πR² + πr² + π(R+r)s<span class=\"formula-note\">Platí s² = v² + (R−r)².</span></div><p>Najprv si v náčrte označ, ktorý údaj je polomer, výška a tvorivka.</p>"
+        "html": "<p><strong>Zrezaný kužeľ:</strong> polomery podstáv sú R a r, kolmá výška v a tvorivka s.</p><div class=\"formula\"><span class=\"mini-label\">ZREZANÝ KUŽEĽ</span>V = <span class=\"frac\"><span class=\"frac-num\">πv</span><span class=\"frac-den\">3</span></span>(R² + Rr + r²), S = πR² + πr² + π(R+r)s<span class=\"formula-note\">Platí s² = v² + (R−r)².</span></div><p>Najprv si v náčrte označ, ktorý údaj je polomer, výška a tvorivka.</p>"
       },
       {
         "id": "notebook",

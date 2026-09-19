@@ -57,7 +57,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'OPAKUJ',
         title: 'Čo už vieme',
-        html: '<p>Z minulej hodiny poznáš <strong>sínusovú vetu</strong>: a/sin α = b/sin β = c/sin γ, a vieš ju použiť na výpočet chýbajúcej strany v ľubovoľnom trojuholníku.</p>',
+        html: '<p>Z minulej hodiny poznáš <strong>sínusovú vetu</strong>: <span class="frac"><span class="frac-num">a</span><span class="frac-den">sin α</span></span> = <span class="frac"><span class="frac-num">b</span><span class="frac-den">sin β</span></span> = <span class="frac"><span class="frac-num">c</span><span class="frac-den">sin γ</span></span>, a vieš ju použiť na výpočet chýbajúcej strany v ľubovoľnom trojuholníku.</p>',
       },
       {
         id: 'topic-intro',

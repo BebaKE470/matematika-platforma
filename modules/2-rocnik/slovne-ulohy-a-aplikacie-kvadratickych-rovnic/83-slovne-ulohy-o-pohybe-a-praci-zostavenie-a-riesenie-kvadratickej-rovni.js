@@ -74,7 +74,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Úloha o pohybe',
-        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Cyklista prešiel 24 km. Keby šiel rýchlosťou o 2 km/h väčšou, potreboval by o 1 hodinu menej. Označíme v (km/h) pôvodnú rýchlosť. Po úprave rovnice 24/v − 24/(v+2) = 1 dostaneme kvadratickú rovnicu:</p><p><strong>v² + 2v − 48 = 0</strong></p></div>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Cyklista prešiel 24 km. Keby šiel rýchlosťou o 2 km/h väčšou, potreboval by o 1 hodinu menej. Označíme v (km/h) pôvodnú rýchlosť. Po úprave rovnice <span class="frac"><span class="frac-num">24</span><span class="frac-den">v</span></span> − <span class="frac"><span class="frac-num">24</span><span class="frac-den">v+2</span></span> = 1 dostaneme kvadratickú rovnicu:</p><p><strong>v² + 2v − 48 = 0</strong></p></div>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -82,7 +82,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Úloha o spoločnej práci',
-        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Dvaja murári by spolu postavili múr za 6 hodín. Prvý by ho sám postavil o 5 hodín rýchlejšie ako druhý. Označíme x (hodiny) čas druhého murára. Po úprave rovnice 1/x + 1/(x−5) = 1/6 dostaneme:</p><p><strong>x² − 17x + 30 = 0</strong></p></div><p>V oboch prípadoch: zostavenie rovnice a jej úprava sa robí na papieri (učiteľ predvádza), samotné <span class="hl">riešenie</span> výslednej kvadratickej rovnice a výber zmysluplného koreňa je to, čo trénujeme tu.</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Dvaja murári by spolu postavili múr za 6 hodín. Prvý by ho sám postavil o 5 hodín rýchlejšie ako druhý. Označíme x (hodiny) čas druhého murára. Po úprave rovnice <span class="frac"><span class="frac-num">1</span><span class="frac-den">x</span></span> + <span class="frac"><span class="frac-num">1</span><span class="frac-den">x−5</span></span> = <span class="frac"><span class="frac-num">1</span><span class="frac-den">6</span></span> dostaneme:</p><p><strong>x² − 17x + 30 = 0</strong></p></div><p>V oboch prípadoch: zostavenie rovnice a jej úprava sa robí na papieri (učiteľ predvádza), samotné <span class="hl">riešenie</span> výslednej kvadratickej rovnice a výber zmysluplného koreňa je to, čo trénujeme tu.</p>',
         remember: 'Zostavenie rovnice → úprava na kvadratický tvar (na papieri) → riešenie a výber zmysluplného koreňa (tu).',
       },
       {

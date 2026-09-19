@@ -162,7 +162,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'BEZ MOBILU',
         title: 'Riešenie bez mobilu',
-        html: '<p>V zošite: Pravouhlý trojuholník má odvesny 5cm a 12cm. <strong>a)</strong> Vypočítaj preponu. <strong>b)</strong> Vypočítaj výšku na preponu cez obsah trojuholníka — obsah vyjadri dvoma spôsobmi a z rovnosti vypočítaj v:</p><div class="formula">S = (a·b)/2 = (c·v)/2</div>',
+        html: '<p>V zošite: Pravouhlý trojuholník má odvesny 5cm a 12cm. <strong>a)</strong> Vypočítaj preponu. <strong>b)</strong> Vypočítaj výšku na preponu cez obsah trojuholníka — obsah vyjadri dvoma spôsobmi a z rovnosti vypočítaj v:</p><div class="formula">S = <span class="frac"><span class="frac-num">a·b</span><span class="frac-den">2</span></span> = <span class="frac"><span class="frac-num">c·v</span><span class="frac-den">2</span></span></div>',
         continueLabel: 'Mám zapísané',
       },
       {

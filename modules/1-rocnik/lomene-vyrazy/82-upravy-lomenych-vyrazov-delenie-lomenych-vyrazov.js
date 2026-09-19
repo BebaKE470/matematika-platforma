@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'OPAKUJ',
         title: 'Čo už vieme',
-        html: '<p>Na predchádzajúcej hodine sme sa naučili násobiť lomené výrazy — čitateľ s čitateľom, menovateľ s menovateľom, a kráti sa najlepšie pred násobením.</p><p>Zo základnej školy vieš, že delenie zlomkom znamená násobenie jeho prevráteným tvarom, napríklad 2/3 : 4/5 = 2/3 · 5/4.</p>',
+        html: '<p>Na predchádzajúcej hodine sme sa naučili násobiť lomené výrazy — čitateľ s čitateľom, menovateľ s menovateľom, a kráti sa najlepšie pred násobením.</p><p>Zo základnej školy vieš, že delenie zlomkom znamená násobenie jeho prevráteným tvarom, napríklad <span class="frac"><span class="frac-num">2</span><span class="frac-den">3</span></span> : <span class="frac"><span class="frac-num">4</span><span class="frac-den">5</span></span> = <span class="frac"><span class="frac-num">2</span><span class="frac-den">3</span></span> · <span class="frac"><span class="frac-num">5</span><span class="frac-den">4</span></span>.</p>',
       },
       {
         id: 'topic-intro',
@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Delenie ako násobenie prevráteným zlomkom',
-        html: '<p>Vieš, že 2/3 : 4/5 = 2/3 · 5/4 (obrátiš druhý zlomok a zmeníš delenie na násobenie).</p><p>Lomené výrazy delíme rovnako: <strong>a/b : c/d = a/b · d/c</strong>.</p>',
+        html: '<p>Vieš, že <span class="frac"><span class="frac-num">2</span><span class="frac-den">3</span></span> : <span class="frac"><span class="frac-num">4</span><span class="frac-den">5</span></span> = <span class="frac"><span class="frac-num">2</span><span class="frac-den">3</span></span> · <span class="frac"><span class="frac-num">5</span><span class="frac-den">4</span></span> (obrátiš druhý zlomok a zmeníš delenie na násobenie).</p><p>Lomené výrazy delíme rovnako: <strong><span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> : <span class="frac"><span class="frac-num">c</span><span class="frac-den">d</span></span> = <span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> · <span class="frac"><span class="frac-num">d</span><span class="frac-den">c</span></span></strong>.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -81,7 +81,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Pravidlo pre delenie',
-        html: '<div class="formula">a/b : c/d = a/b · d/c = (ad)/(bc)<span class="formula-note">Druhý zlomok obráť (prevráť čitateľa a menovateľa) a zmeň delenie na násobenie.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>(x/2) : (3/y) = (x/2) · (y/3) = xy/6</p></div>',
+        html: '<div class="formula"><span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> : <span class="frac"><span class="frac-num">c</span><span class="frac-den">d</span></span> = <span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> · <span class="frac"><span class="frac-num">d</span><span class="frac-den">c</span></span> = <span class="frac"><span class="frac-num">ad</span><span class="frac-den">bc</span></span><span class="formula-note">Druhý zlomok obráť (prevráť čitateľa a menovateľa) a zmeň delenie na násobenie.</span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p><span class="frac"><span class="frac-num">x</span><span class="frac-den">2</span></span> : <span class="frac"><span class="frac-num">3</span><span class="frac-den">y</span></span> = <span class="frac"><span class="frac-num">x</span><span class="frac-den">2</span></span> · <span class="frac"><span class="frac-num">y</span><span class="frac-den">3</span></span> = <span class="frac"><span class="frac-num">xy</span><span class="frac-den">6</span></span></p></div>',
         remember: 'a/b : c/d = a/b · d/c. Deliteľa vždy obráť a preveď delenie na násobenie.',
       },
       {
@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<div class="formula">a/b : c/d = a/b · d/c = (ad)/(bc)<span class="formula-note">Obráť deliaci výraz a zmeň delenie na násobenie.</span></div><p>Po prevode na násobenie vždy skontroluj, či sa dá výsledok ešte skrátiť.</p>',
+        html: '<div class="formula"><span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> : <span class="frac"><span class="frac-num">c</span><span class="frac-den">d</span></span> = <span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> · <span class="frac"><span class="frac-num">d</span><span class="frac-den">c</span></span> = <span class="frac"><span class="frac-num">ad</span><span class="frac-den">bc</span></span><span class="formula-note">Obráť deliaci výraz a zmeň delenie na násobenie.</span></div><p>Po prevode na násobenie vždy skontroluj, či sa dá výsledok ešte skrátiť.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'OPAKUJ',
         title: 'Čo už vieme',
-        html: '<p>Na predchádzajúcich hodinách sme sa naučili určiť definičný obor, krátiť, sčítať a odčítať lomené výrazy.</p><p>Zo základnej školy vieš násobiť číselné zlomky: čitateľ s čitateľom, menovateľ s menovateľom, napríklad 2/3 · 4/5 = 8/15.</p>',
+        html: '<p>Na predchádzajúcich hodinách sme sa naučili určiť definičný obor, krátiť, sčítať a odčítať lomené výrazy.</p><p>Zo základnej školy vieš násobiť číselné zlomky: čitateľ s čitateľom, menovateľ s menovateľom, napríklad <span class="frac"><span class="frac-num">2</span><span class="frac-den">3</span></span> · <span class="frac"><span class="frac-num">4</span><span class="frac-den">5</span></span> = <span class="frac"><span class="frac-num">8</span><span class="frac-den">15</span></span>.</p>',
       },
       {
         id: 'topic-intro',
@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Rovnaký princíp ako pri číselných zlomkoch',
-        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>2/3 · 4/5 = (2·4)/(3·5) = 8/15</p></div><p>Lomené výrazy násobíme rovnako: <strong>a/b · c/d = (a·c)/(b·d)</strong>.</p>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p><span class="frac"><span class="frac-num">2</span><span class="frac-den">3</span></span> · <span class="frac"><span class="frac-num">4</span><span class="frac-den">5</span></span> = <span class="frac"><span class="frac-num">2·4</span><span class="frac-den">3·5</span></span> = <span class="frac"><span class="frac-num">8</span><span class="frac-den">15</span></span></p></div><p>Lomené výrazy násobíme rovnako: <strong><span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> · <span class="frac"><span class="frac-num">c</span><span class="frac-den">d</span></span> = <span class="frac"><span class="frac-num">a·c</span><span class="frac-den">b·d</span></span></strong>.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -81,7 +81,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Násobenie a krátenie pred násobením',
-        html: '<div class="formula">a/b · c/d = (ac)/(bd)<span class="formula-note">Čitatele sa vynásobia medzi sebou, menovatele medzi sebou.</span></div><p>Výhodné je krátiť <strong>pred</strong> násobením, nie až po ňom — čísla ostávajú menšie a výsledok jednoduchší.</p>',
+        html: '<div class="formula"><span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> · <span class="frac"><span class="frac-num">c</span><span class="frac-den">d</span></span> = <span class="frac"><span class="frac-num">ac</span><span class="frac-den">bd</span></span><span class="formula-note">Čitatele sa vynásobia medzi sebou, menovatele medzi sebou.</span></div><p>Výhodné je krátiť <strong>pred</strong> násobením, nie až po ňom — čísla ostávajú menšie a výsledok jednoduchší.</p>',
         remember: 'a/b · c/d = (ac)/(bd). Kráť pred násobením, ak je to možné.',
       },
       {
@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<div class="formula">a/b · c/d = (ac)/(bd)<span class="formula-note">Čitateľ krát čitateľ, menovateľ krát menovateľ.</span></div><p>Kráť pred násobením, ak je to možné — je to jednoduchšie a rýchlejšie ako krátiť až po vynásobení veľkých výrazov.</p>',
+        html: '<div class="formula"><span class="frac"><span class="frac-num">a</span><span class="frac-den">b</span></span> · <span class="frac"><span class="frac-num">c</span><span class="frac-den">d</span></span> = <span class="frac"><span class="frac-num">ac</span><span class="frac-den">bd</span></span><span class="formula-note">Čitateľ krát čitateľ, menovateľ krát menovateľ.</span></div><p>Kráť pred násobením, ak je to možné — je to jednoduchšie a rýchlejšie ako krátiť až po vynásobení veľkých výrazov.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

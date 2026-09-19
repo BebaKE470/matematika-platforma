@@ -78,7 +78,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "PRÍKLAD",
         "title": "Vyskúšajme to na čísle",
-        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Pôdorys domčeka má tvar päťuholníka: obdĺžnik so stranami 6 cm a 4 cm, na ktorom je trojuholníková strecha so základňou 6 cm a výškou 3 cm.</p><p>S₁ (obdĺžnik) = 6·4 = 24 cm²</p><p>S₂ (strecha) = 6·3/2 = 9 cm²</p><p>S = S₁ + S₂ = 24 + 9 = <strong>33 cm²</strong></p></div>"
+        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Pôdorys domčeka má tvar päťuholníka: obdĺžnik so stranami 6 cm a 4 cm, na ktorom je trojuholníková strecha so základňou 6 cm a výškou 3 cm.</p><p>S₁ (obdĺžnik) = 6·4 = 24 cm²</p><p>S₂ (strecha) = <span class=\"frac\"><span class=\"frac-num\">6·3</span><span class=\"frac-den\">2</span></span> = 9 cm²</p><p>S = S₁ + S₂ = 24 + 9 = <strong>33 cm²</strong></p></div>"
       },
       {
         "id": "clean",

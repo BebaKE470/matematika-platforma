@@ -105,7 +105,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Záporný mocniteľ',
-        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Skús 5² : 5⁵ podľa pravidla: 5² : 5⁵ = 5²⁻⁵ = 5⁻³.</p><p>Na druhej strane 5² : 5⁵ = (5·5)/(5·5·5·5·5) = 1/5³ po skrátení.</p></div><div class="formula">a⁻ⁿ = 1/aⁿ<span class="formula-note">(a ≠ 0) — záporný mocniteľ znamená prevrátenú hodnotu príslušnej kladnej mocniny, nie záporný výsledok</span></div>',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p>Skús 5² : 5⁵ podľa pravidla: 5² : 5⁵ = 5²⁻⁵ = 5⁻³.</p><p>Na druhej strane 5² : 5⁵ = <span class="frac"><span class="frac-num">5·5</span><span class="frac-den">5·5·5·5·5</span></span> = <span class="frac"><span class="frac-num">1</span><span class="frac-den">5³</span></span> po skrátení.</p></div><div class="formula">a⁻ⁿ = <span class="frac"><span class="frac-num">1</span><span class="frac-den">aⁿ</span></span><span class="formula-note">(a ≠ 0) — záporný mocniteľ znamená prevrátenú hodnotu príslušnej kladnej mocniny, nie záporný výsledok</span></div>',
         remember: 'a⁻ⁿ = 1/aⁿ (a ≠ 0). Záporný exponent ≠ záporný výsledok.',
       },
       {
@@ -113,7 +113,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p>Pre a ≠ 0 a prirodzené číslo n platí:</p><p><strong>a⁻ⁿ = 1/aⁿ</strong></p><p>Príklad: 5⁻² = 1/5² = 1/25. Záporný exponent nemení znamienko výsledku, iba ho obráti (prevrátená hodnota).</p>',
+        html: '<p>Pre a ≠ 0 a prirodzené číslo n platí:</p><p><strong>a⁻ⁿ = <span class="frac"><span class="frac-num">1</span><span class="frac-den">aⁿ</span></span></strong></p><p>Príklad: 5⁻² = <span class="frac"><span class="frac-num">1</span><span class="frac-den">5²</span></span> = <span class="frac"><span class="frac-num">1</span><span class="frac-den">25</span></span>. Záporný exponent nemení znamienko výsledku, iba ho obráti (prevrátená hodnota).</p>',
         continueLabel: 'Mám zapísané',
       },
       {

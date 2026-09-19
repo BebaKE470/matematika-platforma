@@ -78,14 +78,14 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Guľa</div><p class=\"term-rule\">S = 4πr², V = (4/3)πr³.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Polguľa</div><p class=\"term-rule\">V = (2/3)πr³. Jej zakrivená plocha má obsah 2πr²; ak rátame aj kruhovú podstavu, celý povrch polgule je 3πr².</p></div></div><p>Pri slovnej úlohe vždy rozhodni, či sa pýta na zakrivenú plochu alebo na celý povrch vrátane podstavy.</p>"
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Guľa</div><p class=\"term-rule\">S = 4πr², V = <span class=\"frac\"><span class=\"frac-num\">4</span><span class=\"frac-den\">3</span></span>πr³.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Polguľa</div><p class=\"term-rule\">V = <span class=\"frac\"><span class=\"frac-num\">2</span><span class=\"frac-den\">3</span></span>πr³. Jej zakrivená plocha má obsah 2πr²; ak rátame aj kruhovú podstavu, celý povrch polgule je 3πr².</p></div></div><p>Pri slovnej úlohe vždy rozhodni, či sa pýta na zakrivenú plochu alebo na celý povrch vrátane podstavy.</p>"
       },
       {
         "id": "notebook",
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli veľký kruh ako rez gule a označ polomer r; vedľa zapíš jednotky S a V.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pre guľu S=4πr² a V=(4/3)πr³. Zdvojnásobenie r zväčší povrch 4-krát a objem 8-krát.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Nakresli veľký kruh ako rez gule a označ polomer r; vedľa zapíš jednotky S a V.</p><p><span class=\"mini-label\">TOTO SI ZAPÍŠ DO ZOŠITA</span><br>Pre guľu S=4πr² a V=<span class=\"frac\"><span class=\"frac-num\">4</span><span class=\"frac-den\">3</span></span>πr³. Zdvojnásobenie r zväčší povrch 4-krát a objem 8-krát.</p>",
         "model": "<strong>KONTROLA:</strong> Pre guľu S=4πr² a V=(4/3)πr³. Zdvojnásobenie r zväčší povrch 4-krát a objem 8-krát."
       },
       {

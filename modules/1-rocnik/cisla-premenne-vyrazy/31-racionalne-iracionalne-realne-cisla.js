@@ -77,7 +77,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Racionálne číslo</div><p class=\"term-rule\">Možno ho zapísať ako zlomok celých čísel s nenulovým menovateľom.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Iracionálne číslo</div><p class=\"term-rule\">Takto ho zapísať nemožno.</p></div></div><p>Obe skupiny patria medzi reálne čísla.</p><div class=\"formula\">N ⊆ Z ⊆ Q ⊆ R<span class=\"formula-note\">Každé prirodzené číslo je aj celé, každé celé je aj racionálne. Iracionálne čísla (Ir) do Q nepatria, ale spolu s Q dopĺňajú celú množinu R.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>0,75 = 3/4 (končí sa) → racionálne.</p><p>0,333… = 1/3 (opakuje sa) → racionálne.</p><p>1,41421356… (nekončí sa a neopakuje sa) → iracionálne, je to √2.</p></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Racionálne číslo</div><p class=\"term-rule\">Možno ho zapísať ako zlomok celých čísel s nenulovým menovateľom.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Iracionálne číslo</div><p class=\"term-rule\">Takto ho zapísať nemožno.</p></div></div><p>Obe skupiny patria medzi reálne čísla.</p><div class=\"formula\">N ⊆ Z ⊆ Q ⊆ R<span class=\"formula-note\">Každé prirodzené číslo je aj celé, každé celé je aj racionálne. Iracionálne čísla (Ir) do Q nepatria, ale spolu s Q dopĺňajú celú množinu R.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>0,75 = <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">4</span></span> (končí sa) → racionálne.</p><p>0,333… = <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">3</span></span> (opakuje sa) → racionálne.</p><p>1,41421356… (nekončí sa a neopakuje sa) → iracionálne, je to √2.</p></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "notebook-rule",
@@ -115,7 +115,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Na číselnú os približne umiestni 1/2, √2 a 3/2.</p>",
+        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Na číselnú os približne umiestni <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">2</span></span>, √2 a <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">2</span></span>.</p>",
         "model": "<strong>KONTROLA:</strong> Racionálne číslo možno zapísať ako zlomok celých čísel s nenulovým menovateľom. Iracionálne číslo takto zapísať nemožno; obe skupiny patria medzi reálne čísla."
       },
       {

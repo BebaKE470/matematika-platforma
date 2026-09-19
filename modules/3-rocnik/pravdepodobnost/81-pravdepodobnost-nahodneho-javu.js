@@ -72,7 +72,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Aká je šanca padnutia párneho čísla?',
-        html: '<p>Pri hode kockou sú párne čísla 2, 4, 6 — to sú 3 priaznivé výsledky z celkových 6 možných. Šanca (pravdepodobnosť) je 3/6=1/2.</p>',
+        html: '<p>Pri hode kockou sú párne čísla 2, 4, 6 — to sú 3 priaznivé výsledky z celkových 6 možných. Šanca (pravdepodobnosť) je <span class="frac"><span class="frac-num">3</span><span class="frac-den">6</span></span>=<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -80,7 +80,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Klasická definícia pravdepodobnosti',
-        html: '<p>Ak má náhodný pokus n rovnako pravdepodobných elementárnych javov a jav A obsahuje m z nich (m priaznivých), pravdepodobnosť javu A je:</p><div class="formula">P(A) = m/n<span class="formula-note">Platí 0≤P(A)≤1: P(nemožný jav)=0, P(istý jav)=1.</span></div><p>Pri zložitejších pokusoch (napr. žrebovanie viacerých kariet naraz) sa m aj n počítajú pomocou kombinácií.</p>',
+        html: '<p>Ak má náhodný pokus n rovnako pravdepodobných elementárnych javov a jav A obsahuje m z nich (m priaznivých), pravdepodobnosť javu A je:</p><div class="formula">P(A) = <span class="frac"><span class="frac-num">m</span><span class="frac-den">n</span></span><span class="formula-note">Platí 0≤P(A)≤1: P(nemožný jav)=0, P(istý jav)=1.</span></div><p>Pri zložitejších pokusoch (napr. žrebovanie viacerých kariet naraz) sa m aj n počítajú pomocou kombinácií.</p>',
         remember: 'P(A) = m/n (m priaznivých, n všetkých rovnako pravdepodobných výsledkov). 0≤P(A)≤1.',
       },
       {
@@ -88,7 +88,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Klasická definícia pravdepodobnosti:</strong> P(A)=m/n, kde n je počet všetkých rovnako pravdepodobných elementárnych javov a m je počet tých, ktoré patria do javu A. Platí 0≤P(A)≤1. Pri zložitejších pokusoch sa m aj n počítajú pomocou kombinatorických nástrojov (pravidlo súčinu, kombinácie).</p>',
+        html: '<p><strong>Klasická definícia pravdepodobnosti:</strong> P(A)=<span class="frac"><span class="frac-num">m</span><span class="frac-den">n</span></span>, kde n je počet všetkých rovnako pravdepodobných elementárnych javov a m je počet tých, ktoré patria do javu A. Platí 0≤P(A)≤1. Pri zložitejších pokusoch sa m aj n počítajú pomocou kombinatorických nástrojov (pravidlo súčinu, kombinácie).</p>',
         continueLabel: 'Mám zapísané',
       },
       {

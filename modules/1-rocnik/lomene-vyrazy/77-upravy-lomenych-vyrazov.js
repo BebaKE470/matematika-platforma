@@ -74,7 +74,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Od číselných zlomkov k lomeným výrazom',
-        html: '<p>Zlomok 6/9 vieš skrátiť na 2/3, pretože 6 = 2·3 a 9 = 3·3, spoločný činiteľ 3 sa vykráti.</p><p>Lomený výraz funguje rovnako, len namiesto čísel máme mnohočleny, napríklad (x²−4)/(x−2).</p>',
+        html: '<p>Zlomok <span class="frac"><span class="frac-num">6</span><span class="frac-den">9</span></span> vieš skrátiť na <span class="frac"><span class="frac-num">2</span><span class="frac-den">3</span></span>, pretože 6 = 2·3 a 9 = 3·3, spoločný činiteľ 3 sa vykráti.</p><p>Lomený výraz funguje rovnako, len namiesto čísel máme mnohočleny, napríklad <span class="frac"><span class="frac-num">x²−4</span><span class="frac-den">x−2</span></span>.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -82,7 +82,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Definičný obor lomeného výrazu',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Lomený výraz</div><p class="term-rule">Podiel dvoch mnohočlenov, napr. (x+3)/(x−2). Menovateľ nesmie byť nulový.</p></div><div class="term-item no-symbol"><div class="term-name">Definičný obor</div><p class="term-rule">Vylučuje hodnoty x, pre ktoré by sa menovateľ rovnal nule.</p></div></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Pre (x+3)/(x−2) je definičný obor všetky reálne čísla okrem x = 2 (lebo x−2 = 0 pre x = 2).</p></div>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Lomený výraz</div><p class="term-rule">Podiel dvoch mnohočlenov, napr. <span class="frac"><span class="frac-num">x+3</span><span class="frac-den">x−2</span></span>. Menovateľ nesmie byť nulový.</p></div><div class="term-item no-symbol"><div class="term-name">Definičný obor</div><p class="term-rule">Vylučuje hodnoty x, pre ktoré by sa menovateľ rovnal nule.</p></div></div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Pre <span class="frac"><span class="frac-num">x+3</span><span class="frac-den">x−2</span></span> je definičný obor všetky reálne čísla okrem x = 2 (lebo x−2 = 0 pre x = 2).</p></div>',
         remember: 'Definičný obor lomeného výrazu vylučuje hodnoty, pre ktoré je menovateľ nulový.',
       },
       {
@@ -109,7 +109,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Krátenie lomeného výrazu',
-        html: '<p>Aby sme lomený výraz skrátili, musíme najprv čitateľa aj menovateľa <strong>rozložiť na súčin</strong>.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>(x²−4)/(x−2) = [(x−2)(x+2)]/(x−2) = x+2 (pre x ≠ 2)</p></div><div class="warning"><strong>Pozor:</strong> Krátiť môžeme iba celé činitele (súčinové zložky), nie jednotlivé sčítance.</div>',
+        html: '<p>Aby sme lomený výraz skrátili, musíme najprv čitateľa aj menovateľa <strong>rozložiť na súčin</strong>.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p><span class="frac"><span class="frac-num">x²−4</span><span class="frac-den">x−2</span></span> = <span class="frac"><span class="frac-num">(x−2)(x+2)</span><span class="frac-den">x−2</span></span> = x+2 (pre x ≠ 2)</p></div><div class="warning"><strong>Pozor:</strong> Krátiť môžeme iba celé činitele (súčinové zložky), nie jednotlivé sčítance.</div>',
         remember: 'Najprv rozlož čitateľa aj menovateľa na súčin, potom kráť spoločné činitele.',
       },
       {
@@ -117,7 +117,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Krátenie:</strong> najprv rozlož čitateľa aj menovateľa na súčin, potom vykráť spoločný činiteľ.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p>(x²−4)/(x−2) = (x−2)(x+2)/(x−2) = x+2 (x≠2)</p></div><div class="warning"><strong>Pozor:</strong> Krátiť sa dajú iba činitele súčinu, nie jednotlivé sčítance.</div>',
+        html: '<p><strong>Krátenie:</strong> najprv rozlož čitateľa aj menovateľa na súčin, potom vykráť spoločný činiteľ.</p><div class="example"><span class="mini-label">PRÍKLAD</span><p><span class="frac"><span class="frac-num">x²−4</span><span class="frac-den">x−2</span></span> = <span class="frac"><span class="frac-num">(x−2)(x+2)</span><span class="frac-den">x−2</span></span> = x+2 (x≠2)</p></div><div class="warning"><strong>Pozor:</strong> Krátiť sa dajú iba činitele súčinu, nie jednotlivé sčítance.</div>',
         continueLabel: 'Mám zapísané',
       },
       {

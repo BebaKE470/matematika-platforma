@@ -72,7 +72,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Rovnaký princíp ako sčítanie',
-        html: '<p>Ak majú dva lomené výrazy rovnaký menovateľ, odčítame iba čitatele: <strong>5/x − 2/x = 3/x</strong>.</p><p>Ak sú menovatele rôzne, prevedieme oba výrazy na spoločný menovateľ presne tak, ako pri sčítaní.</p>',
+        html: '<p>Ak majú dva lomené výrazy rovnaký menovateľ, odčítame iba čitatele: <strong><span class="frac"><span class="frac-num">5</span><span class="frac-den">x</span></span> − <span class="frac"><span class="frac-num">2</span><span class="frac-den">x</span></span> = <span class="frac"><span class="frac-num">3</span><span class="frac-den">x</span></span></strong>.</p><p>Ak sú menovatele rôzne, prevedieme oba výrazy na spoločný menovateľ presne tak, ako pri sčítaní.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -80,7 +80,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Odčítanie s rôznym menovateľom a zátvorka',
-        html: '<div class="formula">a/x − b/y = (ay − bx)/(xy)</div><div class="warning"><strong>Pozor:</strong> Ak je čitateľ odčítaného zlomku zložitejší výraz, ohraď ho zátvorkou: 5/x − (x+2)/y = [5y − x(x+2)]/(xy).</div>',
+        html: '<div class="formula"><span class="frac"><span class="frac-num">a</span><span class="frac-den">x</span></span> − <span class="frac"><span class="frac-num">b</span><span class="frac-den">y</span></span> = <span class="frac"><span class="frac-num">ay − bx</span><span class="frac-den">xy</span></span></div><div class="warning"><strong>Pozor:</strong> Ak je čitateľ odčítaného zlomku zložitejší výraz, ohraď ho zátvorkou: <span class="frac"><span class="frac-num">5</span><span class="frac-den">x</span></span> − <span class="frac"><span class="frac-num">x+2</span><span class="frac-den">y</span></span> = <span class="frac"><span class="frac-num">5y − x(x+2)</span><span class="frac-den">xy</span></span>.</div>',
         remember: 'a/x − b/y = (ay − bx)/(xy). Zložitejší čitateľ ohraď zátvorkou.',
       },
       {
@@ -88,7 +88,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="mini-label">ROVNAKÝ MENOVATEĽ</span>a/c − b/c = (a−b)/c</div><div class="formula"><span class="mini-label">RÔZNY MENOVATEĽ</span>a/x − b/y = (ay−bx)/(xy)</div><div class="warning"><strong>Pozor:</strong> Zložitejší čitateľ pri odčítaní vždy ohraď zátvorkou, aby si nezabudol zmeniť znamienko celého výrazu.</div>',
+        html: '<div class="formula"><span class="mini-label">ROVNAKÝ MENOVATEĽ</span><span class="frac"><span class="frac-num">a</span><span class="frac-den">c</span></span> − <span class="frac"><span class="frac-num">b</span><span class="frac-den">c</span></span> = <span class="frac"><span class="frac-num">a−b</span><span class="frac-den">c</span></span></div><div class="formula"><span class="mini-label">RÔZNY MENOVATEĽ</span><span class="frac"><span class="frac-num">a</span><span class="frac-den">x</span></span> − <span class="frac"><span class="frac-num">b</span><span class="frac-den">y</span></span> = <span class="frac"><span class="frac-num">ay−bx</span><span class="frac-den">xy</span></span></div><div class="warning"><strong>Pozor:</strong> Zložitejší čitateľ pri odčítaní vždy ohraď zátvorkou, aby si nezabudol zmeniť znamienko celého výrazu.</div>',
         continueLabel: 'Mám zapísané',
       },
       {

@@ -184,6 +184,14 @@ th:not(:first-child), td:not(:first-child) { text-align: center; }
 .frac-num { padding: 0 3px 1px; border-bottom: 1.5px solid currentColor; }
 .frac-den { padding: 1px 3px 0; }
 
+/* A base raised to a fractional exponent (a^(1/n)) — nests .frac inside a
+   raised, shrunk exponent slot right after the base, like a real superscript,
+   instead of a flat "a^(1/n)" that reads as a caret-and-parens expression.
+   The nested .frac's own em-based sizing would compound with this element's
+   shrink, so it's reset to 1em here — this element alone controls the scale. */
+.pow-exp { display: inline-flex; vertical-align: super; position: relative; top: -.2em; font-size: .68em; line-height: 1; margin-left: 1px; }
+.pow-exp .frac { font-size: 1em; margin: 0 1px; }
+
 /* Combination-number ("n nad k") notation: a tall pair of parentheses
    (stretched with scaleY, a plain-CSS substitute for a real large-paren
    glyph) around a two-row stack of n over k. */

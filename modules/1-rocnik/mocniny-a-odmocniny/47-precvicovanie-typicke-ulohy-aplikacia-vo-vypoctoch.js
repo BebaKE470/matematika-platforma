@@ -60,7 +60,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie pravidiel',
-        html: '<p>Doteraz sme si zaviedli:</p><p><strong>aᵐ · aⁿ = aᵐ⁺ⁿ</strong>, <strong>aᵐ : aⁿ = aᵐ⁻ⁿ</strong>, <strong>(aᵐ)ⁿ = aᵐⁿ</strong>, <strong>a⁰ = 1</strong>, <strong>a⁻ⁿ = 1/aⁿ</strong> (a ≠ 0).</p><p>Pri zložitejšom výraze postupuj krok po kroku a v každom kroku over, ktoré pravidlo použiješ.</p>',
+        html: '<p>Doteraz sme si zaviedli:</p><p><strong>aᵐ · aⁿ = aᵐ⁺ⁿ</strong>, <strong>aᵐ : aⁿ = aᵐ⁻ⁿ</strong>, <strong>(aᵐ)ⁿ = aᵐⁿ</strong>, <strong>a⁰ = 1</strong>, <strong>a⁻ⁿ = <span class="frac"><span class="frac-num">1</span><span class="frac-den">aⁿ</span></span></strong> (a ≠ 0).</p><p>Pri zložitejšom výraze postupuj krok po kroku a v každom kroku over, ktoré pravidlo použiješ.</p>',
         continueLabel: 'Pokračovať',
       },
       {

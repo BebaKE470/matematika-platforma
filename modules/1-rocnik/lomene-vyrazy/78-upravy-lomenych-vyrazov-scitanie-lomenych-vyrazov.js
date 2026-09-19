@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'OPAKUJ',
         title: 'Čo už vieme',
-        html: '<p>Na predchádzajúcej hodine sme sa naučili určiť definičný obor lomeného výrazu a krátiť ho rozkladom čitateľa aj menovateľa na súčin.</p><p>Zo základnej školy vieš sčítať číselné zlomky s rôznym menovateľom — najprv ich prevedieš na spoločný menovateľ (napríklad 1/2 + 1/3 = 3/6 + 2/6 = 5/6).</p>',
+        html: '<p>Na predchádzajúcej hodine sme sa naučili určiť definičný obor lomeného výrazu a krátiť ho rozkladom čitateľa aj menovateľa na súčin.</p><p>Zo základnej školy vieš sčítať číselné zlomky s rôznym menovateľom — najprv ich prevedieš na spoločný menovateľ (napríklad <span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span> + <span class="frac"><span class="frac-num">1</span><span class="frac-den">3</span></span> = <span class="frac"><span class="frac-num">3</span><span class="frac-den">6</span></span> + <span class="frac"><span class="frac-num">2</span><span class="frac-den">6</span></span> = <span class="frac"><span class="frac-num">5</span><span class="frac-den">6</span></span>).</p>',
       },
       {
         id: 'topic-intro',
@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Rovnaký menovateľ je najjednoduchší prípad',
-        html: '<p>Ak majú dva lomené výrazy rovnaký menovateľ, sčítame iba čitatele a menovateľ ponecháme: <strong>2/x + 3/x = 5/x</strong>.</p><p>Ak sú menovatele rôzne, musíme ich najprv previesť na spoločný menovateľ — presne tak, ako pri číselných zlomkoch.</p>',
+        html: '<p>Ak majú dva lomené výrazy rovnaký menovateľ, sčítame iba čitatele a menovateľ ponecháme: <strong><span class="frac"><span class="frac-num">2</span><span class="frac-den">x</span></span> + <span class="frac"><span class="frac-num">3</span><span class="frac-den">x</span></span> = <span class="frac"><span class="frac-num">5</span><span class="frac-den">x</span></span></strong>.</p><p>Ak sú menovatele rôzne, musíme ich najprv previesť na spoločný menovateľ — presne tak, ako pri číselných zlomkoch.</p>',
         continueLabel: 'Pokračovať',
       },
       {
@@ -81,7 +81,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Sčítanie s rôznym menovateľom',
-        html: '<p>Ak sú menovatele rôzne (napr. x a y bez spoločného činiteľa), spoločný menovateľ je ich súčin:</p><div class="formula">a/x + b/y = (ay + bx)/(xy)</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>1/x + 2/y = (y + 2x)/(xy) — čitateľa každého zlomku vynásobíme menovateľom toho druhého.</p></div>',
+        html: '<p>Ak sú menovatele rôzne (napr. x a y bez spoločného činiteľa), spoločný menovateľ je ich súčin:</p><div class="formula"><span class="frac"><span class="frac-num">a</span><span class="frac-den">x</span></span> + <span class="frac"><span class="frac-num">b</span><span class="frac-den">y</span></span> = <span class="frac"><span class="frac-num">ay + bx</span><span class="frac-den">xy</span></span></div><div class="example"><span class="mini-label">PRÍKLAD</span><p><span class="frac"><span class="frac-num">1</span><span class="frac-den">x</span></span> + <span class="frac"><span class="frac-num">2</span><span class="frac-den">y</span></span> = <span class="frac"><span class="frac-num">y + 2x</span><span class="frac-den">xy</span></span> — čitateľa každého zlomku vynásobíme menovateľom toho druhého.</p></div>',
         remember: 'a/x + b/y = (ay + bx)/(xy) — spoločný menovateľ je súčin oboch menovateľov.',
       },
       {
@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<div class="formula"><span class="mini-label">ROVNAKÝ MENOVATEĽ</span>a/c + b/c = (a+b)/c<span class="formula-note">Sčítaj iba čitatele.</span></div><div class="formula"><span class="mini-label">RÔZNY MENOVATEĽ</span>a/x + b/y = (ay+bx)/(xy)<span class="formula-note">Spoločný menovateľ je súčin oboch menovateľov.</span></div><p>Definičný obor: hodnoty, pre ktoré je niektorý z menovateľov nulový, sú vylúčené.</p>',
+        html: '<div class="formula"><span class="mini-label">ROVNAKÝ MENOVATEĽ</span><span class="frac"><span class="frac-num">a</span><span class="frac-den">c</span></span> + <span class="frac"><span class="frac-num">b</span><span class="frac-den">c</span></span> = <span class="frac"><span class="frac-num">a+b</span><span class="frac-den">c</span></span><span class="formula-note">Sčítaj iba čitatele.</span></div><div class="formula"><span class="mini-label">RÔZNY MENOVATEĽ</span><span class="frac"><span class="frac-num">a</span><span class="frac-den">x</span></span> + <span class="frac"><span class="frac-num">b</span><span class="frac-den">y</span></span> = <span class="frac"><span class="frac-num">ay+bx</span><span class="frac-den">xy</span></span><span class="formula-note">Spoločný menovateľ je súčin oboch menovateľov.</span></div><p>Definičný obor: hodnoty, pre ktoré je niektorý z menovateľov nulový, sú vylúčené.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

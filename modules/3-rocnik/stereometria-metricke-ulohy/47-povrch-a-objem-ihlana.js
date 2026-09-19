@@ -78,7 +78,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Ihlan má jednu podstavu a trojuholníkové bočné steny.</p><div class=\"formula\">V = (1/3)Sp·v<span class=\"formula-note\">S = Sp+Q</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
+        "html": "<p>Ihlan má jednu podstavu a trojuholníkové bočné steny.</p><div class=\"formula\">V = <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">3</span></span>Sp·v<span class=\"formula-note\">S = Sp+Q</span></div><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
       },
       {
         "id": "notebook",

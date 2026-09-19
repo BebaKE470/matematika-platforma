@@ -81,7 +81,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Vzorec Bernoulliho schémy',
-        html: '<p><strong>Bernoulliho pokus</strong> má dva výsledky: úspech (pravdepodobnosť p) a neúspech (pravdepodobnosť q=1−p). Pri n nezávislých opakovaniach je pravdepodobnosť <span class="hl">presne</span> k úspechov:</p><div class="formula">P(k) = (n nad k) · p^k · q^(n−k)</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Hod mincou 5-krát (p=q=1/2), presne 3 líca:</p><p>P(3)=(5 nad 3)·(1/2)³·(1/2)²=10·(1/8)·(1/4)=10/32=5/16.</p></div>',
+        html: '<p><strong>Bernoulliho pokus</strong> má dva výsledky: úspech (pravdepodobnosť p) a neúspech (pravdepodobnosť q=1−p). Pri n nezávislých opakovaniach je pravdepodobnosť <span class="hl">presne</span> k úspechov:</p><div class="formula">P(k) = <span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>n</span><span>k</span></span><span class="combo-paren">)</span></span> · p^k · q^(n−k)</div><div class="example"><span class="mini-label">PRÍKLAD</span><p>Hod mincou 5-krát (p=q=1/2), presne 3 líca:</p><p>P(3)=<span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>5</span><span>3</span></span><span class="combo-paren">)</span></span>·(<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>)³·(<span class="frac"><span class="frac-num">1</span><span class="frac-den">2</span></span>)²=10·(<span class="frac"><span class="frac-num">1</span><span class="frac-den">8</span></span>)·(<span class="frac"><span class="frac-num">1</span><span class="frac-den">4</span></span>)=<span class="frac"><span class="frac-num">10</span><span class="frac-den">32</span></span>=<span class="frac"><span class="frac-num">5</span><span class="frac-den">16</span></span>.</p></div>',
         remember: 'P(k)=(n nad k)·p^k·q^(n−k), kde n=počet opakovaní, k=počet úspechov, q=1−p.',
       },
       {
@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         type: 'notebook',
         phase: 'ZOŠIT',
         title: 'Toto si zapíš do zošita',
-        html: '<p><strong>Bernoulliho schéma:</strong> pri n nezávislých opakovaniach pokusu s dvomi výsledkami (úspech s pravdepodobnosťou p, neúspech s q=1−p) je pravdepodobnosť presne k úspechov P(k)=(n nad k)·p^k·q^(n−k). Kombinačné číslo (n nad k) vyjadruje počet rôznych poradí, v ktorých môže nastať presne k úspechov.</p>',
+        html: '<p><strong>Bernoulliho schéma:</strong> pri n nezávislých opakovaniach pokusu s dvomi výsledkami (úspech s pravdepodobnosťou p, neúspech s q=1−p) je pravdepodobnosť presne k úspechov P(k)=<span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>n</span><span>k</span></span><span class="combo-paren">)</span></span>·p^k·q^(n−k). Kombinačné číslo <span class="combo"><span class="combo-paren">(</span><span class="combo-stack"><span>n</span><span>k</span></span><span class="combo-paren">)</span></span> vyjadruje počet rôznych poradí, v ktorých môže nastať presne k úspechov.</p>',
         continueLabel: 'Mám zapísané',
       },
       {

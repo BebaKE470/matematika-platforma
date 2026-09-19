@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Rovnice – viac stratégií",
-        "html": "<p>Porovnávame rozklad, substitúciu a použitie identít iba tam, kde sú už zavedené.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD — substitúcia</span><p>Rieš rovnicu 2cos²x + cos x − 1 = 0.</p><p>Substitúcia t = cos x dáva kvadratickú rovnicu 2t² + t − 1 = 0, ktorej riešenia sú t = 1/2 a t = −1.</p><p>Späť k pôvodnej premennej: cos x = 1/2 ⇒ x = ±π/3 + 2kπ; cos x = −1 ⇒ x = π + 2kπ.</p></div>",
+        "html": "<p>Porovnávame rozklad, substitúciu a použitie identít iba tam, kde sú už zavedené.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD — substitúcia</span><p>Rieš rovnicu 2cos²x + cos x − 1 = 0.</p><p>Substitúcia t = cos x dáva kvadratickú rovnicu 2t² + t − 1 = 0, ktorej riešenia sú t = <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">2</span></span> a t = −1.</p><p>Späť k pôvodnej premennej: cos x = <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">2</span></span> ⇒ x = ±π/3 + 2kπ; cos x = −1 ⇒ x = π + 2kπ.</p></div>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {

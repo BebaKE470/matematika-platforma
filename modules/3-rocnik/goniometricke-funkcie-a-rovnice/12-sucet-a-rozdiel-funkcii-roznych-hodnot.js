@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Súčet a rozdiel hodnôt",
-        "html": "<p>Vzťahy pre súčet/rozdiel goniometrických funkcií používame až po zvládnutí súčtových vzorcov.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>sin 90° + sin 30° = 2 sin((90°+30°)/2) cos((90°−30°)/2) = 2 sin 60° cos 30°</p><p>= 2 · (√3/2) · (√3/2) = <strong>3/2</strong></p><p>Kontrola: sin 90° + sin 30° = 1 + 1/2 = 3/2 ✓</p></div>",
+        "html": "<p>Vzťahy pre súčet/rozdiel goniometrických funkcií používame až po zvládnutí súčtových vzorcov.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>sin 90° + sin 30° = 2 sin(<span class=\"frac\"><span class=\"frac-num\">90°+30°</span><span class=\"frac-den\">2</span></span>) cos(<span class=\"frac\"><span class=\"frac-num\">90°−30°</span><span class=\"frac-den\">2</span></span>) = 2 sin 60° cos 30°</p><p>= 2 · <span class=\"frac\"><span class=\"frac-num\">√3</span><span class=\"frac-den\">2</span></span> · <span class=\"frac\"><span class=\"frac-num\">√3</span><span class=\"frac-den\">2</span></span> = <strong><span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">2</span></span></strong></p><p>Kontrola: sin 90° + sin 30° = 1 + <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">2</span></span> = <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">2</span></span> ✓</p></div>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {
@@ -104,7 +104,7 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ZOŠIT",
         "title": "Súčet a rozdiel funkcií rôznych hodnôt",
-        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Súčet a rozdiel sínusov a kosínusov</strong></p><div class=\"formula\">sin α + sin β = 2 sin((α+β)/2) cos((α−β)/2)<span class=\"formula-note\">sin α − sin β = 2 cos((α+β)/2) sin((α−β)/2)</span></div><div class=\"formula\">cos α + cos β = 2 cos((α+β)/2) cos((α−β)/2)<span class=\"formula-note\">cos α − cos β = −2 sin((α+β)/2) sin((α−β)/2)</span></div>",
+        "html": "<p><strong>TOTO SI ZAPÍŠ DO ZOŠITA:</strong></p><p><strong>Súčet a rozdiel sínusov a kosínusov</strong></p><div class=\"formula\">sin α + sin β = 2 sin(<span class=\"frac\"><span class=\"frac-num\">α+β</span><span class=\"frac-den\">2</span></span>) cos(<span class=\"frac\"><span class=\"frac-num\">α−β</span><span class=\"frac-den\">2</span></span>)<span class=\"formula-note\">sin α − sin β = 2 cos(<span class=\"frac\"><span class=\"frac-num\">α+β</span><span class=\"frac-den\">2</span></span>) sin(<span class=\"frac\"><span class=\"frac-num\">α−β</span><span class=\"frac-den\">2</span></span>)</span></div><div class=\"formula\">cos α + cos β = 2 cos(<span class=\"frac\"><span class=\"frac-num\">α+β</span><span class=\"frac-den\">2</span></span>) cos(<span class=\"frac\"><span class=\"frac-num\">α−β</span><span class=\"frac-den\">2</span></span>)<span class=\"formula-note\">cos α − cos β = −2 sin(<span class=\"frac\"><span class=\"frac-num\">α+β</span><span class=\"frac-den\">2</span></span>) sin(<span class=\"frac\"><span class=\"frac-num\">α−β</span><span class=\"frac-den\">2</span></span>)</span></div>",
         "model": "Zápis do zošita musí byť použiteľný aj o týždeň: názov, vzťah, podmienky, krátky vzorový príklad."
       },
       {

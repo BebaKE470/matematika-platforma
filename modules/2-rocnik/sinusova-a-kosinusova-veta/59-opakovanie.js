@@ -58,7 +58,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Zhrnutie celého celku',
-        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Sínusová veta</div><p class="term-rule">a/sinα = b/sinβ = c/sinγ (strana a protiľahlý uhol).</p></div><div class="term-item no-symbol"><div class="term-name">Kosínusová veta</div><p class="term-rule">a²=b²+c²−2bc·cosα (dve strany a uhol medzi nimi, alebo tri strany).</p></div></div>',
+        html: '<div class="term-list"><div class="term-item no-symbol"><div class="term-name">Sínusová veta</div><p class="term-rule"><span class="frac"><span class="frac-num">a</span><span class="frac-den">sinα</span></span> = <span class="frac"><span class="frac-num">b</span><span class="frac-den">sinβ</span></span> = <span class="frac"><span class="frac-num">c</span><span class="frac-den">sinγ</span></span> (strana a protiľahlý uhol).</p></div><div class="term-item no-symbol"><div class="term-name">Kosínusová veta</div><p class="term-rule">a²=b²+c²−2bc·cosα (dve strany a uhol medzi nimi, alebo tri strany).</p></div></div>',
         continueLabel: 'Pokračovať',
       },
       {

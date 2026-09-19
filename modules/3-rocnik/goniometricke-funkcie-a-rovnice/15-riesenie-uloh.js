@@ -89,7 +89,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ KROK",
         "title": "Prenos do úloh",
-        "html": "<p>Vyberáme vhodný vzťah podľa cieľa, nie podľa toho, ktorý vzorec si práve pamätáme.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Rieš rovnicu 2sin x − 1 = 0 na intervale ⟨0; 2π⟩.</p><p>2sin x = 1 ⇒ sin x = 1/2</p><p>Základné riešenia na kružnici: x = π/6 a x = 5π/6 — obe ležia v zadanom intervale.</p><p>Riešenie: <strong>x = π/6 alebo x = 5π/6</strong>.</p></div>",
+        "html": "<p>Vyberáme vhodný vzťah podľa cieľa, nie podľa toho, ktorý vzorec si práve pamätáme.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Rieš rovnicu 2sin x − 1 = 0 na intervale ⟨0; 2π⟩.</p><p>2sin x = 1 ⇒ sin x = <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">2</span></span></p><p>Základné riešenia na kružnici: x = π/6 a x = 5π/6 — obe ležia v zadanom intervale.</p><p>Riešenie: <strong>x = π/6 alebo x = 5π/6</strong>.</p></div>",
         "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
       },
       {

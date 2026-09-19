@@ -82,7 +82,7 @@ MathPlatform.registerModule({
         type: 'explain',
         phase: 'NOVÝ POJEM / PRAVIDLO',
         title: 'Definícia sínusu a kosínusu',
-        html: '<div class="term-list"><div class="term-item"><span class="term-symbol">sin</span><div><div class="term-name">sin α</div><p class="term-rule">protiľahlá odvesna / prepona = a/c</p></div></div><div class="term-item"><span class="term-symbol">cos</span><div><div class="term-name">cos α</div><p class="term-rule">priľahlá odvesna / prepona = b/c</p></div></div></div><p>Tento pomer závisí iba od veľkosti uhla α, nie od veľkosti trojuholníka — všetky pravouhlé trojuholníky s rovnakým uhlom α sú si navzájom podobné, preto majú rovnaký pomer strán.</p>',
+        html: '<div class="term-list"><div class="term-item"><span class="term-symbol">sin</span><div><div class="term-name">sin α</div><p class="term-rule">protiľahlá odvesna / prepona = <span class="frac"><span class="frac-num">a</span><span class="frac-den">c</span></span></p></div></div><div class="term-item"><span class="term-symbol">cos</span><div><div class="term-name">cos α</div><p class="term-rule">priľahlá odvesna / prepona = <span class="frac"><span class="frac-num">b</span><span class="frac-den">c</span></span></p></div></div></div><p>Tento pomer závisí iba od veľkosti uhla α, nie od veľkosti trojuholníka — všetky pravouhlé trojuholníky s rovnakým uhlom α sú si navzájom podobné, preto majú rovnaký pomer strán.</p>',
         remember: 'sin α = protiľahlá/prepona. cos α = priľahlá/prepona.',
       },
       {

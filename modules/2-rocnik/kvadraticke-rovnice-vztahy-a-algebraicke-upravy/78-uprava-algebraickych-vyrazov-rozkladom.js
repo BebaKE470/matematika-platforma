@@ -73,7 +73,7 @@ MathPlatform.registerModule({
         type: 'info',
         phase: 'POCHOP',
         title: 'Krátenie po rozklade',
-        html: '<p>Výraz (x²−5x+6)/(x−2) vyzerá zložito. Ale x²−5x+6 = (x−2)(x−3), takže výraz sa dá napísať ako (x−2)(x−3)/(x−2) — a (x−2) sa dá skrátiť! Zostane x−3 (pre x≠2).</p>',
+        html: '<p>Výraz <span class="frac"><span class="frac-num">x²−5x+6</span><span class="frac-den">x−2</span></span> vyzerá zložito. Ale x²−5x+6 = (x−2)(x−3), takže výraz sa dá napísať ako <span class="frac"><span class="frac-num">(x−2)(x−3)</span><span class="frac-den">x−2</span></span> — a (x−2) sa dá skrátiť! Zostane x−3 (pre x≠2).</p>',
         continueLabel: 'Pokračovať',
       },
       {
