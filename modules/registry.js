@@ -929,8 +929,8 @@
     id: "2-u02-h008", year: 2, unit: "Funkcie – základné pojmy a vlastnosti funkcií", unitOrder: 2,
     topic: "Určovanie vlastností funkcie z grafu", lesson: "Hodina 8", lessonOrder: 8,
     time: "15–18 min", status: 'ready',
-    type: "Analýza grafu → argumentácia → maturitný formát",
-    skills: ["D(f)", "H(f)", "vlastnosti z grafu", "argumentácia"],
+    type: "Analýza grafu → galéria kontrastných grafov → argumentácia → maturitný formát",
+    skills: ["D(f)", "H(f)", "vlastnosti z grafu", "párnosť", "argumentácia"],
     file: "modules/2-rocnik/funkcie-zakladne-pojmy-a-vlastnosti/08-urcovanie-vlastnosti-funkcie-z-grafu.js"
   },
   {

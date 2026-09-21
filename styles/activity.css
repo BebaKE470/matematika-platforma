@@ -382,6 +382,15 @@ select.answer-good, select.answer-bad { opacity: 1; -webkit-text-fill-color: var
 .plot-curve { fill: none; stroke: #173d35; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
 .plot-curve-label { font-size: 14px; font-weight: 750; fill: #173d35; }
 .plot-asymptote { stroke: #9b6b2f; stroke-width: 2; stroke-dasharray: 7 7; }
+.plot-point-open { fill: #fbfcfa; stroke: #173d35; stroke-width: 2.5; }
+
+/* Small multiples — several compact graphs side by side (e.g. "compare six
+   graphs" activities), reusing the .plot-* classes above at a smaller size
+   instead of the full-width .coordinate-plot. */
+.graph-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 18px 0; }
+.graph-gallery-item { border: 1px solid var(--line); border-radius: 14px; padding: 10px 10px 4px; background: #fbfcfa; }
+.graph-gallery-label { font-weight: 850; font-size: 13px; margin-bottom: 2px; color: var(--ink); }
+.graph-gallery-plot { display: block; width: 100%; height: auto; }
 
 /* --- Hand-authored diagrams / truth tables inside activity `html` fields --- */
 

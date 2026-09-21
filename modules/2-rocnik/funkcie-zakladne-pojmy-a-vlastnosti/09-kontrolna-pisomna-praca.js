@@ -25,7 +25,8 @@ MathPlatform.registerModule({
     ],
     "enrichment": [
       "Aktuálny tematický plán určuje obsah a poradie tejto hodiny; návrh maturitného štandardu sa používa iba ako metodické obohatenie.",
-      "Digitálna časť slúži iba na orientáciu v pojmoch; výkon sa overuje samostatnou prácou, zápisom a argumentáciou."
+      "Digitálna časť slúži iba na orientáciu v pojmoch; výkon sa overuje samostatnou prácou, zápisom a argumentáciou.",
+      "Podklad na tlač pre papierovú časť: zdrojove-materialy/grafy.png (15 grafov, 3×5). Vytlačiť pred hodinou, jeden list na žiaka."
     ],
     "flow": [
       "3–5 min digitálne naladenie",
@@ -95,8 +96,8 @@ MathPlatform.registerModule({
         "type": "notebook",
         "phase": "ODLOŽ ZARIADENIE",
         "title": "Kontrolná písomná práca",
-        "html": "<p>Teraz rieš úlohy na papieri podľa zadania učiteľa. Pri grafoch zapisuj D(f), H(f), intervaly monotónnosti, extrémy, symetriu, prostosť a ohraničenosť iba tam, kde sú z grafu jednoznačne určiteľné.</p>",
-        "model": "Kontrola pred odovzdaním: odlíšil/a som x-ovú súradnicu bodu extrému od hodnoty maxima/minima? Zdôvodnil/a som tvrdenia, kde to zadanie vyžaduje?"
+        "html": "<p>Dostaneš od učiteľa vytlačený list s pätnástimi grafmi. Ku každému grafu samostatne na papieri zapíš: D(f), H(f), intervaly monotónnosti, extrémy, párnosť/nepárnosť, prostosť a ohraničenosť — vždy iba to, čo je z daného grafu jednoznačne určiteľné.</p>",
+        "model": "Kontrola pred odovzdaním: má každý z pätnástich grafov vyplnené všetky vlastnosti? Odlíšil/a som x-ovú súradnicu bodu extrému od hodnoty maxima/minima? Zdôvodnil/a som tvrdenia, kde to zadanie vyžaduje?"
       },
       {
         "id": "reflection",
