@@ -30,6 +30,15 @@
   const LEVEL_LABELS = { zaklad: 'ZÁKLAD', rozsirenie: 'ROZŠÍRENIE', bonus: 'BONUS' };
   const LEVEL_ORDER = ['zaklad', 'rozsirenie', 'bonus'];
 
+  // Activity types that are explanation/theory rather than something a
+  // student answers or self-assesses — what the "Iba teória" toggle below
+  // keeps. `coordinatePlot` is always illustrative here (a "Pokračovať"
+  // button, never scored — see MathScore.coordinatePlot's max: 0 in
+  // core/scoring.js), so it counts as theory, not a task. `notebook` is
+  // deliberately excluded: per the authoring rules it's reserved for an
+  // independent pen-and-paper task, not for theory to copy down.
+  const THEORY_TYPES = new Set(['intro', 'info', 'explain', 'coordinatePlot']);
+
   function taskItemsHtml(items) {
     const row = it => `<label class="print-check-row"><span class="print-checkbox" aria-hidden="true"></span><span>${it.html || esc(it.text)}</span></label>`;
     const usesLevels = items.some(it => LEVEL_LABELS[it.level]);
@@ -140,6 +149,13 @@
     },
   };
 
+  function renderBody(acts, ctx) {
+    return acts.map(a => {
+      const fn = PRINT[a.type];
+      return fn ? fn(a, ctx) : '';
+    }).join('');
+  }
+
   async function render(id) {
     const mod = await window.MathPlatform.loadModule(id);
     const meta = window.MathPlatform.indexEntry(id);
@@ -147,18 +163,24 @@
 
     const ctx = { unit: meta.unit || '', topic: meta.topic || mod.student.title };
     const acts = mod.student.activities || [];
-    const body = acts.map(a => {
-      const fn = PRINT[a.type];
-      return fn ? fn(a, ctx) : '';
-    }).join('');
+    const theoryActs = acts.filter(a => THEORY_TYPES.has(a.type));
 
     app.innerHTML = `
       <div class="print-toolbar no-print">
         <button class="ghost" data-go="module/${id}">← Späť na modul</button>
+        <label class="print-theory-toggle">
+          <input type="checkbox" id="theoryOnly">
+          Iba teória (bez úloh a sebahodnotenia)
+        </label>
         <button class="btn" id="printBtn">Vytlačiť / Uložiť ako PDF</button>
       </div>
-      <article class="print-sheet">${body}</article>
+      <article class="print-sheet">${renderBody(acts, ctx)}</article>
     `;
+    const sheet = document.querySelector('.print-sheet');
+    const toggle = document.getElementById('theoryOnly');
+    toggle.onchange = () => {
+      sheet.innerHTML = renderBody(toggle.checked ? theoryActs : acts, ctx);
+    };
     const btn = document.getElementById('printBtn');
     if (btn) btn.onclick = () => window.print();
   }
