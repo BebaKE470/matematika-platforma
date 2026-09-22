@@ -174,6 +174,7 @@
         </label>
         <button class="btn" id="printBtn">Vytlačiť / Uložiť ako PDF</button>
       </div>
+      <p class="print-hint no-print">Tip na úsporu papiera: v dialógu tlače pod „Viac nastavení“ zrušte začiarknutie „Hlavičky a päty“ — inak sa na každú stranu pridá URL adresa, dátum a číslo strany navyše.</p>
       <article class="print-sheet">${renderBody(acts, ctx)}</article>
     `;
     const sheet = document.querySelector('.print-sheet');
