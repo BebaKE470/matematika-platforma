@@ -119,6 +119,14 @@
     file: 'modules/1-rocnik/vyrokova-formula/14-opakovanie.js'
   },
   {
+    id: "1-u01-h014b", year: 1, unit: 'Výroková formula', unitOrder: 1,
+    topic: "Príprava na kontrolnú prácu (pracovný list)", lesson: "Pracovný list pred písomkou", lessonOrder: 14.5,
+    time: "20–25 min", status: 'ready',
+    type: "Priraďovanie pojmov → výrok/nevýrok → negácia → pravdivostné tabuľky",
+    skills: ["základné pojmy výrokovej logiky", "výrok a jeho pravdivostná hodnota", "negácia výroku", "pravdivostné tabuľky"],
+    file: 'modules/1-rocnik/vyrokova-formula/14b-priprava-na-kontrolnu-pracu.js'
+  },
+  {
     id: "1-u01-h015", year: 1, unit: 'Výroková formula', unitOrder: 1,
     topic: "Kontrolná písomná práca", lesson: "Hodina 15", lessonOrder: 15,
     time: "4–6 min digitálne + písomka", status: 'ready',
