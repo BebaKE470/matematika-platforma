@@ -165,9 +165,9 @@
         <div class="eyebrow">ŽIVÁ HODINA</div>
         <h1>Pripojiť sa k učiteľovi</h1>
         <p class="muted">${knownId ? `Modul: ${esc(topic)}` : 'Zadaj kód hodiny — po pripojení sa modul aj výber aktivít nastavia presne podľa učiteľa/učiteľky.'}</p>
-        <div class="field"><label>Nick alebo kód žiaka</label><input id="nick" placeholder="napr. 1C-07" maxlength="20" autocomplete="off"></div>
+        <div class="field"><label>Meno a priezvisko</label><input id="nick" placeholder="napr. Jana Nováková" maxlength="40" autocomplete="name"></div>
         ${qrCode
-          ? `<div class="notice good"><strong>QR kód hodiny načítaný.</strong> Stačí zadať nick a pripojiť sa.${presetReflect ? ' Táto hodina je iba na záverečnú sebareflexiu.' : presetActIndices.length ? ' Učiteľ/učiteľka vybral/a pre túto hodinu iba časť aktivít.' : ''}</div><input id="code" type="hidden" value="${esc(qrCode)}">`
+          ? `<div class="notice good"><strong>QR kód hodiny načítaný.</strong> Stačí zadať meno a priezvisko a pripojiť sa.${presetReflect ? ' Táto hodina je iba na záverečnú sebareflexiu.' : presetActIndices.length ? ' Učiteľ/učiteľka vybral/a pre túto hodinu iba časť aktivít.' : ''}</div><input id="code" type="hidden" value="${esc(qrCode)}">`
           : `<div class="field"><label>Kód hodiny</label><input id="code" class="uppercase-input" placeholder="napr. K7M4Q2" maxlength="8"></div>`}
         <div id="joinInfo" class="notice">Výsledky sa používajú iba počas prebiehajúcej hodiny. Platforma nevytvára dlhodobý profil žiaka.</div>
         <button class="btn" id="joinBtn">Pripojiť</button>
@@ -176,10 +176,14 @@
     $('#nick') && $('#nick').focus();
 
     $('#joinBtn').onclick = async () => {
-      const nick = $('#nick').value.trim();
+      const nick = $('#nick').value.trim().replace(/\s+/g, ' ');
       const code = $('#code').value.trim().toUpperCase();
-      if (!nick || !/^[A-Z2-9]{6}$/.test(code)) {
-        $('#joinInfo').textContent = 'Vyplň nick aj kód hodiny (6 znakov).';
+      if (nick.split(' ').length < 2) {
+        $('#joinInfo').textContent = 'Vyplň meno aj priezvisko.';
+        return;
+      }
+      if (!/^[A-Z2-9]{6}$/.test(code)) {
+        $('#joinInfo').textContent = 'Vyplň kód hodiny (6 znakov).';
         return;
       }
       $('#joinBtn').disabled = true;

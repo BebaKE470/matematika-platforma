@@ -251,7 +251,7 @@
       ['Známkovanie', grading.enabled ? 'zapnuté' : 'vypnuté'],
       ...(grading.enabled ? [['Stupnica', MathScore.scaleText(grading.thresholds)]] : []),
       [],
-      ['Žiak / nick', 'Stav', 'Body (XP)', 'Maximum', 'Percentá', ...(grading.enabled ? ['Známka'] : []), 'Postup',
+      ['Žiak (meno a priezvisko)', 'Stav', 'Body (XP)', 'Maximum', 'Percentá', ...(grading.enabled ? ['Známka'] : []), 'Postup',
         ...skillNames.map(k => `Zručnosť: ${k}`),
         ...selfKeys.map(k => `Sebahodnotenie: ${k}`),
         ...answerIds.map(id => { const a = activityMap.get(id); return `Úloha ${a ? a.order : ''}: ${a ? a.title : id}`; }),
@@ -327,10 +327,10 @@
         <div class="live-setup-row">
           <div><p><strong>Naskenuj QR kód:</strong></p><div id="joinQr" class="qr-box"></div></div>
           <div>
-            <p class="muted">Po naskenovaní sa otvorí správny modul aj táto hodina. Žiak zadá už iba nick.</p>
+            <p class="muted">Po naskenovaní sa otvorí správny modul aj táto hodina. Žiak zadá už iba meno a priezvisko.</p>
             <p>Kód pre ručné pripojenie:</p>
             <div class="bigcode">${esc(code)}</div>
-            <p class="muted">Záloha: žiak môže otvoriť platformu → „Máš kód od učiteľa?“ (alebo v module „Mám kód hodiny“) → zadať nick a tento kód. Po pripojení si aplikácia sama zistí správny modul aj výber aktivít nastavený tu na tejto obrazovke.</p>
+            <p class="muted">Záloha: žiak môže otvoriť platformu → „Máš kód od učiteľa?“ (alebo v module „Mám kód hodiny“) → zadať meno a priezvisko a tento kód. Po pripojení si aplikácia sama zistí správny modul aj výber aktivít nastavený tu na tejto obrazovke.</p>
           </div>
         </div>
         <div class="grading-toggle-row">
