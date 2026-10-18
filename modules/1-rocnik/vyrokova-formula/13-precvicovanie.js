@@ -216,5 +216,49 @@ MathPlatform.registerModule({
         "prompt": "Pri každej položke vyber, ako dobre jej teraz rozumieš. Toto nie je známka; je to spätná väzba pre tvoje ďalšie učenie."
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1", "level": "zaklad", "space": 4,
+        "text": "Rozhodni, ktoré z viet sú výroky. Pri každom výroku urč jeho pravdivostnú hodnotu.\na) 12 je deliteľné 5.\nb) Aké je dnes počasie?\nc) Číslo 2 je prvočíslo.\nd) x + 3 = 7",
+        "answer": "a) výrok, nepravdivý<br>b) nie je výrok (je to otázka)<br>c) výrok, pravdivý<br>d) nie je výrok – kým nevieme, čo je x, nemá pravdivostnú hodnotu"
+      },
+      {
+        "id": "w2", "level": "zaklad", "space": 3,
+        "text": "Utvor negáciu výrokov:\na) Číslo 15 je párne.\nb) Číslo 7 je menšie ako 5.\nc) x ≥ 2",
+        "answer": "a) Číslo 15 nie je párne.<br>b) Číslo 7 nie je menšie ako 5 (7 ≥ 5).<br>c) x &lt; 2"
+      },
+      {
+        "id": "w3", "level": "zaklad", "space": 4,
+        "text": "Nech A = 1 a B = 0. Urč hodnotu výrazov:\na) A ∧ B\nb) A ∨ B\nc) A ⇒ B\nd) ¬A ⇔ B",
+        "answer": "a) 0<br>b) 1<br>c) 0<br>d) ¬A = 0, B = 0, teda 0 ⇔ 0 = 1"
+      },
+      {
+        "id": "w4", "level": "rozsirenie", "space": 5,
+        "text": "Utvor negáciu a rozhodni, či je negácia pravdivá:\na) Číslo 14 je deliteľné 2 a zároveň je deliteľné 3.\nb) x < 1 alebo x > 4\nc) Každý žiak triedy má mobil.",
+        "answer": "a) Číslo 14 nie je deliteľné 2 alebo nie je deliteľné 3. Negácia je pravdivá (14 nie je deliteľné 3).<br>b) x ≥ 1 a zároveň x ≤ 4, teda 1 ≤ x ≤ 4.<br>c) Existuje žiak triedy, ktorý nemá mobil."
+      },
+      {
+        "id": "w5", "level": "rozsirenie", "space": 5,
+        "text": "Vyvráť protipríkladom:\na) Každé prirodzené číslo deliteľné 3 je nepárne.\nb) Pre každé reálne číslo x platí x² > x.\nc) Súčet dvoch prvočísel je vždy nepárne číslo.",
+        "answer": "a) napr. 6 (je deliteľné 3 a je párne)<br>b) napr. x = 0 (0² = 0, a 0 &gt; 0 neplatí); vyhovuje aj x = 1<br>c) napr. 3 + 5 = 8 (párne číslo)"
+      },
+      {
+        "id": "w6", "level": "rozsirenie", "space": 5,
+        "text": "Daná je implikácia: „Ak je číslo deliteľné 6, potom je deliteľné 3.“ Napíš jej obrátenie a obmenu a pri všetkých troch implikáciách rozhodni, či sú pravdivé.",
+        "answer": "Pôvodná implikácia: pravdivá.<br>Obrátenie: „Ak je číslo deliteľné 3, potom je deliteľné 6.“ – nepravdivá (protipríklad 3).<br>Obmena: „Ak číslo nie je deliteľné 3, potom nie je deliteľné 6.“ – pravdivá (rovnako ako pôvodná implikácia)."
+      },
+      {
+        "id": "w7", "level": "bonus", "space": 4,
+        "text": "Rozhodni, ktorý z výrokov je tautológia, kontradikcia a kontingencia (A, B sú ľubovoľné výroky):\na) A ∨ ¬A\nb) A ∧ ¬A\nc) A ⇒ B",
+        "answer": "a) tautológia (vždy pravdivý)<br>b) kontradikcia (vždy nepravdivý)<br>c) kontingencia – pre A = 1, B = 0 je nepravdivý, pre A = 0 je pravdivý"
+      },
+      {
+        "id": "w8", "level": "bonus", "space": 6,
+        "text": "Nepriamym dôkazom (cez obmenu) dokáž: Ak je n² nepárne, potom n je nepárne (n je prirodzené číslo).",
+        "answer": "Obmena: Ak n je párne, potom n² je párne. Nech n = 2k, potom n² = 4k² = 2 · 2k², čo je párne číslo. Obmena platí, preto platí aj pôvodná implikácia."
+      }
+    ]
   }
 });

@@ -62,6 +62,11 @@
       <p class="muted">Metodické karty sú usporiadané rovnakým spôsobom ako učivo: ročník → tematický celok → téma.</p>
       ${MathUI.yearGrid('teacher-year')}
       <div class="card spaced">
+        <h2>Pracovné listy</h2>
+        <p>Poskladaj teóriu a úlohy z viacerých tém do jedného listu na tlač alebo PDF — aj s ďalšími úlohami a kľúčom riešení.</p>
+        <button class="btn" data-go="worksheets">Otvoriť pracovné listy</button>
+      </div>
+      <div class="card spaced">
         <h2>Živá hodina</h2>
         <p>Živú hodinu spustíš pri konkrétnej hotovej téme v učiteľskom katalógu.</p>
       </div>

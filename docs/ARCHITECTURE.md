@@ -20,6 +20,7 @@ core/live.js                  window.MathLive
 core/renderers.js             window.ActivityRenderers
 core/print.js                 window.MathPrint
 core/ui.js                    window.MathUI
+core/worksheet.js            window.MathWorksheet
 core/session.js               window.MathSession
 core/views-student.js         window.MathViews.student
 core/views-teacher.js         window.MathViews.teacher
@@ -126,6 +127,23 @@ what `moduleMaxPoints()`/the result screen use for the denominator — so a
 renderer and the result screen can never disagree about how many points
 something was worth. `tools/audit.mjs` keeps a small duplicate of the points
 table and fails if it drifts from `core/scoring.js`.
+
+## Worksheet generator
+
+Teacher-gated routes `#worksheets` (saved sheets), `#worksheet/<id>` (editor)
+and `#worksheet-add/<moduleId>` (the "Na pracovný list" button in the teacher
+catalog: appends the module to the last-opened sheet, then redirects to its
+editor) are served by `core/worksheet.js`. A sheet is {name, header, showKey,
+keyOnly, sections[]}, a section either a module (theory / module tasks /
+extra tasks / reflection toggles) or teacher-typed custom tasks. Sheets live
+only in the teacher's `localStorage` (`mathWorksheetsV1`) with JSON
+export/import; every read goes through `normalizeSheet()`. The sheet itself is
+rendered by `core/print.js` (`renderActivities`, `renderExtraTasks`,
+`renderAnswerKey`): one shared `ctx.num` counter numbers every task and
+pushes its solution onto `ctx.key` in the same call, so the key always matches
+the numbers, and student pages never contain a solution. A module's optional
+`worksheet.tasks` (see `docs/AUTHORING.md`) is the paper-only task reserve;
+it is not used by the player or live lessons.
 
 ## Live lesson protocol
 

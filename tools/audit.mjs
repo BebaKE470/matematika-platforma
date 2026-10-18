@@ -267,6 +267,25 @@ for (const [id, mod] of modulesByEntry) {
     }
   });
 
+  // Optional paper-only extra tasks (docs/AUTHORING.md, 'worksheet.tasks').
+  if (mod.worksheet !== undefined) {
+    const wt = mod.worksheet && mod.worksheet.tasks;
+    if (!Array.isArray(wt)) fail('content', `${label}: worksheet.tasks musí byť pole`);
+    else {
+      const seenW = new Set();
+      wt.forEach((t, j) => {
+        const w = `${label} worksheet.tasks[${j}]`;
+        if (!t || typeof t !== 'object') { fail('content', `${w}: nie je objekt`); return; }
+        if (!t.id || seenW.has(t.id)) fail('content', `${w}: chýba alebo duplicitné id`);
+        seenW.add(t.id);
+        if (!t.text && !t.html) fail('content', `${w}: bez text alebo html`);
+        if (t.level && !KNOWN_TASK_LEVELS.has(t.level)) fail('content', `${w}: level='${t.level}' nie je zaklad/rozsirenie/bonus`);
+        if (t.space !== undefined && !(Number.isInteger(t.space) && t.space >= 0)) fail('content', `${w}: space musí byť nezáporné celé číslo`);
+        if (!t.answer) warn('content', `${w}: bez answer (v kľúči riešení bude chýbať)`);
+      });
+    }
+  }
+
   if (entry.status === 'ready' && !hasReflection) warn('content', `${label}: ready modul bez reflection na konci`);
   if (choiceAnswerIdx.length >= 3 && choiceAnswerIdx.every(x => x === choiceAnswerIdx[0])) {
     allSameIndexModules.push(`${id}: všetkých ${choiceAnswerIdx.length} choice má answer=${choiceAnswerIdx[0]}`);

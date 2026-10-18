@@ -89,3 +89,20 @@
     print-color-adjust: exact;
   }
 }
+
+/* --- Worksheet generator (core/worksheet.js) ------------------------------ */
+.print-sheet-title { margin: 0 0 14px; }
+.print-name-line { display: flex; align-items: baseline; gap: 8px; margin-top: 10px; font-size: .92rem; }
+.print-name-line .print-blank-line { min-width: 160px; }
+.print-name-line .print-blank-line.short { min-width: 70px; flex: none; }
+.print-section-head { margin: 18px 0 8px; padding-top: 6px; border-top: 2px solid var(--ink); page-break-after: avoid; }
+.print-section-head h2 { font-size: 1.25rem; margin: 0; }
+.print-group-head { font-size: 1rem; margin: 14px 0 6px; color: var(--ink); }
+.print-task-num { font-weight: 850; color: var(--ink); }
+.print-extra-task { margin: 0 0 10px; }
+.print-extra-body { font-weight: 600; }
+.print-key { page-break-before: always; margin-top: 18px; }
+.print-key-alone .print-key { page-break-before: auto; }
+.print-key-item { margin: 0 0 8px; page-break-inside: avoid; }
+.print-key-answer { margin: 2px 0 0 18px; }
+.print-key-answer ul, .print-key-answer ol { margin: 2px 0; padding-left: 20px; }

@@ -50,9 +50,43 @@
     `).join('');
   }
 
+  // --- Numbering + answer key (used by core/worksheet.js) ----------------
+  //
+  // `ctx.num` ({ n: 0 }) switches numbering on: every task-type block then
+  // gets "N." in front of its question, and — when `ctx.key` (an array) is
+  // also given — its solution is pushed onto that array under the same N, so
+  // the numbers on the sheet and in the teacher's key can never drift apart
+  // (they are produced by the same call). Without ctx.num (the plain
+  // #print/<id> view) nothing here changes the output.
+
+  function ansHtml(v) { return v ? `<div class="print-key-answer">${v}</div>` : ''; }
+
+  const KEY = {
+    choice: a => (a.options && a.options[a.answer] != null) ? esc(a.options[a.answer]) : null,
+    sortChoice: a => `<ul>${a.items.map(it => `<li>${esc(it.text)} → <strong>${esc(a.labels[it.answer ? 0 : 1])}</strong></li>`).join('')}</ul>`,
+    matrix: a => `<ul>${a.items.map(it => `<li>${esc(it.text)} → <strong>${esc(it.answer)}</strong></li>`).join('')}</ul>`,
+    numberInput: a => (a.validate === 'exact' && Number.isFinite(a.answer)) ? esc(String(a.answer).replace('.', ',')) : (a.success || null),
+    taskList: a => {
+      const rows = a.items.map((it, i) => it.answer ? `<li value="${i + 1}">${it.answer}</li>` : '').join('');
+      return rows ? `<ol>${rows}</ol>` : null;
+    },
+    selfWrite: a => a.model || null,
+  };
+
+  // Returns the "N. " prefix for a task block (and records its key entry).
+  function numFor(a, ctx, label) {
+    if (!ctx || !ctx.num) return '';
+    const n = ++ctx.num.n;
+    if (Array.isArray(ctx.key) && KEY[a.type]) {
+      const html = KEY[a.type](a);
+      if (html) ctx.key.push({ n, label, html });
+    }
+    return `<span class="print-task-num">${n}.</span> `;
+  }
+
   // One render function per activity type — deliberately named PRINT (not
-  // ActivityRenderers) since the shape is different: (activity) => htmlString,
-  // no ctx, no event wiring, nothing interactive.
+  // ActivityRenderers) since the shape is different: (activity, ctx) =>
+  // htmlString, no event wiring, nothing interactive.
   const PRINT = {
     intro(a, ctx) {
       const goals = Array.isArray(a.goals) && a.goals.length
@@ -78,48 +112,48 @@
         ${a.html || ''}
       </section>`;
     },
-    choice(a) {
+    choice(a, ctx) {
       return `<section class="print-block print-task">
         ${a.prompt ? `<p class="muted">${esc(a.prompt)}</p>` : ''}
         ${a.stimulus ? `<div class="stimulus">${esc(a.stimulus).replace(/\n/g, '<br>')}</div>` : ''}
-        <p class="print-q">${esc(a.question)}</p>
+        <p class="print-q">${numFor(a, ctx, a.question)}${esc(a.question)}</p>
         <ol class="print-options">${a.options.map(o => `<li><span class="print-circle" aria-hidden="true"></span>${esc(o)}</li>`).join('')}</ol>
       </section>`;
     },
-    sortChoice(a) {
+    sortChoice(a, ctx) {
       return `<section class="print-block print-task">
-        <p class="print-q">${esc(a.title)}</p>
+        <p class="print-q">${numFor(a, ctx, a.title)}${esc(a.title)}</p>
         <p class="muted">Pri každej vete zakrúžkuj jednu možnosť.</p>
         <table class="print-table"><thead><tr><th></th><th>${esc(a.labels[0])}</th><th>${esc(a.labels[1])}</th></tr></thead>
         <tbody>${a.items.map(it => `<tr><td>${esc(it.text)}</td><td class="print-mark-cell"><span class="print-circle" aria-hidden="true"></span></td><td class="print-mark-cell"><span class="print-circle" aria-hidden="true"></span></td></tr>`).join('')}</tbody></table>
       </section>`;
     },
-    matrix(a) {
+    matrix(a, ctx) {
       return `<section class="print-block print-task">
-        <p class="print-q">${esc(a.title)}</p>
+        <p class="print-q">${numFor(a, ctx, a.title)}${esc(a.title)}</p>
         <p class="muted">Ku každej položke priraď jednu z možností: ${a.labels.map(esc).join(', ')}.</p>
         <table class="print-table"><thead><tr><th></th><th>Priradenie</th></tr></thead>
         <tbody>${a.items.map(it => `<tr><td>${esc(it.text)}</td><td class="print-blank-cell"></td></tr>`).join('')}</tbody></table>
       </section>`;
     },
-    taskList(a) {
+    taskList(a, ctx) {
       return `<section class="print-block print-task">
-        <p class="print-q">${esc(a.title)}</p>
+        <p class="print-q">${numFor(a, ctx, a.title)}${esc(a.title)}</p>
         ${a.html || ''}
         ${taskItemsHtml(a.items)}
         ${a.note ? `<div class="notice">${a.note}</div>` : ''}
       </section>`;
     },
-    selfWrite(a) {
+    selfWrite(a, ctx) {
       return `<section class="print-block print-task">
-        <p class="print-q">${esc(a.title)}</p>
+        <p class="print-q">${numFor(a, ctx, a.title)}${esc(a.title)}</p>
         <p>${a.promptHtml || esc(a.prompt)}</p>
         <div class="print-lines" aria-hidden="true"></div>
       </section>`;
     },
-    numberInput(a) {
+    numberInput(a, ctx) {
       return `<section class="print-block print-task">
-        <p class="print-q">${esc(a.title)}</p>
+        <p class="print-q">${numFor(a, ctx, a.title)}${esc(a.title)}</p>
         <p>${esc(a.prompt)}</p>
         <p class="print-answer-line">Odpoveď: <span class="print-blank-line"></span></p>
       </section>`;
@@ -186,5 +220,51 @@
     if (btn) btn.onclick = () => window.print();
   }
 
-  window.MathPrint = { render };
+  // Paper-only extra tasks (a module's `worksheet.tasks`, or tasks the
+  // teacher typed into the worksheet generator): grouped under the same
+  // ZÁKLAD/ROZŠÍRENIE/BONUS headings as a levelled taskList, each with ruled
+  // space to work in. A task is { text | html, level?, answer?, space? }; `text`
+  // is escaped, `html` is trusted authored HTML (module files only — the
+  // generator always passes teacher input through `text`).
+  const DEFAULT_SPACE = 3;
+  function extraTaskHtml(t, ctx) {
+    const body = t.html || esc(t.text || '').replace(/\n/g, '<br>');
+    const space = Number.isInteger(t.space) && t.space >= 0 ? t.space : DEFAULT_SPACE;
+    let num = '';
+    if (ctx && ctx.num) {
+      const n = ++ctx.num.n;
+      num = `<span class="print-task-num">${n}.</span> `;
+      if (Array.isArray(ctx.key) && t.answer) {
+        const label = String(t.text || t.html || '').replace(/<[^>]*>/g, '').trim().slice(0, 90);
+        ctx.key.push({ n, label, html: t.answer });
+      }
+    }
+    return `<div class="print-extra-task print-task"><div class="print-extra-body">${num}${body}</div>${space ? `<div class="print-lines" style="height:calc(${space} * 1.7em)" aria-hidden="true"></div>` : ''}</div>`;
+  }
+
+  function renderExtraTasks(tasks, ctx) {
+    tasks = (tasks || []).filter(Boolean);
+    if (!tasks.length) return '';
+    const usesLevels = tasks.some(t => LEVEL_LABELS[t.level]);
+    if (!usesLevels) return tasks.map(t => extraTaskHtml(t, ctx)).join('');
+    const unleveled = tasks.filter(t => !LEVEL_LABELS[t.level]);
+    return unleveled.map(t => extraTaskHtml(t, ctx)).join('') + LEVEL_ORDER.filter(l => tasks.some(t => t.level === l)).map(l => `
+      <h3 class="task-level-heading">${LEVEL_LABELS[l]}</h3>
+      ${tasks.filter(t => t.level === l).map(t => extraTaskHtml(t, ctx)).join('')}
+    `).join('');
+  }
+
+  // The teacher's solution key, built from the entries renderActivities /
+  // renderExtraTasks pushed onto ctx.key while rendering the student sheet.
+  function renderAnswerKey(entries) {
+    if (!entries || !entries.length) return '';
+    return `<section class="print-key">
+      <div class="print-label">KĽÚČ RIEŠENÍ — IBA PRE UČITEĽA</div>
+      ${entries.map(e => `<div class="print-key-item"><strong>${e.n}.</strong> <span class="muted">${esc(e.label || '')}</span>${ansHtml(e.html)}</div>`).join('')}
+    </section>`;
+  }
+
+  window.MathPrint = {
+    render, renderActivities: renderBody, renderExtraTasks, renderAnswerKey, THEORY_TYPES,
+  };
 })();

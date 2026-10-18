@@ -8,7 +8,7 @@
 // point every other core/*.js has attached its namespace to `window`.
 (function () {
   if (!window.MathPlatform || !window.MathAuth || !window.MathLive || !window.MathSession ||
-      !window.MathPrint || !window.MathViews || !window.MathViews.student || !window.MathViews.teacher) {
+      !window.MathPrint || !window.MathWorksheet || !window.MathViews || !window.MathViews.student || !window.MathViews.teacher) {
     throw new Error('core/app.js: chýba niektorý z core/*.js pred ním.');
   }
 
@@ -34,6 +34,9 @@
     { name: 'teacher', test: p => p[0] === 'teacher', teacher: true, view: () => T.teacher() },
     { name: 'teacherYear', test: p => p[0] === 'teacher-year', teacher: true, view: p => T.teacherYear(p[1]) },
     { name: 'teacherUnit', test: p => p[0] === 'teacher-unit', teacher: true, view: p => T.teacherUnit(p[1], p.slice(2).join('/')) },
+    { name: 'worksheets', test: p => p[0] === 'worksheets', teacher: true, view: () => window.MathWorksheet.list() },
+    { name: 'worksheet', test: p => p[0] === 'worksheet', teacher: true, view: p => window.MathWorksheet.edit(p[1]) },
+    { name: 'worksheetAdd', test: p => p[0] === 'worksheet-add', teacher: true, view: p => window.MathWorksheet.addModule(p[1]) },
     { name: 'teacherLive', test: p => p[0] === 'teacher-live', teacher: true, view: p => T.teacherLive(p[1]) },
   ];
 

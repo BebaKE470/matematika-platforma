@@ -1,0 +1,29 @@
+/* styles/worksheet.css — the editor around the printable sheet
+   (core/worksheet.js). The sheet itself is styled in styles/print.css; this
+   file only lays out the on-screen control panel. */
+
+.ws-layout { display: grid; grid-template-columns: minmax(280px, 380px) minmax(0, 1fr); gap: 20px; align-items: start; }
+.ws-panel { display: grid; gap: 12px; }
+.ws-layout .print-sheet { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; width: 100%; box-sizing: border-box; }
+.ws-check { display: flex; align-items: flex-start; gap: 8px; margin: 6px 0; cursor: pointer; font-size: .92rem; }
+.ws-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+.ws-card-btns { display: flex; gap: 4px; flex: none; }
+.ws-card-btns button { padding: 2px 9px; }
+.ws-extras { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--line); }
+.ws-extras-head { display: flex; align-items: center; gap: 6px; }
+.ws-extras-head button { padding: 1px 8px; font-size: .8rem; }
+.ws-item { margin: 10px 0; padding: 10px; border: 1px solid var(--line); border-radius: 10px; }
+.ws-item textarea, .ws-card textarea { width: 100%; box-sizing: border-box; }
+.ws-item-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 4px 0; }
+.ws-inline { display: flex; align-items: center; gap: 4px; font-size: .85rem; }
+.ws-inline input { width: 56px; }
+.ws-symbols { display: flex; flex-wrap: wrap; gap: 4px; margin: 8px 0; }
+.ws-symbols button { padding: 2px 8px; min-width: 30px; }
+
+@media (max-width: 900px) {
+  .ws-layout { grid-template-columns: 1fr; }
+}
+@media print {
+  .ws-layout { display: block; }
+  .ws-layout .print-sheet { border: 0; padding: 0; border-radius: 0; }
+}

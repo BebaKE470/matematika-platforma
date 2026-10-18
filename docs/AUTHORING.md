@@ -235,6 +235,33 @@ decoration:
 <p>pri <span class="hl">nepárnom</span> počte je medián prostredná hodnota</p>
 ```
 
+## Extra paper tasks: `worksheet.tasks`
+
+An optional top-level `worksheet` object (sibling of `teacher` and `student`)
+holds a **paper-only reserve of extra tasks** for the teacher's worksheet
+generator (`#worksheets`, `core/worksheet.js`). It is never shown in the
+interactive player or in a live lesson — only the teacher can pull these
+tasks onto a printed sheet.
+
+```js
+worksheet: {
+  tasks: [
+    { id: 'w1', level: 'zaklad', text: 'Zadanie…', answer: 'Riešenie…', space: 4 },
+  ],
+}
+```
+
+Required: `id` (unique within the module), and `text` (plain, escaped; a newline
+becomes a line break) **or** `html` (trusted HTML, wins if both are set).
+Optional: `level` (`zaklad` / `rozsirenie` / `bonus`, grouped under
+ZÁKLAD/ROZŠÍRENIE/BONUS on the sheet), `answer` (trusted HTML — printed only
+in the teacher's solution key, never on the student pages), `space` (ruled
+lines left for the student's work, default 3, `0` for none).
+`tools/audit.mjs` validates the shape and warns about a task without `answer`.
+The editorial rules (tematický plán, cumulative prior knowledge, exact task
+statement) apply exactly as for `taskList` items. Worked example:
+`modules/1-rocnik/vyrokova-formula/13-precvicovanie.js`.
+
 ## Points
 
 One table, `core/scoring.js`'s `MathScore`, decides every point value — see
