@@ -160,5 +160,44 @@ MathPlatform.registerModule({
         ]
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1",
+        "level": "zaklad",
+        "space": 5,
+        "text": "Napíš z pamäti rozpis:\na) sin(α + β)\nb) cos(α + β)\nc) sin(α − β)\nd) cos(α − β)",
+        "answer": "a) sin α cos β + cos α sin β<br>b) cos α cos β − sin α sin β<br>c) sin α cos β − cos α sin β<br>d) cos α cos β + sin α sin β"
+      },
+      {
+        "id": "w2",
+        "level": "zaklad",
+        "space": 6,
+        "text": "Vypočítaj presnú hodnotu pomocou súčtového alebo rozdielového vzorca:\na) cos 75° (použi 75° = 45° + 30°)\nb) sin 15° (použi 15° = 45° − 30°)",
+        "answer": "a) cos 75° = cos 45° cos 30° − sin 45° sin 30° = (√2/2)(√3/2) − (√2/2)(1/2) = (√6 − √2)/4<br>b) sin 15° = sin 45° cos 30° − cos 45° sin 30° = (√2/2)(√3/2) − (√2/2)(1/2) = (√6 − √2)/4"
+      },
+      {
+        "id": "w3",
+        "level": "rozsirenie",
+        "space": 8,
+        "text": "Vypočítaj presne a rozpis uhla zvoľ sám/sama:\na) cos 15°\nb) sin 105°\nc) cos 105°",
+        "answer": "a) cos 15° = cos(45° − 30°) = cos 45° cos 30° + sin 45° sin 30° = (√6 + √2)/4<br>b) sin 105° = sin(60° + 45°) = sin 60° cos 45° + cos 60° sin 45° = (√6 + √2)/4<br>c) cos 105° = cos(60° + 45°) = cos 60° cos 45° − sin 60° sin 45° = (√2 − √6)/4"
+      },
+      {
+        "id": "w4",
+        "level": "rozsirenie",
+        "space": 6,
+        "text": "Použi súčtový alebo rozdielový vzorec „odzadu“ a zjednoduš na jednu hodnotu:\na) sin 20° cos 10° + cos 20° sin 10°\nb) cos 40° cos 20° − sin 40° sin 20°\nc) sin 80° cos 35° − cos 80° sin 35°",
+        "answer": "a) sin(20° + 10°) = sin 30° = 1/2<br>b) cos(40° + 20°) = cos 60° = 1/2<br>c) sin(80° − 35°) = sin 45° = √2/2"
+      },
+      {
+        "id": "w5",
+        "level": "bonus",
+        "space": 8,
+        "text": "Dokáž identitu: cos(α + β) · cos(α − β) = cos²α − sin²β.",
+        "answer": "Ľavá strana: (cos α cos β − sin α sin β)(cos α cos β + sin α sin β) = cos²α cos²β − sin²α sin²β.<br>Dosadíme cos²β = 1 − sin²β a sin²α = 1 − cos²α: cos²α(1 − sin²β) − (1 − cos²α) sin²β = cos²α − cos²α sin²β − sin²β + cos²α sin²β = cos²α − sin²β."
+      }
+    ]
   }
 });

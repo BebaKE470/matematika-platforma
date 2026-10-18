@@ -167,5 +167,44 @@ MathPlatform.registerModule({
         ]
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Doplň:\na) sin²x + cos²x = …\nb) Ak cos²x = 0,36, potom sin²x = …\nc) Ak sin²x = 1/4, potom cos²x = …",
+        "answer": "a) 1<br>b) sin²x = 1 − 0,36 = 0,64<br>c) cos²x = 1 − 1/4 = 3/4"
+      },
+      {
+        "id": "w2",
+        "level": "zaklad",
+        "space": 5,
+        "text": "Je dané sin x = 3/5, pričom x je ostrý uhol. Urč cos x a tg x.",
+        "answer": "cos²x = 1 − 9/25 = 16/25, ostrý uhol má cos x &gt; 0, teda cos x = 4/5.<br>tg x = sin x / cos x = (3/5) : (4/5) = 3/4"
+      },
+      {
+        "id": "w3",
+        "level": "rozsirenie",
+        "space": 6,
+        "text": "Je dané cos x = −5/13 a x ∈ (π/2; π). Urč sin x, tg x a cotg x.",
+        "answer": "sin²x = 1 − 25/169 = 144/169; v druhej štvrtine je sin x &gt; 0, teda sin x = 12/13.<br>tg x = sin x / cos x = −12/5<br>cotg x = cos x / sin x = −5/12"
+      },
+      {
+        "id": "w4",
+        "level": "rozsirenie",
+        "space": 6,
+        "text": "Uprav na jednoduchší tvar (tam, kde je to potrebné, uveď podmienku):\na) 1 − cos²x\nb) (sin x / cos x) · cos x\nc) sin²x / (1 − cos²x)\nd) tg x · cos x",
+        "answer": "a) sin²x<br>b) sin x, podmienka cos x ≠ 0<br>c) 1, podmienka sin x ≠ 0 (v menovateli je 1 − cos²x = sin²x)<br>d) sin x, podmienka cos x ≠ 0"
+      },
+      {
+        "id": "w5",
+        "level": "bonus",
+        "space": 7,
+        "text": "Dokáž identity (pre všetky x, pre ktoré sú obe strany definované):\na) (sin x + cos x)² − 2 sin x cos x = 1\nb) tg x + cotg x = 1 / (sin x cos x)",
+        "answer": "a) Ľavá strana: sin²x + 2 sin x cos x + cos²x − 2 sin x cos x = sin²x + cos²x = 1.<br>b) Ľavá strana: sin x / cos x + cos x / sin x = (sin²x + cos²x) / (sin x cos x) = 1 / (sin x cos x)."
+      }
+    ]
   }
 });

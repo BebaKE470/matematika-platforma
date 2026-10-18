@@ -167,5 +167,44 @@ MathPlatform.registerModule({
         ]
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1",
+        "level": "zaklad",
+        "space": 6,
+        "text": "Uprav pomocou vzorcov pre dvojnásobný uhol na jednu goniometrickú funkciu:\na) 2 sin 3x cos 3x\nb) cos²x − sin²x\nc) 2cos²x − 1\nd) 1 − 2sin²(x/2)",
+        "answer": "a) sin 6x (α = 3x)<br>b) cos 2x<br>c) cos 2x<br>d) cos x (α = x/2, teda 2α = x)"
+      },
+      {
+        "id": "w2",
+        "level": "zaklad",
+        "space": 5,
+        "text": "Zjednoduš pomocou základnej identity:\na) 5sin²x + 5cos²x\nb) (1 − cos x)(1 + cos x)\nc) 1 − sin²x",
+        "answer": "a) 5(sin²x + cos²x) = 5<br>b) 1 − cos²x = sin²x<br>c) cos²x"
+      },
+      {
+        "id": "w3",
+        "level": "rozsirenie",
+        "space": 8,
+        "text": "Zjednoduš a uveď podmienky, pre ktoré úprava platí:\na) sin 2x / (2 sin x)\nb) sin 2x / cos x\nc) (1 − cos 2x) / (2 sin x)",
+        "answer": "a) 2 sin x cos x / (2 sin x) = cos x, podmienka sin x ≠ 0<br>b) 2 sin x cos x / cos x = 2 sin x, podmienka cos x ≠ 0<br>c) 1 − cos 2x = 2sin²x, teda výraz = sin x, podmienka sin x ≠ 0"
+      },
+      {
+        "id": "w4",
+        "level": "rozsirenie",
+        "space": 8,
+        "text": "Použi súčtové alebo rozdielové vzorce a zjednoduš:\na) sin(x + y) cos y − cos(x + y) sin y\nb) cos(x − y) cos y − sin(x − y) sin y\nc) sin(π/6 + x) + sin(π/6 − x)",
+        "answer": "a) sin((x + y) − y) = sin x<br>b) cos((x − y) + y) = cos x<br>c) Rozpíšeme obe sínusy: sin(π/6)cos x + cos(π/6)sin x + sin(π/6)cos x − cos(π/6)sin x = 2 · (1/2) · cos x = cos x"
+      },
+      {
+        "id": "w5",
+        "level": "bonus",
+        "space": 8,
+        "text": "Dokáž identity (cos x ≠ 0):\na) (1 − cos 2x) / (1 + cos 2x) = tg²x\nb) sin 2x / (1 + cos 2x) = tg x",
+        "answer": "a) 1 − cos 2x = 2sin²x a 1 + cos 2x = 2cos²x, teda výraz = 2sin²x / 2cos²x = tg²x.<br>b) sin 2x = 2 sin x cos x a 1 + cos 2x = 2cos²x, teda výraz = 2 sin x cos x / 2cos²x = sin x / cos x = tg x."
+      }
+    ]
   }
 });

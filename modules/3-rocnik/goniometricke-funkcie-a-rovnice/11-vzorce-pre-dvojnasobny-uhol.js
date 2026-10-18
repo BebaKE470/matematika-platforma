@@ -167,5 +167,44 @@ MathPlatform.registerModule({
         ]
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Napíš z pamäti vzorce pre dvojnásobný uhol:\na) sin 2α\nb) cos 2α (všetky tri tvary)",
+        "answer": "a) sin 2α = 2 sin α cos α<br>b) cos 2α = cos²α − sin²α = 2cos²α − 1 = 1 − 2sin²α"
+      },
+      {
+        "id": "w2",
+        "level": "zaklad",
+        "space": 6,
+        "text": "Je dané sin α = 3/5, pričom α je ostrý uhol. Vypočítaj sin 2α a cos 2α.",
+        "answer": "cos α = 4/5 (z identity sin²α + cos²α = 1, ostrý uhol)<br>sin 2α = 2 · (3/5) · (4/5) = 24/25<br>cos 2α = 1 − 2 · (3/5)² = 1 − 18/25 = 7/25"
+      },
+      {
+        "id": "w3",
+        "level": "rozsirenie",
+        "space": 7,
+        "text": "Z hodnôt pre uhly 30° a 45° vypočítaj pomocou vzorca pre dvojnásobný uhol:\na) sin 60°\nb) cos 90°\nc) cos 60°",
+        "answer": "a) sin 60° = 2 sin 30° cos 30° = 2 · (1/2) · (√3/2) = √3/2<br>b) cos 90° = cos²45° − sin²45° = 1/2 − 1/2 = 0<br>c) cos 60° = 2cos²30° − 1 = 2 · 3/4 − 1 = 1/2"
+      },
+      {
+        "id": "w4",
+        "level": "rozsirenie",
+        "space": 6,
+        "text": "Zjednoduš pomocou vzorca pre dvojnásobný uhol:\na) 2 sin 15° cos 15°\nb) cos²22,5° − sin²22,5°\nc) 1 − 2sin²15°\nd) 2cos²x − 1",
+        "answer": "a) sin 30° = 1/2<br>b) cos 45° = √2/2<br>c) cos 30° = √3/2<br>d) cos 2x"
+      },
+      {
+        "id": "w5",
+        "level": "bonus",
+        "space": 8,
+        "text": "Dokáž identity:\na) (sin α + cos α)² = 1 + sin 2α\nb) cos⁴α − sin⁴α = cos 2α",
+        "answer": "a) (sin α + cos α)² = sin²α + 2 sin α cos α + cos²α = 1 + sin 2α.<br>b) cos⁴α − sin⁴α = (cos²α − sin²α)(cos²α + sin²α) = cos 2α · 1 = cos 2α."
+      }
+    ]
   }
 });
