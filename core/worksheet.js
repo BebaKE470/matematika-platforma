@@ -65,6 +65,8 @@
         tasks: s.tasks !== false,
         reflection: s.reflection === true,
         extra: Array.isArray(s.extra) ? s.extra.map(x => str(x, 80)) : null, // null = all
+        // Ruled lines under every extra task of this module; null = each task's own value.
+        extraSpace: Number.isInteger(s.extraSpace) ? Math.max(0, Math.min(20, s.extraSpace)) : null,
       };
     }
     return null;
@@ -82,6 +84,7 @@
       header: raw.header !== false,
       showKey: raw.showKey === true,
       keyOnly: raw.keyOnly === true,
+      sectionBreaks: raw.sectionBreaks === true,
       sections: raw.sections.map(normalizeSection).filter(Boolean).slice(0, 60),
     };
   }
@@ -100,10 +103,10 @@
   function getLast() { try { return localStorage.getItem(LAST_KEY); } catch (_) { return null; } }
 
   function newSheet() {
-    return { id: newId(), name: 'Pracovný list', updated: Date.now(), header: true, showKey: false, keyOnly: false, sections: [] };
+    return { id: newId(), name: 'Pracovný list', updated: Date.now(), header: true, showKey: false, keyOnly: false, sectionBreaks: false, sections: [] };
   }
   function moduleSection(moduleId) {
-    return { kind: 'module', moduleId, theoryMode: 'module', theoryLines: 8, tasks: true, reflection: false, extra: null };
+    return { kind: 'module', moduleId, theoryMode: 'module', theoryLines: 8, tasks: true, reflection: false, extra: null, extraSpace: null };
   }
 
   function downloadJson(filename, data) {
@@ -175,7 +178,8 @@
         body += `<section class="print-block print-theory-blank"><h3 class="print-group-head">Teória – dopíš ručne</h3><div class="print-lines" style="height:calc(${s.theoryLines} * 1.7em)" aria-hidden="true"></div></section>`;
       }
       if (s.tasks) body += PR.renderActivities(acts.filter(isTask), mctx);
-      const extras = extrasOf(mod).filter(t => s.extra === null || s.extra.includes(t.id));
+      const extras = extrasOf(mod).filter(t => s.extra === null || s.extra.includes(t.id))
+        .map(t => s.extraSpace === null ? t : Object.assign({}, t, { space: s.extraSpace }));
       if (extras.length) body += `<h3 class="print-group-head">Ďalšie úlohy</h3>` + PR.renderExtraTasks(extras, ctx);
       if (s.reflection) body += PR.renderActivities(acts.filter(a => a.type === 'reflection'), mctx);
     }
@@ -289,6 +293,7 @@
             <div class="field"><label for="wsName">Názov listu</label><input id="wsName" data-sf="name" type="text" maxlength="120" value="${esc(sheet.name)}"></div>
             <label class="ws-check"><input type="checkbox" data-sf="header" ${sheet.header ? 'checked' : ''}> Riadok „Meno, trieda, dátum“</label>
             <label class="ws-check"><input type="checkbox" data-sf="showKey" ${sheet.showKey ? 'checked' : ''}> Kľúč riešení na konci (nová strana, pre učiteľa)</label>
+            <label class="ws-check"><input type="checkbox" data-sf="sectionBreaks" ${sheet.sectionBreaks ? 'checked' : ''}> Každá téma na novej strane</label>
             <label class="ws-check"><input type="checkbox" data-sf="keyOnly" ${sheet.keyOnly ? 'checked' : ''}> Vytlačiť iba kľúč riešení</label>
             <div class="row spaced"><button class="btn" id="wsPrint">Vytlačiť / Uložiť ako PDF</button></div>
             <p class="muted small-note">Tip: v dialógu tlače zruš „Hlavičky a päty“, aby sa na strany nepridávala URL adresa a dátum.</p>
@@ -306,6 +311,7 @@
       const html = await buildSheetHtml(sheet);
       if (t !== sheetTok || !$('#wsSheet')) return;
       $('#wsSheet').innerHTML = html;
+      $('#wsSheet').classList.toggle('ws-break-sections', !!sheet.sectionBreaks);
     }
     const refreshSoon = () => { clearTimeout(timer); timer = setTimeout(refreshSheet, 250); };
 
@@ -376,6 +382,7 @@
         ${chk(i, 'reflection', s.reflection, 'Sebahodnotenie')}
         ${extras.length ? `<div class="ws-extras"><div class="ws-extras-head"><strong>Ďalšie úlohy</strong>
             <button class="ghost" data-act="extra-all" data-i="${i}">všetky</button><button class="ghost" data-act="extra-none" data-i="${i}">žiadne</button></div>
+          <label class="ws-inline">riadkov na riešenie pri každej úlohe <input type="number" min="0" max="20" placeholder="z modulu" data-i="${i}" data-f="extraSpace" value="${s.extraSpace === null ? '' : s.extraSpace}"></label>
           ${extras.map(t => `<label class="ws-check"><input type="checkbox" data-i="${i}" data-f="extra" data-id="${esc(t.id)}" ${(s.extra === null || s.extra.includes(t.id)) ? 'checked' : ''}> <span class="tag">${esc(LEVEL_NAMES[t.level] || '—')}</span> ${esc(stripTags(t.text || t.html).slice(0, 80))}</label>`).join('')}</div>`
           : '<p class="muted small-note">Tento modul zatiaľ nemá zásobu ďalších úloh.</p>'}
       </div>`;
@@ -466,6 +473,9 @@
         s.theoryMode = ['module', 'blank', 'none'].includes(el.value) ? el.value : 'module';
         persist(); await renderCards(); refreshSheet();
         return;
+      } else if (f === 'extraSpace') {
+        const n = parseInt(el.value, 10);
+        s.extraSpace = el.value.trim() === '' || !Number.isFinite(n) ? null : Math.max(0, Math.min(20, n));
       } else if (f === 'theoryLines') {
         const n = parseInt(el.value, 10);
         s.theoryLines = Number.isFinite(n) ? Math.max(1, Math.min(40, n)) : 8;

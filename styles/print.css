@@ -121,3 +121,8 @@
   break-after: avoid;
   page-break-after: avoid;
 }
+
+/* A topic heading (eyebrow + title) is one unit, and optionally every topic starts a new page. */
+.print-section-head { break-inside: avoid; page-break-inside: avoid; }
+.ws-break-sections .print-section-head { break-before: page; page-break-before: always; }
+.ws-break-sections .print-sheet-title + .print-section-head { break-before: auto; page-break-before: auto; }
