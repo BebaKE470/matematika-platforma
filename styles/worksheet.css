@@ -27,3 +27,6 @@
   .ws-layout { display: block; }
   .ws-layout .print-sheet { border: 0; padding: 0; border-radius: 0; }
 }
+
+.ws-theory { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 6px 0; }
+.ws-theory select { max-width: 100%; }

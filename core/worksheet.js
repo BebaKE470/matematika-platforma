@@ -57,7 +57,11 @@
       return {
         kind: 'module',
         moduleId: str(s.moduleId, 200),
-        theory: s.theory !== false,
+        // 'module' = the module's own theory, 'blank' = ruled lines for the
+        // students to write the theory by hand, 'none'. (Older saves had a
+        // boolean `theory`.)
+        theoryMode: ['module', 'blank', 'none'].includes(s.theoryMode) ? s.theoryMode : (s.theory === false ? 'none' : 'module'),
+        theoryLines: Number.isInteger(s.theoryLines) ? Math.max(1, Math.min(40, s.theoryLines)) : 8,
         tasks: s.tasks !== false,
         reflection: s.reflection === true,
         extra: Array.isArray(s.extra) ? s.extra.map(x => str(x, 80)) : null, // null = all
@@ -99,7 +103,7 @@
     return { id: newId(), name: 'Pracovný list', updated: Date.now(), header: true, showKey: false, keyOnly: false, sections: [] };
   }
   function moduleSection(moduleId) {
-    return { kind: 'module', moduleId, theory: true, tasks: true, reflection: false, extra: null };
+    return { kind: 'module', moduleId, theoryMode: 'module', theoryLines: 8, tasks: true, reflection: false, extra: null };
   }
 
   function downloadJson(filename, data) {
@@ -166,7 +170,10 @@
       const acts = mod.student.activities || [];
       const mctx = Object.assign({ unit: meta.unit, topic: meta.topic }, ctx);
       body += `<section class="print-section-head"><div class="print-eyebrow">${esc(meta.unit || '')}</div><h2>${esc(meta.topic || '')}</h2></section>`;
-      if (s.theory) body += PR.renderActivities(acts.filter(isTheory), mctx);
+      if (s.theoryMode === 'module') body += PR.renderActivities(acts.filter(isTheory), mctx);
+      else if (s.theoryMode === 'blank') {
+        body += `<section class="print-block print-theory-blank"><h3 class="print-group-head">Teória – dopíš ručne</h3><div class="print-lines" style="height:calc(${s.theoryLines} * 1.7em)" aria-hidden="true"></div></section>`;
+      }
       if (s.tasks) body += PR.renderActivities(acts.filter(isTask), mctx);
       const extras = extrasOf(mod).filter(t => s.extra === null || s.extra.includes(t.id));
       if (extras.length) body += `<h3 class="print-group-head">Ďalšie úlohy</h3>` + PR.renderExtraTasks(extras, ctx);
@@ -356,7 +363,15 @@
       const extras = extrasOf(mod);
       return `<div class="card ws-card">
         <div class="ws-card-head"><div><div class="print-eyebrow">${esc(meta.unit || '')}</div><strong>${esc(meta.topic)}</strong></div>${ctl(i)}</div>
-        ${chk(i, 'theory', s.theory, `Teória <span class="muted">(${acts.filter(isTheory).length})</span>`)}
+        <div class="ws-theory">
+          <label class="ws-inline">Teória:
+            <select data-i="${i}" data-f="theoryMode">
+              <option value="module" ${s.theoryMode === 'module' ? 'selected' : ''}>z modulu (${acts.filter(isTheory).length})</option>
+              <option value="blank" ${s.theoryMode === 'blank' ? 'selected' : ''}>voľné riadky na dopísanie</option>
+              <option value="none" ${s.theoryMode === 'none' ? 'selected' : ''}>bez teórie</option>
+            </select></label>
+          ${s.theoryMode === 'blank' ? `<label class="ws-inline">riadkov <input type="number" min="1" max="40" data-i="${i}" data-f="theoryLines" value="${s.theoryLines}"></label>` : ''}
+        </div>
         ${chk(i, 'tasks', s.tasks, `Úlohy z modulu <span class="muted">(${acts.filter(isTask).length})</span>`)}
         ${chk(i, 'reflection', s.reflection, 'Sebahodnotenie')}
         ${extras.length ? `<div class="ws-extras"><div class="ws-extras-head"><strong>Ďalšie úlohy</strong>
@@ -447,6 +462,13 @@
         const cur = new Set(s.extra === null ? all : s.extra);
         if (el.checked) cur.add(el.dataset.id); else cur.delete(el.dataset.id);
         s.extra = all.filter(x => cur.has(x));
+      } else if (f === 'theoryMode') {
+        s.theoryMode = ['module', 'blank', 'none'].includes(el.value) ? el.value : 'module';
+        persist(); await renderCards(); refreshSheet();
+        return;
+      } else if (f === 'theoryLines') {
+        const n = parseInt(el.value, 10);
+        s.theoryLines = Number.isFinite(n) ? Math.max(1, Math.min(40, n)) : 8;
       } else {
         s[f] = el.checked;
       }
