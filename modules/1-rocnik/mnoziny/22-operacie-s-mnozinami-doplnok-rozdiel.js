@@ -163,5 +163,44 @@ MathPlatform.registerModule({
         "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka; porovnaj svoj pocit s výsledkom úloh."
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1",
+        "level": "zaklad",
+        "space": 3,
+        "text": "Nech A = {1, 2, 3, 4, 5} a B = {4, 5, 6, 7}. Urč A − B a B − A.",
+        "answer": "A − B = {1, 2, 3}<br>B − A = {6, 7}"
+      },
+      {
+        "id": "w2",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Nech U = {1, 2, 3, 4, 5, 6, 7, 8}, A = {2, 3, 5, 7} a B = {x ∈ U; x je párne}. Urč A′ a B′ (doplnky vzhľadom na U).",
+        "answer": "A′ = {1, 4, 6, 8}<br>B = {2, 4, 6, 8}, B′ = {1, 3, 5, 7}"
+      },
+      {
+        "id": "w3",
+        "level": "rozsirenie",
+        "space": 6,
+        "text": "Nech U = {1, 2, 3, …, 10}, A = {x ∈ U; x je párne}, B = {x ∈ U; x > 6}. Zapíš vymenovaním A, B, A − B, B − A, A′ a B′.",
+        "answer": "A = {2, 4, 6, 8, 10}<br>B = {7, 8, 9, 10}<br>A − B = {2, 4, 6}<br>B − A = {7, 9}<br>A′ = {1, 3, 5, 7, 9}<br>B′ = {1, 2, 3, 4, 5, 6}"
+      },
+      {
+        "id": "w4",
+        "level": "rozsirenie",
+        "space": 4,
+        "text": "Nech M = {1, 2, 3, 4} a N = {3, 4, 5}. Urč M − N a N − M. Sú tieto množiny rovnaké? Čo to hovorí o poradí v rozdiele?",
+        "answer": "M − N = {1, 2}<br>N − M = {5}<br>Nie sú rovnaké – pri rozdiele záleží na poradí množín."
+      },
+      {
+        "id": "w5",
+        "level": "bonus",
+        "space": 6,
+        "text": "Nech U = {1, 2, 3, …, 10} a A = {1, 2, 3, 4, 5}. Urč A′, potom doplnok množiny A′ (zapísaný (A′)′) a porovnaj ho s A. Ďalej urč A − A a A − ∅.",
+        "answer": "A′ = {6, 7, 8, 9, 10}<br>(A′)′ = {1, 2, 3, 4, 5} = A (doplnok doplnku je pôvodná množina)<br>A − A = ∅, A − ∅ = A"
+      }
+    ]
   }
 });

@@ -152,5 +152,44 @@ MathPlatform.registerModule({
         "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka; porovnaj svoj pocit s výsledkom úloh."
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Nech U = {1, 2, …, 9}, A = {1, 2, 3, 4} a B = {3, 4, 5, 6}. Urč A ∪ B, A ∩ B, A − B a A′.",
+        "answer": "A ∪ B = {1, 2, 3, 4, 5, 6}<br>A ∩ B = {3, 4}<br>A − B = {1, 2}<br>A′ = {5, 6, 7, 8, 9}"
+      },
+      {
+        "id": "w2",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Nech C = {a, b, c, d} a D = {c, d, e}. Urč C ∪ D, C ∩ D, C − D a D − C.",
+        "answer": "C ∪ D = {a, b, c, d, e}<br>C ∩ D = {c, d}<br>C − D = {a, b}<br>D − C = {e}"
+      },
+      {
+        "id": "w3",
+        "level": "rozsirenie",
+        "space": 6,
+        "text": "Nech U = {1, 2, 3, …, 12}, A = {x ∈ U; x je deliteľné 3}, B = {x ∈ U; x je párne}. Zapíš vymenovaním A, B, A ∩ B, A − B a B − A.",
+        "answer": "A = {3, 6, 9, 12}<br>B = {2, 4, 6, 8, 10, 12}<br>A ∩ B = {6, 12}<br>A − B = {3, 9}<br>B − A = {2, 4, 8, 10}"
+      },
+      {
+        "id": "w4",
+        "level": "rozsirenie",
+        "space": 5,
+        "text": "Nech U = {1, 2, 3, 4, 5, 6}, A = {1, 2, 3} a B = {3, 4}. Rozhodni, či je zápis pravdivý, a nepravdivé zápisy oprav:\na) A − B = {1, 2}\nb) A′ = {4, 5}\nc) 3 ∈ A ∩ B\nd) 3 ∈ A − B",
+        "answer": "a) pravdivý<br>b) nepravdivý, správne A′ = {4, 5, 6}<br>c) pravdivý<br>d) nepravdivý – 3 ∈ B, preto 3 ∉ A − B"
+      },
+      {
+        "id": "w5",
+        "level": "bonus",
+        "space": 6,
+        "text": "Nech U = {1, 2, …, 8}. Vymysli množiny A a B (podmnožiny U) tak, aby platilo:\na) A − B = A\nb) A − B = ∅\nVysvetli, čo musí platiť o prvkoch množín A a B.",
+        "answer": "a) napr. A = {1, 2}, B = {5, 6}; A a B nesmú mať spoločný prvok (A ∩ B = ∅).<br>b) napr. A = {1, 2}, B = {1, 2, 3}; každý prvok A musí byť aj v B (A ⊆ B)."
+      }
+    ]
   }
 });

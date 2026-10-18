@@ -198,5 +198,44 @@ MathPlatform.registerModule({
         "prompt": "Označ, ako dobre vieš každý pojem alebo symbol vysvetliť aj bez aplikácie."
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1",
+        "level": "zaklad",
+        "space": 3,
+        "text": "Množina A = {1, 3, 5, 7, 9}. Doplň do každého zápisu symbol ∈ alebo ∉:\na) 3 … A\nb) 4 … A\nc) 9 … A\nd) 10 … A",
+        "answer": "a) 3 ∈ A<br>b) 4 ∉ A<br>c) 9 ∈ A<br>d) 10 ∉ A"
+      },
+      {
+        "id": "w2",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Zapíš vymenovaním prvkov:\na) množina párnych kladných čísel menších ako 11\nb) množina prirodzených čísel od 5 do 9 (vrátane)\nc) množina rôznych písmen slova MATEMATIKA",
+        "answer": "a) {2, 4, 6, 8, 10}<br>b) {5, 6, 7, 8, 9}<br>c) {M, A, T, E, I, K} – opakujúce sa písmená nevypisujeme viackrát"
+      },
+      {
+        "id": "w3",
+        "level": "rozsirenie",
+        "space": 4,
+        "text": "Rozhodni, v ktorých prípadoch ide o množinu (teda vieme jednoznačne rozhodnúť, či objekt do súboru patrí). Svoje rozhodnutie krátko zdôvodni.\na) prirodzené čísla menšie ako 6\nb) pekné čísla\nc) žiaci tvojej triedy\nd) ťažké úlohy v učebnici",
+        "answer": "a) áno<br>b) nie – „pekné“ nie je jednoznačné, každý to vidí inak<br>c) áno – o každom žiakovi vieme rozhodnúť, či do triedy patrí<br>d) nie – „ťažké“ nie je jednoznačné"
+      },
+      {
+        "id": "w4",
+        "level": "rozsirenie",
+        "space": 4,
+        "text": "Je daná množina B = {2, 4, 6, 8}. Pri každom zápise rozhodni, či je pravdivý. Nepravdivé zápisy oprav.\na) 4 ∈ B\nb) 5 ∈ B\nc) 8 ∉ B\nd) 0 ∉ B",
+        "answer": "a) pravdivý<br>b) nepravdivý, správne 5 ∉ B<br>c) nepravdivý, správne 8 ∈ B<br>d) pravdivý"
+      },
+      {
+        "id": "w5",
+        "level": "bonus",
+        "space": 5,
+        "text": "Množina D obsahuje všetky prirodzené čísla menšie ako 40, ktoré sú deliteľné číslom 4 aj číslom 6. Zapíš D vymenovaním prvkov. Potom napíš dva pravdivé a dva nepravdivé zápisy pomocou ∈ alebo ∉ a každý prečítaj slovami.",
+        "answer": "D = {12, 24, 36}<br>Napr. pravdivé: 12 ∈ D, 8 ∉ D; nepravdivé: 8 ∈ D, 36 ∉ D."
+      }
+    ]
   }
 });

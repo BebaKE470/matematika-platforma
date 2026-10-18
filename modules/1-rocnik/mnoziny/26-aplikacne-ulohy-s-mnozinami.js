@@ -173,5 +173,44 @@ MathPlatform.registerModule({
         "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka; porovnaj svoj pocit s výsledkom úloh."
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1",
+        "level": "zaklad",
+        "space": 3,
+        "text": "V triede s 24 žiakmi má 14 žiakov sestru, 10 žiakov brata a 4 žiaci majú sestru aj brata. Koľko žiakov má aspoň jedného z týchto súrodencov?",
+        "answer": "14 + 10 − 4 = 20 žiakov"
+      },
+      {
+        "id": "w2",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Do školy dochádza 120 žiakov. Autobusom ide 70 žiakov, električkou 55 žiakov a 25 žiakov používa obe. Koľko žiakov používa aspoň jeden z týchto dopravných prostriedkov a koľko ani jeden?",
+        "answer": "Aspoň jeden: 70 + 55 − 25 = 100 žiakov<br>Ani jeden: 120 − 100 = 20 žiakov"
+      },
+      {
+        "id": "w3",
+        "level": "rozsirenie",
+        "space": 6,
+        "text": "Vo fitnescentre cvičí 50 ľudí. Posilňuje 32 ľudí, behá 25 ľudí a 13 ľudí robí oboje. Koľko ľudí iba posilňuje, koľko iba behá, koľko robí aspoň jednu z aktivít a koľko ani jednu?",
+        "answer": "Iba posilňuje: 32 − 13 = 19<br>Iba behá: 25 − 13 = 12<br>Aspoň jedna: 19 + 12 + 13 = 44<br>Ani jedna: 50 − 44 = 6"
+      },
+      {
+        "id": "w4",
+        "level": "rozsirenie",
+        "space": 4,
+        "text": "V dotazníku 40 žiakov uviedlo, že hovorí anglicky (26 žiakov) alebo nemecky (22 žiakov); každý žiak hovorí aspoň jedným z týchto jazykov. Koľko žiakov hovorí oboma jazykmi?",
+        "answer": "40 = 26 + 22 − |A ∩ N|, teda |A ∩ N| = 8 žiakov"
+      },
+      {
+        "id": "w5",
+        "level": "bonus",
+        "space": 6,
+        "text": "Zo 60 žiakov hrá 34 futbal, 28 basketbal a 12 hrá oba športy. Koľko žiakov nehrá ani jeden šport? Koľko z tých, ktorí hrajú futbal, nehrá basketbal?",
+        "answer": "Aspoň jeden šport: 34 + 28 − 12 = 50, takže ani jeden nehrá 60 − 50 = 10 žiakov.<br>Futbal, ale nie basketbal: 34 − 12 = 22 žiakov."
+      }
+    ]
   }
 });

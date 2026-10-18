@@ -171,5 +171,44 @@ MathPlatform.registerModule({
         "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka; porovnaj svoj pocit s výsledkom úloh."
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1",
+        "level": "zaklad",
+        "space": 3,
+        "text": "Urč |A|:\na) A = {1, 3, 5, 7, 9}\nb) A = {a, b}\nc) A = {4, 4, 4, 5}\nd) A = ∅",
+        "answer": "a) |A| = 5<br>b) |A| = 2<br>c) |A| = 2 (rôzne prvky sú iba 4 a 5)<br>d) |A| = 0"
+      },
+      {
+        "id": "w2",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Zapíš vymenovaním a urč počet prvkov:\na) M – kladné párne čísla menšie ako 15\nb) N – rôzne písmená slova ŠKOLA\nc) P – rôzne cifry čísla 2 252",
+        "answer": "a) M = {2, 4, 6, 8, 10, 12, 14}, |M| = 7<br>b) N = {Š, K, O, L, A}, |N| = 5<br>c) P = {2, 5}, |P| = 2"
+      },
+      {
+        "id": "w3",
+        "level": "rozsirenie",
+        "space": 4,
+        "text": "Nech U = {1, 2, 3, …, 12}, A = {x ∈ U; x je deliteľné 3}, B = {x ∈ U; x je nepárne}. Zapíš A aj B vymenovaním a urč |A| a |B|.",
+        "answer": "A = {3, 6, 9, 12}, |A| = 4<br>B = {1, 3, 5, 7, 9, 11}, |B| = 6"
+      },
+      {
+        "id": "w4",
+        "level": "rozsirenie",
+        "space": 4,
+        "text": "Nech A = {1, 2, 3} a B = {2, 3, 4, 5}. Rozhodni, či je zápis pravdivý:\na) |A| = |B|\nb) |A| < |B|\nc) A ⊆ B\nd) |A| = 3",
+        "answer": "a) nepravdivý (3 ≠ 4)<br>b) pravdivý<br>c) nepravdivý (1 ∉ B)<br>d) pravdivý"
+      },
+      {
+        "id": "w5",
+        "level": "bonus",
+        "space": 5,
+        "text": "Bez vypisovania všetkých prvkov urč počet prvkov množiny:\na) všetky prirodzené čísla od 1 do 100, ktoré sú deliteľné 7\nb) všetky trojciferné čísla deliteľné 100",
+        "answer": "a) 14 (7 · 1 až 7 · 14 = 98)<br>b) 9 (100, 200, …, 900)"
+      }
+    ]
   }
 });

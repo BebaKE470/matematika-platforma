@@ -152,5 +152,44 @@ MathPlatform.registerModule({
         "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka; porovnaj svoj pocit s výsledkom úloh."
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Nech A = {2, 4, 6, 8} a B = {4, 8, 12}. Urč A ∩ B, A ∪ B, |A ∩ B| a |A ∪ B|.",
+        "answer": "A ∩ B = {4, 8}, |A ∩ B| = 2<br>A ∪ B = {2, 4, 6, 8, 12}, |A ∪ B| = 5"
+      },
+      {
+        "id": "w2",
+        "level": "zaklad",
+        "space": 4,
+        "text": "V skupine 20 žiakov hrá 12 šach, 9 dámu a 4 hrajú obe hry. Koľko žiakov hrá aspoň jednu z hier?",
+        "answer": "|Š ∪ D| = 12 + 9 − 4 = 17 žiakov"
+      },
+      {
+        "id": "w3",
+        "level": "rozsirenie",
+        "space": 5,
+        "text": "Zo 30 žiakov sa 18 učí angličtinu, 14 nemčinu a 5 žiakov oba jazyky. Koľko žiakov sa učí aspoň jeden z týchto jazykov a koľko sa neučí ani jeden?",
+        "answer": "Aspoň jeden: 18 + 14 − 5 = 27 žiakov<br>Ani jeden: 30 − 27 = 3 žiaci"
+      },
+      {
+        "id": "w4",
+        "level": "rozsirenie",
+        "space": 4,
+        "text": "Pre množiny A, B platí |A| = 20, |B| = 15 a |A ∪ B| = 28. Urč |A ∩ B|.",
+        "answer": "28 = 20 + 15 − |A ∩ B|, teda |A ∩ B| = 7"
+      },
+      {
+        "id": "w5",
+        "level": "bonus",
+        "space": 6,
+        "text": "Zo 40 žiakov hrá 22 futbal, 18 basketbal a 9 žiakov nehrá ani jeden z týchto športov. Koľko žiakov hrá oba športy?",
+        "answer": "Aspoň jeden šport hrá 40 − 9 = 31 žiakov.<br>31 = 22 + 18 − |F ∩ K|, teda |F ∩ K| = 9 žiakov."
+      }
+    ]
   }
 });

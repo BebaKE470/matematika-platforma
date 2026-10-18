@@ -164,5 +164,44 @@ MathPlatform.registerModule({
         "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka; porovnaj svoj pocit s výsledkom úloh."
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1",
+        "level": "zaklad",
+        "space": 3,
+        "text": "Nech A = {1, 2, 3, 4} a B = {3, 4, 5, 6}. Urč A ∪ B a A ∩ B.",
+        "answer": "A ∪ B = {1, 2, 3, 4, 5, 6}<br>A ∩ B = {3, 4}"
+      },
+      {
+        "id": "w2",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Urč zjednotenie a prienik množín:\na) C = {a, b, c}, D = {c, d}\nb) E = {2, 4}, F = {1, 3}",
+        "answer": "a) C ∪ D = {a, b, c, d}, C ∩ D = {c}<br>b) E ∪ F = {1, 2, 3, 4}, E ∩ F = ∅ (množiny nemajú spoločný prvok)"
+      },
+      {
+        "id": "w3",
+        "level": "rozsirenie",
+        "space": 5,
+        "text": "Nech U = {1, 2, 3, …, 10}, P = {x ∈ U; x je párne}, Q = {x ∈ U; x > 5}. Zapíš vymenovaním P, Q, P ∪ Q a P ∩ Q.",
+        "answer": "P = {2, 4, 6, 8, 10}<br>Q = {6, 7, 8, 9, 10}<br>P ∪ Q = {2, 4, 6, 7, 8, 9, 10}<br>P ∩ Q = {6, 8, 10}"
+      },
+      {
+        "id": "w4",
+        "level": "rozsirenie",
+        "space": 4,
+        "text": "Nech A = {1, 2, 3} a B = {3, 4}. Rozhodni, či je zápis pravdivý, a zdôvodni slovami „a zároveň“ alebo „alebo“:\na) 3 ∈ A ∩ B\nb) 4 ∈ A ∪ B\nc) 1 ∈ A ∩ B\nd) 2 ∉ A ∪ B",
+        "answer": "a) pravdivý – 3 ∈ A a zároveň 3 ∈ B<br>b) pravdivý – 4 ∈ B, stačí jedna z možností<br>c) nepravdivý – 1 ∈ A, ale 1 ∉ B<br>d) nepravdivý – 2 ∈ A, teda 2 ∈ A ∪ B"
+      },
+      {
+        "id": "w5",
+        "level": "bonus",
+        "space": 6,
+        "text": "Nájdi množiny A a B, každú s aspoň tromi prvkami, pre ktoré platí A ∩ B = {2, 5} a A ∪ B = {1, 2, 3, 4, 5, 6}.",
+        "answer": "Napr. A = {1, 2, 3, 5}, B = {2, 4, 5, 6}.<br>Čísla 2 a 5 musia byť v oboch množinách; každé z čísel 1, 3, 4, 6 musí byť presne v jednej z nich (inak by bolo v prieniku, alebo by chýbalo v zjednotení)."
+      }
+    ]
   }
 });

@@ -190,5 +190,44 @@ MathPlatform.registerModule({
         "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka; porovnaj svoj pocit s výsledkom úloh."
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1",
+        "level": "zaklad",
+        "space": 8,
+        "text": "Nech U = {1, 2, 3, 4, 5, 6, 7}, A = {1, 2, 3, 4} a B = {3, 4, 5}. Nakresli Vennov diagram a zapíš prvky do jednotlivých oblastí: iba v A, v A aj B, iba v B, mimo oboch kruhov.",
+        "answer": "iba v A: 1, 2<br>v A aj B: 3, 4<br>iba v B: 5<br>mimo oboch kruhov: 6, 7"
+      },
+      {
+        "id": "w2",
+        "level": "zaklad",
+        "space": 8,
+        "text": "Nakresli štyri Vennove diagramy dvoch množín A, B v obdĺžniku U a vyfarbi vždy:\na) A ∪ B\nb) A ∩ B\nc) A − B\nd) A′",
+        "answer": "a) obidva kruhy celé<br>b) iba prekryv kruhov<br>c) časť kruhu A mimo prekryvu<br>d) všetko v obdĺžniku mimo kruhu A (vrátane časti B, ktorá je mimo A)"
+      },
+      {
+        "id": "w3",
+        "level": "rozsirenie",
+        "space": 8,
+        "text": "V triede je 28 žiakov. Na plávanie chodí 16 žiakov, na tanec 11 žiakov a 5 žiakov chodí na oboje. Nakresli Vennov diagram a zapíš počet žiakov v každej oblasti (iba plávanie, iba tanec, oboje, ani jedno).",
+        "answer": "iba plávanie: 16 − 5 = 11<br>iba tanec: 11 − 5 = 6<br>oboje: 5<br>ani jedno: 28 − (11 + 6 + 5) = 6"
+      },
+      {
+        "id": "w4",
+        "level": "rozsirenie",
+        "space": 4,
+        "text": "Zapíš symbolicky (pomocou A, B a operácií) tú časť diagramu, ktorá obsahuje:\na) prvky, ktoré sú v B, ale nie sú v A\nb) prvky, ktoré sú v A aj v B\nc) prvky, ktoré nie sú v B",
+        "answer": "a) B − A<br>b) A ∩ B<br>c) B′"
+      },
+      {
+        "id": "w5",
+        "level": "bonus",
+        "space": 6,
+        "text": "Zo 100 opýtaných pije 60 kávu, 45 čaj a 20 pije kávu aj čaj. Nakresli diagram a urč, koľko opýtaných pije iba kávu, iba čaj, aspoň jeden z nápojov a ani jeden.",
+        "answer": "iba kávu: 60 − 20 = 40<br>iba čaj: 45 − 20 = 25<br>aspoň jeden: 40 + 25 + 20 = 85<br>ani jeden: 100 − 85 = 15"
+      }
+    ]
   }
 });

@@ -180,5 +180,44 @@ MathPlatform.registerModule({
         "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka; porovnaj svoj pocit s výsledkom úloh."
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1",
+        "level": "zaklad",
+        "space": 3,
+        "text": "Nech B = {1, 2, 3, 4}. Rozhodni, či platí (áno / nie):\na) {1, 2} ⊆ B\nb) {2, 5} ⊆ B\nc) B ⊆ B",
+        "answer": "a) áno – prvky 1 aj 2 sú v B<br>b) nie – 5 ∉ B<br>c) áno – každý prvok množiny B patrí do B"
+      },
+      {
+        "id": "w2",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Nech A = {1, 2, 3, 4, 5}. Rozhodni, ktoré zápisy sú pravdivé, a pri nepravdivých vysvetli prečo:\na) 3 ∈ A\nb) {3} ⊆ A\nc) 3 ⊆ A\nd) {1, 6} ⊆ A",
+        "answer": "a) pravdivý<br>b) pravdivý<br>c) nepravdivý – 3 je prvok, nie množina; správne 3 ∈ A<br>d) nepravdivý – 6 ∉ A"
+      },
+      {
+        "id": "w3",
+        "level": "rozsirenie",
+        "space": 4,
+        "text": "Nech U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, A = {2, 4, 6, 8, 10}, B = {4, 8}, C = {1, 3}. Rozhodni, či je zápis pravdivý:\na) B ⊆ A\nb) A ⊆ B\nc) C ⊆ A\nd) B ⊆ U\ne) C ⊆ U",
+        "answer": "a) pravdivý<br>b) nepravdivý (2 ∈ A, ale 2 ∉ B)<br>c) nepravdivý (1 ∉ A)<br>d) pravdivý<br>e) pravdivý"
+      },
+      {
+        "id": "w4",
+        "level": "rozsirenie",
+        "space": 4,
+        "text": "Zapíš symbolicky:\na) číslo 5 patrí do množiny P\nb) množina Q je podmnožinou množiny R\nc) množina S nemá žiadny prvok\nd) číslo 7 nepatrí do množiny T",
+        "answer": "a) 5 ∈ P<br>b) Q ⊆ R<br>c) S = ∅<br>d) 7 ∉ T"
+      },
+      {
+        "id": "w5",
+        "level": "bonus",
+        "space": 6,
+        "text": "Vypíš všetky podmnožiny množiny M = {a, b, c} a zisti, koľko ich je. (Pomôcka: prázdna množina ∅ je podmnožinou každej množiny – žiaden jej prvok nechýba v M, lebo žiadny nemá.)",
+        "answer": "∅, {a}, {b}, {c}, {a, b}, {a, c}, {b, c}, {a, b, c}<br>Spolu 8 podmnožín."
+      }
+    ]
   }
 });

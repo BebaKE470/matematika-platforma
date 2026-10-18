@@ -155,5 +155,44 @@ MathPlatform.registerModule({
         "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka; porovnaj svoj pocit s výsledkom úloh."
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1",
+        "level": "zaklad",
+        "space": 5,
+        "text": "Nech A = {1, 2, 3, 4}, B = {3, 4, 5} a C = {4, 5, 6}. Urč:\na) (A ∩ B) ∩ C\nb) (A ∪ B) ∩ C\nc) A ∩ (B ∪ C)",
+        "answer": "a) A ∩ B = {3, 4}, potom (A ∩ B) ∩ C = {4}<br>b) A ∪ B = {1, 2, 3, 4, 5}, potom (A ∪ B) ∩ C = {4, 5}<br>c) B ∪ C = {3, 4, 5, 6}, potom A ∩ (B ∪ C) = {3, 4}"
+      },
+      {
+        "id": "w2",
+        "level": "zaklad",
+        "space": 5,
+        "text": "Nech U = {1, 2, 3, …, 8}, A = {2, 4, 6, 8} a B = {1, 2, 3, 4}. Urč:\na) (A ∪ B)′\nb) A′ ∩ B′\nc) (A ∩ B)′\nVšimni si výsledky a) a b).",
+        "answer": "a) A ∪ B = {1, 2, 3, 4, 6, 8}, (A ∪ B)′ = {5, 7}<br>b) A′ = {1, 3, 5, 7}, B′ = {5, 6, 7, 8}, A′ ∩ B′ = {5, 7}<br>c) A ∩ B = {2, 4}, (A ∩ B)′ = {1, 3, 5, 6, 7, 8}<br>Výsledky a) a b) sú rovnaké."
+      },
+      {
+        "id": "w3",
+        "level": "rozsirenie",
+        "space": 6,
+        "text": "Nech A = {1, 2, 3, 4, 5}, B = {4, 5, 6, 7} a C = {5, 7, 8}. Urč A ∩ (B ∪ C) a (A ∩ B) ∪ (A ∩ C) a porovnaj výsledky.",
+        "answer": "A ∩ (B ∪ C): B ∪ C = {4, 5, 6, 7, 8}, výsledok {4, 5}<br>(A ∩ B) ∪ (A ∩ C): {4, 5} ∪ {5} = {4, 5}<br>Výsledky sú rovnaké."
+      },
+      {
+        "id": "w4",
+        "level": "rozsirenie",
+        "space": 5,
+        "text": "Nech A = {1, 2, 3, 4} a B = {3, 4, 5, 6}. Urč (A − B) ∪ (B − A) a (A ∪ B) − (A ∩ B). Čo si všimol/a? Opíš slovami, ktoré prvky tvoria tento výsledok.",
+        "answer": "(A − B) ∪ (B − A) = {1, 2, 5, 6}<br>(A ∪ B) − (A ∩ B) = {1, 2, 5, 6}<br>Výsledky sú rovnaké: sú to prvky, ktoré patria práve do jednej z množín A, B (nie do oboch)."
+      },
+      {
+        "id": "w5",
+        "level": "bonus",
+        "space": 6,
+        "text": "Nech U = {1, 2, 3, …, 8}. Nájdi množiny A, B, C (podmnožiny U) tak, aby platilo (A ∩ B) − C = {2}.",
+        "answer": "Napr. A = {1, 2, 3}, B = {2, 3, 4}, C = {3}: A ∩ B = {2, 3}, po odčítaní C ostane {2}.<br>Číslo 2 musí byť v A aj v B a nesmie byť v C; iné prvky prieniku A ∩ B musia byť v C."
+      }
+    ]
   }
 });

@@ -159,5 +159,44 @@ MathPlatform.registerModule({
         "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka; porovnaj svoj pocit s výsledkom úloh."
       }
     ]
+  },
+  "worksheet": {
+    "tasks": [
+      {
+        "id": "w1",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Nech U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}. Zapíš vymenovaním prvkov:\na) A = {x ∈ U; x je párne}\nb) B = {x ∈ U; x > 7}\nc) C = {x ∈ U; x je deliteľné 3}",
+        "answer": "a) A = {2, 4, 6, 8, 10}<br>b) B = {8, 9, 10}<br>c) C = {3, 6, 9}"
+      },
+      {
+        "id": "w2",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Nech U = {1, 2, 3, 4, 5, 6, 7, 8}. Zapíš pomocou charakteristickej vlastnosti v tvare {x ∈ U; …}:\na) A = {1, 2, 3, 4}\nb) B = {2, 4, 6, 8}\nc) C = {5, 6, 7, 8}",
+        "answer": "a) A = {x ∈ U; x &lt; 5} (alebo x ≤ 4)<br>b) B = {x ∈ U; x je párne}<br>c) C = {x ∈ U; x &gt; 4} (alebo x ≥ 5)"
+      },
+      {
+        "id": "w3",
+        "level": "rozsirenie",
+        "space": 5,
+        "text": "Nech U = {−3, −2, −1, 0, 1, 2, 3}. Zapíš vymenovaním prvkov:\na) {x ∈ U; x < 0}\nb) {x ∈ U; −1 ≤ x ≤ 2}\nc) {x ∈ U; x je nepárne}",
+        "answer": "a) {−3, −2, −1}<br>b) {−1, 0, 1, 2}<br>c) {−3, −1, 1, 3}"
+      },
+      {
+        "id": "w4",
+        "level": "rozsirenie",
+        "space": 4,
+        "text": "Podmienka je v oboch prípadoch rovnaká: D = {x ∈ U; x > 2}. Zapíš D vymenovaním, ak\na) U = {1, 2, 3, 4}\nb) U = {0, 1, 2}\nČo ti ukazuje porovnanie výsledkov o úlohe množiny U?",
+        "answer": "a) D = {3, 4}<br>b) D = ∅ (žiadne číslo z U nie je väčšie ako 2)<br>Rovnaká podmienka dáva pri inej množine U inú množinu – preto musíme vždy vedieť, z čoho vyberáme."
+      },
+      {
+        "id": "w5",
+        "level": "bonus",
+        "space": 5,
+        "text": "Nech U = {1, 2, 3, …, 20}. Zapíš vymenovaním prvkov:\na) E = {x ∈ U; x je párne a zároveň x > 12}\nb) F = {x ∈ U; x je deliteľné 5 alebo x < 3}",
+        "answer": "a) E = {14, 16, 18, 20}<br>b) F = {1, 2, 5, 10, 15, 20}"
+      }
+    ]
   }
 });
