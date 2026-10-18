@@ -146,6 +146,12 @@
 
   // --- Sheet HTML -------------------------------------------------------
 
+  // 1-based position of a topic within its tematický celok (the order the
+  // catalog shows it in), or 0 if it can't be found.
+  function unitPos(meta) {
+    return P.modulesForUnit(meta.year, meta.unit).findIndex(m => m.id === meta.id) + 1;
+  }
+
   function customItemsToTasks(items) {
     return items.filter(it => it.text.trim()).map(it => ({
       text: it.text,
@@ -172,7 +178,7 @@
       }
       const acts = mod.student.activities || [];
       const mctx = Object.assign({ unit: meta.unit, topic: meta.topic }, ctx);
-      body += `<section class="print-section-head"><div class="print-eyebrow">${esc(meta.unit || '')}</div><h2>${esc(meta.topic || '')}</h2></section>`;
+      body += `<section class="print-section-head"><div class="print-eyebrow">${esc(meta.unit || '')}</div><h2>${unitPos(meta) ? `<span class="print-topic-num">${unitPos(meta)}.</span> ` : ''}${esc(meta.topic || '')}</h2></section>`;
       if (s.theoryMode === 'module') body += PR.renderActivities(acts.filter(isTheory), mctx);
       else if (s.theoryMode === 'blank') {
         body += `<section class="print-block print-theory-blank"><h3 class="print-group-head">Teória – dopíš ručne</h3><div class="print-lines" style="height:calc(${s.theoryLines} * 1.7em)" aria-hidden="true"></div></section>`;
