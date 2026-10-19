@@ -26,6 +26,14 @@
 @media print {
   .ws-layout { display: block; }
   .ws-layout .print-sheet { border: 0; padding: 0; border-radius: 0; }
+  /* Worksheet is printed smaller than a single-module handout (14px root →
+     12px; everything is rem-based), but the sheet's main title keeps its
+     size: 1.5 × the 14px root. */
+  html:has(#wsSheet) { font-size: 12px; }
+  #wsSheet .print-sheet-title h1 { font-size: 21px; }
+  /* Labels sized in px don't follow the root font-size. */
+  #wsSheet .print-eyebrow, #wsSheet .print-label { font-size: 9.5px; }
+  #wsSheet .print-section-head .print-eyebrow { font-size: 11px; }
 }
 
 .ws-theory { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 6px 0; }
