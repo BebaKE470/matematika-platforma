@@ -322,5 +322,50 @@ MathPlatform.registerModule({
         prompt: 'Označ, ako dobre by si teraz vedel/a vyriešiť podobnú rovnicu bez aplikácie. Nie je to známka.'
       }
     ]
+  },
+  worksheet: {
+    tasks: [
+      // --- ZÁKLAD: |L(x)| = k, |L(x)| = |R(x)|
+      { id: 'w-z1', level: 'zaklad', space: 3, text: 'Vyrieš rovnicu: |x − 4| = 3.',
+        answer: '<p>x = 7 alebo x = 1. Množina riešení: {1, 7}.</p>' },
+      { id: 'w-z2', level: 'zaklad', space: 4, text: 'Vyrieš rovnicu: |2x + 6| = 10. Urob skúšku.',
+        answer: '<p>2x + 6 = 10 ⇒ x = 2; 2x + 6 = −10 ⇒ x = −8.</p><p>Množina riešení: {−8, 2}.</p>' },
+      { id: 'w-z3', level: 'zaklad', space: 3, text: 'Vyrieš rovnicu: |3x − 1| = 0.',
+        answer: '<p>Absolútna hodnota je nulová, keď je nulový výraz: 3x − 1 = 0 ⇒ x = 1/3.</p>' },
+      { id: 'w-z4', level: 'zaklad', space: 3, text: 'Vyrieš rovnicu: |5 − x| = −2. Zdôvodni výsledok jednou vetou.',
+        answer: '<p>Rovnica nemá riešenie, pretože absolútna hodnota (vzdialenosť) nemôže byť záporná.</p>' },
+      { id: 'w-z5', level: 'zaklad', space: 4, text: 'Vyrieš rovnicu: |4x + 2| = 6.',
+        answer: '<p>4x + 2 = 6 ⇒ x = 1; 4x + 2 = −6 ⇒ x = −2.</p><p>Množina riešení: {−2, 1}.</p>' },
+      { id: 'w-z6', level: 'zaklad', space: 3, text: 'Nájdi všetky čísla, ktoré sú na číselnej osi od čísla 2 vzdialené 5 jednotiek. Zapíš to rovnicou s absolútnou hodnotou a vyrieš ju.',
+        answer: '<p>|x − 2| = 5 ⇒ x = 7 alebo x = −3.</p>' },
+      { id: 'w-z7', level: 'zaklad', space: 4, text: 'Vyrieš rovnicu: |6 − 2x| = 4.',
+        answer: '<p>6 − 2x = 4 ⇒ x = 1; 6 − 2x = −4 ⇒ x = 5.</p><p>Množina riešení: {1, 5}.</p>' },
+      { id: 'w-z8', level: 'zaklad', space: 5, text: 'Vyrieš rovnicu: |2x − 1| = |x + 4|. Urob skúšku.',
+        answer: '<p>2x − 1 = x + 4 ⇒ x = 5; 2x − 1 = −(x + 4) ⇒ 3x = −3 ⇒ x = −1.</p><p>Skúška: x = 5: |9| = 9 a |9| = 9; x = −1: |−3| = 3 a |3| = 3.</p><p>Množina riešení: {−1, 5}.</p>' },
+
+      // --- ROZŠÍRENIE: |L(x)| = R(x) s podmienkou, súčet dvoch absolútnych hodnôt
+      { id: 'w-r1', level: 'rozsirenie', space: 6, text: 'Vyrieš rovnicu: |x − 3| = 2x − 3. Najprv zapíš podmienku.',
+        answer: '<p>Podmienka: 2x − 3 ≥ 0, teda x ≥ 3/2.</p><p>x − 3 = 2x − 3 ⇒ x = 0 — nespĺňa podmienku, vyradíme.</p><p>x − 3 = −(2x − 3) ⇒ 3x = 6 ⇒ x = 2 — spĺňa podmienku.</p><p>Skúška: |2 − 3| = 1 a 2·2 − 3 = 1. Množina riešení: {2}.</p>' },
+      { id: 'w-r2', level: 'rozsirenie', space: 6, text: 'Vyrieš rovnicu: |2x + 1| = x + 4.',
+        answer: '<p>Podmienka: x + 4 ≥ 0, teda x ≥ −4.</p><p>2x + 1 = x + 4 ⇒ x = 3 (spĺňa podmienku).</p><p>2x + 1 = −(x + 4) ⇒ 3x = −5 ⇒ x = −5/3 (spĺňa podmienku).</p><p>Skúška: x = 3: |7| = 7 a 7; x = −5/3: |−7/3| = 7/3 a 7/3. Množina riešení: {−5/3, 3}.</p>' },
+      { id: 'w-r3', level: 'rozsirenie', space: 6, text: 'Vyrieš rovnicu: |3x − 6| = 4 − x.',
+        answer: '<p>Podmienka: 4 − x ≥ 0, teda x ≤ 4.</p><p>3x − 6 = 4 − x ⇒ 4x = 10 ⇒ x = 5/2 (spĺňa).</p><p>3x − 6 = −(4 − x) = x − 4 ⇒ 2x = 2 ⇒ x = 1 (spĺňa).</p><p>Skúška: x = 5/2: |3/2| = 3/2 a 3/2; x = 1: |−3| = 3 a 3. Množina riešení: {1, 5/2}.</p>' },
+      { id: 'w-r4', level: 'rozsirenie', space: 6, text: 'Vyrieš rovnicu: |x + 2| = 3x + 10. Ktorého kandidáta musíš vyradiť a prečo?',
+        answer: '<p>Podmienka: 3x + 10 ≥ 0, teda x ≥ −10/3.</p><p>x + 2 = 3x + 10 ⇒ x = −4 — nespĺňa podmienku (−4 &lt; −10/3), vyradíme.</p><p>x + 2 = −(3x + 10) ⇒ 4x = −12 ⇒ x = −3 — spĺňa.</p><p>Skúška: |−1| = 1 a 3·(−3) + 10 = 1. Množina riešení: {−3}.</p>' },
+      { id: 'w-r5', level: 'rozsirenie', space: 10, text: 'Vyrieš rovnicu: |x − 1| + |x + 3| = 8. Zapíš kritické body, intervaly a kontrolu kandidátov.',
+        answer: '<p>Kritické body: x = 1 a x = −3.</p><p>x &lt; −3: −(x − 1) − (x + 3) = −2x − 2 = 8 ⇒ x = −5 (patrí do intervalu).</p><p>−3 ≤ x &lt; 1: −(x − 1) + (x + 3) = 4, rovnica 4 = 8 nemá riešenie.</p><p>x ≥ 1: (x − 1) + (x + 3) = 2x + 2 = 8 ⇒ x = 3 (patrí do intervalu).</p><p>Množina riešení: {−5, 3}.</p>' },
+      { id: 'w-r6', level: 'rozsirenie', space: 10, text: 'Vyrieš rovnicu: |2x − 2| + |x + 1| = 6.',
+        answer: '<p>Kritické body: x = 1 a x = −1.</p><p>x &lt; −1: −(2x − 2) − (x + 1) = −3x + 1 = 6 ⇒ x = −5/3 (patrí).</p><p>−1 ≤ x &lt; 1: −(2x − 2) + (x + 1) = −x + 3 = 6 ⇒ x = −3 (nepatrí do intervalu, vyradíme).</p><p>x ≥ 1: (2x − 2) + (x + 1) = 3x − 1 = 6 ⇒ x = 7/3 (patrí).</p><p>Množina riešení: {−5/3, 7/3}.</p>' },
+
+      // --- BONUS
+      { id: 'w-b1', level: 'bonus', space: 12, text: 'Vyrieš rovnicu: |x| + |x − 2| + |x + 2| = 6. (Tri kritické body.)',
+        answer: '<p>Kritické body: −2, 0, 2.</p><p>x &lt; −2: −3x = 6 ⇒ x = −2 (nepatrí do intervalu).</p><p>−2 ≤ x &lt; 0: −x − (x − 2) + (x + 2) = −x + 4 = 6 ⇒ x = −2 (patrí).</p><p>0 ≤ x &lt; 2: x − (x − 2) + (x + 2) = x + 4 = 6 ⇒ x = 2 (nepatrí).</p><p>x ≥ 2: 3x = 6 ⇒ x = 2 (patrí).</p><p>Množina riešení: {−2, 2}.</p>' },
+      { id: 'w-b2', level: 'bonus', space: 10, text: 'Vyrieš rovnicu: |x| + |x − 4| = 4. Čo si všimneš pri strednom intervale? Zapíš množinu riešení.',
+        answer: '<p>Kritické body: 0 a 4.</p><p>x &lt; 0: −x − (x − 4) = −2x + 4 = 4 ⇒ x = 0 (nepatrí do intervalu).</p><p>0 ≤ x &lt; 4: x − (x − 4) = 4, rovnica 4 = 4 platí pre každé x z intervalu.</p><p>x ≥ 4: 2x − 4 = 4 ⇒ x = 4 (patrí).</p><p>Množina riešení: ⟨0; 4⟩. (Súčet vzdialeností od 0 a od 4 je 4 pre každý bod medzi nimi.)</p>' },
+      { id: 'w-b3', level: 'bonus', space: 8, text: 'Žiak vyriešil rovnicu |x − 1| = 2x − 5 a napísal x ∈ {2, 4}. Nájdi chybu v jeho postupe a napíš správnu množinu riešení.',
+        answer: '<p>Chýba podmienka 2x − 5 ≥ 0, teda x ≥ 5/2.</p><p>x − 1 = 2x − 5 ⇒ x = 4 (spĺňa).</p><p>x − 1 = −(2x − 5) ⇒ 3x = 6 ⇒ x = 2 — nespĺňa podmienku (skúška: |1| = 1, ale 2·2 − 5 = −1).</p><p>Správne: x ∈ {4}.</p>' },
+      { id: 'w-b4', level: 'bonus', space: 10, text: 'Pre aké hodnoty parametra k má rovnica |x − 2| + |x + 1| = k žiadne, práve jedno, práve dve, nekonečne veľa riešení? Zdôvodni pomocou vzdialeností na číselnej osi.',
+        answer: '<p>Ľavá strana je súčet vzdialeností bodu x od čísel 2 a −1. Čísla 2 a −1 sú od seba vzdialené 3.</p><p>Pre x medzi −1 a 2 (vrátane) je súčet presne 3, mimo tohto úseku je väčší ako 3.</p><p>k &lt; 3: žiadne riešenie. k = 3: nekonečne veľa riešení (celý interval ⟨−1; 2⟩). k &gt; 3: práve dve riešenia (jedno vľavo od −1, jedno vpravo od 2). Práve jedno riešenie nenastane pre žiadne k.</p>' }
+    ]
   }
 });
