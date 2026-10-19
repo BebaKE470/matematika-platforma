@@ -62,6 +62,10 @@
         // boolean `theory`.)
         theoryMode: ['module', 'blank', 'none'].includes(s.theoryMode) ? s.theoryMode : (s.theory === false ? 'none' : 'module'),
         theoryLines: Number.isInteger(s.theoryLines) ? Math.max(1, Math.min(40, s.theoryLines)) : 8,
+        // Recap of the previous lesson (the module's phase 'OPAKUJ' activity),
+        // switched separately from the new theory. Older saves had it bundled
+        // into theoryMode 'module'.
+        recap: typeof s.recap === 'boolean' ? s.recap : (s.theoryMode === undefined ? s.theory !== false : s.theoryMode === 'module'),
         tasks: s.tasks !== false,
         reflection: s.reflection === true,
         extra: Array.isArray(s.extra) ? s.extra.map(x => str(x, 80)) : null, // null = all
@@ -106,7 +110,7 @@
     return { id: newId(), name: 'Pracovný list', updated: Date.now(), header: true, showKey: false, keyOnly: false, sectionBreaks: false, sections: [] };
   }
   function moduleSection(moduleId) {
-    return { kind: 'module', moduleId, theoryMode: 'module', theoryLines: 8, tasks: true, reflection: false, extra: null, extraSpace: null };
+    return { kind: 'module', moduleId, theoryMode: 'module', theoryLines: 8, recap: true, tasks: true, reflection: false, extra: null, extraSpace: null };
   }
 
   function downloadJson(filename, data) {
@@ -125,7 +129,8 @@
     if (!modCache.has(id)) modCache.set(id, P.loadModule(id).catch(() => null));
     return modCache.get(id);
   }
-  const isTheory = a => PR.THEORY_TYPES.has(a.type) && a.type !== 'intro';
+  const isRecap = a => a.type === 'explain' && a.phase === 'OPAKUJ';
+  const isTheory = a => PR.THEORY_TYPES.has(a.type) && a.type !== 'intro' && !isRecap(a);
   const isTask = a => !PR.THEORY_TYPES.has(a.type) && a.type !== 'reflection';
   const extrasOf = mod => (mod && mod.worksheet && Array.isArray(mod.worksheet.tasks)) ? mod.worksheet.tasks.filter(t => t && t.id) : [];
   const readyModules = () => P.sortedModules().filter(m => m.status === 'ready');
@@ -179,6 +184,7 @@
       const acts = mod.student.activities || [];
       const mctx = Object.assign({ unit: meta.unit, topic: meta.topic }, ctx);
       body += `<section class="print-section-head"><div class="print-eyebrow">${esc(meta.unit || '')}</div><h2>${unitPos(meta) ? `<span class="print-topic-num">${unitPos(meta)}.</span> ` : ''}${esc(meta.topic || '')}</h2></section>`;
+      if (s.recap) body += PR.renderActivities(acts.filter(isRecap), mctx);
       if (s.theoryMode === 'module') body += PR.renderActivities(acts.filter(isTheory), mctx);
       else if (s.theoryMode === 'blank') {
         body += `<section class="print-block print-theory-blank"><h3 class="print-group-head">Teória – dopíš ručne</h3><div class="print-lines" style="height:calc(${s.theoryLines} * 1.7em)" aria-hidden="true"></div></section>`;
@@ -375,8 +381,9 @@
       const extras = extrasOf(mod);
       return `<div class="card ws-card">
         <div class="ws-card-head"><div><div class="print-eyebrow">${esc(meta.unit || '')}</div><strong>${esc(meta.topic)}</strong></div>${ctl(i)}</div>
+        ${acts.some(isRecap) ? chk(i, 'recap', s.recap, 'Zhrnutie z minulej hodiny') : ''}
         <div class="ws-theory">
-          <label class="ws-inline">Teória:
+          <label class="ws-inline">Nová teória:
             <select data-i="${i}" data-f="theoryMode">
               <option value="module" ${s.theoryMode === 'module' ? 'selected' : ''}>z modulu (${acts.filter(isTheory).length})</option>
               <option value="blank" ${s.theoryMode === 'blank' ? 'selected' : ''}>voľné riadky na dopísanie</option>
