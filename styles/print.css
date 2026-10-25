@@ -128,3 +128,33 @@
 .print-section-head { break-inside: avoid; page-break-inside: avoid; }
 .ws-break-sections .print-section-head { break-before: page; page-break-before: always; }
 .ws-break-sections .print-sheet-title + .print-section-head { break-before: auto; page-break-before: auto; }
+
+/* Compact theory on paper: the on-screen building blocks (.formula,
+   .steps, .term-item, .warning, .example, .remember) have generous padding
+   and gaps meant for a projector or phone; on a printed sheet that only
+   costs pages. Same blocks and colours, just tighter. */
+@media print {
+  .print-sheet .print-block h2 { margin-bottom: 3px; }
+  .print-sheet .formula { margin: 6px 0; padding: 6px 12px; border-radius: 8px; font-size: 1.05rem; line-height: 1.3; }
+  .print-sheet .formula .mini-label { margin-bottom: 2px; }
+  .print-sheet .formula-note { margin-top: 3px; font-size: .8rem; line-height: 1.3; }
+  .print-sheet .remember, .print-sheet .example, .print-sheet .warning { margin: 6px 0; padding: 6px 10px; border-radius: 6px; }
+  .print-sheet .warning { padding-left: 32px; border-left-width: 4px; }
+  .print-sheet .warning::before { left: 8px; top: 7px; width: 17px; height: 17px; font-size: .7rem; line-height: 17px; }
+  .print-sheet .example p { margin: 2px 0; }
+  .print-sheet .steps { gap: 3px; margin: 6px 0; }
+  .print-sheet .steps > li { min-height: 0; padding: 4px 10px 4px 34px; border-radius: 6px; }
+  .print-sheet .steps > li::before { left: 7px; top: 4px; width: 20px; height: 20px; font-size: .75rem; }
+  .print-sheet .term-list { gap: 4px; margin: 6px 0; }
+  .print-sheet .term-item { grid-template-columns: 30px 1fr; gap: 1px 10px; padding: 4px 10px; border-radius: 6px; }
+  .print-sheet .term-symbol { width: 28px; height: 28px; font-size: .95rem; }
+  .print-sheet .term-name { font-size: .95rem; }
+  .print-sheet .term-rule, .print-sheet .term-example { font-size: .85rem; margin-top: 0; }
+  .print-sheet .chain { gap: 5px; margin: 6px 0; }
+  .print-sheet .chain span { padding: 3px 8px; }
+  .print-sheet .compare { gap: 6px; margin: 6px 0; }
+  .print-sheet .compare > div { padding: 6px 10px; }
+  .print-sheet .table-wrap { margin: 4px 0; }
+  .print-sheet .truth { min-width: 0; }
+  .print-sheet .truth th, .print-sheet .truth td { padding: 3px 7px; }
+}
