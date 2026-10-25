@@ -209,6 +209,24 @@
     "file": "modules/1-rocnik/mnoziny/19-kardinalita-mnoziny.js"
   },
   {
+    "id": "1-u02-h019b",
+    "year": 1,
+    "unit": "Množiny",
+    "unitOrder": 2,
+    "topic": "Kardinalita a podmnožiny – precvičovanie",
+    "lesson": "Hodina 19 – precvičovanie",
+    "lessonOrder": 19,
+    "time": "18–25 min",
+    "status": "ready",
+    "type": "Slovné zadanie → zápis množiny → kardinalita → všetky podmnožiny → zákonitosť",
+    "skills": [
+      "zápis množiny",
+      "kardinalita",
+      "podmnožiny"
+    ],
+    "file": "modules/1-rocnik/mnoziny/19b-kardinalita-podmnoziny-precvicovanie.js"
+  },
+  {
     "id": "1-u02-h020",
     "year": 1,
     "unit": "Množiny",
