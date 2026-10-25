@@ -239,7 +239,7 @@
         ctx.key.push({ n, label, html: t.answer });
       }
     }
-    return `<div class="print-extra-task print-task"><div class="print-extra-body">${num}${body}</div>${space ? `<div class="print-lines" style="height:calc(${space} * 1.7em)" aria-hidden="true"></div>` : ''}</div>`;
+    return `<div class="print-extra-task print-task"><div class="print-extra-body">${num}${body}</div>${space ? `<div class="print-lines" style="height:calc(${space} * var(--ln, 1.7em))" aria-hidden="true"></div>` : ''}</div>`;
   }
 
   function renderExtraTasks(tasks, ctx) {

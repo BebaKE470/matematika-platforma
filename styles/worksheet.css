@@ -34,6 +34,21 @@
   /* Labels sized in px don't follow the root font-size. */
   #wsSheet .print-eyebrow, #wsSheet .print-label { font-size: 9.5px; }
   #wsSheet .print-section-head .print-eyebrow { font-size: 11px; }
+
+  /* Compact layout: tighter line spacing, smaller gaps between blocks and
+     ruled work lines, a smaller topic heading. */
+  @page { margin: 1cm; }
+  #wsSheet { line-height: 1.3; --ln: 1.5em; }
+  #wsSheet p, #wsSheet ul, #wsSheet ol { margin-top: 0; margin-bottom: 4px; }
+  #wsSheet .print-block { margin-bottom: 6px; }
+  #wsSheet .print-extra-task { margin-bottom: 5px; }
+  #wsSheet .print-sheet-title { margin-bottom: 8px; }
+  #wsSheet .print-name-line { margin-top: 6px; }
+  #wsSheet .print-section-head { margin: 12px 0 5px; padding-top: 6px; border-top-width: 2px; }
+  #wsSheet .print-section-head h2 { font-size: 1.35rem; margin-bottom: 2px; }
+  #wsSheet .print-group-head { margin: 8px 0 3px; }
+  #wsSheet .print-lines { margin: 3px 0; }
+  #wsSheet .print-key-item { margin-bottom: 4px; }
 }
 
 .ws-theory { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 6px 0; }

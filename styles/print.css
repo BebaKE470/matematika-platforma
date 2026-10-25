@@ -60,7 +60,7 @@
 .print-reflection-table td.print-mark-cell { text-align: center; vertical-align: middle; }
 .print-legend { color: var(--muted); font-size: .88rem; margin: 4px 0 8px; }
 
-.print-lines { margin: 6px 0; height: calc(2 * 1.7em); background-image: repeating-linear-gradient(to bottom, transparent, transparent calc(1.7em - 1px), #8a948f calc(1.7em - 1px), #8a948f 1.7em); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.print-lines { margin: 6px 0; height: calc(2 * var(--ln, 1.7em)); background-image: repeating-linear-gradient(to bottom, transparent, transparent calc(var(--ln, 1.7em) - 1px), #8a948f calc(var(--ln, 1.7em) - 1px), #8a948f var(--ln, 1.7em)); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 .print-answer-line { display: flex; align-items: baseline; gap: 8px; margin: 6px 0; }
 .print-blank-line { flex: 1; border-bottom: 1px solid #1c2c27; min-width: 120px; }
 
