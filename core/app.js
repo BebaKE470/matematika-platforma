@@ -39,7 +39,7 @@
     { name: 'worksheetAdd', test: p => p[0] === 'worksheet-add', teacher: true, view: p => window.MathWorksheet.addModule(p[1]) },
     { name: 'teacherLive', test: p => p[0] === 'teacher-live', teacher: true, view: p => T.teacherLive(p[1]) },
     { name: 'teacherExam', test: p => p[0] === 'teacher-exam', teacher: true, view: p => T.teacherExam(p[1], p[2]) },
-    { name: 'examPrint', test: p => p[0] === 'exam-print', teacher: true, view: p => T.examPrint(p[1], p[2]) },
+    { name: 'examPrint', test: p => p[0] === 'exam-print', teacher: true, view: p => T.examPrint(p[1], p[2], p[3]) },
   ];
 
   function findRoute(parts) {

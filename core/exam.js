@@ -129,6 +129,33 @@
     return { tasks, total, bonus, max, percent };
   }
 
+  // Ponechá iba vybrané úlohy (učiteľka si ich volí pred spustením písomky). Zmení aj
+  // kľúč (žiakom sa nesmie zverejniť kľúč k úlohám, ktoré nemali) a prečísluje názvy
+  // („Úloha 1, 3, 5“ → „Úloha 1, 2, 3“). Prázdny výber = všetky úlohy.
+  function filterExam(exam, taskIds) {
+    if (!exam || !Array.isArray(taskIds) || !taskIds.length) return exam;
+    const keep = new Set(taskIds);
+    const out = Object.assign({}, exam, { groups: {} });
+    Object.keys(exam.groups).forEach(g => {
+      let n = 0;
+      out.groups[g] = Object.assign({}, exam.groups[g], {
+        tasks: exam.groups[g].tasks.filter(t => keep.has(t.id)).map(t => {
+          n++;
+          return Object.assign({}, t, { title: String(t.title).replace(/^Úloha \d+/, 'Úloha ' + n) });
+        }),
+      });
+    });
+    out.bonusTasks = (exam.bonusTasks || []).filter(id => keep.has(id));
+    if (exam.key) {
+      out.key = {};
+      Object.keys(exam.key).forEach(g => {
+        out.key[g] = {};
+        keep.forEach(id => { if (exam.key[g] && exam.key[g][id]) out.key[g][id] = exam.key[g][id]; });
+      });
+    }
+    return out;
+  }
+
   // Zadania bez kľúča – toto sa posiela žiakom.
   function publicExam(exam) {
     return { id: exam.id, title: exam.title, minutes: exam.minutes, instructions: exam.instructions, groups: exam.groups, bonusTasks: exam.bonusTasks || [], reflection: exam.reflection || null };
@@ -224,7 +251,7 @@
       Object.keys(all).forEach(k => { if (!all[k] || now - (all[k].at || 0) > KEEP_MS) delete all[k]; });
       all[storeKey(S.code, S.nick)] = {
         at: now, exam: S.exam, moduleId: S.moduleId, group: S.group, answers: S.answers,
-        submitted: S.submitted, leaves: S.leaves, taskIdx: S.taskIdx, revealedKey: S.revealedKey, self: S.self,
+        submitted: S.submitted, leaves: S.leaves, taskIdx: S.taskIdx, revealedKey: S.revealedKey, self: S.self, selfSent: S.selfSent,
       };
       localStorage.setItem(STORE_KEY, JSON.stringify(all));
     } catch (_) { /* localStorage nedostupné – písomka funguje, len bez zálohy */ }
@@ -275,6 +302,7 @@
       taskIdx: sameExam ? (saved.taskIdx || 0) : 0,
       revealedKey: sameExam ? (saved.revealedKey || null) : null,
       self: sameExam ? (saved.self || {}) : {},
+      selfSent: sameExam ? !!saved.selfSent : false,
       screen: 'task', confirming: false, sendOk: null, sendTimer: null, mounted: false, lastInput: null, app: null,
     };
     document.addEventListener('visibilitychange', onVisibility);
@@ -553,7 +581,16 @@
           <strong>${esc(s)}</strong>
           <div class="reflection-buttons">${REFLECTION_LEVELS.map(([v, l]) => `<button type="button" data-s="${esc(s)}" data-v="${v}" class="${S.self[s] === v ? 'selected' : ''}">${LEVEL_ICON[v]} ${esc(l)}</button>`).join('')}</div>
         </div>`).join('')}</div>
+      <div class="row">
+        <button type="button" class="btn" id="examSelfSend" ${Object.keys(S.self).length ? '' : 'disabled'}>Odoslať sebareflexiu</button>
+        <span class="muted" id="examSelfState">${selfStateText()}</span>
+      </div>
     </section>`;
+  }
+
+  function selfStateText() {
+    if (S.selfSent) return 'Odoslané učiteľke ✓';
+    return Object.keys(S.self).length ? 'Zatiaľ neodoslané. Stlač „Odoslať sebareflexiu“.' : 'Vyber aspoň jednu možnosť.';
   }
 
   function renderDone() {
@@ -582,10 +619,24 @@
     $$('.exam-reflection [data-s]').forEach(btn => {
       btn.onclick = () => {
         S.self[btn.dataset.s] = btn.dataset.v;
-        $$('.exam-reflection [data-s]').filter(x => x.dataset.s === btn.dataset.s).forEach(x => x.classList.toggle('selected', x === btn));
-        touch();
+        S.selfSent = false;
+        $('.exam-reflection [data-s]').filter(x => x.dataset.s === btn.dataset.s).forEach(x => x.classList.toggle('selected', x === btn));
+        $('#examSelfSend').disabled = false;
+        $('#examSelfState').textContent = selfStateText();
+        saveLocal();
       };
     });
+    if ($('#examSelfSend')) $('#examSelfSend').onclick = async () => {
+      $('#examSelfSend').disabled = true;
+      $('#examSelfState').textContent = 'Odosielam…';
+      clearTimeout(S.sendTimer);
+      await sendNow();
+      if (!S || !$('#examSelfState')) return;
+      S.selfSent = !!S.sendOk;
+      saveLocal();
+      $('#examSelfState').textContent = S.selfSent ? 'Odoslané učiteľke ✓' : 'Odoslanie sa nepodarilo (spojenie s učiteľkou je prerušené). Skús to znova.';
+      $('#examSelfSend').disabled = S.selfSent;
+    };
     $('#examResend').onclick = async () => {
       $('#examSendState').textContent = 'Odosielam…';
       await sendNow();
@@ -595,7 +646,7 @@
 
   window.MathExam = {
     // logika
-    parseNumber, equalNumber, gradeStep, gradeSubmission, publicExam, isAnswered,
+    parseNumber, equalNumber, gradeStep, gradeSubmission, publicExam, filterExam, isAnswered,
     formatValue, formatKey, fmtPts, resultTasksHtml, fetchExam, EMPTY_SET, NONE,
     // žiak
     loadSaved, begin, play, end, active, onTeacher,

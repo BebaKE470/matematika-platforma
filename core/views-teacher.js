@@ -550,6 +550,15 @@
     return `<p class="exam-self"><strong>Sebareflexia:</strong> ${marked.map(sk => `${SELF_ICON[self[sk]]} ${esc(sk)}`).join(' · ')}</p>`;
   }
 
+  // Krátky prehľad sebareflexie do riadku žiaka (🟢2 🟡1 🔴1), aby bola viditeľná aj bez rozbalenia.
+  function examSelfBadge(exam, self) {
+    const r = exam.reflection;
+    if (!r || !Array.isArray(r.skills) || !self) return '';
+    const c = { green: 0, yellow: 0, red: 0 };
+    r.skills.forEach(sk => { if (c[self[sk]] !== undefined) c[self[sk]]++; });
+    return (c.green + c.yellow + c.red) ? `<span title="Sebareflexia žiaka">🟢${c.green} 🟡${c.yellow} 🔴${c.red}</span>` : '';
+  }
+
   function gradeLine(graded, grading) {
     if (!graded) return '—';
     const g = grading.enabled ? MathScore.gradeForPercent(graded.percent, grading) : '';
@@ -576,16 +585,32 @@
   function examChooser(id, m, exam) {
     const all = examStoreRead();
     const mine = Object.entries(all).filter(([, s]) => s && s.moduleId === id).sort((a, b) => (b[1].startedAt || 0) - (a[1].startedAt || 0));
-    const maxPts = exam.groups.A.tasks.filter(t => !(exam.bonusTasks || []).includes(t.id)).reduce((n, t) => n + t.steps.reduce((k, s) => k + s.points, 0), 0);
-    const openPrint = mode => window.open(`${location.origin}${location.pathname}#exam-print/${encodeURIComponent(id)}/${mode}`, '_blank');
+    const ptsOf = t => t.steps.reduce((k, s) => k + s.points, 0);
+    const isBonus = t => (exam.bonusTasks || []).includes(t.id);
+    const allIds = exam.groups.A.tasks.map(t => t.id);
+    const pickedIds = () => $('.examTaskCheck').filter(c => c.checked).map(c => c.dataset.id);
+    // Výber sa nesie do tlače v URL; všetky úlohy = bez parametra.
+    const idsParam = () => { const p = pickedIds(); return p.length && p.length < allIds.length ? '/' + p.join(',') : ''; };
+    const openPrint = mode => window.open(`${location.origin}${location.pathname}#exam-print/${encodeURIComponent(id)}/${mode}${idsParam()}`, '_blank');
+    const groupKeys = Object.keys(exam.groups);
 
     app.innerHTML = `
       ${MathUI.backRow(`teacher-unit/${m.year}/${MathPlatform.unitKey(m.unit)}`, m.unit)}
       <div class="card">
         <div class="eyebrow">PÍSOMKA · ${esc(m.lesson)}</div>
         <h1>${esc(exam.title)}</h1>
-        <p class="muted">${Object.keys(exam.groups).length} skupiny · ${exam.groups.A.tasks.length} úloh po krokoch · ${maxPts} b${(exam.bonusTasks || []).length ? ' + bonus' : ''}${exam.minutes ? ` · ${exam.minutes} min` : ''}</p>
+        <p class="muted">${groupKeys.length} skupiny · ${allIds.length} úloh po krokoch${exam.minutes ? ` · ${exam.minutes} min` : ''}</p>
         <p>Žiaci sa pripoja kódom (alebo QR kódom), zadania dostanú od teba a odpovede ti chodia priebežne. Body sa počítajú automaticky po krokoch, ručne ich môžeš upraviť. Nič sa neukladá na server – priebeh sa zálohuje v tomto prehliadači a výsledky si stiahneš ako CSV.</p>
+        <h2>Úlohy v písomke</h2>
+        <p class="muted small-note">Zaškrtni úlohy, ktoré sa majú zahrnúť. Vybrané úlohy dostanú žiaci, započítajú sa do maxima bodov a vytlačia sa. Po spustení sa výber už nemení (žiaci už majú zadanie).</p>
+        <div class="acts-list" id="examPick">
+          ${exam.groups.A.tasks.map(t => `<div class="acts-row"><input type="checkbox" class="examTaskCheck" id="examTask_${esc(t.id)}" data-id="${esc(t.id)}" checked><label for="examTask_${esc(t.id)}"><strong>${esc(t.title)}</strong> <span class="tag">${ptsOf(t)} b${isBonus(t) ? ', bonus' : ''}</span><br><span class="muted small-note">${groupKeys.map(g => esc(g) + ': ' + esc(((exam.groups[g].tasks.find(x => x.id === t.id)) || {}).question || '')).join(' · ')}</span></label></div>`).join('')}
+        </div>
+        <div class="row">
+          <button class="ghost" id="examPickAll">Vybrať všetky</button>
+          <button class="ghost" id="examPickNone">Zrušiť všetky</button>
+        </div>
+        <p class="muted small-note" id="examPickInfo"></p>
         <div class="row">
           <button class="btn" id="examNew">Spustiť novú písomku</button>
           <button class="ghost" id="examPrintA">Tlač zadania A</button>
@@ -599,12 +624,35 @@
         ${mine.length ? `<div class="exam-saved-list">${mine.map(([c, s]) => `
           <div class="exam-saved">
             <div><strong>${new Date(s.startedAt || s.at || 0).toLocaleString('sk-SK')}</strong> · kód <code>${esc(c)}</code><br>
-              <span class="muted">${Object.keys(s.students || {}).length} žiakov · ${esc(EXAM_STATUS[s.status] || '')}</span></div>
+              <span class="muted">${Object.keys(s.students || {}).length} žiakov · ${esc(EXAM_STATUS[s.status] || '')}${Array.isArray(s.taskIds) ? ` · ${s.taskIds.length} úloh` : ''}</span></div>
             <div class="row"><button class="btn" data-go="teacher-exam/${esc(id)}/${esc(c)}">Otvoriť</button><button class="ghost exam-del" data-code="${esc(c)}">Zmazať</button></div>
           </div>`).join('')}</div>` : '<p class="muted">Zatiaľ žiadne. Po spustení sa tu zobrazí každá písomka, aby si sa k nej mohol/mohla vrátiť.</p>'}
       </div>`;
 
-    $('#examNew').onclick = () => window.MathApp.go(`teacher-exam/${id}/${MathLive.makeCode()}`);
+    const updatePick = () => {
+      const p = pickedIds();
+      ['#examNew', '#examPrintA', '#examPrintB', '#examPrintKey'].forEach(b => { if ($(b)) $(b).disabled = !p.length; });
+      if (!p.length) { $('#examPickInfo').textContent = 'Vyber aspoň jednu úlohu.'; return; }
+      const f = MathExam.filterExam(exam, p);
+      const tasks = f.groups.A.tasks;
+      const max = tasks.filter(t => !isBonus(t)).reduce((n, t) => n + ptsOf(t), 0);
+      const bonus = tasks.filter(isBonus).reduce((n, t) => n + ptsOf(t), 0);
+      $('#examPickInfo').textContent = `Vybraných ${p.length} z ${allIds.length} úloh · maximum ${max} b${bonus ? ` + bonus ${bonus} b` : ''}`;
+    };
+    $('.examTaskCheck').forEach(c => { c.onchange = updatePick; });
+    $('#examPickAll').onclick = () => { $('.examTaskCheck').forEach(c => { c.checked = true; }); updatePick(); };
+    $('#examPickNone').onclick = () => { $('.examTaskCheck').forEach(c => { c.checked = false; }); updatePick(); };
+    updatePick();
+
+    $('#examNew').onclick = () => {
+      const ids = pickedIds();
+      if (!ids.length) return;
+      const code = MathLive.makeCode();
+      const store = examStoreRead();
+      store[code] = { moduleId: id, startedAt: Date.now(), status: 'running', students: {}, overrides: {}, taskIds: ids.length < allIds.length ? ids : null, at: Date.now() };
+      examStoreWrite(store);
+      window.MathApp.go(`teacher-exam/${id}/${code}`);
+    };
     $('#examPrintA').onclick = () => openPrint('A');
     $('#examPrintB').onclick = () => openPrint('B');
     $('#examPrintKey').onclick = () => openPrint('key');
@@ -627,8 +675,11 @@
       startedAt: saved ? saved.startedAt : Date.now(),
       status: saved ? saved.status : 'running',
       overrides: saved && saved.overrides ? saved.overrides : {},
+      taskIds: saved && Array.isArray(saved.taskIds) && saved.taskIds.length ? saved.taskIds : null,
       at: Date.now(),
     };
+    // Učiteľka pred spustením vybrala úlohy: celá ďalšia práca (zadanie pre žiakov, body, CSV, tlač) ide s výberom.
+    exam = MathExam.filterExam(exam, sess.taskIds);
     const students = Object.assign(Object.create(null), saved ? saved.students : {});
     const openNicks = new Set();
     let grading = MathScore.loadGrading();
@@ -667,6 +718,7 @@
       <div class="card">
         <div class="eyebrow"><span class="live-dot"></span> PÍSOMKA</div>
         <h1>${esc(exam.title)}</h1>
+        ${sess.taskIds ? `<p class="muted">Zahrnuté úlohy: ${exam.groups.A.tasks.map(x => esc(x.title)).join(', ')}</p>` : ''}
         <div class="live-setup-row">
           <div><p><strong>Naskenuj QR kód:</strong></p><div id="joinQr" class="qr-box"></div></div>
           <div>
@@ -719,7 +771,7 @@
     });
     $('#examSaveWarn').hidden = saveOk;
 
-    const openPrint = mode => window.open(`${location.origin}${location.pathname}#exam-print/${encodeURIComponent(id)}/${mode}`, '_blank');
+    const openPrint = mode => window.open(`${location.origin}${location.pathname}#exam-print/${encodeURIComponent(id)}/${mode}${sess.taskIds ? '/' + sess.taskIds.join(',') : ''}`, '_blank');
     $('#examPrintA').onclick = () => openPrint('A');
     $('#examPrintB').onclick = () => openPrint('B');
     $('#examPrintKey').onclick = () => openPrint('key');
@@ -757,7 +809,7 @@
           <summary>
             <strong>${esc(nick)}</strong>
             <span>${ex.group ? 'skupina ' + esc(ex.group) : 'skupina —'}</span>
-            <span>${esc(examStageText(st))}</span>
+            <span>${esc(examStageText(st))} ${examSelfBadge(exam, ex.self)}</span>
             <span title="Koľkokrát žiak opustil aplikáciu">${ex.leaves ? '⚠ opustil ' + (Number(ex.leaves) || 0) + '×' : ''}</span>
             <span>${gradeLine(g, grading)}</span>
           </summary>
@@ -911,13 +963,14 @@
 
   // Tlač zadania (skupina A / B / obe) alebo kľúča. Beží v nových kartách
   // otvorených z obrazovky písomky; potrebuje token učiteľky (kľúč je na serveri).
-  async function examPrint(id, mode) {
+  async function examPrint(id, mode, idsParam) {
     const m = id && MathPlatform.indexEntry(id);
     if (!m || m.kind !== 'exam') { window.MathApp.go('teacher'); return; }
     let exam;
     try { exam = await MathExam.fetchExam(id); }
     catch (e) { app.innerHTML = `<div class="card"><h2>Písomku sa nepodarilo načítať</h2><p>${esc(e.message)}</p></div>`; return; }
 
+    if (idsParam) exam = MathExam.filterExam(exam, String(idsParam).split(',').filter(Boolean));
     const isBonus = t => (exam.bonusTasks || []).includes(t.id);
     const ptsOf = t => t.steps.reduce((n, s) => n + s.points, 0);
     const groupSheet = (g, i) => {
