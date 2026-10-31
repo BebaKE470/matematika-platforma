@@ -588,7 +588,7 @@
     const ptsOf = t => t.steps.reduce((k, s) => k + s.points, 0);
     const isBonus = t => (exam.bonusTasks || []).includes(t.id);
     const allIds = exam.groups.A.tasks.map(t => t.id);
-    const pickedIds = () => $('.examTaskCheck').filter(c => c.checked).map(c => c.dataset.id);
+    const pickedIds = () => $$('.examTaskCheck').filter(c => c.checked).map(c => c.dataset.id);
     // Výber sa nesie do tlače v URL; všetky úlohy = bez parametra.
     const idsParam = () => { const p = pickedIds(); return p.length && p.length < allIds.length ? '/' + p.join(',') : ''; };
     const openPrint = mode => window.open(`${location.origin}${location.pathname}#exam-print/${encodeURIComponent(id)}/${mode}${idsParam()}`, '_blank');
@@ -639,9 +639,9 @@
       const bonus = tasks.filter(isBonus).reduce((n, t) => n + ptsOf(t), 0);
       $('#examPickInfo').textContent = `Vybraných ${p.length} z ${allIds.length} úloh · maximum ${max} b${bonus ? ` + bonus ${bonus} b` : ''}`;
     };
-    $('.examTaskCheck').forEach(c => { c.onchange = updatePick; });
-    $('#examPickAll').onclick = () => { $('.examTaskCheck').forEach(c => { c.checked = true; }); updatePick(); };
-    $('#examPickNone').onclick = () => { $('.examTaskCheck').forEach(c => { c.checked = false; }); updatePick(); };
+    $$('.examTaskCheck').forEach(c => { c.onchange = updatePick; });
+    $('#examPickAll').onclick = () => { $$('.examTaskCheck').forEach(c => { c.checked = true; }); updatePick(); };
+    $('#examPickNone').onclick = () => { $$('.examTaskCheck').forEach(c => { c.checked = false; }); updatePick(); };
     updatePick();
 
     $('#examNew').onclick = () => {

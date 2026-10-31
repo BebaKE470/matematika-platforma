@@ -620,7 +620,7 @@
       btn.onclick = () => {
         S.self[btn.dataset.s] = btn.dataset.v;
         S.selfSent = false;
-        $('.exam-reflection [data-s]').filter(x => x.dataset.s === btn.dataset.s).forEach(x => x.classList.toggle('selected', x === btn));
+        $$('.exam-reflection [data-s]').filter(x => x.dataset.s === btn.dataset.s).forEach(x => x.classList.toggle('selected', x === btn));
         $('#examSelfSend').disabled = false;
         $('#examSelfState').textContent = selfStateText();
         saveLocal();
