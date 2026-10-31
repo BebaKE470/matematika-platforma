@@ -508,7 +508,9 @@ nenahrádza myslenie, len zbiera jeho stopy.
 `groups: { A: { tasks }, B: { tasks } }`, `bonusTasks[]` (id úloh, ktoré sa
 nezapočítavajú do maxima), `key`.
 - úloha: `{ id, title, question, note?, steps[] }`
-- krok: `{ id, label, kind: 'number' | 'set', points, allowNone? }`
+- krok: `{ id, label, kind: 'number' | 'set', points, allowNone?, suffix? }`. `suffix` (napr. `'π'`) sa zobrazí za políčkom a v kľúči; žiak zapisuje iba koeficient (5π/4 → `5/4`), porovnáva sa ako zlomok. Hodí sa pre goniometrické rovnice (viď `api/_exams/3-u01-h020.js`).
+- `reflection: { prompt, skills[] }` (voliteľné): nepovinná sebareflexia 🟢🟡🔴 po odovzdaní, výsledok vidí učiteľka v Opravovaní a v CSV.
+- Ak sú kroky pre A a B rovnaké, definuj ich raz a zdieľaj (ako `TASKS` v 3-u01-h020.js) – nemôžu sa tak rozísť.
 - `key[skupina][úloha][krok]`: pre `number` reťazec (`'-2/3'`) alebo `'none'`
   („nemá riešenie“, vyžaduje `allowNone: true`); pre `set` pole reťazcov,
   prázdne pole = ∅.

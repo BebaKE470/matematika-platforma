@@ -1,170 +1,206 @@
 MathPlatform.registerModule({
-  "id": "3-u01-h015",
-  "teacher": {
-    "placement": "3. ročník · Goniometrické funkcie, goniometrické, rovnice · Hodina 15 · Riešenie úloh",
-    "prerequisites": [
-      "goniometrické funkcie ostrého uhla z 2. ročníka",
-      "práca s grafom funkcie z 2. ročníka",
-      "π a základné algebraické úpravy z predchádzajúceho štúdia",
-      "učivo hodín 1–14"
+  id: '3-u01-h015',
+  teacher: {
+    placement: '3. ročník · Goniometrické funkcie, goniometrické, rovnice · Hodina 15 · Riešenie úloh (rovnice sin x = a a cos x = a)',
+    prerequisites: [
+      'rovnice sin x = a a cos x = a: špeciálne prípady a dve série riešení (hodina 14)',
+      'hodnoty sin a cos pre uhly π/6, π/4, π/3 a ich súmerné uhly v ostatných kvadrantoch',
+      'zápis všetkých riešení pomocou 2kπ a k ∈ ℤ'
     ],
-    "planContent": [
-      "Obsah a poradie vychádzajú z aktuálneho tematického plánu 3. ročníka."
+    planContent: [
+      'Obsah a poradie vychádzajú z aktuálneho tematického plánu 3. ročníka. Hodina je určená na precvičenie jednoduchých rovníc; pracuje sa iba s funkciami sin a cos.'
     ],
-    "planPerformance": [
-      "Poznať pojem jednotková kružnica.",
-      "Vedieť zobraziť na jednotkovej kružnici ľubovoľné reálne číslo a priradiť reálne číslo bodu kružnice.",
-      "Zadefinovať funkcie sin x, cos x, tg x, cotg x a opísať ich vlastnosti.",
-      "Poznať a vedieť použiť goniometrické vzorce.",
-      "Vyriešiť goniometrickú rovnicu."
+    planPerformance: [
+      'Poznať pojem jednotková kružnica.',
+      'Vedieť zobraziť na jednotkovej kružnici ľubovoľné reálne číslo a priradiť reálne číslo bodu kružnice.',
+      'Zadefinovať funkcie sin x, cos x, tg x, cotg x a opísať ich vlastnosti.',
+      'Poznať a vedieť použiť goniometrické vzorce.',
+      'Vyriešiť goniometrickú rovnicu.'
     ],
-    "goals": [
-      "porozumieť dnešnému vzťahu/postupu",
-      "použiť ho v primeranej úlohe",
-      "zdôvodniť zvolený krok"
+    goals: [
+      'bezpečne vyriešiť rovnice sin x = a a cos x = a pre kladné aj záporné hodnoty a',
+      'vybrať riešenia z daného intervalu a určiť ich počet',
+      'rozpoznať typickú chybu: zabudnutá druhá séria riešení'
     ],
-    "competencies": [
-      "prepájať obrázok, slovný opis a symbolický zápis",
-      "pracovať ručne v zošite a zdôvodniť postup",
-      "rozlíšiť údaj, vzťah a záver"
+    competencies: [
+      'voľba postupu podľa hodnoty a (žiadne riešenie, špeciálny prípad, dva body)',
+      'kontrola riešení v zadanom intervale',
+      'zdôvodnenie počtu riešení bez vypisovania'
     ],
-    "enrichment": [
-      "Návrh maturitného štandardu je použitý iba ako obohatenie: reprezentácie, modelovanie, presný matematický jazyk a argumentácia.",
-      "Maturitný formát sa používa len s obsahom, ktorý je do tejto hodiny dostupný."
+    enrichment: [
+      'Návrh maturitného štandardu je použitý iba ako obohatenie: úlohy v maturitnom formáte s obsahom, ktorý žiak už pozná, a zdôvodnenie postupu.'
     ],
-    "flow": [
-      "4–5 min aktivácia predchádzajúcich vedomostí",
-      "15–22 min vybraná digitálna časť",
-      "8–12 min zápis do zošita a ručné riešenie",
-      "5 min spoločná syntéza"
+    flow: [
+      '3 min: kde sme a rozhodovací postup',
+      '12 min: ukážkový príklad s intervalom, počítanie riešení, hľadanie chyby',
+      '20 min: zbierka úloh podľa úrovní v zošite (žiaci si vyberajú úroveň)',
+      '5 min: samostatná úloha bez mobilu, sebahodnotenie'
     ],
-    "diagnostics": [
-      "sleduj, či žiak rozumie významu symbolov a vzťahov, nielen postupu",
-      "pri chybe sa vráť k obrázku alebo definícii"
+    diagnostics: [
+      'či žiak z množiny všetkých riešení správne vyberie tie z intervalu (posun o ±2π)',
+      'či rozlišuje otvorený a uzavretý koniec intervalu (⟨0; 2π) a ⟨0; 2π⟩)',
+      'či pri zápornej hodnote hľadá body v správnych kvadrantoch'
     ],
-    "partialUse": [
-      "Modul nie je povinné použiť celý; učiteľ môže vybrať iba objavovaciu, vizuálnu alebo diagnostickú časť."
+    partialUse: [
+      'Ak je málo času, použi iba ukážkový príklad a zbierku úloh vo vybranej úrovni.',
+      'Riešenia v zbierke sa počas živej hodiny žiakom nezobrazujú.'
     ]
   },
-  "student": {
-    "title": "Prenos do úloh",
-    "subtitle": "Vzťah → význam → ručný postup → zdôvodnenie",
-    "intro": "Pracuj postupne: najprv význam a obrázok, potom zápis a až potom samostatná úloha.",
-    "estimatedTime": "18–24 min",
-    "activities": [
+  student: {
+    title: 'Riešenie úloh: sin x = a, cos x = a',
+    subtitle: 'Intervaly, počet riešení, typické chyby',
+    intro: 'Precvičíš rovnice zo zvyšku hodiny 14: kladné aj záporné hodnoty, výber riešení z intervalu a hľadanie chyby v cudzom riešení.',
+    estimatedTime: '20–25 min + zbierka',
+    activities: [
       {
-        "id": "recap",
-        "type": "explain",
-        "phase": "OPAKUJ",
-        "title": "Čo už vieme",
-        "html": "<p>Za sebou máme jednotkovú kružnicu, grafy sin x/cos x/tg x/cotg x, goniometrické vzorce a jednoduché goniometrické rovnice (Hodiny 1–14).</p><p>Dnes tieto vedomosti spájame — pri každej úlohe si najprv treba vybrať, ktorý z už známych vzťahov sa na ňu hodí.</p>"
+        id: 'recap',
+        type: 'explain',
+        phase: 'KDE SME',
+        title: 'Čo už vieme',
+        html: '<p>V hodine 14 sme vyriešili rovnice <strong>sin x = a</strong> a <strong>cos x = a</strong>. Na kružnici sme našli body s danou y- alebo x-súradnicou a ku každému pripočítali 2kπ.</p><p>Dnes budeme túto rutinu trénovať aj s <strong>intervalmi</strong>. Pomôže ti tento rozhodovací postup:</p><ol class="steps"><li>Je <strong>|a| &gt; 1</strong>? Rovnica nemá riešenie.</li><li>Je a jedno z čísel <strong>0, 1, −1</strong>? Použi špeciálny zápis.</li><li>Inak nájdi <strong>dva body</strong> na kružnici a ku každému pripočítaj 2kπ.</li><li>Ak je zadaný interval, vyber z riešení tie, ktoré do neho patria (skúšaj k = …, −1, 0, 1, …).</li></ol>'
       },
       {
-        "id": "recall",
-        "type": "choice",
-        "phase": "OPAKUJ",
-        "skill": "goniometria",
-        "question": "Čo je pri novej goniometrickej úprave najdôležitejšie?",
-        "options": [
-          "pracovať iba podľa obrázka",
-          "použiť čo najviac vzorcov",
-          "preskočiť podmienky",
-          "vedieť, z ktorého už známeho vzťahu vychádzam"
+        id: 'recall',
+        type: 'choice',
+        phase: 'OPAKUJ',
+        skill: 'existencia riešenia',
+        question: 'Ktorá z týchto rovníc nemá žiadne riešenie?',
+        options: [
+          'sin x = 1',
+          'cos x = −0,9',
+          'sin x = −1,01'
         ],
-        "answer": 3,
-        "correct": "Nový krok musí nadväzovať na už zavedený vzťah.",
-        "hint": "Hľadaj zdôvodnenie."
+        answer: 2,
+        correct: 'Áno. Hodnota −1,01 je menšia ako −1, ale sin x nikdy neklesne pod −1.',
+        hint: 'Skontroluj, či je číslo na pravej strane v intervale ⟨−1; 1⟩.'
       },
       {
-        "id": "topic-intro",
-        "type": "intro",
-        "goals": [
-          "vybrať vhodný goniometrický vzťah podľa zadania",
-          "vyriešiť úlohu podľa systematického postupu",
-          "overiť riešenie a podmienky"
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vybrať riešenia rovnice sin x = a alebo cos x = a z daného intervalu',
+          'určiť počet riešení bez vypisovania všetkých',
+          'nájsť chybu v cudzom riešení'
         ]
       },
       {
-        "id": "intro",
-        "type": "explain",
-        "phase": "NOVÝ KROK",
-        "title": "Prenos do úloh",
-        "html": "<p>Vyberáme vhodný vzťah podľa cieľa, nie podľa toho, ktorý vzorec si práve pamätáme.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Rieš rovnicu 2sin x − 1 = 0 na intervale ⟨0; 2π⟩.</p><p>2sin x = 1 ⇒ sin x = <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">2</span></span></p><p>Základné riešenia na kružnici: x = π/6 a x = 5π/6 — obe ležia v zadanom intervale.</p><p>Riešenie: <strong>x = π/6 alebo x = 5π/6</strong>.</p></div>",
-        "remember": "Nový vzorec alebo postup najprv pochop a prečítaj, až potom ho používaj."
+        id: 'worked-example',
+        type: 'info',
+        phase: 'VZOROVÝ PRÍKLAD',
+        title: 'cos x = −√2/2 v intervale ⟨−π; π⟩',
+        html: '<div class="example"><span class="mini-label">PRÍKLAD</span><p><strong>1. Hodnota:</strong> −√2/2 leží v ⟨−1; 1⟩, riešenie existuje.</p><p><strong>2. Body na kružnici:</strong> x-súradnica −√2/2 je záporná, teda v II. a III. kvadrante. Referenčný uhol je π/4, takže uhly sú π − π/4 = 3π/4 a π + π/4 = 5π/4 (to isté ako −3π/4).</p><p><strong>3. Všetky riešenia:</strong> x = 3π/4 + 2kπ alebo x = −3π/4 + 2kπ, k ∈ ℤ.</p><p><strong>4. Interval ⟨−π; π⟩:</strong> pre k = 0 vychádza 3π/4 aj −3π/4, obe patria. Pre k = 1 dostaneme −3π/4 + 2π = 5π/4 &gt; π a pre k = −1 dostaneme 3π/4 − 2π = −5π/4 &lt; −π, obe sú mimo.</p><p><strong>Výsledok: x ∈ {−3π/4, 3π/4}.</strong></p></div>'
       },
       {
-        "id": "visual",
-        "type": "info",
-        "phase": "VIZUALIZÁCIA",
-        "title": "Opora v reprezentácii",
-        "html": "<div class=\"coordinate-wrap\"><svg class=\"coordinate-plot\" viewBox=\"0 0 520 360\" role=\"img\" aria-label=\"Jednotková kružnica\"><line x1=\"50\" y1=\"180\" x2=\"470\" y2=\"180\" class=\"plot-axis\"/><line x1=\"260\" y1=\"25\" x2=\"260\" y2=\"335\" class=\"plot-axis\"/><circle cx=\"260\" cy=\"180\" r=\"125\" fill=\"none\" stroke=\"#173d35\" stroke-width=\"4\"/><circle cx=\"385\" cy=\"180\" r=\"6\" class=\"plot-point\"/><circle cx=\"260\" cy=\"55\" r=\"6\" class=\"plot-point\"/><circle cx=\"135\" cy=\"180\" r=\"6\" class=\"plot-point\"/><circle cx=\"260\" cy=\"305\" r=\"6\" class=\"plot-point\"/><text x=\"392\" y=\"174\" class=\"plot-point-label\">0, 2π</text><text x=\"270\" y=\"48\" class=\"plot-point-label\">π/2</text><text x=\"105\" y=\"174\" class=\"plot-point-label\">π</text><text x=\"270\" y=\"325\" class=\"plot-point-label\">3π/2</text><text x=\"445\" y=\"170\" class=\"plot-axis-name\">x</text><text x=\"270\" y=\"38\" class=\"plot-axis-name\">y</text></svg></div>"
+        id: 'count-4pi',
+        type: 'numberInput',
+        phase: 'POUŽI',
+        skill: 'počet riešení',
+        title: 'Počet riešení v dlhšom intervale',
+        prompt: 'Koľko riešení má rovnica sin x = 1/2 v intervale ⟨0; 4π)? (Pomôž si tým, že riešenia sa opakujú po 2π.)',
+        validate: 'exact',
+        answer: 4,
+        success: 'Áno. V ⟨0; 2π) sú π/6 a 5π/6, v ⟨2π; 4π) ďalšie dve: 13π/6 a 17π/6.',
+        hint: 'Koľko riešení je v jednom obehu ⟨0; 2π) a koľko obehov interval obsahuje?',
+        reveal: 'V ⟨0; 2π) sú dve riešenia (π/6, 5π/6) a interval ⟨0; 4π) obsahuje dva obehy, teda 2 · 2 = 4 riešenia.'
       },
       {
-        "id": "clean",
-        "type": "explain",
-        "phase": "NOVÝ KROK",
-        "title": "Riešenie úloh",
-        "html": "<p><strong>Postup pri goniometrickej úlohe</strong></p><ol class=\"steps\"><li>Urči, čo je dané a čo hľadáš.</li><li>Vyber vhodný goniometrický vzťah.</li><li>Uprav výraz alebo rovnicu.</li><li>Skontroluj podmienky a interval.</li><li>Over výsledok v pôvodnom zadaní.</li></ol>"
-      },
-      {
-        "id": "check",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "vzťahy",
-        "question": "Ktoré tvrdenie vystihuje správnu prácu so vzorcom?",
-        "options": [
-          "Najprv určím, či sa vzorec na daný tvar hodí, potom ho použijem.",
-          "Vzorec môžem použiť bez ohľadu na tvar výrazu.",
-          "Stačí upravovať iba číselné hodnoty.",
-          "Kontrola výsledku nie je potrebná."
+        id: 'find-error',
+        type: 'choice',
+        phase: 'NÁJDI CHYBU',
+        skill: 'kritické myslenie',
+        question: 'Žiak rieši rovnicu sin x = √3/2 a zapíše iba: „x = π/3 + 2kπ, k ∈ ℤ.“ Čo mu v riešení chýba?',
+        options: [
+          'Nič, jedna séria riešení stačí.',
+          'Druhá séria riešení x = 2π/3 + 2kπ.',
+          'Druhá séria riešení x = −π/3 + 2kπ.'
         ],
-        "answer": 0,
-        "correct": "Vzorec je nástroj s konkrétnou štruktúrou a podmienkami.",
-        "hint": "Vzorec nie je kúzelná skratka."
+        answer: 1,
+        correct: 'Správne. Aj bod s uhlom 2π/3 = π − π/3 má y-súradnicu √3/2. Hodnota sin(−π/3) je naopak −√3/2.',
+        hint: 'Priamka y = √3/2 pretína kružnicu dvakrát. Kde je druhý priesečník?'
       },
       {
-        "id": "work",
-        "type": "notebook",
-        "phase": "BEZ MOBILU",
-        "title": "Rieš ručne",
-        "html": "<p>Vytvor v zošite jeden vlastný príklad k téme <strong>Riešenie úloh</strong>. Každý krok označ vzťahom alebo dôvodom, ktorý používaš.</p>",
-        "model": "Zápis do zošita môže obsahovať opravu. Dôležité je, aby bolo vidieť, prečo jednotlivé kroky platia."
-      },
-      {
-        "id": "arg",
-        "type": "selfWrite",
-        "phase": "VYSVETLI",
-        "title": "Prečo tento krok platí?",
-        "prompt": "Vyber jeden krok zo svojho riešenia a vysvetli ho jednou matematicky presnou vetou.",
-        "model": "Vzor: Uvediem použitý vzťah, dosadené hodnoty/premenné a vysvetlím, prečo sa dá v tomto kroku použiť."
-      },
-      {
-        "id": "transfer",
-        "type": "choice",
-        "phase": "MATURITNÝ FORMÁT",
-        "skill": "prenos",
-        "question": "Pri testovej úlohe je prvý bezpečný krok:",
-        "options": [
-          "vybrať najdlhšiu odpoveď",
-          "preložiť zadanie do známych pojmov a vzťahov",
-          "hneď dosadiť do náhodného vzorca",
-          "ignorovať interval alebo podmienky"
-        ],
-        "answer": 1,
-        "correct": "Najprv rozpoznaj matematickú štruktúru úlohy.",
-        "hint": "Formát testu nemení matematiku."
-      },
-      {
-        "id": "reflection",
-        "type": "reflection",
-        "phase": "SEBAHODNOTENIE",
-        "title": "Čo už viem?",
-        "prompt": "Pri každej zručnosti označ, ako sa teraz cítiš.",
-        "skills": [
-          "viem rozpoznať vhodný vzťah",
-          "viem riešiť ručne a kontrolovať podmienky",
-          "viem vysvetliť aspoň jeden krok riešenia"
+        id: 'count-matrix',
+        type: 'matrix',
+        phase: 'OVER SI',
+        skill: 'počet riešení',
+        title: 'Koľko riešení v ⟨0; 2π)?',
+        labels: ['0 riešení', '1 riešenie', '2 riešenia'],
+        items: [
+          { text: 'sin x = 1', answer: '1 riešenie' },
+          { text: 'cos x = 1,5', answer: '0 riešení' },
+          { text: 'cos x = −0,4', answer: '2 riešenia' },
+          { text: 'sin x = 0', answer: '2 riešenia' },
+          { text: 'cos x = −1', answer: '1 riešenie' },
+          { text: 'sin x = −2', answer: '0 riešení' }
         ]
+      },
+      {
+        id: 'matura-format',
+        type: 'choice',
+        phase: 'MATURITNÝ FORMÁT',
+        skill: 'maturitný formát',
+        question: 'Určte všetky riešenia rovnice cos x = −1/2 v intervale ⟨0; 2π⟩. Ktorá odpoveď je správna?',
+        options: [
+          'π/3 a 5π/3',
+          '2π/3 a 5π/3',
+          '2π/3 a 4π/3'
+        ],
+        answer: 2,
+        correct: 'Áno. Záporná x-súradnica −1/2 je v II. a III. kvadrante: π − π/3 = 2π/3 a π + π/3 = 4π/3.',
+        hint: 'Záporný kosínus znamená body vľavo od osi y. Ktoré kvadranty to sú?'
+      },
+      {
+        id: 'count-method',
+        type: 'selfWrite',
+        phase: 'VYSVETLI',
+        skill: 'matematická komunikácia',
+        title: 'Počet riešení bez vypisovania',
+        prompt: 'Rovnica sin x = 0,3 sa rieši v intervale ⟨0; 8π). Vysvetli v 2–3 vetách, ako zistíš počet riešení bez toho, aby si ich všetky vypisoval/a.',
+        model: 'Rovnica má v každom obehu ⟨0; 2π) presne dve riešenia, pretože priamka y = 0,3 pretína kružnicu dvakrát. Interval ⟨0; 8π) obsahuje štyri obehy, preto má rovnica 4 · 2 = 8 riešení.'
+      },
+      {
+        id: 'zbierka',
+        type: 'taskList',
+        phase: 'PRECVIČ',
+        skill: 'zbierka',
+        title: 'Zbierka úloh',
+        html: '<p>Vyber si úroveň, ktorá ti vyhovuje, a riešiš v zošite. Kresli si kružnicu. Zaškrtni úlohu, keď ju máš hotovú. Správnosť sa nekontroluje automaticky; riešenie si môžeš zobraziť tlačidlom pri úlohe.</p>',
+        items: [
+          { level: 'zaklad', text: 'Rieš rovnicu sin x = √2/2 v intervale ⟨0; 2π).', answer: '<p>x ∈ {π/4, 3π/4}.</p>' },
+          { level: 'zaklad', text: 'Rieš rovnicu cos x = 1/2 v intervale ⟨0; 2π).', answer: '<p>x ∈ {π/3, 5π/3}.</p>' },
+          { level: 'zaklad', text: 'Rieš rovnicu sin x = −1/2 v intervale ⟨0; 2π).', answer: '<p>x ∈ {7π/6, 11π/6}.</p>' },
+          { level: 'zaklad', text: 'Rieš rovnicu cos x = 0 v intervale ⟨−π; π⟩.', answer: '<p>x ∈ {−π/2, π/2}.</p>' },
+          { level: 'zaklad', text: 'Rieš rovnicu sin x = 0 v intervale ⟨−π; 2π⟩. Pozor na uzavreté konce.', answer: '<p>x = kπ: x ∈ {−π, 0, π, 2π}. Všetky štyri patria, lebo oba konce intervalu sú zahrnuté.</p>' },
+          { level: 'rozsirenie', text: 'Rieš rovnicu cos x = −√3/2. Zapíš všetky riešenia.', answer: '<p>Referenčný uhol π/6, II. a III. kvadrant: x = 5π/6 + 2kπ alebo x = 7π/6 + 2kπ, k ∈ ℤ.</p>' },
+          { level: 'rozsirenie', text: 'Rieš rovnicu sin x = −√3/2 v intervale ⟨−π; π⟩.', answer: '<p>Záporné y: III. a IV. kvadrant, v intervale −π až 0: x ∈ {−2π/3, −π/3}.</p>' },
+          { level: 'rozsirenie', text: 'Rieš rovnicu cos x = √2/2 v intervale ⟨0; 4π).', answer: '<p>Základné riešenia π/4 a 7π/4; po pripočítaní 2π ešte 9π/4 a 15π/4. x ∈ {π/4, 7π/4, 9π/4, 15π/4}.</p>' },
+          { level: 'rozsirenie', text: 'Koľko riešení má rovnica sin x = −0,7 v intervale ⟨−π; 3π)?', answer: '<p>4. Interval má dĺžku 4π, teda dva obehy, a v každom sú dve riešenia.</p>' },
+          { level: 'rozsirenie', text: 'Rieš rovnicu cos x = −1 v intervale ⟨−3π; 3π⟩. Zapíš všetky riešenia.', answer: '<p>x = π + 2kπ: x ∈ {−3π, −π, π, 3π}.</p>' },
+          { level: 'bonus', text: 'Rovnica sin x = 0,6 nemá „pekné“ riešenie. Označ α riešenie z intervalu ⟨0; π/2⟩ (α je číslo, ktoré nepoznáme presne). Zapíš pomocou α všetky riešenia.', answer: '<p>Druhý bod na kružnici je súmerný podľa osi y, teda π − α.</p><p>x = α + 2kπ alebo x = π − α + 2kπ, k ∈ ℤ.</p>' },
+          { level: 'bonus', text: 'Pre ktoré hodnoty a má rovnica sin x = a v intervale ⟨0; 2π) práve jedno riešenie?', answer: '<p>Pre a = 1 (x = π/2) a a = −1 (x = 3π/2). Pre iné a z ⟨−1; 1⟩ sú riešenia dve (pre a = 0 sú to 0 a π) a pre |a| &gt; 1 žiadne.</p>' },
+          { level: 'bonus', text: 'Aký je súčet všetkých riešení rovnice cos x = 1/2 v intervale ⟨0; 2π)? Skús odpovedať bez výpočtu a potom over.', answer: '<p>Riešenia sú π/3 a 5π/3 (súmerné podľa osi x), súčet je 2π.</p>' }
+        ]
+      },
+      {
+        id: 'work',
+        type: 'notebook',
+        phase: 'BEZ MOBILU',
+        title: 'Samostatná úloha',
+        html: '<p><span class="mini-label">ÚLOHA DO ZOŠITA</span><br>Rieš rovnicu <strong>cos x = −√3/2</strong> v intervale <strong>⟨−2π; 2π⟩</strong>. Zapíš všetky riešenia vzostupne a ukáž, ako si ich z množiny všetkých riešení vybral/a.</p>',
+        model: '<strong>KONTROLA:</strong> Všetky riešenia: x = 5π/6 + 2kπ alebo x = 7π/6 + 2kπ. V intervale ⟨−2π; 2π⟩ (k = −1 a k = 0): x ∈ {−7π/6, −5π/6, 5π/6, 7π/6}.'
+      },
+      {
+        id: 'reflection',
+        type: 'reflection',
+        phase: 'SEBAHODNOTENIE',
+        title: 'Čo už viem?',
+        skills: [
+          'výber riešení z intervalu',
+          'počet riešení v dlhšom intervale',
+          'záporné hodnoty a kvadranty',
+          'hľadanie chyby v cudzom riešení'
+        ],
+        prompt: 'Označ, ako dobre by si teraz vyriešil/a podobnú úlohu bez pomoci. Nie je to známka.'
       }
     ]
   }

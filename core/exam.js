@@ -116,7 +116,7 @@
         const ok = gradeStep(s, k[s.id], a);
         tmax += s.points;
         if (ok) auto += s.points;
-        return { id: s.id, label: s.label, kind: s.kind, ok, max: s.points, answered: isAnswered(s, a), answer: a, expected: k[s.id] };
+        return { id: s.id, label: s.label, kind: s.kind, suffix: s.suffix, ok, max: s.points, answered: isAnswered(s, a), answer: a, expected: k[s.id] };
       });
       const ov = overrides[t.id];
       const hasOv = ov !== undefined && ov !== null && ov !== '' && Number.isFinite(Number(ov));
@@ -144,15 +144,17 @@
   }
 
   // Čitateľný zápis odpovede/kľúča kroku (výstup je čistý text, treba ho esc()).
+  // step.suffix (napr. 'π'): žiak zapisuje iba koeficient, v zobrazení sa pripojí prípona (5/4 → 5/4 π).
   function formatValue(step, v) {
+    const suf = step.suffix ? ' ' + step.suffix : '';
     if (step.kind === 'set') {
       if (isEmptySet(v)) return EMPTY_SET;
       const items = nonBlank(v);
       if (!items.length) return '—';
-      return '{' + items.slice().sort(numSort).map(fmtNum).join('; ') + '}';
+      return '{' + items.slice().sort(numSort).map(x => fmtNum(x) + suf).join('; ') + '}';
     }
     if (v === NONE) return 'nemá riešenie';
-    return (typeof v === 'string' && v.trim()) ? fmtNum(v.trim()) : '—';
+    return (typeof v === 'string' && v.trim()) ? fmtNum(v.trim()) + suf : '—';
   }
 
   // To isté pre správnu odpoveď z kľúča (prázdne pole = ∅).
@@ -357,6 +359,10 @@
     });
   }
 
+  function suffixHtml(step) {
+    return step.suffix ? `<span class="exam-suffix">${esc(step.suffix)}</span>` : '';
+  }
+
   function stepHtml(task, step) {
     const ans = (S.answers[task.id] || {})[step.id];
     const head = `<label class="exam-label">${esc(step.label)} <span class="exam-pts">${fmtPts(step.points)}&nbsp;b</span></label>`;
@@ -364,7 +370,7 @@
       const empty = isEmptySet(ans);
       const list = empty ? [] : (Array.isArray(ans) && ans.length ? ans : ['']);
       const rows = list.map((v, i) => `<div class="exam-row">
-          <input class="exam-in" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-step="${esc(step.id)}" data-i="${i}" value="${esc(v)}" placeholder="číslo">
+          <input class="exam-in" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-step="${esc(step.id)}" data-i="${i}" value="${esc(v)}" placeholder="číslo">${suffixHtml(step)}
           ${list.length > 1 ? `<button class="ghost exam-rm" type="button" data-step="${esc(step.id)}" data-i="${i}" aria-label="Odstrániť riešenie">×</button>` : ''}
         </div>`).join('');
       return `<div class="exam-step" data-step="${esc(step.id)}">${head}
@@ -376,7 +382,7 @@
     const none = ans === NONE;
     return `<div class="exam-step" data-step="${esc(step.id)}">${head}
       <div class="exam-row">
-        <input class="exam-in" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-step="${esc(step.id)}" value="${esc(none ? '' : (ans || ''))}" placeholder="napr. -2/3" ${none ? 'disabled' : ''}>
+        <input class="exam-in" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-step="${esc(step.id)}" value="${esc(none ? '' : (ans || ''))}" placeholder="napr. -2/3" ${none ? 'disabled' : ''}>${suffixHtml(step)}
         ${step.allowNone ? `<label class="exam-none"><input type="checkbox" class="exam-none-cb" data-step="${esc(step.id)}" ${none ? 'checked' : ''}> nemá riešenie</label>` : ''}
       </div></div>`;
   }

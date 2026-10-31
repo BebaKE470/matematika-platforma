@@ -237,8 +237,8 @@ function auditExam(id, label) {
         if (!KINDS.has(s.kind)) fail('exam', `${sw}: neznáme kind '${s.kind}'`);
         if (!(typeof s.points === 'number' && s.points > 0)) fail('exam', `${sw}: points musí byť kladné číslo`);
         const rs = r && r.steps && r.steps[j];
-        if (rs && (rs.id !== s.id || rs.kind !== s.kind || rs.points !== s.points || !!rs.allowNone !== !!s.allowNone)) {
-          fail('exam', `${sw}: id/kind/points/allowNone sa nezhoduje so skupinou ${groupNames[0]}`);
+        if (rs && (rs.id !== s.id || rs.kind !== s.kind || rs.points !== s.points || !!rs.allowNone !== !!s.allowNone || rs.suffix !== s.suffix)) {
+          fail('exam', `${sw}: id/kind/points/allowNone/suffix sa nezhoduje so skupinou ${groupNames[0]}`);
         }
         const kv = key && key[t.id] && key[t.id][s.id];
         if (kv === undefined) { fail('exam', `${sw}: v kľúči chýba odpoveď`); return; }

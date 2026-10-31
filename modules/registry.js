@@ -1680,57 +1680,57 @@
   {
     id: '3-u01-h014', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Jednoduché goniometrické rovnice", lesson: 'Hodina 14', lessonOrder: 14,
-    time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
-    skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
+    time: '25–30 min + zbierka', status: 'ready',
+    type: 'Kde sme → sin x = 1, 0, −1 → dva body na kružnici → zbierka podľa úrovní → samostatná úloha',
+    skills: ["sin x = a","cos x = a","jednotková kružnica","zápis riešení s 2kπ"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/14-jednoduche-goniometricke-rovnice.js"
   },
   {
     id: '3-u01-h015', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Riešenie úloh", lesson: 'Hodina 15', lessonOrder: 15,
-    time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
-    skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
+    time: '20–25 min + zbierka', status: 'ready',
+    type: 'Rozhodovací postup → interval a počet riešení → hľadanie chyby → zbierka podľa úrovní',
+    skills: ["výber z intervalu","počet riešení","sin x = a","cos x = a"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/15-riesenie-uloh.js"
   },
   {
     id: '3-u01-h016', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Goniometrické rovnice", lesson: 'Hodina 16', lessonOrder: 16,
-    time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
-    skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
+    time: '25–30 min + zbierka', status: 'ready',
+    type: 'Graf → substitúcia u → zlomky s π → násobok argumentu → zbierka podľa úrovní',
+    skills: ["zložený argument","substitúcia","cos(x − a) = c","sin(bx) = c"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/16-goniometricke-rovnice.js"
   },
   {
     id: '3-u01-h017', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Riešenie goniometrických rovníc", lesson: 'Hodina 17', lessonOrder: 17,
-    time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
-    skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
+    time: '20–25 min + zbierka', status: 'ready',
+    type: 'Vzorový príklad → graf → správne a nesprávne zápisy → hľadanie chyby → zbierka podľa úrovní',
+    skills: ["zložený argument","výber z intervalu","kontrola dosadením","hľadanie chyby"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/17-riesenie-goniometrickych-rovnic.js"
   },
   {
     id: '3-u01-h018', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Riešenie goniometrických rovníc", lesson: 'Hodina 18', lessonOrder: 18,
-    time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
-    skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
+    time: '25–30 min + zbierka', status: 'ready',
+    type: 'Substitúcia t → kvadratická rovnica → vyradenie koreňa → návrat k x → zbierka podľa úrovní',
+    skills: ["substitúcia","kvadratická rovnica","sin x = t","cos x = t"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/18-riesenie-goniometrickych-rovnic.js"
   },
   {
     id: '3-u01-h019', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Opakovanie", lesson: 'Hodina 19', lessonOrder: 19,
-    time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
-    skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
+    time: '20–25 min + zbierka', status: 'ready',
+    type: 'Mapa troch typov → voľba postupu → pasce v intervale → zmiešaná zbierka podľa úrovní',
+    skills: ["voľba postupu","typy goniometrických rovníc","interval","sebahodnotenie"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/19-opakovanie.js"
   },
   {
     id: '3-u01-h020', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
     topic: "Kontrolná písomná práca", lesson: 'Hodina 20', lessonOrder: 20,
-    time: '18–24 min', status: 'ready',
-    type: 'Význam → vizualizácia → pracovný zápis → čistý zápis → overenie',
-    skills: ["goniometria", "reprezentácie", "matematická komunikácia"],
+    time: '45 min', status: 'ready', kind: 'exam',
+    type: 'Písomka po krokoch v mobile → automatické body za postup → oprava a známka učiteľkou',
+    skills: ["goniometrické rovnice","substitúcia","postup riešenia","výber z intervalu"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/20-kontrolna-pisomna-praca.js"
   },
 

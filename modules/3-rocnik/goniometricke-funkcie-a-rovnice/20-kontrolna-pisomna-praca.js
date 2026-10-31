@@ -1,102 +1,66 @@
+// Kontrolná písomná práca (hodina 20). Písomka sa hrá v mobile (core/exam.js), ale
+// zadania ani kľúč sú ZÁMERNE mimo tohto verejného súboru: ležia na serveri v
+// api/_exams/3-u01-h020.js a žiakom ich pošle učiteľka cez kód hodiny.
+// Preto tu nie sú žiadne `activities`.
 MathPlatform.registerModule({
-  "id": "3-u01-h020",
-  "teacher": {
-    "placement": "3. ročník · Goniometrické funkcie, goniometrické, rovnice · Hodina 20 · Kontrolná písomná práca",
-    "prerequisites": [
-      "goniometrické funkcie ostrého uhla z 2. ročníka",
-      "práca s grafom funkcie z 2. ročníka",
-      "π a základné algebraické úpravy z predchádzajúceho štúdia",
-      "učivo hodín 1–19"
+  id: '3-u01-h020',
+  teacher: {
+    placement: '3. ročník · Goniometrické funkcie, goniometrické, rovnice · Hodina 20 · Kontrolná písomná práca',
+    prerequisites: [
+      'rovnice sin x = a a cos x = a vrátane výberu riešení z intervalu (hodiny 14–15)',
+      'rovnice so zloženým argumentom: cos(x − π/5) = 1/2, sin 2x = c (hodiny 16–17)',
+      'kvadratické rovnice vzhľadom na sin x alebo cos x a substitúcia t (hodina 18)',
+      'opakovanie hodina 19'
     ],
-    "planContent": [
-      "Obsah a poradie vychádzajú z aktuálneho tematického plánu 3. ročníka."
+    planContent: [
+      'Aktuálny tematický plán uvádza v celku Goniometrické funkcie, goniometrické rovnice kontrolnú písomnú prácu. Písomka overuje rovnice, v ktorých sa vyskytujú iba funkcie sin a cos.'
     ],
-    "planPerformance": [
-      "Poznať pojem jednotková kružnica.",
-      "Vedieť zobraziť na jednotkovej kružnici ľubovoľné reálne číslo a priradiť reálne číslo bodu kružnice.",
-      "Zadefinovať funkcie sin x, cos x, tg x, cotg x a opísať ich vlastnosti.",
-      "Poznať a vedieť použiť goniometrické vzorce.",
-      "Vyriešiť goniometrickú rovnicu."
+    planPerformance: [
+      'Poznať pojem jednotková kružnica.',
+      'Vedieť zobraziť na jednotkovej kružnici ľubovoľné reálne číslo a priradiť reálne číslo bodu kružnice.',
+      'Zadefinovať funkcie sin x, cos x, tg x, cotg x a opísať ich vlastnosti.',
+      'Poznať a vedieť použiť goniometrické vzorce.',
+      'Vyriešiť goniometrickú rovnicu.'
     ],
-    "goals": [
-      "samostatne preukázať osvojené vedomosti",
-      "zapísať riešenie matematicky presne"
+    goals: [
+      'overiť riešenie základných rovníc sin x = a, cos x = a vrátane hraničných prípadov a rovníc bez riešenia',
+      'overiť rovnice so zloženým argumentom: substitúcia u, návrat k x, výber z intervalu, kratšia perióda pri 2x',
+      'overiť kvadratické rovnice: substitúcia t, vyradenie koreňa mimo ⟨−1; 1⟩, návrat k x',
+      'hodnotiť postup, nielen výsledok: každý krok postupu má vlastné body'
     ],
-    "competencies": [
-      "prepájať obrázok, slovný opis a symbolický zápis",
-      "pracovať ručne v zošite a zdôvodniť postup",
-      "rozlíšiť údaj, vzťah a záver"
+    competencies: [
+      'voľba správneho postupu podľa tvaru rovnice',
+      'presný zápis medzivýsledkov (substitúcia, korene, riešenia v intervale)',
+      'argumentácia pri vyraďovaní koreňa alebo riešenia mimo intervalu'
     ],
-    "enrichment": [
-      "Návrh maturitného štandardu je použitý iba ako obohatenie: reprezentácie, modelovanie, presný matematický jazyk a argumentácia."
+    enrichment: [
+      'Návrh maturitného štandardu je použitý iba ako obohatenie spôsobu hodnotenia: dôraz na postup a zdôvodnenie, nie len na výsledok. Poradie a rozsah učiva určuje tematický plán.'
     ],
-    "flow": [
-      "4–5 min aktivácia predchádzajúcich vedomostí",
-      "15–22 min vybraná digitálna časť",
-      "8–12 min zápis do zošita a ručné riešenie",
-      "5 min spoločná syntéza"
+    flow: [
+      '5 min: pripojenie žiakov kódom/QR, rozdelenie do skupín A a B',
+      '35–40 min: samostatná práca. Postup žiaci počítajú na papieri, medzivýsledky a výsledky zapisujú do aplikácie po krokoch (riešenia ako násobky π zapisujú iba číslom pred π)',
+      'koniec: ukončenie písomky (odpovede sa odovzdajú automaticky)',
+      'po hodine: kontrola v tabuľke Opravovanie, ručná úprava bodov (napr. následná chyba), export CSV; výsledky môžeš zverejniť žiakom'
     ],
-    "diagnostics": [
-      "sleduj, či žiak rozumie významu symbolov a vzťahov, nielen postupu",
-      "pri chybe sa vráť k obrázku alebo definícii"
+    diagnostics: [
+      'pri základných rovniciach: či žiak nájde obe riešenia v intervale a rozlíši rovnicu bez riešenia',
+      'pri zloženom argumente: či sa žiak správne vráti od u k x (smer posunu) a vydelí aj člen 2kπ pri 2x',
+      'pri kvadratických rovniciach: či žiak vyradí koreň mimo ⟨−1; 1⟩ a nezabudne vrátiť sa k x',
+      'následné chyby: ak žiak počíta správne s vlastným chybným medzivýsledkom, body za ďalšie kroky môžeš ručne upraviť',
+      'počet opustení aplikácie počas písomky (len informácia)'
     ],
-    "partialUse": [
-      "Modul nie je povinné použiť celý; učiteľ môže vybrať iba objavovaciu, vizuálnu alebo diagnostickú časť."
+    partialUse: [
+      'Písomku spúšťaš v učiteľskej časti tlačidlom „Spustiť písomku“; žiak si ju samostatne otvoriť nemôže.',
+      'Pre žiaka bez mobilu si môžeš vytlačiť zadanie skupiny A alebo B (aj s kľúčom) a opraviť ho ručne.',
+      'Výsledky sa neukladajú na server. Priebeh sa zálohuje v prehliadači učiteľky; po písomke si stiahni CSV.'
     ]
   },
-  "student": {
-    "title": "Kontrolná písomná práca",
-    "subtitle": "Digitálna časť iba ako krátke naladenie",
-    "intro": "Pracuj postupne: najprv význam a obrázok, potom zápis a až potom samostatná úloha.",
-    "estimatedTime": "4–6 min digitálne + písomná práca",
-    "activities": [
-      {
-        "id": "topic-intro",
-        "type": "intro"
-      },
-      {
-        "id": "prep",
-        "type": "info",
-        "phase": "PRED PÍSOMKOU",
-        "title": "Krátka kontrola pripravenosti",
-        "html": "<p>Aplikácia dnes <strong>nenahrádza písomnú prácu</strong>. Použi ju len na krátke vybavenie kľúčových pojmov. Potom zariadenie odlož.</p>"
-      },
-      {
-        "id": "check",
-        "type": "choice",
-        "phase": "RÝCHLA KONTROLA",
-        "skill": "goniometria",
-        "question": "Čo je najlepší postup, keď si nie si istý/istá vlastnosťou goniometrickej funkcie?",
-        "options": [
-          "zmeniť zadanie",
-          "tipnúť si",
-          "vrátiť sa k jednotkovej kružnici alebo grafu",
-          "preskočiť definíciu"
-        ],
-        "answer": 2,
-        "correct": "Obrázok a definícia sú opora pre zdôvodnenie.",
-        "hint": "Hľadaj matematický dôvod."
-      },
-      {
-        "id": "paper",
-        "type": "notebook",
-        "phase": "PÍSOMNÁ PRÁCA",
-        "title": "Zariadenie odlož",
-        "html": "<p>Ďalšia práca patrí na papier. Rieš samostatne, zapisuj postup a používaj presnú symboliku.</p>",
-        "model": "Po písomke si označ jednu úlohu, pri ktorej chceš rozobrať postup alebo chybu."
-      },
-      {
-        "id": "reflection",
-        "type": "reflection",
-        "phase": "SEBAHODNOTENIE",
-        "title": "Čo už viem?",
-        "prompt": "Pri každej zručnosti označ, ako sa teraz cítiš.",
-        "skills": [
-          "viem pracovať samostatne bez digitálnej pomoci",
-          "kontrolujem podmienky a zápis",
-          "viem po práci pomenovať miesto, kde som si nebol/a istý/istá"
-        ]
-      }
-    ]
+  student: {
+    title: 'Kontrolná písomná práca: Goniometrické rovnice',
+    subtitle: 'Hodina 20 · Goniometrické rovnice',
+    intro: 'Písomka má úlohy rozdelené na kroky. Za každý správny krok postupu získaš body. Zadanie sa ti zobrazí po pripojení kódom od učiteľky.',
+    estimatedTime: '45 min',
+    exam: true,
+    activities: []
   }
 });

@@ -490,3 +490,4 @@ select.answer-good, select.answer-bad { opacity: 1; -webkit-text-fill-color: var
   .exam-result-steps li { grid-template-columns: 22px 1fr; }
   .exam-result-steps .pts { grid-row: auto; grid-column: 2; }
 }
+.exam-suffix { font-size: 1.2rem; font-weight: 800; color: var(--ink); }
