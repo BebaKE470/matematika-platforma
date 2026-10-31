@@ -272,3 +272,39 @@ escaped. See `docs/AUTHORING.md` for the field-by-field list.
 - `node --check <file>` — plain Node syntax check; every content module
   must pass it (wired into `tools/audit.mjs`'s load step, which throws with
   the file name on any that don't).
+
+## Písomka (`core/exam.js`, `api/exam.js`)
+
+Písomka (registry `kind: 'exam'`) je tretí tok vedľa solo modulu a živej hodiny.
+Používa ten istý Supabase Broadcast kanál `math-<kód>`, ale vlastný prehrávač
+a vlastný záznam o bodoch — `core/session.js` ju len spustí z `play()`
+(`MathExam.active()`), XP/`MathScore` sa nepoužívajú.
+
+**Kľúč nikdy neopustí server, kým ho učiteľka nezverejní.**
+1. Učiteľka: `#teacher-exam/<id>` → `MathExam.fetchExam()` volá `POST /api/exam
+   {token, id}` (token z `MathAuth`), server ho overí (`api/_lib/token.js`) a vráti
+   celú písomku z `api/_exams/<id>.js`.
+2. Učiteľka → žiaci, udalosť `'teacher'`: `{action:'grading', grading, lesson:{…, exam}}`
+   kde `exam` = `MathExam.publicExam()` (bez `key`). Je to tá istá debouncovaná
+   správa, ktorou sa žiak dozvie modul/aktivity pri obyčajnej živej hodine.
+3. Žiaci → učiteľka, udalosť `'progress'`:
+   `{nick, moduleId, stage, question, total, ts, exam:{group, answers, leaves, submitted}}`.
+   Vždy sa posielajú *všetky* odpovede naraz (je ich málo), preto zmeškaná správa
+   nevadí. Odosiela sa po 1,5 s od poslednej zmeny a pri zmene úlohy.
+4. Body počíta **prehliadač učiteľky** (`MathExam.gradeSubmission`) z odpovedí a kľúča.
+5. Učiteľka → žiaci: `{action:'ended'}` (žiak sa automaticky odovzdá),
+   `{action:'reveal', key}` (kľúč; žiak si vyhodnotí len vlastné odpovede),
+   `{action:'resend'}` (po návrate do rozpracovanej písomky žiaci pošlú odpovede znova).
+
+**Zálohy (bez databázy):** žiak `localStorage['mathExamStudentV1']` (skupina,
+odpovede, odovzdané, zadanie — po obnovení stránky a opätovnom zadaní mena a kódu
+pokračuje); učiteľka `localStorage['mathExamTeacherV1']` (žiaci, stav, ručné
+úpravy bodov) — `#teacher-exam/<id>/<kód>` ju obnoví. Záznamy sa mažú po
+14 (žiak) / 60 (učiteľka) dňoch. Jediný trvalý záznam je CSV export.
+
+**Tlač:** `#exam-print/<id>/<A|B|AB|key>` (len učiteľka, otvára sa v novej karte,
+ktorá si skopíruje `sessionStorage` s tokenom).
+
+**Bezpečnosť:** `api/_exams/` a `api/_lib/` majú predponu `_`, takže ich Vercel
+nevystaví ako endpointy; po nasadení over, že `/api/_exams/<id>.js` vracia 404.
+Ak by nie, pridaj do `vercel.json` rewrite na 404.

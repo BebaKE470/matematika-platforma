@@ -487,3 +487,37 @@ that pattern is gone, see the `notebook`/`explain` sections above; a
 `phase: 'ZOŠIT'` you find on a `notebook` activity should be `BEZ MOBILU`
 instead if the content is a real independent task, or the whole activity
 converted to `explain` if it's theory to copy.)
+
+## Písomka (`kind: 'exam'`)
+
+Písomka je iný druh obsahu ako učebný modul: žiak ju hrá v mobile po krokoch,
+bez okamžitej spätnej väzby, a body za každý krok sa počítajú automaticky
+(učiteľka ich v tabuľke Opravovanie môže ručne upraviť). Týka sa ju výnimka z
+pravidla 4: postup je zachytený štruktúrovane (medzivýsledky), takže mobil
+nenahrádza myslenie, len zbiera jeho stopy.
+
+**Dva súbory, zámerne oddelené:**
+- `modules/<rocnik>/<celok>/<NN>-….js` — verejný modul: iba `teacher` (metodická
+  karta) a `student: { title, subtitle, intro, estimatedTime, exam: true, activities: [] }`.
+  V registri má záznam s `kind: "exam"`.
+- `api/_exams/<id>.js` (+ riadok v `api/_exams/index.js`) — **zadania aj kľúč**.
+  Ležia na serveri a vydá ich `api/exam.js` len prihlásenej učiteľke; žiakom ich
+  pošle jej prehliadač bez kľúča. Nikdy nedávaj kľúč do verejného modulu.
+
+**Tvar `api/_exams/<id>.js`:** `id`, `title`, `minutes`, `instructions[]`,
+`groups: { A: { tasks }, B: { tasks } }`, `bonusTasks[]` (id úloh, ktoré sa
+nezapočítavajú do maxima), `key`.
+- úloha: `{ id, title, question, note?, steps[] }`
+- krok: `{ id, label, kind: 'number' | 'set', points, allowNone? }`
+- `key[skupina][úloha][krok]`: pre `number` reťazec (`'-2/3'`) alebo `'none'`
+  („nemá riešenie“, vyžaduje `allowNone: true`); pre `set` pole reťazcov,
+  prázdne pole = ∅.
+- Skupiny A a B musia mať rovnaké id úloh a krokov, `kind`, `points` aj
+  `allowNone` (iné čísla a texty), inak by boli nespravodlivé.
+- Čísla sa porovnávajú presne ako zlomky (`-10/6` = `-5/3` = `-1,666…` nie;
+  `1,5` = `3/2`). Zaokrúhlené desatinné číslo sa neuzná.
+- `label` kroku nesmie prezradiť výsledok (napr. kritické body).
+
+`node tools/audit.mjs` kontroluje všetko vyššie vrátane zhody skupín A/B, kľúča
+ku každému kroku a toho, že `publicExam()` kľúč nevyzradí. Výsledky z kľúča si
+pred nasadením over aj nezávisle (dosadením do rovnice).

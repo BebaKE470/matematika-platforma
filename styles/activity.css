@@ -435,3 +435,58 @@ select.answer-good, select.answer-bad { opacity: 1; -webkit-text-fill-color: var
 @media (max-width: 520px) {
   .result-score span { font-size: 17px; }
 }
+
+/* --- Písomka (core/exam.js): prehrávač žiaka ------------------------------ */
+
+.exam-instructions { margin: 10px 0 14px; padding-left: 20px; display: grid; gap: 6px; }
+.exam-groups { gap: 10px; }
+.exam-group { flex: 1 1 140px; font-size: 1.1rem; padding: 14px 18px; }
+.exam-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 4px; }
+.exam-chip {
+  min-width: 38px; height: 38px; border-radius: 10px; border: 2px solid var(--line);
+  background: var(--paper); color: var(--ink); font-weight: 800; cursor: pointer;
+}
+.exam-chip.part { background: var(--warn); border-color: #e3cf8f; }
+.exam-chip.done { background: var(--good); border-color: #9bcfae; }
+.exam-chip.current { border-color: var(--ink); box-shadow: 0 0 0 2px var(--ink) inset; }
+.exam-pts { font-size: .78rem; font-weight: 700; color: var(--muted); white-space: nowrap; }
+.exam-question { font-size: 1.2rem; font-weight: 700; margin: 6px 0 12px; }
+.exam-keypad { display: flex; align-items: center; gap: 8px; margin: 8px 0 4px; }
+.exam-key { min-width: 44px; padding: 8px 12px; font-size: 1.1rem; }
+.exam-steps { display: grid; gap: 14px; margin: 10px 0 16px; }
+.exam-step { padding: 12px 14px; border: 1px solid var(--line); border-radius: 14px; background: #fafbf9; }
+.exam-label { display: block; font-weight: 700; margin: 0 0 8px; }
+.exam-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 6px 0; }
+.exam-in { flex: 1 1 140px; max-width: 280px; font-size: 1.15rem; padding: 10px 12px; }
+.exam-in:disabled { opacity: .45; }
+.exam-none { display: inline-flex; align-items: center; gap: 8px; margin: 6px 0; cursor: pointer; font-weight: 600; }
+.exam-set.is-empty .exam-none { margin-top: 0; }
+.exam-add { font-size: .9rem; padding: 8px 12px; }
+.exam-rm { padding: 6px 12px; font-size: 1.1rem; line-height: 1; }
+.exam-nav { justify-content: space-between; margin-top: 8px; }
+.exam-review { display: grid; gap: 8px; margin: 12px 0; }
+.exam-review-row {
+  display: flex; justify-content: space-between; gap: 12px; align-items: center; text-align: left;
+  padding: 12px 14px; border-radius: 12px; border: 2px solid var(--line); background: var(--paper); cursor: pointer; color: var(--ink);
+}
+.exam-review-row.ok { border-color: #9bcfae; background: var(--good); }
+.exam-review-row.warn { border-color: #e3cf8f; background: var(--warn); }
+
+/* Výsledky písomky (žiak po zverejnení, učiteľka pri opravovaní) */
+.exam-results { display: grid; gap: 8px; margin: 12px 0; }
+.exam-result-task { border: 1px solid var(--line); border-radius: 12px; background: var(--paper); padding: 0 12px; }
+.exam-result-task.full { border-color: #9bcfae; }
+.exam-result-task > summary { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; cursor: pointer; }
+.exam-result-steps { list-style: none; margin: 0 0 8px; padding: 0; display: grid; gap: 6px; }
+.exam-result-steps li { display: grid; grid-template-columns: 22px 1fr auto; gap: 4px 8px; padding: 8px 10px; border-radius: 10px; font-size: .93rem; }
+.exam-result-steps li.ok { background: var(--good); }
+.exam-result-steps li.bad { background: var(--bad); }
+.exam-result-steps .mark { font-weight: 900; }
+.exam-result-steps .ans { grid-column: 2 / 3; color: var(--muted); }
+.exam-result-steps .pts { grid-row: 1 / 3; grid-column: 3; align-self: center; font-weight: 700; white-space: nowrap; }
+
+@media (max-width: 520px) {
+  .exam-in { max-width: none; }
+  .exam-result-steps li { grid-template-columns: 22px 1fr; }
+  .exam-result-steps .pts { grid-row: auto; grid-column: 2; }
+}

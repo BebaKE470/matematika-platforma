@@ -158,3 +158,7 @@
   .print-sheet .truth { min-width: 0; }
   .print-sheet .truth th, .print-sheet .truth td { padding: 3px 7px; }
 }
+
+/* --- Písomka: tlač zadania a kľúča --- */
+.exam-print-task { margin: 0 0 14px; }
+.exam-print-task .print-answer-line em { color: var(--muted); font-style: normal; font-size: .85em; }

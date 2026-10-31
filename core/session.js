@@ -128,6 +128,7 @@
   // code never did this, which is why a student who navigated to the catalog
   // mid-lesson left their realtime socket open for the rest of the period.
   function leave() {
+    if (window.MathExam) window.MathExam.end();
     if (live) { live.close(); live = null; }
     state = freshState();
     currentModule = null;
@@ -208,6 +209,9 @@
   }
 
   function play(app) {
+    // Písomka (core/exam.js) si vedie vlastný stav a obrazovky – session.js ju
+    // len spustí; XP, okamžitá spätná väzba ani `activities` sa tu nepoužívajú.
+    if (window.MathExam && window.MathExam.active()) { window.MathExam.play(app); return; }
     if (!currentModule) {
       location.hash = 'module/' + (state.moduleId || window.MathPlatform.defaultModuleId());
       return;

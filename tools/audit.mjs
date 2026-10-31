@@ -26,6 +26,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createRequire } from 'node:module';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const args = new Set(process.argv.slice(2));
@@ -172,6 +173,95 @@ const answerIndexCounts = {}; // overall distribution, for the summary
 const allSameIndexModules = [];
 const phaseUsage = new Map(); // phase -> count
 
+// Písomka (registry `kind: 'exam'`, core/exam.js): zadania a kľúč ležia mimo
+// verejných modulov v api/_exams/<id>.js. Pre ne neplatí kontrola `activities`
+// ani `reflection`, platí táto:
+let MathExam = null;
+function loadMathExam() {
+  if (MathExam) return MathExam;
+  globalThis.window.MathUtil = globalThis.window.MathUtil || { esc: String, $: () => null, $$: () => [] };
+  const p = path.join(ROOT, 'core/exam.js');
+  currentFile = 'core/exam.js';
+  loadClassicScript(p);
+  MathExam = globalThis.window.MathExam;
+  return MathExam;
+}
+
+function auditExam(id, label) {
+  const where = `${label} (písomka)`;
+  const examFile = path.join(ROOT, 'api/_exams', `${id}.js`);
+  if (!fs.existsSync(examFile)) { fail('exam', `${where}: chýba api/_exams/${id}.js`); return; }
+  const X = loadMathExam();
+  if (!X) { fail('exam', `${where}: core/exam.js sa nenačítal`); return; }
+
+  const require = createRequire(import.meta.url);
+  let exam;
+  try { exam = require(examFile); } catch (e) { fail('exam', `${where}: api/_exams/${id}.js hodil výnimku: ${e.message}`); return; }
+  if (exam.id !== id) fail('exam', `${where}: id písomky (${exam.id}) sa nezhoduje s ${id}`);
+
+  try {
+    const index = require(path.join(ROOT, 'api/_exams/index.js'));
+    if (index[id] !== exam) fail('exam', `${where}: písomka nie je zapísaná v api/_exams/index.js`);
+  } catch (e) { fail('exam', `${where}: api/_exams/index.js sa nepodarilo načítať: ${e.message}`); }
+
+  if (!Array.isArray(exam.instructions) || !exam.instructions.length) warn('exam', `${where}: chýbajú instructions`);
+  const groupNames = Object.keys(exam.groups || {});
+  if (groupNames.length < 1) { fail('exam', `${where}: chýbajú groups`); return; }
+  const ref = exam.groups[groupNames[0]].tasks || [];
+  const bonus = new Set(exam.bonusTasks || []);
+  ref.forEach(t => { bonus.delete(t.id); });
+  bonus.forEach(b => fail('exam', `${where}: bonusTasks obsahuje neexistujúcu úlohu '${b}'`));
+
+  const KINDS = new Set(['number', 'set']);
+  groupNames.forEach(g => {
+    const tasks = (exam.groups[g] && exam.groups[g].tasks) || [];
+    const key = exam.key && exam.key[g];
+    if (!key) fail('exam', `${where}: chýba key pre skupinu ${g}`);
+    if (tasks.length !== ref.length) fail('exam', `${where}: skupina ${g} má iný počet úloh ako ${groupNames[0]}`);
+    const seenTasks = new Set();
+    tasks.forEach((t, i) => {
+      const tw = `${where} ${g}.${t && t.id}`;
+      if (!t || !t.id || seenTasks.has(t.id)) { fail('exam', `${tw}: chýba alebo duplicitné id úlohy`); return; }
+      seenTasks.add(t.id);
+      if (!t.question) fail('exam', `${tw}: chýba question`);
+      const r = ref[i];
+      if (!r || r.id !== t.id) fail('exam', `${tw}: poradie/id úloh sa nezhoduje so skupinou ${groupNames[0]}`);
+      if (!Array.isArray(t.steps) || !t.steps.length) { fail('exam', `${tw}: úloha bez krokov`); return; }
+      if (r && r.steps && r.steps.length !== t.steps.length) fail('exam', `${tw}: iný počet krokov ako v skupine ${groupNames[0]}`);
+      const seenSteps = new Set();
+      t.steps.forEach((s, j) => {
+        const sw = `${tw}.${s && s.id}`;
+        if (!s || !s.id || seenSteps.has(s.id)) { fail('exam', `${sw}: chýba alebo duplicitné id kroku`); return; }
+        seenSteps.add(s.id);
+        if (!s.label) fail('exam', `${sw}: chýba label`);
+        if (!KINDS.has(s.kind)) fail('exam', `${sw}: neznáme kind '${s.kind}'`);
+        if (!(typeof s.points === 'number' && s.points > 0)) fail('exam', `${sw}: points musí byť kladné číslo`);
+        const rs = r && r.steps && r.steps[j];
+        if (rs && (rs.id !== s.id || rs.kind !== s.kind || rs.points !== s.points || !!rs.allowNone !== !!s.allowNone)) {
+          fail('exam', `${sw}: id/kind/points/allowNone sa nezhoduje so skupinou ${groupNames[0]}`);
+        }
+        const kv = key && key[t.id] && key[t.id][s.id];
+        if (kv === undefined) { fail('exam', `${sw}: v kľúči chýba odpoveď`); return; }
+        if (s.kind === 'set') {
+          if (!Array.isArray(kv) || kv.some(x => typeof x !== 'string' || !X.parseNumber(x))) fail('exam', `${sw}: kľúč množiny musí byť pole čísel (prázdne = ∅)`);
+        } else if (kv === 'none') {
+          if (!s.allowNone) fail('exam', `${sw}: kľúč 'none', ale krok nemá allowNone: true`);
+        } else if (typeof kv !== 'string' || !X.parseNumber(kv)) {
+          fail('exam', `${sw}: kľúč '${kv}' sa nedá spracovať ako číslo`);
+        }
+      });
+    });
+  });
+
+  // Skupiny musia mať rovnaké maximum bodov (inak by boli nespravodlivé).
+  const maxOf = g => (exam.groups[g].tasks || []).filter(t => !(exam.bonusTasks || []).includes(t.id)).reduce((n, t) => n + (t.steps || []).reduce((k, s) => k + (s.points || 0), 0), 0);
+  const maxes = groupNames.map(maxOf);
+  if (new Set(maxes).size > 1) fail('exam', `${where}: skupiny majú rôzne maximum bodov (${groupNames.map((g, i) => `${g}=${maxes[i]}`).join(', ')})`);
+
+  // Zadania poslané žiakom nesmú obsahovať kľúč.
+  if (JSON.stringify(X.publicExam(exam)).includes('"key"')) fail('exam', `${where}: publicExam() prezrádza kľúč`);
+}
+
 for (const [id, mod] of modulesByEntry) {
   const entry = registry.find(m => m.id === id);
   const label = `${id} (${entry.file})`;
@@ -179,6 +269,12 @@ for (const [id, mod] of modulesByEntry) {
   if (!mod.student || !Array.isArray(mod.student.activities)) {
     fail('content', `${label}: chýba student.activities`);
     continue;
+  }
+  const isExam = mod.student.exam === true;
+  if (isExam !== (entry.kind === 'exam')) fail('registry', `${label}: registry kind='${entry.kind}' a student.exam=${mod.student.exam} sa nezhodujú`);
+  if (isExam) {
+    if (mod.student.activities.length) fail('content', `${label}: písomka nemá mať v module activities (zadania patria do api/_exams/)`);
+    auditExam(id, label);
   }
   const acts = mod.student.activities;
   const seenActivityIds = new Set();
@@ -286,7 +382,7 @@ for (const [id, mod] of modulesByEntry) {
     }
   }
 
-  if (entry.status === 'ready' && !hasReflection) warn('content', `${label}: ready modul bez reflection na konci`);
+  if (entry.status === 'ready' && !hasReflection && !isExam) warn('content', `${label}: ready modul bez reflection na konci`);
   if (choiceAnswerIdx.length >= 3 && choiceAnswerIdx.every(x => x === choiceAnswerIdx[0])) {
     allSameIndexModules.push(`${id}: všetkých ${choiceAnswerIdx.length} choice má answer=${choiceAnswerIdx[0]}`);
   }

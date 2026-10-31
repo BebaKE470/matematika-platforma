@@ -56,3 +56,21 @@
 @media (max-width: 720px) {
   .live-setup-row { gap: 16px; }
 }
+
+/* --- Písomka (učiteľská obrazovka) --- */
+
+.exam-saved-list { display: grid; gap: 10px; }
+.exam-saved { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; }
+.exam-students { display: grid; gap: 8px; margin-top: 10px; }
+.exam-student { border: 1px solid var(--line); border-radius: 12px; background: var(--paper); padding: 0 12px; }
+.exam-student > summary {
+  display: grid; grid-template-columns: 1.4fr .7fr 1fr .9fr 2fr; gap: 10px; align-items: center;
+  padding: 10px 0; cursor: pointer; font-size: 14px;
+}
+.exam-student-body { padding: 0 0 10px; }
+.exam-override { margin: 0 0 10px; font-size: .9rem; }
+.exam-override input { width: 5.5em; margin: 0 6px; padding: 6px 8px; }
+
+@media (max-width: 720px) {
+  .exam-student > summary { grid-template-columns: 1fr 1fr; }
+}

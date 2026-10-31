@@ -125,6 +125,22 @@
         return;
       }
 
+      if (m.kind === 'exam') {
+        // Písomka sa nedá spustiť samostatne – zadania dostane žiak od učiteľky
+        // cez kód hodiny (viď join() nižšie a core/exam.js).
+        app.innerHTML = `
+          ${MathUI.backRow(`catalog/unit/${m.year}/${MathPlatform.unitKey(m.unit)}`, m.unit)}
+          <div class="card">
+            <div class="eyebrow">${esc(m.unit)} · ${esc(m.lesson)} · PÍSOMKA</div>
+            <h1>${esc(mod.student.title)}</h1>
+            <p>${esc(mod.student.intro)}</p>
+            <div class="notice"><strong>Písomka sa spúšťa kódom od učiteľky.</strong> Zadania sa ti zobrazia až po pripojení.</div>
+            <div class="actions"><button class="btn" data-go="join/${id}">Mám kód písomky</button></div>
+          </div>
+        `;
+        return;
+      }
+
       app.innerHTML = `
         ${MathUI.backRow(`catalog/unit/${m.year}/${MathPlatform.unitKey(m.unit)}`, m.unit)}
         <div class="card">
@@ -189,9 +205,20 @@
       $('#joinBtn').disabled = true;
       let resolveLesson;
       const lessonPromise = new Promise(r => { resolveLesson = r; });
+      // Písomka (registry `kind: 'exam'`, core/exam.js): zadania prídu v
+      // `lesson.exam`, ukončenie/zverejnenie výsledkov spracuje MathExam. Pri
+      // ručne zadanom kóde to zistíme až z prvej správy učiteľky.
+      let examMode = !!(knownId && meta0.kind === 'exam');
+      let exam = null;
       try {
         const handle = await MathLive.connectAsStudent(code, {
           onTeacher: msg => {
+            if (msg.action === 'grading' && msg.lesson && msg.lesson.exam) examMode = true;
+            if (examMode) {
+              if (msg.action === 'grading') { if (msg.lesson) resolveLesson(msg.lesson); }
+              else window.MathExam.onTeacher(msg);
+              return;
+            }
             if (msg.action === 'ended') {
               alert('Učiteľ ukončil živú hodinu. Pokračovať môžeš samostatne.');
               MathSession.getState().mode = 'solo';
@@ -214,13 +241,14 @@
         // live lesson itself) before the first activity renders.
         const joined = handle.send('progress', { nick, moduleId: moduleId || '', stage: 'joined', score: 0, ts: Date.now() });
 
-        if (!qrCode) {
+        if (!qrCode || examMode) {
           // No link to read the lesson from — ask the teacher's live channel
           // instead (teacherLive()'s lessonInfo() in core/views-teacher.js
           // answers every "joined" ping with the module/reflectOnly/selected
           // activities actually running). Give it a few seconds; the teacher
-          // may be mid-debounce on a burst of joins.
-          $('#joinInfo').textContent = 'Zisťujem, akú hodinu učiteľ/učiteľka spustil/-a…';
+          // may be mid-debounce on a burst of joins. Písomka vždy čaká na
+          // `lesson.exam` (zadania bez kľúča), aj keď prišla cez QR kód.
+          $('#joinInfo').textContent = examMode ? 'Načítavam zadanie písomky…' : 'Zisťujem, akú hodinu učiteľ/učiteľka spustil/-a…';
           const lesson = await Promise.race([
             lessonPromise,
             new Promise(r => setTimeout(() => r(null), 8000)),
@@ -229,6 +257,7 @@
             moduleId = lesson.moduleId;
             reflectionOnly = !!lesson.reflectOnly;
             selectedActivityIndices = lesson.selectedActivityIndices || null;
+            if (lesson.exam) { examMode = true; exam = lesson.exam; }
           } else if (!moduleId) {
             handle.close();
             $('#joinInfo').innerHTML = '<strong>Nepodarilo sa zistiť hodinu.</strong> Skontroluj kód, alebo požiadaj učiteľa/učiteľku o QR kód/odkaz.';
@@ -246,7 +275,20 @@
         // session as a safety net — see core/session.js), THEN attach this
         // brand-new handle; attaching before starting would have start()
         // immediately close the very handle we just opened.
+        if (examMode && !exam) {
+          // Učiteľka sa neozvala včas – ak sa žiak vracia do rozpísanej písomky,
+          // zadanie si vezmeme z jeho zálohy.
+          const saved = window.MathExam.loadSaved(code, nick);
+          if (saved && saved.exam && saved.moduleId === moduleId) exam = saved.exam;
+          else {
+            handle.close();
+            $('#joinInfo').innerHTML = '<strong>Nepodarilo sa načítať zadanie písomky.</strong> Skontroluj kód a pripojenie, alebo počkaj na učiteľku a skús to znova.';
+            $('#joinBtn').disabled = false;
+            return;
+          }
+        }
         await MathSession.start(moduleId, { mode: 'live', nick, session: code, reflectionOnly, selectedActivityIndices });
+        if (examMode) window.MathExam.begin({ exam, nick, code, moduleId, live: handle });
         MathSession.attachLive(handle);
         go('play');
         await joined;

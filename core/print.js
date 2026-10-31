@@ -194,6 +194,10 @@
     const mod = await window.MathPlatform.loadModule(id);
     const meta = window.MathPlatform.indexEntry(id);
     if (!mod || !meta || meta.status !== 'ready') { app.innerHTML = '<div class="card"><h2>Modul sa nedá vytlačiť.</h2></div>'; return; }
+    if (meta.kind === 'exam') {
+      app.innerHTML = '<div class="card"><h2>Písomku si žiak nemôže vytlačiť.</h2><p>Tlač zadania (skupiny A/B) a kľúča je v učiteľskej časti pri spustení písomky.</p><button class="btn" data-go="module/' + id + '">Späť</button></div>';
+      return;
+    }
 
     const ctx = { unit: meta.unit || '', topic: meta.topic || mod.student.title };
     const acts = mod.student.activities || [];

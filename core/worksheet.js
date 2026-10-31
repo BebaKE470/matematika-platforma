@@ -133,7 +133,7 @@
   const isTheory = a => PR.THEORY_TYPES.has(a.type) && a.type !== 'intro' && !isRecap(a);
   const isTask = a => !PR.THEORY_TYPES.has(a.type) && a.type !== 'reflection';
   const extrasOf = mod => (mod && mod.worksheet && Array.isArray(mod.worksheet.tasks)) ? mod.worksheet.tasks.filter(t => t && t.id) : [];
-  const readyModules = () => P.sortedModules().filter(m => m.status === 'ready');
+  const readyModules = () => P.sortedModules().filter(m => m.status === 'ready' && m.kind !== 'exam');
 
   // Adds a module to the most recently opened sheet (or a fresh one) and
   // jumps to its editor — the target of the "Pridať na pracovný list" button.

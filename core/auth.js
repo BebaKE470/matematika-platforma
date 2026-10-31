@@ -53,5 +53,8 @@
 
   function logout() { clearToken(); }
 
-  window.MathAuth = { unlocked, login, logout };
+  // Pre volania ďalších serverových funkcií (api/exam.js), ktoré token overujú samy.
+  function getToken() { return storedToken(); }
+
+  window.MathAuth = { unlocked, login, logout, getToken };
 })();
