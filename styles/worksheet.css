@@ -54,3 +54,14 @@
 
 .ws-theory { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 6px 0; }
 .ws-theory select { max-width: 100%; }
+
+/* Zoznam pracovných listov: bez stĺpca s číslom témy, s prehľadom ročníkov a celkov */
+.topic-row.ws-row { grid-template-columns: minmax(0, 1fr) auto; align-items: start; }
+.ws-row .topic-main h3 { margin: 0 0 4px; }
+.ws-topic-group { margin: 6px 0 0; font-size: .92rem; }
+.ws-topic-group .tag { margin-right: 4px; }
+.ws-topic-list { margin: 2px 0 0; color: var(--muted); font-size: .85rem; line-height: 1.45; }
+@media (max-width: 900px) {
+  .topic-row.ws-row { grid-template-columns: 1fr; }
+  .ws-row .topic-actions { grid-column: 1; justify-content: flex-start; max-width: none; }
+}

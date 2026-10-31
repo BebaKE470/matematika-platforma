@@ -211,15 +211,40 @@
 
   // --- List screen ------------------------------------------------------
 
+  // Prehľad obsahu listu pre zoznam listov: ročník → tematický celok → hodiny/témy,
+  // aby bolo vidno, čo list obsahuje, aj keď majú všetky rovnaký názov.
+  function sheetTopicsHtml(sheet) {
+    const groups = new Map();
+    let custom = 0, missing = 0;
+    sheet.sections.forEach(sec => {
+      if (sec.kind !== 'module') { custom++; return; }
+      const m = P.indexEntry(sec.moduleId);
+      if (!m) { missing++; return; }
+      const key = m.year + '|' + m.unit;
+      if (!groups.has(key)) groups.set(key, { year: m.year, unit: m.unit, order: m.unitOrder ?? 999, topics: [] });
+      groups.get(key).topics.push(m);
+    });
+    const parts = [...groups.values()]
+      .sort((a, b) => (a.year - b.year) || (a.order - b.order))
+      .map(g => `<div class="ws-topic-group">
+        <span class="tag">${esc(g.year)}. ročník</span> <strong>${esc(g.unit)}</strong>
+        <div class="ws-topic-list">${g.topics.slice().sort((a, b) => (a.lessonOrder ?? 999) - (b.lessonOrder ?? 999)).map(m => esc(`${m.lesson ? m.lesson + ' – ' : ''}${m.topic}`)).join(' · ')}</div>
+      </div>`);
+    if (custom) parts.push(`<div class="ws-topic-group"><span class="tag">Vlastné úlohy</span> <span class="muted">${custom} ${custom === 1 ? 'sekcia' : 'sekcie'}</span></div>`);
+    if (missing) parts.push(`<div class="ws-topic-group"><span class="tag off">Chýba modul</span> <span class="muted">${missing} ${missing === 1 ? 'sekcia' : 'sekcie'} odkazuje na modul, ktorý sa nenašiel</span></div>`);
+    return parts.length ? parts.join('') : '<div class="muted">Prázdny list</div>';
+  }
+
   function list() {
     let sheets = loadAll();
     const draw = () => {
       const rows = sheets
         .slice().sort((a, b) => b.updated - a.updated)
-        .map(s => `<article class="topic-row">
+        .map(s => `<article class="topic-row ws-row">
           <div class="topic-main">
             <h3>${esc(s.name)}</h3>
             <div class="meta">${s.sections.length} ${s.sections.length === 1 ? 'sekcia' : 'sekcií'} · upravené ${esc(new Date(s.updated).toLocaleString('sk-SK'))}</div>
+            ${sheetTopicsHtml(s)}
           </div>
           <div class="topic-actions">
             <button class="btn" data-go="worksheet/${s.id}">Otvoriť</button>
