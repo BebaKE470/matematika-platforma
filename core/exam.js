@@ -131,7 +131,7 @@
 
   // Zadania bez kľúča – toto sa posiela žiakom.
   function publicExam(exam) {
-    return { id: exam.id, title: exam.title, minutes: exam.minutes, instructions: exam.instructions, groups: exam.groups, bonusTasks: exam.bonusTasks || [] };
+    return { id: exam.id, title: exam.title, minutes: exam.minutes, instructions: exam.instructions, groups: exam.groups, bonusTasks: exam.bonusTasks || [], reflection: exam.reflection || null };
   }
 
   // --- Zobrazenie hodnôt ---------------------------------------------------
@@ -222,7 +222,7 @@
       Object.keys(all).forEach(k => { if (!all[k] || now - (all[k].at || 0) > KEEP_MS) delete all[k]; });
       all[storeKey(S.code, S.nick)] = {
         at: now, exam: S.exam, moduleId: S.moduleId, group: S.group, answers: S.answers,
-        submitted: S.submitted, leaves: S.leaves, taskIdx: S.taskIdx, revealedKey: S.revealedKey,
+        submitted: S.submitted, leaves: S.leaves, taskIdx: S.taskIdx, revealedKey: S.revealedKey, self: S.self,
       };
       localStorage.setItem(STORE_KEY, JSON.stringify(all));
     } catch (_) { /* localStorage nedostupné – písomka funguje, len bez zálohy */ }
@@ -240,7 +240,7 @@
       question: Math.min(S.taskIdx + 1, Math.max(list.length, 1)),
       total: list.length,
       ts: Date.now(),
-      exam: { group: S.group, answers: S.answers, leaves: S.leaves, submitted: S.submitted },
+      exam: { group: S.group, answers: S.answers, leaves: S.leaves, submitted: S.submitted, self: S.self },
     }).then(() => { if (S) S.sendOk = true; }).catch(() => { if (S) S.sendOk = false; });
   }
 
@@ -272,6 +272,7 @@
       leaves: sameExam ? (saved.leaves || 0) : 0,
       taskIdx: sameExam ? (saved.taskIdx || 0) : 0,
       revealedKey: sameExam ? (saved.revealedKey || null) : null,
+      self: sameExam ? (saved.self || {}) : {},
       screen: 'task', confirming: false, sendOk: null, sendTimer: null, mounted: false, lastInput: null, app: null,
     };
     document.addEventListener('visibilitychange', onVisibility);
@@ -531,6 +532,24 @@
     });
   }
 
+  // Nepovinná sebareflexia po odovzdaní (exam.reflection); informácia pre učiteľku, nie známka.
+  const REFLECTION_LEVELS = [['green', 'Rozumiem a viem vysvetliť'], ['yellow', 'Asi rozumiem, potrebujem príklad'], ['red', 'Zatiaľ v tom nemám jasno']];
+  const LEVEL_ICON = { green: '🟢', yellow: '🟡', red: '🔴' };
+
+  function reflectionHtml() {
+    const r = S.exam.reflection;
+    if (!r || !Array.isArray(r.skills) || !r.skills.length) return '';
+    return `<section class="exam-reflection">
+      <h2>Sebareflexia</h2>
+      <p class="muted">${esc(r.prompt || 'Ako ti išli jednotlivé časti? Nie je to známka.')} Je nepovinná.</p>
+      <div class="reflection-list">${r.skills.map(s => `
+        <div class="reflection-row">
+          <strong>${esc(s)}</strong>
+          <div class="reflection-buttons">${REFLECTION_LEVELS.map(([v, l]) => `<button type="button" data-s="${esc(s)}" data-v="${v}" class="${S.self[s] === v ? 'selected' : ''}">${LEVEL_ICON[v]} ${esc(l)}</button>`).join('')}</div>
+        </div>`).join('')}</div>
+    </section>`;
+  }
+
   function renderDone() {
     let result = '';
     if (S.revealedKey && S.group) {
@@ -548,11 +567,19 @@
       <h1>${S.revealedKey ? 'Výsledky písomky' : 'Ďakujeme, písomka je odovzdaná'}</h1>
       ${S.revealedKey ? '' : '<p>Tvoje odpovede dostala učiteľka. Výsledky uvidíš, keď ich zverejní. Mobil môžeš odložiť.</p>'}
       ${result}
+      ${reflectionHtml()}
       <div class="row">
         <button type="button" class="ghost" id="examResend">Odoslať odpovede učiteľke znova</button>
         <span class="muted" id="examSendState">${S.sendOk === true ? 'Odoslané ✓' : S.sendOk === false ? 'Odoslanie sa nepodarilo, skús znova.' : ''}</span>
       </div>
     </article>`;
+    $$('.exam-reflection [data-s]').forEach(btn => {
+      btn.onclick = () => {
+        S.self[btn.dataset.s] = btn.dataset.v;
+        $$('.exam-reflection [data-s]').filter(x => x.dataset.s === btn.dataset.s).forEach(x => x.classList.toggle('selected', x === btn));
+        touch();
+      };
+    });
     $('#examResend').onclick = async () => {
       $('#examSendState').textContent = 'Odosielam…';
       await sendNow();

@@ -138,6 +138,18 @@ module.exports = {
 
   bonusTasks: ['u7'],
 
+  // Nepovinná sebareflexia po odovzdaní (informácia pre učiteľku, nie známka).
+  reflection: {
+    prompt: 'Ako ti išli jednotlivé časti? Označ, nie je to známka.',
+    skills: [
+      'rovnice |L(x)| = k a hraničné prípady',
+      'rovnice |L(x)| = |R(x)|',
+      'rovnice |L(x)| = R(x) s podmienkou',
+      'kritické body a intervaly',
+      'kontrola kandidátov',
+    ],
+  },
+
   key: {
     A: {
       u1: { s1: '5', s2: '-2', s3: ['-2', '5'] },                         // 2x−3=7 → 5; 2x−3=−7 → −2

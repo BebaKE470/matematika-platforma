@@ -253,6 +253,13 @@ function auditExam(id, label) {
     });
   });
 
+  if (exam.reflection !== undefined) {
+    const r = exam.reflection;
+    if (!r || !Array.isArray(r.skills) || !r.skills.length || r.skills.some(x => typeof x !== 'string' || !x.trim())) {
+      fail('exam', `${where}: reflection.skills musí byť neprázdne pole neprázdnych reťazcov`);
+    }
+  } else warn('exam', `${where}: písomka bez reflection (sebareflexie po odovzdaní)`);
+
   // Skupiny musia mať rovnaké maximum bodov (inak by boli nespravodlivé).
   const maxOf = g => (exam.groups[g].tasks || []).filter(t => !(exam.bonusTasks || []).includes(t.id)).reduce((n, t) => n + (t.steps || []).reduce((k, s) => k + (s.points || 0), 0), 0);
   const maxes = groupNames.map(maxOf);

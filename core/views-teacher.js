@@ -539,6 +539,17 @@
     return st.stage === 'done' ? 'Odovzdané' : st.stage === 'joined' ? 'Pripojený' : `Pracuje (${st.question || 0}/${st.total || 0})`;
   }
 
+  const SELF_ICON = { green: '🟢', yellow: '🟡', red: '🔴' };
+  const SELF_TEXT = { green: 'zelená – rozumiem', yellow: 'žltá – ešte si nie som istý/istá', red: 'červená – potrebujem pomoc' };
+
+  function examSelfHtml(exam, self) {
+    const r = exam.reflection;
+    if (!r || !Array.isArray(r.skills) || !self) return '';
+    const marked = r.skills.filter(sk => SELF_ICON[self[sk]]);
+    if (!marked.length) return '';
+    return `<p class="exam-self"><strong>Sebareflexia:</strong> ${marked.map(sk => `${SELF_ICON[self[sk]]} ${esc(sk)}`).join(' · ')}</p>`;
+  }
+
   function gradeLine(graded, grading) {
     if (!graded) return '—';
     const g = grading.enabled ? MathScore.gradeForPercent(graded.percent, grading) : '';
@@ -750,7 +761,7 @@
             <span title="Koľkokrát žiak opustil aplikáciu">${ex.leaves ? '⚠ opustil ' + (Number(ex.leaves) || 0) + '×' : ''}</span>
             <span>${gradeLine(g, grading)}</span>
           </summary>
-          <div class="exam-student-body">${g ? `<div class="exam-results">${MathExam.resultTasksHtml(g, t => overrideInput(nick, t))}</div>` : '<p class="muted">Žiak ešte nevybral skupinu alebo neodoslal odpovede.</p>'}</div>
+          <div class="exam-student-body">${examSelfHtml(exam, ex.self)}${g ? `<div class="exam-results">${MathExam.resultTasksHtml(g, t => overrideInput(nick, t))}</div>` : '<p class="muted">Žiak ešte nevybral skupinu alebo neodoslal odpovede.</p>'}</div>
         </details>`;
       }).join('');
     }
@@ -860,7 +871,9 @@
     const nicks = Object.keys(students).sort((a, b) => a.localeCompare(b, 'sk'));
     if (!nicks.length) { alert('Zatiaľ nie sú žiadne výsledky na export.'); return; }
     const tasksA = exam.groups.A.tasks;
-    const head = ['Žiak (meno a priezvisko)', 'Skupina', 'Stav', 'Body (bez bonusu)', 'Bonus', 'Maximum', 'Percentá', ...(grading.enabled ? ['Známka'] : []), 'Opustenia aplikácie'];
+    const selfSkills = (exam.reflection && exam.reflection.skills) || [];
+    const head = ['Žiak (meno a priezvisko)', 'Skupina', 'Stav', 'Body (bez bonusu)', 'Bonus', 'Maximum', 'Percentá', ...(grading.enabled ? ['Známka'] : []), 'Opustenia aplikácie',
+      ...selfSkills.map(sk => `Sebahodnotenie: ${sk}`)];
     tasksA.forEach((t, i) => {
       head.push(`Úloha ${i + 1}: body`);
       t.steps.forEach((s, j) => head.push(`Úloha ${i + 1}, krok ${j + 1} (${s.points} b)`));
@@ -880,7 +893,8 @@
       const row = [nick, ex.group || '', st.stage === 'done' ? 'Odovzdané' : st.stage === 'joined' ? 'Pripojený' : 'Pracuje',
         g ? g.total : '', g ? g.bonus : '', g ? g.max : '', g ? `${g.percent} %` : '',
         ...(grading.enabled ? [g ? MathScore.gradeForPercent(g.percent, grading) : ''] : []),
-        ex.leaves || 0];
+        ex.leaves || 0,
+        ...selfSkills.map(sk => SELF_TEXT[(ex.self || {})[sk]] || '')];
       tasksA.forEach((t, i) => {
         const gt = g && g.tasks[i];
         row.push(gt ? gt.points : '');
