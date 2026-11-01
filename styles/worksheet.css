@@ -50,6 +50,10 @@
   #wsSheet .print-group-head { margin: 8px 0 3px; }
   #wsSheet .print-lines { margin: 3px 0; }
   #wsSheet .print-key-item { margin-bottom: 4px; }
+  /* Diagrams (Vennove diagramy…) are drawn for a phone screen; on a compact
+     sheet they only need to be big enough to read. */
+  #wsSheet .logic-visual { padding: 6px 10px; }
+  #wsSheet .logic-visual svg { width: 58%; margin: 0 auto; }
 }
 
 .ws-theory { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 6px 0; }
