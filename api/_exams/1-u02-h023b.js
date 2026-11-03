@@ -7,60 +7,38 @@
 // Formát je popísaný v docs/AUTHORING.md (sekcia „Písomka“). Skupiny A a B MUSIA mať
 // rovnaké id úloh a krokov, rovnaké `kind` a `points` (kontroluje tools/audit.mjs).
 //
-// Obmedzenie formátu: krok je buď číslo, alebo množina ČÍSEL. Preto sa priraďovačka
-// pojmov k definíciám rieši tak, že definície sú očíslované a žiak píše ich číslo,
-// a symboly ∈, ∉, ⊆ sa volia číslom (1 = ∈, 2 = ∉, 3 = ⊆).
+// Priraďovačka a symboly ∈ ∉ ⊆ používajú krok kind: 'choice' (výber z ponuky options);
+// kľúč je poradie správnej možnosti od 0.
 //
 // Tlačená verzia (Word) je v pisomky-na-tlac/ – kľúč tu je s ňou zhodný.
 
+// Možnosti výberu: žiak vyberie z ponuky (krok kind: 'choice'), kľúč je poradie možnosti od 0.
 const DEFS_A = [
-  '1 = množina všetkých prvkov, o ktorých v úlohe uvažujeme',
-  '2 = prvky, ktoré patria do A a nepatria do B',
-  '3 = podmienka, ktorú spĺňajú práve prvky množiny a žiadne iné',
-  '4 = množina, ktorá nemá žiaden prvok',
-  '5 = prvky, ktoré patria do A aj do B súčasne',
-  '6 = prvky z U, ktoré nepatria do A',
-  '7 = každý prvok množiny A patrí aj do množiny B',
-  '8 = počet rôznych prvkov množiny',
-  '9 = prvky, ktoré patria do A alebo do B (aspoň do jednej z nich)',
-].join('\n');
+  'množina všetkých prvkov, o ktorých v úlohe uvažujeme',
+  'prvky, ktoré patria do A a nepatria do B',
+  'podmienka, ktorú spĺňajú práve prvky množiny a žiadne iné',
+  'množina, ktorá nemá žiaden prvok',
+  'prvky, ktoré patria do A aj do B súčasne',
+  'prvky z U, ktoré nepatria do A',
+  'každý prvok množiny A patrí aj do množiny B',
+  'počet rôznych prvkov množiny',
+  'prvky, ktoré patria do A alebo do B (aspoň do jednej z nich)',
+];
 
 const DEFS_B = [
-  '1 = prvky z U, ktoré nepatria do A',
-  '2 = počet rôznych prvkov množiny',
-  '3 = množina všetkých prvkov, o ktorých v úlohe uvažujeme',
-  '4 = prvky, ktoré patria do A aj do B súčasne',
-  '5 = každý prvok množiny A patrí aj do množiny B',
-  '6 = prvky, ktoré patria do A alebo do B (aspoň do jednej z nich)',
-  '7 = podmienka, ktorú spĺňajú práve prvky množiny a žiadne iné',
-  '8 = prvky, ktoré patria do A a nepatria do B',
-  '9 = množina, ktorá nemá žiaden prvok',
-].join('\n');
+  'prvky z U, ktoré nepatria do A',
+  'počet rôznych prvkov množiny',
+  'množina všetkých prvkov, o ktorých v úlohe uvažujeme',
+  'prvky, ktoré patria do A aj do B súčasne',
+  'každý prvok množiny A patrí aj do množiny B',
+  'prvky, ktoré patria do A alebo do B (aspoň do jednej z nich)',
+  'podmienka, ktorú spĺňajú práve prvky množiny a žiadne iné',
+  'prvky, ktoré patria do A a nepatria do B',
+  'množina, ktorá nemá žiaden prvok',
+];
 
-const POJMY_A = [
-  'a) prienik množín A ∩ B',
-  'b) kardinalita množiny',
-  'c) prázdna množina',
-  'd) doplnok množiny A (A′)',
-  'e) podmnožina (A ⊆ B)',
-  'f) zjednotenie množín A ∪ B',
-  'g) univerzálna množina U',
-  'h) rozdiel množín A − B',
-].join('\n');
-
-const POJMY_B = [
-  'a) zjednotenie množín A ∪ B',
-  'b) univerzálna množina U',
-  'c) rozdiel množín A − B',
-  'd) podmnožina (A ⊆ B)',
-  'e) prázdna množina',
-  'f) doplnok množiny A (A′)',
-  'g) prienik množín A ∩ B',
-  'h) kardinalita množiny',
-].join('\n');
-
-const NOTE_MATCH = 'Ku každému pojmu a)–h) napíš číslo jeho definície. Jedna definícia je navyše.';
-const NOTE_SYMBOL = 'Zapíš číslo: 1 = ∈, 2 = ∉, 3 = ⊆.';
+const SYMBOLS = ['∈', '∉', '⊆'];
+const TRUTH = ['pravda', 'nepravda'];
 const NOTE_SET = 'Prvky množiny zapíš ako čísla. Pre prázdnu množinu použi tlačidlo „∅ prázdna množina“.';
 
 module.exports = {
@@ -78,25 +56,25 @@ module.exports = {
     A: {
       tasks: [
         { id: 'u1', title: 'Úloha 1: Pojmy a definície',
-          question: 'Pojmy:\n' + POJMY_A + '\n\nDefinície:\n' + DEFS_A, note: NOTE_MATCH,
+          question: 'Ku každému pojmu vyber jeho definíciu. Jedna definícia je navyše.',
           steps: [
-            { id: 's1', label: 'Pojem a) prienik množín A ∩ B: číslo definície', kind: 'number', points: 1 },
-            { id: 's2', label: 'Pojem b) kardinalita množiny: číslo definície', kind: 'number', points: 1 },
-            { id: 's3', label: 'Pojem c) prázdna množina: číslo definície', kind: 'number', points: 1 },
-            { id: 's4', label: 'Pojem d) doplnok množiny A (A′): číslo definície', kind: 'number', points: 1 },
-            { id: 's5', label: 'Pojem e) podmnožina (A ⊆ B): číslo definície', kind: 'number', points: 1 },
-            { id: 's6', label: 'Pojem f) zjednotenie množín A ∪ B: číslo definície', kind: 'number', points: 1 },
-            { id: 's7', label: 'Pojem g) univerzálna množina U: číslo definície', kind: 'number', points: 1 },
-            { id: 's8', label: 'Pojem h) rozdiel množín A − B: číslo definície', kind: 'number', points: 1 },
+            { id: 's1', label: 'prienik množín A ∩ B', kind: 'choice', options: DEFS_A, points: 1 },
+            { id: 's2', label: 'kardinalita množiny', kind: 'choice', options: DEFS_A, points: 1 },
+            { id: 's3', label: 'prázdna množina', kind: 'choice', options: DEFS_A, points: 1 },
+            { id: 's4', label: 'doplnok množiny A (A′)', kind: 'choice', options: DEFS_A, points: 1 },
+            { id: 's5', label: 'podmnožina (A ⊆ B)', kind: 'choice', options: DEFS_A, points: 1 },
+            { id: 's6', label: 'zjednotenie množín A ∪ B', kind: 'choice', options: DEFS_A, points: 1 },
+            { id: 's7', label: 'univerzálna množina U', kind: 'choice', options: DEFS_A, points: 1 },
+            { id: 's8', label: 'rozdiel množín A − B', kind: 'choice', options: DEFS_A, points: 1 },
           ] },
         { id: 'u2', title: 'Úloha 2: Prvky a podmnožiny',
-          question: 'Je dané M = {2, 4, 6, 8}. Doplň medzi ľavú stranu a množinu M správny symbol.', note: NOTE_SYMBOL,
+          question: 'Je dané M = {2, 4, 6, 8}. Doplň medzi ľavú stranu a množinu M správny symbol. V poslednom kroku vyber, či je tvrdenie pravdivé.',
           steps: [
-            { id: 's1', label: '4 … M', kind: 'number', points: 1 },
-            { id: 's2', label: '{2, 6} … M', kind: 'number', points: 1 },
-            { id: 's3', label: '5 … M', kind: 'number', points: 1 },
-            { id: 's4', label: '∅ … M', kind: 'number', points: 1 },
-            { id: 's5', label: 'Tvrdenie: „Množiny {1, 2, 3} a {3, 2, 1} sú rôzne množiny.“ (1 = pravda, 2 = nepravda)', kind: 'number', points: 1 },
+            { id: 's1', label: '4 … M', kind: 'choice', options: SYMBOLS, points: 1 },
+            { id: 's2', label: '{2, 6} … M', kind: 'choice', options: SYMBOLS, points: 1 },
+            { id: 's3', label: '5 … M', kind: 'choice', options: SYMBOLS, points: 1 },
+            { id: 's4', label: '∅ … M', kind: 'choice', options: SYMBOLS, points: 1 },
+            { id: 's5', label: 'Tvrdenie: „Množiny {1, 2, 3} a {3, 2, 1} sú rôzne množiny.“', kind: 'choice', options: TRUTH, points: 1 },
           ] },
         { id: 'u3', title: 'Úloha 3: Zápis množín',
           question: 'Je dané U = {−4, −3, −2, −1, 0, 1, 2, 3, 4}. Zapíš vymenovaním prvkov množiny a)–c). V časti d) je U = {1, 2, 3, …, 12}.', note: NOTE_SET,
@@ -143,25 +121,25 @@ module.exports = {
     B: {
       tasks: [
         { id: 'u1', title: 'Úloha 1: Pojmy a definície',
-          question: 'Pojmy:\n' + POJMY_B + '\n\nDefinície:\n' + DEFS_B, note: NOTE_MATCH,
+          question: 'Ku každému pojmu vyber jeho definíciu. Jedna definícia je navyše.',
           steps: [
-            { id: 's1', label: 'Pojem a) zjednotenie množín A ∪ B: číslo definície', kind: 'number', points: 1 },
-            { id: 's2', label: 'Pojem b) univerzálna množina U: číslo definície', kind: 'number', points: 1 },
-            { id: 's3', label: 'Pojem c) rozdiel množín A − B: číslo definície', kind: 'number', points: 1 },
-            { id: 's4', label: 'Pojem d) podmnožina (A ⊆ B): číslo definície', kind: 'number', points: 1 },
-            { id: 's5', label: 'Pojem e) prázdna množina: číslo definície', kind: 'number', points: 1 },
-            { id: 's6', label: 'Pojem f) doplnok množiny A (A′): číslo definície', kind: 'number', points: 1 },
-            { id: 's7', label: 'Pojem g) prienik množín A ∩ B: číslo definície', kind: 'number', points: 1 },
-            { id: 's8', label: 'Pojem h) kardinalita množiny: číslo definície', kind: 'number', points: 1 },
+            { id: 's1', label: 'zjednotenie množín A ∪ B', kind: 'choice', options: DEFS_B, points: 1 },
+            { id: 's2', label: 'univerzálna množina U', kind: 'choice', options: DEFS_B, points: 1 },
+            { id: 's3', label: 'rozdiel množín A − B', kind: 'choice', options: DEFS_B, points: 1 },
+            { id: 's4', label: 'podmnožina (A ⊆ B)', kind: 'choice', options: DEFS_B, points: 1 },
+            { id: 's5', label: 'prázdna množina', kind: 'choice', options: DEFS_B, points: 1 },
+            { id: 's6', label: 'doplnok množiny A (A′)', kind: 'choice', options: DEFS_B, points: 1 },
+            { id: 's7', label: 'prienik množín A ∩ B', kind: 'choice', options: DEFS_B, points: 1 },
+            { id: 's8', label: 'kardinalita množiny', kind: 'choice', options: DEFS_B, points: 1 },
           ] },
         { id: 'u2', title: 'Úloha 2: Prvky a podmnožiny',
-          question: 'Je dané M = {1, 3, 5, 7}. Doplň medzi ľavú stranu a množinu M správny symbol.', note: NOTE_SYMBOL,
+          question: 'Je dané M = {1, 3, 5, 7}. Doplň medzi ľavú stranu a množinu M správny symbol. V poslednom kroku vyber, či je tvrdenie pravdivé.',
           steps: [
-            { id: 's1', label: '∅ … M', kind: 'number', points: 1 },
-            { id: 's2', label: '4 … M', kind: 'number', points: 1 },
-            { id: 's3', label: '3 … M', kind: 'number', points: 1 },
-            { id: 's4', label: '{1, 7} … M', kind: 'number', points: 1 },
-            { id: 's5', label: 'Tvrdenie: „Každá množina je podmnožinou samej seba.“ (1 = pravda, 2 = nepravda)', kind: 'number', points: 1 },
+            { id: 's1', label: '∅ … M', kind: 'choice', options: SYMBOLS, points: 1 },
+            { id: 's2', label: '4 … M', kind: 'choice', options: SYMBOLS, points: 1 },
+            { id: 's3', label: '3 … M', kind: 'choice', options: SYMBOLS, points: 1 },
+            { id: 's4', label: '{1, 7} … M', kind: 'choice', options: SYMBOLS, points: 1 },
+            { id: 's5', label: 'Tvrdenie: „Každá množina je podmnožinou samej seba.“', kind: 'choice', options: TRUTH, points: 1 },
           ] },
         { id: 'u3', title: 'Úloha 3: Zápis množín',
           question: 'Je dané U = {−4, −3, −2, −1, 0, 1, 2, 3, 4}. Zapíš vymenovaním prvkov množiny a)–c). V časti d) je U = {1, 2, 3, …, 12}.', note: NOTE_SET,
@@ -223,8 +201,8 @@ module.exports = {
 
   key: {
     A: {
-      u1: { s1: '5', s2: '8', s3: '4', s4: '6', s5: '7', s6: '9', s7: '1', s8: '2' },
-      u2: { s1: '1', s2: '3', s3: '2', s4: '3', s5: '2' },               // ∈, ⊆, ∉, ⊆; tvrdenie nepravdivé
+      u1: { s1: '4', s2: '7', s3: '3', s4: '5', s5: '6', s6: '8', s7: '0', s8: '1' },   // poradie definície od 0
+      u2: { s1: '0', s2: '2', s3: '1', s4: '2', s5: '1' },               // ∈, ⊆, ∉, ⊆; tvrdenie nepravdivé
       u3: { s1: ['-1', '0', '1'], s2: ['2', '4'], s3: [], s4: ['5', '10'], s5: '2' },
       u4: { s1: '8', s2: '3', s3: '32', s4: '3' },
       u5: { s1: ['1', '2', '3', '5', '7', '9'], s2: ['3', '5', '7'], s3: ['2'], s4: ['1', '9'], s5: ['1', '4', '6', '8', '9', '10'] },
@@ -232,8 +210,8 @@ module.exports = {
       u7: { s1: ['5', '6'], s2: ['5', '6'] },                             // (A∪B)′ = {1,2,3,4}′
     },
     B: {
-      u1: { s1: '6', s2: '3', s3: '8', s4: '5', s5: '9', s6: '1', s7: '4', s8: '2' },
-      u2: { s1: '3', s2: '2', s3: '1', s4: '3', s5: '1' },               // ⊆, ∉, ∈, ⊆; tvrdenie pravdivé
+      u1: { s1: '5', s2: '2', s3: '7', s4: '4', s5: '8', s6: '0', s7: '3', s8: '1' },
+      u2: { s1: '2', s2: '1', s3: '0', s4: '2', s5: '0' },               // ⊆, ∉, ∈, ⊆; tvrdenie pravdivé
       u3: { s1: ['-2', '-1', '0'], s2: ['1', '3'], s3: [], s4: ['4', '8', '12'], s5: '3' },
       u4: { s1: '8', s2: '3', s3: '64', s4: '4' },
       u5: { s1: ['1', '2', '4', '6', '8', '10'], s2: ['2', '4', '8'], s3: ['1'], s4: ['6', '10'], s5: ['3', '5', '6', '7', '9', '10'] },

@@ -94,7 +94,13 @@
     return true;
   }
 
+  // 'choice': odpoveď aj kľúč sú poradie možnosti (0, 1, 2 …) ako reťazec.
+  function gradeChoice(keyVal, ans) {
+    return typeof ans === 'string' && ans !== '' && ans === String(keyVal);
+  }
+
   function gradeStep(step, keyVal, ans) {
+    if (step.kind === 'choice') return gradeChoice(keyVal, ans);
     return step.kind === 'set' ? gradeSet(keyVal, ans) : gradeNumber(keyVal, ans);
   }
 
@@ -179,6 +185,12 @@
       const items = nonBlank(v);
       if (!items.length) return '—';
       return '{' + items.slice().sort(numSort).map(x => fmtNum(x) + suf).join('; ') + '}';
+    }
+    if (step.kind === 'choice') {
+      const opts = step.options || [];
+      const i = (v === '' || v == null) ? -1 : Number(v);
+      if (!Number.isInteger(i) || i < 0 || i >= opts.length) return '—';
+      return opts.length > 4 ? (i + 1) + '. ' + opts[i] : opts[i];
     }
     if (v === NONE) return 'nemá riešenie';
     return (typeof v === 'string' && v.trim()) ? fmtNum(v.trim()) + suf : '—';
@@ -407,6 +419,19 @@
           <label class="exam-none"><input type="checkbox" class="exam-empty-cb" data-step="${esc(step.id)}" ${empty ? 'checked' : ''}> ${EMPTY_SET} prázdna množina (žiadne riešenie)</label>
         </div></div>`;
     }
+    if (step.kind === 'choice') {
+      const opts = step.options || [];
+      const cur = typeof ans === 'string' ? ans : '';
+      if (opts.length <= 4) {
+        return `<div class="exam-step" data-step="${esc(step.id)}">${head}
+          <div class="exam-choices" role="radiogroup">${opts.map((o, i) => `<label class="exam-choice${cur === String(i) ? ' is-on' : ''}"><input type="radio" class="exam-choice-in" name="${esc(task.id + '-' + step.id)}" data-step="${esc(step.id)}" value="${i}" ${cur === String(i) ? 'checked' : ''}> <span>${esc(o)}</span></label>`).join('')}</div></div>`;
+      }
+      return `<div class="exam-step" data-step="${esc(step.id)}">${head}
+        <select class="exam-select exam-choice-in" data-step="${esc(step.id)}">
+          <option value=""${cur === '' ? ' selected' : ''}>– vyber –</option>
+          ${opts.map((o, i) => `<option value="${i}"${cur === String(i) ? ' selected' : ''}>${esc((i + 1) + '. ' + o)}</option>`).join('')}
+        </select></div>`;
+    }
     const none = ans === NONE;
     return `<div class="exam-step" data-step="${esc(step.id)}">${head}
       <div class="exam-row">
@@ -447,11 +472,11 @@
       <h1>${esc(task.title)} <small class="exam-pts">${fmtPts(taskMax)}&nbsp;b</small></h1>
       <p class="exam-question">${esc(task.question)}</p>
       ${task.note ? `<p class="muted small-note">${esc(task.note)}</p>` : ''}
-      <div class="exam-keypad" aria-label="Pomocné znaky"><span class="muted">Vložiť:</span>
+      ${task.steps.every(s => s.kind === 'choice') ? '' : `<div class="exam-keypad" aria-label="Pomocné znaky"><span class="muted">Vložiť:</span>
         <button type="button" class="ghost exam-key" data-ch="-">−</button>
         <button type="button" class="ghost exam-key" data-ch="/">/</button>
         <button type="button" class="ghost exam-key" data-ch=",">,</button>
-      </div>
+      </div>`}
       <div class="exam-steps">${task.steps.map(s => stepHtml(task, s)).join('')}</div>
       <div class="row exam-nav">
         <button type="button" class="ghost" id="examPrev" ${S.taskIdx === 0 ? 'disabled' : ''}>← Predošlá</button>
@@ -487,7 +512,10 @@
 
     root.addEventListener('change', e => {
       const el = e.target;
-      if (el.classList.contains('exam-none-cb')) {
+      if (el.classList.contains('exam-choice-in')) {
+        setAnswer(task.id, el.dataset.step, el.value);
+        if (el.type === 'radio') $$(`.exam-choice-in[data-step="${CSS.escape(el.dataset.step)}"]`, root).forEach(r => r.closest('.exam-choice').classList.toggle('is-on', r.checked));
+      } else if (el.classList.contains('exam-none-cb')) {
         setAnswer(task.id, el.dataset.step, el.checked ? NONE : '');
         keepScroll(renderTask);
       } else if (el.classList.contains('exam-empty-cb')) {

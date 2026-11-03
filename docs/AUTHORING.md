@@ -508,7 +508,7 @@ nenahrádza myslenie, len zbiera jeho stopy.
 `groups: { A: { tasks }, B: { tasks } }`, `bonusTasks[]` (id úloh, ktoré sa
 nezapočítavajú do maxima), `key`.
 - úloha: `{ id, title, question, note?, steps[] }`
-- krok: `{ id, label, kind: 'number' | 'set', points, allowNone?, suffix? }`. `suffix` (napr. `'π'`) sa zobrazí za políčkom a v kľúči; žiak zapisuje iba koeficient (5π/4 → `5/4`), porovnáva sa ako zlomok. Hodí sa pre goniometrické rovnice (viď `api/_exams/3-u01-h020.js`).
+- krok: `{ id, label, kind: 'number' | 'set' | 'choice', points, allowNone?, suffix?, options? }`. `kind: 'choice'` je výber z ponuky `options` (pole reťazcov): do 4 možností sa zobrazia ako tlačidlá, viac ako rozbaľovací zoznam. Kľúč je poradie správnej možnosti od 0 ako reťazec (`'2'`). Hodí sa na priraďovačku pojmov k definíciám (každý pojem = jeden krok so zoznamom definícií; môže sa líšiť poradím medzi skupinami, počet možností musí byť rovnaký), na pravda/nepravda a na výber symbolu (viď `api/_exams/1-u02-h023b.js`). V tlači sa väčší zoznam možností vypíše raz číslovaný nad riadkami. `suffix` (napr. `'π'`) sa zobrazí za políčkom a v kľúči; žiak zapisuje iba koeficient (5π/4 → `5/4`), porovnáva sa ako zlomok. Hodí sa pre goniometrické rovnice (viď `api/_exams/3-u01-h020.js`).
 - `reflection: { prompt, skills[] }` (voliteľné): nepovinná sebareflexia 🟢🟡🔴 po odovzdaní, výsledok vidí učiteľka v Opravovaní a v CSV.
 - Ak sú kroky pre A a B rovnaké, definuj ich raz a zdieľaj (ako `TASKS` v 3-u01-h020.js) – nemôžu sa tak rozísť.
 - `key[skupina][úloha][krok]`: pre `number` reťazec (`'-2/3'`) alebo `'none'`

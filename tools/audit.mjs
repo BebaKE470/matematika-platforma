@@ -212,7 +212,7 @@ function auditExam(id, label) {
   ref.forEach(t => { bonus.delete(t.id); });
   bonus.forEach(b => fail('exam', `${where}: bonusTasks obsahuje neexistujúcu úlohu '${b}'`));
 
-  const KINDS = new Set(['number', 'set']);
+  const KINDS = new Set(['number', 'set', 'choice']);
   groupNames.forEach(g => {
     const tasks = (exam.groups[g] && exam.groups[g].tasks) || [];
     const key = exam.key && exam.key[g];
@@ -237,12 +237,15 @@ function auditExam(id, label) {
         if (!KINDS.has(s.kind)) fail('exam', `${sw}: neznáme kind '${s.kind}'`);
         if (!(typeof s.points === 'number' && s.points > 0)) fail('exam', `${sw}: points musí byť kladné číslo`);
         const rs = r && r.steps && r.steps[j];
-        if (rs && (rs.id !== s.id || rs.kind !== s.kind || rs.points !== s.points || !!rs.allowNone !== !!s.allowNone || rs.suffix !== s.suffix)) {
+        if (rs && (rs.id !== s.id || rs.kind !== s.kind || rs.points !== s.points || !!rs.allowNone !== !!s.allowNone || rs.suffix !== s.suffix || (s.options || []).length !== (rs.options || []).length)) {
           fail('exam', `${sw}: id/kind/points/allowNone/suffix sa nezhoduje so skupinou ${groupNames[0]}`);
         }
         const kv = key && key[t.id] && key[t.id][s.id];
         if (kv === undefined) { fail('exam', `${sw}: v kľúči chýba odpoveď`); return; }
-        if (s.kind === 'set') {
+        if (s.kind === 'choice') {
+          if (!Array.isArray(s.options) || s.options.length < 2 || s.options.some(o => typeof o !== 'string' || !o.trim())) fail('exam', `${sw}: choice potrebuje options (aspoň 2 neprázdne reťazce)`);
+          else if (!/^\d+$/.test(String(kv)) || Number(kv) >= s.options.length) fail('exam', `${sw}: kľúč choice musí byť poradie existujúcej možnosti (0–${s.options.length - 1})`);
+        } else if (s.kind === 'set') {
           if (!Array.isArray(kv) || kv.some(x => typeof x !== 'string' || !X.parseNumber(x))) fail('exam', `${sw}: kľúč množiny musí byť pole čísel (prázdne = ∅)`);
         } else if (kv === 'none') {
           if (!s.allowNone) fail('exam', `${sw}: kľúč 'none', ale krok nemá allowNone: true`);

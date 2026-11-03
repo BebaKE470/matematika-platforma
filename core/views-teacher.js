@@ -988,8 +988,17 @@
             ? `<div class="print-q"><span class="print-task-num">${esc(t.title)}</span> (${MathExam.fmtPts(ptsOf(t))} b)</div><div class="exam-print-multiline">${esc(t.question)}</div>`
             : `<div class="print-q"><span class="print-task-num">${esc(t.title)}</span> (${MathExam.fmtPts(ptsOf(t))} b) ${esc(t.question)}</div>`}
           ${t.note ? `<p class="muted">${esc(t.note)}</p>` : ''}
-          <div class="print-lines" style="height:calc(${t.steps.length > 3 ? 7 : 4} * var(--ln, 1.7em))" aria-hidden="true"></div>
-          ${t.steps.map(s => `<div class="print-answer-line"><span>${esc(s.label)} <em>(${MathExam.fmtPts(s.points)} b)</em>:</span><span class="print-blank-line"></span></div>`).join('')}
+          ${t.steps.every(s => s.kind === 'choice') ? '' : `<div class="print-lines" style="height:calc(${t.steps.length > 3 ? 7 : 4} * var(--ln, 1.7em))" aria-hidden="true"></div>`}
+          ${(() => {
+            const big = t.steps.find(s => s.kind === 'choice' && s.options.length > 4);
+            return big ? `<div class="exam-print-options">${big.options.map((o, i) => `<div><strong>${i + 1}.</strong> ${esc(o)}</div>`).join('')}</div>` : '';
+          })()}
+          ${t.steps.map(s => {
+            const pts = `<em>(${MathExam.fmtPts(s.points)} b)</em>`;
+            if (s.kind === 'choice' && s.options.length <= 4) return `<div class="print-answer-line"><span>${esc(s.label)} ${pts}:</span><span class="exam-print-opts">${s.options.map(o => `<span>${esc(o)}</span>`).join('')}</span></div>`;
+            if (s.kind === 'choice') return `<div class="print-answer-line"><span>${esc(s.label)} ${pts}, číslo možnosti:</span><span class="print-blank-line short"></span></div>`;
+            return `<div class="print-answer-line"><span>${esc(s.label)} ${pts}:</span><span class="print-blank-line"></span></div>`;
+          }).join('')}
         </div>`).join('')}
       </section>`;
     };

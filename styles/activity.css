@@ -459,6 +459,11 @@ select.answer-good, select.answer-bad { opacity: 1; -webkit-text-fill-color: var
 .exam-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 6px 0; }
 .exam-in { flex: 1 1 140px; max-width: 280px; font-size: 1.15rem; padding: 10px 12px; }
 .exam-in:disabled { opacity: .45; }
+.exam-choices { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 2px; }
+.exam-choice { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border: 2px solid var(--line, #cfd8d3); border-radius: 12px; cursor: pointer; font-weight: 700; font-size: 1.1rem; background: var(--card, #fff); }
+.exam-choice input { accent-color: var(--accent, #1f6f5c); width: 18px; height: 18px; }
+.exam-choice.is-on { border-color: var(--accent, #1f6f5c); background: rgba(31, 111, 92, .1); }
+.exam-select { width: 100%; max-width: 100%; font-size: 1.05rem; padding: 12px; border-radius: 12px; border: 2px solid var(--line, #cfd8d3); background: var(--card, #fff); color: inherit; }
 .exam-none { display: inline-flex; align-items: center; gap: 8px; margin: 6px 0; cursor: pointer; font-weight: 600; }
 .exam-set.is-empty .exam-none { margin-top: 0; }
 .exam-add { font-size: .9rem; padding: 8px 12px; }
