@@ -299,6 +299,21 @@
     "file": "modules/1-rocnik/mnoziny/23-riesenie-uloh.js"
   },
   {
+    "id": "1-u02-h023b",
+    "year": 1,
+    "unit": "Množiny",
+    "unitOrder": 2,
+    "topic": "Písomka z množín",
+    "lesson": "Hodina 23 – písomka",
+    "lessonOrder": 23,
+    "time": "40 min",
+    "status": "ready",
+    "kind": "exam",
+    "type": "Písomka po krokoch v mobile → automatické body za postup → oprava a známka učiteľkou",
+    "skills": ["pojmy a definície", "operácie s množinami", "kardinalita a podmnožiny", "zápis množín"],
+    "file": "modules/1-rocnik/mnoziny/23b-pisomka-mnoziny.js"
+  },
+  {
     "id": "1-u02-h024",
     "year": 1,
     "unit": "Množiny",

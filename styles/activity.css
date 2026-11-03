@@ -450,7 +450,7 @@ select.answer-good, select.answer-bad { opacity: 1; -webkit-text-fill-color: var
 .exam-chip.done { background: var(--good); border-color: #9bcfae; }
 .exam-chip.current { border-color: var(--ink); box-shadow: 0 0 0 2px var(--ink) inset; }
 .exam-pts { font-size: .78rem; font-weight: 700; color: var(--muted); white-space: nowrap; }
-.exam-question { font-size: 1.2rem; font-weight: 700; margin: 6px 0 12px; }
+.exam-question { font-size: 1.2rem; font-weight: 700; margin: 6px 0 12px; white-space: pre-line; }
 .exam-keypad { display: flex; align-items: center; gap: 8px; margin: 8px 0 4px; }
 .exam-key { min-width: 44px; padding: 8px 12px; font-size: 1.1rem; }
 .exam-steps { display: grid; gap: 14px; margin: 10px 0 16px; }
