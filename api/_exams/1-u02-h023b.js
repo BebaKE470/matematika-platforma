@@ -37,7 +37,29 @@ const DEFS_B = [
   '9 = množina, ktorá nemá žiaden prvok',
 ].join('\n');
 
-const NOTE_MATCH = 'Ku každému pojmu napíš číslo jeho definície. Jedna definícia je navyše.';
+const POJMY_A = [
+  'a) prienik množín A ∩ B',
+  'b) kardinalita množiny',
+  'c) prázdna množina',
+  'd) doplnok množiny A (A′)',
+  'e) podmnožina (A ⊆ B)',
+  'f) zjednotenie množín A ∪ B',
+  'g) univerzálna množina U',
+  'h) rozdiel množín A − B',
+].join('\n');
+
+const POJMY_B = [
+  'a) zjednotenie množín A ∪ B',
+  'b) univerzálna množina U',
+  'c) rozdiel množín A − B',
+  'd) podmnožina (A ⊆ B)',
+  'e) prázdna množina',
+  'f) doplnok množiny A (A′)',
+  'g) prienik množín A ∩ B',
+  'h) kardinalita množiny',
+].join('\n');
+
+const NOTE_MATCH = 'Ku každému pojmu a)–h) napíš číslo jeho definície. Jedna definícia je navyše.';
 const NOTE_SYMBOL = 'Zapíš číslo: 1 = ∈, 2 = ∉, 3 = ⊆.';
 const NOTE_SET = 'Prvky množiny zapíš ako čísla. Pre prázdnu množinu použi tlačidlo „∅ prázdna množina“.';
 
@@ -56,16 +78,16 @@ module.exports = {
     A: {
       tasks: [
         { id: 'u1', title: 'Úloha 1: Pojmy a definície',
-          question: 'Priraď k pojmom ich definície:\n' + DEFS_A, note: NOTE_MATCH,
+          question: 'Pojmy:\n' + POJMY_A + '\n\nDefinície:\n' + DEFS_A, note: NOTE_MATCH,
           steps: [
-            { id: 's1', label: 'prienik množín A ∩ B', kind: 'number', points: 1 },
-            { id: 's2', label: 'kardinalita množiny', kind: 'number', points: 1 },
-            { id: 's3', label: 'prázdna množina', kind: 'number', points: 1 },
-            { id: 's4', label: 'doplnok množiny A (A′)', kind: 'number', points: 1 },
-            { id: 's5', label: 'podmnožina (A ⊆ B)', kind: 'number', points: 1 },
-            { id: 's6', label: 'zjednotenie množín A ∪ B', kind: 'number', points: 1 },
-            { id: 's7', label: 'univerzálna množina U', kind: 'number', points: 1 },
-            { id: 's8', label: 'rozdiel množín A − B', kind: 'number', points: 1 },
+            { id: 's1', label: 'Pojem a) prienik množín A ∩ B: číslo definície', kind: 'number', points: 1 },
+            { id: 's2', label: 'Pojem b) kardinalita množiny: číslo definície', kind: 'number', points: 1 },
+            { id: 's3', label: 'Pojem c) prázdna množina: číslo definície', kind: 'number', points: 1 },
+            { id: 's4', label: 'Pojem d) doplnok množiny A (A′): číslo definície', kind: 'number', points: 1 },
+            { id: 's5', label: 'Pojem e) podmnožina (A ⊆ B): číslo definície', kind: 'number', points: 1 },
+            { id: 's6', label: 'Pojem f) zjednotenie množín A ∪ B: číslo definície', kind: 'number', points: 1 },
+            { id: 's7', label: 'Pojem g) univerzálna množina U: číslo definície', kind: 'number', points: 1 },
+            { id: 's8', label: 'Pojem h) rozdiel množín A − B: číslo definície', kind: 'number', points: 1 },
           ] },
         { id: 'u2', title: 'Úloha 2: Prvky a podmnožiny',
           question: 'Je dané M = {2, 4, 6, 8}. Doplň medzi ľavú stranu a množinu M správny symbol.', note: NOTE_SYMBOL,
@@ -121,16 +143,16 @@ module.exports = {
     B: {
       tasks: [
         { id: 'u1', title: 'Úloha 1: Pojmy a definície',
-          question: 'Priraď k pojmom ich definície:\n' + DEFS_B, note: NOTE_MATCH,
+          question: 'Pojmy:\n' + POJMY_B + '\n\nDefinície:\n' + DEFS_B, note: NOTE_MATCH,
           steps: [
-            { id: 's1', label: 'zjednotenie množín A ∪ B', kind: 'number', points: 1 },
-            { id: 's2', label: 'univerzálna množina U', kind: 'number', points: 1 },
-            { id: 's3', label: 'rozdiel množín A − B', kind: 'number', points: 1 },
-            { id: 's4', label: 'podmnožina (A ⊆ B)', kind: 'number', points: 1 },
-            { id: 's5', label: 'prázdna množina', kind: 'number', points: 1 },
-            { id: 's6', label: 'doplnok množiny A (A′)', kind: 'number', points: 1 },
-            { id: 's7', label: 'prienik množín A ∩ B', kind: 'number', points: 1 },
-            { id: 's8', label: 'kardinalita množiny', kind: 'number', points: 1 },
+            { id: 's1', label: 'Pojem a) zjednotenie množín A ∪ B: číslo definície', kind: 'number', points: 1 },
+            { id: 's2', label: 'Pojem b) univerzálna množina U: číslo definície', kind: 'number', points: 1 },
+            { id: 's3', label: 'Pojem c) rozdiel množín A − B: číslo definície', kind: 'number', points: 1 },
+            { id: 's4', label: 'Pojem d) podmnožina (A ⊆ B): číslo definície', kind: 'number', points: 1 },
+            { id: 's5', label: 'Pojem e) prázdna množina: číslo definície', kind: 'number', points: 1 },
+            { id: 's6', label: 'Pojem f) doplnok množiny A (A′): číslo definície', kind: 'number', points: 1 },
+            { id: 's7', label: 'Pojem g) prienik množín A ∩ B: číslo definície', kind: 'number', points: 1 },
+            { id: 's8', label: 'Pojem h) kardinalita množiny: číslo definície', kind: 'number', points: 1 },
           ] },
         { id: 'u2', title: 'Úloha 2: Prvky a podmnožiny',
           question: 'Je dané M = {1, 3, 5, 7}. Doplň medzi ľavú stranu a množinu M správny symbol.', note: NOTE_SYMBOL,
