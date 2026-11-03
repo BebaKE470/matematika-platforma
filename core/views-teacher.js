@@ -984,7 +984,9 @@
           <p class="muted">Maximum ${max} b${tasks.some(isBonus) ? ' + bonus' : ''}${exam.minutes ? ` · ${exam.minutes} min` : ''}. Postup píš na papier, výsledky zapíš do riadkov pri každom kroku.</p>
         </div>
         ${tasks.map(t => `<div class="print-task exam-print-task">
-          <div class="print-q"><span class="print-task-num">${esc(t.title)}</span> (${MathExam.fmtPts(ptsOf(t))} b) ${esc(t.question)}</div>
+          ${String(t.question).includes('\n')
+            ? `<div class="print-q"><span class="print-task-num">${esc(t.title)}</span> (${MathExam.fmtPts(ptsOf(t))} b)</div><div class="exam-print-multiline">${esc(t.question)}</div>`
+            : `<div class="print-q"><span class="print-task-num">${esc(t.title)}</span> (${MathExam.fmtPts(ptsOf(t))} b) ${esc(t.question)}</div>`}
           ${t.note ? `<p class="muted">${esc(t.note)}</p>` : ''}
           <div class="print-lines" style="height:calc(${t.steps.length > 3 ? 7 : 4} * var(--ln, 1.7em))" aria-hidden="true"></div>
           ${t.steps.map(s => `<div class="print-answer-line"><span>${esc(s.label)} <em>(${MathExam.fmtPts(s.points)} b)</em>:</span><span class="print-blank-line"></span></div>`).join('')}
