@@ -1,173 +1,270 @@
 MathPlatform.registerModule({
-  "id": "2-u03-h020",
-  "teacher": {
-    "placement": "2. ročník · Lineárne rovnice · 20. hodina: Sústava dvoch lineárnych rovníc s dvoma neznámymi - sčítacia, dosadzovacia a porovnávacia metóda",
-    "prerequisites": [
-      "učivo ZŠ primerané téme",
-      "všetko učivo prebrané v predchádzajúcich hodinách a ročníkoch, ktoré je pre úlohu potrebné"
+  id: '2-u03-h020',
+  teacher: {
+    placement: '2. ročník · Lineárne rovnice · 20. hodina: Sústava dvoch lineárnych rovníc s dvoma neznámymi - sčítacia, dosadzovacia a porovnávacia metóda',
+    prerequisites: [
+      'riešenie jednej lineárnej rovnice s jednou neznámou ekvivalentnými úpravami (13. hodina)',
+      'vyjadrenie neznámej zo vzorca / rovnice',
+      'dosadenie čísla za premennú a overenie platnosti rovnosti (skúška)',
     ],
-    "planContent": [
-      "Aktuálny tematický plán uvádza tému „Sústava dvoch lineárnych rovníc s dvoma neznámymi - sčítacia, dosadzovacia a porovnávacia metóda“. Obsah modulu rešpektuje jej miesto a rozsah v pláne."
+    planContent: [
+      'Aktuálny tematický plán uvádza tému „Sústava dvoch lineárnych rovníc s dvoma neznámymi - sčítacia, dosadzovacia a porovnávacia metóda“. Obsah modulu rešpektuje jej miesto a rozsah v pláne.',
     ],
-    "planPerformance": [
-      "V zdrojovom tematickom pláne nie je pri tomto tematickom celku samostatne vyplnený výkonový štandard; ciele modulu sú didaktickým rozpracovaním názvu a poradia tém, nie doplnením oficiálneho štandardu."
+    planPerformance: [
+      'V zdrojovom tematickom pláne nie je pri tomto tematickom celku samostatne vyplnený výkonový štandard; ciele modulu sú didaktickým rozpracovaním názvu a poradia tém, nie doplnením oficiálneho štandardu.',
     ],
-    "goals": [
-      "porozumieť téme „Sústava dvoch lineárnych rovníc s dvoma neznámymi - sčítacia, dosadzovacia a porovnávacia metóda“",
-      "prepájať názornú, slovnú a symbolickú reprezentáciu",
-      "vysvetliť postup a skontrolovať výsledok"
+    goals: [
+      'vysvetliť, čo je riešením sústavy dvoch rovníc (usporiadaná dvojica, ktorá spĺňa obe rovnice) a overiť ho skúškou',
+      'previesť sústavu na jednu rovnicu s jednou neznámou sčítacou metódou (sčítaním alebo odčítaním rovníc)',
+      'riešiť sústavu dosadzovacou metódou (vyjadriť neznámu z jednej rovnice a dosadiť do druhej)',
+      'riešiť sústavu porovnávacou metódou (vyjadriť tú istú neznámu z oboch rovníc a porovnať)',
+      'vybrať vhodnú metódu podľa tvaru rovníc',
     ],
-    "competencies": [
-      "matematická komunikácia",
-      "modelovanie a reprezentácie",
-      "argumentácia a kontrola výsledku",
-      "prehľadný ručný zápis"
+    competencies: [
+      'matematická komunikácia',
+      'modelovanie a reprezentácie',
+      'argumentácia a kontrola výsledku',
+      'prehľadný ručný zápis',
     ],
-    "enrichment": [
-      "Návrh maturitného štandardu je použitý iba ako obohatenie spôsobu práce: interpretácia, modelovanie, reprezentácie a zdôvodnenie. Neurčuje poradie učiva."
+    enrichment: [
+      'Návrh maturitného štandardu je použitý iba ako obohatenie spôsobu práce: interpretácia, modelovanie, reprezentácie a zdôvodnenie. Neurčuje poradie učiva.',
     ],
-    "flow": [
-      "2–3 min: problém alebo názorný podnet",
-      "cca 15 min: vybrané digitálne aktivity",
-      "8–10 min: ručné riešenie a zápis do zošita",
-      "3–5 min: spoločná kontrola"
+    flow: [
+      '2–3 min: problém (dve podmienky naraz, hľadáme dvojicu čísel)',
+      'cca 20 min: digitálne aktivity – princíp, tri metódy po jednom príklade, rozlíšenie metód, hľadanie chyby',
+      '8–10 min: ručné riešenie zbierky úloh (základ, rozšírenie, bonus) a zápis do zošita',
+      '3–5 min: spoločná kontrola a skúška dosadením',
     ],
-    "diagnostics": [
-      "žiak rozumie použitým symbolom",
-      "nevykonáva operáciu bez kontroly podmienok",
-      "vie výsledok vysvetliť slovami"
+    diagnostics: [
+      'žiak vie, že riešením je dvojica čísel a overí ju v oboch rovniciach',
+      'pri odčítaní rovníc nezabúda meniť znamienka',
+      'pri dosadzovaní dáva vyjadrenú neznámu do zátvorky a dosadzuje do druhej rovnice (nie do tej istej)',
+      'vie vybrať metódu podľa tvaru sústavy a vysvetliť prečo',
     ],
-    "partialUse": [
-      "Modul možno použiť celý približne 15 minút alebo vybrať jeho časť.",
-      "Mobil nenahrádza ručné počítanie, náčrt, presný zápis ani argumentáciu."
-    ]
+    partialUse: [
+      'Modul možno použiť celý približne 20–25 minút, alebo vybrať jednu metódu (aktivity za sebou: výklad → výber → výpočet).',
+      'Zbierku úloh v zošite možno zadať aj ako domácu úlohu.',
+      'Mobil nenahrádza ručné počítanie, presný zápis ani skúšku – do aplikácie sa zadáva iba výsledok kroku.',
+    ],
   },
-  "student": {
-    "title": "Sústava dvoch lineárnych rovníc s dvoma neznámymi - sčítacia, dosadzovacia a porovnávacia metóda",
-    "subtitle": "Téma 20 · Lineárne rovnice",
-    "intro": "Najprv pochop situáciu, potom počítaj alebo zapisuj. Nakoniec výsledok vysvetli a skontroluj.",
-    "estimatedTime": "15–18 min",
-    "activities": [
+
+  student: {
+    title: 'Sústava dvoch lineárnych rovníc s dvoma neznámymi - sčítacia, dosadzovacia a porovnávacia metóda',
+    subtitle: 'Téma 20 · Lineárne rovnice',
+    intro: 'Naučíš sa tri spôsoby, ako nájsť dvojicu čísel, ktorá spĺňa dve rovnice naraz: sčítaciu, dosadzovaciu a porovnávaciu metódu.',
+    estimatedTime: '20–25 min',
+    activities: [
       {
-        "id": "recap",
-        "type": "explain",
-        "phase": "OPAKUJ",
-        "title": "Čo už vieme",
-        "html": "<p>Už vieš riešiť jednu lineárnu rovnicu s jednou neznámou ekvivalentnými úpravami.</p><p>Z geometrie vieš, že graf lineárnej funkcie je priamka.</p>"
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Jednu lineárnu rovnicu s jednou neznámou už vieš riešiť ekvivalentnými úpravami, napríklad <strong>2x + 3 = 11</strong> dá <strong>x = 4</strong>.</p><p>Vieš aj urobiť <strong>skúšku</strong>: za neznámu dosadíš číslo a overíš, že sa ľavá strana rovná pravej.</p>',
       },
       {
-        "id": "topic-intro",
-        "type": "intro",
-        "goals": [
-          "vysvetliť, čo je riešením sústavy dvoch rovníc",
-          "vyriešiť sústavu sčítacou, dosadzovacou alebo porovnávacou metódou"
-        ]
-      },
-      {
-        "id": "visual",
-        "type": "info",
-        "phase": "POCHOP",
-        "title": "Sústava dvoch lineárnych rovníc s dvoma neznámymi - sčítacia, dosadzovacia a porovnávacia metóda",
-        "html": "<div class=\"logic-visual\"><svg viewBox=\"0 0 760 230\"><g font-family=\"system-ui\" fill=\"currentColor\"><text x=\"380\" y=\"65\" text-anchor=\"middle\" font-size=\"32\">3x + 5 = 20</text><path d=\"M180 115 H580\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"230\" y=\"155\" font-size=\"22\">ľavá strana</text><text x=\"455\" y=\"155\" font-size=\"22\">pravá strana</text><text x=\"380\" y=\"205\" text-anchor=\"middle\" font-size=\"20\">rovnováha musí zostať zachovaná</text></g></svg></div><p><strong>Dnešná otázka:</strong> Ako jedna dvojica čísel môže spĺňať dve rovnice naraz?</p>",
-        "continueLabel": "Pokračovať"
-      },
-      {
-        "id": "concept",
-        "type": "explain",
-        "phase": "NOVÝ POJEM / PRAVIDLO",
-        "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Riešením sústavy je usporiadaná dvojica, ktorá spĺňa obe rovnice. Metódu volíme podľa tvaru rovníc.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
-      },
-      {
-        "id": "start",
-        "type": "choice",
-        "phase": "OBJAVUJ",
-        "skill": "porozumenie",
-        "question": "Sústava x+y=7, x−y=1 má riešenie",
-        "options": [
-          "(4,3)",
-          "(3,4)",
-          "(7,1)"
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'vysvetliť, čo je riešením sústavy dvoch rovníc',
+          'vyriešiť sústavu sčítacou metódou',
+          'vyriešiť sústavu dosadzovacou metódou',
+          'vyriešiť sústavu porovnávacou metódou',
+          'vybrať vhodnú metódu',
         ],
-        "answer": 0,
-        "correct": "Sčítaním rovníc dostaneme 2x=8, x=4 a y=3.",
-        "hint": "Najprv si pomenuj, čo je dané a čo hľadáš."
       },
       {
-        "id": "explain1",
-        "type": "selfWrite",
-        "phase": "VYSVETLI",
-        "skill": "matematická komunikácia",
-        "title": "Povedz to presne",
-        "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Sústava dvoch lineárnych rovníc s dvoma neznámymi - sčítacia, dosadzovacia a porovnávacia metóda“.",
-        "model": "Riešením sústavy je usporiadaná dvojica, ktorá spĺňa obe rovnice. Metódu volíme podľa tvaru rovníc."
+        id: 'concept',
+        type: 'explain',
+        phase: 'NOVÝ POJEM',
+        title: 'Čo je sústava dvoch rovníc',
+        html: '<p>Zadanie: <strong>Súčet dvoch čísel je 7 a ich rozdiel je 1.</strong> Označíme čísla x a y a obe podmienky zapíšeme naraz:</p>'
+          + '<div class="formula">x + y = 7<br>x − y = 1<span class="formula-note">Zložená zátvorka { znamená: obe rovnice musia platiť súčasne.</span></div>'
+          + '<p><strong>Riešením sústavy</strong> je usporiadaná dvojica <strong>(x; y)</strong>, ktorá spĺňa <strong>obe</strong> rovnice. Tu je to dvojica <strong>(4; 3)</strong>, lebo 4 + 3 = 7 a 4 − 3 = 1.</p>'
+          + '<p>Cieľ každej metódy je rovnaký: <span class="hl">zbaviť sa jednej neznámej</span>, aby sme dostali jednu rovnicu s jednou neznámou, ktorú už vieme riešiť.</p>',
+        remember: 'Riešenie sústavy je dvojica čísel (x; y). Overíme ju dosadením do oboch rovníc.',
       },
       {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "BEZ MOBILU",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Vyrieš x+y=10, x−y=4 sčítacou metódou a urob skúšku v oboch rovniciach.</p>"
+        id: 'check-pair',
+        type: 'choice',
+        phase: 'OBJAVUJ',
+        skill: 'skúška riešenia',
+        question: 'Ktorá dvojica (x; y) je riešením sústavy x + y = 5 a 2x − y = 1?',
+        options: ['(3; 2)', '(1; 4)', '(2; 3)'],
+        answer: 2,
+        correct: 'Správne. Pre (2; 3): 2 + 3 = 5 a 2·2 − 3 = 1. Obe rovnice platia.',
+        hint: 'Dosaď dvojicu do OBOCH rovníc. Niektorá dvojica vyhovuje len jednej z nich.',
       },
       {
-        "id": "transfer",
-        "type": "choice",
-        "phase": "PRENES",
-        "skill": "prenos",
-        "question": "Graficky riešenie dvoch lineárnych rovníc predstavuje",
-        "options": [
-          "nulový bod prvej priamky",
-          "priesečník ich priamok",
-          "bod na osi y"
+        id: 'add-explain',
+        type: 'explain',
+        phase: 'NOVÝ POJEM',
+        title: '1. Sčítacia metóda',
+        html: '<p>Hodí sa, keď sa pri jednej neznámej v rovniciach <span class="hl">ruší</span> – koeficienty sú opačné čísla (napr. +y a −y), alebo rovnaké čísla (vtedy rovnice odčítame).</p>'
+          + '<ol class="steps"><li>Rovnice sčítame (alebo odčítame) tak, aby jedna neznáma zmizla.</li><li>Vyriešime vzniknutú rovnicu s jednou neznámou.</li><li>Výsledok dosadíme do ľubovoľnej z pôvodných rovníc a dopočítame druhú neznámu.</li><li>Urobíme skúšku v oboch rovniciach.</li></ol>'
+          + '<div class="example"><span class="mini-label">PRÍKLAD</span><p>2x + y = 11<br>x − y = 1</p><p>Sčítame ľavé strany aj pravé strany: 3x = 12, teda <strong>x = 4</strong>.</p><p>Dosadíme do druhej rovnice: 4 − y = 1, teda <strong>y = 3</strong>.</p><p>Skúška: 2·4 + 3 = 11 ✓, 4 − 3 = 1 ✓. Riešenie: <strong>(4; 3)</strong>.</p></div>',
+      },
+      {
+        id: 'add-choice',
+        type: 'choice',
+        phase: 'OVER SI',
+        skill: 'sčítacia metóda',
+        question: 'Sústavu 3x + y = 10 a 2x − y = 5 riešime sčítaním rovníc. Ktorá rovnica vznikne?',
+        options: ['5x = 5', '5x = 15', 'x + 2y = 5'],
+        answer: 1,
+        correct: 'Správne. Členy s y sa zrušia (+y a −y), 3x + 2x = 5x a 10 + 5 = 15.',
+        hint: 'Sčítaj osobitne ľavé strany a osobitne pravé strany. Ktorá neznáma zmizne?',
+      },
+      {
+        id: 'add-num',
+        type: 'numberInput',
+        phase: 'PRECVIČ',
+        skill: 'sčítacia metóda',
+        title: 'Dopočítaj y',
+        prompt: 'Sústava: x + y = 9 a x − y = 3. Sčítaním rovníc vyjde 2x = 12, teda x = 6. Dosaď x do niektorej rovnice a vypočítaj y.',
+        validate: 'exact',
+        answer: 3,
+        success: 'Správne. 6 + y = 9, teda y = 3. Skúška: 6 − 3 = 3 ✓.',
+        hint: 'Dosaď x = 6 do rovnice x + y = 9.',
+        reveal: 'Z 6 + y = 9 dostaneme y = 9 − 6 = 3.',
+      },
+      {
+        id: 'sub-explain',
+        type: 'explain',
+        phase: 'NOVÝ POJEM',
+        title: '2. Dosadzovacia metóda',
+        html: '<p>Hodí sa, keď je jedna neznáma v nejakej rovnici už <span class="hl">vyjadrená</span> (napr. y = x + 1) alebo sa dá ľahko vyjadriť (koeficient 1).</p>'
+          + '<ol class="steps"><li>Z jednej rovnice vyjadríme jednu neznámu.</li><li>Výraz dosadíme do <strong>druhej</strong> rovnice (do tej istej by sme dostali len 0 = 0 alebo zbytočný kruh).</li><li>Vyriešime rovnicu s jednou neznámou.</li><li>Dopočítame druhú neznámu a urobíme skúšku.</li></ol>'
+          + '<div class="example"><span class="mini-label">PRÍKLAD</span><p>y = x + 1<br>2x + y = 10</p><p>Za y dosadíme do druhej rovnice výraz x + 1: 2x + (x + 1) = 10, teda 3x = 9, <strong>x = 3</strong>.</p><p>Dopočítame: y = 3 + 1 = <strong>4</strong>.</p><p>Skúška: 4 = 3 + 1 ✓, 2·3 + 4 = 10 ✓. Riešenie: <strong>(3; 4)</strong>.</p></div>'
+          + '<div class="warning"><strong>Pozor:</strong> ak dosadzuješ výraz s viacerými členmi (x + 1), daj ho do zátvorky – hlavne keď pred ním stojí znamienko mínus alebo násobok.</div>',
+      },
+      {
+        id: 'sub-choice',
+        type: 'choice',
+        phase: 'OVER SI',
+        skill: 'dosadzovacia metóda',
+        question: 'V sústave y = 2x a x + y = 12 dosadíme y = 2x do druhej rovnice. Ktorú rovnicu dostaneme?',
+        options: ['x + 2x = 12', '2x + y = 12', 'x + 2 = 12'],
+        answer: 0,
+        correct: 'Správne. Za y píšeme 2x, vznikne x + 2x = 12, teda 3x = 12.',
+        hint: 'V druhej rovnici nahraď písmeno y výrazom 2x. Žiadne y už nemá ostať.',
+      },
+      {
+        id: 'sub-num',
+        type: 'numberInput',
+        phase: 'PRECVIČ',
+        skill: 'dosadzovacia metóda',
+        title: 'Vypočítaj x',
+        prompt: 'Sústava: x = y + 2 a x + y = 10. Dosaď x = y + 2 do druhej rovnice, vyrieš ju a dopočítaj x. Koľko je x?',
+        validate: 'exact',
+        answer: 6,
+        success: 'Správne. (y + 2) + y = 10, 2y = 8, y = 4 a x = 4 + 2 = 6. Skúška: 6 + 4 = 10 ✓.',
+        hint: 'Po dosadení: (y + 2) + y = 10. Najprv vyrieš y, potom dopočítaj x.',
+        reveal: '2y + 2 = 10, 2y = 8, y = 4, teda x = y + 2 = 6.',
+      },
+      {
+        id: 'cmp-explain',
+        type: 'explain',
+        phase: 'NOVÝ POJEM',
+        title: '3. Porovnávacia metóda',
+        html: '<p>Hodí sa, keď sa dá <span class="hl">tá istá neznáma</span> ľahko vyjadriť z obidvoch rovníc (napr. y = … aj y = …).</p>'
+          + '<ol class="steps"><li>Z oboch rovníc vyjadríme tú istú neznámu.</li><li>Pravé strany sa musia rovnať – dostaneme jednu rovnicu s jednou neznámou.</li><li>Vyriešime ju.</li><li>Výsledok dosadíme do jedného z vyjadrení, dopočítame druhú neznámu a urobíme skúšku.</li></ol>'
+          + '<div class="example"><span class="mini-label">PRÍKLAD</span><p>y = 2x − 1<br>y = x + 3</p><p>Obe pravé strany sa rovnajú tomu istému y: 2x − 1 = x + 3, teda <strong>x = 4</strong>.</p><p>y = 4 + 3 = <strong>7</strong>.</p><p>Skúška: 2·4 − 1 = 7 ✓, 4 + 3 = 7 ✓. Riešenie: <strong>(4; 7)</strong>.</p></div>',
+      },
+      {
+        id: 'cmp-num',
+        type: 'numberInput',
+        phase: 'PRECVIČ',
+        skill: 'porovnávacia metóda',
+        title: 'Vypočítaj y',
+        prompt: 'Sústava: y = 3x − 2 a y = x + 4. Porovnaj pravé strany, vypočítaj x a potom dopočítaj y. Koľko je y?',
+        validate: 'exact',
+        answer: 7,
+        success: 'Správne. 3x − 2 = x + 4, 2x = 6, x = 3 a y = 3 + 4 = 7. Skúška: 3·3 − 2 = 7 ✓.',
+        hint: 'Najprv rieš 3x − 2 = x + 4, potom dosaď x do jedného z vyjadrení y.',
+        reveal: '2x = 6, x = 3. Potom y = x + 4 = 7.',
+      },
+      {
+        id: 'which-method',
+        type: 'matrix',
+        phase: 'ROZLÍŠ',
+        skill: 'výber metódy',
+        title: 'Ku každej sústave priraď metódu, pri ktorej je prvý krok najpohodlnejší',
+        labels: ['sčítacia', 'dosadzovacia', 'porovnávacia'],
+        items: [
+          { text: 'x + y = 8 a x − y = 2 (členy s y sú opačné)', answer: 'sčítacia' },
+          { text: 'y = 3x a 2x + y = 15 (y je už vyjadrené v jednej rovnici)', answer: 'dosadzovacia' },
+          { text: 'y = x + 5 a y = 2x − 1 (y je vyjadrené v oboch rovniciach)', answer: 'porovnávacia' },
+          { text: '2x + 3y = 12 a 4x − 3y = 6 (členy s y sú opačné)', answer: 'sčítacia' },
+          { text: 'x = 4 − y a 3x + y = 10 (x je už vyjadrené v jednej rovnici)', answer: 'dosadzovacia' },
+          { text: 'x = 2y − 3 a x = y + 1 (x je vyjadrené v oboch rovniciach)', answer: 'porovnávacia' },
         ],
-        "answer": 1,
-        "correct": "Spoločný bod grafov spĺňa obe rovnice.",
-        "hint": "Skús náčrt, odhad alebo spätnú kontrolu."
       },
       {
-        "id": "error",
-        "type": "choice",
-        "phase": "NÁJDI CHYBU",
-        "skill": "kritické myslenie",
-        "question": "Ktorý postup je pri tejto téme najspoľahlivejší?",
-        "options": [
-          "Preskočiť zápis a tipnúť odpoveď.",
-          "Zapamätať si iba posledný výsledok.",
-          "Použiť pravidlo a skontrolovať podmienky aj jednotky."
+        id: 'error',
+        type: 'choice',
+        phase: 'NÁJDI CHYBU',
+        skill: 'kritické myslenie',
+        question: 'Peter odčítal rovnice 3x + y = 11 a x + y = 5 a napísal: 2x + 2y = 6. Kde urobil chybu?',
+        options: [
+          '11 − 5 nie je 6.',
+          'Pri y − y nedostal 0, ale 2y. Odčítaním sa y malo zrušiť.',
+          'Rovnice sa nesmú odčítať.',
         ],
-        "answer": 2,
-        "correct": "Áno. Postup musí byť kontrolovateľný a výsledok interpretovaný.",
-        "hint": "Matematika nie je tipovanie."
+        answer: 1,
+        correct: 'Správne. Takto to má byť: (3x − x) + (y − y) = 11 − 5, teda 2x = 6 a x = 3. Pri odčítaní treba zmeniť znamienka všetkých členov druhej rovnice.',
+        hint: 'Rozpíš ľavé strany: (3x + y) − (x + y). Čo ostane pri y?',
       },
       {
-        "id": "explain2",
-        "type": "selfWrite",
-        "phase": "ARGUMENTUJ",
-        "skill": "argumentácia",
-        "title": "Prečo to funguje?",
-        "prompt": "Napíš jednu vetu, ktorou by si spolužiakovi zdôvodnil/a svoj postup.",
-        "model": "Dobré zdôvodnenie pomenúva použité pravidlo, ukazuje rozhodujúci krok a overí, že výsledok spĺňa zadanie."
+        id: 'explain-why',
+        type: 'selfWrite',
+        phase: 'VYSVETLI',
+        skill: 'matematická komunikácia',
+        title: 'Ako overíš riešenie?',
+        prompt: 'Vlastnými slovami napíš, ako zistíš, že dvojica čísel (x; y) je riešením sústavy dvoch rovníc. Prečo nestačí overiť len jednu rovnicu?',
+        model: 'Dvojicu dosadím do oboch rovníc. Riešením je len vtedy, keď platia obe rovnosti naraz. Dvojica, ktorá vyhovuje len jednej rovnici, je riešením tej rovnice, ale nie celej sústavy.',
       },
       {
-        "id": "manual",
-        "type": "notebook",
-        "phase": "BEZ MOBILU",
-        "title": "Ceruzka má posledné slovo",
-        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor alebo vyrieš podobný príklad v zošite bez aplikácie. Výsledok skontroluj iným spôsobom, ak je to možné.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis má byť čitateľný, s medzikrokmi, jednotkami alebo podmienkami podľa typu úlohy."
-      },
-      {
-        "id": "reflection",
-        "type": "reflection",
-        "phase": "ZÁVER",
-        "title": "Ako som na tom?",
-        "skills": [
-          "porozumenie",
-          "presný zápis",
-          "kontrola výsledku"
+        id: 'practice',
+        type: 'taskList',
+        phase: 'PRECVIČ',
+        skill: 'riešenie sústav',
+        title: 'Zbierka úloh do zošita',
+        html: '<p>Vyrieš v zošite. Pri každej úlohe napíš medzikroky a urob skúšku v oboch rovniciach. Metódu zvoľ podľa tvaru sústavy.</p>',
+        items: [
+          { level: 'zaklad', html: 'x + y = 10<br>x − y = 2', answer: 'Sčítaním: 2x = 12, x = 6, y = 4. Riešenie (6; 4).' },
+          { level: 'zaklad', html: 'y = x + 2<br>x + y = 8', answer: 'Dosadením: x + (x + 2) = 8, 2x = 6, x = 3, y = 5. Riešenie (3; 5).' },
+          { level: 'zaklad', html: 'y = 2x − 3<br>y = x + 1', answer: 'Porovnaním: 2x − 3 = x + 1, x = 4, y = 5. Riešenie (4; 5).' },
+          { level: 'zaklad', html: '2x + y = 7<br>x − y = 2', answer: 'Sčítaním: 3x = 9, x = 3, y = 1. Riešenie (3; 1).' },
+          { level: 'rozsirenie', html: '2x + 3y = 13<br>2x − y = 1', answer: 'Odčítaním: 4y = 12, y = 3, x = 2. Riešenie (2; 3). Skúška: 4 + 9 = 13 ✓, 4 − 3 = 1 ✓.' },
+          { level: 'rozsirenie', html: 'x + 2y = 8<br>3x − y = 3', answer: 'Z druhej: y = 3x − 3. Dosadením: x + 2(3x − 3) = 8, 7x = 14, x = 2, y = 3. Riešenie (2; 3).' },
+          { level: 'bonus', text: 'Súčet dvoch čísel je 14 a ich rozdiel je 4. Zostav sústavu a nájdi obe čísla.', answer: 'x + y = 14, x − y = 4. Sčítaním: 2x = 18, x = 9, y = 5. Čísla sú 9 a 5.' },
         ],
-        "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka."
-      }
-    ]
-  }
+        note: 'Riešenie si môžeš zobraziť až po vlastnom pokuse.',
+      },
+      {
+        id: 'reflection',
+        type: 'reflection',
+        phase: 'ZÁVER',
+        title: 'Ako som na tom?',
+        skills: [
+          'overiť riešenie sústavy skúškou',
+          'sčítacia metóda',
+          'dosadzovacia metóda',
+          'porovnávacia metóda',
+          'výber vhodnej metódy',
+        ],
+        prompt: 'Označ, ako dobre tomu teraz rozumieš. Nie je to známka.',
+      },
+    ],
+  },
+
+  worksheet: {
+    tasks: [
+      { id: 'w1', level: 'zaklad', html: 'Rieš sčítacou metódou: x + y = 12, x − y = 4.', answer: '2x = 16, x = 8, y = 4. Riešenie (8; 4).', space: 4 },
+      { id: 'w2', level: 'zaklad', html: 'Rieš dosadzovacou metódou: y = 2x, x + y = 9.', answer: 'x + 2x = 9, x = 3, y = 6. Riešenie (3; 6).', space: 4 },
+      { id: 'w3', level: 'zaklad', html: 'Rieš porovnávacou metódou: y = x + 3, y = 2x − 2.', answer: 'x + 3 = 2x − 2, x = 5, y = 8. Riešenie (5; 8).', space: 4 },
+      { id: 'w4', level: 'rozsirenie', html: 'Rieš ľubovoľnou metódou: 3x + 2y = 16, x − 2y = 0.', answer: 'Sčítaním: 4x = 16, x = 4, y = 2. Riešenie (4; 2).', space: 5 },
+      { id: 'w5', level: 'bonus', html: 'V peňaženke sú dvoj- a päťeurové mince, spolu 9 mincí v hodnote 30 €. Koľko je ktorých?', answer: 'x + y = 9, 2x + 5y = 30. Z prvej x = 9 − y: 18 − 2y + 5y = 30, y = 4, x = 5. Je 5 dvojeurových a 4 päťeurové mince.', space: 5 },
+    ],
+  },
 });
