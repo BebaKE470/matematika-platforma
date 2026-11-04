@@ -80,10 +80,30 @@
     return equalNumber(ans, keyVal);
   }
 
+  // Žiaci často napíšu viac prvkov do jedného políčka („1, 2, 3“, „1 2 3“, „1;2;3“, „{1,2}“).
+  // Rozdelí ich na samostatné prvky. Jedna čiarka medzi číslicami bez medzery („1,5“) ostáva
+  // desatinným číslom; „1,2,3“ alebo „1, 2“ sú zoznamy.
+  function splitItems(raw) {
+    const s = String(raw == null ? '' : raw).replace(/[{}()\[\]]/g, ' ').replace(/\s*\/\s*/g, '/');
+    const out = [];
+    s.split(/[;\s]+/).forEach(tok => {
+      if (!tok) return;
+      if (/^[+\-−–—]?\d+,\d+$/.test(tok)) { out.push(tok); return; }
+      tok.split(',').forEach(p => { if (p) out.push(p); });
+    });
+    return out;
+  }
+
+  function setItems(ans) {
+    const out = [];
+    nonBlank(ans).forEach(x => splitItems(x).forEach(p => out.push(p)));
+    return out;
+  }
+
   function gradeSet(keyVal, ans) {
     const key = Array.isArray(keyVal) ? keyVal : [];
     if (isEmptySet(ans)) return key.length === 0;
-    const items = nonBlank(ans);
+    const items = setItems(ans);
     if (!items.length || !key.length) return false;
     const parsed = items.map(parseNumber);
     if (parsed.some(p => !p)) return false;
@@ -182,7 +202,7 @@
     const suf = step.suffix ? ' ' + step.suffix : '';
     if (step.kind === 'set') {
       if (isEmptySet(v)) return EMPTY_SET;
-      const items = nonBlank(v);
+      const items = setItems(v);
       if (!items.length) return '—';
       return '{' + items.slice().sort(numSort).map(x => fmtNum(x) + suf).join('; ') + '}';
     }
@@ -414,6 +434,7 @@
           ${list.length > 1 ? `<button class="ghost exam-rm" type="button" data-step="${esc(step.id)}" data-i="${i}" aria-label="Odstrániť riešenie">×</button>` : ''}
         </div>`).join('');
       return `<div class="exam-step" data-step="${esc(step.id)}">${head}
+        <p class="muted small-note exam-set-hint">Každý prvok napíš do osobitného políčka. Ďalší prvok pridáš medzerou alebo tlačidlom „+ ďalšie riešenie“.</p>
         <div class="exam-set${empty ? ' is-empty' : ''}">
           ${empty ? '' : rows + `<button class="ghost exam-add" type="button" data-step="${esc(step.id)}">+ ďalšie riešenie</button>`}
           <label class="exam-none"><input type="checkbox" class="exam-empty-cb" data-step="${esc(step.id)}" ${empty ? 'checked' : ''}> ${EMPTY_SET} prázdna množina (žiadne riešenie)</label>
@@ -504,6 +525,23 @@
       if (!step) return;
       if (step.kind === 'set') {
         const vals = $$(`.exam-in[data-step="${CSS.escape(step.id)}"]`, root).map(x => x.value);
+        // Medzera alebo bodkočiarka = koniec prvku: zvyšok ide do nového políčka.
+        if (/[;\s]/.test(el.value)) {
+          const i = Number(el.dataset.i);
+          const raw = el.value.replace(/\s*\/\s*/g, '/');
+          const parts = raw.split(/[;\s]+/);
+          const tail = parts[parts.length - 1] === '' ? [''] : [];
+          const items = parts.filter(Boolean).concat(tail);
+          if (items.length) {
+            const next = vals.slice(0, i).concat(items, vals.slice(i + 1));
+            setAnswer(task.id, step.id, next);
+            keepScroll(renderTask);
+            const ins = $$(`.exam-in[data-step="${CSS.escape(step.id)}"]`, S.app.querySelector('.exam-card'));
+            const f = ins[i + items.length - 1];
+            if (f) f.focus();
+            return;
+          }
+        }
         setAnswer(task.id, step.id, vals);
       } else {
         setAnswer(task.id, step.id, el.value);
