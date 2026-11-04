@@ -1,173 +1,279 @@
 MathPlatform.registerModule({
-  "id": "2-u03-h018",
-  "teacher": {
-    "placement": "2. ročník · Lineárne rovnice · 18. hodina: Lineárne rovnice s parametrom",
-    "prerequisites": [
-      "učivo ZŠ primerané téme",
-      "všetko učivo prebrané v predchádzajúcich hodinách a ročníkoch, ktoré je pre úlohu potrebné"
+  id: '2-u03-h018',
+  teacher: {
+    placement: '2. ročník · Lineárne rovnice · 18. hodina: Lineárne rovnice s parametrom',
+    prerequisites: [
+      'riešenie lineárnej rovnice s jednou neznámou ekvivalentnými úpravami (13. hodina)',
+      'vytýkanie neznámej z výrazu (ax − x = (a − 1)x)',
+      'delenie nulou nie je definované',
+      'zápis množiny riešení K, prázdna množina ∅ a množina R z 1. ročníka',
     ],
-    "planContent": [
-      "Aktuálny tematický plán uvádza tému „Lineárne rovnice s parametrom“. Obsah modulu rešpektuje jej miesto a rozsah v pláne."
+    planContent: [
+      'Aktuálny tematický plán uvádza tému „Lineárne rovnice s parametrom“. Obsah modulu rešpektuje jej miesto a rozsah v pláne.',
     ],
-    "planPerformance": [
-      "V zdrojovom tematickom pláne nie je pri tomto tematickom celku samostatne vyplnený výkonový štandard; ciele modulu sú didaktickým rozpracovaním názvu a poradia tém, nie doplnením oficiálneho štandardu."
+    planPerformance: [
+      'V zdrojovom tematickom pláne nie je pri tomto tematickom celku samostatne vyplnený výkonový štandard; ciele modulu sú didaktickým rozpracovaním názvu a poradia tém, nie doplnením oficiálneho štandardu.',
     ],
-    "goals": [
-      "porozumieť téme „Lineárne rovnice s parametrom“",
-      "prepájať názornú, slovnú a symbolickú reprezentáciu",
-      "vysvetliť postup a skontrolovať výsledok"
+    goals: [
+      'rozlíšiť parameter od neznámej (riešime vzhľadom na x, parameter je pevné číslo)',
+      'upraviť rovnicu na tvar (výraz s parametrom)·x = (výraz s parametrom)',
+      'rozlíšiť tri prípady: koeficient pri x je nenulový (jedno riešenie), koeficient je 0 a pravá strana nenulová (K = ∅), koeficient aj pravá strana sú 0 (K = R)',
+      'zapísať záver pre každý prípad a overiť ho dosadením konkrétnej hodnoty parametra',
     ],
-    "competencies": [
-      "matematická komunikácia",
-      "modelovanie a reprezentácie",
-      "argumentácia a kontrola výsledku",
-      "prehľadný ručný zápis"
+    competencies: [
+      'matematická komunikácia',
+      'modelovanie a reprezentácie',
+      'argumentácia a kontrola výsledku',
+      'prehľadný ručný zápis',
     ],
-    "enrichment": [
-      "Návrh maturitného štandardu je použitý iba ako obohatenie spôsobu práce: interpretácia, modelovanie, reprezentácie a zdôvodnenie. Neurčuje poradie učiva."
+    enrichment: [
+      'Návrh maturitného štandardu je použitý iba ako obohatenie spôsobu práce: interpretácia, modelovanie, reprezentácie a zdôvodnenie. Neurčuje poradie učiva.',
     ],
-    "flow": [
-      "2–3 min: problém alebo názorný podnet",
-      "cca 15 min: vybrané digitálne aktivity",
-      "8–10 min: ručné riešenie a zápis do zošita",
-      "3–5 min: spoločná kontrola"
+    flow: [
+      '2–3 min: problém „Koľko riešení má 0·x = 6 a 0·x = 0?“',
+      'cca 20 min: digitálne aktivity – parameter vs. neznáma, tri prípady, úprava na tvar (…)x = …, rozlíšenie počtu riešení, hľadanie chyby',
+      '8–10 min: ručné riešenie zbierky (základ, rozšírenie, bonus) a zápis do zošita',
+      '3–5 min: spoločná kontrola, zápis záveru pre každý prípad',
     ],
-    "diagnostics": [
-      "žiak rozumie použitým symbolom",
-      "nevykonáva operáciu bez kontroly podmienok",
-      "vie výsledok vysvetliť slovami"
+    diagnostics: [
+      'žiak vie, ktoré písmeno je neznáma a ktoré parameter',
+      'pri delení výrazom s parametrom si všimne, že môže byť nulový',
+      'rozlíši K = ∅ (0·x = nenulové číslo) od K = R (0·x = 0)',
+      'zapíše záver pre všetky hodnoty parametra, nielen pre jednu',
     ],
-    "partialUse": [
-      "Modul možno použiť celý približne 15 minút alebo vybrať jeho časť.",
-      "Mobil nenahrádza ručné počítanie, náčrt, presný zápis ani argumentáciu."
-    ]
+    partialUse: [
+      'Modul možno použiť celý približne 20–25 minút, alebo vybrať prvú časť (tri prípady pri ax = b) a zvyšok zadať ako prácu v zošite.',
+      'Mobil nenahrádza ručné počítanie ani presný zápis záveru – do aplikácie sa zadávajú iba kontrolné výsledky.',
+    ],
   },
-  "student": {
-    "title": "Lineárne rovnice s parametrom",
-    "subtitle": "Téma 18 · Lineárne rovnice",
-    "intro": "Najprv pochop situáciu, potom počítaj alebo zapisuj. Nakoniec výsledok vysvetli a skontroluj.",
-    "estimatedTime": "15–18 min",
-    "activities": [
+
+  student: {
+    title: 'Lineárne rovnice s parametrom',
+    subtitle: 'Téma 18 · Lineárne rovnice',
+    intro: 'Naučíš sa riešiť rovnice, v ktorých okrem neznámej x vystupuje aj písmeno a, ktoré predstavuje pevné číslo. Kľúčom je pozorne si všimnúť, kedy by sme delili nulou.',
+    estimatedTime: '20–25 min',
+    activities: [
       {
-        "id": "recap",
-        "type": "explain",
-        "phase": "OPAKUJ",
-        "title": "Čo už vieme",
-        "html": "<p>Už vieš riešiť lineárnu rovnicu ekvivalentnými úpravami vrátane delenia oboch strán rovnakým číslom.</p><p>Vieš tiež, že <strong>delenie nulou nie je definované</strong>.</p>"
+        id: 'recap',
+        type: 'explain',
+        phase: 'OPAKUJ',
+        title: 'Čo už vieme',
+        html: '<p>Lineárnu rovnicu riešime ekvivalentnými úpravami. Napríklad <strong>2x = 6</strong> vydelíme dvoma a dostaneme <strong>x = 3</strong>.</p><p>Vieš tiež, že <strong>delenie nulou nie je definované</strong>. Preto rovnicu <strong>0·x = 6</strong> nemôžeme vydeliť nulou.</p>',
       },
       {
-        "id": "topic-intro",
-        "type": "intro",
-        "goals": [
-          "rozlíšiť parameter od neznámej",
-          "riešiť rovnicu s parametrom oddelene pre prípad, keď je koeficient nulový a nenulový"
-        ]
-      },
-      {
-        "id": "visual",
-        "type": "info",
-        "phase": "POCHOP",
-        "title": "Lineárne rovnice s parametrom",
-        "html": "<div class=\"logic-visual\"><svg viewBox=\"0 0 760 230\"><g font-family=\"system-ui\" fill=\"currentColor\"><text x=\"380\" y=\"65\" text-anchor=\"middle\" font-size=\"32\">3x + 5 = 20</text><path d=\"M180 115 H580\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"230\" y=\"155\" font-size=\"22\">ľavá strana</text><text x=\"455\" y=\"155\" font-size=\"22\">pravá strana</text><text x=\"380\" y=\"205\" text-anchor=\"middle\" font-size=\"20\">rovnováha musí zostať zachovaná</text></g></svg></div><p><strong>Dnešná otázka:</strong> Čím sa parameter líši od neznámej?</p>",
-        "continueLabel": "Pokračovať"
-      },
-      {
-        "id": "concept",
-        "type": "explain",
-        "phase": "NOVÝ POJEM / PRAVIDLO",
-        "title": "Najprv význam, potom symboly a výpočet",
-        "html": "<p>Parameter je pevná, ale bližšie neurčená hodnota. Pri delení výrazom s parametrom musíme rozlíšiť prípad, keď je nulový.</p><p><strong>Čítaj zápis nahlas a skontroluj, čo znamená každý nový symbol alebo rozmer.</strong></p>"
-      },
-      {
-        "id": "start",
-        "type": "choice",
-        "phase": "OBJAVUJ",
-        "skill": "porozumenie",
-        "question": "V rovnici ax=6, kde x je neznáma, symbol a predstavuje",
-        "options": [
-          "parameter",
-          "druhú neznámu, ktorú vždy riešime",
-          "jednotku"
+        id: 'topic-intro',
+        type: 'intro',
+        goals: [
+          'rozlíšiť parameter od neznámej',
+          'riešiť rovnicu ax = b pre všetky hodnoty parametra',
+          'upraviť rovnicu s parametrom na tvar (výraz)·x = výraz',
+          'rozlíšiť, kedy má rovnica jedno riešenie, žiadne riešenie alebo každé x',
         ],
-        "answer": 0,
-        "correct": "Parameter určuje rodinu rovníc; skúmame, ako jeho hodnota mení riešenie x.",
-        "hint": "Najprv si pomenuj, čo je dané a čo hľadáš."
       },
       {
-        "id": "explain1",
-        "type": "selfWrite",
-        "phase": "VYSVETLI",
-        "skill": "matematická komunikácia",
-        "title": "Povedz to presne",
-        "prompt": "Vysvetli vlastnými slovami hlavnú myšlienku témy „Lineárne rovnice s parametrom“.",
-        "model": "Parameter je pevná, ale bližšie neurčená hodnota. Pri delení výrazom s parametrom musíme rozlíšiť prípad, keď je nulový."
+        id: 'concept',
+        type: 'explain',
+        phase: 'NOVÝ POJEM',
+        title: 'Parameter a neznáma',
+        html: '<p>Pozri na rovnicu <strong>ax = 12</strong>. Písmeno x je <strong>neznáma</strong> – tú hľadáme. Písmeno a je <strong>parameter</strong> – je to pevné číslo, ktoré nám zatiaľ nikto nepovedal.</p>'
+          + '<div class="example"><span class="mini-label">PRE KAŽDÉ a INÁ ROVNICA</span><p>a = 2: 2x = 12, x = 6<br>a = 3: 3x = 12, x = 4<br>a = −4: −4x = 12, x = −3</p></div>'
+          + '<p>Parameter nám teda dáva celú <span class="hl">rodinu rovníc</span>. Rovnicu riešime <strong>vzhľadom na x</strong> a chceme povedať, čo vyjde pre každé a.</p>',
+        remember: 'Neznámu hľadáme (x). Parameter je pevné číslo, ktoré môže byť ľubovoľné.',
       },
       {
-        "id": "notebook",
-        "type": "notebook",
-        "phase": "BEZ MOBILU",
-        "title": "Zapíš si do zošita",
-        "html": "<p><span class=\"mini-label\">ÚLOHA DO ZOŠITA</span><br>Preskúmaj ax=6 osobitne pre a=0 a a≠0.</p>"
-      },
-      {
-        "id": "transfer",
-        "type": "choice",
-        "phase": "PRENES",
-        "skill": "prenos",
-        "question": "Pre ax=0 platí pri a≠0",
-        "options": [
-          "x=0",
-          "ľubovoľné x",
-          "žiadne x"
+        id: 'start',
+        type: 'choice',
+        phase: 'OBJAVUJ',
+        skill: 'parameter',
+        question: 'V rovnici 3x + p = 10 riešime rovnicu vzhľadom na x. Čo predstavuje písmeno p?',
+        options: [
+          'druhú neznámu, ktorú tiež hľadáme',
+          'konštantu, ktorá sa vždy rovná 1',
+          'parameter, pevné zatiaľ nezadané číslo',
         ],
-        "answer": 0,
-        "correct": "Ak a≠0, môžeme deliť a a dostaneme x=0.",
-        "hint": "Skús náčrt, odhad alebo spätnú kontrolu."
+        answer: 2,
+        correct: 'Správne. p je parameter. Rovnicu riešime vzhľadom na x, výsledok bude záležať od p: x = (10 − p)/3.',
+        hint: 'Ktoré písmeno hľadáme a ktoré je len „nezadané číslo“?',
       },
       {
-        "id": "error",
-        "type": "choice",
-        "phase": "NÁJDI CHYBU",
-        "skill": "kritické myslenie",
-        "question": "Ktorý postup je pri tejto téme najspoľahlivejší?",
-        "options": [
-          "Zapamätať si iba posledný výsledok.",
-          "Použiť pravidlo a skontrolovať podmienky aj jednotky.",
-          "Preskočiť zápis a tipnúť odpoveď."
+        id: 'cases-explain',
+        type: 'explain',
+        phase: 'NOVÝ POJEM',
+        title: 'Tri prípady pri rovnici ax = b',
+        html: '<p>Pri rovnici s parametrom nesmieš deliť, kým si nie si istý/á, že deliš číslom <span class="hl">rôznym od nuly</span>. Preto rozlišujeme prípady:</p>'
+          + '<ol class="steps"><li><strong>a ≠ 0:</strong> môžeme deliť, x = b/a. Rovnica má práve jedno riešenie.</li><li><strong>a = 0 a b ≠ 0:</strong> vznikne 0·x = b, čo je nepravda pre každé x. Množina riešení je prázdna, K = ∅.</li><li><strong>a = 0 a b = 0:</strong> vznikne 0·x = 0, čo platí pre každé x. K = R.</li></ol>'
+          + '<div class="example"><span class="mini-label">PRÍKLAD</span><p>ax = 6</p><p>Pre <strong>a ≠ 0</strong>: x = 6/a.</p><p>Pre <strong>a = 0</strong>: 0·x = 6, to nikdy neplatí, K = ∅.</p></div>',
+        remember: 'Pred delením výrazom s parametrom vždy skúmaj prípad, keď je tento výraz rovný 0.',
+      },
+      {
+        id: 'cases-choice',
+        type: 'choice',
+        phase: 'OVER SI',
+        skill: 'rozlíšenie prípadov',
+        question: 'Rovnica ax = 6 s neznámou x. Pre ktorú hodnotu parametra a nemá žiadne riešenie?',
+        options: [
+          'a = 0',
+          'a = 6',
+          'pre žiadne a, riešenie existuje vždy',
         ],
-        "answer": 1,
-        "correct": "Áno. Postup musí byť kontrolovateľný a výsledok interpretovaný.",
-        "hint": "Matematika nie je tipovanie."
+        answer: 0,
+        correct: 'Správne. Pre a = 0 dostaneme 0·x = 6, čo nikdy neplatí.',
+        hint: 'Dosaď do rovnice a = 6, potom a = 0 a pozri, čo sa stane s ľavou stranou.',
       },
       {
-        "id": "explain2",
-        "type": "selfWrite",
-        "phase": "ARGUMENTUJ",
-        "skill": "argumentácia",
-        "title": "Prečo to funguje?",
-        "prompt": "Napíš jednu vetu, ktorou by si spolužiakovi zdôvodnil/a svoj postup.",
-        "model": "Dobré zdôvodnenie pomenúva použité pravidlo, ukazuje rozhodujúci krok a overí, že výsledok spĺňa zadanie."
+        id: 'cases-num',
+        type: 'numberInput',
+        phase: 'PRECVIČ',
+        skill: 'rovnica ax = b',
+        title: 'Dosaď parameter',
+        prompt: 'Rovnica ax = 12 s neznámou x. Pre a = −3 vypočítaj x.',
+        validate: 'exact',
+        answer: -4,
+        success: 'Správne. −3x = 12, x = 12 : (−3) = −4. Skúška: −3·(−4) = 12 ✓.',
+        hint: 'Dosaď a = −3 a obe strany vydeľ číslom −3.',
+        reveal: '−3x = 12, x = 12 : (−3) = −4.',
       },
       {
-        "id": "manual",
-        "type": "notebook",
-        "phase": "BEZ MOBILU",
-        "title": "Ceruzka má posledné slovo",
-        "html": "<p><span class=\"mini-label\">ÚLOHA</span><br>Vytvor alebo vyrieš podobný príklad v zošite bez aplikácie. Výsledok skontroluj iným spôsobom, ak je to možné.</p>",
-        "model": "<strong>KONTROLA:</strong> Zápis má byť čitateľný, s medzikrokmi, jednotkami alebo podmienkami podľa typu úlohy."
+        id: 'form-explain',
+        type: 'explain',
+        phase: 'NOVÝ POJEM',
+        title: 'Najprv úprava na tvar (…)·x = …',
+        html: '<p>Rovnica nie je vždy hneď v tvare ax = b. Postup:</p>'
+          + '<ol class="steps"><li>Všetky členy s x presunieme na jednu stranu, ostatné na druhú.</li><li>Z členov s x <strong>vytkneme x</strong>: dostaneme tvar (koeficient)·x = pravá strana.</li><li>Zistíme, pre ktoré hodnoty parametra je koeficient nulový, a rozlíšime prípady ako v predošlom kroku.</li></ol>'
+          + '<div class="example"><span class="mini-label">PRÍKLAD</span><p>ax + 3 = x + 7</p><p>ax − x = 7 − 3, teda <strong>(a − 1)x = 4</strong>.</p><p>Pre <strong>a ≠ 1</strong>: x = 4/(a − 1).</p><p>Pre <strong>a = 1</strong>: 0·x = 4, nepravda, K = ∅.</p></div>'
+          + '<div class="example"><span class="mini-label">DRUHÝ PRÍKLAD</span><p>mx + 2 = x + 2</p><p>mx − x = 0, teda <strong>(m − 1)x = 0</strong>.</p><p>Pre <strong>m ≠ 1</strong>: x = 0.</p><p>Pre <strong>m = 1</strong>: 0·x = 0, platí pre každé x, K = R.</p></div>',
       },
       {
-        "id": "reflection",
-        "type": "reflection",
-        "phase": "ZÁVER",
-        "title": "Ako som na tom?",
-        "skills": [
-          "porozumenie",
-          "presný zápis",
-          "kontrola výsledku"
+        id: 'form-choice',
+        type: 'choice',
+        phase: 'OVER SI',
+        skill: 'úprava na tvar (…)x = …',
+        question: 'Rovnicu ax + 5 = 2x + 9 upravíme na tvar (...)·x = 4. Čo patrí do zátvorky?',
+        options: ['a + 2', 'a − 2', 'a'],
+        answer: 1,
+        correct: 'Správne. ax − 2x = 9 − 5, vytkneme x a dostaneme (a − 2)x = 4.',
+        hint: 'Presuň 2x na ľavú stranu (zmení sa znamienko) a 5 na pravú, potom vytkni x.',
+      },
+      {
+        id: 'form-choice2',
+        type: 'choice',
+        phase: 'OVER SI',
+        skill: 'rozlíšenie prípadov',
+        question: 'Rovnica (a − 1)x = 4 s neznámou x. Pre ktorú hodnotu parametra a nemá žiadne riešenie?',
+        options: ['a = 4', 'a = 0', 'a = 1'],
+        answer: 2,
+        correct: 'Správne. Pre a = 1 je koeficient a − 1 rovný 0 a vznikne 0·x = 4, čo nikdy neplatí.',
+        hint: 'Kedy je výraz a − 1 rovný nule?',
+      },
+      {
+        id: 'form-num',
+        type: 'numberInput',
+        phase: 'PRECVIČ',
+        skill: 'rovnica (…)x = …',
+        title: 'Vypočítaj x',
+        prompt: 'Rovnica (a − 2)x = 8 s neznámou x. Pre a = 4 vypočítaj x.',
+        validate: 'exact',
+        answer: 4,
+        success: 'Správne. Pre a = 4 je (4 − 2)x = 8, teda 2x = 8 a x = 4.',
+        hint: 'Najprv dosaď a = 4 do zátvorky: 4 − 2 = ?',
+        reveal: '(4 − 2)x = 8, 2x = 8, x = 4.',
+      },
+      {
+        id: 'zero-num',
+        type: 'numberInput',
+        phase: 'PRECVIČ',
+        skill: 'prípad K = R / x = 0',
+        title: 'Koľko je x?',
+        prompt: 'Rovnica mx + 2 = x + 2 sa upraví na (m − 1)x = 0. Pre m = 5 vypočítaj x.',
+        validate: 'exact',
+        answer: 0,
+        success: 'Správne. Pre m = 5 je 4x = 0, teda x = 0. Pozor: iba pre m = 1 by platilo „každé x“.',
+        hint: 'Dosaď m = 5: čo je 5 − 1 a koľko je 0 : 4?',
+        reveal: '(5 − 1)x = 0, 4x = 0, x = 0.',
+      },
+      {
+        id: 'count-solutions',
+        type: 'matrix',
+        phase: 'ROZLÍŠ',
+        skill: 'počet riešení',
+        title: 'Koľko riešení má rovnica pre dané a? Priraď ku každej rovnici správny záver.',
+        labels: ['jedno riešenie', 'žiadne riešenie', 'každé x'],
+        items: [
+          { text: 'ax = 6 pre a = 3', answer: 'jedno riešenie' },
+          { text: 'ax = 6 pre a = 0', answer: 'žiadne riešenie' },
+          { text: 'ax = 0 pre a = 0', answer: 'každé x' },
+          { text: '(a − 1)x = 5 pre a = 1', answer: 'žiadne riešenie' },
+          { text: '(a − 1)x = 0 pre a = 1', answer: 'každé x' },
+          { text: '(a − 1)x = 0 pre a = 4', answer: 'jedno riešenie' },
+          { text: '(a + 2)x = 7 pre a = −2', answer: 'žiadne riešenie' },
         ],
-        "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka."
-      }
-    ]
-  }
+      },
+      {
+        id: 'error',
+        type: 'choice',
+        phase: 'NÁJDI CHYBU',
+        skill: 'kritické myslenie',
+        question: 'Anka vyriešila rovnicu (a − 1)x = 4 a napísala: „x = 4/(a − 1) pre každé a“. Čo je v jej riešení chybné?',
+        options: [
+          'Nič, vzorec platí pre všetky a.',
+          'Nemala deliť číslom 4, ale číslom 1.',
+          'Nezvážila prípad a = 1, vtedy by delila nulou.',
+        ],
+        answer: 2,
+        correct: 'Správne. Pre a = 1 je a − 1 = 0, vznikne 0·x = 4 a K = ∅. Vzorec platí len pre a ≠ 1.',
+        hint: 'Skús do jej vzorca dosadiť a = 1. Čo dostaneš v menovateli?',
+      },
+      {
+        id: 'explain-why',
+        type: 'selfWrite',
+        phase: 'VYSVETLI',
+        skill: 'matematická komunikácia',
+        title: 'Prečo rozlišujeme prípady?',
+        prompt: 'Vlastnými slovami napíš, prečo pri rovnici ax = b nemôžeme hneď napísať x = b/a a čo urobíme, keď je a = 0.',
+        model: 'Delenie nulou nie je definované, preto môžeme deliť číslom a len vtedy, keď a ≠ 0. Pre a = 0 dostaneme 0·x = b: ak b ≠ 0, nemá riešenie (K = ∅), ak b = 0, platí pre každé x (K = R).',
+      },
+      {
+        id: 'practice',
+        type: 'taskList',
+        phase: 'PRECVIČ',
+        skill: 'riešenie rovníc s parametrom',
+        title: 'Zbierka úloh do zošita',
+        html: '<p>Vyrieš v zošite vzhľadom na neznámu x. Pri každej úlohe zapíš medzikroky a záver pre všetky hodnoty parametra.</p>',
+        items: [
+          { level: 'zaklad', html: 'ax = 8. Vyrieš pre a = 2, a = −4 a a = 0.', answer: 'a = 2: x = 4. a = −4: x = −2. a = 0: 0·x = 8, K = ∅.' },
+          { level: 'zaklad', html: '3x = a. Vyrieš pre všetky a.', answer: 'Koeficient pri x je 3 ≠ 0 vždy, takže x = a/3 pre každé a.' },
+          { level: 'zaklad', html: '(m + 1)x = 6', answer: 'm ≠ −1: x = 6/(m + 1). m = −1: 0·x = 6, K = ∅.' },
+          { level: 'zaklad', html: 'x + p = 2x − 3', answer: 'p + 3 = x. Pre každé p je práve jedno riešenie x = p + 3.' },
+          { level: 'rozsirenie', html: 'ax + 2 = 5x + 2', answer: '(a − 5)x = 0. a ≠ 5: x = 0. a = 5: 0·x = 0, K = R.' },
+          { level: 'rozsirenie', html: 'mx − 3 = x + 1', answer: '(m − 1)x = 4. m ≠ 1: x = 4/(m − 1). m = 1: 0·x = 4, K = ∅.' },
+          { level: 'rozsirenie', html: '2(x − k) = kx + 4', answer: '2x − 2k = kx + 4, (2 − k)x = 2k + 4. k ≠ 2: x = (2k + 4)/(2 − k). k = 2: 0·x = 8, K = ∅.' },
+          { level: 'bonus', html: 'bx + 4 = 2x + b. Pre ktoré b je riešením rovnice x = 0?', answer: '(b − 2)x = b − 4. Pre x = 0 musí platiť 0 = b − 4, teda b = 4 (a b ≠ 2 je splnené). Kontrola: 4x + 4 = 2x + 4 má riešenie x = 0.' },
+        ],
+        note: 'Riešenie si môžeš zobraziť až po vlastnom pokuse.',
+      },
+      {
+        id: 'reflection',
+        type: 'reflection',
+        phase: 'ZÁVER',
+        title: 'Ako som na tom?',
+        skills: [
+          'rozlíšiť parameter od neznámej',
+          'upraviť rovnicu na tvar (…)x = …',
+          'rozlíšiť prípady (jedno riešenie, žiadne, každé x)',
+          'zapísať záver pre všetky hodnoty parametra',
+        ],
+        prompt: 'Označ, ako dobre tomu teraz rozumieš. Nie je to známka.',
+      },
+    ],
+  },
+
+  worksheet: {
+    tasks: [
+      { id: 'w1', level: 'zaklad', html: 'Vyrieš rovnicu ax = 10 s neznámou x pre všetky hodnoty parametra a.', answer: 'a ≠ 0: x = 10/a. a = 0: 0·x = 10, K = ∅.', space: 3 },
+      { id: 'w2', level: 'zaklad', html: 'Vyrieš rovnicu (b − 3)x = 6 s neznámou x.', answer: 'b ≠ 3: x = 6/(b − 3). b = 3: 0·x = 6, K = ∅.', space: 3 },
+      { id: 'w3', level: 'rozsirenie', html: 'Vyrieš rovnicu px + 1 = x + 1 s neznámou x.', answer: '(p − 1)x = 0. p ≠ 1: x = 0. p = 1: K = R.', space: 4 },
+      { id: 'w4', level: 'rozsirenie', html: 'Vyrieš rovnicu 3x − a = ax + 2.', answer: '(3 − a)x = a + 2. a ≠ 3: x = (a + 2)/(3 − a). a = 3: 0·x = 5, K = ∅.', space: 4 },
+      { id: 'w5', level: 'bonus', html: 'Pre ktoré hodnoty parametra k má rovnica kx − 2 = 3x + k riešenie x = 1?', answer: 'Dosadíme x = 1: k − 2 = 3 + k, teda −2 = 3, čo nikdy neplatí. Takéto k neexistuje.', space: 4 },
+    ],
+  },
 });
