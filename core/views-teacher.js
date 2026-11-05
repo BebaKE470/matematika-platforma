@@ -798,6 +798,18 @@
         <input type="number" class="exam-ov" min="0" max="${t.max}" step="0.5" data-nick="${esc(nick)}" data-task="${esc(t.id)}" value="${t.overridden ? t.points : ''}" placeholder="${MathExam.fmtPts(t.auto)}"> z ${MathExam.fmtPts(t.max)}</label></div>`;
 
     function draw() {
+      // Zachovaj otvorené úlohy (vnorené <details>) a focus v políčku na body –
+      // inak by sa po prvom kliku na šípku hore/dole všetko prekreslilo a zavrelo.
+      const openTasks = new Set();
+      let focusKey = null;
+      const root = $('#students');
+      if (root) {
+        root.querySelectorAll('details.exam-student').forEach(sd => {
+          sd.querySelectorAll('details.exam-result-task').forEach((td, i) => { if (td.open) openTasks.add(sd.dataset.nick + '\u0000' + i); });
+        });
+        const a = document.activeElement;
+        if (a && a.classList && a.classList.contains('exam-ov')) focusKey = { nick: a.dataset.nick, task: a.dataset.task };
+      }
       const nicks = Object.keys(students).sort((a, b) => a.localeCompare(b, 'sk'));
       const graded = nicks.map(n => [n, gradeOf(n)]);
       const done = nicks.filter(n => students[n].stage === 'done');
@@ -826,6 +838,13 @@
           <div class="exam-student-body">${examSelfHtml(exam, ex.self)}${g ? `<div class="exam-results">${MathExam.resultTasksHtml(g, t => overrideInput(nick, t))}</div>` : '<p class="muted">Žiak ešte nevybral skupinu alebo neodoslal odpovede.</p>'}</div>
         </details>`;
       }).join('');
+      $('#students').querySelectorAll('details.exam-student').forEach(sd => {
+        sd.querySelectorAll('details.exam-result-task').forEach((td, i) => { if (openTasks.has(sd.dataset.nick + '\u0000' + i)) td.open = true; });
+      });
+      if (focusKey) {
+        const el = [...$('#students').querySelectorAll('input.exam-ov')].find(x => x.dataset.nick === focusKey.nick && x.dataset.task === focusKey.task);
+        if (el) el.focus();
+      }
     }
 
     // Prekreslenie počas písania do políčka na body by žiakovi (učiteľke) zobralo
