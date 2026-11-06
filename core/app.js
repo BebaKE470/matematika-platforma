@@ -62,10 +62,9 @@
     const parts = (location.hash.slice(1) || 'home').split('/');
     const route = findRoute(parts);
 
-    // Zamknutá kalkulačka: odchod cez navigáciu v aplikácii (Katalóg, Pre učiteľa,
-    // logo…) sa počíta ako opustenie a žiaka vráti späť do kalkulačky.
+    // Zamknutá kalkulačka: klik na navigáciu v aplikácii (Katalóg, Pre učiteľa,
+    // logo…) žiaka potichu vráti späť do kalkulačky (nepočíta sa ako opustenie).
     if (route.name !== 'play' && window.MathCalc.locked()) {
-      window.MathCalc.noteNavigationAttempt();
       go('play');
       return;
     }
