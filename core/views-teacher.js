@@ -616,6 +616,8 @@
           if (!msg || !msg.nick) return;
           students[msg.nick] = Object.assign({}, students[msg.nick], msg);
           draw();
+          // Žiak, ktorý sa vrátil (napr. po obnovení stránky) už po ukončení zámku, o ňom nevie.
+          if (ended && msg.stage !== 'done') handle.send('teacher', { action: 'ended' }).catch(() => {});
           // Novopripojenému žiakovi (aj s ručne zadaným kódom) povieme, že ide o kalkulačku.
           if (msg.stage === 'joined') handle.announceGrading(NO_GRADING, false, lesson());
         },

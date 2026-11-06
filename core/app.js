@@ -105,5 +105,10 @@
   });
 
   window.MathApp = { go, render };
-  render();
+  // Po obnovení stránky najprv obnovíme rozpracovanú zamknutú kalkulačku (ak nejaká beží),
+  // aby sa obnovením nedalo sledovaniu uniknúť.
+  Promise.resolve().then(() => S.resumeCalc()).catch(() => false).then(resumed => {
+    if (resumed) history.replaceState(null, '', '#play');
+    render();
+  });
 })();

@@ -242,6 +242,8 @@
   // --- Prehrávač žiaka ---------------------------------------------------------
 
   const STORE_KEY = 'mathCalcStudentV1';
+  const ACTIVE_KEY = 'mathCalcActiveV1';
+  const ACTIVE_MAX_MS = 4 * 60 * 60 * 1000;
   const KEEP_MS = 2 * 24 * 60 * 60 * 1000;
   const SEND_DEBOUNCE_MS = 1000;
   const HISTORY_MAX = 20;
@@ -259,7 +261,28 @@
       Object.keys(all).forEach(k => { if (!all[k] || now - (all[k].at || 0) > KEEP_MS) delete all[k]; });
       all[storeKey(C.code, C.nick)] = { at: now, leaves: C.leaves, awayMs: C.awayMs, ended: C.ended };
       localStorage.setItem(STORE_KEY, JSON.stringify(all));
+      // Ukazovateľ „prebieha sledovanie“: po obnovení stránky z neho aplikácia žiaka sama vráti
+      // do kalkulačky (pending() nižšie), inak by obnovením unikol sledovaniu.
+      if (C.ended) localStorage.removeItem(ACTIVE_KEY);
+      else localStorage.setItem(ACTIVE_KEY, JSON.stringify({ code: C.code, nick: C.nick, moduleId: C.moduleId, at: now }));
     } catch (_) { /* localStorage nedostupné – kalkulačka funguje, len bez zálohy počtu */ }
+  }
+
+  // Rozpracované sledovanie z minulého načítania stránky (alebo null). Platí 4 hodiny.
+  function pending() {
+    try {
+      const p = JSON.parse(localStorage.getItem(ACTIVE_KEY) || 'null');
+      if (!p || !p.code || !p.nick || !p.moduleId || Date.now() - (p.at || 0) > ACTIVE_MAX_MS) return null;
+      const saved = readStore()[storeKey(p.code, p.nick)];
+      return saved && !saved.ended ? p : null;
+    } catch (_) { return null; }
+  }
+
+  // Dodatočné pripojenie živého kanála (obnova po refreshi, výpadok siete).
+  function setLive(handle) {
+    if (!C) return;
+    C.live = handle;
+    sendNow();
   }
 
   function sendNow() {
@@ -607,6 +630,6 @@
     // logika
     evaluate, formatNumber, toFraction, formatDuration, CalcError,
     // žiak
-    begin, play, end, active, locked, noteNavigationAttempt, onTeacher,
+    begin, play, end, active, locked, noteNavigationAttempt, onTeacher, pending, setLive,
   };
 })();

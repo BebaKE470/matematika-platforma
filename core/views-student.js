@@ -337,6 +337,29 @@
     };
   }
 
+  // Obnova zamknutej kalkulačky po obnovení stránky: ak sledovanie nebolo ukončené, žiaka
+  // vrátime do kalkulačky (a započíta sa to ako opustenie). Vracia true, ak sa obnovilo.
+  async function resumeCalc() {
+    const p = window.MathCalc.pending();
+    if (!p) return false;
+    const onTeacher = msg => { window.MathCalc.onTeacher(msg); };
+    await MathSession.start(p.moduleId, { mode: 'live', nick: p.nick, session: p.code });
+    window.MathCalc.begin({ nick: p.nick, code: p.code, moduleId: p.moduleId, live: null });
+    // Kanál sa pripája na pozadí a opakuje, kým sa nepodarí – kalkulačka je medzitým už zamknutá.
+    const connect = async () => {
+      for (let i = 0; i < 60 && window.MathCalc.locked(); i++) {
+        try {
+          const handle = await MathLive.connectAsStudent(p.code, { onTeacher });
+          MathSession.attachLive(handle);
+          window.MathCalc.setLive(handle);
+          return;
+        } catch (_) { await new Promise(r => setTimeout(r, 5000)); }
+      }
+    };
+    connect();
+    return true;
+  }
+
   function showError(e) {
     app.innerHTML = `
       <div class="card">
@@ -349,5 +372,5 @@
   }
 
   window.MathViews = window.MathViews || {};
-  window.MathViews.student = { home, catalog, catalogYear, catalogUnit, moduleStart, join, showError };
+  window.MathViews.student = { home, catalog, catalogYear, catalogUnit, moduleStart, join, resumeCalc, showError };
 })();
