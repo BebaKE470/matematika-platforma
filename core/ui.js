@@ -76,12 +76,15 @@
     if (canOpen) {
       if (teacherMode) {
         const isExam = m.kind === 'exam';
+        const isCalc = m.kind === 'calc';
         actionsHtml = `
           <button class="ghost" data-go="method/${m.id}">Metodická karta</button>
           ${m.status === 'ready' ? (isExam
             ? `<button class="btn" data-go="teacher-exam/${m.id}">Spustiť písomku</button>`
-            : `<button class="btn" data-go="teacher-live/${m.id}">Živá hodina</button>`) : ''}
-          ${m.status === 'ready' && !isExam ? `<button class="ghost" data-go="worksheet-add/${m.id}">Na pracovný list</button>` : ''}
+            : isCalc
+              ? `<button class="btn" data-go="teacher-calc/${m.id}">Spustiť zamknutú kalkulačku</button>`
+              : `<button class="btn" data-go="teacher-live/${m.id}">Živá hodina</button>`) : ''}
+          ${m.status === 'ready' && !isExam && !isCalc ? `<button class="ghost" data-go="worksheet-add/${m.id}">Na pracovný list</button>` : ''}
           <button class="ghost" data-go="module/${m.id}">${isPlaceholder ? 'Zobraziť náhľad' : 'Otvoriť modul'}</button>
         `;
       } else {

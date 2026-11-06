@@ -8,7 +8,7 @@
 // point every other core/*.js has attached its namespace to `window`.
 (function () {
   if (!window.MathPlatform || !window.MathAuth || !window.MathLive || !window.MathSession ||
-      !window.MathPrint || !window.MathWorksheet || !window.MathExam || !window.MathViews || !window.MathViews.student || !window.MathViews.teacher) {
+      !window.MathPrint || !window.MathWorksheet || !window.MathExam || !window.MathCalc || !window.MathViews || !window.MathViews.student || !window.MathViews.teacher) {
     throw new Error('core/app.js: chýba niektorý z core/*.js pred ním.');
   }
 
@@ -38,6 +38,7 @@
     { name: 'worksheet', test: p => p[0] === 'worksheet', teacher: true, view: p => window.MathWorksheet.edit(p[1]) },
     { name: 'worksheetAdd', test: p => p[0] === 'worksheet-add', teacher: true, view: p => window.MathWorksheet.addModule(p[1]) },
     { name: 'teacherLive', test: p => p[0] === 'teacher-live', teacher: true, view: p => T.teacherLive(p[1]) },
+    { name: 'teacherCalc', test: p => p[0] === 'teacher-calc', teacher: true, view: p => T.teacherCalc(p[1]) },
     { name: 'teacherExam', test: p => p[0] === 'teacher-exam', teacher: true, view: p => T.teacherExam(p[1], p[2]) },
     { name: 'examPrint', test: p => p[0] === 'exam-print', teacher: true, view: p => T.examPrint(p[1], p[2], p[3]) },
   ];
@@ -60,6 +61,14 @@
 
     const parts = (location.hash.slice(1) || 'home').split('/');
     const route = findRoute(parts);
+
+    // Zamknutá kalkulačka: odchod cez navigáciu v aplikácii (Katalóg, Pre učiteľa,
+    // logo…) sa počíta ako opustenie a žiaka vráti späť do kalkulačky.
+    if (route.name !== 'play' && window.MathCalc.locked()) {
+      window.MathCalc.noteNavigationAttempt();
+      go('play');
+      return;
+    }
 
     if (!route.keepsSession) window.MathSession.leave();
 

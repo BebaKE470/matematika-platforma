@@ -308,3 +308,17 @@ ktorá si skopíruje `sessionStorage` s tokenom).
 **Bezpečnosť:** `api/_exams/` a `api/_lib/` majú predponu `_`, takže ich Vercel
 nevystaví ako endpointy; po nasadení over, že `/api/_exams/<id>.js` vracia 404.
 Ak by nie, pridaj do `vercel.json` rewrite na 404.
+
+## Zamknutá kalkulačka (`core/calc.js`)
+
+Registry `kind: 'calc'` (modul `pomocky-kalkulacka`, bez `activities`, `student.calc: true`).
+Dva režimy: samostatný (`MathCalc.begin({solo:true})`, bez zámku a bez posielania) a zamknutý
+(učiteľ `#teacher-calc/<id>` → kód/QR → žiak `#join/<id>/<kód>`).
+
+- Učiteľ → žiaci (`'teacher'`): `grading` s `lesson:{moduleId, calc:true}` (kvôli ručne zadanému kódu) a `{action:'ended'}`.
+- Žiak → učiteľ (`'progress'`): `{nick, moduleId, stage, calc:{leaves, awayMs, away, selfEnded}}`.
+- Opustenie = `visibilitychange` → hidden (okamžitý pokus o odoslanie), návrat = čas mimo + hlásenie žiakovi.
+  Navigácia v aplikácii počas zámku (`core/app.js`) sa počíta ako opustenie a vráti žiaka na `#play`.
+  Obnovenie stránky sa počíta ako opustenie (záloha v `localStorage` `mathCalcStudentV1`).
+- Web nevie telefón fyzicky zamknúť; vie opustenie spoľahlivo zaznamenať. Počas zámku sa žiada Wake Lock.
+- Výpočty: vlastný parser (`MathCalc.evaluate`, bez `eval`).

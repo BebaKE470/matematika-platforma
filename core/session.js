@@ -129,6 +129,7 @@
   // mid-lesson left their realtime socket open for the rest of the period.
   function leave() {
     if (window.MathExam) window.MathExam.end();
+    if (window.MathCalc) window.MathCalc.end();
     if (live) { live.close(); live = null; }
     state = freshState();
     currentModule = null;
@@ -212,6 +213,8 @@
     // Písomka (core/exam.js) si vedie vlastný stav a obrazovky – session.js ju
     // len spustí; XP, okamžitá spätná väzba ani `activities` sa tu nepoužívajú.
     if (window.MathExam && window.MathExam.active()) { window.MathExam.play(app); return; }
+    // Kalkulačka (core/calc.js, registry `kind: 'calc'`) – tiež vlastná obrazovka.
+    if (window.MathCalc && window.MathCalc.active()) { window.MathCalc.play(app); return; }
     if (!currentModule) {
       location.hash = 'module/' + (state.moduleId || window.MathPlatform.defaultModuleId());
       return;

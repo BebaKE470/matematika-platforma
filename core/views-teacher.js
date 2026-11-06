@@ -68,6 +68,11 @@
         <button class="btn" data-go="worksheets">Otvoriť pracovné listy</button>
       </div>
       <div class="card spaced">
+        <h2>Zamknutá kalkulačka</h2>
+        <p>Žiaci vidia iba kalkulačku a platforma počíta, koľkokrát opustili aplikáciu — aj pri papierovej písomke.</p>
+        <button class="btn" data-go="teacher-calc/pomocky-kalkulacka">Spustiť zamknutú kalkulačku</button>
+      </div>
+      <div class="card spaced">
         <h2>Živá hodina</h2>
         <p>Živú hodinu spustíš pri konkrétnej hotovej téme v učiteľskom katalógu.</p>
       </div>
@@ -292,6 +297,7 @@
     const meta0 = id && MathPlatform.indexEntry(id);
     // Písomka má vlastnú obrazovku (teacherExam nižšie), nie obyčajnú živú hodinu.
     if (meta0 && meta0.kind === 'exam') { window.MathApp.go('teacher-exam/' + id); return; }
+    if (meta0 && meta0.kind === 'calc') { window.MathApp.go('teacher-calc/' + id); return; }
     id = (meta0 && meta0.status === 'ready') ? id : MathPlatform.defaultModuleId();
     const m = MathPlatform.indexEntry(id);
     const code = MathLive.makeCode();
@@ -506,6 +512,132 @@
     // Router teardown: leaving this screen must close the channel, so
     // re-entering teacher-live never orphans a previous connection whose
     // callback would otherwise fire against DOM that no longer exists.
+    return () => { if (handle) handle.close(); };
+  }
+
+  // --- Zamknutá kalkulačka (core/calc.js) -----------------------------------------
+  //
+  // Učiteľ spustí kanál s kódom, žiaci sa pripoja a vidia iba kalkulačku. Ich
+  // aplikácia posiela v správe 'progress' pole `calc` {leaves, awayMs, away,
+  // selfEnded}; tu sa z nich skladá tabuľka. Nič sa neukladá (rovnako ako pri
+  // živej hodine), CSV je jediný trvalý záznam.
+
+  async function teacherCalc(id) {
+    const m = MathPlatform.indexEntry(id);
+    if (!m || m.kind !== 'calc' || m.status !== 'ready') { window.MathApp.go('teacher'); return; }
+    const code = MathLive.makeCode();
+    const fmt = window.MathCalc.formatDuration;
+    const joinUrl = `${location.origin}${location.pathname}#join/${encodeURIComponent(id)}/${encodeURIComponent(code)}`;
+
+    app.innerHTML = `
+      <div class="card">
+        <div class="eyebrow"><span class="live-dot"></span> ZAMKNUTÁ KALKULAČKA</div>
+        <h1>${esc(m.topic)}</h1>
+        <div class="live-setup-row">
+          <div><p><strong>Naskenuj QR kód:</strong></p><div id="joinQr" class="qr-box"></div></div>
+          <div>
+            <p class="muted">Žiak po naskenovaní zadá iba meno a priezvisko. Potom vidí len kalkulačku a každé opustenie aplikácie sa započíta.</p>
+            <p>Kód pre ručné pripojenie:</p>
+            <div class="bigcode">${esc(code)}</div>
+            <p class="muted small-note">Záloha: platforma → „Máš kód od učiteľa?“ → meno, priezvisko a tento kód.</p>
+          </div>
+        </div>
+        <div id="connect" class="notice">Pripájam živý kanál…</div>
+        <div class="row">
+          <button class="btn" id="endCalc" disabled>Ukončiť zámok</button>
+          <button class="ghost" id="calcCsv">Exportovať CSV</button>
+          <button class="ghost" data-go="method/${esc(id)}">Metodická karta</button>
+          <button class="ghost" data-go="teacher-unit/${m.year}/${MathPlatform.unitKey(m.unit)}">Späť</button>
+        </div>
+      </div>
+      <div class="card spaced">
+        <h2>Opustenia aplikácie</h2>
+        <div id="calcSummary" class="muted">Zatiaľ sa nik nepripojil.</div>
+        <p class="muted small-note">Červený riadok = žiak je práve mimo aplikácie (údaj môže prísť s oneskorením, kým je mobil v pozadí uspatý — po návrate sa vždy doplní presne). Žltý = už aspoň raz odišiel. Obnovenie stránky sa tiež počíta ako opustenie.</p>
+        <div id="calcStudents" class="calc-students"></div>
+      </div>`;
+
+    drawJoinQr('joinQr', joinUrl).catch(() => {
+      const el = $('#joinQr');
+      if (el) el.innerHTML = '<span class="muted">QR kód sa nepodarilo načítať. Použi textový kód vedľa.</span>';
+    });
+
+    const students = {};
+    let handle = null;
+    let ended = false;
+
+    const stateOf = x => {
+      const c = x.calc || {};
+      if (x.stage === 'done' || ended) return { cls: 'is-ended', text: c.selfEnded ? 'odpojil/a sa sám/sama' : 'zámok ukončený' };
+      if (c.away) return { cls: 'is-away', text: '⚠ mimo aplikácie' };
+      if (x.stage === 'joined') return { cls: '', text: 'pripojený/á' };
+      return { cls: c.leaves ? 'has-leaves' : '', text: 'v kalkulačke' };
+    };
+
+    function draw() {
+      const arr = Object.values(students);
+      const leavers = arr.filter(x => x.calc && x.calc.leaves > 0).length;
+      const awayNow = arr.filter(x => x.calc && x.calc.away && x.stage !== 'done').length;
+      $('#calcSummary').innerHTML = arr.length
+        ? `Pripojení: <strong>${arr.length}</strong> · opustili aplikáciu: <strong>${leavers}</strong>${awayNow ? ` · práve mimo: <strong>${awayNow}</strong>` : ''}`
+        : 'Zatiaľ sa nik nepripojil.';
+      const rank = x => (x.calc && x.calc.away ? 2 : 0) + (x.calc && x.calc.leaves ? 1 : 0);
+      arr.sort((a, b) => rank(b) - rank(a) || ((b.calc && b.calc.leaves) || 0) - ((a.calc && a.calc.leaves) || 0) || String(a.nick || '').localeCompare(String(b.nick || ''), 'sk'));
+      $('#calcStudents').innerHTML = arr.length
+        ? `<div class="calc-student head"><span>Žiak</span><span>Stav</span><span>Opustenia</span><span>Čas mimo</span></div>` +
+          arr.map(x => {
+            const c = x.calc || {};
+            const st = stateOf(x);
+            return `<div class="calc-student ${st.cls}"><strong>${esc(x.nick)}</strong><span class="state">${esc(st.text)}</span><span>${c.leaves ? c.leaves + '×' : '0'}</span><span>${c.awayMs ? fmt(c.awayMs) : '—'}</span></div>`;
+          }).join('')
+        : '';
+    }
+
+    $('#calcCsv').onclick = () => {
+      const arr = Object.values(students).sort((a, b) => String(a.nick || '').localeCompare(String(b.nick || ''), 'sk'));
+      if (!arr.length) { alert('Zatiaľ nie sú žiadne údaje na export.'); return; }
+      const rows = [
+        ['Pomôcka', m.topic],
+        ['Kód', code],
+        ['Dátum a čas exportu', new Date().toLocaleString('sk-SK')],
+        [],
+        ['Žiak (meno a priezvisko)', 'Stav', 'Počet opustení aplikácie', 'Čas mimo aplikácie (m:ss)'],
+        ...arr.map(x => { const c = x.calc || {}; return [x.nick || '', stateOf(x).text, c.leaves || 0, fmt(c.awayMs || 0)]; }),
+      ];
+      window.MathUtil.downloadCsv(`${window.MathUtil.dateStamp()}-kalkulacka-opustenia.csv`, rows);
+    };
+
+    const lesson = () => ({ moduleId: id, reflectOnly: false, selectedActivityIndices: null, calc: true });
+    const NO_GRADING = { enabled: false, thresholds: { 1: 90, 2: 75, 3: 50, 4: 30 } };
+
+    try {
+      handle = await MathLive.connectAsTeacher(code, {
+        onStudent: msg => {
+          if (!msg || !msg.nick) return;
+          students[msg.nick] = Object.assign({}, students[msg.nick], msg);
+          draw();
+          // Novopripojenému žiakovi (aj s ručne zadaným kódom) povieme, že ide o kalkulačku.
+          if (msg.stage === 'joined') handle.announceGrading(NO_GRADING, false, lesson());
+        },
+      });
+      $('#connect').className = 'notice good';
+      $('#connect').innerHTML = '<strong>Kanál je aktívny.</strong> Údaje sa neukladajú do databázy; po odchode zo stránky sa stratia, preto si pred tým stiahni CSV.';
+      $('#endCalc').disabled = false;
+      handle.announceGrading(NO_GRADING, true, lesson());
+      $('#endCalc').onclick = async () => {
+        await handle.send('teacher', { action: 'ended' });
+        ended = true;
+        $('#endCalc').disabled = true;
+        $('#connect').className = 'notice';
+        $('#connect').innerHTML = '<strong>Zámok je ukončený.</strong> Žiaci môžu mobily odložiť. Prehľad zostáva na obrazovke, aby si ho mohol/mohla exportovať.';
+        draw();
+      };
+    } catch (e) {
+      console.error('Realtime chyba:', e);
+      $('#connect').className = 'notice bad';
+      $('#connect').innerHTML = '<strong>Nepodarilo sa pripojiť živý kanál.</strong> Obnov stránku a skús to znova.';
+    }
+
     return () => { if (handle) handle.close(); };
   }
 
@@ -1053,5 +1185,5 @@
     $('#examPrintClose').onclick = () => { window.close(); window.MathApp.go(`teacher-exam/${id}`); };
   }
 
-  window.MathViews.teacher = { login, teacher, teacherYear, teacherUnit, method, teacherLive, teacherExam, examPrint };
+  window.MathViews.teacher = { login, teacher, teacherYear, teacherUnit, method, teacherLive, teacherCalc, teacherExam, examPrint };
 })();

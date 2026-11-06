@@ -115,7 +115,7 @@ for (const entry of registry) {
   const dupFiles = files.filter((v, i) => files.indexOf(v) !== i);
   new Set(dupFiles).forEach(f => fail('registry', `duplicitná cesta file: ${f}`));
 
-  const LEGACY_IDS = new Set(['1-logika-01', '2-funkcie-01']);
+  const LEGACY_IDS = new Set(['1-logika-01', '2-funkcie-01', 'pomocky-kalkulacka']);
   const idPattern = /^[123]-u\d{2}-h\d{3}$/;
   registry.forEach(m => {
     if (!idPattern.test(m.id) && !LEGACY_IDS.has(m.id)) {
@@ -286,6 +286,10 @@ for (const [id, mod] of modulesByEntry) {
     if (mod.student.activities.length) fail('content', `${label}: písomka nemá mať v module activities (zadania patria do api/_exams/)`);
     auditExam(id, label);
   }
+  // Kalkulačka (registry `kind: 'calc'`, core/calc.js): žiadne aktivity, vlastný prehrávač.
+  const isCalc = mod.student.calc === true;
+  if (isCalc !== (entry.kind === 'calc')) fail('registry', `${label}: registry kind='${entry.kind}' a student.calc=${mod.student.calc} sa nezhodujú`);
+  if (isCalc && mod.student.activities.length) fail('content', `${label}: kalkulačka nemá mať v module activities`);
   const acts = mod.student.activities;
   const seenActivityIds = new Set();
   const choiceAnswerIdx = [];
@@ -392,7 +396,7 @@ for (const [id, mod] of modulesByEntry) {
     }
   }
 
-  if (entry.status === 'ready' && !hasReflection && !isExam) warn('content', `${label}: ready modul bez reflection na konci`);
+  if (entry.status === 'ready' && !hasReflection && !isExam && !isCalc) warn('content', `${label}: ready modul bez reflection na konci`);
   if (choiceAnswerIdx.length >= 3 && choiceAnswerIdx.every(x => x === choiceAnswerIdx[0])) {
     allSameIndexModules.push(`${id}: všetkých ${choiceAnswerIdx.length} choice má answer=${choiceAnswerIdx[0]}`);
   }

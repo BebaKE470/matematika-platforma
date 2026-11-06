@@ -21,6 +21,16 @@
   window.MATH_MODULE_INDEX = [
   // ==================== 1. ROČNÍK ====================
 
+  // 1.00 · Pomôcky (všeobecné, mimo tematického plánu; kind 'calc' = core/calc.js)
+  {
+    id: "pomocky-kalkulacka", year: 1, unit: 'Pomôcky', unitOrder: 0,
+    topic: "Kalkulačka (zamknutý režim)", lesson: "Pomôcka", lessonOrder: 0,
+    time: "podľa potreby", status: 'ready', kind: 'calc',
+    type: "Kalkulačka → pri písomke zamknutá, počíta opustenia aplikácie",
+    skills: ["kalkulačka", "samostatná práca"],
+    file: 'modules/1-rocnik/pomocky/00-zamknuta-kalkulacka.js'
+  },
+
   // 1.01 · Výroková formula
   {
     id: "1-u01-h001", year: 1, unit: 'Výroková formula', unitOrder: 1,

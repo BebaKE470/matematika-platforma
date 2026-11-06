@@ -1,0 +1,93 @@
+/* styles/calc.css
+   Kalkulačka so zamknutým režimom (core/calc.js) – žiacka obrazovka
+   a učiteľský prehľad opustení. Breakpoint 520px = telefón. */
+
+.calc-card { max-width: 440px; margin-left: auto; margin-right: auto; }
+
+/* --- Pruh zámku --- */
+.calc-lock {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px;
+  padding: 9px 12px; margin: 8px 0 12px; border-radius: 12px;
+  font-size: .82rem; line-height: 1.3;
+}
+.calc-lock b { white-space: nowrap; }
+.calc-lock.on { background: var(--good); color: var(--ink); }
+.calc-lock.warn { background: var(--warn); color: var(--warn-ink); }
+.calc-lock.ended, .calc-lock.solo { background: var(--soft); color: var(--muted); }
+
+/* --- Displej --- */
+.calc-screen {
+  background: var(--ink); color: #fff; border-radius: 16px;
+  padding: 10px 14px 12px; margin-bottom: 12px; min-height: 120px;
+}
+.calc-hist-list { display: flex; flex-direction: column; gap: 2px; max-height: 64px; overflow: hidden; }
+.calc-hist {
+  display: flex; justify-content: space-between; gap: 10px; width: 100%;
+  background: transparent; border: 0; color: rgba(255,255,255,.62); font: inherit; font-size: .78rem;
+  padding: 1px 0; cursor: pointer; text-align: left;
+}
+.calc-hist span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.calc-hist b { font-weight: 650; white-space: nowrap; }
+.calc-mode-row { text-align: right; min-height: 18px; }
+.calc-modechip { font-size: .68rem; letter-spacing: .08em; color: rgba(255,255,255,.55); font-weight: 700; }
+.calc-expr {
+  font-size: 1.7rem; font-weight: 650; text-align: right; white-space: nowrap;
+  overflow-x: auto; scrollbar-width: none; min-height: 2.2rem; outline: none;
+  font-variant-numeric: tabular-nums;
+}
+.calc-expr::-webkit-scrollbar { display: none; }
+.calc-result {
+  font-size: 1.35rem; font-weight: 800; text-align: right; min-height: 1.8rem;
+  word-break: break-all; font-variant-numeric: tabular-nums;
+}
+.calc-result.prev { color: rgba(255,255,255,.55); font-weight: 600; }
+.calc-result.err { color: #ffb4a6; font-size: .95rem; font-weight: 650; }
+
+/* --- Klávesy --- */
+.calc-keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.calc-key {
+  appearance: none; border: 1px solid var(--line); border-radius: 14px;
+  background: var(--paper); color: var(--ink); font: inherit; font-size: 1.25rem; font-weight: 650;
+  min-height: 54px; padding: 0; cursor: pointer; touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent; user-select: none;
+}
+.calc-key:active { transform: scale(.96); background: var(--soft); }
+.calc-key.num { background: #fbfcfa; }
+.calc-key.fn { background: var(--soft); font-size: 1.02rem; }
+.calc-key.mode { font-size: .9rem; letter-spacing: .04em; }
+.calc-key.op { background: #d9ebe2; font-size: 1.4rem; }
+.calc-key.clr { background: var(--bad); }
+.calc-key.eq { background: var(--ink); color: #fff; border-color: var(--ink); font-size: 1.5rem; }
+.calc-tools { margin-top: 12px; }
+
+/* --- Hlásenie po návrate do aplikácie --- */
+.calc-return {
+  position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center;
+  padding: 16px; background: rgba(120, 25, 15, .82);
+}
+.calc-return-box {
+  background: var(--paper); border-radius: 20px; padding: 22px 20px; max-width: 360px; width: 100%; text-align: center;
+  box-shadow: var(--shadow);
+}
+.calc-return-box h2 { margin: 4px 0 8px; }
+.calc-return-icon { font-size: 2.6rem; line-height: 1; }
+
+/* --- Učiteľský prehľad --- */
+.calc-students { display: grid; gap: 8px; margin-top: 10px; }
+.calc-student {
+  display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 10px; align-items: center;
+  padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); font-size: .92rem;
+}
+.calc-student.head { background: transparent; border: 0; padding-bottom: 0; font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.calc-student.is-away { background: var(--bad); border-color: #e3a89a; }
+.calc-student.has-leaves { background: var(--warn); border-color: #ead9a1; }
+.calc-student.is-ended { opacity: .75; }
+.calc-student .state { font-weight: 700; }
+.calc-student.is-away .state { color: #a2321f; }
+
+@media (max-width: 520px) {
+  .calc-expr { font-size: 1.5rem; }
+  .calc-key { min-height: 50px; font-size: 1.15rem; }
+  .calc-student { grid-template-columns: 1fr 1fr; }
+  .calc-student.head { display: none; }
+}

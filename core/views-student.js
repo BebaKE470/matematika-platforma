@@ -66,6 +66,10 @@
         }).join('')}</div>
       </section>
       <section class="join-strip">
+        <div><div class="eyebrow">POMÔCKA</div><h2>Kalkulačka</h2><p>Bežná aj vedecká kalkulačka. Pri písomke ju učiteľ spustí v zamknutom režime.</p></div>
+        <button class="ghost" data-go="module/pomocky-kalkulacka">Otvoriť kalkulačku</button>
+      </section>
+      <section class="join-strip">
         <div><div class="eyebrow">SPOLOČNÁ HODINA</div><h2>Máš kód od učiteľa?</h2><p>Zadaj kód hodiny a pripoj sa k spoločnej aktivite.</p></div>
         <button class="btn" data-go="join">Pripojiť sa k hodine</button>
       </section>
@@ -122,6 +126,29 @@
             <button class="btn" data-go="catalog/unit/${m.year}/${MathPlatform.unitKey(m.unit)}">Späť k témam</button>
           </div>
         `;
+        return;
+      }
+
+      if (m.kind === 'calc') {
+        // Kalkulačka: samostatne (bez zámku) alebo v zamknutom režime kódom od učiteľa.
+        app.innerHTML = `
+          ${MathUI.backRow(`catalog/unit/${m.year}/${MathPlatform.unitKey(m.unit)}`, m.unit)}
+          <div class="card">
+            <div class="eyebrow">${esc(m.unit)} · KALKULAČKA</div>
+            <h1>${esc(mod.student.title)}</h1>
+            <p>${esc(mod.student.intro)}</p>
+            <div class="notice"><strong>Samostatný režim:</strong> bez zámku, nič sa neposiela učiteľovi.</div>
+            <div class="actions">
+              <button class="btn" id="startCalcSolo">Otvoriť kalkulačku</button>
+              <button class="ghost" data-go="join/${id}">Mám kód od učiteľa (zamknutý režim)</button>
+            </div>
+          </div>
+        `;
+        $('#startCalcSolo').onclick = async () => {
+          await MathSession.start(id, { mode: 'solo' });
+          window.MathCalc.begin({ solo: true, moduleId: id });
+          go('play');
+        };
         return;
       }
 
@@ -210,9 +237,18 @@
       // ručne zadanom kóde to zistíme až z prvej správy učiteľky.
       let examMode = !!(knownId && meta0.kind === 'exam');
       let exam = null;
+      // Zamknutá kalkulačka (registry `kind: 'calc'`, core/calc.js): žiadne zadania ani
+      // známkovanie, iba ukončenie zámku. Pri ručne zadanom kóde to zistíme z `lesson.calc`.
+      let calcMode = !!(knownId && meta0.kind === 'calc');
       try {
         const handle = await MathLive.connectAsStudent(code, {
           onTeacher: msg => {
+            if (msg.action === 'grading' && msg.lesson && msg.lesson.calc) calcMode = true;
+            if (calcMode) {
+              if (msg.action === 'grading') { if (msg.lesson) resolveLesson(msg.lesson); }
+              else window.MathCalc.onTeacher(msg);
+              return;
+            }
             if (msg.action === 'grading' && msg.lesson && msg.lesson.exam) examMode = true;
             if (examMode) {
               if (msg.action === 'grading') { if (msg.lesson) resolveLesson(msg.lesson); }
@@ -258,6 +294,7 @@
             reflectionOnly = !!lesson.reflectOnly;
             selectedActivityIndices = lesson.selectedActivityIndices || null;
             if (lesson.exam) { examMode = true; exam = lesson.exam; }
+            if (lesson.calc) calcMode = true;
           } else if (!moduleId) {
             handle.close();
             $('#joinInfo').innerHTML = '<strong>Nepodarilo sa zistiť hodinu.</strong> Skontroluj kód, alebo požiadaj učiteľa/učiteľku o QR kód/odkaz.';
@@ -289,6 +326,7 @@
         }
         await MathSession.start(moduleId, { mode: 'live', nick, session: code, reflectionOnly, selectedActivityIndices });
         if (examMode) window.MathExam.begin({ exam, nick, code, moduleId, live: handle });
+        else if (calcMode) window.MathCalc.begin({ nick, code, moduleId, live: handle });
         MathSession.attachLive(handle);
         go('play');
         await joined;
