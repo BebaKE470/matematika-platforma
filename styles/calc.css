@@ -22,7 +22,7 @@
   background: var(--ink); color: #fff; border-radius: 16px;
   padding: 10px 14px 12px; margin-bottom: 12px; min-height: 120px;
 }
-.calc-hist-list { display: flex; flex-direction: column; gap: 2px; max-height: 64px; overflow: hidden; }
+.calc-hist-list { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
 .calc-hist {
   display: flex; justify-content: space-between; gap: 10px; width: 100%;
   background: transparent; border: 0; color: rgba(255,255,255,.62); font: inherit; font-size: .78rem;

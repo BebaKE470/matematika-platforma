@@ -627,7 +627,8 @@
     if (mode) mode.textContent = C.deg ? 'DEG' : 'RAD';
     $$('#calcKeys [data-k="DEG"]').forEach(b => { b.textContent = C.deg ? 'DEG' : 'RAD'; });
     if (hist) {
-      hist.innerHTML = C.history.slice(0, 6).map((h, i) => `<button type="button" class="calc-hist" data-h="${i}"><span>${esc(h.expr)}</span><b>= ${esc(formatNumber(h.value))}</b></button>`).join('');
+      // Zobrazuje sa iba aktuálna hodnota Ans (klepnutím sa vloží do výrazu), nie celá história.
+      hist.innerHTML = C.history.length ? `<button type="button" class="calc-hist" data-h="0"><span>Ans</span><b>= ${esc(formatNumber(C.ans))}</b></button>` : '';
     }
   }
 
@@ -649,7 +650,7 @@
         <button type="button" class="ghost" id="calcSci" aria-expanded="false"></button>
         ${C.solo ? '<button type="button" class="ghost" data-go="catalog">Zavrieť kalkulačku</button>' : ''}
       </div>
-      <p class="muted small-note">Desatinná čiarka „,“ · % = delenie 100 · Ans = predošlý výsledok · sin/cos/tan počítajú v ${C.deg ? 'stupňoch (DEG)' : 'radiánoch (RAD)'} podľa tlačidla DEG/RAD. Tlačidlo a/b zobrazí výsledok ako zlomok.</p>
+      <p class="muted small-note">Desatinná čiarka „,“ · % = delenie 100 · Ans (z anglického answer) = predošlý výsledok; po „=“ stačí stlačiť napr. „÷“ a pokračuje sa s ním · sin/cos/tan počítajú v ${C.deg ? 'stupňoch (DEG)' : 'radiánoch (RAD)'} podľa tlačidla DEG/RAD. Tlačidlo a/b zobrazí výsledok ako zlomok.</p>
     </article>`;
     renderLockBar();
     renderKeys();
