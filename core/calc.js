@@ -285,9 +285,7 @@
   // Spoločné pre návrat do aplikácie aj pre pokus o odchod cez navigáciu v aplikácii.
   function registerLeave() {
     C.leaves++;
-    C.returnNotice = true;
     touch(true);
-    if (C.mounted) renderLockBar();
   }
 
   function onVisibility() {
@@ -299,15 +297,9 @@
       touch(true); // pokus o okamžité odoslanie ešte skôr, než prehliadač stránku uspí
     } else {
       if (C.hiddenAt) { C.awayMs += Date.now() - C.hiddenAt; C.hiddenAt = 0; }
-      C.returnNotice = true;
       touch(true);
       requestWake();
-      if (C.mounted) { renderLockBar(); showReturnNotice(); }
     }
-  }
-
-  function onBeforeUnload(e) {
-    if (lockedNow()) { e.preventDefault(); e.returnValue = ''; }
   }
 
   // Obrazovka sa nesmie sama zhasnúť, inak by to vyzeralo ako opustenie aplikácie.
@@ -329,14 +321,13 @@
       leaves: saved ? (saved.leaves || 0) : 0,
       awayMs: saved ? (saved.awayMs || 0) : 0,
       ended: saved ? !!saved.ended : false,
-      selfEnded: false, hiddenAt: 0, returnNotice: false, sendOk: null, sendTimer: null, wake: null,
+      selfEnded: false, hiddenAt: 0, sendOk: null, sendTimer: null, wake: null,
       // vrátenie sa do rozpracovaného zámku po obnovení stránky sa počíta ako opustenie
       mounted: false, app: null,
       expr: '', result: null, resultErr: '', fresh: false, ans: NaN, deg: true, sci: false, history: [],
     };
     if (saved && !saved.ended) C.leaves++;
     document.addEventListener('visibilitychange', onVisibility);
-    window.addEventListener('beforeunload', onBeforeUnload);
     document.addEventListener('keydown', onKey);
     if (!solo) { saveLocal(); sendNow(); requestWake(); }
   }
@@ -345,7 +336,6 @@
     if (!C) return;
     clearTimeout(C.sendTimer);
     document.removeEventListener('visibilitychange', onVisibility);
-    window.removeEventListener('beforeunload', onBeforeUnload);
     document.removeEventListener('keydown', onKey);
     try { if (C.wake) C.wake.release(); } catch (_) { /* nič */ }
     C = null;
@@ -364,7 +354,7 @@
     clearTimeout(C.sendTimer);
     saveLocal();
     sendNow();
-    if (C.mounted) { renderLockBar(); removeReturnNotice(); }
+    if (C.mounted) { renderLockBar(); }
   }
 
   function onTeacher(msg) {
@@ -518,42 +508,15 @@
     return `<div class="module-topic-bar"><span>Kalkulačka</span><strong>${C.solo ? 'Samostatný režim' : esc(C.nick)}</strong></div>`;
   }
 
+  // Žiak sa o zámku nedozvie: počas behu nič, po ukončení učiteľom neutrálna správa.
   function lockBarHtml() {
-    if (C.solo) return '<div class="calc-lock solo"><span>Samostatný režim — bez zámku, nič sa neposiela učiteľovi.</span></div>';
-    if (C.ended) {
-      return `<div class="calc-lock ended"><span>🔓 Zámok je ukončený${C.selfEnded ? ' (odpojil/a si sa sám/sama)' : ''}. Mobil môžeš odložiť.</span><b>Opustenia: ${C.leaves}</b></div>`;
-    }
-    return `<div class="calc-lock ${C.leaves ? 'warn' : 'on'}"><span>🔒 Zamknutý režim — opustenie aplikácie sa počíta a vidí ho učiteľ.</span><b>Opustenia: ${C.leaves}${C.awayMs ? ' · mimo ' + formatDuration(C.awayMs) : ''}</b></div>`;
+    if (C.ended) return '<div class="calc-lock ended"><span>Kalkulačka je ukončená. Mobil môžeš odložiť.</span></div>';
+    return '';
   }
 
   function renderLockBar() {
     const el = $('#calcLock');
     if (el) el.innerHTML = lockBarHtml();
-    const out = $('#calcLeave');
-    if (out) out.hidden = C.solo || C.ended;
-  }
-
-  function showReturnNotice() {
-    if (!C || !C.returnNotice || C.solo || C.ended) return;
-    removeReturnNotice();
-    const n = document.createElement('div');
-    n.className = 'calc-return';
-    n.id = 'calcReturn';
-    n.setAttribute('role', 'alertdialog');
-    n.innerHTML = `<div class="calc-return-box">
-      <div class="calc-return-icon">⚠</div>
-      <h2>Opustil/a si aplikáciu</h2>
-      <p>Počet opustení: <strong>${C.leaves}</strong> · čas mimo aplikácie: <strong>${formatDuration(C.awayMs)}</strong></p>
-      <p class="muted">Učiteľ to vidí. Počas zamknutého režimu zostávaj v kalkulačke.</p>
-      <button type="button" class="btn" id="calcReturnOk">Rozumiem, pokračovať</button>
-    </div>`;
-    document.body.appendChild(n);
-    $('#calcReturnOk').onclick = () => { C.returnNotice = false; removeReturnNotice(); };
-  }
-
-  function removeReturnNotice() {
-    const n = document.getElementById('calcReturn');
-    if (n) n.remove();
   }
 
   function renderKeys() {
@@ -615,7 +578,6 @@
       <div class="calc-keys" id="calcKeys"></div>
       <div class="row calc-tools">
         <button type="button" class="ghost" id="calcSci" aria-expanded="false"></button>
-        <button type="button" class="ghost" id="calcLeave" ${C.solo || C.ended ? 'hidden' : ''}>Odpojiť sa</button>
         ${C.solo ? '<button type="button" class="ghost" data-go="catalog">Zavrieť kalkulačku</button>' : ''}
       </div>
       <p class="muted small-note">Desatinná čiarka „,“ · % = delenie 100 · Ans = predošlý výsledok · sin/cos/tan počítajú v ${C.deg ? 'stupňoch (DEG)' : 'radiánoch (RAD)'} podľa tlačidla DEG/RAD. Tlačidlo a/b zobrazí výsledok ako zlomok.</p>
@@ -637,12 +599,8 @@
       renderDisplay();
     };
     $('#calcSci').onclick = () => press('SCI');
-    $('#calcLeave').onclick = () => {
-      if (window.confirm('Naozaj sa chceš odpojiť? Učiteľ uvidí, že si odišiel/odišla.')) finishLock(true);
-    };
     // Tlačidlá nesmú vziať focus (klávesnica a scroll sa nesmú hýbať).
     $('#calcKeys').addEventListener('pointerdown', ev => ev.preventDefault());
-    if (C.returnNotice) showReturnNotice();
   }
 
   window.MathCalc = {

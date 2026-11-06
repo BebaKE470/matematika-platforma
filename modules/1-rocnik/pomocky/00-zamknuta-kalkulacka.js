@@ -34,13 +34,12 @@ MathPlatform.registerModule({
     ],
     diagnostics: [
       'počet opustení aplikácie u každého žiaka',
-      'celkový čas strávený mimo aplikácie',
-      'či sa žiak odpojil sám (pred ukončením zámku)'
+      'celkový čas strávený mimo aplikácie'
     ],
     partialUse: [
       'Funguje aj pri papierovej písomke: žiaci píšu na papier a mobil majú položený na lavici otvorený v kalkulačke.',
-      'Žiaci si ju môžu otvoriť aj sami v katalógu (Pomôcky → Kalkulačka) — bez zámku a bez posielania čohokoľvek učiteľovi.',
-      'Webová stránka nevie telefón fyzicky zamknúť. Vie však spoľahlivo zaznamenať prepnutie do inej aplikácie, zamknutie obrazovky či prepnutie karty a zobraziť to učiteľovi. Aplikácia sa počas zámku snaží udržať obrazovku zapnutú, aby sa jej automatické zhasnutie nepočítalo ako opustenie.',
+      'Žiaci si ju môžu otvoriť aj sami v katalógu (Pomôcky → Kalkulačka) — vtedy sa nič nesleduje ani neposiela.',
+      'Webová stránka nevie telefón fyzicky zamknúť. Vie však spoľahlivo zaznamenať prepnutie do inej aplikácie, zamknutie obrazovky či prepnutie karty a zobraziť to učiteľovi. Aplikácia sa počas sledovania snaží udržať obrazovku zapnutú, aby sa jej automatické zhasnutie nepočítalo ako opustenie.',
       'Obnovenie alebo zatvorenie stránky sa tiež počíta ako opustenie. Po opätovnom pripojení pod rovnakým menom a kódom sa počet nevynuluje.',
       'Ak je telefón mimo aplikácie dlhšie, správa sa môže doručiť až po návrate — prehliadač stránku na pozadí uspí. Údaj o počte a čase mimo je však po návrate vždy presný.',
       'Výsledky sa neukladajú na server; po ukončení si stiahni CSV.'
@@ -51,7 +50,7 @@ MathPlatform.registerModule({
     title: 'Kalkulačka',
     subtitle: 'Všeobecná pomôcka · pre všetky ročníky',
     estimatedTime: 'podľa potreby',
-    intro: 'Bežná aj vedecká kalkulačka. Pri písomke alebo cvičení ju učiteľ spustí v zamknutom režime — vtedy sa počíta, koľkokrát opustíš aplikáciu.',
+    intro: 'Bežná aj vedecká kalkulačka.',
     activities: []
   }
 });

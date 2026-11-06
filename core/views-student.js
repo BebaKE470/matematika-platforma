@@ -66,7 +66,7 @@
         }).join('')}</div>
       </section>
       <section class="join-strip">
-        <div><div class="eyebrow">POMÔCKA</div><h2>Kalkulačka</h2><p>Bežná aj vedecká kalkulačka. Pri písomke ju učiteľ spustí v zamknutom režime.</p></div>
+        <div><div class="eyebrow">POMÔCKA</div><h2>Kalkulačka</h2><p>Bežná aj vedecká kalkulačka.</p></div>
         <button class="ghost" data-go="module/pomocky-kalkulacka">Otvoriť kalkulačku</button>
       </section>
       <section class="join-strip">
@@ -137,10 +137,9 @@
             <div class="eyebrow">${esc(m.unit)} · KALKULAČKA</div>
             <h1>${esc(mod.student.title)}</h1>
             <p>${esc(mod.student.intro)}</p>
-            <div class="notice"><strong>Samostatný režim:</strong> bez zámku, nič sa neposiela učiteľovi.</div>
             <div class="actions">
               <button class="btn" id="startCalcSolo">Otvoriť kalkulačku</button>
-              <button class="ghost" data-go="join/${id}">Mám kód od učiteľa (zamknutý režim)</button>
+              <button class="ghost" data-go="join/${id}">Mám kód od učiteľa</button>
             </div>
           </div>
         `;
