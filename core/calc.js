@@ -337,6 +337,7 @@
       if (C.hiddenAt) { C.awayMs += Date.now() - C.hiddenAt; C.hiddenAt = 0; }
       touch(true);
       requestWake();
+      if (C.mounted) renderLockBar();
     }
   }
 
@@ -560,10 +561,26 @@
     return `<div class="module-topic-bar"><span>Kalkulačka</span><strong>${C.solo ? 'Samostatný režim' : esc(C.nick)}</strong></div>`;
   }
 
-  // Žiak sa o zámku nedozvie: počas behu nič, po ukončení učiteľom neutrálna správa.
+  // Stavový panel pre žiaka (len pri práci s učiteľom): stav, počet opustení, čas mimo.
+  function awayText(ms) {
+    const s = Math.round((ms || 0) / 1000);
+    return s < 60 ? s + ' s' : Math.floor(s / 60) + ' min ' + (s % 60) + ' s';
+  }
+
   function lockBarHtml() {
-    if (C.ended) return '<div class="calc-lock ended"><span>Kalkulačka je ukončená. Mobil môžeš odložiť.</span></div>';
-    return '';
+    if (C.solo) return '';
+    const away = C.awayMs + (C.hiddenAt ? Date.now() - C.hiddenAt : 0);
+    return `<section class="calc-panel" aria-label="Stav kalkulačky">
+      <div class="calc-panel-head">
+        <strong>🧮 Školská kalkulačka</strong>
+        <span class="calc-badge${C.ended ? ' off' : ''}">${C.ended ? 'Ukončená' : '✓ Aktívna'}</span>
+      </div>
+      <div class="calc-panel-stats">
+        <div><span>Počet opustení</span><b>${C.leaves}</b></div>
+        <div><span>Čas mimo kalkulačky</span><b>${awayText(away)}</b></div>
+      </div>
+      <p class="muted small-note">${C.ended ? 'Kalkulačka je ukončená. Mobil môžeš odložiť.' : 'Opustenia stránky sa zaznamenávajú a sú viditeľné učiteľovi.'}</p>
+    </section>`;
   }
 
   function renderLockBar() {
