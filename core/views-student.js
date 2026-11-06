@@ -342,6 +342,13 @@
   async function resumeCalc() {
     const p = window.MathCalc.pending();
     if (!p) return false;
+    // Odkaz/QR na pripojenie s iným kódom má prednosť: starý (zabudnutý) zámok sa zahodí
+    // a žiak sa normálne pripojí k novej hodine.
+    const parts = (location.hash.slice(1) || '').split('/');
+    if (parts[0] === 'join' && parts[2] && decodeURIComponent(parts[2]).toUpperCase() !== String(p.code).toUpperCase()) {
+      window.MathCalc.discardPending();
+      return false;
+    }
     const onTeacher = msg => { window.MathCalc.onTeacher(msg); };
     await MathSession.start(p.moduleId, { mode: 'live', nick: p.nick, session: p.code });
     window.MathCalc.begin({ nick: p.nick, code: p.code, moduleId: p.moduleId, live: null });

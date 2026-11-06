@@ -278,6 +278,19 @@
     } catch (_) { return null; }
   }
 
+  // Zahodí rozpracované sledovanie (žiak sa pripája na inú hodinu).
+  function discardPending() {
+    try {
+      const p = JSON.parse(localStorage.getItem(ACTIVE_KEY) || 'null');
+      localStorage.removeItem(ACTIVE_KEY);
+      if (p && p.code) {
+        const all = readStore();
+        const k = storeKey(p.code, p.nick);
+        if (all[k]) { all[k].ended = true; localStorage.setItem(STORE_KEY, JSON.stringify(all)); }
+      }
+    } catch (_) { /* nič */ }
+  }
+
   // Dodatočné pripojenie živého kanála (obnova po refreshi, výpadok siete).
   function setLive(handle) {
     if (!C) return;
@@ -630,6 +643,6 @@
     // logika
     evaluate, formatNumber, toFraction, formatDuration, CalcError,
     // žiak
-    begin, play, end, active, locked, noteNavigationAttempt, onTeacher, pending, setLive,
+    begin, play, end, active, locked, noteNavigationAttempt, onTeacher, pending, discardPending, setLive,
   };
 })();
