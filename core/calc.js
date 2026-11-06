@@ -244,6 +244,7 @@
   const STORE_KEY = 'mathCalcStudentV1';
   const ACTIVE_KEY = 'mathCalcActiveV1';
   const ACTIVE_MAX_MS = 4 * 60 * 60 * 1000;
+  const REFRESH_GRACE_MS = 20 * 1000; // rýchle obnovenie stránky sa nepočíta ako opustenie
   const KEEP_MS = 2 * 24 * 60 * 60 * 1000;
   const SEND_DEBOUNCE_MS = 1000;
   const HISTORY_MAX = 20;
@@ -259,7 +260,7 @@
       const all = readStore();
       const now = Date.now();
       Object.keys(all).forEach(k => { if (!all[k] || now - (all[k].at || 0) > KEEP_MS) delete all[k]; });
-      all[storeKey(C.code, C.nick)] = { at: now, leaves: C.leaves, awayMs: C.awayMs, ended: C.ended };
+      all[storeKey(C.code, C.nick)] = { at: now, leaves: C.leaves, awayMs: C.awayMs, ended: C.ended, away: !!C.hiddenAt };
       localStorage.setItem(STORE_KEY, JSON.stringify(all));
       // Ukazovateľ „prebieha sledovanie“: po obnovení stránky z neho aplikácia žiaka sama vráti
       // do kalkulačky (pending() nižšie), inak by obnovením unikol sledovaniu.
@@ -327,15 +328,25 @@
   function onVisibility() {
     if (!lockedNow()) return;
     if (document.hidden) {
-      if (C.hiddenAt) return;
+      if (C.hiddenAt || C.unloading) return; // stránka sa práve zatvára/obnovuje – nie je to opustenie
       C.hiddenAt = Date.now();
       C.leaves++;
       touch(true); // pokus o okamžité odoslanie ešte skôr, než prehliadač stránku uspí
     } else {
+      C.unloading = false;
       if (C.hiddenAt) { C.awayMs += Date.now() - C.hiddenAt; C.hiddenAt = 0; }
       touch(true);
       requestWake();
     }
+  }
+
+  // Obnovenie/zatvorenie stránky: prehliadač pred ním často pošle aj „hidden“, ktoré by sa
+  // započítalo ako opustenie. Skutočnú neprítomnosť dopočíta begin() podľa času od posledného uloženia.
+  function onPageHide(e) {
+    if (!C || e.persisted) return;
+    C.unloading = true;
+    if (C.hiddenAt && Date.now() - C.hiddenAt < 1500) { C.leaves = Math.max(0, C.leaves - 1); C.hiddenAt = 0; }
+    saveLocal();
   }
 
   // Obrazovka sa nesmie sama zhasnúť, inak by to vyzeralo ako opustenie aplikácie.
@@ -362,9 +373,13 @@
       mounted: false, app: null,
       expr: '', result: null, resultErr: '', fresh: false, ans: NaN, deg: true, sci: false, history: [],
     };
-    if (saved && !saved.ended) C.leaves++;
+    if (saved && !saved.ended) {
+      const gap = Date.now() - (saved.at || 0);
+      if (gap > REFRESH_GRACE_MS) { if (!saved.away) C.leaves++; C.awayMs += gap; }
+    }
     document.addEventListener('visibilitychange', onVisibility);
     document.addEventListener('keydown', onKey);
+    window.addEventListener('pagehide', onPageHide);
     if (!solo) { saveLocal(); sendNow(); requestWake(); }
   }
 
@@ -373,6 +388,7 @@
     clearTimeout(C.sendTimer);
     document.removeEventListener('visibilitychange', onVisibility);
     document.removeEventListener('keydown', onKey);
+    window.removeEventListener('pagehide', onPageHide);
     try { if (C.wake) C.wake.release(); } catch (_) { /* nič */ }
     C = null;
   }
