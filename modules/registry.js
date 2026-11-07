@@ -1774,6 +1774,14 @@
     skills: ["goniometrické rovnice","substitúcia","postup riešenia","výber z intervalu"],
     file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/20-kontrolna-pisomna-praca.js"
   },
+  {
+    id: '3-u01-h020p', year: 3, unit: "Goniometrické funkcie, goniometrické, rovnice", unitOrder: 1,
+    topic: "Príprava na kontrolnú písomnú prácu", lesson: 'Hodina 20 – príprava', lessonOrder: 20,
+    time: '45 min', status: 'ready', kind: 'exam',
+    type: 'Príprava na písomku po krokoch v mobile → automatické body za postup → rozbor chýb učiteľkou',
+    skills: ["goniometrické rovnice","substitúcia","postup riešenia","výber z intervalu"],
+    file: "modules/3-rocnik/goniometricke-funkcie-a-rovnice/20p-priprava-na-pisomku.js"
+  },
 
   // 3.02 · Planimetria
   {

@@ -7,4 +7,5 @@ module.exports = {
   '2-u03-h023': require('./2-u03-h023.js'),
   '2-u03-h023p': require('./2-u03-h023p.js'),
   '3-u01-h020': require('./3-u01-h020.js'),
+  '3-u01-h020p': require('./3-u01-h020p.js'),
 };
