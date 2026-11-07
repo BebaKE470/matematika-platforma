@@ -152,12 +152,12 @@
     return qrLibPromise;
   }
 
-  async function drawJoinQr(targetId, url) {
+  async function drawJoinQr(targetId, url, size) {
     const QR = await ensureQrLib();
     const el = document.getElementById(targetId);
     if (!el) return;
     el.innerHTML = '';
-    new QR(el, { text: url, width: 220, height: 220, correctLevel: QR.CorrectLevel.M });
+    new QR(el, { text: url, width: size || 220, height: size || 220, correctLevel: QR.CorrectLevel.M });
   }
 
   // Whether to hide points/percent/grade in the teacher's own live view
@@ -980,7 +980,7 @@
     $('#examSaveWarn').hidden = saveOk;
     $('#examRunName').oninput = e => { sess.name = e.target.value.trim().slice(0, 80); persistSoon(); };
 
-    const openPrint = mode => window.open(`${location.origin}${location.pathname}#exam-print/${encodeURIComponent(id)}/${mode}${sess.taskIds ? '/' + sess.taskIds.join(',') : ''}`, '_blank');
+    const openPrint = mode => window.open(`${location.origin}${location.pathname}#exam-print/${encodeURIComponent(id)}/${mode}/${sess.taskIds ? sess.taskIds.join(',') : '-'}/${encodeURIComponent(code)}`, '_blank');
     $('#examPrintA').onclick = () => openPrint('A');
     if ($('#examPrintB')) $('#examPrintB').onclick = () => openPrint('B');
     $('#examPrintKey').onclick = () => openPrint('key');
@@ -1198,14 +1198,15 @@
 
   // Tlač zadania (skupina A / B / obe) alebo kľúča. Beží v nových kartách
   // otvorených z obrazovky písomky; potrebuje token učiteľky (kľúč je na serveri).
-  async function examPrint(id, mode, idsParam) {
+  async function examPrint(id, mode, idsParam, code) {
+    code = CODE_RE.test(String(code || '').toUpperCase()) ? String(code).toUpperCase() : '';
     const m = id && MathPlatform.indexEntry(id);
     if (!m || m.kind !== 'exam') { window.MathApp.go('teacher'); return; }
     let exam;
     try { exam = await MathExam.fetchExam(id); }
     catch (e) { app.innerHTML = `<div class="card"><h2>Písomku sa nepodarilo načítať</h2><p>${esc(e.message)}</p></div>`; return; }
 
-    if (idsParam) exam = MathExam.filterExam(exam, String(idsParam).split(',').filter(Boolean));
+    if (idsParam && idsParam !== '-') exam = MathExam.filterExam(exam, String(idsParam).split(',').filter(Boolean));
     const isBonus = t => (exam.bonusTasks || []).includes(t.id);
     const ptsOf = t => t.steps.reduce((n, s) => n + s.points, 0);
     const groupSheet = (g, i) => {
@@ -1216,14 +1217,18 @@
           <div class="print-eyebrow">${esc(m.unit)} · ${esc(m.lesson)} · skupina ${esc(g)}</div>
           <h1>${esc(exam.title)}</h1>
           <div class="print-name-line"><span>Meno a priezvisko:</span><span class="print-blank-line"></span><span>Trieda:</span><span class="print-blank-line short"></span><span>Dátum:</span><span class="print-blank-line short"></span></div>
-          <p class="muted">Maximum ${max} b${tasks.some(isBonus) ? ' + bonus' : ''}${exam.minutes ? ` · ${exam.minutes} min` : ''}. Postup píš na papier, výsledky zapíš do riadkov pri každom kroku.</p>
+          <p class="muted">Maximum ${max} b${tasks.some(isBonus) ? ' + bonus' : ''}${exam.minutes ? ` · ${exam.minutes} min` : ''}. Postup píš do vyhradeného miesta pri úlohe.</p>
+          ${code ? `<div class="exam-print-join">
+            <div id="printQr_${esc(g)}" class="exam-print-qr"></div>
+            <div><strong>Výsledky zapíš online.</strong> Po vyriešení úloh naskenuj QR kód alebo zadaj kód písomky <span class="exam-print-code">${esc(code)}</span> a prepíš výsledky krokov do aplikácie.</div>
+          </div>` : ''}
         </div>
         ${tasks.map(t => `<div class="print-task exam-print-task">
           ${String(t.question).includes('\n')
             ? `<div class="print-q"><span class="print-task-num">${esc(t.title)}</span> (${MathExam.fmtPts(ptsOf(t))} b)</div><div class="exam-print-multiline">${esc(t.question)}</div>`
             : `<div class="print-q"><span class="print-task-num">${esc(t.title)}</span> (${MathExam.fmtPts(ptsOf(t))} b) ${esc(t.question)}</div>`}
           ${t.note ? `<p class="muted">${esc(t.note)}</p>` : ''}
-          ${t.steps.every(s => s.kind === 'choice') ? '' : `<div class="print-lines" style="height:calc(${t.steps.length > 3 ? 7 : 4} * var(--ln, 1.7em))" aria-hidden="true"></div>`}
+          ${t.steps.every(s => s.kind === 'choice') ? '' : `<div class="print-lines" style="height:calc(${Math.max(6, t.steps.length * 2)} * var(--ln, 1.7em))" aria-hidden="true"></div>`}
           ${(() => {
             const big = t.steps.find(s => s.kind === 'choice' && s.options.length > 4);
             return big ? `<div class="exam-print-options">${big.options.map((o, i) => `<div><strong>${i + 1}.</strong> ${esc(o)}</div>`).join('')}</div>` : '';
@@ -1232,7 +1237,7 @@
             const pts = `<em>(${MathExam.fmtPts(s.points)} b)</em>`;
             if (s.kind === 'choice' && s.options.length <= 4) return `<div class="print-answer-line"><span>${esc(s.label)} ${pts}:</span><span class="exam-print-opts">${s.options.map(o => `<span>${esc(o)}</span>`).join('')}</span></div>`;
             if (s.kind === 'choice') return `<div class="print-answer-line"><span>${esc(s.label)} ${pts}, číslo možnosti:</span><span class="print-blank-line short"></span></div>`;
-            return `<div class="print-answer-line"><span>${esc(s.label)} ${pts}:</span><span class="print-blank-line"></span></div>`;
+            return '';
           }).join('')}
         </div>`).join('')}
       </section>`;
@@ -1254,6 +1259,10 @@
       </div>
       <p class="print-hint no-print">Tip: v dialógu tlače zruš začiarknutie „Hlavičky a päty“, aby sa na stranu nepridávala adresa a dátum.</p>
       <article class="print-sheet">${body || '<p>Neznáma skupina.</p>'}</article>`;
+    if (code && mode !== 'key') {
+      const joinUrl = `${location.origin}${location.pathname}#join/${encodeURIComponent(id)}/${encodeURIComponent(code)}`;
+      groups.forEach(g => { drawJoinQr('printQr_' + g, joinUrl, 110).catch(() => {}); });
+    }
     $('#printBtn').onclick = () => window.print();
     $('#examPrintClose').onclick = () => { window.close(); window.MathApp.go(`teacher-exam/${id}`); };
   }
