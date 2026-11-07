@@ -693,6 +693,66 @@
     return (c.green + c.yellow + c.red) ? `<span title="Sebareflexia žiaka">🟢${c.green} 🟡${c.yellow} 🔴${c.red}</span>` : '';
   }
 
+
+  // Analýza celej triedy: úspešnosť v úlohách a krokoch a súhrn sebareflexie.
+  // Berie len odovzdané písomky so zvolenou skupinou; body za úlohu zohľadňujú ručné úpravy.
+  function examAnalysisHtml(exam, nicks, students, gradeOf) {
+    const groupKeys = Object.keys(exam.groups);
+    const rows = nicks.filter(n => students[n].stage === 'done').map(n => ({ n, g: gradeOf(n), grp: (students[n].exam || {}).group })).filter(r => r.g);
+    if (!rows.length) return '<p class="muted">Analýza sa zobrazí, keď niekto odovzdá písomku.</p>';
+    const cls = pct => pct >= 75 ? 'good' : pct >= 50 ? 'mid' : 'low';
+    const bar = (pct, text) => `<span class="an-bar ${cls(pct)}"><span class="an-fill" style="width:${Math.max(0, Math.min(100, pct))}%"></span></span><span class="an-pct">${pct} %${text ? ' · ' + text : ''}</span>`;
+    const tasks = exam.groups[groupKeys[0]].tasks;
+    const taskHtml = tasks.map((t, ti) => {
+      let got = 0, max = 0;
+      const stepAgg = t.steps.map(() => ({ ok: 0, n: 0, wrongs: 0 }));
+      rows.forEach(r => {
+        const gt = r.g.tasks.find(x => x.id === t.id);
+        if (!gt) return;
+        got += gt.points; max += gt.max;
+        gt.steps.forEach((st, i) => { if (!stepAgg[i]) return; stepAgg[i].n++; if (st.ok) stepAgg[i].ok++; });
+      });
+      const pct = max ? Math.round(100 * got / max) : 0;
+      const stepsHtml = t.steps.map((s, i) => {
+        const labels = groupKeys.map(g => ({ g, l: ((exam.groups[g].tasks.find(x => x.id === t.id) || {}).steps || [])[i] })).filter(x => x.l);
+        const same = labels.every(x => x.l.label === labels[0].l.label);
+        const label = same ? labels[0].l.label : labels.map(x => x.g + ': ' + x.l.label).join(' · ');
+        const a = stepAgg[i];
+        const sp = a.n ? Math.round(100 * a.ok / a.n) : 0;
+        return `<div class="an-step"><span class="an-step-label">${esc(label)}</span>${bar(sp, a.ok + ' z ' + a.n)}</div>`;
+      }).join('');
+      const bonus = (exam.bonusTasks || []).includes(t.id);
+      return `<details class="an-task"><summary><strong>${esc(t.title)}${bonus ? ' (bonus)' : ''}</strong> ${bar(pct, MathExam.fmtPts(got) + ' z ' + MathExam.fmtPts(max) + ' b')}</summary><div class="an-steps">${stepsHtml}</div></details>`;
+    }).join('');
+
+    // Najslabšie a najsilnejšie úlohy (bez bonusu).
+    const scored = tasks.filter(t => !(exam.bonusTasks || []).includes(t.id)).map(t => {
+      let got = 0, max = 0;
+      rows.forEach(r => { const gt = r.g.tasks.find(x => x.id === t.id); if (gt) { got += gt.points; max += gt.max; } });
+      return { t, pct: max ? Math.round(100 * got / max) : 0 };
+    });
+    const sorted = scored.slice().sort((a, b) => a.pct - b.pct);
+    const hard = sorted.slice(0, 2).filter(x => x.pct < 75).map(x => `${esc(x.t.title)} (${x.pct} %)`);
+    const easy = sorted.slice().reverse().slice(0, 2).filter(x => x.pct >= 75).map(x => `${esc(x.t.title)} (${x.pct} %)`);
+    const summary = `<p class="an-summary">Do analýzy vstúpilo <strong>${rows.length}</strong> odovzdaných písomiek.${hard.length ? ` <strong>Najviac problémov:</strong> ${hard.join(', ')}.` : ''}${easy.length ? ` <strong>Najlepšie zvládnuté:</strong> ${easy.join(', ')}.` : ''}</p>`;
+
+    // Sebareflexia
+    let selfHtml = '';
+    const r = exam.reflection;
+    if (r && Array.isArray(r.skills)) {
+      const lines = r.skills.map(sk => {
+        const c = { green: 0, yellow: 0, red: 0 };
+        nicks.forEach(n => { const v = ((students[n].exam || {}).self || {})[sk]; if (c[v] !== undefined) c[v]++; });
+        const tot = c.green + c.yellow + c.red;
+        if (!tot) return `<div class="an-step"><span class="an-step-label">${esc(sk)}</span><span class="muted">bez odpovedí</span></div>`;
+        const w = k => Math.round(100 * c[k] / tot);
+        return `<div class="an-step"><span class="an-step-label">${esc(sk)}</span><span class="an-stack" title="Sebareflexia"><span class="an-g" style="width:${w('green')}%"></span><span class="an-y" style="width:${w('yellow')}%"></span><span class="an-r" style="width:${w('red')}%"></span></span><span class="an-pct">🟢${c.green} 🟡${c.yellow} 🔴${c.red}</span></div>`;
+      }).join('');
+      selfHtml = `<h3>Sebareflexia triedy</h3><p class="muted small-note">Ako sa žiaci sami cítia v jednotlivých častiach. Porovnaj s úspešnosťou vyššie: kde je rozdiel, tam si žiaci buď neveria, alebo svoje chyby nevidia.</p>${lines}`;
+    }
+    return summary + '<h3>Úspešnosť v úlohách</h3><p class="muted small-note">Rozbaľ úlohu a uvidíš úspešnosť v jednotlivých krokoch postupu.</p>' + taskHtml + selfHtml;
+  }
+
   function gradeLine(graded, grading) {
     if (!graded) return '—';
     const g = grading.enabled ? MathScore.gradeForPercent(graded.percent, grading) : '';
@@ -901,6 +961,11 @@
         <p class="muted small-note">Priebeh písomky sa zálohuje v tomto prehliadači. Export CSV obsahuje body, odpovede žiakov po krokoch aj počet opustení aplikácie.</p>
       </div>
       <div class="card spaced">
+        <div class="eyebrow">ANALÝZA TRIEDY</div>
+        <h2>Ako sa darilo triede</h2>
+        <div id="analysis"></div>
+      </div>
+      <div class="card spaced">
         <h2>Opravovanie</h2>
         <div id="summary" class="muted">Zatiaľ bez výsledkov.</div>
         <p class="muted small-note">Rozbaľ žiaka a uvidíš každý krok s jeho odpoveďou a správnou odpoveďou. Pri úlohe môžeš body upraviť ručne (napr. uznať následnú chybu); prázdne políčko = automatické body.</p>
@@ -958,6 +1023,12 @@
       $('#summary').innerHTML = nicks.length
         ? `Pripojení: <strong>${nicks.length}</strong> · odovzdali: <strong>${done.length}</strong>${avg !== null ? ` · priemer odovzdaných: <strong>${avg} %</strong>` : ''}${gradeSummary}`
         : 'Zatiaľ bez výsledkov.';
+      const anEl = $('#analysis');
+      if (anEl) {
+        const openAn = new Set([...anEl.querySelectorAll('details.an-task')].map((d, i) => d.open ? i : -1).filter(i => i >= 0));
+        anEl.innerHTML = examAnalysisHtml(exam, nicks, students, gradeOf);
+        anEl.querySelectorAll('details.an-task').forEach((d, i) => { if (openAn.has(i)) d.open = true; });
+      }
       $('#students').innerHTML = graded.map(([nick, g]) => {
         const st = students[nick];
         const ex = st.exam || {};

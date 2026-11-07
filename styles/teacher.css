@@ -75,3 +75,21 @@
   .exam-student > summary { grid-template-columns: 1fr 1fr; }
 }
 .exam-self { margin: 0 0 10px; font-size: .92rem; }
+
+/* --- Analýza triedy po písomke --- */
+.an-summary { margin: 0 0 12px; }
+.an-task { border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; margin: 8px 0; background: var(--paper); }
+.an-task > summary { cursor: pointer; display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.an-steps { margin-top: 8px; }
+.an-step { display: grid; grid-template-columns: minmax(0, 1fr) 140px auto; gap: 8px 12px; align-items: center; padding: 4px 0; }
+.an-step-label { font-size: .92em; }
+.an-bar, .an-stack { display: inline-block; width: 140px; height: 10px; background: var(--soft); border-radius: 6px; overflow: hidden; vertical-align: middle; }
+.an-fill { display: block; height: 100%; }
+.an-bar.good .an-fill { background: #3b9b5d; }
+.an-bar.mid .an-fill { background: #d9a520; }
+.an-bar.low .an-fill { background: #d4574a; }
+.an-stack { display: inline-flex; }
+.an-stack span { display: block; height: 100%; }
+.an-g { background: #3b9b5d; } .an-y { background: #d9a520; } .an-r { background: #d4574a; }
+.an-pct { font-size: .88em; color: var(--muted); white-space: nowrap; }
+@media (max-width: 600px) { .an-step { grid-template-columns: 1fr; } }
