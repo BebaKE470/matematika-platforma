@@ -29,31 +29,31 @@ module.exports = {
   groups: {
     A: {
       tasks: [
-        { id: 'u1', title: 'Úloha 1', question: 'Vyrieš rovnicu |2x − 3| = 7.',
+        { id: 'u1', title: 'Úloha 1', question: 'Vyrieš rovnicu |2x − 3| = 7. Správnosť riešenia over skúškou.',
           steps: [
             { id: 's1', label: 'Riešenie rovnice 2x − 3 = 7', kind: 'number', points: 1 },
             { id: 's2', label: 'Riešenie rovnice 2x − 3 = −7', kind: 'number', points: 1 },
             { id: 's3', label: 'Množina riešení', kind: 'set', points: 1 },
           ] },
-        { id: 'u2', title: 'Úloha 2', question: 'Zapíš množinu riešení rovníc: a) |4x − 6| = 0, b) |x + 7| = −2.',
+        { id: 'u2', title: 'Úloha 2', question: 'Zapíš množinu riešení rovníc: a) |4x − 6| = 0, b) |x + 7| = −2. Správnosť riešenia over skúškou.',
           steps: [
             { id: 's1', label: 'a) množina riešení', kind: 'set', points: 1 },
             { id: 's2', label: 'b) množina riešení', kind: 'set', points: 1 },
           ] },
-        { id: 'u3', title: 'Úloha 3', question: 'Vyrieš rovnicu |3x − 2| = |x + 6|.',
+        { id: 'u3', title: 'Úloha 3', question: 'Vyrieš rovnicu |3x − 2| = |x + 6|. Správnosť riešenia over skúškou.',
           steps: [
             { id: 's1', label: 'Riešenie rovnice 3x − 2 = x + 6', kind: 'number', points: 1 },
             { id: 's2', label: 'Riešenie rovnice 3x − 2 = −(x + 6)', kind: 'number', points: 1 },
             { id: 's3', label: 'Množina riešení', kind: 'set', points: 1 },
           ] },
-        { id: 'u4', title: 'Úloha 4', question: 'Vyrieš rovnicu |x − 5| = 2x − 4.',
+        { id: 'u4', title: 'Úloha 4', question: 'Vyrieš rovnicu |x − 5| = 2x − 4. Správnosť riešenia over skúškou.',
           steps: [
             { id: 's1', label: 'Podmienka: pravá strana musí byť nezáporná, teda x ≥ ?', kind: 'number', points: 1 },
             { id: 's2', label: 'Riešenie rovnice x − 5 = 2x − 4', kind: 'number', points: 1 },
             { id: 's3', label: 'Riešenie rovnice x − 5 = −(2x − 4)', kind: 'number', points: 1 },
             { id: 's4', label: 'Množina riešení (po kontrole podmienky)', kind: 'set', points: 2 },
           ] },
-        { id: 'u5', title: 'Úloha 5', question: 'Vyrieš rovnicu |x − 2| + |x + 1| = 7.', onlineNote: NOTE_CANDIDATES,
+        { id: 'u5', title: 'Úloha 5', question: 'Vyrieš rovnicu |x − 2| + |x + 1| = 7. Správnosť riešenia over skúškou.', onlineNote: NOTE_CANDIDATES,
           steps: [
             { id: 's1', label: 'Kritické body', kind: 'set', points: 1 },
             { id: 's2', label: 'Výsledok čiastkovej rovnice na ľavom intervale', kind: 'number', allowNone: true, points: 1 },
@@ -61,7 +61,7 @@ module.exports = {
             { id: 's4', label: 'Výsledok čiastkovej rovnice na pravom intervale', kind: 'number', allowNone: true, points: 1 },
             { id: 's5', label: 'Množina riešení', kind: 'set', points: 2 },
           ] },
-        { id: 'u6', title: 'Úloha 6', question: 'Vyrieš rovnicu |2x + 4| + |x − 2| = 7.', onlineNote: NOTE_CANDIDATES,
+        { id: 'u6', title: 'Úloha 6', question: 'Vyrieš rovnicu |2x + 4| + |x − 2| = 7. Správnosť riešenia over skúškou.', onlineNote: NOTE_CANDIDATES,
           steps: [
             { id: 's1', label: 'Kritické body', kind: 'set', points: 1 },
             { id: 's2', label: 'Výsledok čiastkovej rovnice na ľavom intervale', kind: 'number', allowNone: true, points: 1 },
@@ -69,7 +69,7 @@ module.exports = {
             { id: 's4', label: 'Výsledok čiastkovej rovnice na pravom intervale', kind: 'number', allowNone: true, points: 1 },
             { id: 's5', label: 'Množina riešení', kind: 'set', points: 2 },
           ] },
-        { id: 'u7', title: 'Úloha 7 (bonus)', question: 'Vyrieš rovnicu |x + 1| + |x − 1| + |x − 3| = 9.', onlineNote: NOTE_CANDIDATES,
+        { id: 'u7', title: 'Úloha 7 (bonus)', question: 'Vyrieš rovnicu |x + 1| + |x − 1| + |x − 3| = 9. Správnosť riešenia over skúškou.', onlineNote: NOTE_CANDIDATES,
           steps: [
             { id: 's1', label: 'Kritické body', kind: 'set', points: 1 },
             { id: 's2', label: 'Výsledok čiastkovej rovnice na 1. intervale (zľava)', kind: 'number', allowNone: true, points: 1 },
@@ -83,31 +83,31 @@ module.exports = {
 
     B: {
       tasks: [
-        { id: 'u1', title: 'Úloha 1', question: 'Vyrieš rovnicu |2x + 5| = 9.',
+        { id: 'u1', title: 'Úloha 1', question: 'Vyrieš rovnicu |2x + 5| = 9. Správnosť riešenia over skúškou.',
           steps: [
             { id: 's1', label: 'Riešenie rovnice 2x + 5 = 9', kind: 'number', points: 1 },
             { id: 's2', label: 'Riešenie rovnice 2x + 5 = −9', kind: 'number', points: 1 },
             { id: 's3', label: 'Množina riešení', kind: 'set', points: 1 },
           ] },
-        { id: 'u2', title: 'Úloha 2', question: 'Zapíš množinu riešení rovníc: a) |6x + 4| = 0, b) |5 − x| = −3.',
+        { id: 'u2', title: 'Úloha 2', question: 'Zapíš množinu riešení rovníc: a) |6x + 4| = 0, b) |5 − x| = −3. Správnosť riešenia over skúškou.',
           steps: [
             { id: 's1', label: 'a) množina riešení', kind: 'set', points: 1 },
             { id: 's2', label: 'b) množina riešení', kind: 'set', points: 1 },
           ] },
-        { id: 'u3', title: 'Úloha 3', question: 'Vyrieš rovnicu |2x + 3| = |x − 3|.',
+        { id: 'u3', title: 'Úloha 3', question: 'Vyrieš rovnicu |2x + 3| = |x − 3|. Správnosť riešenia over skúškou.',
           steps: [
             { id: 's1', label: 'Riešenie rovnice 2x + 3 = x − 3', kind: 'number', points: 1 },
             { id: 's2', label: 'Riešenie rovnice 2x + 3 = −(x − 3)', kind: 'number', points: 1 },
             { id: 's3', label: 'Množina riešení', kind: 'set', points: 1 },
           ] },
-        { id: 'u4', title: 'Úloha 4', question: 'Vyrieš rovnicu |x + 3| = 3x − 1.',
+        { id: 'u4', title: 'Úloha 4', question: 'Vyrieš rovnicu |x + 3| = 3x − 1. Správnosť riešenia over skúškou.',
           steps: [
             { id: 's1', label: 'Podmienka: pravá strana musí byť nezáporná, teda x ≥ ?', kind: 'number', points: 1 },
             { id: 's2', label: 'Riešenie rovnice x + 3 = 3x − 1', kind: 'number', points: 1 },
             { id: 's3', label: 'Riešenie rovnice x + 3 = −(3x − 1)', kind: 'number', points: 1 },
             { id: 's4', label: 'Množina riešení (po kontrole podmienky)', kind: 'set', points: 2 },
           ] },
-        { id: 'u5', title: 'Úloha 5', question: 'Vyrieš rovnicu |x − 3| + |x + 2| = 9.', onlineNote: NOTE_CANDIDATES,
+        { id: 'u5', title: 'Úloha 5', question: 'Vyrieš rovnicu |x − 3| + |x + 2| = 9. Správnosť riešenia over skúškou.', onlineNote: NOTE_CANDIDATES,
           steps: [
             { id: 's1', label: 'Kritické body', kind: 'set', points: 1 },
             { id: 's2', label: 'Výsledok čiastkovej rovnice na ľavom intervale', kind: 'number', allowNone: true, points: 1 },
@@ -115,7 +115,7 @@ module.exports = {
             { id: 's4', label: 'Výsledok čiastkovej rovnice na pravom intervale', kind: 'number', allowNone: true, points: 1 },
             { id: 's5', label: 'Množina riešení', kind: 'set', points: 2 },
           ] },
-        { id: 'u6', title: 'Úloha 6', question: 'Vyrieš rovnicu |2x + 2| + |x − 3| = 7.', onlineNote: NOTE_CANDIDATES,
+        { id: 'u6', title: 'Úloha 6', question: 'Vyrieš rovnicu |2x + 2| + |x − 3| = 7. Správnosť riešenia over skúškou.', onlineNote: NOTE_CANDIDATES,
           steps: [
             { id: 's1', label: 'Kritické body', kind: 'set', points: 1 },
             { id: 's2', label: 'Výsledok čiastkovej rovnice na ľavom intervale', kind: 'number', allowNone: true, points: 1 },
@@ -123,7 +123,7 @@ module.exports = {
             { id: 's4', label: 'Výsledok čiastkovej rovnice na pravom intervale', kind: 'number', allowNone: true, points: 1 },
             { id: 's5', label: 'Množina riešení', kind: 'set', points: 2 },
           ] },
-        { id: 'u7', title: 'Úloha 7 (bonus)', question: 'Vyrieš rovnicu |x + 2| + |x| + |x − 2| = 9.', onlineNote: NOTE_CANDIDATES,
+        { id: 'u7', title: 'Úloha 7 (bonus)', question: 'Vyrieš rovnicu |x + 2| + |x| + |x − 2| = 9. Správnosť riešenia over skúškou.', onlineNote: NOTE_CANDIDATES,
           steps: [
             { id: 's1', label: 'Kritické body', kind: 'set', points: 1 },
             { id: 's2', label: 'Výsledok čiastkovej rovnice na 1. intervale (zľava)', kind: 'number', allowNone: true, points: 1 },
