@@ -411,8 +411,10 @@
       <h1>${esc(e.title)}</h1>
       ${e.minutes ? `<p class="muted">Odporúčaný čas: ${esc(e.minutes)} min · pripojený/á ako <strong>${esc(S.nick)}</strong></p>` : ''}
       <ul class="exam-instructions">${(e.instructions || []).map(t => `<li>${esc(t)}</li>`).join('')}</ul>
-      <div class="notice"><strong>Vyber si skupinu podľa pokynu učiteľky.</strong> Skupinu už nepôjde zmeniť.</div>
-      <div class="row exam-groups">${Object.keys(e.groups).map(g => `<button class="btn exam-group" data-group="${esc(g)}">Skupina ${esc(g)}</button>`).join('')}</div>
+      ${Object.keys(e.groups).length > 1
+        ? `<div class="notice"><strong>Vyber si skupinu podľa pokynu učiteľky.</strong> Skupinu už nepôjde zmeniť.</div>
+      <div class="row exam-groups">${Object.keys(e.groups).map(g => `<button class="btn exam-group" data-group="${esc(g)}">Skupina ${esc(g)}</button>`).join('')}</div>`
+        : `<div class="row exam-groups">${Object.keys(e.groups).map(g => `<button class="btn exam-group" data-group="${esc(g)}">Začať</button>`).join('')}</div>`}
     </article>`;
     $$('.exam-group').forEach(b => {
       b.onclick = () => { S.group = b.dataset.group; S.taskIdx = 0; S.screen = 'task'; touch(); sendNow(); render(); };

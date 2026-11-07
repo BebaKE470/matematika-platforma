@@ -751,8 +751,8 @@
         </div>
         <div class="row">
           <button class="btn" id="examNew">Spustiť novú písomku</button>
-          <button class="ghost" id="examPrintA">Tlač zadania A</button>
-          <button class="ghost" id="examPrintB">Tlač zadania B</button>
+          <button class="ghost" id="examPrintA">Tlač zadania ${Object.keys(exam.groups).length > 1 ? 'A' : ''}</button>
+          ${exam.groups.B ? '<button class="ghost" id="examPrintB">Tlač zadania B</button>' : ''}
           <button class="ghost" id="examPrintKey">Tlač kľúča</button>
           <button class="ghost" data-go="method/${m.id}">Metodická karta</button>
         </div>
@@ -792,7 +792,7 @@
       window.MathApp.go(`teacher-exam/${id}/${code}`);
     };
     $('#examPrintA').onclick = () => openPrint('A');
-    $('#examPrintB').onclick = () => openPrint('B');
+    if ($('#examPrintB')) $('#examPrintB').onclick = () => openPrint('B');
     $('#examPrintKey').onclick = () => openPrint('key');
     $$('.exam-del').forEach(b => {
       b.onclick = () => {
@@ -894,8 +894,8 @@
         <div class="row spaced">
           <button class="ghost" id="saveGrading">Uložiť nastavenie</button>
           <button class="btn" id="examCsv">Exportovať výsledky CSV</button>
-          <button class="ghost" id="examPrintA">Tlač zadania A</button>
-          <button class="ghost" id="examPrintB">Tlač zadania B</button>
+          <button class="ghost" id="examPrintA">Tlač zadania ${Object.keys(exam.groups).length > 1 ? 'A' : ''}</button>
+          ${exam.groups.B ? '<button class="ghost" id="examPrintB">Tlač zadania B</button>' : ''}
           <button class="ghost" id="examPrintKey">Tlač kľúča</button>
         </div>
         <p class="muted small-note">Priebeh písomky sa zálohuje v tomto prehliadači. Export CSV obsahuje body, odpovede žiakov po krokoch aj počet opustení aplikácie.</p>
@@ -917,7 +917,7 @@
 
     const openPrint = mode => window.open(`${location.origin}${location.pathname}#exam-print/${encodeURIComponent(id)}/${mode}${sess.taskIds ? '/' + sess.taskIds.join(',') : ''}`, '_blank');
     $('#examPrintA').onclick = () => openPrint('A');
-    $('#examPrintB').onclick = () => openPrint('B');
+    if ($('#examPrintB')) $('#examPrintB').onclick = () => openPrint('B');
     $('#examPrintKey').onclick = () => openPrint('key');
 
     const updateStatus = () => {
