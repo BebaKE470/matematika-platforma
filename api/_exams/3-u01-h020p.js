@@ -31,10 +31,10 @@ module.exports = {
     A: {
       tasks: [
         { id: 'u1', title: 'Úloha 1', question: 'Vyrieš v ℝ rovnicu sin x = −√3/2.',
-          note: 'Rovnicu rieš v množine ℝ. Všetky riešenia majú tvar „základné riešenie + p·kπ“, k ∈ ℤ. Zapíš základné riešenia (najmenšie nezáporné hodnoty z jednej periódy, iba číslo pred π) a periódu p.',
+          onlineNote: 'Rovnicu rieš v množine ℝ. Všetky riešenia majú tvar „základné riešenie + p·kπ“, k ∈ ℤ. Zapíš základné riešenia (najmenšie nezáporné hodnoty z jednej periódy, iba číslo pred π) a periódu p.',
           steps: [
-            { id: 's1', print: true, label: 'Základné riešenia x (najmenšie nezáporné hodnoty z jednej periódy, číslo pred π)', kind: 'set', suffix: 'π', points: 2 },
-            { id: 's2', print: true, label: 'Perióda p: všetky riešenia majú tvar „základné riešenie + p·kπ“, k ∈ ℤ', kind: 'number', suffix: 'π', points: 1 },
+            { id: 's1', label: 'Základné riešenia x (najmenšie nezáporné hodnoty z jednej periódy, číslo pred π)', kind: 'set', suffix: 'π', points: 2 },
+            { id: 's2', label: 'Perióda p: všetky riešenia majú tvar „základné riešenie + p·kπ“, k ∈ ℤ', kind: 'number', suffix: 'π', points: 1 },
           ] },
         { id: 'u2', title: 'Úloha 2', question: 'Zapíš všetky riešenia rovníc: a) sin x = 1, b) cos x = 1,5, c) cos x = 0.',
           steps: [

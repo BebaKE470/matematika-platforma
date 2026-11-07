@@ -53,7 +53,7 @@ module.exports = {
             { id: 's3', label: 'Riešenie rovnice x − 5 = −(2x − 4)', kind: 'number', points: 1 },
             { id: 's4', label: 'Množina riešení (po kontrole podmienky)', kind: 'set', points: 2 },
           ] },
-        { id: 'u5', title: 'Úloha 5', question: 'Vyrieš rovnicu |x − 2| + |x + 1| = 7.', note: NOTE_CANDIDATES,
+        { id: 'u5', title: 'Úloha 5', question: 'Vyrieš rovnicu |x − 2| + |x + 1| = 7.', onlineNote: NOTE_CANDIDATES,
           steps: [
             { id: 's1', label: 'Kritické body', kind: 'set', points: 1 },
             { id: 's2', label: 'Výsledok čiastkovej rovnice na ľavom intervale', kind: 'number', allowNone: true, points: 1 },
@@ -61,7 +61,7 @@ module.exports = {
             { id: 's4', label: 'Výsledok čiastkovej rovnice na pravom intervale', kind: 'number', allowNone: true, points: 1 },
             { id: 's5', label: 'Množina riešení', kind: 'set', points: 2 },
           ] },
-        { id: 'u6', title: 'Úloha 6', question: 'Vyrieš rovnicu |2x + 4| + |x − 2| = 7.', note: NOTE_CANDIDATES,
+        { id: 'u6', title: 'Úloha 6', question: 'Vyrieš rovnicu |2x + 4| + |x − 2| = 7.', onlineNote: NOTE_CANDIDATES,
           steps: [
             { id: 's1', label: 'Kritické body', kind: 'set', points: 1 },
             { id: 's2', label: 'Výsledok čiastkovej rovnice na ľavom intervale', kind: 'number', allowNone: true, points: 1 },
@@ -69,7 +69,7 @@ module.exports = {
             { id: 's4', label: 'Výsledok čiastkovej rovnice na pravom intervale', kind: 'number', allowNone: true, points: 1 },
             { id: 's5', label: 'Množina riešení', kind: 'set', points: 2 },
           ] },
-        { id: 'u7', title: 'Úloha 7 (bonus)', question: 'Vyrieš rovnicu |x + 1| + |x − 1| + |x − 3| = 9.', note: NOTE_CANDIDATES,
+        { id: 'u7', title: 'Úloha 7 (bonus)', question: 'Vyrieš rovnicu |x + 1| + |x − 1| + |x − 3| = 9.', onlineNote: NOTE_CANDIDATES,
           steps: [
             { id: 's1', label: 'Kritické body', kind: 'set', points: 1 },
             { id: 's2', label: 'Výsledok čiastkovej rovnice na 1. intervale (zľava)', kind: 'number', allowNone: true, points: 1 },
@@ -107,7 +107,7 @@ module.exports = {
             { id: 's3', label: 'Riešenie rovnice x + 3 = −(3x − 1)', kind: 'number', points: 1 },
             { id: 's4', label: 'Množina riešení (po kontrole podmienky)', kind: 'set', points: 2 },
           ] },
-        { id: 'u5', title: 'Úloha 5', question: 'Vyrieš rovnicu |x − 3| + |x + 2| = 9.', note: NOTE_CANDIDATES,
+        { id: 'u5', title: 'Úloha 5', question: 'Vyrieš rovnicu |x − 3| + |x + 2| = 9.', onlineNote: NOTE_CANDIDATES,
           steps: [
             { id: 's1', label: 'Kritické body', kind: 'set', points: 1 },
             { id: 's2', label: 'Výsledok čiastkovej rovnice na ľavom intervale', kind: 'number', allowNone: true, points: 1 },
@@ -115,7 +115,7 @@ module.exports = {
             { id: 's4', label: 'Výsledok čiastkovej rovnice na pravom intervale', kind: 'number', allowNone: true, points: 1 },
             { id: 's5', label: 'Množina riešení', kind: 'set', points: 2 },
           ] },
-        { id: 'u6', title: 'Úloha 6', question: 'Vyrieš rovnicu |2x + 2| + |x − 3| = 7.', note: NOTE_CANDIDATES,
+        { id: 'u6', title: 'Úloha 6', question: 'Vyrieš rovnicu |2x + 2| + |x − 3| = 7.', onlineNote: NOTE_CANDIDATES,
           steps: [
             { id: 's1', label: 'Kritické body', kind: 'set', points: 1 },
             { id: 's2', label: 'Výsledok čiastkovej rovnice na ľavom intervale', kind: 'number', allowNone: true, points: 1 },
@@ -123,7 +123,7 @@ module.exports = {
             { id: 's4', label: 'Výsledok čiastkovej rovnice na pravom intervale', kind: 'number', allowNone: true, points: 1 },
             { id: 's5', label: 'Množina riešení', kind: 'set', points: 2 },
           ] },
-        { id: 'u7', title: 'Úloha 7 (bonus)', question: 'Vyrieš rovnicu |x + 2| + |x| + |x − 2| = 9.', note: NOTE_CANDIDATES,
+        { id: 'u7', title: 'Úloha 7 (bonus)', question: 'Vyrieš rovnicu |x + 2| + |x| + |x − 2| = 9.', onlineNote: NOTE_CANDIDATES,
           steps: [
             { id: 's1', label: 'Kritické body', kind: 'set', points: 1 },
             { id: 's2', label: 'Výsledok čiastkovej rovnice na 1. intervale (zľava)', kind: 'number', allowNone: true, points: 1 },

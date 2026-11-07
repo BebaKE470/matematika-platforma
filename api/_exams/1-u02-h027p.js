@@ -65,7 +65,7 @@ module.exports = {
             { id: 's5', label: 'Tvrdenie: „Číslo 3 je podmnožinou množiny M.“', kind: 'choice', options: TRUTH, points: 1 },
           ] },
         { id: 'u3', title: 'Úloha 3: Zápis množín',
-          question: 'Je dané U = {1, 2, 3, …, 15}. Zapíš vymenovaním prvkov množiny a)–c). V časti d) potom určuj počet prvkov.', note: NOTE_SET,
+          question: 'Je dané U = {1, 2, 3, …, 15}. Zapíš vymenovaním prvkov množiny a)–c). V časti d) potom určuj počet prvkov.', onlineNote: NOTE_SET,
           steps: [
             { id: 's1', label: 'a) A = {x ∈ U; x je násobok čísla 3}', kind: 'set', points: 1 },
             { id: 's2', label: 'b) B = {x ∈ U; x je prvočíslo a x < 10}', kind: 'set', points: 1 },
@@ -82,7 +82,7 @@ module.exports = {
             { id: 's4', label: 'Kardinalita |K| množiny K = {1, 1, 2, 3, 3, 5}', kind: 'number', points: 1 },
           ] },
         { id: 'u5', title: 'Úloha 5: Operácie s množinami',
-          question: 'Je dané U = {1, 2, 3, …, 12}, A = {2, 4, 6, 8, 10, 12}, B = {3, 6, 9, 12}.', note: NOTE_SET,
+          question: 'Je dané U = {1, 2, 3, …, 12}, A = {2, 4, 6, 8, 10, 12}, B = {3, 6, 9, 12}.', onlineNote: NOTE_SET,
           steps: [
             { id: 's1', label: 'A ∪ B', kind: 'set', points: 1 },
             { id: 's2', label: 'A ∩ B', kind: 'set', points: 1 },
@@ -99,7 +99,7 @@ module.exports = {
             { id: 's4', label: 'Počet prvkov doplnku, |A′|', kind: 'number', points: 1 },
           ] },
         { id: 'u7', title: 'Úloha 7: Kombinované operácie',
-          question: 'Je dané U = {1, 2, 3, …, 10}, A = {1, 2, 3, 4, 5, 6}, B = {4, 5, 6, 7, 8}. Najprv vyhodnoť zátvorku, až potom celý výraz.', note: NOTE_SET,
+          question: 'Je dané U = {1, 2, 3, …, 10}, A = {1, 2, 3, 4, 5, 6}, B = {4, 5, 6, 7, 8}. Najprv vyhodnoť zátvorku, až potom celý výraz.', onlineNote: NOTE_SET,
           steps: [
             { id: 's1', label: '(A ∩ B)′', kind: 'set', points: 1 },
             { id: 's2', label: '(A ∪ B) − (A ∩ B)', kind: 'set', points: 2 },

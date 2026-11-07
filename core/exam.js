@@ -495,6 +495,7 @@
       <h1>${esc(task.title)} <small class="exam-pts">${fmtPts(taskMax)}&nbsp;b</small></h1>
       <p class="exam-question">${esc(task.question)}</p>
       ${task.note ? `<p class="muted small-note">${esc(task.note)}</p>` : ''}
+      ${task.onlineNote ? `<p class="muted small-note">${esc(task.onlineNote)}</p>` : ''}
       ${task.steps.every(s => s.kind === 'choice') ? '' : `<div class="exam-keypad" aria-label="Pomocné znaky"><span class="muted">Vložiť:</span>
         <button type="button" class="ghost exam-key" data-ch="-">−</button>
         <button type="button" class="ghost exam-key" data-ch="/">/</button>

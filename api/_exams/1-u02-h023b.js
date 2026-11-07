@@ -79,7 +79,7 @@ module.exports = {
             { id: 's5', label: 'Tvrdenie: „Množiny {1, 2, 3} a {3, 2, 1} sú rôzne množiny.“', kind: 'choice', options: TRUTH, points: 1 },
           ] },
         { id: 'u3', title: 'Úloha 3: Zápis množín',
-          question: 'Je dané U = {−4, −3, −2, −1, 0, 1, 2, 3, 4}. Zapíš vymenovaním prvkov množiny a)–c). V časti d) je U = {1, 2, 3, …, 12}.', note: NOTE_SET,
+          question: 'Je dané U = {−4, −3, −2, −1, 0, 1, 2, 3, 4}. Zapíš vymenovaním prvkov množiny a)–c). V časti d) je U = {1, 2, 3, …, 12}.', onlineNote: NOTE_SET,
           steps: [
             { id: 's1', label: 'a) A = {x ∈ U; −2 < x < 2}', kind: 'set', points: 1 },
             { id: 's2', label: 'b) B = {x ∈ U; x je párne číslo a x > 0}', kind: 'set', points: 1 },
@@ -96,7 +96,7 @@ module.exports = {
             { id: 's4', label: 'Kardinalita |K| množiny K = {1, 2, 2, 3, 3, 3}', kind: 'number', points: 1 },
           ] },
         { id: 'u5', title: 'Úloha 5: Operácie s množinami',
-          question: 'Je dané U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, A = {2, 3, 5, 7}, B = {1, 3, 5, 7, 9}.', note: NOTE_SET,
+          question: 'Je dané U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, A = {2, 3, 5, 7}, B = {1, 3, 5, 7, 9}.', onlineNote: NOTE_SET,
           steps: [
             { id: 's1', label: 'A ∪ B', kind: 'set', points: 1 },
             { id: 's2', label: 'A ∩ B', kind: 'set', points: 1 },
@@ -112,7 +112,7 @@ module.exports = {
             { id: 's3', label: 'Koľko žiakov navštevuje iba futbalový krúžok?', kind: 'number', points: 1 },
           ] },
         { id: 'u7', title: 'Úloha 7 (bonus)',
-          question: 'Je dané U = {1, 2, 3, 4, 5, 6}, A = {1, 2, 3}, B = {3, 4}. Vypočítaj osobitne obe strany a porovnaj ich.', note: NOTE_SET,
+          question: 'Je dané U = {1, 2, 3, 4, 5, 6}, A = {1, 2, 3}, B = {3, 4}. Vypočítaj osobitne obe strany a porovnaj ich.', onlineNote: NOTE_SET,
           steps: [
             { id: 's1', label: '(A ∪ B)′', kind: 'set', points: 1 },
             { id: 's2', label: 'A′ ∩ B′', kind: 'set', points: 1 },
@@ -144,7 +144,7 @@ module.exports = {
             { id: 's5', label: 'Tvrdenie: „Každá množina je podmnožinou samej seba.“', kind: 'choice', options: TRUTH, points: 1 },
           ] },
         { id: 'u3', title: 'Úloha 3: Zápis množín',
-          question: 'Je dané U = {−4, −3, −2, −1, 0, 1, 2, 3, 4}. Zapíš vymenovaním prvkov množiny a)–c). V časti d) je U = {1, 2, 3, …, 12}.', note: NOTE_SET,
+          question: 'Je dané U = {−4, −3, −2, −1, 0, 1, 2, 3, 4}. Zapíš vymenovaním prvkov množiny a)–c). V časti d) je U = {1, 2, 3, …, 12}.', onlineNote: NOTE_SET,
           steps: [
             { id: 's1', label: 'a) A = {x ∈ U; −3 < x < 1}', kind: 'set', points: 1 },
             { id: 's2', label: 'b) B = {x ∈ U; x je nepárne číslo a x > 0}', kind: 'set', points: 1 },
@@ -161,7 +161,7 @@ module.exports = {
             { id: 's4', label: 'Kardinalita |K| množiny K = {4, 4, 5, 5, 6, 6, 6, 7}', kind: 'number', points: 1 },
           ] },
         { id: 'u5', title: 'Úloha 5: Operácie s množinami',
-          question: 'Je dané U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, A = {1, 2, 4, 8}, B = {2, 4, 6, 8, 10}.', note: NOTE_SET,
+          question: 'Je dané U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, A = {1, 2, 4, 8}, B = {2, 4, 6, 8, 10}.', onlineNote: NOTE_SET,
           steps: [
             { id: 's1', label: 'A ∪ B', kind: 'set', points: 1 },
             { id: 's2', label: 'A ∩ B', kind: 'set', points: 1 },
@@ -177,7 +177,7 @@ module.exports = {
             { id: 's3', label: 'Koľko žiakov navštevuje iba šachový krúžok?', kind: 'number', points: 1 },
           ] },
         { id: 'u7', title: 'Úloha 7 (bonus)',
-          question: 'Je dané U = {1, 2, 3, 4, 5, 6}, A = {2, 4}, B = {4, 5, 6}. Vypočítaj osobitne obe strany a porovnaj ich.', note: NOTE_SET,
+          question: 'Je dané U = {1, 2, 3, 4, 5, 6}, A = {2, 4}, B = {4, 5, 6}. Vypočítaj osobitne obe strany a porovnaj ich.', onlineNote: NOTE_SET,
           steps: [
             { id: 's1', label: '(A ∪ B)′', kind: 'set', points: 1 },
             { id: 's2', label: 'A′ ∩ B′', kind: 'set', points: 1 },
