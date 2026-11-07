@@ -327,7 +327,8 @@
     const sameExam = saved && saved.exam && saved.exam.id === opts.exam.id;
     S = {
       exam: opts.exam, nick: opts.nick, code: opts.code, moduleId: opts.moduleId, live: opts.live,
-      group: sameExam ? saved.group : null,
+      // Skupinu zadanú v QR kóde z tlačeného zadania nastavíme hneď; uložená skupina z predošlého pripojenia má prednosť.
+      group: sameExam && saved.group ? saved.group : (opts.presetGroup && opts.exam.groups && opts.exam.groups[opts.presetGroup] ? opts.presetGroup : null),
       answers: sameExam ? (saved.answers || {}) : {},
       submitted: sameExam ? !!saved.submitted : false,
       leaves: sameExam ? (saved.leaves || 0) : 0,

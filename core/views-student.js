@@ -186,7 +186,7 @@
     } catch (e) { showError(e); }
   }
 
-  async function join(id, presetCode, presetReflect, presetActs) {
+  async function join(id, presetCode, presetReflect, presetActs, presetGroup) {
     const meta0 = id && MathPlatform.indexEntry(id);
     // A QR/join link always names its module, so it's shown up front. A
     // manually-typed code (no link) might not — the "Máš kód od učiteľa?"
@@ -324,7 +324,7 @@
           }
         }
         await MathSession.start(moduleId, { mode: 'live', nick, session: code, reflectionOnly, selectedActivityIndices });
-        if (examMode) window.MathExam.begin({ exam, nick, code, moduleId, live: handle });
+        if (examMode) window.MathExam.begin({ exam, nick, code, moduleId, live: handle, presetGroup: presetGroup ? decodeURIComponent(presetGroup) : null });
         else if (calcMode) window.MathCalc.begin({ nick, code, moduleId, live: handle });
         MathSession.attachLive(handle);
         go('play');

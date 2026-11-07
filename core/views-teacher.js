@@ -1369,8 +1369,12 @@
       <p class="print-hint no-print">Tip: v dialógu tlače zruš začiarknutie „Hlavičky a päty“, aby sa na stranu nepridávala adresa a dátum.</p>
       <article class="print-sheet${mode === 'key' ? '' : ' exam-print-sheet'}">${body || '<p>Neznáma skupina.</p>'}</article>`;
     if (code && mode !== 'key') {
-      const joinUrl = `${location.origin}${location.pathname}#join/${encodeURIComponent(id)}/${encodeURIComponent(code)}`;
-      groups.forEach(g => { drawJoinQr('printQr_' + g, joinUrl, 110).catch(() => {}); });
+      // Pri písomke s viac skupinami nesie QR kód aj skupinu z listu, takže žiak ju nevyberá.
+      const multi = Object.keys(exam.groups).length > 1;
+      groups.forEach(g => {
+        const joinUrl = `${location.origin}${location.pathname}#join/${encodeURIComponent(id)}/${encodeURIComponent(code)}${multi ? '/group/' + encodeURIComponent(g) : ''}`;
+        drawJoinQr('printQr_' + g, joinUrl, 110).catch(() => {});
+      });
     }
     if (mode !== 'key') {
       document.documentElement.classList.add('exam-print-mode');

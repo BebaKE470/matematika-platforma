@@ -29,7 +29,7 @@
     { name: 'module', test: p => p[0] === 'module', keepsSession: true, view: p => S.moduleStart(p[1]) },
     { name: 'print', test: p => p[0] === 'print', view: p => window.MathPrint.render(p[1]) },
     { name: 'play', test: p => p[0] === 'play', keepsSession: true, view: () => window.MathSession.play(app) },
-    { name: 'join', test: p => p[0] === 'join', keepsSession: true, view: p => S.join(p[1], p[2], p[3] === 'reflect', p[3] === 'acts' ? p[4] : null) },
+    { name: 'join', test: p => p[0] === 'join', keepsSession: true, view: p => S.join(p[1], p[2], p[3] === 'reflect', p[3] === 'acts' ? p[4] : null, p[3] === 'group' ? p[4] : null) },
     { name: 'method', test: p => p[0] === 'method', teacher: true, view: p => T.method(p[1]) },
     { name: 'teacher', test: p => p[0] === 'teacher', teacher: true, view: () => T.teacher() },
     { name: 'teacherYear', test: p => p[0] === 'teacher-year', teacher: true, view: p => T.teacherYear(p[1]) },
