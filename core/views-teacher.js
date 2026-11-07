@@ -1263,6 +1263,43 @@
     window.MathUtil.downloadCsv(`${window.MathUtil.dateStamp()}-pisomka-${safe}.csv`, rows);
   }
 
+  // Rozdelí zadanie skupiny na dve strany A4 (jeden list obojstranne) a voľné miesto pod úlohami
+  // rozdelí úmerne bodom. Meria skutočnú výšku vykreslených úloh pri šírke 186 mm a 14px písme
+  // (rovnaké ako pri tlači), preto sa prispôsobí aj výberu úloh. Vráti zoznam varovaní.
+  function fitExamPrint() {
+    const MM = 96 / 25.4, PAGE = 270 * MM, MIN_PER_PT = 3 * MM;
+    const warns = [];
+    document.querySelectorAll('.exam-print-group').forEach(sec => {
+      const title = sec.querySelector('.print-sheet-title');
+      const tasks = [...sec.querySelectorAll('.exam-print-task')];
+      const mb = el => parseFloat(getComputedStyle(el).marginBottom) || 0;
+      tasks.forEach(t => { t.style.breakBefore = ''; t.style.pageBreakBefore = ''; const sp = t.querySelector('.exam-print-space'); if (sp) sp.style.height = '0px'; });
+      const head = title.offsetHeight + mb(title);
+      const hs = tasks.map(t => t.offsetHeight + mb(t));
+      const pts = tasks.map(t => { const sp = t.querySelector('.exam-print-space'); return sp ? (Number(sp.dataset.pts) || 1) : 0; });
+      const sum = (arr, from, to) => arr.slice(from, to).reduce((n, x) => n + x, 0);
+      const n = tasks.length;
+      let best = null;
+      for (let j = n > 1 ? 1 : n; j <= (n > 1 ? n - 1 : n); j++) {
+        const free1 = PAGE - head - sum(hs, 0, j), free2 = PAGE - sum(hs, j, n);
+        if (free1 < 0 || (j < n && free2 < 0)) continue;
+        const w1 = sum(pts, 0, j), w2 = sum(pts, j, n);
+        const r1 = w1 ? free1 / w1 : Infinity, r2 = j < n && w2 ? free2 / w2 : Infinity;
+        const score = Math.min(r1, r2);
+        if (!best || score > best.score) best = { j, score, r1, r2 };
+      }
+      const name = sec.querySelector('.print-eyebrow') ? sec.querySelector('.print-eyebrow').textContent.split('·').pop().trim() : '';
+      if (!best) { warns.push(`Zadanie (${name}) sa nezmestí na jeden list A4 obojstranne ani bez voľného miesta. Odznač niektoré úlohy.`); return; }
+      if (best.j < n) tasks[best.j].style.cssText += ';break-before:page;page-break-before:always';
+      tasks.forEach((t, i) => {
+        const sp = t.querySelector('.exam-print-space');
+        if (sp) sp.style.height = Math.max(0, pts[i] * (i < best.j ? best.r1 : best.r2)) + 'px';
+      });
+      if (best.score < MIN_PER_PT) warns.push(`Zadanie (${name}) má málo voľného miesta na riešenie (menej než 3 mm na bod). Zváž odznačenie niektorých úloh.`);
+    });
+    return warns;
+  }
+
   // Tlač zadania (skupina A / B / obe) alebo kľúča. Beží v nových kartách
   // otvorených z obrazovky písomky; potrebuje token učiteľky (kľúč je na serveri).
   async function examPrint(id, mode, idsParam, code) {
@@ -1279,18 +1316,8 @@
     const groupSheet = (g, i) => {
       const tasks = exam.groups[g].tasks;
       const max = tasks.filter(t => !isBonus(t)).reduce((n, t) => n + ptsOf(t), 0);
-      // Voľný priestor na riešenie úmerný náročnosti (bodom) úlohy. Rozloženie sa počíta tak,
-      // aby zadanie vyšlo na 1 alebo 2 strany A4 (použiteľná výška ~ 273 mm pri okraji 1,2 cm),
-      // a skupina vždy zaberie celé listy: ďalšia skupina začne na novom liste pri obojstrannej tlači.
-      const solvable = tasks.filter(t => !t.steps.every(s => s.kind === 'choice'));
-      const overhead = tasks.reduce((n, t) => n + 16 + 5 * (String(t.question).split('\n').length - 1) + t.steps.filter(s => s.kind === 'choice').length * 7 + (exam.printStepLabels ? t.steps.filter(s => s.kind !== 'choice').length * 7 : 0), 0);
-      const header = code ? 62 : 38;
-      const solvPts = solvable.reduce((n, t) => n + ptsOf(t), 0) || 1;
-      const PAGE = 268, SLACK = 22;
-      const pages = header + overhead + solvPts * 7 + SLACK <= PAGE ? 1 : 2;
-      const k = Math.max(6, Math.min(22, (pages * PAGE - header - overhead - SLACK) / solvPts));
-      const spaceMm = t => Math.max(20, Math.round(ptsOf(t) * k));
-      return `<section class="exam-print-group" style="min-height:${pages * PAGE - 4}mm${i ? '; break-before: page; page-break-before: always' : ''}">
+      // Voľný priestor pod úlohami sa dopočíta po vykreslení (fitExamPrint): zmeria sa skutočná výška zadaní a voľné miesto sa rozdelí podľa bodov tak, aby skupina vyšla presne na jeden list A4 (obe strany).
+      return `<section class="exam-print-group" style="${i ? 'break-before: page; page-break-before: always' : ''}">
         <div class="print-sheet-title">
           <div class="print-eyebrow">${esc(m.unit)} · ${esc(m.lesson)} · skupina ${esc(g)}</div>
           <h1>${esc(exam.title)}</h1>
@@ -1307,7 +1334,7 @@
             : `<div class="print-q"><span class="print-task-num">${esc(t.title)}</span> (${MathExam.fmtPts(ptsOf(t))} b) ${esc(t.question)}</div>`}
           ${t.note ? `<p class="muted">${esc(t.note)}</p>` : ''}
           ${exam.printStepLabels ? `<ol class="exam-print-steps">${t.steps.filter(s => s.kind !== 'choice').map(s => `<li>${esc(s.label)}</li>`).join('')}</ol>` : ''}
-          ${t.steps.every(s => s.kind === 'choice') ? '' : `<div class="exam-print-space" style="height:${spaceMm(t)}mm" aria-hidden="true"></div>`}
+          ${t.steps.every(s => s.kind === 'choice') ? '' : `<div class="exam-print-space" data-pts="${ptsOf(t)}" aria-hidden="true"></div>`}
           ${(() => {
             const big = t.steps.find(s => s.kind === 'choice' && s.options.length > 4);
             return big ? `<div class="exam-print-options">${big.options.map((o, i) => `<div><strong>${i + 1}.</strong> ${esc(o)}</div>`).join('')}</div>` : '';
@@ -1336,14 +1363,22 @@
         <span class="muted">${mode === 'key' ? 'Kľúč správnych odpovedí' : mode === 'AB' ? 'Zadanie, obe skupiny' : 'Zadanie, skupina ' + esc(mode)}</span>
         <button class="btn" id="printBtn">Vytlačiť / Uložiť ako PDF</button>
       </div>
+      <p class="notice bad no-print" id="printFitWarn" hidden></p>
       <p class="print-hint no-print">Tip: v dialógu tlače zruš začiarknutie „Hlavičky a päty“, aby sa na stranu nepridávala adresa a dátum.</p>
-      <article class="print-sheet">${body || '<p>Neznáma skupina.</p>'}</article>`;
+      <article class="print-sheet${mode === 'key' ? '' : ' exam-print-sheet'}">${body || '<p>Neznáma skupina.</p>'}</article>`;
     if (code && mode !== 'key') {
       const joinUrl = `${location.origin}${location.pathname}#join/${encodeURIComponent(id)}/${encodeURIComponent(code)}`;
       groups.forEach(g => { drawJoinQr('printQr_' + g, joinUrl, 110).catch(() => {}); });
     }
+    if (mode !== 'key') {
+      document.documentElement.classList.add('exam-print-mode');
+      const fit = () => { const w = fitExamPrint(); const el = $('#printFitWarn'); if (el) { el.hidden = !w.length; el.innerHTML = w.map(esc).join('<br>'); } };
+      fit();
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+    }
     $('#printBtn').onclick = () => window.print();
     $('#examPrintClose').onclick = () => { window.close(); window.MathApp.go(`teacher-exam/${id}`); };
+    return () => document.documentElement.classList.remove('exam-print-mode');
   }
 
   window.MathViews.teacher = { login, teacher, teacherYear, teacherUnit, method, teacherLive, teacherCalc, teacherExam, examPrint };

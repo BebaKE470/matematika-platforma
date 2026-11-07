@@ -185,3 +185,8 @@
 .exam-print-steps { margin: 4px 0 4px 1.4em; padding: 0; list-style: none; counter-reset: pstep; }
 .exam-print-steps li { counter-increment: pstep; margin: 2px 0; }
 .exam-print-steps li::before { content: "– "; }
+
+/* Tlač písomky: pevná šírka obsahu A4 (210 mm − 2 × 12 mm) a 14px písmo aj na obrazovke,
+   aby JS (fitExamPrint) zmeral rovnaké výšky ako pri tlači. */
+html.exam-print-mode { font-size: 14px; }
+.exam-print-sheet { width: 186mm; max-width: none; }
