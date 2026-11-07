@@ -378,6 +378,21 @@
     "file": "modules/1-rocnik/mnoziny/26-aplikacne-ulohy-s-mnozinami.js"
   },
   {
+    "id": "1-u02-h027p",
+    "year": 1,
+    "unit": "Množiny",
+    "unitOrder": 2,
+    "topic": "Príprava na písomku z celého celku Množiny",
+    "lesson": "Hodina 27 – príprava",
+    "lessonOrder": 27,
+    "time": "45 min",
+    "status": "ready",
+    "kind": "exam",
+    "type": "Príprava na písomku po krokoch v mobile → automatické body za postup → rozbor chýb učiteľkou",
+    "skills": ["pojmy a definície", "operácie s množinami", "Vennove diagramy", "aplikačné úlohy"],
+    "file": "modules/1-rocnik/mnoziny/27p-priprava-na-pisomku-mnoziny.js"
+  },
+  {
     "id": "1-u02-h027",
     "year": 1,
     "unit": "Množiny",
