@@ -673,6 +673,9 @@
     return st.stage === 'done' ? 'Odovzdané' : st.stage === 'joined' ? 'Pripojený' : `Pracuje (${st.question || 0}/${st.total || 0})`;
   }
 
+  // Súkromné značky učiteľky pri žiakovi (žiak ich nevidí).
+  const MARKS = { wip: ['🟡', 'Rozpracované'], check: ['🔍', 'Treba overiť'], done: ['✅', 'Hotovo'] };
+
   const SELF_ICON = { green: '🟢', yellow: '🟡', red: '🔴' };
   const SELF_TEXT = { green: 'zelená – rozumiem', yellow: 'žltá – ešte si nie som istý/istá', red: 'červená – potrebujem pomoc' };
 
@@ -884,6 +887,7 @@
       startedAt: saved ? saved.startedAt : Date.now(),
       status: saved ? saved.status : 'running',
       overrides: saved && saved.overrides ? saved.overrides : {},
+      marks: saved && saved.marks ? saved.marks : {},
       taskIds: saved && Array.isArray(saved.taskIds) && saved.taskIds.length ? saved.taskIds
         : (() => { // prenos z iného počítača: výber úloh z odkazu
             const known = new Set(exam.groups.A.tasks.map(t => t.id));
@@ -901,6 +905,7 @@
     let saveOk = true;
     let drawTimer = null;
     let persistTimer = null;
+    let markFilter = 'all';
 
     // Pri celej triede chodia správy často; zápis celého stavu hneď po každej by
     // zbytočne zaťažoval localStorage, preto ho z onStudent zlučujeme.
@@ -988,6 +993,7 @@
         <h2>Opravovanie</h2>
         <div id="summary" class="muted">Zatiaľ bez výsledkov.</div>
         <p class="muted small-note">Rozbaľ žiaka a uvidíš každý krok s jeho odpoveďou a správnou odpoveďou. Pri úlohe môžeš body upraviť ručne (napr. uznať následnú chybu); prázdne políčko = automatické body.</p>
+        <div class="row exam-mark-filter" id="markFilter" role="group" aria-label="Filter žiakov podľa značky"></div>
         <div id="students" class="exam-students"></div>
       </div>`;
 
@@ -1048,18 +1054,33 @@
         anEl.innerHTML = examAnalysisHtml(exam, nicks, students, gradeOf);
         anEl.querySelectorAll('details.an-task').forEach((d, i) => { if (openAn.has(i)) d.open = true; });
       }
-      $('#students').innerHTML = graded.map(([nick, g]) => {
+      const markOf = n => (sess.marks[n] && sess.marks[n].state) || '';
+      const cnt = { all: nicks.length, none: 0, wip: 0, check: 0, done: 0 };
+      nicks.forEach(n => { cnt[markOf(n) || 'none']++; });
+      const mf = $('#markFilter');
+      if (mf) {
+        const opts = [['all', 'Všetci'], ['none', 'Bez značky'], ['wip', MARKS.wip[0] + ' Rozpracované'], ['check', MARKS.check[0] + ' Treba overiť'], ['done', MARKS.done[0] + ' Hotovo']];
+        mf.innerHTML = opts.map(([k, l]) => `<button type="button" class="ghost${markFilter === k ? ' selected' : ''}" data-f="${k}">${l} (${cnt[k]})</button>`).join('');
+      }
+      $('#students').innerHTML = graded.filter(([nick]) => markFilter === 'all' || (markFilter === 'none' ? !markOf(nick) : markOf(nick) === markFilter)).map(([nick, g]) => {
         const st = students[nick];
+        const mk = sess.marks[nick] || {};
         const ex = st.exam || {};
         return `<details class="exam-student" data-nick="${esc(nick)}" ${openNicks.has(nick) ? 'open' : ''}>
           <summary>
-            <strong>${esc(nick)}</strong>
+            <strong>${esc(nick)}</strong> ${MARKS[mk.state] ? `<span title="${esc(MARKS[mk.state][1])}">${MARKS[mk.state][0]}</span>` : ''}${mk.note ? '<span title="Má poznámku">📝</span>' : ''}
             <span>${ex.group ? 'skupina ' + esc(ex.group) : 'skupina —'}</span>
             <span>${esc(examStageText(st))} ${examSelfBadge(exam, ex.self)}</span>
             <span title="Koľkokrát žiak opustil aplikáciu">${ex.leaves ? '⚠ opustil ' + (Number(ex.leaves) || 0) + '×' : ''}</span>
             <span>${gradeLine(g, grading)}</span>
           </summary>
-          <div class="exam-student-body">${examSelfHtml(exam, ex.self)}${g ? `<div class="exam-results">${MathExam.resultTasksHtml(g, t => overrideInput(nick, t))}</div>` : '<p class="muted">Žiak ešte nevybral skupinu alebo neodoslal odpovede.</p>'}</div>
+          <div class="exam-student-body">
+            <div class="exam-mark-row" data-nick="${esc(nick)}">
+              <span class="muted">Značka (vidíš len ty):</span>
+              ${Object.entries(MARKS).map(([k, [ic, lb]]) => `<button type="button" class="ghost exam-mark${mk.state === k ? ' selected' : ''}" data-nick="${esc(nick)}" data-mark="${k}">${ic} ${lb}</button>`).join('')}
+              <input type="text" class="exam-note" data-nick="${esc(nick)}" maxlength="200" placeholder="Poznámka (napr. spýtať sa na úlohu 5)" value="${esc(mk.note || '')}">
+            </div>
+            ${examSelfHtml(exam, ex.self)}${g ? `<div class="exam-results">${MathExam.resultTasksHtml(g, t => overrideInput(nick, t))}</div>` : '<p class="muted">Žiak ešte nevybral skupinu alebo neodoslal odpovede.</p>'}</div>
         </details>`;
       }).join('');
       $('#students').querySelectorAll('details.exam-student').forEach(sd => {
@@ -1077,7 +1098,7 @@
       clearTimeout(drawTimer);
       drawTimer = setTimeout(function tick() {
         const a = document.activeElement;
-        if (a && a.classList && a.classList.contains('exam-ov')) { drawTimer = setTimeout(tick, 600); return; }
+        if (a && a.classList && (a.classList.contains('exam-ov') || a.classList.contains('exam-note'))) { drawTimer = setTimeout(tick, 600); return; }
         if ($('#students')) draw();
       }, 250);
     }
@@ -1098,6 +1119,31 @@
       if (v === '' || !Number.isFinite(Number(v))) delete sess.overrides[nick][task];
       else sess.overrides[nick][task] = Math.max(0, Number(v));
       persist();
+      draw();
+    });
+
+    studentsEl.addEventListener('click', e => {
+      const b = e.target.closest && e.target.closest('button.exam-mark');
+      if (!b) return;
+      e.preventDefault();
+      const nick = b.dataset.nick, st = b.dataset.mark;
+      const cur = sess.marks[nick] || {};
+      sess.marks[nick] = Object.assign({}, cur, { state: cur.state === st ? '' : st });
+      persist();
+      draw();
+    });
+    studentsEl.addEventListener('change', e => {
+      const el = e.target;
+      if (!el.classList || !el.classList.contains('exam-note')) return;
+      const nick = el.dataset.nick;
+      sess.marks[nick] = Object.assign({}, sess.marks[nick] || {}, { note: el.value.trim().slice(0, 200) });
+      persist();
+      draw();
+    });
+    $('#markFilter').addEventListener('click', e => {
+      const b = e.target.closest && e.target.closest('button[data-f]');
+      if (!b) return;
+      markFilter = b.dataset.f;
       draw();
     });
 
@@ -1126,7 +1172,7 @@
       const s = readGrading();
       if (!MathScore.validThresholds(s.thresholds)) { alert('Pred exportom oprav hranice známok.'); return; }
       grading = s;
-      examCsv(m, code, exam, students, sess.overrides, grading, sess.name);
+      examCsv(m, code, exam, students, sess.overrides, grading, sess.name, sess.marks);
     };
 
     // --- živý kanál ---
@@ -1172,12 +1218,13 @@
     return () => { clearTimeout(drawTimer); persist(); if (handle) handle.close(); };
   }
 
-  function examCsv(m, code, exam, students, overrides, grading, name) {
+  function examCsv(m, code, exam, students, overrides, grading, name, marks) {
+    marks = marks || {};
     const nicks = Object.keys(students).sort((a, b) => a.localeCompare(b, 'sk'));
     if (!nicks.length) { alert('Zatiaľ nie sú žiadne výsledky na export.'); return; }
     const tasksA = exam.groups.A.tasks;
     const selfSkills = (exam.reflection && exam.reflection.skills) || [];
-    const head = ['Žiak (meno a priezvisko)', 'Skupina', 'Stav', 'Body (bez bonusu)', 'Bonus', 'Maximum', 'Percentá', ...(grading.enabled ? ['Známka'] : []), 'Opustenia aplikácie',
+    const head = ['Žiak (meno a priezvisko)', 'Skupina', 'Stav', 'Body (bez bonusu)', 'Bonus', 'Maximum', 'Percentá', ...(grading.enabled ? ['Známka'] : []), 'Opustenia aplikácie', 'Značka učiteľky', 'Poznámka učiteľky',
       ...selfSkills.map(sk => `Sebahodnotenie: ${sk}`)];
     tasksA.forEach((t, i) => {
       head.push(`Úloha ${i + 1}: body`);
@@ -1200,6 +1247,7 @@
         g ? g.total : '', g ? g.bonus : '', g ? g.max : '', g ? `${g.percent} %` : '',
         ...(grading.enabled ? [g ? MathScore.gradeForPercent(g.percent, grading) : ''] : []),
         ex.leaves || 0,
+        (MARKS[(marks[nick] || {}).state] || [])[1] || '', (marks[nick] || {}).note || '',
         ...selfSkills.map(sk => SELF_TEXT[(ex.self || {})[sk]] || '')];
       tasksA.forEach((t, i) => {
         const gt = g && g.tasks[i];
