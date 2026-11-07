@@ -759,7 +759,7 @@
     return `${MathExam.fmtPts(graded.total + graded.bonus)} / ${MathExam.fmtPts(graded.max)} b · ${graded.percent} %${g ? ` · známka <strong>${g}</strong>` : ''}`;
   }
 
-  async function teacherExam(id, code) {
+  async function teacherExam(id, code, idsParam) {
     const m = id && MathPlatform.indexEntry(id);
     if (!m || m.kind !== 'exam' || m.status !== 'ready') { window.MathApp.go('teacher'); return; }
     code = (code || '').toUpperCase();
@@ -773,7 +773,7 @@
     }
 
     if (!CODE_RE.test(code)) { examChooser(id, m, exam); return; }
-    return examRun(id, m, exam, code);
+    return examRun(id, m, exam, code, idsParam);
   }
 
   function examChooser(id, m, exam) {
@@ -784,8 +784,10 @@
     const allIds = exam.groups.A.tasks.map(t => t.id);
     const pickedIds = () => $$('.examTaskCheck').filter(c => c.checked).map(c => c.dataset.id);
     // Výber sa nesie do tlače v URL; všetky úlohy = bez parametra.
-    const idsParam = () => { const p = pickedIds(); return p.length && p.length < allIds.length ? '/' + p.join(',') : ''; };
-    const openPrint = mode => window.open(`${location.origin}${location.pathname}#exam-print/${encodeURIComponent(id)}/${mode}${idsParam()}`, '_blank');
+    const idsParam = () => { const p = pickedIds(); return p.length && p.length < allIds.length ? p.join(',') : '-'; };
+    const pendingCode = MathLive.makeCode();
+    const chosenCode = () => { const c = (($('#examCode') || {}).value || '').trim().toUpperCase(); return CODE_RE.test(c) ? c : ''; };
+    const openPrint = mode => window.open(`${location.origin}${location.pathname}#exam-print/${encodeURIComponent(id)}/${mode}/${idsParam()}/${encodeURIComponent(chosenCode())}`, '_blank');
     const groupKeys = Object.keys(exam.groups);
 
     app.innerHTML = `
@@ -809,8 +811,13 @@
           <label for="examName">Názov písomky (nepovinný, napr. „2.B – Množiny“)</label>
           <input id="examName" type="text" maxlength="80" placeholder="trieda, téma…" autocomplete="off">
         </div>
+        <div class="field">
+          <label for="examCode">Kód písomky</label>
+          <input id="examCode" type="text" maxlength="6" value="${esc(pendingCode)}" autocomplete="off" spellcheck="false" style="text-transform:uppercase;letter-spacing:.2em;max-width:10em">
+          <p class="muted small-note">Kód sa vytlačí na zadanie (s QR kódom) a písomku spustíš s ním. Môžeš si ho pripraviť a vytlačiť na jednom počítači a spustiť na druhom: na druhom zadaj ten istý kód a zaškrtni tie isté úlohy. Žiaci aj ich doterajšie odpovede sa pripoja sami.</p>
+        </div>
         <div class="row">
-          <button class="btn" id="examNew">Spustiť novú písomku</button>
+          <button class="btn" id="examNew">Spustiť písomku s týmto kódom</button>
           <button class="ghost" id="examPrintA">Tlač zadania ${Object.keys(exam.groups).length > 1 ? 'A' : ''}</button>
           ${exam.groups.B ? '<button class="ghost" id="examPrintB">Tlač zadania B</button>' : ''}
           <button class="ghost" id="examPrintKey">Tlač kľúča</button>
@@ -845,8 +852,11 @@
     $('#examNew').onclick = () => {
       const ids = pickedIds();
       if (!ids.length) return;
-      const code = MathLive.makeCode();
+      const code = chosenCode();
+      if (!code) { alert('Kód musí mať 6 znakov (písmená A–Z a číslice 2–9).'); return; }
       const store = examStoreRead();
+      if (store[code] && store[code].moduleId !== id) { alert('Tento kód už používa iná písomka. Zvoľ iný.'); return; }
+      if (store[code]) { window.MathApp.go(`teacher-exam/${id}/${code}`); return; }
       store[code] = { moduleId: id, name: $('#examName').value.trim().slice(0, 80), startedAt: Date.now(), status: 'running', students: {}, overrides: {}, taskIds: ids.length < allIds.length ? ids : null, at: Date.now() };
       examStoreWrite(store);
       window.MathApp.go(`teacher-exam/${id}/${code}`);
@@ -865,7 +875,7 @@
     });
   }
 
-  async function examRun(id, m, exam, code) {
+  async function examRun(id, m, exam, code, idsParam) {
     const store0 = examStoreRead();
     const saved = store0[code] && store0[code].moduleId === id ? store0[code] : null;
     const sess = {
@@ -874,7 +884,12 @@
       startedAt: saved ? saved.startedAt : Date.now(),
       status: saved ? saved.status : 'running',
       overrides: saved && saved.overrides ? saved.overrides : {},
-      taskIds: saved && Array.isArray(saved.taskIds) && saved.taskIds.length ? saved.taskIds : null,
+      taskIds: saved && Array.isArray(saved.taskIds) && saved.taskIds.length ? saved.taskIds
+        : (() => { // prenos z iného počítača: výber úloh z odkazu
+            const known = new Set(exam.groups.A.tasks.map(t => t.id));
+            const ids = String(idsParam || '').split(',').filter(x => known.has(x));
+            return ids.length && ids.length < known.size ? ids : null;
+          })(),
       at: Date.now(),
     };
     // Učiteľka pred spustením vybrala úlohy: celá ďalšia práca (zadanie pre žiakov, body, CSV, tlač) ide s výberom.
@@ -937,6 +952,10 @@
           <button class="ghost" data-go="teacher-exam/${esc(id)}">Zoznam písomiek</button>
         </div>
         <p class="muted small-note" id="examStatus"></p>
+        <details class="spaced"><summary>Prenos na iný počítač</summary>
+          <p class="muted small-note">Ak chceš písomku sledovať na druhom notebooku, otvor na ňom tento odkaz (pošli si ho napr. e-mailom). Žiaci a ich odpovede sa tam načítajú sami. Ručne upravené body a záloha ostávajú v prehliadači, kde si ich zadala, preto CSV exportuj z toho počítača, na ktorom opravuješ.</p>
+          <input id="examTransfer" type="text" readonly value="${esc(location.origin + location.pathname + '#teacher-exam/' + encodeURIComponent(id) + '/' + encodeURIComponent(code) + (sess.taskIds ? '/' + sess.taskIds.join(',') : ''))}" onclick="this.select()" style="width:100%">
+        </details>
         <p class="notice bad" id="examSaveWarn" hidden><strong>Zálohu v prehliadači sa nepodarilo uložiť</strong> (plné úložisko alebo súkromné okno). Výsledky si preto stiahni do CSV skôr, než stránku zatvoríš.</p>
       </div>
       <div class="card spaced">
@@ -1126,7 +1145,7 @@
       $('#connect').innerHTML = '<strong>Kanál je aktívny.</strong> Výsledky sa neukladajú do databázy, zálohujú sa len v tomto prehliadači.';
       handle.announceGrading({ enabled: false }, true, lessonInfo());
       // Po návrate do rozpracovanej písomky si vypýtaj aktuálne odpovede od všetkých žiakov.
-      if (saved) handle.send('teacher', { action: 'resend' }).catch(() => {});
+      handle.send('teacher', { action: 'resend' }).catch(() => {});
 
       $('#examEnd').onclick = async () => {
         if (!confirm('Ukončiť písomku? Všetkým pripojeným žiakom sa odpovede automaticky odovzdajú.')) return;
