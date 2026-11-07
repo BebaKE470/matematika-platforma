@@ -1283,7 +1283,7 @@
       // aby zadanie vyšlo na 1 alebo 2 strany A4 (použiteľná výška ~ 273 mm pri okraji 1,2 cm),
       // a skupina vždy zaberie celé listy: ďalšia skupina začne na novom liste pri obojstrannej tlači.
       const solvable = tasks.filter(t => !t.steps.every(s => s.kind === 'choice'));
-      const overhead = tasks.reduce((n, t) => n + 16 + 5 * (String(t.question).split('\n').length - 1) + t.steps.filter(s => s.kind === 'choice').length * 7, 0);
+      const overhead = tasks.reduce((n, t) => n + 16 + 5 * (String(t.question).split('\n').length - 1) + t.steps.filter(s => s.kind === 'choice').length * 7 + (exam.printStepLabels ? t.steps.filter(s => s.kind !== 'choice').length * 7 : 0), 0);
       const header = code ? 62 : 38;
       const solvPts = solvable.reduce((n, t) => n + ptsOf(t), 0) || 1;
       const PAGE = 268, SLACK = 22;
@@ -1306,6 +1306,7 @@
             ? `<div class="print-q"><span class="print-task-num">${esc(t.title)}</span> (${MathExam.fmtPts(ptsOf(t))} b)</div><div class="exam-print-multiline">${esc(t.question)}</div>`
             : `<div class="print-q"><span class="print-task-num">${esc(t.title)}</span> (${MathExam.fmtPts(ptsOf(t))} b) ${esc(t.question)}</div>`}
           ${t.note ? `<p class="muted">${esc(t.note)}</p>` : ''}
+          ${exam.printStepLabels ? `<ol class="exam-print-steps">${t.steps.filter(s => s.kind !== 'choice').map(s => `<li>${esc(s.label)}</li>`).join('')}</ol>` : ''}
           ${t.steps.every(s => s.kind === 'choice') ? '' : `<div class="exam-print-space" style="height:${spaceMm(t)}mm" aria-hidden="true"></div>`}
           ${(() => {
             const big = t.steps.find(s => s.kind === 'choice' && s.options.length > 4);

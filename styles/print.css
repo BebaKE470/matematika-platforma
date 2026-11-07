@@ -180,3 +180,8 @@
 /* Voľný priestor na riešenie v tlačenej písomke (výšku nastavuje JS podľa náročnosti úlohy). */
 .exam-print-space { display: block; }
 @media print { .exam-print-group { box-sizing: border-box; } }
+
+/* Podúlohy v tlačenej písomke (názvy krokov bez bodov a bez riadkov na odpoveď). */
+.exam-print-steps { margin: 4px 0 4px 1.4em; padding: 0; list-style: none; counter-reset: pstep; }
+.exam-print-steps li { counter-increment: pstep; margin: 2px 0; }
+.exam-print-steps li::before { content: "– "; }

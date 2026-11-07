@@ -45,6 +45,8 @@ module.exports = {
   id: '1-u02-h023b',
   title: 'Množiny',
   minutes: 40,
+  // Pri tlači sa zobrazia aj názvy krokov (sú to podúlohy: výrazy, otázky), nielen zadanie úlohy.
+  printStepLabels: true,
   instructions: [
     'Úlohy sú rozdelené na kroky. Pri každej úlohe vyplň všetky kroky. Za každý správny krok získaš body, aj keď neskôr urobíš chybu.',
     'Počítaj na papieri a do aplikácie prepisuj výsledky krokov. Prvky množín zapisuj ako čísla.',
