@@ -1313,6 +1313,8 @@
     if (idsParam && idsParam !== '-') exam = MathExam.filterExam(exam, String(idsParam).split(',').filter(Boolean));
     const isBonus = t => (exam.bonusTasks || []).includes(t.id);
     const ptsOf = t => t.steps.reduce((n, s) => n + s.points, 0);
+    // Krok sa vytlačí ako podúloha, ak je označený `print: true` (obsahuje zadanie: interval, otázku) alebo ak to chce celá písomka (`printStepLabels`).
+    const printedStep = s => s.kind !== 'choice' && (exam.printStepLabels || s.print === true);
     const groupSheet = (g, i) => {
       const tasks = exam.groups[g].tasks;
       const max = tasks.filter(t => !isBonus(t)).reduce((n, t) => n + ptsOf(t), 0);
@@ -1333,7 +1335,7 @@
             ? `<div class="print-q"><span class="print-task-num">${esc(t.title)}</span> (${MathExam.fmtPts(ptsOf(t))} b)</div><div class="exam-print-multiline">${esc(t.question)}</div>`
             : `<div class="print-q"><span class="print-task-num">${esc(t.title)}</span> (${MathExam.fmtPts(ptsOf(t))} b) ${esc(t.question)}</div>`}
           ${t.note ? `<p class="muted">${esc(t.note)}</p>` : ''}
-          ${exam.printStepLabels ? `<ol class="exam-print-steps">${t.steps.filter(s => s.kind !== 'choice').map(s => `<li>${esc(s.label)}</li>`).join('')}</ol>` : ''}
+          ${t.steps.some(printedStep) ? `<ol class="exam-print-steps">${t.steps.filter(printedStep).map(s => `<li>${esc(s.label)}</li>`).join('')}</ol>` : ''}
           ${t.steps.every(s => s.kind === 'choice') ? '' : `<div class="exam-print-space" data-pts="${ptsOf(t)}" aria-hidden="true"></div>`}
           ${(() => {
             const big = t.steps.find(s => s.kind === 'choice' && s.options.length > 4);
