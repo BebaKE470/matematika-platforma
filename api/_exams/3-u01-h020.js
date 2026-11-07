@@ -15,13 +15,13 @@ const NOTE_U = 'Zaveď substitúciu u = výraz v zátvorke. Riešenia pre u hľa
 
 // Spoločná štruktúra úloh. `A` a `B` obsahujú iba zadanie a kľúč.
 const TASKS = [
-  { id: 'u1', title: 'Úloha 1',
+  { id: 'u1', title: 'Úloha 1', note: 'Rovnicu rieš v množine ℝ. Všetky riešenia majú tvar „základné riešenie + p·kπ“, k ∈ ℤ. Zapíš základné riešenia (najmenšie nezáporné hodnoty z jednej periódy, iba číslo pred π) a periódu p.',
     steps: [
-      { id: 's1', print: true, label: `Všetky riešenia v intervale ${INTERVAL}`, kind: 'set', suffix: 'π', points: 2 },
-      { id: 's2', print: true, label: 'Počet riešení v intervale ⟨0; 4π)', kind: 'number', points: 1 },
+      { id: 's1', print: true, label: 'Základné riešenia x (najmenšie nezáporné hodnoty z jednej periódy, číslo pred π)', kind: 'set', suffix: 'π', points: 2 },
+      { id: 's2', print: true, label: 'Perióda p: všetky riešenia majú tvar „základné riešenie + p·kπ“, k ∈ ℤ', kind: 'number', suffix: 'π', points: 1 },
     ],
-    A: { question: 'Vyrieš rovnicu sin x = −√2/2.', key: { s1: ['5/4', '7/4'], s2: '4' } },
-    B: { question: 'Vyrieš rovnicu cos x = −√2/2.', key: { s1: ['3/4', '5/4'], s2: '4' } } },
+    A: { question: 'Vyrieš v ℝ rovnicu sin x = −√2/2.', key: { s1: ['5/4', '7/4'], s2: '2' } },
+    B: { question: 'Vyrieš v ℝ rovnicu cos x = −√2/2.', key: { s1: ['3/4', '5/4'], s2: '2' } } },
 
   { id: 'u2', title: 'Úloha 2',
     steps: [
