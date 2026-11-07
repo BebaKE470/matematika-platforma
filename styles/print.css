@@ -176,3 +176,7 @@
 .exam-print-qr { flex: none; width: 110px; height: 110px; }
 .exam-print-qr img, .exam-print-qr canvas { width: 110px !important; height: 110px !important; }
 .exam-print-code { font-family: ui-monospace, Consolas, monospace; font-size: 1.25rem; font-weight: 800; letter-spacing: .15em; white-space: nowrap; }
+
+/* Voľný priestor na riešenie v tlačenej písomke (výšku nastavuje JS podľa náročnosti úlohy). */
+.exam-print-space { display: block; }
+@media print { .exam-print-group { box-sizing: border-box; } }

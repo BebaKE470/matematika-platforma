@@ -1212,7 +1212,18 @@
     const groupSheet = (g, i) => {
       const tasks = exam.groups[g].tasks;
       const max = tasks.filter(t => !isBonus(t)).reduce((n, t) => n + ptsOf(t), 0);
-      return `<section class="exam-print-group"${i ? ' style="break-before: page; page-break-before: always"' : ''}>
+      // Voľný priestor na riešenie úmerný náročnosti (bodom) úlohy. Rozloženie sa počíta tak,
+      // aby zadanie vyšlo na 1 alebo 2 strany A4 (použiteľná výška ~ 273 mm pri okraji 1,2 cm),
+      // a skupina vždy zaberie celé listy: ďalšia skupina začne na novom liste pri obojstrannej tlači.
+      const solvable = tasks.filter(t => !t.steps.every(s => s.kind === 'choice'));
+      const overhead = tasks.reduce((n, t) => n + 16 + 5 * (String(t.question).split('\n').length - 1) + t.steps.filter(s => s.kind === 'choice').length * 7, 0);
+      const header = code ? 62 : 38;
+      const solvPts = solvable.reduce((n, t) => n + ptsOf(t), 0) || 1;
+      const PAGE = 268, SLACK = 22;
+      const pages = header + overhead + solvPts * 7 + SLACK <= PAGE ? 1 : 2;
+      const k = Math.max(6, Math.min(22, (pages * PAGE - header - overhead - SLACK) / solvPts));
+      const spaceMm = t => Math.max(20, Math.round(ptsOf(t) * k));
+      return `<section class="exam-print-group" style="min-height:${pages * PAGE - 4}mm${i ? '; break-before: page; page-break-before: always' : ''}">
         <div class="print-sheet-title">
           <div class="print-eyebrow">${esc(m.unit)} · ${esc(m.lesson)} · skupina ${esc(g)}</div>
           <h1>${esc(exam.title)}</h1>
@@ -1220,7 +1231,7 @@
           <p class="muted">Maximum ${max} b${tasks.some(isBonus) ? ' + bonus' : ''}${exam.minutes ? ` · ${exam.minutes} min` : ''}. Postup píš do vyhradeného miesta pri úlohe.</p>
           ${code ? `<div class="exam-print-join">
             <div id="printQr_${esc(g)}" class="exam-print-qr"></div>
-            <div><strong>Výsledky zapíš online.</strong> Po vyriešení úloh naskenuj QR kód alebo zadaj kód písomky <span class="exam-print-code">${esc(code)}</span> a prepíš výsledky krokov do aplikácie.</div>
+            <div><strong>Hneď na začiatku sa prihlás do online písomky:</strong> naskenuj QR kód alebo zadaj kód písomky <span class="exam-print-code">${esc(code)}</span>. Výsledky jednotlivých krokov zapisuj do aplikácie priebežne, počas riešenia, nie až na konci. Mobil ponechaj na lavici s otvorenou aplikáciou; učiteľka vidí, koľkokrát aplikáciu opustíš.</div>
           </div>` : ''}
         </div>
         ${tasks.map(t => `<div class="print-task exam-print-task">
@@ -1228,7 +1239,7 @@
             ? `<div class="print-q"><span class="print-task-num">${esc(t.title)}</span> (${MathExam.fmtPts(ptsOf(t))} b)</div><div class="exam-print-multiline">${esc(t.question)}</div>`
             : `<div class="print-q"><span class="print-task-num">${esc(t.title)}</span> (${MathExam.fmtPts(ptsOf(t))} b) ${esc(t.question)}</div>`}
           ${t.note ? `<p class="muted">${esc(t.note)}</p>` : ''}
-          ${t.steps.every(s => s.kind === 'choice') ? '' : `<div class="print-lines" style="height:calc(${Math.max(6, t.steps.length * 2)} * var(--ln, 1.7em))" aria-hidden="true"></div>`}
+          ${t.steps.every(s => s.kind === 'choice') ? '' : `<div class="exam-print-space" style="height:${spaceMm(t)}mm" aria-hidden="true"></div>`}
           ${(() => {
             const big = t.steps.find(s => s.kind === 'choice' && s.options.length > 4);
             return big ? `<div class="exam-print-options">${big.options.map((o, i) => `<div><strong>${i + 1}.</strong> ${esc(o)}</div>`).join('')}</div>` : '';
