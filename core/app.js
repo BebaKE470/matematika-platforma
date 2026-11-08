@@ -64,7 +64,7 @@
 
     // Zamknutá kalkulačka: klik na navigáciu v aplikácii (Katalóg, Pre učiteľa,
     // logo…) žiaka potichu vráti späť do kalkulačky (nepočíta sa ako opustenie).
-    if (route.name !== 'play' && window.MathCalc.locked()) {
+    if (route.name !== 'play' && (window.MathCalc.locked() || window.MathExam.locked())) {
       go('play');
       return;
     }
@@ -106,7 +106,7 @@
   window.MathApp = { go, render };
   // Po obnovení stránky najprv obnovíme rozpracovanú zamknutú kalkulačku (ak nejaká beží),
   // aby sa obnovením nedalo sledovaniu uniknúť.
-  Promise.resolve().then(() => S.resumeCalc()).catch(() => false).then(resumed => {
+  Promise.resolve().then(async () => (await S.resumeCalc()) || (await S.resumeExam())).catch(() => false).then(resumed => {
     if (resumed) history.replaceState(null, '', '#play');
     render();
   });

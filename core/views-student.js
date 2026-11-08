@@ -367,6 +367,33 @@
     return true;
   }
 
+  // Obnova rozpísanej písomky po obnovení stránky – rovnako ako resumeCalc.
+  async function resumeExam() {
+    const p = window.MathExam.pending();
+    if (!p) return false;
+    const parts = (location.hash.slice(1) || '').split('/');
+    if (parts[0] === 'join' && parts[2] && decodeURIComponent(parts[2]).toUpperCase() !== String(p.code).toUpperCase()) {
+      window.MathExam.discardPending();
+      return false;
+    }
+    const saved = window.MathExam.loadSaved(p.code, p.nick);
+    const onTeacher = msg => { if (msg.action !== 'grading') window.MathExam.onTeacher(msg); };
+    await MathSession.start(p.moduleId, { mode: 'live', nick: p.nick, session: p.code });
+    window.MathExam.begin({ exam: saved.exam, nick: p.nick, code: p.code, moduleId: p.moduleId, live: null });
+    const connect = async () => {
+      for (let i = 0; i < 60 && window.MathExam.locked(); i++) {
+        try {
+          const handle = await MathLive.connectAsStudent(p.code, { onTeacher });
+          MathSession.attachLive(handle);
+          window.MathExam.setLive(handle);
+          return;
+        } catch (_) { await new Promise(r => setTimeout(r, 5000)); }
+      }
+    };
+    connect();
+    return true;
+  }
+
   function showError(e) {
     app.innerHTML = `
       <div class="card">
@@ -379,5 +406,5 @@
   }
 
   window.MathViews = window.MathViews || {};
-  window.MathViews.student = { home, catalog, catalogYear, catalogUnit, moduleStart, join, resumeCalc, showError };
+  window.MathViews.student = { home, catalog, catalogYear, catalogUnit, moduleStart, join, resumeCalc, resumeExam, showError };
 })();

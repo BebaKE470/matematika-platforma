@@ -262,6 +262,9 @@
   const STORE_KEY = 'mathExamStudentV1';
   const KEEP_MS = 14 * 24 * 60 * 60 * 1000;
   const SEND_DEBOUNCE_MS = 1500;
+  const ACTIVE_KEY = 'mathExamActiveV1';
+  const ACTIVE_MAX_MS = 4 * 60 * 60 * 1000;
+  const REFRESH_GRACE_MS = 20 * 1000; // rýchle obnovenie stránky sa nepočíta ako opustenie
 
   let S = null; // prebiehajúca písomka tohto žiaka (jedna naraz)
 
@@ -283,10 +286,57 @@
       Object.keys(all).forEach(k => { if (!all[k] || now - (all[k].at || 0) > KEEP_MS) delete all[k]; });
       all[storeKey(S.code, S.nick)] = {
         at: now, exam: S.exam, moduleId: S.moduleId, group: S.group, answers: S.answers,
-        submitted: S.submitted, leaves: S.leaves, taskIdx: S.taskIdx, revealedKey: S.revealedKey, self: S.self, selfSent: S.selfSent,
+        submitted: S.submitted, leaves: S.leaves, awayMs: S.awayMs, away: !!S.hiddenAt, blurs: S.blurs, blurMs: S.blurMs, blurAway: !!S.blurAt,
+        taskIdx: S.taskIdx, revealedKey: S.revealedKey, self: S.self, selfSent: S.selfSent,
       };
       localStorage.setItem(STORE_KEY, JSON.stringify(all));
+      // Ukazovateľ „písomka prebieha“: po obnovení stránky z neho aplikácia žiaka sama vráti
+      // do písomky (pending()), inak by obnovením unikol sledovaniu.
+      if (S.submitted) localStorage.removeItem(ACTIVE_KEY);
+      else localStorage.setItem(ACTIVE_KEY, JSON.stringify({ code: S.code, nick: S.nick, moduleId: S.moduleId, at: now }));
     } catch (_) { /* localStorage nedostupné – písomka funguje, len bez zálohy */ }
+  }
+
+  // Rozpracovaná písomka z minulého načítania stránky (alebo null). Platí 4 hodiny.
+  function pending() {
+    try {
+      const p = JSON.parse(localStorage.getItem(ACTIVE_KEY) || 'null');
+      if (!p || !p.code || !p.nick || !p.moduleId || Date.now() - (p.at || 0) > ACTIVE_MAX_MS) return null;
+      const saved = loadSaved(p.code, p.nick);
+      return saved && saved.exam && !saved.submitted ? p : null;
+    } catch (_) { return null; }
+  }
+
+  // Zahodí rozpracovanú písomku (žiak sa pripája na inú hodinu).
+  function discardPending() {
+    try {
+      const p = JSON.parse(localStorage.getItem(ACTIVE_KEY) || 'null');
+      localStorage.removeItem(ACTIVE_KEY);
+      if (p && p.code) {
+        const all = readStore();
+        const k = storeKey(p.code, p.nick);
+        if (all[k]) { all[k].submitted = true; localStorage.setItem(STORE_KEY, JSON.stringify(all)); }
+      }
+    } catch (_) { /* nič */ }
+  }
+
+  // Dodatočné pripojenie živého kanála (obnova po refreshi, výpadok siete).
+  function setLive(handle) {
+    if (!S) return;
+    S.live = handle;
+    sendNow();
+  }
+
+  // Pokus o odchod navigáciou v aplikácii (Katalóg, Pre učiteľa…).
+  function locked() { return !!S && !S.submitted; }
+  function noteNavigationAttempt() { if (locked()) { S.leaves++; touch(true); } }
+
+  function leaveInfo() {
+    const now = Date.now();
+    return {
+      leaves: S.leaves, awayMs: S.awayMs + (S.hiddenAt ? now - S.hiddenAt : 0), away: !!S.hiddenAt,
+      blurs: S.blurs, blurMs: S.blurMs + (S.blurAt ? now - S.blurAt : 0), blurAway: !!S.blurAt,
+    };
   }
 
   function tasks() { return (S.group && S.exam.groups[S.group] && S.exam.groups[S.group].tasks) || []; }
@@ -301,19 +351,81 @@
       question: Math.min(S.taskIdx + 1, Math.max(list.length, 1)),
       total: list.length,
       ts: Date.now(),
-      exam: { group: S.group, answers: S.answers, leaves: S.leaves, submitted: S.submitted, self: S.self },
+      exam: { group: S.group, answers: S.answers, ...leaveInfo(), submitted: S.submitted, self: S.self },
     }).then(() => { if (S) S.sendOk = true; }).catch(() => { if (S) S.sendOk = false; });
   }
 
-  function touch() {
+  function touch(immediate) {
     saveLocal();
     clearTimeout(S.sendTimer);
-    S.sendTimer = setTimeout(sendNow, SEND_DEBOUNCE_MS);
+    if (immediate) sendNow(); else S.sendTimer = setTimeout(sendNow, SEND_DEBOUNCE_MS);
+  }
+
+  // Dve nezávislé evidencie:
+  //  • opustenie (`leaves`, `awayMs`) – stránka bola skrytá (iná karta/aplikácia, zhasnutá obrazovka);
+  //    spoľahlivý údaj.
+  //  • nezameranie okna (`blurs`, `blurMs`) – okno stratilo zameranie, ale stránka zostala viditeľná
+  //    (plávajúce okno asistenta, rozdelená obrazovka, notifikačný panel). Slabšia indícia.
+  // Prepnutie karty vyvolá najprv blur a hneď potom hidden – také blur sa nepočíta ako nezameranie.
+  const BLUR_MERGE_MS = 1500;
+
+  function closeBlur() {
+    if (S.blurAt) { S.blurMs += Date.now() - S.blurAt; S.blurAt = 0; }
+  }
+
+  function markAway() {
+    if (!S || S.submitted || S.hiddenAt || S.unloading) return; // stránka sa práve zatvára/obnovuje – nie je to opustenie
+    if (S.blurAt) { // blur tesne pred hidden = to isté opustenie, nie samostatné nezameranie
+      if (Date.now() - S.blurAt < BLUR_MERGE_MS) { S.blurs = Math.max(0, S.blurs - 1); S.blurAt = 0; }
+      else closeBlur();
+    }
+    S.hiddenAt = Date.now();
+    S.leaves++;
+    touch(true); // pokus o okamžité odoslanie ešte skôr, než prehliadač stránku uspí
+  }
+
+  function markBack() {
+    if (!S || S.submitted) return;
+    S.unloading = false;
+    closeBlur();
+    if (!S.hiddenAt) { touch(true); return; }
+    S.awayMs += Date.now() - S.hiddenAt;
+    S.hiddenAt = 0;
+    touch(true);
+    requestWake();
   }
 
   function onVisibility() {
-    if (!S || S.submitted) return;
-    if (document.hidden) { S.leaves++; touch(); }
+    if (document.hidden) markAway(); else markBack();
+  }
+
+  // Okno stratilo/získalo zameranie bez zmeny viditeľnosti: plávajúce okno inej aplikácie,
+  // rozdelená obrazovka, notifikačný panel, Slide Over.
+  function onBlur() {
+    if (!S || S.submitted || S.hiddenAt || S.blurAt || S.unloading || document.hidden) return;
+    S.blurAt = Date.now();
+    S.blurs++;
+    touch(true);
+  }
+  function onFocus() { if (!document.hidden) markBack(); }
+
+  // Obnovenie/zatvorenie stránky: prehliadač pred ním často pošle aj „hidden“, ktoré by sa
+  // započítalo ako opustenie. Skutočnú neprítomnosť dopočíta begin() podľa času od posledného uloženia.
+  function onPageHide(e) {
+    if (!S || e.persisted) return;
+    S.unloading = true;
+    if (S.hiddenAt && Date.now() - S.hiddenAt < 1500) { S.leaves = Math.max(0, S.leaves - 1); S.hiddenAt = 0; }
+    if (S.blurAt && Date.now() - S.blurAt < 1500) { S.blurs = Math.max(0, S.blurs - 1); S.blurAt = 0; }
+    saveLocal();
+  }
+
+  // Obrazovka sa nesmie sama zhasnúť, inak by to vyzeralo ako opustenie aplikácie.
+  async function requestWake() {
+    try {
+      if (!S || S.wake || S.submitted || !navigator.wakeLock || document.hidden) return;
+      S.wake = await navigator.wakeLock.request('screen');
+      S.wake.addEventListener('release', () => { if (S) S.wake = null; });
+    } catch (_) { /* nepodporované alebo zamietnuté – nevadí */ }
   }
 
   function onBeforeUnload(e) {
@@ -332,16 +444,31 @@
       answers: sameExam ? (saved.answers || {}) : {},
       submitted: sameExam ? !!saved.submitted : false,
       leaves: sameExam ? (saved.leaves || 0) : 0,
+      awayMs: sameExam ? (saved.awayMs || 0) : 0,
+      hiddenAt: 0, unloading: false, wake: null,
+      blurs: sameExam ? (saved.blurs || 0) : 0,
+      blurMs: sameExam ? (saved.blurMs || 0) : 0,
+      blurAt: 0,
       taskIdx: sameExam ? (saved.taskIdx || 0) : 0,
       revealedKey: sameExam ? (saved.revealedKey || null) : null,
       self: sameExam ? (saved.self || {}) : {},
       selfSent: sameExam ? !!saved.selfSent : false,
       screen: 'task', confirming: false, sendOk: null, sendTimer: null, mounted: false, lastInput: null, app: null,
     };
+    // Návrat do rozpracovanej písomky po obnovení stránky sa počíta ako opustenie
+    // (ak medzi posledným uložením a návratom uplynulo viac než krátka rezerva).
+    if (sameExam && !S.submitted) {
+      const gap = Date.now() - (saved.at || 0);
+      if (gap > REFRESH_GRACE_MS) { if (!saved.away) S.leaves++; S.awayMs += gap; }
+    }
     document.addEventListener('visibilitychange', onVisibility);
     window.addEventListener('beforeunload', onBeforeUnload);
+    window.addEventListener('pagehide', onPageHide);
+    window.addEventListener('blur', onBlur);
+    window.addEventListener('focus', onFocus);
     saveLocal();
     sendNow(); // po opätovnom pripojení hneď pošle uložené odpovede učiteľke
+    requestWake();
   }
 
   function end() {
@@ -349,6 +476,10 @@
     clearTimeout(S.sendTimer);
     document.removeEventListener('visibilitychange', onVisibility);
     window.removeEventListener('beforeunload', onBeforeUnload);
+    window.removeEventListener('pagehide', onPageHide);
+    window.removeEventListener('blur', onBlur);
+    window.removeEventListener('focus', onFocus);
+    try { if (S.wake) S.wake.release(); } catch (_) { /* nič */ }
     S = null;
   }
 
@@ -364,7 +495,10 @@
   function submit() {
     if (!S) return;
     if (!S.submitted) {
+      if (S.hiddenAt) { S.awayMs += Date.now() - S.hiddenAt; S.hiddenAt = 0; }
+      closeBlur();
       S.submitted = true;
+      try { if (S.wake) S.wake.release(); } catch (_) { /* nič */ }
       saveLocal();
       sendNow();
     } else {
@@ -384,7 +518,8 @@
   // --- Vykresľovanie ---------------------------------------------------------------
 
   function topBar() {
-    return `<div class="module-topic-bar"><span>Písomka${S.group ? ' · skupina ' + esc(S.group) : ''}</span><strong>${esc(S.exam.title)}</strong></div>`;
+    return `<div class="module-topic-bar"><span>Písomka${S.group ? ' · skupina ' + esc(S.group) : ''}</span><strong>${esc(S.exam.title)}</strong></div>
+      ${S.submitted ? '' : `<p class="muted small-note">Opustenia stránky: <b>${S.leaves}</b> · nezameranie okna: <b>${S.blurs}</b> · opustenia sa zaznamenávajú a vidí ich učiteľka.</p>`}`;
   }
 
   function render() {
@@ -719,6 +854,6 @@
     parseNumber, equalNumber, gradeStep, gradeSubmission, publicExam, filterExam, isAnswered,
     formatValue, formatKey, fmtPts, resultTasksHtml, fetchExam, EMPTY_SET, NONE,
     // žiak
-    loadSaved, begin, play, end, active, onTeacher,
+    loadSaved, begin, play, end, active, onTeacher, pending, discardPending, setLive, locked, noteNavigationAttempt,
   };
 })();

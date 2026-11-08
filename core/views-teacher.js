@@ -1071,7 +1071,8 @@
             <strong>${esc(nick)}</strong> ${MARKS[mk.state] ? `<span title="${esc(MARKS[mk.state][1])}">${MARKS[mk.state][0]}</span>` : ''}${mk.note ? '<span title="Má poznámku">📝</span>' : ''}
             <span>${ex.group ? 'skupina ' + esc(ex.group) : 'skupina —'}</span>
             <span>${esc(examStageText(st))} ${examSelfBadge(exam, ex.self)}</span>
-            <span title="Koľkokrát žiak opustil aplikáciu">${ex.leaves ? '⚠ opustil ' + (Number(ex.leaves) || 0) + '×' : ''}</span>
+            <span title="Koľkokrát žiak opustil aplikáciu">${ex.leaves ? '⚠ opustil ' + (Number(ex.leaves) || 0) + '×' + (ex.awayMs ? ' (' + window.MathCalc.formatDuration(ex.awayMs) + ')' : '') : ''}${ex.away ? ' · práve mimo' : ''}</span>
+            <span title="Okno stratilo zameranie, ale stránka zostala viditeľná (plávajúce okno, rozdelená obrazovka, notifikácia)">${ex.blurs ? '◐ okno nezamerané ' + (Number(ex.blurs) || 0) + '×' + (ex.blurMs ? ' (' + window.MathCalc.formatDuration(ex.blurMs) + ')' : '') : ''}${ex.blurAway ? ' · práve nezamerané' : ''}</span>
             <span>${gradeLine(g, grading)}</span>
           </summary>
           <div class="exam-student-body">
@@ -1224,7 +1225,7 @@
     if (!nicks.length) { alert('Zatiaľ nie sú žiadne výsledky na export.'); return; }
     const tasksA = exam.groups.A.tasks;
     const selfSkills = (exam.reflection && exam.reflection.skills) || [];
-    const head = ['Žiak (meno a priezvisko)', 'Skupina', 'Stav', 'Body (bez bonusu)', 'Bonus', 'Maximum', 'Percentá', ...(grading.enabled ? ['Známka'] : []), 'Opustenia aplikácie', 'Značka učiteľky', 'Poznámka učiteľky',
+    const head = ['Žiak (meno a priezvisko)', 'Skupina', 'Stav', 'Body (bez bonusu)', 'Bonus', 'Maximum', 'Percentá', ...(grading.enabled ? ['Známka'] : []), 'Opustenia aplikácie', 'Čas mimo aplikácie', 'Okno nezamerané (počet)', 'Okno nezamerané (čas)', 'Značka učiteľky', 'Poznámka učiteľky',
       ...selfSkills.map(sk => `Sebahodnotenie: ${sk}`)];
     tasksA.forEach((t, i) => {
       head.push(`Úloha ${i + 1}: body`);
@@ -1247,6 +1248,9 @@
         g ? g.total : '', g ? g.bonus : '', g ? g.max : '', g ? `${g.percent} %` : '',
         ...(grading.enabled ? [g ? MathScore.gradeForPercent(g.percent, grading) : ''] : []),
         ex.leaves || 0,
+        ex.awayMs ? window.MathCalc.formatDuration(ex.awayMs) : '',
+        ex.blurs || 0,
+        ex.blurMs ? window.MathCalc.formatDuration(ex.blurMs) : '',
         (MARKS[(marks[nick] || {}).state] || [])[1] || '', (marks[nick] || {}).note || '',
         ...selfSkills.map(sk => SELF_TEXT[(ex.self || {})[sk]] || '')];
       tasksA.forEach((t, i) => {
