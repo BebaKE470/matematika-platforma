@@ -331,13 +331,13 @@
     "topic": "Vennove diagramy",
     "lesson": "Hodina 24",
     "lessonOrder": 24,
-    "time": "16–22 min",
+    "time": "25–30 min",
     "status": "ready",
-    "type": "Objavovanie → reprezentácia → zošit → argumentácia",
+    "type": "Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka",
     "skills": [
       "Vennov diagram",
-      "reprezentácia",
-      "čítanie podmienok"
+      "počty prvkov v oblastiach",
+      "príprava na písomku"
     ],
     "file": "modules/1-rocnik/mnoziny/24-vennove-diagramy.js"
   },
@@ -349,13 +349,13 @@
     "topic": "Zložené úlohy – kombinované operácie",
     "lesson": "Hodina 25",
     "lessonOrder": 25,
-    "time": "16–22 min",
+    "time": "25–30 min",
     "status": "ready",
-    "type": "Objavovanie → reprezentácia → zošit → argumentácia",
+    "type": "Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka",
     "skills": [
       "kombinované operácie",
-      "zátvorky",
-      "Vennov diagram"
+      "zátvorky a doplnok",
+      "príprava na písomku"
     ],
     "file": "modules/1-rocnik/mnoziny/25-zlozene-ulohy-kombinovane-operacie.js"
   },
@@ -367,13 +367,13 @@
     "topic": "Aplikačné úlohy s množinami",
     "lesson": "Hodina 26",
     "lessonOrder": 26,
-    "time": "16–22 min",
+    "time": "30–35 min",
     "status": "ready",
-    "type": "Objavovanie → reprezentácia → zošit → argumentácia",
+    "type": "Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka",
     "skills": [
-      "modelovanie",
-      "kardinalita",
-      "aplikačné úlohy"
+      "slovné úlohy s množinami",
+      "vzorec |A∪B|",
+      "príprava na písomku"
     ],
     "file": "modules/1-rocnik/mnoziny/26-aplikacne-ulohy-s-mnozinami.js"
   },

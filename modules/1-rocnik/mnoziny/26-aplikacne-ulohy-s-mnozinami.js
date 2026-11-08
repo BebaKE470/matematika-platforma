@@ -13,9 +13,9 @@ MathPlatform.registerModule({
       "V zdrojovom tematickom pláne nie je pri tomto tematickom celku samostatne vyplnený výkonový štandard; ciele modulu sú didaktickým rozpracovaním názvu a poradia tém, nie doplnením oficiálneho štandardu."
     ],
     "goals": [
-      "porozumieť téme „Aplikačné úlohy s množinami“",
-      "prepájať slovný, symbolický a grafický zápis",
-      "zdôvodniť riešenie a skontrolovať ho na konkrétnom príklade"
+      "pripraviť sa na slovné úlohy z kontrolnej písomnej práce: aspoň jedno, ani jedno, iba jedno, práve jedno",
+      "preložiť slovnú úlohu na množiny a pracovať s diagramom od prieniku smerom von",
+      "použiť vzorec |A ∪ B| = |A| + |B| − |A ∩ B| aj „naopak“ na dopočítanie neznámej"
     ],
     "competencies": [
       "matematická komunikácia",
@@ -28,76 +28,228 @@ MathPlatform.registerModule({
       "Obsahuje aj originálnu maturitnú úlohu zo zbierky (2023, úloha 28), zaradenú až po osvojení potrebných množinových operácií; využíva aj bežné poznatky o deliteľnosti zo ZŠ."
     ],
     "flow": [
-      "4–5 min: krátky problém pri tabuli",
-      "15–20 min: vybrané digitálne aktivity",
-      "8–10 min: zápis do zošita a ručná úloha",
-      "5 min: spoločné zdôvodnenie"
+      "3 min: kde sme v celku a čo bude v písomke",
+      "15–18 min: digitálne cvičenie v štýle písomky (slovné úlohy po krokoch, hľadanie chyby)",
+      "8–10 min: samostatná úloha na papieri (BEZ MOBILU) a zbierka úloh podľa úrovne",
+      "5 min: spoločný rozbor najčastejších chýb podľa živých výsledkov",
+      "voliteľne: maturitná úloha ako výzva navyše pre rýchlejších žiakov"
     ],
     "diagnostics": [
-      "rozlišuje prvok a množinu/podmnožinu podľa témy",
-      "číta symbolický zápis bez hádania",
-      "vie výsledok vysvetliť slovami alebo diagramom"
+      "rozlišuje „hrá futbal“ (celé A) od „hrá iba futbal“ (A − B)",
+      "používa vzorec správne aj na dopočítanie neznámej (|B| alebo |A ∩ B|)",
+      "vie povedať, čo znamenajú „aspoň jeden“, „ani jeden“ a „práve jeden“"
     ],
     "partialUse": [
-      "Modul nemusí byť použitý celý. Vyberte iba tie aktivity, ktoré v danej hodine podporia učenie.",
+      "Modul je prípravou na písomku: pri nedostatku času vynechajte zbierku a maturitnú výzvu.",
       "Mobil nenahrádza ručné riešenie, presný zápis ani argumentáciu."
     ]
   },
   "student": {
-    "title": "Množiny v dátach a praxi",
+    "title": "Aplikačné úlohy: príprava na písomku",
     "subtitle": "Téma 26 · Aplikačné úlohy s množinami",
-    "intro": "Pracuj presne: najprv pochop význam zápisu, potom počítaj alebo kresli a nakoniec svoje rozhodnutie zdôvodni.",
-    "estimatedTime": "15–18 min",
+    "intro": "V písomke ťa čaká slovná úloha so štyrmi otázkami (aspoň jeden, ani jeden, iba jeden, práve jeden). Naučíš sa ju riešiť podľa pevného postupu.",
+    "estimatedTime": "30–35 min",
     "activities": [
       {
         "id": "recap",
         "type": "explain",
         "phase": "OPAKUJ",
-        "title": "Čo už vieme",
-        "html": "<p>Poznáme štyri operácie s množinami aj to, ako ich čítať vo Vennovom diagrame a kombinovať v jednom zápise.</p><p>Dnes ich použijeme na <strong>reálne situácie</strong> — napríklad na počítanie, koľko ľudí patrí aspoň do jednej z dvoch skupín.</p>"
+        "title": "Kde sme a čo bude v písomke",
+        "html": "<p>Vieme čítať Vennov diagram aj vyhodnocovať zložené výrazy. Dnes to použijeme na <strong>slovné úlohy</strong>.</p><p>V písomke dostaneš zadanie typu „v triede je 32 žiakov, jedna skupina hrá šach, druhá basketbal, niektorí oba“ a budeš odpovedať na viac otázok. Každá správna odpoveď je samostatný bod.</p>"
       },
       {
         "id": "topic-intro",
         "type": "intro",
         "goals": [
-          "preložiť slovnú úlohu na jazyk množín",
-          "použiť vzorec |A∪B| = |A|+|B|−|A∩B| v praktickej situácii"
+          "preložiť slovnú úlohu na množiny a diagram",
+          "rozlišiť „aspoň jeden“, „ani jeden“, „iba jeden“ a „práve jeden“",
+          "použiť vzorec |A ∪ B| = |A| + |B| − |A ∩ B| aj naopak"
         ]
       },
       {
-        "id": "visual",
-        "type": "info",
+        "id": "method",
+        "type": "explain",
         "phase": "POCHOP",
-        "title": "Množiny v dátach a praxi",
-        "html": "<div class=\"logic-visual\"><svg viewBox=\"0 0 760 300\"><g font-family=\"system-ui\"><circle cx=\"315\" cy=\"145\" r=\"105\" fill=\"currentColor\" opacity=\".07\" stroke=\"currentColor\" stroke-width=\"3\"/><circle cx=\"445\" cy=\"145\" r=\"105\" fill=\"currentColor\" opacity=\".12\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"250\" y=\"65\" font-size=\"22\">A</text><text x=\"495\" y=\"65\" font-size=\"22\">B</text><text x=\"380\" y=\"285\" text-anchor=\"middle\" font-size=\"18\">Prekrytie kruhov = A ∩ B</text></g></svg></div>",
-        "continueLabel": "Pokračovať"
+        "title": "Postup pri slovnej úlohe",
+        "html": "<ol class=\"steps\"><li>Pomenuj množiny (A = …, B = …) a zapíš čísla: |A|, |B|, |A ∩ B| a |U|.</li><li>Nakresli diagram a <strong>najprv vyplň prienik</strong>.</li><li>Do „iba A“ a „iba B“ vypočítaj rozdiel: |A| − |A ∩ B| a |B| − |A ∩ B|.</li><li>Mimo kruhov je |U| − |A ∪ B|.</li><li>Odpovedz na otázku vetou.</li></ol><div class=\"logic-visual\"><svg viewBox=\"0 0 760 310\"><g font-family=\"system-ui\" text-anchor=\"middle\"><rect x=\"130\" y=\"15\" width=\"500\" height=\"270\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"150\" y=\"40\" font-size=\"20\" text-anchor=\"start\">U</text><circle cx=\"315\" cy=\"145\" r=\"105\" fill=\"currentColor\" opacity=\".07\" stroke=\"currentColor\" stroke-width=\"3\"/><circle cx=\"445\" cy=\"145\" r=\"105\" fill=\"currentColor\" opacity=\".12\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"250\" y=\"62\" font-size=\"22\" font-weight=\"700\">A</text><text x=\"510\" y=\"62\" font-size=\"22\" font-weight=\"700\">B</text><text x=\"275\" y=\"155\" font-size=\"32\" font-weight=\"700\">12</text><text x=\"275\" y=\"180\" font-size=\"14\">iba A</text><text x=\"380\" y=\"155\" font-size=\"32\" font-weight=\"700\">6</text><text x=\"380\" y=\"180\" font-size=\"14\">A ∩ B</text><text x=\"485\" y=\"155\" font-size=\"32\" font-weight=\"700\">8</text><text x=\"485\" y=\"180\" font-size=\"14\">iba B</text><text x=\"175\" y=\"245\" font-size=\"28\" font-weight=\"700\">4</text><text x=\"175\" y=\"266\" font-size=\"14\">mimo oboch</text></g></svg></div><p>A = autobus, B = električka. Žiakov je 30, autobusom ide 18, električkou 14 a oboma 6.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Iba autobus: 18 − 6 = <strong>12</strong>, iba električka: 14 − 6 = <strong>8</strong>.</p><p>Aspoň jeden prostriedok: |A ∪ B| = 18 + 14 − 6 = <strong>26</strong>. Ani jeden: 30 − 26 = <strong>4</strong>.</p><p>Práve jeden prostriedok: 12 + 8 = <strong>20</strong>.</p></div><div class=\"warning\"><strong>Pozor:</strong> „18 žiakov ide autobusom“ znamená všetci z A vrátane tých, čo idú aj električkou. Neznamená to iba autobusom.</div>",
+        "remember": "Prienik vyplň ako prvý. Potom od neho odčítaj a dopočítaj zvyšné oblasti."
       },
       {
-        "id": "start",
+        "id": "match",
+        "type": "matrix",
+        "phase": "OVER SI",
+        "skill": "preklad do množín",
+        "title": "Slová na množiny (A = hrá futbal, B = hrá volejbal)",
+        "labels": [
+          "A ∩ B",
+          "A ∪ B",
+          "A − B",
+          "B − A",
+          "(A ∪ B)′"
+        ],
+        "items": [
+          {
+            "text": "hrá aspoň jeden z oboch športov",
+            "answer": "A ∪ B"
+          },
+          {
+            "text": "hrá futbal aj volejbal",
+            "answer": "A ∩ B"
+          },
+          {
+            "text": "hrá iba futbal (nie volejbal)",
+            "answer": "A − B"
+          },
+          {
+            "text": "hrá iba volejbal (nie futbal)",
+            "answer": "B − A"
+          },
+          {
+            "text": "nehrá ani jeden z oboch športov",
+            "answer": "(A ∪ B)′"
+          }
+        ]
+      },
+      {
+        "id": "c-a",
         "type": "choice",
-        "phase": "OBJAVUJ",
-        "skill": "modelovanie",
-        "question": "V skupine 30 žiakov používa 18 autobus, 14 električku a 6 oboje. Koľkí používajú aspoň jeden z týchto spôsobov?",
+        "phase": "OVER SI",
+        "skill": "aspoň jeden",
+        "question": "V skupine 40 turistov hovorí 22 anglicky, 18 nemecky a 7 turistov hovorí oboma jazykmi. Koľko turistov hovorí aspoň jedným z týchto dvoch jazykov?",
         "options": [
-          "20",
-          "26",
-          "32"
+          "47",
+          "33",
+          "40"
         ],
         "answer": 1,
-        "correct": "18+14−6=26.",
-        "hint": "Nakresli si malý diagram alebo vypíš prvky."
+        "correct": "22 + 18 − 7 = 33. Siedmich turistov sme v súčte 22 + 18 započítali dvakrát.",
+        "hint": "Kto hovorí oboma jazykmi, bol v súčte započítaný dvakrát. Čo s tým?"
       },
       {
-        "id": "notebook",
-        "type": "explain",
-        "phase": "NOVÝ ZÁPIS",
-        "title": "Vzorec „aspoň v jednej z dvoch“",
-        "html": "<p>Pre dve množiny platí:</p><div class=\"formula\">|A ∪ B| = |A| + |B| − |A ∩ B|</div><p>Spoločné prvky (A∩B) sa v súčte |A|+|B| započítajú dvakrát, preto ich raz odčítame.</p><p>Príklad: 18 žiakov ide autobusom, 14 električkou, 6 oboma → |A∪B| = 18+14−6 = 26 žiakov používa aspoň jeden dopravný prostriedok.</p>"
+        "id": "n-none",
+        "type": "numberInput",
+        "phase": "OVER SI",
+        "skill": "Koľko žiakov nechodí ani na jeden krúžok",
+        "title": "Koľko žiakov nechodí ani na jeden krúžok",
+        "prompt": "V triede je 28 žiakov. Na futbal chodí 15 žiakov, na tenis 12 žiakov a 5 žiakov chodí na oba. Koľko žiakov nechodí ani na futbal, ani na tenis?",
+        "validate": "exact",
+        "answer": 6,
+        "success": "Aspoň na jeden chodí 15 + 12 − 5 = 22 žiakov, ani na jeden teda 28 − 22 = 6.",
+        "hint": "Najprv zisti, koľko žiakov chodí aspoň na jeden z krúžkov, a odpočítaj ich od všetkých.",
+        "reveal": "Správne je 6: aspoň jeden = 15 + 12 − 5 = 22, ani jeden = 28 − 22."
+      },
+      {
+        "id": "n-only",
+        "type": "numberInput",
+        "phase": "OVER SI",
+        "skill": "Koľko hrá iba šach",
+        "title": "Koľko hrá iba šach",
+        "prompt": "Z 50 žiakov hrá 22 šach, 25 basketbal a 8 hrá šach aj basketbal. Koľko žiakov hrá iba šach?",
+        "validate": "exact",
+        "answer": 14,
+        "success": "Z 22 šachistov hrá 8 aj basketbal, iba šach hrá 22 − 8 = 14 žiakov.",
+        "hint": "Medzi tými, čo hrajú šach, sú aj tí, čo hrajú oba športy. Tých treba odpočítať.",
+        "reveal": "Správne je 14: 22 − 8."
+      },
+      {
+        "id": "c-b",
+        "type": "choice",
+        "phase": "OVER SI",
+        "skill": "práve jeden",
+        "question": "Z 50 žiakov hrá 22 šach, 25 basketbal a 8 hrá šach aj basketbal. Koľko žiakov hrá práve jeden z týchto dvoch športov (teda buď iba šach, alebo iba basketbal)?",
+        "options": [
+          "31",
+          "39",
+          "47"
+        ],
+        "answer": 0,
+        "correct": "Iba šach 22 − 8 = 14, iba basketbal 25 − 8 = 17, spolu 14 + 17 = 31.",
+        "hint": "Práve jeden znamená, že oba športy hrať nesmie. Spočítaj „iba šach“ a „iba basketbal“."
+      },
+      {
+        "id": "hunt",
+        "type": "choice",
+        "phase": "NÁJDI CHYBU",
+        "skill": "hľadanie chyby",
+        "question": "V triede je 30 žiakov, 16 hrá futbal, 12 volejbal a 5 hrá oba športy. Žiak počítal: „Iba futbal hrá 16 − 12 = 4 žiaci.“ V čom je chyba?",
+        "options": [
+          "Mal pripočítať 5 žiakov, ktorí hrajú oba športy.",
+          "Mal vydeliť 16 dvoma, lebo športy sú dva.",
+          "Od 16 treba odpočítať 5 žiakov, ktorí hrajú aj volejbal, nie všetkých 12 volejbalistov. Správne je 16 − 5 = 11."
+        ],
+        "answer": 2,
+        "correct": "Presne. Odčítavame len prienik (futbal aj volejbal), lebo iba tí sú medzi futbalistami navyše.",
+        "hint": "Koľkí z futbalistov hrajú aj volejbal? Práve tých treba vyradiť."
+      },
+      {
+        "id": "n-rev",
+        "type": "numberInput",
+        "phase": "OVER SI",
+        "skill": "Spätné určenie |B|",
+        "title": "Spätné určenie |B|",
+        "prompt": "Pre množiny A a B platí |A| = 15, |A ∪ B| = 24 a |A ∩ B| = 4. Koľko prvkov má množina B?",
+        "validate": "exact",
+        "answer": 13,
+        "success": "Zo vzorca 24 = 15 + |B| − 4 dostaneme |B| = 24 − 15 + 4 = 13.",
+        "hint": "Dosaď do vzorca |A ∪ B| = |A| + |B| − |A ∩ B| a vyrieš rovnicu s neznámou |B|.",
+        "reveal": "Správne je 13: 24 = 15 + |B| − 4, teda |B| = 13."
+      },
+      {
+        "id": "paper",
+        "type": "notebook",
+        "phase": "BEZ MOBILU",
+        "title": "Úloha na papier",
+        "html": "<p>Odlož zariadenie. Na zájazde je 90 žiakov. Hrad navštívilo 54 žiakov, jaskyňu 47 žiakov a obe miesta 25 žiakov.</p><ol type=\"a\"><li>Nakresli Vennov diagram a vyplň počty vo všetkých štyroch oblastiach.</li><li>Koľko žiakov navštívilo aspoň jedno z miest?</li><li>Koľko žiakov nenavštívilo ani jedno?</li><li>Koľko žiakov navštívilo práve jedno miesto?</li></ol><p>Zapíš celý postup tak, ako by si ho písal/a do písomky.</p>"
+      },
+      {
+        "id": "zbierka",
+        "type": "taskList",
+        "phase": "PRECVIČ",
+        "skill": "zbierka: aplikačné úlohy",
+        "title": "Zbierka úloh (na papieri)",
+        "html": "<p>Riešenia píš do zošita aj s diagramom. Hotovú úlohu odškrtni. „Zobraz riešenie“ použi až na kontrolu.</p>",
+        "items": [
+          {
+            "level": "zaklad",
+            "text": "V triede je 26 žiakov. Psa má doma 13 žiakov, mačku 11 žiakov a 4 žiaci majú psa aj mačku. Koľko žiakov má aspoň jedno z týchto zvierat a koľko ani jedno?",
+            "answer": "Aspoň jedno: 13 + 11 − 4 = 20 žiakov<br>Ani jedno: 26 − 20 = 6 žiakov"
+          },
+          {
+            "level": "zaklad",
+            "text": "V skupine 45 ľudí si 28 objednalo kávu, 19 čaj a 6 si objednalo oboje. Koľko ľudí si objednalo iba kávu a koľko iba čaj?",
+            "answer": "Iba kávu: 28 − 6 = 22 ľudí<br>Iba čaj: 19 − 6 = 13 ľudí"
+          },
+          {
+            "level": "rozsirenie",
+            "text": "Zo 100 opýtaných vlastní 63 bicykel, 41 kolobežku a 18 vlastní oboje. Koľko ľudí nevlastní ani jedno a koľko vlastní práve jedno z nich?",
+            "answer": "Aspoň jedno: 63 + 41 − 18 = 86<br>Ani jedno: 100 − 86 = 14<br>Práve jedno: (63 − 18) + (41 − 18) = 45 + 23 = 68"
+          },
+          {
+            "level": "rozsirenie",
+            "text": "Zo 60 žiakov je 38 prihlásených na krúžok A a 35 na krúžok B. Každý žiak chodí aspoň na jeden z nich. Koľko žiakov chodí na oba krúžky?",
+            "answer": "60 = 38 + 35 − |A ∩ B|, teda |A ∩ B| = 73 − 60 = 13 žiakov"
+          },
+          {
+            "level": "bonus",
+            "text": "V triede s 30 žiakmi chodí 17 na angličtinu a 14 na nemčinu. Ani jeden z týchto jazykov sa neučí 5 žiakov. Koľko žiakov sa učí oba jazyky a koľko iba angličtinu?",
+            "answer": "Aspoň jeden jazyk: 30 − 5 = 25<br>Oba: 17 + 14 − 25 = 6<br>Iba angličtinu: 17 − 6 = 11"
+          }
+        ]
+      },
+      {
+        "id": "explain",
+        "type": "selfWrite",
+        "phase": "VYSVETLI",
+        "skill": "matematická komunikácia",
+        "title": "Postup pri slovnej úlohe",
+        "prompt": "Vlastnými slovami opíš, ako zo zadania slovnej úlohy zistíš, koľko ľudí nepatrí ani do jednej skupiny.",
+        "model": "<strong>MOŽNÁ FORMULÁCIA:</strong> Najprv pomenujem množiny a vypíšem čísla. Zo vzorca |A ∪ B| = |A| + |B| − |A ∩ B| zistím, koľkí patria aspoň do jednej skupiny. Počet tých, čo nepatria do žiadnej, je celkový počet mínus |A ∪ B|.",
+        "placeholder": "Najprv..., potom..."
       },
       {
         "id": "matura",
         "type": "choice",
-        "phase": "VÝZVA",
+        "phase": "VÝZVA (navyše)",
         "skill": "Maturitný prenos",
         "question": "Maturitná úloha (2023, úloha 28): A sú kladné celé čísla deliteľné 5, B čísla menšie ako 200 a C čísla so zvyškom 3 po delení 7. Koľko prvkov má (A∩B)−C?",
         "options": [
@@ -109,68 +261,21 @@ MathPlatform.registerModule({
         ],
         "answer": 0,
         "correct": "Správne: 33. V A∩B je 39 kladných násobkov 5 menších ako 200. Do C z nich patria 10, 45, 80, 115, 150 a 185, teda 6 čísel. Preto 39 − 6 = 33.",
-        "hint": "Najprv vypíš alebo spočítaj násobky 5 menšie ako 200. Potom hľadaj tie, ktoré dávajú po delení 7 zvyšok 3."
-      },
-      {
-        "id": "explain",
-        "type": "selfWrite",
-        "phase": "VYSVETLI",
-        "skill": "Matematická komunikácia",
-        "title": "Jedna veta nestačí bez dôvodu",
-        "prompt": "Vysvetli jednou až dvoma vetami, podľa čoho si pri poslednej úlohe rozhodol/a.",
-        "model": "Možná presná formulácia: V slovnej úlohe najprv určím, čo predstavujú jednotlivé množiny, a slovné podmienky preložím na prienik, zjednotenie alebo rozdiel. Výsledok potom interpretujem späť v kontexte úlohy.",
-        "placeholder": "Rozhodol/a som tak, pretože..."
-      },
-      {
-        "id": "extra-a",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "Aplikácie množín",
-        "question": "V triede 12 žiakov hrá futbal, 8 volejbal a 3 oba športy. Koľko žiakov hrá aspoň jeden z týchto športov?",
-        "options": [
-          "20",
-          "23",
-          "17"
-        ],
-        "answer": 2,
-        "correct": "Pri súčte 12+8 sme troch žiakov započítali dvakrát, preto 12+8−3=17.",
-        "hint": "Spoločnú časť treba odpočítať raz."
-      },
-      {
-        "id": "extra-b",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "Aplikácie množín",
-        "question": "Prečo pri počítaní |A ∪ B| odčítavame |A ∩ B|?",
-        "options": [
-          "Lebo prvky prieniku boli v |A|+|B| započítané dvakrát.",
-          "Lebo prienik do zjednotenia nepatrí.",
-          "Lebo zjednotenie je vždy menšie ako prienik."
-        ],
-        "answer": 0,
-        "correct": "Presne. Odčítaním spoločnej časti opravíme dvojité započítanie.",
-        "hint": "Predstav si dva prekrývajúce sa kruhy."
-      },
-      {
-        "id": "extra-c",
-        "type": "selfWrite",
-        "phase": "VYSVETLI",
-        "skill": "Matematická komunikácia",
-        "title": "Vysvetli model",
-        "prompt": "Vlastnými slovami opíš, čo v slovnej úlohe znamenajú A, B, A ∩ B a A ∪ B.",
-        "model": "A a B predstavujú dve sledované skupiny. A ∩ B sú objekty v oboch skupinách a A ∪ B všetky objekty, ktoré patria aspoň do jednej z nich."
+        "hint": "Najprv vypíš alebo spočítaj násobky 5 menšie ako 200. Potom hľadaj tie, ktoré dávajú po delení 7 zvyšok 3.",
+        "title": "Maturitná výzva"
       },
       {
         "id": "reflection",
         "type": "reflection",
         "phase": "ZÁVER",
-        "title": "Ako som na tom?",
+        "title": "Som pripravený/á na písomku?",
         "skills": [
-          "modelovanie",
-          "kardinalita",
-          "aplikačné úlohy"
+          "preklad slovnej úlohy do množín",
+          "aspoň jeden / ani jeden / práve jeden",
+          "vzorec |A ∪ B| = |A| + |B| − |A ∩ B|",
+          "dopočítanie neznámej zo vzorca"
         ],
-        "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka; porovnaj svoj pocit s výsledkom úloh."
+        "prompt": "Označ, ako dobre to zvládaš. Nie je to známka; porovnaj svoj pocit s výsledkom úloh. Čo máš 🔴 alebo 🟡, si pred písomkou ešte raz prejdi."
       }
     ]
   },
