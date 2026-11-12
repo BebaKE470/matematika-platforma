@@ -15,4 +15,7 @@ module.exports = {
   '2-u04-h032p': require('./2-u04-h032p.js'),
   '3-u01-h020': require('./3-u01-h020.js'),
   '3-u01-h020p': require('./3-u01-h020p.js'),
+  '3-u02-h033b': require('./3-u02-h033b.js'),
+  '3-u02-h040b': require('./3-u02-h040b.js'),
+  '3-u02-h040p': require('./3-u02-h040p.js'),
 };
