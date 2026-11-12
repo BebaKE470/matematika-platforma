@@ -1044,71 +1044,74 @@
   {
     id: '2-u04-h024', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
     topic: "Lineárne nerovnice a ekvivalentné úpravy pri jej riešení", lesson: "Hodina 24", lessonOrder: 24,
-    time: "cca 15 min", status: 'ready',
-    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    time: "25–35 min", status: 'ready',
+    type: "Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka",
     skills: ["riešenie","matematická komunikácia"],
     file: "modules/2-rocnik/linearne-nerovnice/24-linearne-nerovnice-a-ekvivalentne-upravy-pri-jej-rieseni.js"
   },
   {
     id: '2-u04-h025', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
     topic: "Lineárne nerovnice s neznámou v menovateli", lesson: "Hodina 25", lessonOrder: 25,
-    time: "cca 15 min", status: 'ready',
-    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    time: "25–35 min", status: 'ready',
+    type: "Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka",
     skills: ["riešenie","matematická komunikácia"],
     file: "modules/2-rocnik/linearne-nerovnice/25-linearne-nerovnice-s-neznamou-v-menovateli.js"
   },
   {
     id: '2-u04-h026', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
     topic: "Riešenie úloh", lesson: "Hodina 26", lessonOrder: 26,
-    time: "cca 15 min", status: 'ready',
-    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    time: "25–35 min", status: 'ready',
+    type: "Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka",
     skills: ["riešenie","matematická komunikácia"],
     file: "modules/2-rocnik/linearne-nerovnice/26-riesenie-uloh.js"
   },
   {
     id: '2-u04-h027', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
     topic: "Lineárne nerovnice s absolútnou hodnotou", lesson: "Hodina 27", lessonOrder: 27,
-    time: "cca 15 min", status: 'ready',
-    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    time: "25–35 min", status: 'ready',
+    type: "Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka",
     skills: ["riešenie","matematická komunikácia"],
     file: "modules/2-rocnik/linearne-nerovnice/27-linearne-nerovnice-s-absolutnou-hodnotou.js"
   },
   {
     id: '2-u04-h028', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
     topic: "Riešenie úloh", lesson: "Hodina 28", lessonOrder: 28,
-    time: "cca 15 min", status: 'ready',
-    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    time: "25–35 min", status: 'ready',
+    type: "Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka",
     skills: ["riešenie","matematická komunikácia"],
     file: "modules/2-rocnik/linearne-nerovnice/28-riesenie-uloh.js"
   },
+  {"id": "2-u04-h028b", "year": 2, "unit": "Lineárne nerovnice", "unitOrder": 4, "topic": "Písomka z lineárnych nerovníc", "lesson": "Hodina 28 – písomka", "lessonOrder": 28, "time": "40 min", "status": "ready", "kind": "exam", "type": "Písomka po krokoch v mobile → automatické body za postup → oprava a známka učiteľkou", "skills": ["pojmy a ekvivalentné úpravy","lineárna nerovnica a obrátenie znamienka","nerovnica s neznámou v menovateli","nerovnica s absolútnou hodnotou","zápis riešenia intervalom"], "file": "modules/2-rocnik/linearne-nerovnice/28b-pisomka-nerovnice.js"},
   {
     id: '2-u04-h029', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
     topic: "Sústava lineárnych nerovníc s jednou neznámou", lesson: "Hodina 29", lessonOrder: 29,
-    time: "cca 15 min", status: 'ready',
-    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    time: "25–35 min", status: 'ready',
+    type: "Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka",
     skills: ["riešenie","matematická komunikácia"],
     file: "modules/2-rocnik/linearne-nerovnice/29-sustava-linearnych-nerovnic-s-jednou-neznamou.js"
   },
   {
     id: '2-u04-h030', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
     topic: "Riešenie úloh", lesson: "Hodina 30", lessonOrder: 30,
-    time: "cca 15 min", status: 'ready',
-    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    time: "25–35 min", status: 'ready',
+    type: "Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka",
     skills: ["riešenie","matematická komunikácia"],
     file: "modules/2-rocnik/linearne-nerovnice/30-riesenie-uloh.js"
   },
   {
     id: '2-u04-h031', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
     topic: "Systematizácia učiva", lesson: "Hodina 31", lessonOrder: 31,
-    time: "cca 15 min", status: 'ready',
-    type: "Pochopenie → overenie → zápis do zošita → vysvetlenie → záver",
+    time: "25–35 min", status: 'ready',
+    type: "Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka",
     skills: ["riešenie","matematická komunikácia"],
     file: "modules/2-rocnik/linearne-nerovnice/31-systematizacia-uciva.js"
   },
+  {"id": "2-u04-h032p", "year": 2, "unit": "Lineárne nerovnice", "unitOrder": 4, "topic": "Príprava na písomku z celého celku Lineárne nerovnice", "lesson": "Hodina 32 – príprava", "lessonOrder": 32, "time": "45 min", "status": "ready", "kind": "exam", "type": "Príprava na písomku po krokoch v mobile → automatické body za postup → rozbor chýb učiteľkou", "skills": ["pojmy a ekvivalentné úpravy","nerovnica so zlomkami a obrátenie znamienka","nerovnica s neznámou v menovateli","nerovnice s absolútnou hodnotou","sústava nerovníc a prienik","slovná úloha","zápis riešenia intervalom"], "file": "modules/2-rocnik/linearne-nerovnice/32p-priprava-na-pisomku-nerovnice.js"},
+  {"id": "2-u04-h032b", "year": 2, "unit": "Lineárne nerovnice", "unitOrder": 4, "topic": "Kontrolná písomná práca z celého celku Lineárne nerovnice", "lesson": "Hodina 32 – písomka", "lessonOrder": 32, "time": "45 min", "status": "ready", "kind": "exam", "type": "Písomka po krokoch v mobile → automatické body za postup → oprava a známka učiteľkou", "skills": ["pojmy a ekvivalentné úpravy","nerovnica so zlomkami a obrátenie znamienka","nerovnica s neznámou v menovateli","nerovnice s absolútnou hodnotou","sústava nerovníc a prienik","slovná úloha","zápis riešenia intervalom"], "file": "modules/2-rocnik/linearne-nerovnice/32b-pisomka-nerovnice.js"},
   {
     id: '2-u04-h032', year: 2, unit: "Lineárne nerovnice", unitOrder: 4,
     topic: "Kontrolná písomná práca", lesson: "Hodina 32", lessonOrder: 32,
-    time: "cca 15 min", status: 'ready',
+    time: "10–15 min digitálne", status: 'ready',
     type: "Pochopenie → overenie → vysvetlenie → záver",
     skills: ["riešenie","matematická komunikácia"],
     file: "modules/2-rocnik/linearne-nerovnice/32-kontrolna-pisomna-praca.js"

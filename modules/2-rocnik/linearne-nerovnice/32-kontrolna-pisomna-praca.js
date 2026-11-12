@@ -3,8 +3,8 @@ MathPlatform.registerModule({
   "teacher": {
     "placement": "2. ročník · Lineárne nerovnice · 32. hodina: Kontrolná písomná práca",
     "prerequisites": [
-      "učivo ZŠ a 1. ročníka: číselná os, nerovnosti, intervaly, absolútna hodnota a algebraické úpravy",
-      "predchádzajúce učivo 2. ročníka: lineárna funkcia a lineárne rovnice; podľa poradia aj predchádzajúce hodiny tohto celku"
+      "učivo ZŠ a 1. ročníka: číselná os, nerovnosti, intervaly (zápis ⟨a;b), (−∞;a⟩ …), prienik množín a absolútna hodnota",
+      "2. ročník: lineárne rovnice, ekvivalentné úpravy nerovníc (otočenie znamienka pri násobení a delení záporným číslom), nerovnice s neznámou v menovateli, nerovnice s absolútnou hodnotou a sústavy nerovníc (hodiny 24–29)"
     ],
     "planContent": [
       "V poskytnutom tematickom pláne nie je pri tematickom celku „Lineárne nerovnice“ vyplnený samostatný obsahový štandard. Modul preto nevydáva doplnený text za oficiálny obsahový štandard; vychádza z názvu tematického celku a konkrétnej témy hodiny."
@@ -13,153 +13,199 @@ MathPlatform.registerModule({
       "V poskytnutom tematickom pláne nie je pri tematickom celku „Lineárne nerovnice“ vyplnený samostatný výkonový štandard. Ciele nižšie sú ciele tejto vyučovacej hodiny, nie vymyslený oficiálny výkonový štandard."
     ],
     "goals": [
-      "Kognitívny cieľ: žiak rozlíši a správne použije postup zodpovedajúci téme „Kontrolná písomná práca“.",
-      "Praktický cieľ: žiak zapíše riešenie presne ako nerovnosť a/alebo interval a podľa potreby ho znázorní na číselnej osi.",
-      "Afektívny cieľ: žiak systematicky kontroluje vlastný postup, prijíma korekciu chyby a vecne zdôvodní rozhodnutie.",
-      "Kritérium úspechu: v 15-minútovej digitálnej časti žiak správne vyrieši väčšinu bodovaných položiek a dokáže pomenovať rozhodujúce pravidlo alebo kontrolu."
+      "zopakovať kľúčové postupy celku: ekvivalentné úpravy a otočenie znamienka, zápis intervalom, absolútna hodnota, neznáma v menovateli, sústava a slovná úloha",
+      "overiť sa na krátkych samostatných otázkach v štýle písomky",
+      "zistiť, ktoré témy si pred písomkou ešte prejsť"
     ],
     "competencies": [
-      "presný matematický zápis a komunikácia",
-      "logické a analytické myslenie; kontrola podmienok a riešenia",
-      "prechod medzi algebraickým zápisom, intervalom a číselnou osou",
-      "samostatnosť, spolupráca a vecné zdôvodnenie postupu"
+      "matematická komunikácia",
+      "výber správneho postupu",
+      "argumentácia a kontrola výsledku",
+      "sebahodnotenie pripravenosti"
     ],
     "enrichment": [
-      "Návrh maturitného štandardu je iba obohatením spôsobu práce: reprezentácia množiny riešení, interpretácia, modelovanie, kontrola podmienok a argumentácia. Neurčuje poradie ani rozsah učiva."
+      "Návrh maturitného štandardu je použitý iba ako obohatenie spôsobu práce: interpretácia, modelovanie, reprezentácie a zdôvodnenie. Neurčuje poradie učiva."
     ],
     "flow": [
-      "0–5 min – aktivácia predchádzajúcich vedomostí a krátka problémová otázka.",
-      "5–15 min – výklad/objavovanie: kontrolná písomná práca; platforma je iba následná 15-minútová diagnostika, nie náhrada písomky. Nový postup sa najprv vysvetlí a demonštruje, až potom sa používa.",
-      "15–25 min – spoločné príklady a krátka práca vo dvojiciach; žiaci zapisujú celý postup a kontrolujú podmienky.",
-      "25–40 min – platforma približne 15 min: význam → rozhodnutie → kontrola chyby → reprezentácia → krátke zdôvodnenie. Platforma nenahrádza ručné algebraické riešenie.",
-      "40–45 min – zhrnutie, spätná väzba, prípadne krátký exit ticket mimo platformy. Pri 32. hodine digitálnu diagnostiku zaradiť až po odovzdaní písomnej práce alebo na nasledujúcej hodine; počas klasifikovanej písomky neposkytovať okamžitú spätnú väzbu."
+      "2–3 min: čo bude v písomke (typy úloh z celku)",
+      "3 min: stručné opakovanie postupu v aplikácii",
+      "6–8 min: osem samostatných kontrolných otázok s okamžitou spätnou väzbou",
+      "2 min: sebahodnotenie a rozhodnutie, čo si ešte prejsť; potom samostatná písomka na papieri"
     ],
     "diagnostics": [
-      "či žiak nemení smer nerovnosti bez dôvodu alebo ho nezabudne zmeniť pri násobení/delení záporným číslom",
-      "či zapisuje výsledok ako množinu riešení a vie ho interpretovať",
-      "či kontroluje definičné podmienky pri zlomkoch a význam absolútnej hodnoty tam, kde je potrebný"
+      "žiak otočí znamienko pri násobení a delení záporným číslom",
+      "žiak správne zapíše interval a rozlíši uzavretý a otvorený koniec",
+      "žiak rozlíši |x − a| < b (medzi) a |x − a| > b (mimo)",
+      "žiak zvládne sústavu (prienik) a slovnú úlohu na nerovnicu"
     ],
     "partialUse": [
-      "Metódy/formy: riadený rozhovor, problémová úloha, demonštrácia s otázkami, práca vo dvojiciach, individuálna práca, analýza chyby a formatívne hodnotenie.",
-      "Pomôcky: tabuľa, zošit, písacie potreby, číselná os, projektor/interaktívna tabuľa a platforma; kalkulačka len ak výpočet nie je cieľom.",
-      "Medzipredmetové vzťahy: fyzika a odborné predmety – prípustné rozsahy, limity, tolerancie a podmienky; informatika – logické podmienky.",
-      "ŠVVP: podľa konkrétneho žiaka predĺžiť čas, znížiť počet položiek bez zníženia jadra cieľa, ponechať viditeľný vzor zápisu/číselnú os, zadanie členiť na kroky a podľa podporných opatrení umožniť ústne zdôvodnenie.",
-      "Hodnotenie: priebežná slovná spätná väzba, konštruktívna korekcia, sebahodnotenie; XP nie sú známka."
+      "Modul možno použiť celý (10–15 min), alebo vybrať len otázky k témam, ktoré chcú žiaci zopakovať.",
+      "Mobil nenahrádza ručné počítanie, náčrt ani zápis postupu – počíta sa na papieri.",
+      "Hodnotenie: sebahodnotenie a formatívna spätná väzba; XP nie sú známka."
     ]
   },
   "student": {
-    "title": "Kontrolná písomná práca",
+    "title": "Kontrolná písomná práca: opakovanie celku",
     "subtitle": "Téma 32 · Lineárne nerovnice",
-    "intro": "Krátka približne 15-minútová digitálna aktivita. Počítanie a úplný algebraický postup zostávajú v zošite; platforma preveruje porozumenie, voľbu postupu, reprezentáciu a kontrolu.",
-    "estimatedTime": "cca 15 min",
+    "intro": "Pred písomkou si rýchlo prejdeš postupy celku a vyskúšaš krátke otázky v štýle písomky. Počítaj na papieri a do aplikácie zapisuj výsledok.",
+    "estimatedTime": "10–15 min",
     "activities": [
       {
-        "id": "topic-intro",
-        "type": "intro"
-      },
-      {
-        "id": "after",
+        "id": "recap",
         "type": "explain",
-        "phase": "POCHOP",
-        "title": "Po písomnej práci: krátka diagnostika",
-        "html": "<p>Táto 15-minútová digitálna časť <strong>nenahrádza kontrolnú písomnú prácu</strong>. Použi ju až po odovzdaní písomky alebo na nasledujúcej hodine ako diagnostiku: ukáže, ktorý typ úloh potrebuješ ešte upevniť.</p>"
+        "phase": "OPAKUJ",
+        "title": "Čo bude v písomke",
+        "html": "<p>Písomka overuje celý tematický celok <strong>Lineárne nerovnice</strong>: úpravy nerovníc, zápis riešenia <strong>intervalom</strong>, nerovnice s <strong>absolútnou hodnotou</strong>, <strong>neznámu v menovateli</strong>, <strong>sústavy</strong> a slovné úlohy. Zapisuj celý postup – body sa dávajú aj za správne kroky.</p>"
       },
       {
-        "id": "c1",
-        "type": "choice",
-        "phase": "OVER",
-        "skill": "riešenie",
-        "question": "Rieš −4x ≥ 20.",
-        "options": [
-          "x ≥ −5",
-          "x ≤ −5",
-          "x ≤ 5"
-        ],
-        "answer": 1,
-        "correct": "Správne. Pri delení −4 sa znak otočí.",
-        "hint": "Delíš záporným číslom."
+        "id": "topic-intro",
+        "type": "intro",
+        "goals": [
+          "pripomenúť si pravidlá úprav nerovníc a zápis intervalu",
+          "zopakovať absolútnu hodnotu, menovateľ a sústavy",
+          "vyskúšať si krátke otázky v štýle písomky"
+        ]
       },
       {
-        "id": "c2",
+        "id": "method",
+        "type": "explain",
+        "phase": "OPAKUJ",
+        "title": "Postup v skratke",
+        "html": "<ol class=\"steps\"><li>Uprav nerovnicu ekvivalentnými úpravami. Pri násobení a delení <span class=\"hl\">záporným</span> číslom otoč znamienko.</li><li>Pri |x − a| &lt; b píš −b &lt; x − a &lt; b (medzi), pri |x − a| &gt; b píš x − a &lt; −b alebo x − a &gt; b (mimo).</li><li>Pri neznámej v menovateli zisti, kedy je menovateľ nulový, a rozhodni o znamienku zlomku.</li><li>Pri sústave vezmi prienik riešení.</li><li>Výsledok zapíš intervalom a urob skúšku dosadením.</li></ol>\n<div class=\"warning\"><strong>Pozor:</strong> krajný bod patrí do riešenia iba pri „≤“ alebo „≥“. Pri „&lt;“ a „&gt;“ nepatrí. Nekonečno má vždy okrúhlu zátvorku.</div>"
+      },
+      {
+        "id": "c-sign",
         "type": "choice",
-        "phase": "OVER",
-        "skill": "riešenie",
-        "question": "Ktorá hodnota je vylúčená pri 1/(x+3) < 0?",
+        "phase": "OVER SI",
+        "skill": "ekvivalentné úpravy",
+        "question": "Vyrieš nerovnicu −4x ≥ 12. Ktorý výsledok je správny?",
         "options": [
-          "3",
-          "0",
-          "−3"
+          "x ≥ −3",
+          "x ≤ 3",
+          "x ≤ −3",
+          "x ≥ 3"
         ],
         "answer": 2,
-        "correct": "Správne. Pre x=−3 je menovateľ nula.",
-        "hint": "x+3=0."
+        "correct": "Správne. Delíme číslom −4, preto sa znamienko otočí: x ≤ −3.",
+        "hint": "Pri delení záporným číslom sa znamienko nerovnosti otočí. Skús skúšku x = −5: −4·(−5) = 20 ≥ 12."
       },
       {
-        "id": "c3",
+        "id": "n-cnt",
+        "type": "numberInput",
+        "phase": "OVER SI",
+        "skill": "lineárna nerovnica",
+        "title": "Kladné celé riešenia",
+        "prompt": "Koľko kladných celých čísel vyhovuje nerovnici 2x − 3 < 9?",
+        "validate": "exact",
+        "answer": 5,
+        "success": "2x < 12, teda x < 6. Kladné celé čísla sú 1, 2, 3, 4, 5 – teda 5.",
+        "hint": "Najprv vyrieš nerovnicu. Šestka patrí do riešenia?",
+        "reveal": "Správne je 5: x < 6, čísla 1 až 5."
+      },
+      {
+        "id": "c-iv",
         "type": "choice",
-        "phase": "OVER",
-        "skill": "riešenie",
-        "question": "Riešenie |x−5| < 2 je:",
+        "phase": "OVER SI",
+        "skill": "zápis intervalu",
+        "question": "Ktorý interval je riešením nerovnice x/3 + 1 ≥ 2?",
         "options": [
-          "(3;7)",
-          "(−∞;3) ∪ (7;∞)",
-          "⟨3;7⟩"
+          "(3;∞)",
+          "⟨3;∞)",
+          "(−∞;3⟩",
+          "⟨1;∞)"
+        ],
+        "answer": 1,
+        "correct": "Správne. x/3 ≥ 1, teda x ≥ 3. Trojka patrí (≥), preto ⟨3;∞).",
+        "hint": "Odpočítaj 1 a vynásob 3. Patrí krajný bod do riešenia pri „≥“?"
+      },
+      {
+        "id": "c-abs",
+        "type": "choice",
+        "phase": "OVER SI",
+        "skill": "absolútna hodnota",
+        "question": "Ktorý interval je riešením nerovnice |x − 3| < 2?",
+        "options": [
+          "(1;5)",
+          "(−∞;1) ∪ (5;∞)",
+          "(−1;5)",
+          "⟨1;5⟩"
         ],
         "answer": 0,
-        "correct": "Správne. Vzdialenosť od 5 je menšia ako 2.",
-        "hint": "5−2 a 5+2."
+        "correct": "Správne. −2 < x − 3 < 2, teda 1 < x < 5. Ostrá nerovnosť – krajné body nepatria.",
+        "hint": "Čísla vzdialené od 3 menej ako 2 ležia medzi 3 − 2 a 3 + 2."
       },
       {
-        "id": "c4",
+        "id": "n-abs",
+        "type": "numberInput",
+        "phase": "OVER SI",
+        "skill": "absolútna hodnota",
+        "title": "Celé riešenia",
+        "prompt": "Koľko celých čísel vyhovuje nerovnici |2x + 1| ≤ 5?",
+        "validate": "exact",
+        "answer": 6,
+        "success": "−5 ≤ 2x + 1 ≤ 5 → −6 ≤ 2x ≤ 4 → −3 ≤ x ≤ 2. Celé čísla: −3, −2, −1, 0, 1, 2 – teda 6.",
+        "hint": "Rozpíš na −5 ≤ 2x + 1 ≤ 5 a vyrieš. Krajné body patria (≤).",
+        "reveal": "Správne je 6: x ∈ ⟨−3;2⟩, čísla −3 až 2."
+      },
+      {
+        "id": "c-sys",
         "type": "choice",
-        "phase": "OVER",
-        "skill": "riešenie",
-        "question": "Riešenie sústavy x > 2 a x ≤ 8 je:",
+        "phase": "OVER SI",
+        "skill": "sústava nerovníc",
+        "question": "Ktorý interval je riešením sústavy x + 1 > 4 a 2x ≤ 12?",
         "options": [
-          "⟨2;8)",
-          "(2;8⟩",
-          "(−∞;2) ∪ ⟨8;∞)"
+          "⟨3;6)",
+          "(3;∞)",
+          "(−∞;3) ∪ ⟨6;∞)",
+          "(3;6⟩"
+        ],
+        "answer": 3,
+        "correct": "Správne. x > 3 a x ≤ 6. Prienik je (3;6⟩.",
+        "hint": "Vyrieš každú nerovnicu zvlášť. Ktorý krajný bod patrí a ktorý nie?"
+      },
+      {
+        "id": "c-den",
+        "type": "choice",
+        "phase": "OVER SI",
+        "skill": "neznáma v menovateli",
+        "question": "Pre ktoré x je zlomok 3/(x + 2) kladný?",
+        "options": [
+          "(−∞;−2)",
+          "(−2;∞)",
+          "⟨−2;∞)",
+          "(2;∞)"
         ],
         "answer": 1,
-        "correct": "Správne. Hľadáme prienik.",
-        "hint": "Obe podmienky platia súčasne."
+        "correct": "Správne. Čitateľ je kladný, zlomok je kladný práve vtedy, keď x + 2 > 0, teda x > −2. Číslo −2 nepatrí (nulový menovateľ).",
+        "hint": "Kladné číslo delené kladným je kladné. Kedy je menovateľ kladný? Patrí do riešenia hodnota, pri ktorej je menovateľ 0?"
       },
       {
-        "id": "c5",
-        "type": "choice",
-        "phase": "OVER",
-        "skill": "riešenie",
-        "question": "Ktorý zápis znamená „najviac 12“?",
-        "options": [
-          "x < 12",
-          "x ≥ 12",
-          "x ≤ 12"
-        ],
-        "answer": 2,
-        "correct": "Áno. Hodnota 12 je dovolená.",
-        "hint": "Najviac = neprekročí 12."
-      },
-      {
-        "id": "sw",
-        "type": "selfWrite",
-        "phase": "VYSVETLI",
-        "skill": "matematická komunikácia",
-        "title": "Vysvetli postup",
-        "prompt": "Vyber jeden typ chyby, ktorý sa ti pri nerovniciach môže stať, a napíš, ako ho vieš pri kontrole odhaliť.",
-        "model": "Napríklad zabudnuté otočenie znaku: po vyriešení môžem dosadiť jednu hodnotu z výsledného intervalu do pôvodnej nerovnice a overiť, či skutočne vyhovuje."
+        "id": "n-word",
+        "type": "numberInput",
+        "phase": "OVER SI",
+        "skill": "slovná úloha",
+        "title": "Stiahnuté skladby",
+        "prompt": "Predplatné stojí 4 € a každá stiahnutá skladba 0,50 €. Koľko skladieb môžeš najviac stiahnuť, ak chceš minúť najviac 12 €?",
+        "validate": "exact",
+        "answer": 16,
+        "success": "4 + 0,5x ≤ 12 → 0,5x ≤ 8 → x ≤ 16. Najviac 16 skladieb.",
+        "hint": "Zapíš 4 + 0,5x ≤ 12 a vyrieš.",
+        "reveal": "Správne je 16: 0,5x ≤ 8."
       },
       {
         "id": "reflection",
         "type": "reflection",
         "phase": "ZÁVER",
-        "title": "Ako som na tom?",
+        "title": "Som pripravený/á na písomku?",
         "skills": [
-          "lineárna nerovnica",
-          "menovateľ",
-          "absolútna hodnota",
-          "sústava"
+          "ekvivalentné úpravy a otočenie znamienka",
+          "zápis riešenia intervalom",
+          "absolútna hodnota v nerovnici",
+          "nerovnica s neznámou v menovateli",
+          "sústava nerovníc",
+          "slovná úloha"
         ],
-        "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka."
+        "prompt": "Označ, ako dobre to zvládaš. Nie je to známka; porovnaj svoj pocit s výsledkom otázok. Čo máš 🔴 alebo 🟡, si pred písomkou ešte raz prejdi."
       }
     ]
   }
