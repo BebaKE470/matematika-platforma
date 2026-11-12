@@ -6,7 +6,7 @@ MathPlatform.registerModule({
       "prirodzené a celé čísla, zlomky a desatinné čísla zo ZŠ",
       "prevod zlomku na desatinné číslo delením a skracovanie zlomkov",
       "pojmy množina, podmnožina a symboly ∈, ⊂ z celku Množiny",
-      "hodiny 28–30: deliteľnosť, NSN a NSD (pri skracovaní zlomkov)"
+      "hodiny 28–30: deliteľnosť, NSN a D(pri skracovaní zlomkov)"
     ],
     "planContent": [
       "Aktuálny tematický plán uvádza tému „Racionálne, iracionálne, reálne čísla“. Obsah modulu rešpektuje jej miesto a rozsah v pláne."
@@ -59,7 +59,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "OPAKUJ",
         "title": "Čo už o číslach vieme",
-        "html": "<p>Zo ZŠ poznáš tri skupiny čísel:</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Prirodzené čísla N</div><p class=\"term-rule\">1, 2, 3, 4, … Používame ich na počítanie predmetov.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Celé čísla Z</div><p class=\"term-rule\">… −3, −2, −1, 0, 1, 2, 3, … Pridali sme nulu a záporné čísla.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Zlomky a desatinné čísla</div><p class=\"term-rule\">Napr. 3/4 = 0,75 alebo 1/3 = 0,333… Potrebujeme ich, keď niečo delíme na časti.</p></div></div><p>Zlomok skrátiš tak, že čitateľa aj menovateľa vydelíš ich NSD (hodiny 28–30). Dnes všetky tieto čísla zaradíme do jedného systému a zistíme, že existujú aj čísla, ktoré sa zlomkom <strong>vôbec nedajú zapísať</strong>.</p>"
+        "html": "<p>Zo ZŠ poznáš tri skupiny čísel:</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Prirodzené čísla N</div><p class=\"term-rule\">1, 2, 3, 4, … Používame ich na počítanie predmetov.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Celé čísla Z</div><p class=\"term-rule\">… −3, −2, −1, 0, 1, 2, 3, … Pridali sme nulu a záporné čísla.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Zlomky a desatinné čísla</div><p class=\"term-rule\">Napr. 3/4 = 0,75 alebo 1/3 = 0,333… Potrebujeme ich, keď niečo delíme na časti.</p></div></div><p>Zlomok skrátiš tak, že čitateľa aj menovateľa vydelíš ich D(hodiny 28–30). Dnes všetky tieto čísla zaradíme do jedného systému a zistíme, že existujú aj čísla, ktoré sa zlomkom <strong>vôbec nedajú zapísať</strong>.</p>"
       },
       {
         "id": "topic-intro",
@@ -101,6 +101,43 @@ MathPlatform.registerModule({
         "phase": "NOVÝ POJEM",
         "title": "Čo je to π a prečo nie je 3,14",
         "html": "<p>Číslo <strong>π</strong> je pomer obvodu kruhu k jeho priemeru. Pri každom kruhu vyjde rovnaké číslo, ale zapísať ho zlomkom celých čísel sa nedá.</p><div class=\"compare\"><div class=\"bad\"><span class=\"mini-label\">NIE JE ROVNÉ π</span><p>3,14 &nbsp; · &nbsp; 22/7 = 3,142857… &nbsp; · &nbsp; 3,1416</p><p>Sú to len <strong>racionálne približné hodnoty</strong> (priblíženia).</p></div><div class=\"good\"><span class=\"mini-label\">SKUTOČNÉ π</span><p>3,14159265358979…</p><p>Rozvoj sa nikdy nekončí a nikdy sa nezačne pravidelne opakovať.</p></div></div><p>Pri počítaní používame približnú hodnotu, lebo nevieme zapísať všetky číslice. Symbol ≈ znamená „približne rovná sa“: π ≈ 3,14.</p>"
+      },
+      {
+        "id": "frac-add",
+        "type": "explain",
+        "phase": "NOVÝ POJEM",
+        "title": "Racionálne čísla sčítame so spoločným menovateľom z rozkladu",
+        "html": "<p>Racionálne číslo zapísané zlomkom vieme sčítať a odčítať, ak majú zlomky <span class=\"hl\">rovnaký menovateľ</span>. Najmenší spoločný menovateľ je NSN menovateľov, ktorý nájdeme z prvočíselného rozkladu (hodiny 28–30).</p><ol class=\"steps\"><li>Rozlož každý menovateľ na súčin prvočísel.</li><li>NSN: z každého prvočísla vezmi to, čo sa v rozkladoch vyskytuje najviackrát.</li><li>Rozšír každý zlomok na tento menovateľ (čitateľa vynásob tým istým číslom ako menovateľa).</li><li>Sčítaj alebo odčítaj čitateľov, menovateľ ostane.</li><li>Výsledok skráť, ak sa dá.</li></ol><div class=\"example\"><span class=\"mini-label\">PRÍKLAD 1</span><p><span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">7</span></span> + <span class=\"frac\"><span class=\"frac-num\">2</span><span class=\"frac-den\">12</span></span></p><p>7 = 7 &nbsp;·&nbsp; 12 = 2 · 2 · 3, preto NSN = 2 · 2 · 3 · 7 = 84</p><p><span class=\"frac\"><span class=\"frac-num\">3 · 12</span><span class=\"frac-den\">84</span></span> + <span class=\"frac\"><span class=\"frac-num\">2 · 7</span><span class=\"frac-den\">84</span></span> = <span class=\"frac\"><span class=\"frac-num\">36 + 14</span><span class=\"frac-den\">84</span></span> = <span class=\"frac\"><span class=\"frac-num\">50</span><span class=\"frac-den\">84</span></span> = <strong><span class=\"frac\"><span class=\"frac-num\">25</span><span class=\"frac-den\">42</span></span></strong></p><p>Tip: <span class=\"frac\"><span class=\"frac-num\">2</span><span class=\"frac-den\">12</span></span> sa dá najprv skrátiť na <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">6</span></span>; vyjde to isté.</p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD 2 (VÝSLEDOK JE ZÁPORNÝ)</span><p><span class=\"frac\"><span class=\"frac-num\">4</span><span class=\"frac-den\">15</span></span> − <span class=\"frac\"><span class=\"frac-num\">7</span><span class=\"frac-den\">20</span></span></p><p>15 = 3 · 5 &nbsp;·&nbsp; 20 = 2 · 2 · 5, preto NSN = 2 · 2 · 3 · 5 = 60 (päťka sa berie iba raz)</p><p><span class=\"frac\"><span class=\"frac-num\">4 · 4</span><span class=\"frac-den\">60</span></span> − <span class=\"frac\"><span class=\"frac-num\">7 · 3</span><span class=\"frac-den\">60</span></span> = <span class=\"frac\"><span class=\"frac-num\">16 − 21</span><span class=\"frac-den\">60</span></span> = <span class=\"frac\"><span class=\"frac-num\">−5</span><span class=\"frac-den\">60</span></span> = <strong><span class=\"frac\"><span class=\"frac-num\">−1</span><span class=\"frac-den\">12</span></span></strong></p></div><div class=\"warning\"><strong>Pozor:</strong> Menovatele sa nesčítavajú ani neodčítavajú. Pri 15 a 20 nie je spoločný menovateľ 15 · 20 = 300 zlý, len zbytočne veľký; potom treba dlhšie krátiť.</div>",
+        "remember": "Spoločný menovateľ = NSN menovateľov z prvočíselného rozkladu. Menovateľ sa pri sčítaní nemení, sčítajú sa len čitatelia."
+      },
+      {
+        "id": "n-nsn",
+        "type": "numberInput",
+        "phase": "PRECVIČ",
+        "skill": "spoločný menovateľ",
+        "title": "Najmenší spoločný menovateľ",
+        "prompt": "Chceš vypočítať 4/15 − 7/20. Rozklady menovateľov: 15 = 3 · 5 a 20 = 2 · 2 · 5. Aký je najmenší spoločný menovateľ týchto zlomkov?",
+        "validate": "exact",
+        "answer": 60,
+        "success": "NSN = 2 · 2 · 3 · 5 = 60. Päťka je v oboch rozkladoch, preto ju vezmeš iba raz.",
+        "hint": "Z každého prvočísla vezmi to, čo sa vyskytuje najviackrát v jednom z rozkladov.",
+        "reveal": "Správne je 60: 2 · 2 (z dvadsiatky), 3 (z pätnástky), 5 (spoločná)."
+      },
+      {
+        "id": "c-sum",
+        "type": "choice",
+        "phase": "PRECVIČ",
+        "skill": "súčet zlomkov",
+        "question": "Koľko je 3/7 + 2/12? (Menovatele 7 a 12 nemajú spoločného deliteľa okrem 1.)",
+        "options": [
+          "5/19",
+          "13/21",
+          "25/42",
+          "29/84"
+        ],
+        "answer": 2,
+        "correct": "n(7, 12) = 84, 3/7 = 36/84, 2/12 = 14/84, súčet 50/84 = 25/42.",
+        "hint": "Najprv spoločný menovateľ, potom čitatelia. Zlomok 2/12 môžeš skrátiť na 1/6."
       },
       {
         "id": "axis-info",
@@ -164,7 +201,7 @@ MathPlatform.registerModule({
         "answer": 5,
         "success": "0,6 = 6/10 = 3/5. Po skrátení dvojkou je menovateľ 5.",
         "hint": "0,6 sú šesť desatín, teda 6/10. Ešte zlomok skráť ich NSD.",
-        "reveal": "Správne je 5: 6/10 = 3/5, lebo NSD(6, 10) = 2."
+        "reveal": "Správne je 5: 6/10 = 3/5, lebo D(6, 10) = 2."
       },
       {
         "id": "matrix-classify",
@@ -365,6 +402,16 @@ MathPlatform.registerModule({
             "answer": "a) pravda<br>b) nepravda; 0,555… = 5/9 je racionálne (periodický rozvoj)<br>c) pravda (Z ⊂ Q)<br>d) nepravda; napr. 1/2 je racionálne, ale nie celé"
           },
           {
+            "level": "zaklad",
+            "text": "Sčítaj alebo odčítaj; menovatele rozlož na prvočísla a nájdi NSN: a) 5/6 + 3/8 b) 7/12 − 3/10 c) 1/6 + 2/15 − 1/10",
+            "answer": "a) NSN = 24: 20/24 + 9/24 = <span class=\"frac\"><span class=\"frac-num\">29</span><span class=\"frac-den\">24</span></span><br>b) NSN = 60: 35/60 − 18/60 = 17/60<br>c) NSN = 30: 5/30 + 4/30 − 3/30 = 6/30 = 1/5"
+          },
+          {
+            "level": "rozsirenie",
+            "text": "Vypočítaj a výsledok napíš v základnom tvare: a) 3/7 + 2/12 b) 4/15 − 7/20. Pri každom napíš rozklady menovateľov a NSN.",
+            "answer": "a) 7; 12 = 2 · 2 · 3; NSN = 84: 36/84 + 14/84 = 50/84 = 25/42<br>b) 15 = 3 · 5; 20 = 2 · 2 · 5; NSN = 60: 16/60 − 21/60 = −5/60 = −1/12"
+          },
+          {
             "level": "bonus",
             "text": "Označ x = 0,444… Vyjadri 10x a odpočítaj x. Ukáž, že 0,444… = 4/9. Rovnakým spôsobom (násob číslom 100) preveď 0,(36) na zlomok v základnom tvare.",
             "answer": "10x = 4,444…<br>10x − x = 4,444… − 0,444… = 4, teda 9x = 4 a x = 4/9.<br>y = 0,3636…, 100y = 36,3636…, 99y = 36, y = 36/99 = 4/11."
@@ -437,6 +484,13 @@ MathPlatform.registerModule({
         "space": 4,
         "text": "Rozhodni a zdôvodni: a) Je 22/7 rovné číslu π? b) Je číslo 0,909090… (opakuje sa 90) racionálne? c) Je 0,25 reálne číslo?",
         "answer": "a) Nie; 22/7 = 3,142857… je len racionálne priblíženie π.<br>b) Áno, rozvoj je periodický; rovná sa 10/11.<br>c) Áno, je racionálne, a teda aj reálne."
+      },
+      {
+        "id": "w7",
+        "level": "zaklad",
+        "space": 5,
+        "text": "Sčítaj alebo odčítaj so spoločným menovateľom z prvočíselného rozkladu: a) 5/18 + 7/12 b) 11/30 − 3/20",
+        "answer": "a) 18 = 2 · 3 · 3, 12 = 2 · 2 · 3, NSN = 36: 10/36 + 21/36 = 31/36<br>b) 30 = 2 · 3 · 5, 20 = 2 · 2 · 5, NSN = 60: 22/60 − 9/60 = 13/60"
       },
       {
         "id": "w6",

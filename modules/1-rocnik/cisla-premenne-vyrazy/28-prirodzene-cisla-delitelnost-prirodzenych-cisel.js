@@ -14,9 +14,11 @@ MathPlatform.registerModule({
       "Plán uvádza: riešiť úlohy finančnej matematiky; používať kritériá deliteľnosti; určiť NSN a NSD pomocou prvočíselného rozkladu. Ďalšie ciele modulu vychádzajú z uvedeného obsahu celku."
     ],
     "goals": [
-      "rozhodnúť bez delenia, či je číslo deliteľné 2, 3, 4, 5, 6, 9 a 10, a vedieť, na ktorú časť zápisu čísla sa pri ktorom kritériu pozerať",
+      "rozhodnúť bez delenia, či je číslo deliteľné 2, 3, 4, 5, 6, 8, 9, 10, 12, 20, 25 a 50, a vedieť, na ktorú časť zápisu čísla sa pri ktorom kritériu pozerať",
+      "zapísať prirodzené číslo v desiatkovej sústave, určiť ciferný súčet a vysvetliť deliteľnosť zápisom a = k · b, b | a; rozlíšiť súdeliteľné a nesúdeliteľné čísla",
+      "doplniť chýbajúcu číslicu (hviezdičku) tak, aby bolo číslo deliteľné daným číslom",
       "rozlíšiť prvočíslo a zložené číslo (1 nie je ani jedno) a vedieť to zdôvodniť",
-      "rozložiť číslo na súčin prvočísel a zapísať rozklad pomocou mocnín (príprava na NSN a NSD na 29. hodine)",
+      "rozložiť číslo na súčin deliteľov a na súčin prvočísel (stromčekom aj tabuľkou) a zapísať prvočíselný rozklad pomocou mocnín (príprava na NSN a NSD na 29. hodine)",
       "vyhnúť sa typickým chybám: ciferný súčet použitý pri 4, „6 = 2 alebo 3“, 1 ako prvočíslo, nepárne číslo = prvočíslo"
     ],
     "competencies": [
@@ -29,6 +31,7 @@ MathPlatform.registerModule({
       "Obohatenie (nie štandard): prečo kritérium 4 vyžaduje len posledné dve číslice a kritérium 3 všetky (100 je deliteľné 4, ale 10 dáva pri delení 3 zvyšok 1) a prečo sa pri skúšaní prvočísla stačí zastaviť pri prvočísle, ktorého druhá mocnina je väčšia než číslo."
     ],
     "flow": [
+      "3–4 min: zápis čísla v desiatkovej sústave, ciferný súčet, deliteľnosť a = k · b, súdeliteľné čísla",
       "2–3 min: opakovanie pojmov deliteľ a násobok na jednom príklade",
       "10–12 min: kritériá 2, 5, 10, potom 4, potom 3 a 9, potom 6 (v aplikácii vždy vysvetlenie, jedna-dve úlohy)",
       "8–10 min: prvočísla, zložené čísla a prvočíselný rozklad (vysvetlenie, úlohy, hľadanie chyby)",
@@ -39,18 +42,19 @@ MathPlatform.registerModule({
       "žiak vie, že pri 3 a 9 sčítava všetky číslice, ale pri 4 sa pozerá len na posledné dve",
       "žiak pri 6 skúša obe podmienky (2 aj 3), nie jednu z nich",
       "žiak nepovažuje 1 za prvočíslo a nepovažuje každé nepárne číslo za prvočíslo",
-      "žiak vie dokončiť prvočíselný rozklad (delí, kým nezostane 1) a zapísať ho mocninami"
+      "žiak vie dokončiť prvočíselný rozklad (delí, kým nezostane 1) a zapísať ho mocninami",
+      "žiak vie doplniť číslicu na správne miesto: pri 3 skúša číslice podľa ciferného súčtu, pri 4 a 8 len podľa posledných číslic"
     ],
     "partialUse": [
-      "Pri nedostatku času použite iba časti o kritériách (kroky 2, 5, 10, 4, 3, 9, 6) a prvočíselný rozklad nechajte na začiatok 29. hodiny.",
+      "Pri nedostatku času použite iba časti o kritériách (zápis čísla, kroky 2, 5, 10, 4, 3, 9, 6, doplnenie číslice) a prvočíselný rozklad nechajte na začiatok 29. hodiny. Kritériá 8, 20, 25 a 50 sú rozšírenie.",
       "Mobil nenahrádza ručné počítanie, rozklad v zošite ani zdôvodnenie."
     ]
   },
   "student": {
     "title": "Deliteľnosť, prvočísla a prvočíselný rozklad",
     "subtitle": "Téma 28 · Čísla, premenné, výrazy",
-    "intro": "Naučíš sa spoznať bez delenia, či je číslo deliteľné 2, 3, 4, 5, 6, 9 alebo 10. Potom zistíš, čo sú prvočísla, a rozložíš čísla na súčin prvočísel. Počítaj na papieri, výsledky zapisuj do aplikácie.",
-    "estimatedTime": "30–35 min",
+    "intro": "Naučíš sa zapísať číslo v desiatkovej sústave a spoznať bez delenia, či je číslo deliteľné 2, 3, 4, 5, 6, 8, 9 alebo 10. Doplníš chýbajúcu číslicu. Potom zistíš, čo sú prvočísla, a rozložíš čísla na súčin prvočísel. Počítaj na papieri, výsledky zapisuj do aplikácie.",
+    "estimatedTime": "35–45 min",
     "activities": [
       {
         "id": "recap",
@@ -63,10 +67,112 @@ MathPlatform.registerModule({
         "id": "topic-intro",
         "type": "intro",
         "goals": [
-          "rozhodnúť bez delenia, či je číslo deliteľné 2, 3, 4, 5, 6, 9 alebo 10",
+          "zapísať číslo v desiatkovej sústave a určiť ciferný súčet",
+          "rozhodnúť bez delenia, či je číslo deliteľné 2, 3, 4, 5, 6, 8, 9 alebo 10",
           "doplniť chýbajúcu číslicu tak, aby bolo číslo deliteľné daným číslom",
           "rozlíšiť prvočíslo od zloženého čísla",
-          "rozložiť číslo na súčin prvočísel"
+          "rozložiť číslo na súčin prvočísel stromčekom aj tabuľkou"
+        ]
+      },
+      {
+        "id": "e-decimal",
+        "type": "explain",
+        "phase": "NOVÝ POJEM / PRAVIDLO",
+        "title": "Zápis čísla a ciferný súčet",
+        "html": "<p>Číslo zapisujeme <strong>číslicami</strong> (ciframi) 0, 1, 2, …, 9. Číslica je grafický znak, číslo je jeho hodnota: „trojka“ je číslica, „tri“ je číslo. Používame 10 číslic, preto hovoríme o <strong>desiatkovej sústave</strong>. Hodnota číslice závisí od jej <span class=\"hl\">miesta</span> v zápise.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>53 708 = 5 · 10⁴ + 3 · 10³ + 7 · 10² + 0 · 10¹ + 8 · 10⁰</p><p>(10⁰ = 1, takže posledný člen je 8 · 1 = 8.)</p></div><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Ciferný súčet</div><p class=\"term-rule\">Každú číslicu zápisu berieme ako jednociferné číslo a všetky tieto čísla <span class=\"hl\">sčítame</span>. Napríklad pre 53 708: 5 + 3 + 7 + 0 + 8 = 23.</p></div></div>",
+        "remember": "Ciferný súčet je súčet všetkých číslic zápisu čísla."
+      },
+      {
+        "id": "n-expand",
+        "type": "numberInput",
+        "phase": "OVER SI",
+        "skill": "zápis čísla a ciferný súčet",
+        "title": "Číslo z rozvinutého zápisu",
+        "prompt": "Aké číslo je zapísané ako 4 · 10⁴ + 0 · 10³ + 2 · 10² + 9 · 10¹ + 1 · 10⁰ ? Zapíš ho bez medzier.",
+        "validate": "exact",
+        "answer": 40291,
+        "success": "40 000 + 0 + 200 + 90 + 1 = 40 291. Jeho ciferný súčet je 4 + 0 + 2 + 9 + 1 = 16.",
+        "hint": "Každý člen je číslica krát mocnina desiatky: 4 · 10⁴ = 40 000, 0 · 10³ = 0, … Sčítaj ich.",
+        "reveal": "Správne je 40291: 40 000 + 0 + 200 + 90 + 1."
+      },
+      {
+        "id": "n-cs",
+        "type": "numberInput",
+        "phase": "OVER SI",
+        "skill": "zápis čísla a ciferný súčet",
+        "title": "Ciferný súčet",
+        "prompt": "Aký je ciferný súčet čísla 90 417?",
+        "validate": "exact",
+        "answer": 21,
+        "success": "9 + 0 + 4 + 1 + 7 = 21. Číslica 0 súčet nemení, ale do zápisu patrí.",
+        "hint": "Sčítaj všetky číslice zápisu: 9, 0, 4, 1 a 7.",
+        "reveal": "Správne je 21: 9 + 0 + 4 + 1 + 7."
+      },
+      {
+        "id": "e-def",
+        "type": "explain",
+        "phase": "NOVÝ POJEM / PRAVIDLO",
+        "title": "Deliteľnosť zapísaná symbolmi",
+        "html": "<p>O dvoch prirodzených číslach a, b hovoríme, že <strong>a je násobkom b</strong>, alebo že <strong>b je deliteľom a</strong>, ak existuje prirodzené číslo k, pre ktoré platí:</p><div class=\"formula\">a = k · b<span class=\"formula-note\">Zápis b | a čítame „b delí a“ alebo „b je deliteľom a“. Rovnako vyjadrujú „a je deliteľné b“ a „b delí a“.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>91 = 13 · 7, preto 7 | 91 aj 13 | 91.</p><p>91 : 7 = 13 bez zvyšku.</p></div><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Súdeliteľné čísla</div><p class=\"term-rule\">Majú <span class=\"hl\">spoločného deliteľa väčšieho ako 1</span>. Čísla 15 a 805 majú spoločného deliteľa 5, takže sú súdeliteľné.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Nesúdeliteľné čísla</div><p class=\"term-rule\">Ich jediný spoločný deliteľ je 1. Čísla 44 (delitele 1, 2, 4, 11, 22, 44) a 125 (delitele 1, 5, 25, 125) sú nesúdeliteľné.</p></div></div><div class=\"warning\"><strong>Pozor:</strong> Nesúdeliteľné čísla nemusia byť prvočísla. Čísla 8 a 15 sú obe zložené a predsa nemajú spoločného deliteľa väčšieho ako 1.</div>",
+        "remember": "b | a znamená a = k · b. Súdeliteľné čísla majú spoločného deliteľa väčšieho ako 1."
+      },
+      {
+        "id": "c-sym",
+        "type": "choice",
+        "phase": "OVER SI",
+        "skill": "deliteľnosť a = k · b",
+        "question": "Platí 91 = 13 · 7. Ktorý zápis vyjadruje „7 delí 91“ (7 je deliteľom 91)?",
+        "options": [
+          "91 | 7",
+          "7 : 91",
+          "7 | 91"
+        ],
+        "answer": 2,
+        "correct": "Zápis b | a čítame „b delí a“, teda 7 | 91. Platí 91 = 13 · 7, takže 91 je násobkom 7.",
+        "hint": "Zápis b | a: deliteľ je vľavo, násobok vpravo."
+      },
+      {
+        "id": "s-sud",
+        "type": "sortChoice",
+        "phase": "OVER SI",
+        "skill": "súdeliteľné čísla",
+        "title": "Súdeliteľné, alebo nesúdeliteľné?",
+        "question": "Majú obe čísla spoločného deliteľa väčšieho ako 1?",
+        "labels": [
+          "Súdeliteľné",
+          "Nesúdeliteľné"
+        ],
+        "items": [
+          {
+            "text": "15 a 805",
+            "answer": true,
+            "why": "Spoločný deliteľ 5 (15 = 5 · 3, 805 = 5 · 161)."
+          },
+          {
+            "text": "44 a 125",
+            "answer": false,
+            "why": "44 = 4 · 11 a 125 = 5 · 25 nemajú spoločného deliteľa okrem 1."
+          },
+          {
+            "text": "91 a 105",
+            "answer": true,
+            "why": "Spoločný deliteľ 7 (91 = 7 · 13, 105 = 7 · 15)."
+          },
+          {
+            "text": "99 a 100",
+            "answer": false,
+            "why": "Susedné čísla nemajú spoločného deliteľa okrem 1."
+          },
+          {
+            "text": "276 a 282",
+            "answer": true,
+            "why": "Obe sú párne a ciferné súčty 15 a 12 sú deliteľné 3, preto majú spoločného deliteľa 6."
+          },
+          {
+            "text": "8 a 15",
+            "answer": false,
+            "why": "Delitele 8 sú 1, 2, 4, 8 a delitele 15 sú 1, 3, 5, 15. Spoločné je iba 1."
+          }
         ]
       },
       {
@@ -96,8 +202,8 @@ MathPlatform.registerModule({
         "id": "e-four",
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
-        "title": "Posledné dve číslice: deliteľnosť 4",
-        "html": "<p>Číslo 100 je deliteľné 4 (100 = 4 · 25). Preto všetky stovky, tisíce… sú násobkami 4 a rozhoduje <span class=\"hl\">číslo z posledných dvoch číslic</span>.</p><div class=\"formula\">Číslo je deliteľné 4 práve vtedy, keď je číslo z jeho posledných dvoch číslic deliteľné 4.<span class=\"formula-note\">Končí dvojicou 00? Potom je deliteľné 4 vždy.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>3 716: posledné dve číslice tvoria 16 a 16 : 4 = 4, preto je 3 716 deliteľné 4.</p><p>5 826: posledné dve číslice tvoria 26, ale 26 : 4 = 6 zv. 2, preto 5 826 <strong>nie je</strong> deliteľné 4.</p></div><div class=\"warning\"><strong>Pozor:</strong> Pri 4 nepoužívaj ciferný súčet. Ten patrí iba k deliteľnosti 3 a 9.</div>"
+        "title": "Posledné dve číslice: deliteľnosť 4, 20, 25 a 50",
+        "html": "<p>Číslo 100 je deliteľné 4 (100 = 4 · 25). Preto všetky stovky, tisíce… sú násobkami 4 a rozhoduje <span class=\"hl\">číslo z posledných dvoch číslic</span>.</p><div class=\"formula\">Číslo je deliteľné 4 práve vtedy, keď je číslo z jeho posledných dvoch číslic deliteľné 4.<span class=\"formula-note\">Končí dvojicou 00? Potom je deliteľné 4 vždy.</span></div><p>Rovnako platí: číslo je deliteľné <strong>20, 25 alebo 50</strong> práve vtedy, keď je číslo z jeho posledných dvoch číslic deliteľné 20 (25, 50), lebo 100 = 20 · 5 = 25 · 4 = 50 · 2. Napríklad 6 275 je deliteľné 25, lebo 75 = 3 · 25.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>3 716: posledné dve číslice tvoria 16 a 16 : 4 = 4, preto je 3 716 deliteľné 4.</p><p>5 826: posledné dve číslice tvoria 26, ale 26 : 4 = 6 zv. 2, preto 5 826 <strong>nie je</strong> deliteľné 4.</p></div><div class=\"warning\"><strong>Pozor:</strong> Pri 4 nepoužívaj ciferný súčet. Ten patrí iba k deliteľnosti 3 a 9.</div>"
       },
       {
         "id": "e-nine",
@@ -157,6 +263,36 @@ MathPlatform.registerModule({
         "answer": 0,
         "correct": "5 628 je párne a ciferný súčet 21 je deliteľný 3. Číslo 4 515 je nepárne a 3 922 má súčet 16, ktorý nie je deliteľný 3.",
         "hint": "Musia platiť dve podmienky: posledná číslica párna a ciferný súčet deliteľný 3."
+      },
+      {
+        "id": "c-12",
+        "type": "choice",
+        "phase": "OVER SI",
+        "skill": "kritérium 6",
+        "question": "Ktoré z čísel je deliteľné 12?",
+        "options": [
+          "4 218",
+          "1 530",
+          "2 916"
+        ],
+        "answer": 2,
+        "correct": "Deliteľné 12 = deliteľné 3 aj 4. Číslo 2 916 má súčet 18 a 16 : 4 = 4. Čísla 4 218 aj 1 530 sú deliteľné 2 aj 3, ale 18 aj 30 nie sú deliteľné 4.",
+        "hint": "12 skladáme z 3 a 4. Skontroluj ciferný súčet a posledné dve číslice."
+      },
+      {
+        "id": "c-1460",
+        "type": "choice",
+        "phase": "OVER SI",
+        "skill": "kritériá 2, 5, 10",
+        "question": "Ktorými z čísel 2, 4, 5, 6, 9, 10 je deliteľné číslo 1 460?",
+        "options": [
+          "2, 4, 5, 10",
+          "2, 5, 10",
+          "2, 4, 5, 6, 10"
+        ],
+        "answer": 0,
+        "correct": "1 460 končí 0, preto je deliteľné 2, 5 a 10. Posledné dve číslice 60 sú deliteľné 4. Ciferný súčet 11 nie je deliteľný 3, preto nie je deliteľné 6 ani 9.",
+        "hint": "Skús všetky kritériá po jednom. Pre 4 sa pozri na 60, pre 3, 6 a 9 sčítaj číslice."
       },
       {
         "id": "s-six",
@@ -254,6 +390,108 @@ MathPlatform.registerModule({
         "hint": "Pozeraj sa iba na číslo z posledných dvoch číslic a skús ho vydeliť 4."
       },
       {
+        "id": "c-25",
+        "type": "choice",
+        "phase": "OVER SI",
+        "skill": "kritériá 20, 25, 50",
+        "question": "Ktoré z čísel je deliteľné 25?",
+        "options": [
+          "6 275",
+          "3 140",
+          "4 120"
+        ],
+        "answer": 0,
+        "correct": "Posledné dve číslice tvoria 75 = 3 · 25. Čísla 3 140 a 4 120 majú 40 a 20, a tie nie sú deliteľné 25 (hoci 4 120 je deliteľné 20).",
+        "hint": "Pozri sa na číslo z posledných dvoch číslic a skús ho vydeliť 25."
+      },
+      {
+        "id": "e-eight",
+        "type": "explain",
+        "phase": "NOVÝ POJEM / PRAVIDLO",
+        "title": "Posledné tri číslice: deliteľnosť 8",
+        "html": "<p>Číslo 1 000 je deliteľné 8 (1 000 = 8 · 125). Preto všetky tisíce, státisíce… sú násobkami 8 a rozhoduje <span class=\"hl\">číslo z posledných troch číslic</span>.</p><div class=\"formula\">Číslo je deliteľné 8 práve vtedy, keď je číslo z jeho posledných troch číslic deliteľné 8.</div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>7 016: posledné tri číslice tvoria 016 = 16 a 16 : 8 = 2, preto je 7 016 deliteľné 8.</p><p>5 124: posledné tri číslice tvoria 124 a 124 : 8 = 15 zv. 4, preto 5 124 <strong>nie je</strong> deliteľné 8.</p></div><div class=\"warning\"><strong>Pozor:</strong> Číslo deliteľné 8 je vždy deliteľné 4, ale nie naopak. Číslo 5 124 je deliteľné 4 (24 : 4 = 6), a predsa nie je deliteľné 8.</div>",
+        "remember": "Pre 8 sa pozeráš na posledné tri číslice."
+      },
+      {
+        "id": "c-eight",
+        "type": "choice",
+        "phase": "OVER SI",
+        "skill": "kritérium 8",
+        "question": "Ktoré z čísel je deliteľné 8?",
+        "options": [
+          "5 124",
+          "7 016",
+          "3 250"
+        ],
+        "answer": 1,
+        "correct": "Posledné tri číslice tvoria 016 a 16 : 8 = 2. Číslo 5 124 je deliteľné 4, ale 124 : 8 dáva zvyšok 4. Číslo 3 250 je párne, ale 250 : 8 dáva zvyšok 2.",
+        "hint": "Pozeraj sa na číslo z posledných troch číslic a skús ho vydeliť 8."
+      },
+      {
+        "id": "e-star",
+        "type": "explain",
+        "phase": "NOVÝ POJEM / PRAVIDLO",
+        "title": "Doplň číslicu na miesto hviezdičky",
+        "html": "<p>V úlohe je jedna číslica zakrytá hviezdičkou <strong>*</strong>. Máš doplniť číslice (0 až 9) tak, aby bolo číslo deliteľné daným číslom.</p><ol class=\"steps\"><li>Zisti, na ktoré číslice sa kritérium pozerá (posledná číslica, posledné dve, ciferný súčet…).</li><li>Ak je hviezdička medzi nimi, vyskúšaj číslice a vyber tie, ktoré vyhovujú.</li><li>Ak medzi nimi nie je, vyhovuje <span class=\"hl\">každá</span> číslica od 0 po 9.</li><li>Skontroluj jedným doplneným číslom.</li></ol><div class=\"example\"><span class=\"mini-label\">34*5 710 · deliteľné 3</span><p>3 + 4 + 5 + 7 + 1 + 0 = 20, takže 20 + * musí byť násobok 3: 21, 24, 27.</p><p>* = 1, 4 alebo 7. Čísla: 3 415 710, 3 445 710, 3 475 710.</p></div><div class=\"example\"><span class=\"mini-label\">34*5 710 · deliteľné 5</span><p>Posledná číslica je 0, hviezdička sa na ňu nepozerá, preto vyhovujú <strong>všetky číslice 0 až 9</strong>.</p></div><div class=\"example\"><span class=\"mini-label\">23 876*2 · deliteľné 4</span><p>Posledné dve číslice sú *2: 02, 12, 22, … 92. Deliteľné 4 sú 12, 32, 52, 72, 92.</p><p>* = 1, 3, 5, 7 alebo 9.</p></div><div class=\"warning\"><strong>Pozor:</strong> Ak sú v čísle dve hviezdičky, každá môže patriť k inému kritériu. Pri deliteľnosti 15 (3 a 5) najprv urči poslednú číslicu (0 alebo 5) a až potom doplň druhú podľa ciferného súčtu.</div>",
+        "remember": "Najprv zisti, na ktoré číslice sa kritérium pozerá. Ak hviezdička medzi nimi nie je, vyhovuje každá číslica."
+      },
+      {
+        "id": "c-star3",
+        "type": "choice",
+        "phase": "OVER SI",
+        "skill": "chýbajúca číslica",
+        "question": "Ktoré číslice možno doplniť na miesto * v čísle 34*5 710, aby bolo deliteľné 3?",
+        "options": [
+          "0, 3, 6, 9",
+          "2, 5, 8",
+          "1, 4, 7"
+        ],
+        "answer": 2,
+        "correct": "Ciferný súčet bez hviezdičky je 20. Do násobku 3 treba doplniť 1, 4 alebo 7 (súčty 21, 24, 27). Pri 0, 3, 6, 9 vyjdú súčty 20, 23, 26, 29 a pri 2, 5, 8 súčty 22, 25, 28, a žiaden nie je deliteľný 3.",
+        "hint": "Sčítaj číslice 3 + 4 + 5 + 7 + 1 + 0 a hľadaj, čo treba pridať do najbližšieho násobku 3."
+      },
+      {
+        "id": "n-star4",
+        "type": "numberInput",
+        "phase": "OVER SI",
+        "skill": "chýbajúca číslica",
+        "title": "Koľko číslic vyhovuje",
+        "prompt": "Koľko číslic (z 0 až 9) možno doplniť na miesto * v čísle 23 876*2, aby bolo deliteľné 4?",
+        "validate": "exact",
+        "answer": 5,
+        "success": "Posledné dve číslice *2 musia byť deliteľné 4: 12, 32, 52, 72, 92. Teda * = 1, 3, 5, 7, 9, spolu 5 číslic.",
+        "hint": "Pre 4 rozhodujú posledné dve číslice, teda číslo *2. Vyskúšaj 02, 12, 22, …",
+        "reveal": "Správne je 5: čísla 12, 32, 52, 72 a 92 sú deliteľné 4."
+      },
+      {
+        "id": "c-star8",
+        "type": "choice",
+        "phase": "OVER SI",
+        "skill": "chýbajúca číslica",
+        "question": "Nájdi všetky číslice *, pre ktoré je číslo 23 876*2 deliteľné 8.",
+        "options": [
+          "iba 3",
+          "3 a 7",
+          "1, 3, 5, 7, 9"
+        ],
+        "answer": 1,
+        "correct": "Posledné tri číslice sú 6*2 a deliteľné 8 sú 632 (= 8 · 79) a 672 (= 8 · 84). Číslice 1, 5, 9 dávajú čísla deliteľné 4, ale nie 8.",
+        "hint": "Pre 8 rozhodujú posledné tri číslice 6*2. Vyskúšaj tie, pre ktoré je číslo deliteľné 4, a skús ich vydeliť 8."
+      },
+      {
+        "id": "n-star15",
+        "type": "numberInput",
+        "phase": "OVER SI",
+        "skill": "chýbajúca číslica",
+        "title": "Dve hviezdičky",
+        "prompt": "Koľko čísel tvaru 5*4 758* (každá hviezdička je jedna číslica 0 až 9) je deliteľných 15?",
+        "validate": "exact",
+        "answer": 6,
+        "success": "Deliteľné 15 = deliteľné 5 aj 3. Posledná číslica 0: ciferný súčet 29 + * musí byť násobok 3, * = 1, 4, 7. Posledná číslica 5: 34 + * musí byť násobok 3, * = 2, 5, 8. Spolu 3 + 3 = 6 čísel.",
+        "hint": "Najprv urči, aká môže byť posledná číslica (deliteľnosť 5). Potom pre každú možnosť nájdi prvú číslicu podľa ciferného súčtu.",
+        "reveal": "Správne je 6: 5 147 580, 5 447 580, 5 747 580, 5 247 585, 5 547 585, 5 847 585."
+      },
+      {
         "id": "n-mult6",
         "type": "numberInput",
         "phase": "OVER SI",
@@ -271,7 +509,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Prvočíslo a zložené číslo",
-        "html": "<p>Každé prirodzené číslo je deliteľné aspoň číslom 1 a samo sebou. Podľa počtu deliteľov rozlišujeme:</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Prvočíslo</div><p class=\"term-rule\">Má <span class=\"hl\">presne dva</span> delitele: 1 a samo seba. Napríklad 13 (delitele 1 a 13).</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Zložené číslo</div><p class=\"term-rule\">Má <span class=\"hl\">viac ako dva</span> delitele. Napríklad 21 (delitele 1, 3, 7, 21).</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Číslo 1</div><p class=\"term-rule\">Má jediného deliteľa (1), preto nie je prvočíslo ani zložené číslo.</p></div></div><p>Prvočísla do 50: <strong>2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47</strong>.</p><div class=\"example\"><span class=\"mini-label\">AKO ZISTÍM, ČI JE 97 PRVOČÍSLO</span><p>Skúšame prvočísla ako delitele: 2 (97 je nepárne, nie), 3 (9 + 7 = 16, nie), 5 (končí 7, nie), 7 (97 : 7 = 13 zv. 6, nie).</p><p>Ďalšie prvočíslo 11 má 11 · 11 = 121 &gt; 97, takže už nemusíme skúšať. <strong>97 je prvočíslo.</strong></p></div><div class=\"warning\"><strong>Pozor:</strong> 2 je jediné párne prvočíslo. Číslo 1 nie je prvočíslo. A nepárne číslo nemusí byť prvočíslo: 9, 15, 21 a 91 = 7 · 13 sú zložené.</div>",
+        "html": "<p>Každé prirodzené číslo je deliteľné aspoň číslom 1 a samo sebou. Podľa počtu deliteľov rozlišujeme:</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Prvočíslo</div><p class=\"term-rule\">Má <span class=\"hl\">presne dva</span> delitele: 1 a samo seba. Napríklad 13 (delitele 1 a 13).</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Zložené číslo</div><p class=\"term-rule\">Má <span class=\"hl\">viac ako dva</span> delitele. Napríklad 21 (delitele 1, 3, 7, 21).</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Číslo 1</div><p class=\"term-rule\">Má jediného deliteľa (1), preto nie je prvočíslo ani zložené číslo.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Najmenšie prvočíslo a najmenšie zložené číslo</div><p class=\"term-rule\">2 je najmenšie prvočíslo a zároveň jediné párne prvočíslo. 4 je najmenšie zložené číslo (delitele 1, 2, 4).</p></div></div><p>Prvočísla do 50: <strong>2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47</strong>.</p><div class=\"example\"><span class=\"mini-label\">AKO ZISTÍM, ČI JE 97 PRVOČÍSLO</span><p>Skúšame prvočísla ako delitele: 2 (97 je nepárne, nie), 3 (9 + 7 = 16, nie), 5 (končí 7, nie), 7 (97 : 7 = 13 zv. 6, nie).</p><p>Ďalšie prvočíslo 11 má 11 · 11 = 121 &gt; 97, takže už nemusíme skúšať. <strong>97 je prvočíslo.</strong></p></div><div class=\"warning\"><strong>Pozor:</strong> 2 je jediné párne prvočíslo. Číslo 1 nie je prvočíslo. A nepárne číslo nemusí byť prvočíslo: 9, 15, 21 a 91 = 7 · 13 sú zložené.</div>",
         "remember": "Prvočíslo má presne dva delitele. Zložené číslo má aspoň tri. Číslo 1 nie je ani jedno."
       },
       {
@@ -330,12 +568,69 @@ MathPlatform.registerModule({
         "reveal": "Správne je 10: 2, 3, 5, 7, 11, 13, 17, 19, 23 a 29."
       },
       {
+        "id": "c-min-comp",
+        "type": "choice",
+        "phase": "OVER SI",
+        "skill": "prvočíslo a zložené číslo",
+        "question": "Aké je najmenšie zložené číslo?",
+        "options": [
+          "6",
+          "1",
+          "4"
+        ],
+        "answer": 2,
+        "correct": "4 má tri delitele (1, 2, 4), preto je zložené. Čísla 2 a 3 sú prvočísla a 1 nie je ani prvočíslo, ani zložené číslo.",
+        "hint": "Zložené číslo má aspoň tri delitele. Skús čísla postupne od 1 a pozri na ich delitele."
+      },
+      {
+        "id": "e-split",
+        "type": "explain",
+        "phase": "NOVÝ POJEM / PRAVIDLO",
+        "title": "Rozklad na súčin deliteľov",
+        "html": "<p>Zložené číslo sa dá zapísať ako súčin deliteľov väčších ako 1. Takému zápisu hovoríme <strong>rozklad zloženého čísla</strong>. Nie je jediný:</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD: 60</span><p>60 = 2 · 30 = 4 · 15 = 5 · 12 = 2 · 3 · 10 = 2 · 2 · 3 · 5</p></div><p>V poslednom zápise je každý činiteľ <span class=\"hl\">prvočíslo</span>. To je <strong>prvočíselný rozklad</strong>. Dá sa zapísať stručne mocninami: 60 = 2² · 3 · 5.</p>",
+        "remember": "Rozklad zloženého čísla je súčin deliteľov väčších ako 1. Prvočíselný rozklad má každého činiteľa prvočíslo."
+      },
+      {
         "id": "e-factor",
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Prvočíselný rozklad",
         "html": "<p>Každé zložené číslo sa dá zapísať ako <strong>súčin prvočísel</strong>. Takému zápisu hovoríme <strong>prvočíselný rozklad</strong>. Na 29. hodine ho použijeme pri hľadaní NSN a NSD.</p><ol class=\"steps\"><li>Vydeľ číslo najmenším prvočíslom, ktorým je deliteľné (použi kritériá).</li><li>S podielom pokračuj rovnako, až kým nedostaneš 1.</li><li>Všetky použité delitele vynásob. Rovnaké činitele zapíš ako mocninu.</li><li>Skontroluj násobením.</li></ol><div class=\"example\"><span class=\"mini-label\">PRÍKLAD: ROZLOŽ 360</span><p>360 : 2 = 180 &nbsp;&nbsp; 180 : 2 = 90 &nbsp;&nbsp; 90 : 2 = 45</p><p>45 : 3 = 15 &nbsp;&nbsp; 15 : 3 = 5 &nbsp;&nbsp; 5 : 5 = 1</p><p>360 = 2 · 2 · 2 · 3 · 3 · 5 = <strong>2³ · 3² · 5</strong></p><p>Kontrola: 8 · 9 · 5 = 360.</p></div><div class=\"warning\"><strong>Pozor:</strong> Činiteľ v rozklade musí byť prvočíslo. Zápis 360 = 4 · 90 nie je prvočíselný rozklad, pretože 4 a 90 sú zložené čísla.</div>",
         "remember": "Prvočíselný rozklad: delíš prvočíslami, kým nezostane 1, a rovnaké činitele zapíšeš ako mocninu."
+      },
+      {
+        "id": "e-tree",
+        "type": "explain",
+        "phase": "NOVÝ POJEM / PRAVIDLO",
+        "title": "Prvočíselný rozklad: stromček a tabuľka",
+        "html": "<p>Prvočíselný rozklad vieš hľadať dvoma spôsobmi a vždy dostaneš ten istý výsledok (poradie činiteľov nie je dôležité).</p><div class=\"example\"><span class=\"mini-label\">STROMČEK: 80</span><p>80 = 10 · 8</p><p>10 = <strong>2</strong> · <strong>5</strong> &nbsp;&nbsp;&nbsp; 8 = <strong>2</strong> · 4</p><p>4 = <strong>2</strong> · <strong>2</strong></p><p>Číslo rozkladáme, kým každá vetva nekončí prvočíslom. Prvočísla (tučne) vynásobíme: 80 = 2 · 5 · 2 · 2 · 2 = <strong>2⁴ · 5</strong>.</p></div><div class=\"example\"><span class=\"mini-label\">TABUĽKA: 80</span><p>80 : 2 = 40</p><p>40 : 5 = 8</p><p>8 : 2 = 4</p><p>4 : 2 = 2</p><p>2 : 2 = 1</p><p>Delíme prvočíslami, kým nedostaneme 1. Použité delitele vynásobíme: 80 = 2 · 5 · 2 · 2 · 2 = <strong>2⁴ · 5</strong>.</p></div>",
+        "remember": "Stromčekom rozkladáš na súčin, kým vetvy nekončia prvočíslom. Tabuľkou deliš prvočíslami, kým nedostaneš 1."
+      },
+      {
+        "id": "n-twos80",
+        "type": "numberInput",
+        "phase": "OVER SI",
+        "skill": "prvočíselný rozklad",
+        "title": "Dvojky v rozklade",
+        "prompt": "Koľkokrát sa činiteľ 2 vyskytuje v prvočíselnom rozklade čísla 80?",
+        "validate": "exact",
+        "answer": 4,
+        "success": "80 = 2 · 2 · 2 · 2 · 5 = 2⁴ · 5, dvojka sa vyskytuje štyrikrát.",
+        "hint": "Rozlož 80 stromčekom alebo tabuľkou a spočítaj dvojky.",
+        "reveal": "Správne je 4: 80 = 2⁴ · 5."
+      },
+      {
+        "id": "n-644",
+        "type": "numberInput",
+        "phase": "OVER SI",
+        "skill": "prvočíselný rozklad",
+        "title": "Chýbajúci činiteľ",
+        "prompt": "Platí 644 = 2² · 7 · □, pričom □ je prvočíslo. Aké?",
+        "validate": "exact",
+        "answer": 23,
+        "success": "644 : 4 = 161, 161 : 7 = 23 a 23 je prvočíslo. Teda 644 = 2² · 7 · 23.",
+        "hint": "Vydeľ 644 číslom 2² · 7 = 28.",
+        "reveal": "Správne je 23: 644 : 28 = 23."
       },
       {
         "id": "c-fact60",
@@ -430,6 +725,16 @@ MathPlatform.registerModule({
           },
           {
             "level": "zaklad",
+            "text": "Ktoré z čísel 153, 1 460, 9 078, 51 410 je deliteľné 2, 3, 4, 5, 6, 9, 10? Pri každom čísle napíš všetky vhodné delitele z tejto skupiny.",
+            "answer": "153: 3, 9 (súčet 9)<br>1 460: 2, 4, 5, 10 (60 : 4 = 15, súčet 11)<br>9 078: 2, 3, 6 (súčet 24, nie je deliteľný 9)<br>51 410: 2, 5, 10 (10 nie je deliteľné 4, súčet 11)"
+          },
+          {
+            "level": "zaklad",
+            "text": "Zapíš číslo 62 805 v desiatkovej sústave pomocou mocnín čísla 10 a urč jeho ciferný súčet.",
+            "answer": "62 805 = 6 · 10⁴ + 2 · 10³ + 8 · 10² + 0 · 10¹ + 5 · 10⁰<br>Ciferný súčet 6 + 2 + 8 + 0 + 5 = <strong>21</strong>."
+          },
+          {
+            "level": "zaklad",
             "text": "Ktoré z čísel 18, 25, 37, 42, 49, 53 sú prvočísla?",
             "answer": "18 = 2·9, 25 = 5·5, 42 = 2·21, 49 = 7·7 sú zložené.<br>Prvočísla: <strong>37 a 53</strong>."
           },
@@ -442,6 +747,21 @@ MathPlatform.registerModule({
             "level": "zaklad",
             "text": "Rozlož na prvočísla: a) 48, b) 75, c) 100. Zapíš pomocou mocnín.",
             "answer": "a) 48 = 2⁴ · 3<br>b) 75 = 3 · 5²<br>c) 100 = 2² · 5²"
+          },
+          {
+            "level": "rozsirenie",
+            "text": "Doplň číslicu * tak, aby bolo číslo 34*5 710 deliteľné 3. Potom doplň číslicu * tak, aby bolo číslo 23 876*2 deliteľné 4. Nájdi všetky možnosti.",
+            "answer": "34*5 710: súčet 20 + * je násobok 3, * = <strong>1, 4, 7</strong> (3 415 710, 3 445 710, 3 475 710).<br>23 876*2: *2 deliteľné 4, * = <strong>1, 3, 5, 7, 9</strong>."
+          },
+          {
+            "level": "rozsirenie",
+            "text": "Zapíš číslo 60 ako súčin deliteľov všetkými spôsobmi, ktoré nájdeš (aspoň päť zápisov), a posledný zápis prepíš pomocou mocnín.",
+            "answer": "60 = 2 · 30 = 3 · 20 = 4 · 15 = 5 · 12 = 6 · 10 = 2 · 3 · 10 = 2 · 2 · 3 · 5<br>Prvočíselný rozklad: 60 = <strong>2² · 3 · 5</strong>."
+          },
+          {
+            "level": "rozsirenie",
+            "text": "Rozlož číslo 80 na prvočísla stromčekom aj tabuľkou. Čo si všimneš?",
+            "answer": "Stromček: 80 = 10 · 8 = (2 · 5) · (2 · 4) = 2 · 5 · 2 · 2 · 2.<br>Tabuľka: 80 : 2 = 40, 40 : 5 = 8, 8 : 2 = 4, 4 : 2 = 2, 2 : 2 = 1.<br>Obe dávajú 80 = <strong>2⁴ · 5</strong>."
           },
           {
             "level": "rozsirenie",
@@ -470,6 +790,16 @@ MathPlatform.registerModule({
           },
           {
             "level": "bonus",
+            "text": "Doplň číslicu * tak, aby bolo číslo 34*5 710 deliteľné 7. Skúšaj delením.",
+            "answer": "Číslo 3 405 710 : 7 = 486 530 a 3 475 710 : 7 = 496 530. Ostatné číslice nevyhovujú.<br>* = <strong>0 alebo 7</strong>."
+          },
+          {
+            "level": "bonus",
+            "text": "Doplň číslice * tak, aby bolo číslo 5*4 758* deliteľné 15. Nájdi všetky možnosti.",
+            "answer": "Deliteľné 5: posledná číslica je 0 alebo 5. Deliteľné 3: ciferný súčet.<br>Končí 0: 29 + * je násobok 3, * = 1, 4, 7 (5 147 580, 5 447 580, 5 747 580).<br>Končí 5: 34 + * je násobok 3, * = 2, 5, 8 (5 247 585, 5 547 585, 5 847 585).<br>Spolu <strong>6 čísel</strong>."
+          },
+          {
+            "level": "bonus",
             "text": "Zdôvodni na príkladoch: a) Je každé číslo deliteľné 9 aj deliteľné 3? b) Je každé číslo deliteľné 3 aj deliteľné 9?",
             "answer": "a) Áno. Ak je ciferný súčet deliteľný 9, je deliteľný aj 3. Napríklad 18, 27, 4 572.<br>b) Nie. Protipríklad: 12 (súčet 3) je deliteľné 3, ale nie 9."
           }
@@ -491,9 +821,12 @@ MathPlatform.registerModule({
         "phase": "ZÁVER",
         "title": "Ako som na tom?",
         "skills": [
+          "zápis čísla a ciferný súčet",
+          "deliteľnosť a = k · b, súdeliteľné čísla",
           "kritériá 2, 5, 10",
-          "kritériá 3, 9 a 4",
-          "kritérium 6 (spojenie podmienok)",
+          "kritériá 3, 9 a 4 (aj 8, 20, 25, 50)",
+          "kritérium 6 a 12 (spojenie podmienok)",
+          "doplniť chýbajúcu číslicu",
           "prvočíslo a zložené číslo",
           "prvočíselný rozklad"
         ],
@@ -544,6 +877,27 @@ MathPlatform.registerModule({
         "space": 5,
         "text": "Dokáž na príklade, že číslo deliteľné 4 a 9 je deliteľné 36, a napíš, prečo toto pravidlo nefunguje pre 2 a 6 pri 12.",
         "answer": "Napr. 396 : 4 = 99 a 396 : 9 = 44, 396 : 36 = 11. Pravidlo funguje len pre delitele bez spoločného činiteľa. 18 je deliteľné 2 aj 6, ale 18 : 12 nevyjde."
+      },
+      {
+        "id": "w7",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Zapíš číslo 80 507 rozvinutým zápisom v desiatkovej sústave a urč jeho ciferný súčet.",
+        "answer": "8 · 10⁴ + 0 · 10³ + 5 · 10² + 0 · 10¹ + 7 · 10⁰; ciferný súčet 8 + 0 + 5 + 0 + 7 = 20."
+      },
+      {
+        "id": "w8",
+        "level": "rozsirenie",
+        "space": 4,
+        "text": "Doplň číslicu * tak, aby bolo číslo 52*4 deliteľné a) 3, b) 8. Nájdi všetky možnosti.",
+        "answer": "a) 5 + 2 + 4 = 11 a 11 + * je násobok 3: * = 1, 4, 7 (5 214, 5 244, 5 274).<br>b) Posledné tri číslice 2*4 musia byť deliteľné 8: 224 = 8 · 28 a 264 = 8 · 33. Teda * = 2 alebo 6 (5 224, 5 264)."
+      },
+      {
+        "id": "w9",
+        "level": "bonus",
+        "space": 5,
+        "text": "Rozlož na prvočísla stromčekom: a) 644, b) 496, c) 180. Zapíš mocninami.",
+        "answer": "a) 2² · 7 · 23<br>b) 2⁴ · 31<br>c) 2² · 3² · 5"
       }
     ]
   }

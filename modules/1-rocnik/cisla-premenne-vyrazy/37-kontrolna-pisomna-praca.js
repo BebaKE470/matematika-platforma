@@ -80,7 +80,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "OPAKUJ",
         "title": "NSD a NSN cez prvočíselný rozklad",
-        "html": "<ol class=\"steps\"><li>Obe čísla rozlož na prvočísla (napr. 12 = 2² · 3 a 18 = 2 · 3²).</li><li><strong>NSD:</strong> vezmi len prvočísla z oboch rozkladov, každé s menším exponentom.</li><li><strong>NSN:</strong> vezmi všetky prvočísla z oboch rozkladov, každé s väčším exponentom.</li></ol><div class=\"formula\">NSD(12, 18) = 2 · 3 = 6<br>NSN(12, 18) = 2² · 3² = 36</div><div class=\"warning\"><strong>Pozor:</strong> NSD hľadáme pri deľení na rovnaké časti (balíčky). NSN hľadáme, keď sa niečo opakuje a čakáme, kedy sa to znova stretne (autobusy).</div>"
+        "html": "<ol class=\"steps\"><li>Obe čísla rozlož na prvočísla (napr. 12 = 2² · 3 a 18 = 2 · 3²).</li><li><strong>NSD:</strong> vezmi len prvočísla z oboch rozkladov, každé s menším exponentom.</li><li><strong>NSN:</strong> vezmi všetky prvočísla z oboch rozkladov, každé s väčším exponentom.</li></ol><div class=\"formula\">D(12, 18) = 2 · 3 = 6<br>n(12, 18) = 2² · 3² = 36</div><div class=\"warning\"><strong>Pozor:</strong> NSD hľadáme pri deľení na rovnaké časti (balíčky). NSN hľadáme, keď sa niečo opakuje a čakáme, kedy sa to znova stretne (autobusy).</div>"
       },
       {
         "id": "sets",
@@ -118,7 +118,7 @@ MathPlatform.registerModule({
         "phase": "OVER SI",
         "skill": "NSD",
         "title": "NSD dvoch čísel",
-        "prompt": "Urč NSD(36, 54). Pomôž si prvočíselným rozkladom: 36 = 2² · 3² a 54 = 2 · 3³.",
+        "prompt": "Urč NSD – D(36, 54). Pomôž si prvočíselným rozkladom: 36 = 2² · 3² a 54 = 2 · 3³.",
         "validate": "exact",
         "answer": 18,
         "success": "Spoločné prvočísla sú 2 a 3 s menšími exponentmi: 2 · 3² = 18.",
@@ -138,7 +138,7 @@ MathPlatform.registerModule({
           "96"
         ],
         "answer": 1,
-        "correct": "Hľadáme NSN(8, 12) = 24, lebo čakáme na prvý spoločný násobok.",
+        "correct": "Hľadáme n(8, 12) = 24, lebo čakáme na prvý spoločný násobok.",
         "hint": "Čakáme, kedy sa opakovania stretnú. Je to úloha na NSD alebo na NSN?"
       },
       {

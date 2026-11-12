@@ -39,6 +39,8 @@ MathPlatform.registerModule({
     ],
     "diagnostics": [
       "počíta zľava doprava bez ohľadu na prednosť násobenia a delenia",
+      "pri zmiešanom čísle zahodí celú časť (1 3/4 = 4/4) alebo „kráti“ sčítance: (2 + 6)/(2 + 9) = 6/9",
+      "vo viacposchodovom zlomku nerozlíši hlavnú zlomkovú čiaru (delenie) a nepočíta čitateľa a menovateľa zvlášť",
       "chybuje pri znamienkach: 5 − (−3), (−2) · (−4), −6 ÷ 3",
       "pri sčítaní zlomkov sčíta čitateľov aj menovateľov (1/2 + 1/3 = 2/5)",
       "nevie vydeliť zlomkom (nevynásobí prevráteným číslom) a chybuje v desatinnej čiarke pri násobení",
@@ -95,6 +97,14 @@ MathPlatform.registerModule({
         "title": "Zlomky a desatinné čísla",
         "html": "<div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Sčítanie a odčítanie zlomkov</div><p class=\"term-rule\">Zlomky najprv upravíme na <strong>spoločný menovateľ</strong> (najmenší je NSN menovateľov), potom sčítame iba čitateľov.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Násobenie zlomkov</div><p class=\"term-rule\">Čitateľ krát čitateľ, menovateľ krát menovateľ. Skracuj pred násobením.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Delenie zlomkov</div><p class=\"term-rule\">Delíme tak, že násobíme <strong>prevráteným číslom</strong> deliteľa.</p></div></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p><span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">2</span></span> + <span class=\"frac\"><span class=\"frac-num\">2</span><span class=\"frac-den\">3</span></span> = <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">6</span></span> + <span class=\"frac\"><span class=\"frac-num\">4</span><span class=\"frac-den\">6</span></span> = <span class=\"frac\"><span class=\"frac-num\">7</span><span class=\"frac-den\">6</span></span></p><p><span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">4</span></span> ÷ <span class=\"frac\"><span class=\"frac-num\">9</span><span class=\"frac-den\">8</span></span> = <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">4</span></span> · <span class=\"frac\"><span class=\"frac-num\">8</span><span class=\"frac-den\">9</span></span> = <span class=\"frac\"><span class=\"frac-num\">24</span><span class=\"frac-den\">36</span></span> = <span class=\"frac\"><span class=\"frac-num\">2</span><span class=\"frac-den\">3</span></span></p></div><div class=\"example\"><span class=\"mini-label\">DESATINNÉ ČÍSLA</span><p>0,3 · 0,4: vynásob 3 · 4 = 12; v činiteľoch sú spolu 2 desatinné miesta, preto 0,3 · 0,4 = <strong>0,12</strong>.</p><p>1,2 ÷ 0,04: posuň čiarku v oboch číslach o 2 miesta: 120 ÷ 4 = <strong>30</strong>.</p><p>Zmiešaný výraz: 0,5 + <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">4</span></span> = 0,5 + 0,25 = <strong>0,75</strong>. Prevedieme to, čo sa nám lepšie počíta.</p></div><div class=\"warning\"><strong>Pozor:</strong> Zlomky nesčítame po častiach: 1/2 + 1/3 nie je 2/5. Menovatele sa pri sčítaní nesčítajú, upravujú sa na spoločný.</div>",
         "remember": "Sčítanie zlomkov: spoločný menovateľ. Delenie zlomkom: vynásob prevráteným číslom."
+      },
+      {
+        "id": "compound",
+        "type": "explain",
+        "phase": "NOVÝ POJEM",
+        "title": "Zložený výraz po krokoch: zmiešané čísla, desatinné čísla, zátvorky, viacposchodový zlomok",
+        "html": "<p>Dlhý výraz sa nerieši naraz. Postupuj vždy v rovnakých krokoch a každý zapíš na nový riadok.</p><ol class=\"steps\"><li><strong>Zmiešané číslo → nepravý zlomok:</strong> 3 <span class=\"frac\"><span class=\"frac-num\">2</span><span class=\"frac-den\">3</span></span> = <span class=\"frac\"><span class=\"frac-num\">3 · 3 + 2</span><span class=\"frac-den\">3</span></span> = <span class=\"frac\"><span class=\"frac-num\">11</span><span class=\"frac-den\">3</span></span>.</li><li><strong>Desatinné číslo → zlomok</strong> (alebo opačne, ak sú všetky čísla „pekné“): 2,25 = <span class=\"frac\"><span class=\"frac-num\">225</span><span class=\"frac-den\">100</span></span> = <span class=\"frac\"><span class=\"frac-num\">9</span><span class=\"frac-den\">4</span></span>.</li><li><strong>Zátvorky zvnútra von.</strong> V každej zátvorke nájdi spoločný menovateľ z rozkladu (hodina 31).</li><li><strong>Násobenie a delenie:</strong> delenie zmeň na násobenie prevráteným zlomkom a <span class=\"hl\">skráť pred násobením</span>.</li><li><strong>Skráť výsledok</strong> na základný tvar.</li></ol><div class=\"example\"><span class=\"mini-label\">PRÍKLAD 1: ZMIEŠANÉ A DESATINNÉ</span><p>(3 <span class=\"frac\"><span class=\"frac-num\">2</span><span class=\"frac-den\">3</span></span> − 2 <span class=\"frac\"><span class=\"frac-num\">1</span><span class=\"frac-den\">6</span></span>) : (2,25 − <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">4</span></span>)</p><p>= (<span class=\"frac\"><span class=\"frac-num\">11</span><span class=\"frac-den\">3</span></span> − <span class=\"frac\"><span class=\"frac-num\">13</span><span class=\"frac-den\">6</span></span>) : (<span class=\"frac\"><span class=\"frac-num\">9</span><span class=\"frac-den\">4</span></span> − <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">4</span></span>) &nbsp;(všetko na zlomky)</p><p>= <span class=\"frac\"><span class=\"frac-num\">22 − 13</span><span class=\"frac-den\">6</span></span> : <span class=\"frac\"><span class=\"frac-num\">6</span><span class=\"frac-den\">4</span></span> = <span class=\"frac\"><span class=\"frac-num\">9</span><span class=\"frac-den\">6</span></span> : <span class=\"frac\"><span class=\"frac-num\">6</span><span class=\"frac-den\">4</span></span> = <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">2</span></span> : <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">2</span></span> = <strong>1</strong></p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD 2: HRANATÉ ZÁTVORKY</span><p>2 · [2,5 − (<span class=\"frac\"><span class=\"frac-num\">9</span><span class=\"frac-den\">2</span></span> − <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">4</span></span>)]</p><p>Najvnútornejšia je okrúhla zátvorka: <span class=\"frac\"><span class=\"frac-num\">9</span><span class=\"frac-den\">2</span></span> − <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">4</span></span> = <span class=\"frac\"><span class=\"frac-num\">18</span><span class=\"frac-den\">4</span></span> − <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">4</span></span> = <span class=\"frac\"><span class=\"frac-num\">15</span><span class=\"frac-den\">4</span></span></p><p>V hranatej: 2,5 − <span class=\"frac\"><span class=\"frac-num\">15</span><span class=\"frac-den\">4</span></span> = <span class=\"frac\"><span class=\"frac-num\">10</span><span class=\"frac-den\">4</span></span> − <span class=\"frac\"><span class=\"frac-num\">15</span><span class=\"frac-den\">4</span></span> = <span class=\"frac\"><span class=\"frac-num\">−5</span><span class=\"frac-den\">4</span></span></p><p>2 · <span class=\"frac\"><span class=\"frac-num\">−5</span><span class=\"frac-den\">4</span></span> = <span class=\"frac\"><span class=\"frac-num\">−10</span><span class=\"frac-den\">4</span></span> = <strong><span class=\"frac\"><span class=\"frac-num\">−5</span><span class=\"frac-den\">2</span></span></strong> = −2,5</p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD 3: KRÁTENIE PRED NÁSOBENÍM A DELENIE</span><p><span class=\"frac\"><span class=\"frac-num\">15</span><span class=\"frac-den\">42</span></span> · <span class=\"frac\"><span class=\"frac-num\">54</span><span class=\"frac-den\">35</span></span> &nbsp;(15 a 35 skrátime piatimi, 54 a 42 šiestimi) = <span class=\"frac\"><span class=\"frac-num\">3 · 9</span><span class=\"frac-den\">7 · 7</span></span> = <strong><span class=\"frac\"><span class=\"frac-num\">27</span><span class=\"frac-den\">49</span></span></strong></p><p><span class=\"frac\"><span class=\"frac-num\">36</span><span class=\"frac-den\">45</span></span> : <span class=\"frac\"><span class=\"frac-num\">24</span><span class=\"frac-den\">90</span></span> = <span class=\"frac\"><span class=\"frac-num\">36</span><span class=\"frac-den\">45</span></span> · <span class=\"frac\"><span class=\"frac-num\">90</span><span class=\"frac-den\">24</span></span> &nbsp;(36 a 24 skrátime dvanástimi, 90 a 45 štyridsiatpiatimi) = <span class=\"frac\"><span class=\"frac-num\">3 · 2</span><span class=\"frac-den\">1 · 2</span></span> = <strong>3</strong></p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD 4: VIACPOSCHODOVÝ ZLOMOK</span><p><span class=\"frac\"><span class=\"frac-num\"><span class=\"frac\"><span class=\"frac-num\">2</span><span class=\"frac-den\">9</span></span> + <span class=\"frac\"><span class=\"frac-num\">4</span><span class=\"frac-den\">3</span></span></span><span class=\"frac-den\">(−<span class=\"frac\"><span class=\"frac-num\">5</span><span class=\"frac-den\">6</span></span>) + <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">12</span></span></span></span></p><p>Hlavná zlomková čiara je delenie. Najprv zvlášť čitateľ a zvlášť menovateľ:</p><p>čitateľ: <span class=\"frac\"><span class=\"frac-num\">2</span><span class=\"frac-den\">9</span></span> + <span class=\"frac\"><span class=\"frac-num\">12</span><span class=\"frac-den\">9</span></span> = <span class=\"frac\"><span class=\"frac-num\">14</span><span class=\"frac-den\">9</span></span> &nbsp;·&nbsp; menovateľ: <span class=\"frac\"><span class=\"frac-num\">−10</span><span class=\"frac-den\">12</span></span> + <span class=\"frac\"><span class=\"frac-num\">3</span><span class=\"frac-den\">12</span></span> = <span class=\"frac\"><span class=\"frac-num\">−7</span><span class=\"frac-den\">12</span></span></p><p><span class=\"frac\"><span class=\"frac-num\">14</span><span class=\"frac-den\">9</span></span> : (<span class=\"frac\"><span class=\"frac-num\">−7</span><span class=\"frac-den\">12</span></span>) = <span class=\"frac\"><span class=\"frac-num\">14</span><span class=\"frac-den\">9</span></span> · (<span class=\"frac\"><span class=\"frac-num\">−12</span><span class=\"frac-den\">7</span></span>) = <span class=\"frac\"><span class=\"frac-num\">−2 · 4</span><span class=\"frac-den\">3 · 1</span></span> = <strong><span class=\"frac\"><span class=\"frac-num\">−8</span><span class=\"frac-den\">3</span></span></strong></p></div><div class=\"warning\"><strong>Pozor:</strong> Krátiť sa dá iba <em>činiteľ</em> s činiteľom (pri násobení), nie sčítanec so sčítancom: <span class=\"frac\"><span class=\"frac-num\">2 + 6</span><span class=\"frac-den\">2 + 9</span></span> nie je <span class=\"frac\"><span class=\"frac-num\">6</span><span class=\"frac-den\">9</span></span>. Pri viacposchodovom zlomku nekráť cez znamienko + alebo −, kým nemáš čitateľa aj menovateľa ako jeden zlomok.</div>",
+        "remember": "Zmiešané a desatinné čísla prevedieš na zlomky, zátvorky riešiš zvnútra von, deliš prevráteným zlomkom a kratíš pred násobením."
       },
       {
         "id": "estimate",
@@ -214,6 +224,164 @@ MathPlatform.registerModule({
         "success": "(3/4) · (8/3) = 24/12 = 2.",
         "hint": "Deliť zlomkom znamená násobiť jeho prevráteným číslom.",
         "reveal": "Správne je 2: (3/4) · (8/3) = 24/12."
+      },
+      {
+        "id": "c-lcd",
+        "type": "choice",
+        "phase": "PRECVIČ",
+        "skill": "sčítanie a odčítanie zlomkov",
+        "question": "Koľko je 4/15 − 7/20? (Rozklady: 15 = 3 · 5, 20 = 2 · 2 · 5, NSN = 60.)",
+        "options": [
+          "3/5",
+          "−3/35",
+          "1/12",
+          "−1/12"
+        ],
+        "answer": 3,
+        "correct": "4/15 = 16/60 a 7/20 = 21/60, preto 16/60 − 21/60 = −5/60 = −1/12.",
+        "hint": "Rozšír oba zlomky na menovateľ 60 a odčítaj iba čitateľov. Je prvý zlomok väčší alebo menší ako druhý?"
+      },
+      {
+        "id": "c-mixedfirst",
+        "type": "choice",
+        "phase": "OVER SI",
+        "skill": "postup pri zloženom výraze",
+        "question": "Vo výraze (3 2/3 − 2 1/6) : (2,25 − 3/4) sú zmiešané aj desatinné čísla. Čo je rozumný prvý krok?",
+        "options": [
+          "Vydeliť prvú zátvorku druhou skôr, než ich vypočítaš.",
+          "Zaokrúhliť zmiešané čísla na celé čísla a počítať s nimi.",
+          "Previesť 3 2/3 a 2 1/6 na nepravé zlomky (11/3 a 13/6) a 2,25 na zlomok 9/4."
+        ],
+        "answer": 2,
+        "correct": "Najprv všetky čísla zapíšeme v jednom tvare (zlomky), potom riešime zátvorky zvnútra von.",
+        "hint": "Zátvorky sa riešia ako prvé, a aby sa dalo počítať, čísla musia byť v rovnakom tvare."
+      },
+      {
+        "id": "n-mixed",
+        "type": "numberInput",
+        "phase": "PRECVIČ",
+        "skill": "zmiešané a desatinné čísla",
+        "title": "Zmiešané a desatinné čísla spolu",
+        "prompt": "Vypočítaj: (2 1/2 + 1,25) : (5/4 − 1/2). Výsledok je celé číslo.",
+        "validate": "exact",
+        "answer": 5,
+        "success": "5/2 + 5/4 = 15/4, 5/4 − 2/4 = 3/4 a 15/4 : 3/4 = 15/4 · 4/3 = 5.",
+        "hint": "1,25 = 5/4 a 2 1/2 = 5/2. Vypočítaj obe zátvorky zvlášť a potom ich vydeľ.",
+        "reveal": "Správne je 5: (5/2 + 5/4) = 15/4, (5/4 − 1/2) = 3/4, 15/4 · 4/3 = 5."
+      },
+      {
+        "id": "n-bracket",
+        "type": "numberInput",
+        "phase": "PRECVIČ",
+        "skill": "hranaté zátvorky",
+        "title": "Vnorené zátvorky",
+        "prompt": "Vypočítaj: 2 · [2,5 − (9/2 − 3/4)]. Výsledok zapíš ako desatinné číslo; mínus píš obyčajným znakom „-“.",
+        "validate": "exact",
+        "answer": -2.5,
+        "success": "9/2 − 3/4 = 15/4, 2,5 − 15/4 = −5/4 a 2 · (−5/4) = −5/2 = −2,5.",
+        "hint": "Začni najvnútornejšou (okrúhlou) zátvorkou. Pozor, výsledok v hranatej zátvorke je záporný.",
+        "reveal": "Správne je −2,5: (9/2 − 3/4) = 15/4, [5/2 − 15/4] = −5/4, 2 · (−5/4) = −5/2."
+      },
+      {
+        "id": "n-div",
+        "type": "numberInput",
+        "phase": "PRECVIČ",
+        "skill": "delenie a krátenie zlomkov",
+        "title": "Delenie zlomkov s krátením",
+        "prompt": "Vypočítaj: 36/45 : 24/90. Výsledok je celé číslo.",
+        "validate": "exact",
+        "answer": 3,
+        "success": "36/45 · 90/24: skrátime 36 a 24 dvanástimi (3 a 2), 90 a 45 štyridsiatpiatimi (2 a 1): 3 · 2 / (1 · 2) = 3.",
+        "hint": "Delíš zlomkom, preto násob jeho prevráteným zlomkom 90/24 a skracuj pred násobením.",
+        "reveal": "Správne je 3: 36/45 · 90/24 = (3 · 2)/(1 · 2) = 3."
+      },
+      {
+        "id": "c-cancel",
+        "type": "choice",
+        "phase": "PRECVIČ",
+        "skill": "krátenie pred násobením",
+        "question": "Koľko je 15/42 · 54/35 v základnom tvare?",
+        "options": [
+          "69/77",
+          "3/7",
+          "9/7",
+          "27/49"
+        ],
+        "answer": 3,
+        "correct": "Skrátime 15 a 35 piatimi (3, 7) a 54 a 42 šiestimi (9, 7): 3 · 9 / (7 · 7) = 27/49.",
+        "hint": "Pri násobení krátiš čitateľa jedného zlomku s menovateľom druhého. Čitateľov ani menovateľov nesčítavaj."
+      },
+      {
+        "id": "n-storey",
+        "type": "numberInput",
+        "phase": "PRECVIČ",
+        "skill": "viacposchodový zlomok",
+        "title": "Zlomok v zlomku",
+        "prompt": "Vypočítaj zlomok, ktorého čitateľ je 1/2 + 1/3 a menovateľ je 1/4 − 1/6, teda (1/2 + 1/3) : (1/4 − 1/6). Výsledok je celé číslo.",
+        "validate": "exact",
+        "answer": 10,
+        "success": "čitateľ 5/6, menovateľ 1/12 a 5/6 : 1/12 = 5/6 · 12 = 10.",
+        "hint": "Najprv vypočítaj zvlášť čitateľa a zvlášť menovateľa, potom ich vydeľ.",
+        "reveal": "Správne je 10: 1/2 + 1/3 = 5/6, 1/4 − 1/6 = 1/12, 5/6 : 1/12 = 10."
+      },
+      {
+        "id": "sort-conv",
+        "type": "sortChoice",
+        "phase": "PRECVIČ",
+        "skill": "prevody",
+        "title": "Je prevod správny?",
+        "question": "Rozhodni, či je prevod na zlomok správny.",
+        "labels": [
+          "Správne",
+          "Nesprávne"
+        ],
+        "items": [
+          {
+            "text": "3 2/3 = 11/3",
+            "answer": true,
+            "why": "3 · 3 + 2 = 11, menovateľ ostáva 3."
+          },
+          {
+            "text": "1 3/4 = 4/4",
+            "answer": false,
+            "why": "Celé číslo sa nezahadzuje: 1 3/4 = (4 + 3)/4 = 7/4."
+          },
+          {
+            "text": "2,25 = 9/4",
+            "answer": true,
+            "why": "2,25 = 225/100 = 9/4 (skrátené 25)."
+          },
+          {
+            "text": "0,3 = 1/3",
+            "answer": false,
+            "why": "0,3 = 3/10; zlomok 1/3 je 0,333…"
+          },
+          {
+            "text": "2 1/6 = 13/6",
+            "answer": true,
+            "why": "2 · 6 + 1 = 13."
+          },
+          {
+            "text": "0,75 = 7/5",
+            "answer": false,
+            "why": "0,75 = 75/100 = 3/4."
+          }
+        ]
+      },
+      {
+        "id": "hunt-cancel",
+        "type": "choice",
+        "phase": "NÁJDI CHYBU",
+        "skill": "hľadanie chyby",
+        "question": "Žiak upravuje zlomok (2 + 6)/(2 + 9) a „skráti“ dvojky, takže mu vyjde 6/9. Čo je na tom nesprávne?",
+        "options": [
+          "Nič, skrátiť sa dá všade, kde je rovnaké číslo.",
+          "Mal skrátiť šestku s deviatkou, vyšlo by 2/3.",
+          "Krátiť sa dajú iba činitele v súčine, nie sčítance; správne je 8/11 a to sa už skrátiť nedá."
+        ],
+        "answer": 2,
+        "correct": "Čitateľ je 8 a menovateľ je 11, takže zlomok je 8/11. Dvojky sú sčítance, nie činitele, preto sa nekrátia.",
+        "hint": "Najprv vypočítaj čitateľa a menovateľa. Vyjde z nich zlomok 6/9?"
       },
       {
         "id": "hunt-frac",
@@ -382,6 +550,36 @@ MathPlatform.registerModule({
             "answer": "3 · 1,35 + 2 · 0,85 = 4,05 + 1,70 = 5,75 €<br>Vrátili 10 − 5,75 = 4,25 €."
           },
           {
+            "level": "zaklad",
+            "text": "Vypočítaj (spoločný menovateľ z rozkladu, kráť pred násobením): a) 5/12 − 3/8 + 1/6 b) 15/42 · 54/35 c) 36/45 : 24/90 d) 28/45 : 14/15",
+            "answer": "a) NSN = 24: 10/24 − 9/24 + 4/24 = 5/24<br>b) 3 · 9 / (7 · 7) = 27/49<br>c) 36/45 · 90/24 = 3<br>d) 28/45 · 15/14 = 2/3"
+          },
+          {
+            "level": "rozsirenie",
+            "text": "Zmiešané a desatinné čísla: a) (3/4 − 1 1/2) : 0,3 b) (2 3/4 − 2 2/3) : (1 2/3 − 5/6) c) (3 2/3 − 2 1/6) : (2,25 − 3/4)",
+            "answer": "a) (3/4 − 3/2) : 3/10 = −3/4 · 10/3 = −5/2<br>b) (11/4 − 8/3) : (5/3 − 5/6) = 1/12 : 5/6 = 1/10<br>c) (11/3 − 13/6) : (9/4 − 3/4) = 3/2 : 3/2 = 1"
+          },
+          {
+            "level": "rozsirenie",
+            "text": "Hranaté zátvorky: a) 2 · [2,5 − (9/2 − 3/4)] b) [(1 3/4 + 9/3) : (2 1/3 − 3/4)] · (−1/3)",
+            "answer": "a) 2 · [5/2 − 15/4] = 2 · (−5/4) = −5/2 = −2,5<br>b) (7/4 + 3) : (7/3 − 3/4) = 19/4 : 19/12 = 3, potom 3 · (−1/3) = −1"
+          },
+          {
+            "level": "rozsirenie",
+            "text": "Viacposchodové zlomky: a) (2/9 + 4/3) : ((−5/6) + 3/12) b) (2 1/4 − 5/12 : 5/6) : (3 · [4/9 − (−2/3)])",
+            "answer": "a) čitateľ 14/9, menovateľ −7/12; 14/9 · (−12/7) = −8/3<br>b) čitateľ 9/4 − 1/2 = 7/4, menovateľ 3 · 10/9 = 10/3; 7/4 · 3/10 = 21/40"
+          },
+          {
+            "level": "bonus",
+            "text": "Vypočítaj ((2/3 + 3/4) − (1/4 + 1/5)) : ((4/5 + 5/6) − 4/25) a výsledok zapíš zlomkom v základnom tvare. Potom ho zaokrúhli na tisíciny a skontroluj odhadom.",
+            "answer": "čitateľ: 17/12 − 9/20 = 85/60 − 27/60 = 58/60 = 29/30<br>menovateľ: 49/30 − 4/25 = 245/150 − 24/150 = 221/150<br>29/30 · 150/221 = 29 · 5 / 221 = 145/221 ≈ 0,656<br>Odhad: čitateľ je takmer 1, menovateľ asi 1,5, podiel asi 0,65."
+          },
+          {
+            "level": "bonus",
+            "text": "Vypočítaj 2/3 − 1/2 · (5/9 − 1/3). Výsledok napíš zlomkom aj desatinným číslom. Je jeho desatinný rozvoj konečný?",
+            "answer": "5/9 − 1/3 = 2/9; 1/2 · 2/9 = 1/9; 2/3 − 1/9 = 5/9<br>5 : 9 = 0,555… = 0,(5). Rozvoj je periodický, nie konečný, preto 0,56 je iba zaokrúhlenie."
+          },
+          {
             "level": "bonus",
             "text": "Vlož do výrazu 2 + 3 · 4 − 1 zátvorky tak, aby sa rovnal 15. Potom nájdi aspoň jeden ďalší spôsob vloženia zátvoriek a vypočítaj, čo vyjde.",
             "answer": "(2 + 3) · (4 − 1) = 5 · 3 = 15<br>Iný spôsob: (2 + 3) · 4 − 1 = 19, alebo 2 + 3 · (4 − 1) = 11."
@@ -454,6 +652,27 @@ MathPlatform.registerModule({
         "space": 7,
         "text": "Odhadni (zaokrúhli čísla) a potom vypočítaj presne: a) 19,8 · 3,1 b) 99 ÷ 4,95. Napíš, či je odhad blízko presného výsledku.",
         "answer": "a) odhad 20 · 3 = 60; presne 19,8 · 3,1 = 61,38<br>b) odhad 100 ÷ 5 = 20; presne 99 ÷ 4,95 = 20"
+      },
+      {
+        "id": "w7",
+        "level": "zaklad",
+        "space": 5,
+        "text": "Kráť pred násobením: a) 21/55 · 33/14 b) 28/45 : 14/15",
+        "answer": "a) 3 · 3 / (5 · 2) = 9/10<br>b) 28/45 · 15/14 = 2/3"
+      },
+      {
+        "id": "w8",
+        "level": "rozsirenie",
+        "space": 7,
+        "text": "Vypočítaj: a) (2 1/2 + 1,25) : (5/4 − 1/2) b) 4 1/2 − 0,75 : 3/8",
+        "answer": "a) 15/4 : 3/4 = 5<br>b) 9/2 − 3/4 · 8/3 = 9/2 − 2 = 5/2 = 2,5"
+      },
+      {
+        "id": "w9",
+        "level": "bonus",
+        "space": 7,
+        "text": "Vypočítaj viacposchodové zlomky: a) (1/2 + 1/3) : (1/4 − 1/6) b) (1/2 − 1/3) : (1/3 + 1/4)",
+        "answer": "a) 5/6 : 1/12 = 10<br>b) 1/6 : 7/12 = 1/6 · 12/7 = 2/7"
       },
       {
         "id": "w6",

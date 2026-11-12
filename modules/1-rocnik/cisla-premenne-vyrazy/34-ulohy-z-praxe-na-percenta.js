@@ -84,6 +84,13 @@ MathPlatform.registerModule({
         "html": "<p>Častá úloha je opačná: poznáme cenu po zmene a hľadáme pôvodnú cenu. Pôvodná cena je základ (100 %) a nová cena je jeho časť. Základ nájdeme delením koeficientom.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Po zľave 20 % stoja topánky 48 €. Aká bola pôvodná cena?</p><p>Nová cena je 80 % pôvodnej: 0,8 · Z = 48</p><p>Aké číslo vynásobené 0,8 dá 48? Delíme: 48 : 0,8 = <strong>60 €</strong></p><p>Kontrola: 0,8 · 60 = 48 ✓</p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Po zdražení o 12 % stojí kniha 56 €. Aká bola pôvodná cena?</p><p>1,12 · Z = 56</p><p>56 : 1,12 = <strong>50 €</strong></p><p>Kontrola: 1,12 · 50 = 56 ✓</p></div><div class=\"warning\"><strong>Pozor:</strong> Pôvodnú cenu nezískaš tak, že k 48 € pripočítaš 20 % zo 48. Tých 20 % je z pôvodnej ceny (základu), nie z ceny po zľave. Vždy delíme koeficientom.</div>"
       },
       {
+        "id": "pod-seba2",
+        "type": "explain",
+        "phase": "NOVÝ POJEM / PRAVIDLO",
+        "title": "Zníženie, zvýšenie a odpad trojčlenkou pod seba",
+        "html": "<p>Pri zmene o p % nehľadáme p %, ale <span class=\"hl\">celé percentá po zmene</span>: pri znížení o 16 % je to 100 % − 16 % = 84 %, pri zvýšení o 4 % je to 104 %.</p><div class=\"example\"><span class=\"mini-label\">ZNÍŽENIE O 16 %</span><p>Cenu 225 € znížime o 16 %. Platíme 84 %.</p><p>225 € … 100 %</p><p>x … 84 %</p><p>x = 225 · 84 : 100 = <strong>189 €</strong></p></div><div class=\"example\"><span class=\"mini-label\">ZÁKLAD PO ZVÝŠENÍ</span><p>Po zvýšení o 4 % stojí tovar 780 €. Aká bola pôvodná cena?</p><p>780 € … 104 %</p><p>x … 100 %</p><p>x = 780 · 100 : 104 = <strong>750 €</strong> (kontrola: 1,04 · 750 = 780)</p></div><div class=\"example\"><span class=\"mini-label\">ODPAD</span><p>Pri čistení sa 1 % hmotnosti stratí ako odpad. Z 650 kg neočistenej suroviny ostane 99 %.</p><p>650 kg … 100 %</p><p>x … 99 %</p><p>x = 650 · 99 : 100 = <strong>643,5 kg</strong></p></div><div class=\"warning\"><strong>Pozor:</strong> Pri hľadaní základu je 100 % v druhom riadku vedľa x. Číslo, ktoré poznáš po zmene (780 €), patrí k 104 %, nie k 100 %.</div>"
+      },
+      {
         "id": "dph",
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
@@ -203,6 +210,61 @@ MathPlatform.registerModule({
         "success": "56 : 1,12 = 50. Kontrola: 1,12 · 50 = 56.",
         "hint": "Nová cena je 112 % pôvodnej: aké číslo vynásobené 1,12 dá 56?",
         "reveal": "Trojčlenka: 112 % … 56, 1 % … 0,5, 100 % … 50."
+      },
+      {
+        "id": "c-pct",
+        "type": "choice",
+        "phase": "OVER SI",
+        "skill": "koeficient",
+        "question": "Cenu 225 € znížime o 16 %. Koľko percent pôvodnej ceny potom platíme?",
+        "options": [
+          "16 %",
+          "116 %",
+          "184 %",
+          "84 %"
+        ],
+        "answer": 3,
+        "correct": "100 % − 16 % = 84 % pôvodnej ceny, teda koeficient 0,84.",
+        "hint": "Pôvodná cena je 100 %. Čo z nej po znížení zostane?"
+      },
+      {
+        "id": "n-189",
+        "type": "numberInput",
+        "phase": "PRECVIČ",
+        "skill": "koeficient",
+        "title": "Zníženie o 16 %",
+        "prompt": "Cenu 225 € znížime o 16 %. Aká je nová cena v €?",
+        "validate": "exact",
+        "answer": 189,
+        "success": "225 … 100 %, x … 84 %, x = 225 · 84 : 100 = 189 €.",
+        "hint": "Platíš 84 % pôvodnej ceny, násobíš 0,84.",
+        "reveal": "Správne je 189: 16 % z 225 je 36 a 225 − 36 = 189."
+      },
+      {
+        "id": "n-750",
+        "type": "numberInput",
+        "phase": "PRECVIČ",
+        "skill": "pôvodná cena",
+        "title": "Základ po zvýšení o 4 %",
+        "prompt": "Po zvýšení o 4 % stojí tovar 780 €. Aká bola pôvodná cena v €?",
+        "validate": "exact",
+        "answer": 750,
+        "success": "780 … 104 %, x … 100 %, x = 780 · 100 : 104 = 750.",
+        "hint": "780 € je 104 % pôvodnej ceny, nie 100 %.",
+        "reveal": "Správne je 750: 1 % je 780 : 104 = 7,5 € a 100 % je 750 €."
+      },
+      {
+        "id": "n-waste",
+        "type": "numberInput",
+        "phase": "PRECVIČ",
+        "skill": "percento zvyšku",
+        "title": "Odpad pri čistení",
+        "prompt": "Pri čistení sa 1 % hmotnosti stratí ako odpad. Z 650 kg neočistenej suroviny koľko kg očistenej ostane? Zapíš iba číslo.",
+        "validate": "exact",
+        "answer": 643.5,
+        "success": "Ostáva 99 %: 650 · 0,99 = 643,5 kg.",
+        "hint": "Koľko percent suroviny ostane po odpade?",
+        "reveal": "Správne je 643,5: odpad je 6,5 kg a 650 − 6,5 = 643,5."
       },
       {
         "id": "c3",
@@ -422,6 +484,21 @@ MathPlatform.registerModule({
             "answer": "1. rok: 0,04 · 1 500 = 60 €, stav 1 560 €<br>2. rok: 1,04 · 1 560 = 1 622,40 €"
           },
           {
+            "level": "zaklad",
+            "text": "Trojčlenkou pod seba: cenu 340 € znížime o 15 %. Aká je nová cena?",
+            "answer": "340 € … 100 %; x … 85 %; x = 340 · 85 : 100 = 289 €"
+          },
+          {
+            "level": "rozsirenie",
+            "text": "Po zvýšení nájomného o 4 % platíme 624 €. Aké bolo pôvodné nájomné? Zapíš trojčlenku pod seba.",
+            "answer": "624 € … 104 %; x … 100 %; x = 624 · 100 : 104 = 600 €"
+          },
+          {
+            "level": "rozsirenie",
+            "text": "Pri čistení 820 kg suroviny sa stratí 2,5 % ako odpad. Koľko kg očistenej suroviny ostane?",
+            "answer": "ostáva 97,5 %; 820 … 100 %; x … 97,5 %; x = 820 · 97,5 : 100 = 799,5 kg"
+          },
+          {
             "level": "bonus",
             "text": "Cena tovaru klesla o 30 % a potom ešte o ďalších 20 % z novej ceny. O koľko percent klesla pôvodná cena celkovo?",
             "answer": "0,7 · 0,8 = 0,56<br>platíme 56 %, teda zľava je 44 %"
@@ -493,6 +570,13 @@ MathPlatform.registerModule({
         "space": 4,
         "text": "V akcii zlacnel mobil o 20 % a stojí 192 €. Aká bola pôvodná cena a koľko ušetríme?",
         "answer": "192 : 0,8 = 240 €<br>ušetríme 240 − 192 = 48 €"
+      },
+      {
+        "id": "w7",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Cenu 480 € znížime o 35 %. Aká je nová cena? Použi trojčlenku pod seba.",
+        "answer": "480 € … 100 %; x … 65 %; x = 480 · 65 : 100 = 312 €"
       },
       {
         "id": "w6",

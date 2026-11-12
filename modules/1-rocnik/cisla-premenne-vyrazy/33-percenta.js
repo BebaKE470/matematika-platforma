@@ -99,6 +99,14 @@ MathPlatform.registerModule({
         "html": "<p>Ak sa ti nechce pamätať vzorce, použi <span class=\"hl\">trojčlenku</span>: z toho, čo poznáš, prejdeš najprv na 1 %, potom na 100 % alebo na hľadaný počet percent.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>18 je 12 % zo Z. Nájdi Z.</p><p>12 % … 18</p><p>1 % … 18 : 12 = 1,5</p><p>100 % … 1,5 · 100 = <strong>150</strong></p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Koľko je 35 % z 80?</p><p>100 % … 80</p><p>1 % … 80 : 100 = 0,8</p><p>35 % … 0,8 · 35 = <strong>28</strong></p></div><div class=\"warning\"><strong>Pozor:</strong> Najčastejšia chyba: použiť zlý základ. V zadaní „20 žiakov z 25 je koľko percent“ je základ 25 (celá trieda), nie 20. Tiež nezabudni percentá deliť 100 – 40 % z 50 nie je 40 · 50 = 2000, ale 0,4 · 50 = 20.</div>"
       },
       {
+        "id": "pod-seba",
+        "type": "explain",
+        "phase": "NOVÝ POJEM / PRAVIDLO",
+        "title": "Trojčlenka zapísaná pod seba",
+        "html": "<p>Na papieri sa trojčlenka zapisuje ako dva riadky pod sebou: vľavo <span class=\"hl\">hodnota</span>, vpravo <span class=\"hl\">percentá</span>. Základ patrí vždy k 100 %.</p><ol class=\"steps\"><li>Prvý riadok: základ a 100 %.</li><li>Druhý riadok: druhý známy údaj; neznámy údaj označ x.</li><li>x vypočítaš krížom: číslo z toho istého riadku ako x vynásobíš číslom z druhého riadka, ktoré je v opačnom stĺpci, a vydeliš tretím číslom.</li></ol><div class=\"example\"><span class=\"mini-label\">KOĽKO PERCENT: 25,5 l Z 75 l</span><p>75 l … 100 %</p><p>25,5 l … x</p><p>x = 25,5 · 100 : 75 = 2 550 : 75 = <strong>34 %</strong></p></div><div class=\"example\"><span class=\"mini-label\">ČASŤ A ZVYŠOK: 57 % Z 800 KUSOV</span><p>800 … 100 %</p><p>x … 57 %</p><p>x = 800 · 57 : 100 = <strong>456</strong> predaných kusov</p><p>Zostalo 800 − 456 = <strong>344</strong> kusov (to je 100 % − 57 % = 43 %).</p></div><div class=\"warning\"><strong>Pozor:</strong> V jednom stĺpci musia byť rovnaké jednotky (litre s litrami, percentá s percentami). Základ je vždy ten, čo je 100 %, nie to menšie číslo.</div>",
+        "remember": "Základ patrí k 100 %. Zapíš dva riadky pod seba a x vypočítaj krížom."
+      },
+      {
         "id": "c1",
         "type": "choice",
         "phase": "OVER SI",
@@ -282,6 +290,47 @@ MathPlatform.registerModule({
         "reveal": "Trojčlenka: 35 % … 63, 1 % … 1,8, 100 % … 180."
       },
       {
+        "id": "c-setup",
+        "type": "choice",
+        "phase": "OVER SI",
+        "skill": "trojčlenka",
+        "question": "Z nádrže s objemom 75 l sa vyliali 25,5 l. Ktorý zápis trojčlenky pod seba je správny na zistenie, koľko percent sa vyliali?",
+        "options": [
+          "75 l … x %; 25,5 l … 100 %",
+          "75 l … 25,5 %; x l … 100 %",
+          "75 l … 100 %; 25,5 l … x %"
+        ],
+        "answer": 2,
+        "correct": "Základ (celá nádrž, 75 l) je 100 %, preto je v prvom riadku. Druhý riadok je 25,5 l … x %. Vyjde x = 25,5 · 100 : 75 = 34 %.",
+        "hint": "Ktoré číslo je celok? K nemu patrí 100 %."
+      },
+      {
+        "id": "n-p1",
+        "type": "numberInput",
+        "phase": "PRECVIČ",
+        "skill": "typ 2",
+        "title": "Koľko percent z nádrže",
+        "prompt": "Z nádrže so 75 litrami sa vyliali 25,5 litra. Koľko percent nádrže to je? Zapíš iba číslo.",
+        "validate": "exact",
+        "answer": 34,
+        "success": "75 … 100 %, 25,5 … x, x = 25,5 · 100 : 75 = 34 %.",
+        "hint": "Základ je celá nádrž. Vydeľ 25,5 : 75 a výsledok vyjadri v percentách.",
+        "reveal": "Správne je 34: 25,5 : 75 = 0,34 = 34 %."
+      },
+      {
+        "id": "n-p2",
+        "type": "numberInput",
+        "phase": "PRECVIČ",
+        "skill": "časť a zvyšok",
+        "title": "Koľko zostalo",
+        "prompt": "Zo 800 výrobkov sa predalo 57 %. Koľko výrobkov zostalo?",
+        "validate": "exact",
+        "answer": 344,
+        "success": "57 % z 800 = 456 predaných, zostalo 800 − 456 = 344 (alebo 43 % z 800).",
+        "hint": "Najprv vypočítaj, koľko sa predalo, alebo rovno koľko percent zostalo.",
+        "reveal": "Správne je 344: 100 % − 57 % = 43 % a 0,43 · 800 = 344."
+      },
+      {
         "id": "c5",
         "type": "choice",
         "phase": "PRENES",
@@ -368,6 +417,11 @@ MathPlatform.registerModule({
             "answer": "24 % … 18<br>1 % … 18 : 24 = 0,75<br>100 % … 75<br>Kontrola: 0,24 · 75 = 18"
           },
           {
+            "level": "zaklad",
+            "text": "Zapíš trojčlenku pod seba (hodnota … percentá) a vypočítaj: a) Koľko percent zo 75 l je 25,5 l? b) Koľko je 57 % z 800 a koľko zostane?",
+            "answer": "a) 75 … 100 %; 25,5 … x; x = 25,5 · 100 : 75 = 34 %<br>b) 800 … 100 %; x … 57 %; x = 456; zostane 800 − 456 = 344"
+          },
+          {
             "level": "bonus",
             "text": "Koľko percent z 80 je 20 % zo 120?",
             "answer": "20 % zo 120 = 0,2 · 120 = 24<br>24 : 80 = 0,3 = 30 %"
@@ -438,6 +492,13 @@ MathPlatform.registerModule({
         "space": 3,
         "text": "Vypočítaj 2,5 % z 800.",
         "answer": "0,025 · 800 = 20"
+      },
+      {
+        "id": "w7",
+        "level": "zaklad",
+        "space": 4,
+        "text": "Trojčlenkou pod seba: koľko percent zo 120 l je 18 l?",
+        "answer": "120 l … 100 %; 18 l … x; x = 18 · 100 : 120 = 15 %"
       },
       {
         "id": "w6",

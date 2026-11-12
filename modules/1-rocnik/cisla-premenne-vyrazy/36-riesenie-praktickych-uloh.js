@@ -56,7 +56,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "OPAKUJ",
         "title": "Nástroje, ktoré už máme",
-        "html": "<p>V tomto celku si získal štyri nástroje, ktoré sa v praxi veľmi často miešajú:</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Kritériá deliteľnosti</div><p class=\"term-rule\">Rýchlo rozhodnú, či sa číslo dá rozdeliť bez zvyšku (napr. 9 delí číslo, ak 9 delí jeho ciferný súčet).</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">NSD</div><p class=\"term-rule\">Najväčšie číslo, ktorým sú deliteľné obe čísla. Hodí sa pri delení na čo najväčšie rovnaké diely.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">NSN</div><p class=\"term-rule\">Najmenšie číslo, ktoré je násobkom oboch čísel. Hodí sa pri opakujúcich sa udalostiach, ktoré sa raz stretnú.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Percentá</div><p class=\"term-rule\">p % je p stotín základu: koeficient pri zľave 1 − p/100, pri zdražení 1 + p/100.</p></div></div>"
+        "html": "<p>V tomto celku si získal štyri nástroje, ktoré sa v praxi veľmi často miešajú:</p><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Kritériá deliteľnosti</div><p class=\"term-rule\">Rýchlo rozhodnú, či sa číslo dá rozdeliť bez zvyšku (napr. 9 delí číslo, ak 9 delí jeho ciferný súčet).</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">NSD, zápis D(m, n)</div><p class=\"term-rule\">Najväčšie nenulové prirodzené číslo, ktoré delí obe čísla. Hodí sa pri delení na čo najväčšie rovnaké diely.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">NSN, zápis n(m, n)</div><p class=\"term-rule\">Najmenšie nenulové prirodzené číslo, ktoré je deliteľné oboma číslami. Hodí sa pri opakujúcich sa udalostiach, ktoré sa raz stretnú.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Percentá</div><p class=\"term-rule\">p % je p stotín základu: koeficient pri zľave 1 − p/100, pri zdražení 1 + p/100.</p></div></div>"
       },
       {
         "id": "topic-intro",
@@ -81,7 +81,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Príklady: NSD a NSN v praxi",
-        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p><strong>NSD:</strong> Dve pásky majú dĺžku 84 cm a 126 cm. Chceme ich rozstrihať na rovnako dlhé kusy, čo najdlhšie, bez odpadu. Aká dĺžka kusa a koľko kusov?</p><p>84 = 2² · 3 · 7</p><p>126 = 2 · 3² · 7</p><p>NSD = 2 · 3 · 7 = <strong>42 cm</strong></p><p>Kusy: 84 : 42 = 2 a 126 : 42 = 3, spolu <strong>5 kusov</strong>.</p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p><strong>NSN:</strong> Autobusy A a B odídu zo stanice spolu o 8:00. Autobus A ide každých 12 min, autobus B každých 18 min. Kedy odídu znova spolu?</p><p>12 = 2² · 3</p><p>18 = 2 · 3²</p><p>NSN = 2² · 3² = <strong>36 min</strong></p><p>Znova odídu spolu o <strong>8:36</strong>.</p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p><strong>Deliteľnosť:</strong> Dá sa 252 žiakov rozdeliť do skupín po 9 bez zvyšku?</p><p>Ciferný súčet 2 + 5 + 2 = 9 a 9 je deliteľné 9</p><p>teda 252 je deliteľné 9 (252 : 9 = 28)</p></div><div class=\"warning\"><strong>Pozor:</strong> NSD a NSN sa ľahko zamenia. Pomôž si: kusy rozdeľujem na menšie → výsledok je menší alebo rovný zadaným číslam (NSD). Čakám, kým sa niečo opäť stretne → výsledok je väčší alebo rovný zadaným číslam (NSN).</div>"
+        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p><strong>NSD:</strong> Dve pásky majú dĺžku 84 cm a 126 cm. Chceme ich rozstrihať na rovnako dlhé kusy, čo najdlhšie, bez odpadu. Aká dĺžka kusa a koľko kusov?</p><p>84 = 2² · 3 · 7</p><p>126 = 2 · 3² · 7</p><p>NSD = 2 · 3 · 7 = <strong>42 cm</strong></p><p>Kusy: 84 : 42 = 2 a 126 : 42 = 3, spolu <strong>5 kusov</strong>.</p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p><strong>NSN:</strong> Autobusy A a B odídu zo stanice spolu o 8:00. Autobus A ide každých 12 min, autobus B každých 18 min. Kedy odídu znova spolu?</p><p>12 = 2² · 3</p><p>18 = 2 · 3²</p><p>NSN = 2² · 3² = <strong>36 min</strong></p><p>Znova odídu spolu o <strong>8:36</strong>.</p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p><strong>Deliteľnosť:</strong> Dá sa 252 žiakov rozdeliť do skupín po 9 bez zvyšku?</p><p>Ciferný súčet 2 + 5 + 2 = 9 a 9 je deliteľné 9</p><p>teda 252 je deliteľné 9 (252 : 9 = 28)</p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p><strong>NSD, obkladanie:</strong> Obdĺžnik 3 960 cm × 825 cm obkladáme čo najväčšími štvorcami bez rezania. Strana štvorca musí deliť obe rozmery, preto je to D(3 960, 825).</p><p>3 960 = 2³ · 3² · 5 · 11</p><p>825 = 3 · 5² · 11</p><p>D = 3 · 5 · 11 = <strong>165 cm</strong>, počet štvorcov (3 960 : 165) · (825 : 165) = 24 · 5 = <strong>120</strong>.</p></div><div class=\"warning\"><strong>Pozor:</strong> NSD a NSN sa ľahko zamenia. Pomôž si: kusy rozdeľujem na menšie → výsledok je menší alebo rovný zadaným číslam (NSD). Čakám, kým sa niečo opäť stretne → výsledok je väčší alebo rovný zadaným číslam (NSN).</div>"
       },
       {
         "id": "worked2",
@@ -290,9 +290,9 @@ MathPlatform.registerModule({
         "type": "choice",
         "phase": "NÁJDI CHYBU",
         "skill": "kritické myslenie",
-        "question": "Anna: Autobusy idú každých 12 a 18 minút a odišli spolu. Spolu pôjdu znova za NSD(12, 18) = 6 minút. Čo je zle?",
+        "question": "Anna: Autobusy idú každých 12 a 18 minút a odišli spolu. Spolu pôjdu znova za NSD – D(12, 18) = 6 minút. Čo je zle?",
         "options": [
-          "Treba použiť NSN(12, 18) = 36 minút, lebo čakáme na spoločný násobok.",
+          "Treba použiť n(12, 18) = 36 minút, lebo čakáme na spoločný násobok.",
           "Treba sčítať 12 + 18 = 30 minút.",
           "Treba použiť 12 · 18 = 216 minút.",
           "Anna má pravdu, NSD je správne."
@@ -359,7 +359,7 @@ MathPlatform.registerModule({
           {
             "level": "rozsirenie",
             "text": "Tri autobusové linky odchádzajú každých 10, 15 a 20 minút. O 6:00 odišli všetky naraz. Kedy odídu znova všetky naraz?",
-            "answer": "NSN(10, 15, 20): 10 = 2 · 5, 15 = 3 · 5, 20 = 2² · 5<br>NSN = 2² · 3 · 5 = 60 min<br>znova o 7:00"
+            "answer": "n(10, 15, 20): 10 = 2 · 5, 15 = 3 · 5, 20 = 2² · 5<br>NSN = 2² · 3 · 5 = 60 min<br>znova o 7:00"
           },
           {
             "level": "rozsirenie",
@@ -372,14 +372,24 @@ MathPlatform.registerModule({
             "answer": "bez DPH: 150 : 1,2 = 125 €<br>DPH: 150 − 125 = 25 €"
           },
           {
+            "level": "rozsirenie",
+            "text": "Dve skupiny majú 86 a 129 žiakov a tretia 215 žiakov. Vytvoríme rovnako početné tímy (bez miešania skupín) čo najväčšie. Koľko žiakov je v tíme a koľko tímov vznikne spolu? Použi D(86, 129, 215).",
+            "answer": "86 = 2 · 43, 129 = 3 · 43, 215 = 5 · 43<br>D = <strong>43 žiakov v tíme</strong><br>tímov: 2 + 3 + 5 = <strong>10</strong>"
+          },
+          {
             "level": "bonus",
             "text": "Obdĺžnik 84 cm × 126 cm chceme rozrezať na rovnaké štvorce bez odpadu. Aká je najväčšia možná strana štvorca a koľko štvorcov vznikne?",
-            "answer": "NSD(84, 126) = 42 cm<br>84 : 42 = 2 a 126 : 42 = 3<br>2 · 3 = 6 štvorcov"
+            "answer": "D(84, 126) = 42 cm<br>84 : 42 = 2 a 126 : 42 = 3<br>2 · 3 = 6 štvorcov"
           },
           {
             "level": "bonus",
             "text": "Vklad 2 000 € sa úročí 3 % ročne, úrok sa pripisuje každý rok k vkladu. Aký bude stav po dvoch rokoch?",
             "answer": "po 1. roku: 1,03 · 2 000 = 2 060 €<br>po 2. roku: 1,03 · 2 060 = 2 121,80 €"
+          },
+          {
+            "level": "bonus",
+            "text": "Obdĺžnik 1 820 cm × 1 330 cm obložíme čo najväčšími štvorcami. Urč stranu štvorca a ich počet. Potom zisti, koľko € stojí obloženie, ak jeden štvorec stojí 18 € a obchod dá zľavu 10 %.",
+            "answer": "D(1 820, 1 330) = 2 · 5 · 7 = <strong>70 cm</strong><br>(1 820 : 70) · (1 330 : 70) = 26 · 19 = <strong>494 štvorcov</strong><br>cena bez zľavy 494 · 18 = 8 892 €, so zľavou 0,9 · 8 892 = <strong>8 002,80 €</strong>"
           }
         ]
       },
@@ -420,7 +430,7 @@ MathPlatform.registerModule({
         "level": "zaklad",
         "space": 3,
         "text": "Dva majáky blikajú každých 6 s a 8 s. Teraz blikli spolu. Po koľkých sekundách blikli opäť spolu?",
-        "answer": "NSN(6, 8) = 24<br>po 24 s"
+        "answer": "n(6, 8) = 24<br>po 24 s"
       },
       {
         "id": "w3",
@@ -434,7 +444,14 @@ MathPlatform.registerModule({
         "level": "rozsirenie",
         "space": 5,
         "text": "Máme 72 pier a 54 zošitov. Rozdelíme ich do rovnakých balíčkov tak, aby sa všetko spotrebovalo a balíčkov bolo čo najviac. Koľko balíčkov je a čo je v jednom?",
-        "answer": "NSD(72, 54) = 18 balíčkov<br>72 : 18 = 4 perá a 54 : 18 = 3 zošity"
+        "answer": "D(72, 54) = 18 balíčkov<br>72 : 18 = 4 perá a 54 : 18 = 3 zošity"
+      },
+      {
+        "id": "w4b",
+        "level": "rozsirenie",
+        "space": 5,
+        "text": "Obdĺžnik 1 820 cm × 1 330 cm obkladáme čo najväčšími štvorcami. Urč D, stranu štvorca a počet štvorcov.",
+        "answer": "D(1 820, 1 330) = 70 cm<br>26 · 19 = 494 štvorcov"
       },
       {
         "id": "w5",

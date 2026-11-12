@@ -45,11 +45,11 @@ module.exports = {
         { id: 'u1', title: 'Úloha 1: Pojmy a definície',
           question: 'Ku každému pojmu vyber jeho definíciu. Jedna definícia je navyše.',
           steps: [
-            { id: 's1', label: 'najmenší spoločný násobok (NSN)', kind: 'choice', options: DEFS, points: 1 },
+            { id: 's1', label: 'najmenší spoločný násobok (NSN, značka n)', kind: 'choice', options: DEFS, points: 1 },
             { id: 's2', label: 'jedno percento', kind: 'choice', options: DEFS, points: 1 },
             { id: 's3', label: 'prvočíslo', kind: 'choice', options: DEFS, points: 1 },
             { id: 's4', label: 'iracionálne číslo', kind: 'choice', options: DEFS, points: 1 },
-            { id: 's5', label: 'najväčší spoločný deliteľ (NSD)', kind: 'choice', options: DEFS, points: 1 },
+            { id: 's5', label: 'najväčší spoločný deliteľ (NSD, značka D)', kind: 'choice', options: DEFS, points: 1 },
             { id: 's6', label: 'základ pri počítaní s percentami', kind: 'choice', options: DEFS, points: 1 },
             { id: 's7', label: 'násobok čísla', kind: 'choice', options: DEFS, points: 1 },
           ] },
@@ -68,8 +68,8 @@ module.exports = {
           steps: [
             { id: 's1', label: 'Ktoré rôzne prvočísla sa vyskytujú v rozklade čísla 180?', kind: 'set', points: 1 },
             { id: 's2', label: 'Koľkokrát sa v rozklade čísla 180 vyskytuje prvočíslo 3?', kind: 'number', points: 1 },
-            { id: 's3', label: 'NSD(180, 150)', kind: 'number', points: 1 },
-            { id: 's4', label: 'NSN(180, 150)', kind: 'number', points: 1 },
+            { id: 's3', label: 'NSD – D(180, 150)', kind: 'number', points: 1 },
+            { id: 's4', label: 'NSN – n(180, 150)', kind: 'number', points: 1 },
             { id: 's5', label: 'Je číslo 91 prvočíslo?', kind: 'choice', options: YESNO, points: 1 },
           ] },
         { id: 'u4', title: 'Úloha 4: Slovná úloha s NSD a NSN',
@@ -117,7 +117,7 @@ module.exports = {
         { id: 'u9', title: 'Úloha 9 (bonus)',
           question: 'Využi NSN viacerých čísel.',
           steps: [
-            { id: 's1', label: 'NSN(4, 6, 9)', kind: 'number', points: 1 },
+            { id: 's1', label: 'NSN – n(4, 6, 9)', kind: 'number', points: 1 },
             { id: 's2', label: 'Najmenšie prirodzené číslo väčšie ako 1, ktoré pri delení každým z čísel 4, 6 a 9 dáva zvyšok 1', kind: 'number', points: 1 },
           ] },
       ],
