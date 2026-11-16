@@ -15,7 +15,7 @@ MathPlatform.registerModule({
     "goals": [
       "vybrať v slovnej úlohe správny nástroj: kritérium deliteľnosti, NSD, NSN alebo percentá",
       "riešiť úlohy z praxe s NSD, NSN a deliteľnosťou",
-      "riešiť úlohy finančnej matematiky: zľava, DPH, úrok",
+      "riešiť úlohy s percentami: zľava, zdraženie, základ",
       "zdôvodniť výber nástroja a skontrolovať výsledok spätným výpočtom"
     ],
     "competencies": [
@@ -29,27 +29,28 @@ MathPlatform.registerModule({
       "Návrh maturitného štandardu je použitý iba ako obohatenie spôsobu práce: interpretácia, modelovanie, reprezentácie a zdôvodnenie."
     ],
     "flow": [
+      "Modul je skrátený a zameraný na obsah písomky (pojmy, kritériá deliteľnosti, NSD a NSN v slovnej úlohe, zaradenie čísel do N, Z, Q, I, percentá). DPH, úrok a reálne čísla v praxi (odmocniny) sú vynechané.",
       "2–3 min: otvorená otázka: kedy zase pôjdu autobusy A a B naraz a o koľko zlacnie tovar po dvoch zľavách",
-      "cca 20 min: aplikácia: postup riešenia, výber nástroja, NSD a NSN úlohy, percentá, financie",
+      "cca 10–12 min: postup riešenia a výber nástroja, potom úlohy NSD/NSN, matica výberu nástroja, zaradenie čísel",
       "8–10 min: papierová úloha s NSD a zľavou a zbierka",
       "3–5 min: spoločná kontrola, najčastejšie chyby: zámena NSD a NSN, zlý základ pri percentách"
     ],
     "diagnostics": [
       "žiak podľa zadania vyberie NSD alebo NSN",
       "žiak správne použije kritériá deliteľnosti",
-      "žiak určí základ pri úlohách s percentami a DPH",
+      "žiak určí základ pri úlohách s percentami",
       "žiak odpovie vetou a skontroluje výsledok"
     ],
     "partialUse": [
-      "Na krátku hodinu stačí matica výberu nástroja a úlohy NÁJDI CHYBU.",
+      "Modul je skrátený na obsah písomky (digitálna časť cca 20–25 min); ak zostane čas, stačí matica výberu nástroja a úloha NÁJDI CHYBU. DPH a úrok sa v ňom nenachádzajú.",
       "Zbierku a worksheet.tasks možno zadať ako domácu úlohu; mobil nenahrádza ručné počítanie."
     ]
   },
   "student": {
     "title": "Riešenie praktických úloh",
     "subtitle": "Téma 36 · Čísla, premenné, výrazy",
-    "intro": "Dnes miešame celé učivo celku: deliteľnosť, NSD, NSN, reálne čísla a percentá. Najprv rozhodni, ktorý nástroj úloha potrebuje.",
-    "estimatedTime": "25–35 min",
+    "intro": "Dnes miešame učivo celku: deliteľnosť, NSD, NSN, číselné množiny a percentá. Najprv rozhodni, ktorý nástroj úloha potrebuje.",
+    "estimatedTime": "20–25 min",
     "activities": [
       {
         "id": "recap",
@@ -64,7 +65,7 @@ MathPlatform.registerModule({
         "goals": [
           "rozpoznať v slovnej úlohe, ktorý nástroj použiť",
           "vyriešiť úlohy s NSD, NSN a deliteľnosťou",
-          "vyriešiť úlohy s percentami a financiami (zľava, DPH, úrok)",
+          "vyriešiť úlohy s percentami (zľava, zdraženie)",
           "zdôvodniť postup a skontrolovať výsledok"
         ]
       },
@@ -73,7 +74,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "POCHOP",
         "title": "Ako sa rieši slovná úloha",
-        "html": "<p>Pri praktických úlohách je najťažšie rozhodnúť, <span class=\"hl\">čo vlastne počítame</span>. Pomôže stále rovnaký postup.</p><ol class=\"steps\"><li>Prečítaj úlohu a podčiarkni čísla a otázku.</li><li>Rozhodni, čo je dané a čo hľadáš.</li><li>Vyber nástroj: delenie na rovnaké diely (NSD), opakovanie a stretnutie (NSN), zmena o p % (koeficient).</li><li>Odhadni výsledok.</li><li>Vypočítaj a zapíš odpoveď vetou aj s jednotkou.</li><li>Skontroluj spätným výpočtom.</li></ol><div class=\"table-wrap\"><table class=\"truth\"><tbody><tr><th>Slová v zadaní</th><th>Nástroj</th></tr><tr><td>rozdeliť na rovnaké diely, najväčšie možné, bez zvyšku</td><td>NSD</td></tr><tr><td>zase naraz, o koľko minút opäť, najmenší spoločný</td><td>NSN</td></tr><tr><td>zľava, zdraženie, DPH, úrok, koľko percent</td><td>percentá</td></tr><tr><td>je číslo deliteľné, dá sa rozdeliť bez zvyšku</td><td>kritérium deliteľnosti</td></tr></tbody></table></div>",
+        "html": "<p>Pri praktických úlohách je najťažšie rozhodnúť, <span class=\"hl\">čo vlastne počítame</span>. Pomôže stále rovnaký postup.</p><ol class=\"steps\"><li>Prečítaj úlohu a podčiarkni čísla a otázku.</li><li>Rozhodni, čo je dané a čo hľadáš.</li><li>Vyber nástroj: delenie na rovnaké diely (NSD), opakovanie a stretnutie (NSN), zmena o p % (koeficient).</li><li>Odhadni výsledok.</li><li>Vypočítaj a zapíš odpoveď vetou aj s jednotkou.</li><li>Skontroluj spätným výpočtom.</li></ol><div class=\"table-wrap\"><table class=\"truth\"><tbody><tr><th>Slová v zadaní</th><th>Nástroj</th></tr><tr><td>rozdeliť na rovnaké diely, najväčšie možné, bez zvyšku</td><td>NSD</td></tr><tr><td>zase naraz, o koľko minút opäť, najmenší spoločný</td><td>NSN</td></tr><tr><td>zľava, zdraženie, koľko percent</td><td>percentá</td></tr><tr><td>je číslo deliteľné, dá sa rozdeliť bez zvyšku</td><td>kritérium deliteľnosti</td></tr></tbody></table></div>",
         "remember": "Najprv rozhodni, ktorý nástroj úloha potrebuje, a až potom počítaj."
       },
       {
@@ -81,14 +82,7 @@ MathPlatform.registerModule({
         "type": "explain",
         "phase": "NOVÝ POJEM / PRAVIDLO",
         "title": "Príklady: NSD a NSN v praxi",
-        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p><strong>NSD:</strong> Dve pásky majú dĺžku 84 cm a 126 cm. Chceme ich rozstrihať na rovnako dlhé kusy, čo najdlhšie, bez odpadu. Aká dĺžka kusa a koľko kusov?</p><p>84 = 2² · 3 · 7</p><p>126 = 2 · 3² · 7</p><p>NSD = 2 · 3 · 7 = <strong>42 cm</strong></p><p>Kusy: 84 : 42 = 2 a 126 : 42 = 3, spolu <strong>5 kusov</strong>.</p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p><strong>NSN:</strong> Autobusy A a B odídu zo stanice spolu o 8:00. Autobus A ide každých 12 min, autobus B každých 18 min. Kedy odídu znova spolu?</p><p>12 = 2² · 3</p><p>18 = 2 · 3²</p><p>NSN = 2² · 3² = <strong>36 min</strong></p><p>Znova odídu spolu o <strong>8:36</strong>.</p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p><strong>Deliteľnosť:</strong> Dá sa 252 žiakov rozdeliť do skupín po 9 bez zvyšku?</p><p>Ciferný súčet 2 + 5 + 2 = 9 a 9 je deliteľné 9</p><p>teda 252 je deliteľné 9 (252 : 9 = 28)</p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p><strong>NSD, obkladanie:</strong> Obdĺžnik 3 960 cm × 825 cm obkladáme čo najväčšími štvorcami bez rezania. Strana štvorca musí deliť obe rozmery, preto je to D(3 960, 825).</p><p>3 960 = 2³ · 3² · 5 · 11</p><p>825 = 3 · 5² · 11</p><p>D = 3 · 5 · 11 = <strong>165 cm</strong>, počet štvorcov (3 960 : 165) · (825 : 165) = 24 · 5 = <strong>120</strong>.</p></div><div class=\"warning\"><strong>Pozor:</strong> NSD a NSN sa ľahko zamenia. Pomôž si: kusy rozdeľujem na menšie → výsledok je menší alebo rovný zadaným číslam (NSD). Čakám, kým sa niečo opäť stretne → výsledok je väčší alebo rovný zadaným číslam (NSN).</div>"
-      },
-      {
-        "id": "worked2",
-        "type": "explain",
-        "phase": "NOVÝ POJEM / PRAVIDLO",
-        "title": "Príklady: percentá a financie v jednej úlohe",
-        "html": "<p>V praxi sa percentá často skladajú. Základ každého kroku je vždy cena z predchádzajúceho kroku.</p><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Televízor stojí bez DPH 300 €. DPH je 20 %. Obchod dá zľavu 10 % z ceny s DPH.</p><p>Cena s DPH: 1,2 · 300 = 360 €</p><p>Po zľave: 0,9 · 360 = <strong>324 €</strong></p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Vklad 800 € je uložený na 3 % ročne. Koľko bude na účte po roku?</p><p>Úrok: 0,03 · 800 = 24 €</p><p>Stav: 800 + 24 = <strong>824 €</strong> (alebo 1,03 · 800).</p></div><p>Aj <span class=\"hl\">reálne čísla</span> sa objavia v praxi: strana štvorca s plochou 2 m² má dĺžku √2 m. Je to iracionálne číslo (nekonečný neperiodický desatinný rozvoj), preto ho v praxi zaokrúhľujeme: √2 ≈ 1,41 m.</p>"
+        "html": "<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p><strong>NSD:</strong> Dve pásky majú dĺžku 84 cm a 126 cm. Chceme ich rozstrihať na rovnako dlhé kusy, čo najdlhšie, bez odpadu. Aká dĺžka kusa a koľko kusov?</p><p>84 = 2² · 3 · 7</p><p>126 = 2 · 3² · 7</p><p>NSD = 2 · 3 · 7 = <strong>42 cm</strong></p><p>Kusy: 84 : 42 = 2 a 126 : 42 = 3, spolu <strong>5 kusov</strong>.</p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p><strong>NSN:</strong> Autobusy A a B odídu zo stanice spolu o 8:00. Autobus A ide každých 12 min, autobus B každých 18 min. Kedy odídu znova spolu?</p><p>12 = 2² · 3</p><p>18 = 2 · 3²</p><p>NSN = 2² · 3² = <strong>36 min</strong></p><p>Znova odídu spolu o <strong>8:36</strong>.</p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p><strong>Deliteľnosť:</strong> Dá sa 252 žiakov rozdeliť do skupín po 9 bez zvyšku?</p><p>Ciferný súčet 2 + 5 + 2 = 9 a 9 je deliteľné 9</p><p>teda 252 je deliteľné 9 (252 : 9 = 28)</p></div><div class=\"warning\"><strong>Pozor:</strong> NSD a NSN sa ľahko zamenia. Pomôž si: kusy rozdeľujem na menšie → výsledok je menší alebo rovný zadaným číslam (NSD). Čakám, kým sa niečo opäť stretne → výsledok je väčší alebo rovný zadaným číslam (NSN).</div>"
       },
       {
         "id": "c1",
@@ -165,26 +159,10 @@ MathPlatform.registerModule({
             "answer": "NSN"
           },
           {
-            "text": "K cene 80 € pripočítame DPH 20 %.",
+            "text": "K cene 80 € pripočítame 20 %.",
             "answer": "Percentá"
           }
         ]
-      },
-      {
-        "id": "c2",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "reálne čísla",
-        "question": "Ktoré z týchto čísel je iracionálne?",
-        "options": [
-          "√81",
-          "0,125",
-          "√3",
-          "5/8"
-        ],
-        "answer": 2,
-        "correct": "√81 = 9 a 0,125 = 1/8 aj 5/8 sú racionálne. Číslo √3 nemá konečný ani periodický rozvoj.",
-        "hint": "Iracionálne číslo nevieme zapísať ako zlomok celých čísel."
       },
       {
         "id": "s1",
@@ -231,61 +209,6 @@ MathPlatform.registerModule({
         ]
       },
       {
-        "id": "n3",
-        "type": "numberInput",
-        "phase": "PRECVIČ",
-        "skill": "percentá",
-        "title": "DPH odzadu",
-        "prompt": "Televízor stojí s DPH 20 % 360 €. Koľko € stojí bez DPH?",
-        "validate": "exact",
-        "answer": 300,
-        "success": "360 : 1,2 = 300. Kontrola: 1,2 · 300 = 360.",
-        "hint": "Cena s DPH je 120 % ceny bez DPH. Aké číslo vynásobené 1,2 dá 360?",
-        "reveal": "Trojčlenka: 120 % … 360, 1 % … 3, 100 % … 300."
-      },
-      {
-        "id": "c3",
-        "type": "choice",
-        "phase": "PRENES",
-        "skill": "finančná matematika",
-        "question": "Vklad 800 € je uložený na 3 % ročne. Koľko € bude na účte po roku (úrok sa pripíše k vkladu)?",
-        "options": [
-          "24 €",
-          "803 €",
-          "880 €",
-          "824 €"
-        ],
-        "answer": 3,
-        "correct": "Úrok je 0,03 · 800 = 24 € a stav je 800 + 24 = 824 €. Číslo 24 € je len úrok.",
-        "hint": "Otázka sa pýta na celý stav účtu, nie len na úrok."
-      },
-      {
-        "id": "n4",
-        "type": "numberInput",
-        "phase": "PRENES",
-        "skill": "zmiešaná úloha",
-        "title": "Zmiešaná úloha",
-        "prompt": "Škola kúpi 45 zošitov po 1,20 € bez DPH. DPH je 20 %. Koľko € zaplatí celkom s DPH? Zapíš iba číslo (použi desatinnú čiarku).",
-        "validate": "exact",
-        "answer": 64.8,
-        "success": "45 · 1,20 = 54 € a 1,2 · 54 = 64,80 €.",
-        "hint": "Najprv cena bez DPH za všetky zošity, potom koeficient 1,2.",
-        "reveal": "45 · 1,2 = 54, potom 54 + 20 % z 54 = 54 + 10,8 = 64,8."
-      },
-      {
-        "id": "n5",
-        "type": "numberInput",
-        "phase": "PRENES",
-        "skill": "percentá",
-        "title": "Zľava",
-        "prompt": "Bunda stojí 90 €. Zľava je 30 %. Koľko € stojí po zľave?",
-        "validate": "exact",
-        "answer": 63,
-        "success": "0,7 · 90 = 63. Zľava je 27 €.",
-        "hint": "Po zľave platíš 70 % pôvodnej ceny.",
-        "reveal": "30 % z 90 je 27, teda 90 − 27 = 63."
-      },
-      {
         "id": "e1",
         "type": "choice",
         "phase": "NÁJDI CHYBU",
@@ -300,31 +223,6 @@ MathPlatform.registerModule({
         "answer": 0,
         "correct": "Čakanie na opätovné stretnutie je spoločný násobok, preto je to NSN = 36 minút. NSD je menší ako obe čísla, no autobus A ide až po 12 minútach.",
         "hint": "Môžu sa stretnúť skôr ako po 12 minútach?"
-      },
-      {
-        "id": "e2",
-        "type": "choice",
-        "phase": "NÁJDI CHYBU",
-        "skill": "kritické myslenie",
-        "question": "Eva tvrdí: Tovar najprv zlacnie o 20 % a potom zdražie o 20 %, takže cena sa vráti na pôvodnú. Čo platí?",
-        "options": [
-          "Cena je po oboch zmenách vyššia ako pôvodná.",
-          "Eva má pravdu, cena sa vráti.",
-          "Cena je po oboch zmenách nižšia, lebo 0,8 · 1,2 = 0,96.",
-          "Cena je po oboch zmenách presne o 40 % nižšia."
-        ],
-        "answer": 2,
-        "correct": "Zdraženie sa počíta z nižšej ceny po zľave, preto sa nevráti. 0,8 · 1,2 = 0,96, teda 96 % pôvodnej ceny.",
-        "hint": "Z ktorej ceny sa počíta druhá zmena?"
-      },
-      {
-        "id": "self1",
-        "type": "selfWrite",
-        "phase": "VYSVETLI",
-        "skill": "matematická komunikácia",
-        "title": "Ako vyberám nástroj",
-        "prompt": "Vlastnými slovami vysvetli, podľa čoho v slovnej úlohe poznáš, či treba použiť NSD, NSN alebo percentá.",
-        "model": "NSD použijem, keď niečo rozdeľujem na čo najväčšie rovnaké diely bez zvyšku. NSN použijem, keď sa niečo opakuje a hľadám, kedy sa to stretne. Percentá použijem, keď sa niečo mení o p % alebo hľadám podiel z celku."
       },
       {
         "id": "manual",
@@ -368,11 +266,6 @@ MathPlatform.registerModule({
           },
           {
             "level": "rozsirenie",
-            "text": "Cena s DPH 20 % je 150 €. Aká je cena bez DPH a koľko € tvorí DPH?",
-            "answer": "bez DPH: 150 : 1,2 = 125 €<br>DPH: 150 − 125 = 25 €"
-          },
-          {
-            "level": "rozsirenie",
             "text": "Dve skupiny majú 86 a 129 žiakov a tretia 215 žiakov. Vytvoríme rovnako početné tímy (bez miešania skupín) čo najväčšie. Koľko žiakov je v tíme a koľko tímov vznikne spolu? Použi D(86, 129, 215).",
             "answer": "86 = 2 · 43, 129 = 3 · 43, 215 = 5 · 43<br>D = <strong>43 žiakov v tíme</strong><br>tímov: 2 + 3 + 5 = <strong>10</strong>"
           },
@@ -380,27 +273,8 @@ MathPlatform.registerModule({
             "level": "bonus",
             "text": "Obdĺžnik 84 cm × 126 cm chceme rozrezať na rovnaké štvorce bez odpadu. Aká je najväčšia možná strana štvorca a koľko štvorcov vznikne?",
             "answer": "D(84, 126) = 42 cm<br>84 : 42 = 2 a 126 : 42 = 3<br>2 · 3 = 6 štvorcov"
-          },
-          {
-            "level": "bonus",
-            "text": "Vklad 2 000 € sa úročí 3 % ročne, úrok sa pripisuje každý rok k vkladu. Aký bude stav po dvoch rokoch?",
-            "answer": "po 1. roku: 1,03 · 2 000 = 2 060 €<br>po 2. roku: 1,03 · 2 060 = 2 121,80 €"
-          },
-          {
-            "level": "bonus",
-            "text": "Obdĺžnik 1 820 cm × 1 330 cm obložíme čo najväčšími štvorcami. Urč stranu štvorca a ich počet. Potom zisti, koľko € stojí obloženie, ak jeden štvorec stojí 18 € a obchod dá zľavu 10 %.",
-            "answer": "D(1 820, 1 330) = 2 · 5 · 7 = <strong>70 cm</strong><br>(1 820 : 70) · (1 330 : 70) = 26 · 19 = <strong>494 štvorcov</strong><br>cena bez zľavy 494 · 18 = 8 892 €, so zľavou 0,9 · 8 892 = <strong>8 002,80 €</strong>"
           }
         ]
-      },
-      {
-        "id": "self2",
-        "type": "selfWrite",
-        "phase": "ARGUMENTUJ",
-        "skill": "argumentácia",
-        "title": "Prečo to funguje",
-        "prompt": "Napíš jednu vetu, ktorou by si spolužiakovi zdôvodnil, prečo pri autobusoch ideme na NSN a nie na NSD.",
-        "model": "Čakáme na okamih, keď sa obe opakovania stretnú, teda hľadáme najmenší spoločný násobok dĺžok ich cyklov. NSD by dalo menšie číslo, ako je dĺžka cyklu každého autobusu."
       },
       {
         "id": "reflection",
@@ -410,7 +284,7 @@ MathPlatform.registerModule({
         "skills": [
           "viem vybrať správny nástroj",
           "viem riešiť úlohy s NSD, NSN a deliteľnosťou",
-          "viem riešiť úlohy s percentami a financiami"
+          "viem riešiť úlohy s percentami"
         ],
         "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka."
       }

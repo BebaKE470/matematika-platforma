@@ -6,6 +6,7 @@ module.exports = {
   '1-u02-h027b': require('./1-u02-h027b.js'),
   '1-u02-h027p': require('./1-u02-h027p.js'),
   '1-u03-h032b': require('./1-u03-h032b.js'),
+  '1-u03-h035b': require('./1-u03-h035b.js'),
   '1-u03-h037b': require('./1-u03-h037b.js'),
   '1-u03-h037p': require('./1-u03-h037p.js'),
   '2-u03-h023': require('./2-u03-h023.js'),
