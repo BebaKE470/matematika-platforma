@@ -15,9 +15,8 @@ MathPlatform.registerModule({
       "Poznať a vedieť použiť vzťahy pre výpočet obvodov a obsahov základných rovinných útvarov."
     ],
     "goals": [
-      "z údajov v zadaní vybrať vhodný postup (Pytagorova veta, S = a·v/2, Herónov vzorec, sínus)",
+      "modul je zameraný na obsah písomky (digitálna časť približne 20–25 min)",
       "riešiť viackrokové a slovné úlohy s trojuholníkom a zapísať ich s jednotkami",
-      "využiť obsahové vzťahy: ťažnica S/2, ťažisko S/3, stredná priečka S/4",
       "nájsť a opraviť typické chyby v cudzom riešení"
     ],
     "competencies": [
@@ -32,21 +31,19 @@ MathPlatform.registerModule({
       "Úlohy z praxe: rebrík, štít domu, záhon, pozemok a oplotenie."
     ],
     "flow": [
-      "0–5 min: nástrojový kufrík — tabuľka „Dané → postup“",
-      "5–15 min: vzorové úlohy A (viackroková), B (slovná) a obsahové triky",
-      "15–30 min: platforma: výber postupu, slovné úlohy, hľadanie chýb",
-      "30–40 min: úloha BEZ MOBILU a zbierka podľa úrovne",
+      "0–5 min: vzorce a postup (tabuľka „Dané → postup“)",
+      "5–10 min: vzorový viackrokový príklad a slovná úloha",
+      "10–25 min: platforma: výber postupu, slovné úlohy, jednotky, hľadanie chyby",
+      "25–40 min: úloha BEZ MOBILU a zbierka podľa úrovne",
       "40–45 min: rozbor chýb podľa živých výsledkov, príprava na štvoruholníky"
     ],
     "diagnostics": [
       "v Pytagorovej vete pre rovnoramenný trojuholník nepoužije polovicu základne",
-      "zamieňa uhol v sínusovom vzorci (nie je medzi danými stranami)",
       "píše cm namiesto cm² a naopak",
-      "nevie rozhodnúť, ktorý vzorec použiť pri danom zadaní",
-      "zamieňa pomer 2 : 1 pri ťažisku s 3 : 1"
+      "nevie rozhodnúť, ktorý vzorec použiť pri danom zadaní"
     ],
     "partialUse": [
-      "pri nedostatku času vynechať bonusové položky a obsahové triky",
+      "pri nedostatku času vynechať bonusové položky zbierky",
       "mobil nenahrádza ručné počítanie; postupy sa píšu do zošita",
       "pri ŠVVP povoliť oporu: tabuľka „Dané → postup“"
     ]
@@ -55,40 +52,24 @@ MathPlatform.registerModule({
     "title": "Riešenie úloh",
     "subtitle": "Téma 24 · Planimetria · trojuholník",
     "intro": "Zmiešané a slovné úlohy o trojuholníku: vyberieš postup podľa zadaných údajov, vyriešiš úlohu a overíš ju. Počítaj na papieri, výsledky zapisuj do aplikácie.",
-    "estimatedTime": "25–35 min",
+    "estimatedTime": "20–25 min",
     "activities": [
-      {
-        "id": "recap",
-        "type": "explain",
-        "phase": "OPAKUJ",
-        "title": "Náš nástrojový kufrík",
-        "html": "<p>V tomto celku máme o trojuholníku pripravené tieto nástroje. Dnes si budeš musieť sám vybrať ten správny:</p>\n<div class=\"term-list\">\n<div class=\"term-item no-symbol\"><div class=\"term-name\">Uhly a existencia</div><p class=\"term-rule\">α + β + γ = 180°, vonkajší uhol = súčet dvoch vnútorných; trojuholníková nerovnosť.</p></div>\n<div class=\"term-item no-symbol\"><div class=\"term-name\">Pytagorova veta</div><p class=\"term-rule\">a² + b² = c² — v pravouhlom trojuholníku, a v rovnoramennom pre výšku (polovica základne!).</p></div>\n<div class=\"term-item no-symbol\"><div class=\"term-name\">Obvod a obsah</div><p class=\"term-rule\">o = a + b + c; S = a·v/2; pravouhlý S = ab/2; rovnostranný S = a²√3/4.</p></div>\n<div class=\"term-item no-symbol\"><div class=\"term-name\">Herónov vzorec, sínus a vpísaná kružnica</div><p class=\"term-rule\">S = √(s(s−a)(s−b)(s−c)); S = ½ab·sin γ; r = S/s.</p></div>\n</div>"
-      },
       {
         "id": "topic-intro",
         "type": "intro",
         "goals": [
-          "z údajov v zadaní vybrať vhodný postup (Pytagorova veta, S = a·v/2, Herónov vzorec, sínus)",
+          "z údajov v zadaní vybrať vhodný postup (Pytagorova veta, S = a·v/2, S = ab/2)",
           "riešiť viackrokové a slovné úlohy s trojuholníkom a zapísať ich s jednotkami",
-          "využiť obsahové vzťahy (ťažnica, ťažisko, stredná priečka)",
           "nájsť a opraviť typické chyby v cudzom riešení"
         ]
       },
       {
-        "id": "plan",
+        "id": "toolkit",
         "type": "explain",
-        "phase": "POCHOP",
-        "title": "Rozhodovací postup a vzorové úlohy",
-        "html": "<ol class=\"steps\">\n<li><strong>Náčrt:</strong> nakresli trojuholník, označ dané a hľadané veličiny aj s jednotkami.</li>\n<li><strong>Pravouhlé trojuholníky:</strong> nájdi v obrázku pravý uhol (výška, polovica základne) — a použi Pytagorovu vetu alebo sin, cos.</li>\n<li><strong>Vzorec:</strong> vyber ho podľa toho, čo máš dané (tabuľka nižšie).</li>\n<li><strong>Výpočet</strong> s jednotkami: cm pri dĺžke a obvode, cm² pri obsahu.</li>\n<li><strong>Skúška:</strong> trojuholníková nerovnosť, hrubý odhad, iný spôsob výpočtu (napr. Herón vs. S = a·v/2).</li>\n</ol>\n<div class=\"table-wrap\"><table class=\"truth\"><thead><tr><th>Dané</th><th>Postup</th></tr></thead><tbody>\n<tr><td>strana a výška na ňu</td><td>S = a · v / 2</td></tr>\n<tr><td>pravouhlý, obe odvesny</td><td>S = ab / 2, c z Pytagorovej vety</td></tr>\n<tr><td>rovnoramenný: základňa a ramená</td><td>výška z Pytagorovej vety (polovica základne!), potom S = z · v / 2</td></tr>\n<tr><td>všetky tri strany</td><td>Herónov vzorec</td></tr>\n<tr><td>dve strany a uhol medzi nimi</td><td>S = ½ · a · b · sin γ</td></tr>\n<tr><td>obsah a polovica obvodu</td><td>r = S / s</td></tr>\n</tbody></table></div>\n<div class=\"example\"><span class=\"mini-label\">PRÍKLAD A · viackroková</span><p>Rovnoramenný trojuholník má obvod 50 cm a ramená 17 cm. Vypočítaj základňu, výšku, obsah a polomer vpísanej kružnice.</p><p>Základňa: 50 − 2 · 17 = <strong>16 cm</strong> (existuje: 17 + 17 &gt; 16).</p><p>Výška: v² = 17² − 8² = 289 − 64 = 225, v = <strong>15 cm</strong>.</p><p>Obsah: S = 16 · 15 / 2 = <strong>120 cm²</strong>.</p><p>s = 50 / 2 = 25 cm, r = 120 / 25 = <strong>4,8 cm</strong>.</p></div>\n<div class=\"example\"><span class=\"mini-label\">PRÍKLAD B · slovná úloha</span><p>Rebrík dĺžky 6 m je oprený o stenu tak, že so zemou zviera uhol 30°. Do akej výšky dosahuje?</p><p>Náčrt: pravouhlý trojuholník, prepona 6 m (rebrík), hľadáme odvesnu oproti uhlu 30°.</p><p>sin 30° = v / 6 ⇒ v = 6 · ½ = <strong>3 m</strong>.</p><p>Odpoveď: rebrík dosahuje do výšky 3 m.</p></div>\n<div class=\"warning\"><strong>Pozor:</strong> V rovnoramennom trojuholníku patrí do Pytagorovej vety <em>polovica</em> základne, nie celá základňa. A skôr než začneš počítať, uisti sa, že vieš, ktorá strana je prepona.</div>",
-        "remember": "Najprv náčrt a pravouhlé trojuholníky v ňom, potom vzorec podľa dát, na konci jednotky a skúška."
-      },
-      {
-        "id": "tricks",
-        "type": "explain",
-        "phase": "NOVÝ POJEM",
-        "title": "Obsahové triky: ťažnica, ťažisko, stredná priečka",
-        "html": "<p>Niektoré úlohy sa dajú vyriešiť bez výpočtu, keď si všimneš, ako sa obsah delí.</p>\n<p><strong>1. Ťažnica rozdelí trojuholník na dva trojuholníky s rovnakým obsahom.</strong> Oba majú rovnakú výšku (z vrcholu C) a rovnaké základne (polovice strany AB):</p>\n<div class=\"logic-visual\"><svg viewBox=\"0 0 520 300\" role=\"img\" aria-label=\"Ťažnica CS rozdelí trojuholník na dva trojuholníky s rovnakým obsahom S/2\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\"></g><polygon points=\"60.0,240.0 250.0,240.0 250.0,50.0\" fill=\"#1f6f5c\" fill-opacity=\"0.18\" stroke=\"none\"/><polygon points=\"250.0,240.0 440.0,240.0 250.0,50.0\" fill=\"#b4532a\" fill-opacity=\"0.18\" stroke=\"none\"/><polygon points=\"60,240 440,240 250,50\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\" /><line x1=\"250\" y1=\"50\" x2=\"250\" y2=\"240\" stroke=\"#b4532a\" stroke-width=\"2.5\"/><circle cx=\"250\" cy=\"240\" r=\"5\" fill=\"#b4532a\"/><text x=\"46\" y=\"268\" font-size=\"20\" fill=\"currentColor\" text-anchor=\"middle\" font-family=\"system-ui\">A</text><text x=\"454\" y=\"268\" font-size=\"20\" fill=\"currentColor\" text-anchor=\"middle\" font-family=\"system-ui\">B</text><text x=\"250\" y=\"36\" font-size=\"20\" fill=\"currentColor\" text-anchor=\"middle\" font-family=\"system-ui\">C</text><text x=\"254\" y=\"268\" font-size=\"20\" fill=\"#b4532a\" text-anchor=\"middle\" font-family=\"system-ui\">S</text><text x=\"185\" y=\"190\" font-size=\"22\" fill=\"#1f6f5c\" text-anchor=\"middle\" font-family=\"system-ui\">S/2</text><text x=\"318\" y=\"190\" font-size=\"22\" fill=\"#b4532a\" text-anchor=\"middle\" font-family=\"system-ui\">S/2</text></svg></div>\n<p><strong>2. Stredné priečky rozdelia trojuholník na 4 zhodné trojuholníky.</strong> Každý má obsah S/4 (preto má trojuholník odrezaný jednou strednou priečkou obsah ¼ pôvodného):</p>\n<div class=\"logic-visual\"><svg viewBox=\"0 0 520 300\" role=\"img\" aria-label=\"Stredné priečky rozdelia trojuholník na štyri zhodné trojuholníky, každý s obsahom S/4\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\"></g><polygon points=\"345.0,145.0 155.0,145.0 250.0,240.0\" fill=\"#1f6f5c\" fill-opacity=\"0.2\" stroke=\"none\"/><polygon points=\"60,240 440,240 250,50\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\" /><polygon points=\"345,145 155,145 250,240\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\" /><circle cx=\"345\" cy=\"145\" r=\"4\" fill=\"currentColor\"/><circle cx=\"155\" cy=\"145\" r=\"4\" fill=\"currentColor\"/><circle cx=\"250\" cy=\"240\" r=\"4\" fill=\"currentColor\"/><text x=\"46\" y=\"268\" font-size=\"20\" fill=\"currentColor\" text-anchor=\"middle\" font-family=\"system-ui\">A</text><text x=\"454\" y=\"268\" font-size=\"20\" fill=\"currentColor\" text-anchor=\"middle\" font-family=\"system-ui\">B</text><text x=\"250\" y=\"36\" font-size=\"20\" fill=\"currentColor\" text-anchor=\"middle\" font-family=\"system-ui\">C</text><text x=\"250\" y=\"190\" font-size=\"19\" fill=\"currentColor\" text-anchor=\"middle\" font-family=\"system-ui\">S/4</text><text x=\"148\" y=\"228\" font-size=\"19\" fill=\"currentColor\" text-anchor=\"middle\" font-family=\"system-ui\">S/4</text><text x=\"352\" y=\"228\" font-size=\"19\" fill=\"currentColor\" text-anchor=\"middle\" font-family=\"system-ui\">S/4</text><text x=\"250\" y=\"118\" font-size=\"19\" fill=\"currentColor\" text-anchor=\"middle\" font-family=\"system-ui\">S/4</text></svg></div>\n<p><strong>3. Ťažisko T:</strong> trojuholník ABT (spojnice T s dvoma vrcholmi) má obsah S/3 — tri takéto trojuholníky vyplnia celý trojuholník ABC:</p>\n<div class=\"logic-visual\"><svg viewBox=\"0 0 520 300\" role=\"img\" aria-label=\"Ťažisko T: trojuholník ABT má tretinu obsahu trojuholníka ABC\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\"></g><polygon points=\"60.0,240.0 440.0,240.0 250.0,176.7\" fill=\"#b4532a\" fill-opacity=\"0.18\" stroke=\"none\"/><polygon points=\"60,240 440,240 250,50\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\" /><line x1=\"60\" y1=\"240\" x2=\"345\" y2=\"145\" stroke=\"#b4532a\" stroke-width=\"2.5\"/><line x1=\"440\" y1=\"240\" x2=\"155\" y2=\"145\" stroke=\"#b4532a\" stroke-width=\"2.5\"/><line x1=\"250\" y1=\"50\" x2=\"250\" y2=\"240\" stroke=\"#b4532a\" stroke-width=\"2.5\"/><circle cx=\"250\" cy=\"176.66666666666666\" r=\"6\" fill=\"#b4532a\"/><text x=\"46\" y=\"268\" font-size=\"20\" fill=\"currentColor\" text-anchor=\"middle\" font-family=\"system-ui\">A</text><text x=\"454\" y=\"268\" font-size=\"20\" fill=\"currentColor\" text-anchor=\"middle\" font-family=\"system-ui\">B</text><text x=\"250\" y=\"36\" font-size=\"20\" fill=\"currentColor\" text-anchor=\"middle\" font-family=\"system-ui\">C</text><text x=\"268\" y=\"168.66666666666666\" font-size=\"20\" fill=\"#b4532a\" text-anchor=\"middle\" font-family=\"system-ui\">T</text><text x=\"250\" y=\"212\" font-size=\"22\" fill=\"#b4532a\" text-anchor=\"middle\" font-family=\"system-ui\">S/3</text></svg></div>\n<div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Trojuholník má obsah 36 cm². Aký obsah má trojuholník ABT?</p><p>S/3 = 36 / 3 = <strong>12 cm²</strong>.</p></div>\n<div class=\"warning\"><strong>Pozor:</strong> Dĺžky sa pri strednej priečke zmenšia na polovicu, ale obsah až na <em>štvrtinu</em> (nie polovicu).</div>",
-        "remember": "Ťažnica: S/2 + S/2. Stredná priečka odreže S/4. Spojnice ťažiska s vrcholmi dávajú tri trojuholníky po S/3."
+        "phase": "OPAKUJ",
+        "title": "Vzorce a postup pri úlohách o trojuholníku",
+        "html": "<div class=\"formula\"><span class=\"mini-label\">VZORCE</span>o = a + b + c &nbsp;·&nbsp; S = a · v / 2 &nbsp;·&nbsp; pravouhlý: S = a · b / 2 &nbsp;·&nbsp; a² + b² = c²</div>\n<ol class=\"steps\">\n<li><strong>Náčrt:</strong> označ dané a hľadané veličiny aj s jednotkami.</li>\n<li><strong>Pravý uhol:</strong> nájdi ho (odvesny, výška rovnoramenného – polovica základne!) a použi Pytagorovu vetu.</li>\n<li><strong>Vzorec:</strong> obvod = súčet strán, obsah = strana · jej výška / 2.</li>\n<li><strong>Jednotky:</strong> cm, m pri dĺžke a obvode; cm², m² pri obsahu.</li>\n</ol>\n<div class=\"example\"><span class=\"mini-label\">PRÍKLAD · viackroková</span><p>Rovnoramenný trojuholník má obvod 36 cm a ramená 13 cm.</p><p>Základňa: 36 − 2 · 13 = <strong>10 cm</strong>. Výška: v² = 13² − 5² = 144, v = <strong>12 cm</strong>. Obsah: S = 10 · 12 / 2 = <strong>60 cm²</strong>.</p></div>",
+        "remember": "Najprv nájdi chýbajúci údaj (Pytagorova veta), potom dosaď do vzorca a pridaj jednotku."
       },
       {
         "id": "method-matrix",
@@ -97,35 +78,34 @@ MathPlatform.registerModule({
         "skill": "výber postupu",
         "title": "Čo použiješ?",
         "labels": [
-          "S = a·v/2 (alebo S = ab/2)",
-          "Herónov vzorec",
-          "S = ½·a·b·sin γ",
+          "S = a·v/2",
+          "S = ab/2 (odvesny)",
           "najprv Pytagorova veta"
         ],
         "items": [
           {
             "text": "strana 12 cm a výška na ňu 7 cm",
-            "answer": "S = a·v/2 (alebo S = ab/2)"
+            "answer": "S = a·v/2"
           },
           {
-            "text": "všetky tri strany 13 cm, 14 cm, 15 cm",
-            "answer": "Herónov vzorec"
-          },
-          {
-            "text": "strany 8 cm a 5 cm a uhol medzi nimi 30°",
-            "answer": "S = ½·a·b·sin γ"
+            "text": "pravouhlý trojuholník s odvesnami 6 cm a 8 cm, hľadáme obsah",
+            "answer": "S = ab/2 (odvesny)"
           },
           {
             "text": "rovnoramenný: základňa 10 cm, ramená 13 cm (výška nie je daná)",
             "answer": "najprv Pytagorova veta"
           },
           {
-            "text": "pravouhlý trojuholník s odvesnami 6 cm a 8 cm",
-            "answer": "S = a·v/2 (alebo S = ab/2)"
+            "text": "strana 20 cm a výška na ňu 9 cm",
+            "answer": "S = a·v/2"
           },
           {
-            "text": "všetky tri strany 9 cm, 10 cm, 17 cm",
-            "answer": "Herónov vzorec"
+            "text": "pravouhlý: prepona 13 cm a odvesna 5 cm, hľadáme obsah",
+            "answer": "najprv Pytagorova veta"
+          },
+          {
+            "text": "pravouhlý trojuholník s odvesnami 9 cm a 12 cm, hľadáme obsah",
+            "answer": "S = ab/2 (odvesny)"
           }
         ]
       },
@@ -143,19 +123,6 @@ MathPlatform.registerModule({
         "reveal": "Správne je 6: 42,25 − 6,25 = 36."
       },
       {
-        "id": "n-lad2",
-        "type": "numberInput",
-        "phase": "OVER SI",
-        "skill": "slovná úloha: sínus",
-        "title": "Rebrík pod uhlom",
-        "prompt": "Rebrík dlhý 8 m je oprený o stenu a so zemou zviera uhol 30°. Do akej výšky v metroch dosiahne?",
-        "validate": "exact",
-        "answer": 4,
-        "success": "sin 30° = v / 8 ⇒ v = 8 · ½ = 4 m.",
-        "hint": "Rebrík je prepona. Výška je odvesna oproti uhlu 30°: použi sínus.",
-        "reveal": "Správne je 4: v = 8 · sin 30° = 8 · ½."
-      },
-      {
         "id": "n-field",
         "type": "numberInput",
         "phase": "OVER SI",
@@ -169,88 +136,17 @@ MathPlatform.registerModule({
         "reveal": "Správne je 9: S = 54 m² a 54 : 6 = 9."
       },
       {
-        "id": "n-bed",
+        "id": "n-plot",
         "type": "numberInput",
         "phase": "OVER SI",
-        "skill": "obsah cez sínus",
-        "title": "Záhon",
-        "prompt": "Záhon má tvar trojuholníka. Dve jeho strany majú 16 m a 5 m a zvierajú uhol 30°. Aký je obsah záhonu v m²?",
+        "skill": "slovná úloha: obsah a cena",
+        "title": "Trávnik",
+        "prompt": "Pozemok má tvar rovnoramenného trojuholníka so základňou 30 m a ramenami 17 m. Zatrávnenie stojí 3 € za 1 m². Koľko eur stojí zatrávnenie celého pozemku?",
         "validate": "exact",
-        "answer": 20,
-        "success": "S = ½ · 16 · 5 · sin 30° = ½ · 80 · ½ = 20 m².",
-        "hint": "Použi S = ½ · a · b · sin γ; sin 30° = ½.",
-        "reveal": "Správne je 20: ½ · 80 = 40, 40 · ½ = 20."
-      },
-      {
-        "id": "n-heron",
-        "type": "numberInput",
-        "phase": "OVER SI",
-        "skill": "Herónov vzorec",
-        "title": "Herónov vzorec",
-        "prompt": "Trojuholník má strany 6 cm, 25 cm a 29 cm. Aký je jeho obsah v cm²?",
-        "validate": "exact",
-        "answer": 60,
-        "success": "s = 30, S = √(30 · 24 · 5 · 1) = √3600 = 60 cm².",
-        "hint": "Spočítaj s = 30 a odčítaj od neho každú stranu.",
-        "reveal": "Správne je 60: 30 · 24 · 5 · 1 = 3600 = 60²."
-      },
-      {
-        "id": "n-cog",
-        "type": "numberInput",
-        "phase": "OVER SI",
-        "skill": "ťažisko",
-        "title": "Ťažisko a základňa",
-        "prompt": "Rovnoramenný trojuholník má výšku na základňu 15 cm. Ťažisko leží na tejto výške (výška je zároveň ťažnica) a delí ju v pomere 2 : 1 počítané od vrcholu. Ako ďaleko v cm je ťažisko od základne?",
-        "validate": "exact",
-        "answer": 5,
-        "success": "Ťažisko je od základne vzdialené ⅓ ťažnice: 15 : 3 = 5 cm.",
-        "hint": "Dlhšia časť (⅔) je pri vrchole, kratšia (⅓) pri základni.",
-        "reveal": "Správne je 5: 15 : 3 = 5 (a od vrcholu 10 cm)."
-      },
-      {
-        "id": "n-mid",
-        "type": "numberInput",
-        "phase": "OVER SI",
-        "skill": "stredná priečka",
-        "title": "Stredná priečka a obsah",
-        "prompt": "Trojuholník má obsah 48 cm². Stredná priečka od neho odreže menší trojuholník pri vrchole. Aký obsah v cm² má tento odrezaný trojuholník?",
-        "validate": "exact",
-        "answer": 12,
-        "success": "Stredné priečky delia trojuholník na 4 zhodné trojuholníky, každý má 48 : 4 = 12 cm².",
-        "hint": "Odrezaný trojuholník je jeden zo štyroch zhodných trojuholníkov.",
-        "reveal": "Správne je 12: 48 : 4 = 12."
-      },
-      {
-        "id": "c-eq",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "rovnostranný trojuholník",
-        "question": "Rovnostranný trojuholník má stranu 8 cm. Aký je jeho obvod a obsah?",
-        "options": [
-          "obvod 24 cm², obsah 16√3 cm",
-          "obvod 24 cm, obsah 32 cm²",
-          "obvod 24 cm, obsah 16√3 cm²",
-          "obvod 24 cm, obsah 64√3 cm²"
-        ],
-        "answer": 2,
-        "correct": "Správne: o = 3 · 8 = 24 cm, S = a²√3 / 4 = 64√3 / 4 = 16√3 cm². Obvod je dĺžka (cm), obsah plocha (cm²).",
-        "hint": "Skontroluj aj jednotky. Dosaď do S = a²√3 / 4; koľko je 64 : 4?"
-      },
-      {
-        "id": "c-same",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "obsah z výšky",
-        "question": "Trojuholníky ABC a ABD majú spoločnú stranu AB = 10 cm. Vrcholy C a D ležia na priamke rovnobežnej s AB a od AB sú vzdialené 6 cm. Čo platí o ich obsahoch?",
-        "options": [
-          "Oba majú obsah 30 cm².",
-          "Trojuholník ABC má väčší obsah, lebo je ostrouhlý.",
-          "Trojuholník ABD má väčší obsah, lebo má dlhšiu stranu.",
-          "Obsahy sa bez dĺžok strán AC, BC, AD, BD nedajú určiť."
-        ],
-        "answer": 0,
-        "correct": "Správne: obsah závisí len od základne AB a výšky na ňu: S = 10 · 6 / 2 = 30 cm². Posun vrcholu po rovnobežke obsah nemení.",
-        "hint": "Do vzorca S = a · v / 2 vstupuje len strana a jej výška. Čo sa pri posune vrcholu po rovnobežke mení?"
+        "answer": 360,
+        "success": "Výška: v² = 17² − 15² = 64, v = 8 m. S = 30 · 8 / 2 = 120 m². 120 · 3 = 360 €.",
+        "hint": "Najprv výška (polovica základne je 15 m), potom obsah v m² a nakoniec cena.",
+        "reveal": "Správne je 360: v = 8 m, S = 120 m², 120 · 3 = 360."
       },
       {
         "id": "c-iso",
@@ -269,36 +165,20 @@ MathPlatform.registerModule({
         "hint": "Najprv nájdi výšku na základňu: polovica základne je 4 cm a rameno 5 cm je prepona."
       },
       {
-        "id": "c-sin",
+        "id": "c-eq",
         "type": "choice",
         "phase": "OVER SI",
-        "skill": "obsah cez sínus",
-        "question": "Trojuholník má dve strany 6 cm a 8 cm. Pri ktorom uhle medzi nimi má najväčší obsah?",
+        "skill": "rovnostranný trojuholník",
+        "question": "Rovnostranný trojuholník má stranu 8 cm. Aký je jeho obvod a obsah?",
         "options": [
-          "30°",
-          "90°",
-          "150°",
-          "120°"
-        ],
-        "answer": 1,
-        "correct": "Správne: S = ½ · 6 · 8 · sin γ = 24 · sin γ a sínus je najväčší (1) pre γ = 90°. Vtedy S = 24 cm².",
-        "hint": "Strany sú dané, mení sa len sin γ. Pri akom uhle je sínus najväčší?"
-      },
-      {
-        "id": "c-med",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "ťažnica a obsah",
-        "question": "Ťažnica t_a rozdelí trojuholník s obsahom 50 cm² na dva menšie trojuholníky. Aké sú ich obsahy?",
-        "options": [
-          "obsahy v pomere 2 : 1",
-          "obsahy závisia od tvaru a nedajú sa určiť",
-          "25 cm² a 25 cm²",
-          "50 cm² a 50 cm²"
+          "obvod 24 cm², obsah 16√3 cm",
+          "obvod 24 cm, obsah 32 cm²",
+          "obvod 24 cm, obsah 16√3 cm²",
+          "obvod 24 cm, obsah 64√3 cm²"
         ],
         "answer": 2,
-        "correct": "Správne: oba trojuholníky majú rovnakú výšku z vrcholu A a rovnaké základne (polovice strany BC), takže po 25 cm².",
-        "hint": "Pozri sa na výšku z vrcholu A a na základne oboch častí. Čo majú spoločné?"
+        "correct": "Správne: o = 3 · 8 = 24 cm, S = a²√3 / 4 = 64√3 / 4 = 16√3 cm². Obvod je dĺžka (cm), obsah plocha (cm²).",
+        "hint": "Skontroluj aj jednotky. Dosaď do S = a²√3 / 4; koľko je 64 : 4?"
       },
       {
         "id": "units-sort",
@@ -338,9 +218,9 @@ MathPlatform.registerModule({
             "why": "Výška je dĺžka."
           },
           {
-            "text": "polomer vpísanej kružnice r = 4 cm²",
+            "text": "výška v = 12 cm²",
             "answer": false,
-            "why": "Polomer je dĺžka, má byť cm."
+            "why": "Výška je dĺžka, má byť cm."
           }
         ]
       },
@@ -361,43 +241,11 @@ MathPlatform.registerModule({
         "hint": "Výška rozpolí základňu. Akú dĺžku má odvesna, ktorá s výškou tvorí pravý uhol?"
       },
       {
-        "id": "hunt2",
-        "type": "choice",
-        "phase": "NÁJDI CHYBU",
-        "skill": "hľadanie chyby",
-        "question": "Žiak: „Ťažisko delí ťažnicu 3 : 1, takže pri ťažnici 12 cm je ťažisko od vrcholu 9 cm.“ Ako ďaleko od vrcholu je ťažisko naozaj?",
-        "options": [
-          "8 cm",
-          "9 cm",
-          "6 cm",
-          "4 cm"
-        ],
-        "answer": 0,
-        "correct": "Správne: ťažisko delí ťažnicu v pomere 2 : 1, preto je od vrcholu ⅔ · 12 = 8 cm (a od stredu strany 4 cm).",
-        "hint": "Pomer je 2 : 1. Na koľko rovnakých dielov rozdelíš ťažnicu a koľko z nich patrí vrcholu?"
-      },
-      {
-        "id": "hunt3",
-        "type": "choice",
-        "phase": "NÁJDI CHYBU",
-        "skill": "hľadanie chyby",
-        "question": "Trojuholník ABC má a = 7 cm, b = 10 cm a pri vrchole A uhol α = 30°. Žiak počíta: „S = ½ · 7 · 10 · sin 30° = 17,5 cm².“ Čo je zle?",
-        "options": [
-          "Hodnota sin 30° nie je ½.",
-          "Uhol α leží medzi stranami b a c, nie medzi a a b — do vzorca patria strany, ktoré uhol zvierajú.",
-          "Vzorec obsahu má obsahovať všetky tri strany.",
-          "Nič, výpočet je správny."
-        ],
-        "answer": 1,
-        "correct": "Správne: uhol α zvierajú strany b a c. Strana a leží proti nemu. Vzorec ½ · a · b · sin γ potrebuje uhol γ <em>medzi</em> stranami a, b.",
-        "hint": "Ktorými dvoma stranami je ohraničený uhol pri vrchole A? Strana a je oproti A."
-      },
-      {
         "id": "paper",
         "type": "notebook",
         "phase": "BEZ MOBILU",
         "title": "Úloha na papier",
-        "html": "<p>Odlož zariadenie. Trojuholník ABC má strany 13 cm, 14 cm a 15 cm.</p><ol><li>Vypočítaj jeho obsah Herónovým vzorcom.</li><li>Vypočítaj výšku na stranu 14 cm.</li><li>Vypočítaj polomer vpísanej kružnice.</li><li>Trojuholník je pôdorys pozemku so stranami 13 m, 14 m a 15 m. Koľko m² trávnika treba a aká je cena oplotenia, ak 1 m plota stojí 15 €?</li></ol>"
+        "html": "<p>Odlož zariadenie. Pozemok má tvar rovnoramenného trojuholníka so základňou 24 m a ramenami 15 m.</p><ol><li>Načrtni ho a vypočítaj výšku na základňu (Pytagorova veta, polovica základne!).</li><li>Vypočítaj obsah pozemku a jeho obvod.</li><li>Koľko eur stojí oplotenie celého pozemku, ak 1 m plota stojí 15 €?</li></ol>"
       },
       {
         "id": "zbierka",
@@ -424,11 +272,6 @@ MathPlatform.registerModule({
           },
           {
             "level": "zaklad",
-            "text": "Vypočítaj obsah trojuholníka so stranami 5 cm, 5 cm a 6 cm Herónovým vzorcom.",
-            "answer": "s = 8, S = √(8 · 3 · 3 · 2) = √144 = <strong>12 cm²</strong>."
-          },
-          {
-            "level": "zaklad",
             "text": "Rebrík dlhý 10 m je oprený o stenu, jeho päta je 6 m od steny. Do akej výšky dosiahne?",
             "answer": "v² = 100 − 36 = 64, v = <strong>8 m</strong>."
           },
@@ -444,67 +287,21 @@ MathPlatform.registerModule({
           },
           {
             "level": "rozsirenie",
-            "text": "Dve strany trojuholníkového záhona majú 16 m a 5 m a zvierajú uhol 30°. Vypočítaj obsah.",
-            "answer": "S = ½ · 16 · 5 · ½ = <strong>20 m²</strong>."
-          },
-          {
-            "level": "rozsirenie",
-            "text": "Trojuholník má obsah 84 cm². Aký obsah má každá časť, na ktorú ho rozdelí ťažnica? A aký obsah má trojuholník ABT (T je ťažisko)?",
-            "answer": "Ťažnica: <strong>42 cm² a 42 cm²</strong>. ABT: 84 / 3 = <strong>28 cm²</strong>."
-          },
-          {
-            "level": "rozsirenie",
-            "text": "Trojuholník má obsah 72 cm². Stredná priečka od neho odreže menší trojuholník. Aký má obsah odrezaný trojuholník a aký zvyšný štvoruholník?",
-            "answer": "Odrezaný: 72 / 4 = <strong>18 cm²</strong>. Zvyšok: 72 − 18 = <strong>54 cm²</strong>."
-          },
-          {
-            "level": "rozsirenie",
             "text": "Štít domu má tvar rovnoramenného trojuholníka so základňou 10 m a výškou 12 m. Aká dlhá je jedna šikmá hrana štítu a koľko m² má štít?",
             "answer": "Rameno: √(5² + 12²) = <strong>13 m</strong>. S = 10 · 12 / 2 = <strong>60 m²</strong> (obe šikmé hrany spolu 26 m)."
-          },
-          {
-            "level": "rozsirenie",
-            "text": "Pravouhlý trojuholník má odvesny 5 cm a 12 cm. Vypočítaj polomer vpísanej a opísanej kružnice.",
-            "answer": "c = 13 cm. S = 30 cm², s = 15 cm, r = 30 / 15 = <strong>2 cm</strong>. R = c / 2 = <strong>6,5 cm</strong>."
-          },
-          {
-            "level": "bonus",
-            "text": "Trojuholník má strany 17 cm, 25 cm a 26 cm. Vypočítaj obsah a polomer vpísanej kružnice.",
-            "answer": "s = 34, S = √(34 · 17 · 9 · 8) = √41616 = <strong>204 cm²</strong>. r = 204 / 34 = <strong>6 cm</strong>."
-          },
-          {
-            "level": "bonus",
-            "text": "Rovnostranný trojuholník má stranu 12 cm. Vypočítaj výšku a (využitím ťažiska) polomer vpísanej aj opísanej kružnice. Stred oboch kružníc je ťažisko.",
-            "answer": "v² = 144 − 36 = 108, v = 6√3 cm. Ťažisko je ⅓ výšky od strany a ⅔ od vrcholu: r = v/3 = <strong>2√3 cm</strong> ≈ 3,5 cm, R = 2v/3 = <strong>4√3 cm</strong> ≈ 6,9 cm."
-          },
-          {
-            "level": "bonus",
-            "text": "Trojuholník má strany a = 6 cm, b = 8 cm a obsah 24 cm². Aký veľký je ostrý uhol γ medzi týmito stranami a aký je to trojuholník?",
-            "answer": "24 = ½ · 6 · 8 · sin γ = 24 sin γ ⇒ sin γ = 1 ⇒ γ = <strong>90°</strong>. Trojuholník je <strong>pravouhlý</strong>."
           }
         ]
-      },
-      {
-        "id": "explain",
-        "type": "selfWrite",
-        "phase": "VYSVETLI",
-        "skill": "matematická komunikácia",
-        "title": "Ako zvolím vzorec",
-        "prompt": "Vlastnými slovami opíš, podľa čoho si pri úlohe o trojuholníku vyberieš, či použiješ S = a·v/2, Herónov vzorec alebo vzorec so sínusom. Uveď aj jednu chybu, ktorú si budeš strážiť.",
-        "model": "<strong>MOŽNÁ FORMULÁCIA:</strong> Pozriem sa, aké údaje mám. Ak poznám stranu a výšku na ňu, použijem S = a·v/2. Ak poznám všetky tri strany a nič iné, použijem Herónov vzorec. Ak mám dve strany a uhol medzi nimi, použijem ½ab·sin γ. Ak je trojuholník rovnoramenný a chýba výška, najprv ju vypočítam Pytagorovou vetou. Strážim si polovicu základne pri Pytagorovej vete a jednotky (cm pri dĺžke, cm² pri obsahu).",
-        "placeholder": "Najprv sa pozriem, aké údaje mám…"
       },
       {
         "id": "reflection",
         "type": "reflection",
         "phase": "ZÁVER",
         "title": "Ako som na tom?",
-        "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka; pri 🔴 alebo 🟡 sa vráť k vzorovým úlohám A a B na začiatku.",
+        "prompt": "Označ, ako dobre tomu teraz rozumieš. Nie je to známka; pri 🔴 alebo 🟡 sa vráť k vzorovému príkladu na začiatku.",
         "skills": [
           "výber postupu podľa údajov",
           "Pytagorova veta v úlohách",
-          "obsah: S = a·v/2, Herónov vzorec, sínus",
-          "obsahové triky (ťažnica, ťažisko, priečka)",
+          "obvod a obsah trojuholníka",
           "slovné úlohy a jednotky"
         ]
       }

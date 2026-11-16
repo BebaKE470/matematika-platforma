@@ -1808,96 +1808,96 @@
   {
     id: '3-u02-h022', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Trojuholník", lesson: 'Hodina 22', lessonOrder: 22,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Pripomenutie vzorcov → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/22-trojuholnik.js"
   },
   {
     id: '3-u02-h023', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah trojuholníka", lesson: 'Hodina 23', lessonOrder: 23,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Pripomenutie vzorcov → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/23-obvod-a-obsah-trojuholnika.js"
   },
   {
     id: '3-u02-h024', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Riešenie úloh", lesson: 'Hodina 24', lessonOrder: 24,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Pripomenutie vzorcov → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/24-riesenie-uloh.js"
   },
   {
     id: '3-u02-h025', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Štvoruholníky", lesson: 'Hodina 25', lessonOrder: 25,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Pripomenutie → vzorce a vlastnosti → cvičenie v štýle písomky → úloha na papieri → zbierka',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/25-stvoruholniky.js"
   },
   {
     id: '3-u02-h026', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah štvorca", lesson: 'Hodina 26', lessonOrder: 26,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Pripomenutie → vzorce a vlastnosti → cvičenie v štýle písomky → úloha na papieri → zbierka',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/26-obvod-a-obsah-stvorca.js"
   },
   {
     id: '3-u02-h027', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah obdĺžnika", lesson: 'Hodina 27', lessonOrder: 27,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Pripomenutie → vzorce a vlastnosti → cvičenie v štýle písomky → úloha na papieri → zbierka',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/27-obvod-a-obsah-obdlznika.js"
   },
   {
     id: '3-u02-h028', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Riešenie úloh", lesson: 'Hodina 28', lessonOrder: 28,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Pripomenutie → postup → cvičenie v štýle písomky → úloha na papieri → zbierka',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/28-riesenie-uloh.js"
   },
   {
     id: '3-u02-h029', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah lichobežníka", lesson: 'Hodina 29', lessonOrder: 29,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Pripomenutie → postup → cvičenie v štýle písomky → úloha na papieri → zbierka',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/29-obvod-a-obsah-lichobeznika.js"
   },
   {
     id: '3-u02-h030', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Riešenie úloh", lesson: 'Hodina 30', lessonOrder: 30,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Pripomenutie → postup → cvičenie v štýle písomky → úloha na papieri → zbierka',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/30-riesenie-uloh.js"
   },
   {
     id: '3-u02-h031', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah kosoštvorca", lesson: 'Hodina 31', lessonOrder: 31,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Zhrnutie vzorcov → cvičenie v štýle písomky → úloha na papieri → zbierka',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/31-obvod-a-obsah-kosostvorca.js"
   },
   {
     id: '3-u02-h032', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah kosodĺžnika", lesson: 'Hodina 32', lessonOrder: 32,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Zhrnutie vzorcov → cvičenie v štýle písomky → úloha na papieri → zbierka',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/32-obvod-a-obsah-kosodlznika.js"
   },
   {
     id: '3-u02-h033', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Riešenie úloh", lesson: 'Hodina 33', lessonOrder: 33,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Zhrnutie vzorcov → cvičenie v štýle písomky → úloha na papieri → zbierka',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/33-riesenie-uloh.js"
   },
@@ -1905,48 +1905,48 @@
   {
     id: '3-u02-h034', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah mnohouholníka", lesson: 'Hodina 34', lessonOrder: 34,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Vzorce → cvičenie v štýle písomky → úloha na papieri → zbierka',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/34-obvod-a-obsah-mnohouholnika.js"
   },
   {
     id: '3-u02-h035', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Riešenie úloh", lesson: 'Hodina 35', lessonOrder: 35,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Vzorce → cvičenie v štýle písomky → úloha na papieri → zbierka',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/35-riesenie-uloh.js"
   },
   {
     id: '3-u02-h036', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Obvod a obsah kruhu a jeho častí", lesson: 'Hodina 36', lessonOrder: 36,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Vzorce → cvičenie v štýle písomky → úloha na papieri → zbierka',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/36-obvod-a-obsah-kruhu-a-jeho-casti.js"
   },
   {
     id: '3-u02-h037', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Riešenie úloh", lesson: 'Hodina 37', lessonOrder: 37,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Vzorce a vzorový príklad → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka (výber)',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/37-riesenie-uloh.js"
   },
   {
     id: '3-u02-h038', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Riešenie praktických úloh", lesson: 'Hodina 38', lessonOrder: 38,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Vzorce a vzorový príklad → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka (výber)',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/38-riesenie-praktickych-uloh.js"
   },
   {
     id: '3-u02-h039', year: 3, unit: "Planimetria", unitOrder: 2,
     topic: "Systematizácia učiva", lesson: 'Hodina 39', lessonOrder: 39,
-    time: '25–35 min', status: 'ready',
-    type: 'Pripomenutie → postup → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka',
+    time: '20–25 min', status: 'ready',
+    type: 'Vzorce a vzorový príklad → cvičenie v štýle písomky → hľadanie chyby → úloha na papieri → zbierka (výber)',
     skills: ["planimetria", "modelovanie", "matematická komunikácia"],
     file: "modules/3-rocnik/planimetria/39-systematizacia-uciva.js"
   },

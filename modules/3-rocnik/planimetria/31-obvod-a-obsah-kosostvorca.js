@@ -5,8 +5,7 @@ MathPlatform.registerModule({
     "prerequisites": [
       "kosoštvorec ako štvoruholník so štyrmi rovnakými stranami (hodina 25)",
       "obvod a obsah štvorca, obdĺžnika a lichobežníka (hodiny 26–29)",
-      "Pytagorova veta z 2. ročníka (pravouhlý trojuholník)",
-      "sínus ostrého uhla v pravouhlom trojuholníku (bonusová úloha)"
+      "Pytagorova veta z 2. ročníka (pravouhlý trojuholník)"
     ],
     "planContent": [
       "Obsah a poradie vychádzajú z aktuálneho tematického plánu 3. ročníka."
@@ -16,6 +15,7 @@ MathPlatform.registerModule({
       "Poznať a vedieť použiť vzťahy pre výpočet obvodov a obsahov základných rovinných útvarov."
     ],
     "goals": [
+      "Modul je zameraný na obsah písomky (vzorce, vlastnosti útvarov, viackrokové výpočty s Pytagorovou vetou, slovná úloha s jednotkami); digitálna časť je skrátená na približne 20–25 minút.",
       "vymenovať vlastnosti kosoštvorca: štyri rovnaké strany, kolmé uhlopriečky, ktoré sa delia na polovice",
       "vypočítať obvod o = 4a a obsah S = a·v zo strany a výšky",
       "vypočítať obsah z uhlopriečok S = e·f/2 a vysvetliť faktor ½",
@@ -28,15 +28,14 @@ MathPlatform.registerModule({
       "uvádzať jednotky a rozlišovať obvod (cm) od obsahu (cm²)"
     ],
     "enrichment": [
-      "Obsah kosoštvorca cez sínus: S = a²·sin α (bonusová úloha s uhlom 30°).",
       "Návrh maturitného štandardu je použitý iba ako obohatenie: modelovanie (dlaždice, záhony), presný matematický jazyk a argumentácia."
     ],
     "flow": [
-      "0–5 min opakovanie: definícia kosoštvorca a Pytagorova veta",
-      "5–10 min vlastnosti kosoštvorca z obrázka (aplikácia: úvod a triedenie tvrdení)",
-      "10–22 min aplikácia: o = 4a, S = a·v, S = e·f/2 a Pytagorova veta v štvrtine, s okamžitou spätnou väzbou",
-      "22–35 min zápis do zošita: samostatná úloha e = 30 cm, f = 16 cm (bez mobilu)",
-      "35–45 min zbierka úloh podľa úrovní a spoločná syntéza: „kedy ktorý vzorec?“"
+      "0–3 min: úvod a zhrnutie vlastností a vzorcov (explain)",
+      "3–10 min: triedenie tvrdení a priradenie vzorca (zameranie na písomku)",
+      "10–18 min: viackrokové výpočty (strana z uhlopriečok → obvod → obsah), nájdi chybu, slovná úloha s dlaždicou",
+      "18–30 min: samostatná úloha na papieri (bez mobilu)",
+      "zbierka podľa úrovní ako domáca úloha alebo na ďalšiu hodinu"
     ],
     "diagnostics": [
       "Zabudnuté ½ pri S = e·f/2 (obsah vyjde dvojnásobný).",
@@ -45,7 +44,7 @@ MathPlatform.registerModule({
       "Žiak predpokladá, že uhlopriečky kosoštvorca sú rovnaké (zámena so štvorcom)."
     ],
     "partialUse": [
-      "Na krátku hodinu stačia aktivity do Pytagorovej vety a „Nájdi chybu“; zbierka ide ako domáca úloha.",
+      "Na krátku hodinu stačí zhrnutie, triedenie tvrdení a výpočty do Pytagorovej vety; zbierka ide ako domáca úloha.",
       "Zbierka je trojúrovňová (základ, rozšírenie, bonus) — podľa triedy sa dá použiť iba základ."
     ]
   },
@@ -56,29 +55,21 @@ MathPlatform.registerModule({
     "estimatedTime": "28–35 min",
     "activities": [
       {
-        "id": "recap",
-        "type": "explain",
-        "phase": "OPAKUJ",
-        "title": "Čo už vieme",
-        "html": "<p>Z hodiny 25 vieš, čo je štvoruholník, a z hodín 26–29 poznáš obvod a obsah štvorca, obdĺžnika a lichobežníka. Z 2. ročníka poznáš <strong>Pytagorovu vetu</strong>: v pravouhlom trojuholníku s odvesnami p, q a preponou r platí r² = p² + q².</p><p><span class=\"hl\">Kosoštvorec</span> je štvoruholník, ktorý má <strong>všetky štyri strany rovnako dlhé</strong>. Štvorec je jeho zvláštny prípad (má navyše pravé uhly). Dnes zistíme, ako vypočítať jeho obvod a obsah — a uvidíš, že na obsah máme <strong>dve cesty</strong>: cez výšku a cez uhlopriečky.</p>"
-      },
-      {
         "id": "topic-intro",
         "type": "intro",
         "goals": [
-          "vymenovať vlastnosti kosoštvorca a vysvetliť ich z obrázka",
-          "vypočítať obvod o = 4a a obsah S = a·v",
-          "vypočítať obsah z uhlopriečok S = e·f/2",
-          "pomocou Pytagorovej vety nájsť stranu z uhlopriečok a naopak"
+          "vlastnosti kosoštvorca",
+          "obvod o = 4a a obsah S = a·v, S = e·f/2",
+          "strana z uhlopriečok pomocou Pytagorovej vety"
         ]
       },
       {
-        "id": "observe",
-        "type": "info",
-        "phase": "NAJPRV OBRÁZOK",
-        "title": "Kosoštvorec a jeho uhlopriečky",
-        "html": "<p>Kosoštvorec ABCD má štyri rovnaké strany a (rovnaké úsečky označujú čiarky). Uhlopriečky e = AC a f = BD sa pretínajú v bode O.</p><div class=\"logic-visual\"><svg viewBox=\"0 0 520 300\" role=\"img\" aria-label=\"Kosoštvorec ABCD s uhlopriečkami e a f, ktoré sa pretínajú v bode O pod pravým uhlom\"><polygon points=\"90,165 260,55 430,165 260,275\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\" /><line x1=\"90\" y1=\"165\" x2=\"430\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/><line x1=\"260\" y1=\"55\" x2=\"260\" y2=\"275\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/><circle cx=\"260\" cy=\"165\" r=\"3.5\" fill=\"currentColor\"/><polyline points=\"273,165 273,152 260,152\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"170.7\" y1=\"103.3\" x2=\"179.3\" y2=\"116.7\" stroke=\"currentColor\" stroke-width=\"2.5\" /><line x1=\"349.3\" y1=\"103.3\" x2=\"340.7\" y2=\"116.7\" stroke=\"currentColor\" stroke-width=\"2.5\" /><line x1=\"349.3\" y1=\"226.7\" x2=\"340.7\" y2=\"213.3\" stroke=\"currentColor\" stroke-width=\"2.5\" /><line x1=\"170.7\" y1=\"226.7\" x2=\"179.3\" y2=\"213.3\" stroke=\"currentColor\" stroke-width=\"2.5\" /><text x=\"74\" y=\"172\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >A</text><text x=\"260\" y=\"43\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >B</text><text x=\"446\" y=\"172\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >C</text><text x=\"260\" y=\"301\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >D</text><text x=\"274\" y=\"189\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >O</text><text x=\"150\" y=\"96\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">a</text><text x=\"160\" y=\"191\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >e/2</text><text x=\"296\" y=\"118\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >f/2</text><text x=\"350\" y=\"155\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >e = AC</text><text x=\"272\" y=\"222\" font-size=\"18\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" >f = BD</text></svg></div><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Strany</div><p class=\"term-rule\">Všetky štyri strany sú rovnako dlhé: AB = BC = CD = DA = a. Protiľahlé strany sú rovnobežné.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Uhly</div><p class=\"term-rule\">Protiľahlé uhly sú rovnaké, susedné uhly majú súčet 180°. Uhly <span class=\"hl\">nemusia byť pravé</span> — preto nejde o štvorec.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Uhlopriečky</div><p class=\"term-rule\">Sú na seba <span class=\"hl\">kolmé</span> a navzájom sa <span class=\"hl\">delia na polovice</span> (AO = OC = e/2, BO = OD = f/2). Zároveň delia vnútorné uhly na dve rovnaké polovice.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Uhlopriečky nie sú rovnaké</div><p class=\"term-rule\">Pri kosoštvorci býva jedna uhlopriečka dlhšia a druhá kratšia. Rovnaké sú len pri štvorci.</p></div></div>",
-        "remember": "Kosoštvorec: štyri rovnaké strany, uhlopriečky kolmé a delia sa na polovice."
+        "id": "ex-summary",
+        "type": "explain",
+        "phase": "POUČKA",
+        "title": "Kosoštvorec: vlastnosti a vzorce",
+        "html": "<p><span class=\"hl\">Kosoštvorec</span> má všetky štyri strany rovnako dlhé (a). Štvorec je jeho zvláštny prípad.</p><div class=\"logic-visual\"><svg viewBox=\"0 0 520 300\" role=\"img\" aria-label=\"Kosoštvorec ABCD s uhlopriečkami e a f, ktoré sa pretínajú v bode O pod pravým uhlom\"><polygon points=\"90,165 260,55 430,165 260,275\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\" /><line x1=\"90\" y1=\"165\" x2=\"430\" y2=\"165\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/><line x1=\"260\" y1=\"55\" x2=\"260\" y2=\"275\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/><circle cx=\"260\" cy=\"165\" r=\"3.5\" fill=\"currentColor\"/><polyline points=\"273,165 273,152 260,152\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"170.7\" y1=\"103.3\" x2=\"179.3\" y2=\"116.7\" stroke=\"currentColor\" stroke-width=\"2.5\" /><line x1=\"349.3\" y1=\"103.3\" x2=\"340.7\" y2=\"116.7\" stroke=\"currentColor\" stroke-width=\"2.5\" /><line x1=\"349.3\" y1=\"226.7\" x2=\"340.7\" y2=\"213.3\" stroke=\"currentColor\" stroke-width=\"2.5\" /><line x1=\"170.7\" y1=\"226.7\" x2=\"179.3\" y2=\"213.3\" stroke=\"currentColor\" stroke-width=\"2.5\" /><text x=\"74\" y=\"172\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >A</text><text x=\"260\" y=\"43\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >B</text><text x=\"446\" y=\"172\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >C</text><text x=\"260\" y=\"301\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >D</text><text x=\"274\" y=\"189\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >O</text><text x=\"150\" y=\"96\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">a</text><text x=\"160\" y=\"191\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >e/2</text><text x=\"296\" y=\"118\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >f/2</text><text x=\"350\" y=\"155\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >e = AC</text><text x=\"272\" y=\"222\" font-size=\"18\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" >f = BD</text></svg></div><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Uhlopriečky</div><p class=\"term-rule\">Sú na seba <span class=\"hl\">kolmé</span> a navzájom sa <span class=\"hl\">delia na polovice</span>. Nie sú rovnako dlhé (to platí len pri štvorci).</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Uhly</div><p class=\"term-rule\">Protiľahlé uhly sú rovnaké; uhly nemusia byť pravé.</p></div></div><div class=\"formula\">o = 4a &nbsp;&nbsp; S = a · v &nbsp;&nbsp; S = <span class=\"frac\"><span class=\"frac-num\">e · f</span><span class=\"frac-den\">2</span></span><span class=\"formula-note\">a = strana, v = výška na stranu, e, f = uhlopriečky; obvod v cm, obsah v cm².</span></div><div class=\"formula\">a² = (e/2)² + (f/2)²<span class=\"formula-note\">Strana je prepona pravouhlého trojuholníka s odvesnami e/2 a f/2 — do vety patria polovice uhlopriečok.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Uhlopriečky: e = 18 cm, f = 24 cm. Polovice: 9 cm a 12 cm.</p><p>a² = 9² + 12² = 81 + 144 = 225, a = <strong>15 cm</strong></p><p>o = 4·15 = <strong>60 cm</strong>; S = 18·24/2 = <strong>216 cm²</strong></p></div><div class=\"warning\"><strong>Pozor:</strong> Nezabudni na ½ pri S = e·f/2 a nedosadzuj do Pytagorovej vety celé uhlopriečky.</div>",
+        "remember": "Kosoštvorec: o = 4a, S = a·v = e·f/2, a² = (e/2)² + (f/2)²."
       },
       {
         "id": "sort-props",
@@ -130,27 +121,6 @@ MathPlatform.registerModule({
         ]
       },
       {
-        "id": "ex-height",
-        "type": "explain",
-        "phase": "NOVÝ POJEM",
-        "title": "Obvod a obsah zo strany a výšky",
-        "html": "<p><strong>Obvod</strong> je súčet dĺžok strán. Všetky strany majú dĺžku a, preto platí <span class=\"hl\">o = 4a</span>.</p><p><strong>Obsah</strong>: z vrcholu D spustíme kolmicu na stranu AB — to je <strong>výška v</strong> (bod P je päta výšky). Pravouhlý trojuholník APD odrežeme a presunieme na druhú stranu — z kosoštvorca vznikne obdĺžnik so stranami a a v.</p><div class=\"logic-visual\"><svg viewBox=\"0 0 520 310\" role=\"img\" aria-label=\"Kosoštvorec ABCD so stranou a a výškou v spustenou z vrcholu D na stranu AB\"><polygon points=\"100,265 180,265 180,81.7\" fill=\"currentColor\" fill-opacity=\"0.12\" stroke=\"none\"/><polygon points=\"100,265 300,265 380,81.7 180,81.7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\" /><line x1=\"180\" y1=\"81.7\" x2=\"180\" y2=\"265\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/><polyline points=\"194,265 194,251 180,251\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><line x1=\"200\" y1=\"257\" x2=\"200\" y2=\"273\" stroke=\"currentColor\" stroke-width=\"2.5\" /><line x1=\"332.7\" y1=\"170.1\" x2=\"347.3\" y2=\"176.5\" stroke=\"currentColor\" stroke-width=\"2.5\" /><line x1=\"280\" y1=\"89.7\" x2=\"280\" y2=\"73.7\" stroke=\"currentColor\" stroke-width=\"2.5\" /><line x1=\"147.3\" y1=\"176.5\" x2=\"132.7\" y2=\"170.1\" stroke=\"currentColor\" stroke-width=\"2.5\" /><text x=\"84\" y=\"273\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >A</text><text x=\"316\" y=\"273\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >B</text><text x=\"396\" y=\"77.7\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >C</text><text x=\"174\" y=\"69.7\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >D</text><text x=\"184\" y=\"289\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >P</text><text x=\"220\" y=\"295\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">a</text><text x=\"192\" y=\"179.3\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">v</text></svg></div><div class=\"formula\">o = 4a &nbsp;&nbsp;&nbsp; S = a · v<span class=\"formula-note\">a = strana, v = výška na túto stranu; obvod v cm, obsah v cm².</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Kosoštvorec má stranu a = 7 cm a výšku v = 5 cm.</p><p>o = 4·a = 4·7 = <strong>28 cm</strong></p><p>S = a·v = 7·5 = <strong>35 cm²</strong></p></div><div class=\"warning\"><strong>Pozor:</strong> Výška v je kolmá vzdialenosť protiľahlých strán — <span class=\"hl\">nie je to bočná strana</span>. Ak do vzorca dosadíš v = a, dostaneš S = a² a to platí len pre štvorec (kde je výška naozaj rovná strane).</div>",
-        "remember": "Obvod kosoštvorca: o = 4a. Obsah: S = a·v. Výška je kolmá na stranu."
-      },
-      {
-        "id": "n-o1",
-        "type": "numberInput",
-        "phase": "PRECVIČ",
-        "skill": "obvod kosoštvorca",
-        "title": "Obvod zo strany",
-        "prompt": "Kosoštvorec má stranu a = 9 cm. Aký je jeho obvod v cm?",
-        "validate": "exact",
-        "answer": 36,
-        "success": "o = 4·9 = 36 cm. Všetky štyri strany majú rovnakú dĺžku.",
-        "hint": "Strany sú štyri a všetky sú rovnaké.",
-        "reveal": "Správne je 36: o = 4·9 = 36 cm."
-      },
-      {
         "id": "n-s1",
         "type": "numberInput",
         "phase": "PRECVIČ",
@@ -162,62 +132,6 @@ MathPlatform.registerModule({
         "success": "S = a·v = 12·7 = 84 m².",
         "hint": "Obsah = strana krát výška (nie strana krát strana).",
         "reveal": "Správne je 84: S = 12·7 = 84 m²."
-      },
-      {
-        "id": "c-s2",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "obsah cez výšku",
-        "question": "Kosoštvorec má stranu 10 cm a výšku 6 cm. Aký je jeho obsah?",
-        "options": [
-          "60 cm²",
-          "40 cm²",
-          "30 cm²",
-          "16 cm²"
-        ],
-        "answer": 0,
-        "correct": "S = a·v = 10·6 = 60 cm². Číslo 40 by bol obvod (4·10), no obvod a obsah sú dve rôzne veličiny.",
-        "hint": "Obsah počítame zo strany a výšky na túto stranu. Pozor, nepýtame sa na obvod."
-      },
-      {
-        "id": "c-3",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "obvod vs. obsah",
-        "question": "Kosoštvorec má stranu 10 cm. Čo z tejto jedinej informácie vieme vypočítať?",
-        "options": [
-          "obsah 100 cm²",
-          "obvod 40 cm",
-          "obsah 50 cm²",
-          "dĺžku každej uhlopriečky 10 cm"
-        ],
-        "answer": 1,
-        "correct": "Obvod závisí len od strany: 4·10 = 40 cm. Obsah by sme poznali až s výškou alebo uhlopriečkami — kosoštvorec sa dá „naklopiť“, strana ostane, ale obsah sa zmení.",
-        "hint": "Zamysli sa: ak kosoštvorec naklopíš, zmení sa jeho strana alebo jeho obsah?"
-      },
-      {
-        "id": "c-unit",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "jednotky",
-        "question": "Strana kosoštvorca je 15 m a výška na ňu 8 m. Ktorý zápis je správny aj s jednotkou?",
-        "options": [
-          "S = 15·8 = 120 m",
-          "S = 15·8 = 120 m³",
-          "S = 15·8 = 120 m²",
-          "o = 4·15 = 60 m²"
-        ],
-        "answer": 2,
-        "correct": "Obsah meria plochu, preto je v m². Obvod (60 m) by bol v m — dĺžková jednotka.",
-        "hint": "Plocha sa meria v štvorcových jednotkách, dĺžka v obyčajných."
-      },
-      {
-        "id": "ex-diag",
-        "type": "explain",
-        "phase": "NOVÝ POJEM",
-        "title": "Obsah z uhlopriečok",
-        "html": "<p>Niekedy poznáme namiesto výšky obe uhlopriečky. Kosoštvorec si vpíšeme do obdĺžnika so stranami e a f — vrcholy kosoštvorca ležia v stredoch strán obdĺžnika.</p><div class=\"logic-visual\"><svg viewBox=\"0 0 520 290\" role=\"img\" aria-label=\"Kosoštvorec vpísaný do obdĺžnika e krát f: štyri sivé trojuholníky tvoria presne polovicu obdĺžnika\"><polygon points=\"90,50 260,50 90,150\" fill=\"currentColor\" fill-opacity=\"0.18\" stroke=\"none\"/><polygon points=\"430,50 430,150 260,50\" fill=\"currentColor\" fill-opacity=\"0.18\" stroke=\"none\"/><polygon points=\"430,250 260,250 430,150\" fill=\"currentColor\" fill-opacity=\"0.18\" stroke=\"none\"/><polygon points=\"90,250 90,150 260,250\" fill=\"currentColor\" fill-opacity=\"0.18\" stroke=\"none\"/><polygon points=\"90,50 430,50 430,250 90,250\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"8 6\"/><polygon points=\"260,50 430,150 260,250 90,150\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\" /><text x=\"260\" y=\"275\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">e</text><text x=\"440\" y=\"156\" font-size=\"20\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">f</text><line x1=\"90\" y1=\"150\" x2=\"430\" y2=\"150\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/><line x1=\"260\" y1=\"50\" x2=\"260\" y2=\"250\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/></svg></div><p>Štyri sivé trojuholníky v rohoch sú zhodné s trojuholníkmi vnútri kosoštvorca. Kosoštvorec teda zaberie <span class=\"hl\">presne polovicu</span> obdĺžnika e × f.</p><div class=\"formula\">S = <span class=\"frac\"><span class=\"frac-num\">e · f</span><span class=\"frac-den\">2</span></span><span class=\"formula-note\">e, f = dĺžky uhlopriečok</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Uhlopriečky kosoštvorca majú e = 16 cm a f = 12 cm.</p><p>S = e·f/2 = 16·12/2 = 192/2 = <strong>96 cm²</strong></p></div><div class=\"warning\"><strong>Pozor:</strong> Nezabudni na ½. Súčin e·f je obsah celého obdĺžnika — to je dvojnásobok obsahu kosoštvorca.</div><div class=\"compare\"><div class=\"bad\"><span class=\"mini-label\">ČASTÁ CHYBA</span><p>e = 16 cm, f = 12 cm</p><p>S = 16·12 = 192 cm²</p></div><div class=\"good\"><span class=\"mini-label\">SPRÁVNE</span><p>e = 16 cm, f = 12 cm</p><p>S = 16·12/2 = 96 cm²</p></div></div>",
-        "remember": "S = e·f/2. Obe uhlopriečky vynásob a výsledok vydeľ dvoma."
       },
       {
         "id": "c-ef",
@@ -236,72 +150,6 @@ MathPlatform.registerModule({
         "hint": "Pomôž si obrázkom: kosoštvorec vpísaný do obdĺžnika zaberá zlomok jeho plochy."
       },
       {
-        "id": "n-ef1",
-        "type": "numberInput",
-        "phase": "PRECVIČ",
-        "skill": "obsah cez uhlopriečky",
-        "title": "Obsah z uhlopriečok",
-        "prompt": "Kosoštvorec má uhlopriečky e = 14 cm a f = 10 cm. Aký je jeho obsah v cm²?",
-        "validate": "exact",
-        "answer": 70,
-        "success": "S = 14·10/2 = 140/2 = 70 cm².",
-        "hint": "Vynásob uhlopriečky a výsledok vydeľ dvoma.",
-        "reveal": "Správne je 70: S = 14·10/2 = 70 cm²."
-      },
-      {
-        "id": "c-ef2",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "obsah cez uhlopriečky",
-        "question": "Kosoštvorec má uhlopriečky 18 cm a 8 cm. Aký je jeho obsah?",
-        "options": [
-          "144 cm²",
-          "26 cm²",
-          "36 cm²",
-          "72 cm²"
-        ],
-        "answer": 3,
-        "correct": "S = 18·8/2 = 72 cm². Číslo 144 vznikne pri zabudnutom ½ a 26 súčtom uhlopriečok.",
-        "hint": "Obsah z uhlopriečok: súčin deleno dvoma, nie súčet."
-      },
-      {
-        "id": "ex-pyth",
-        "type": "explain",
-        "phase": "NOVÝ POJEM",
-        "title": "Strana z uhlopriečok: Pytagorova veta v štvrtine",
-        "html": "<p>Uhlopriečky sú kolmé a polovia sa. Preto sa kosoštvorec rozpadne na <strong>štyri zhodné pravouhlé trojuholníky</strong>. V každom sú odvesny <span class=\"hl\">e/2</span> a <span class=\"hl\">f/2</span> a prepona je strana a.</p><div class=\"logic-visual\"><svg viewBox=\"0 0 520 300\" role=\"img\" aria-label=\"Pravouhlý trojuholník OCB: odvesny sú polovice uhlopriečok, prepona je strana kosoštvorca\"><polygon points=\"110,250 400,250 110,70\" fill=\"currentColor\" fill-opacity=\"0.14\" stroke=\"none\"/><polygon points=\"110,250 400,250 110,70\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\" /><polyline points=\"126,250 126,234 110,234\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"255\" y=\"280\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >e/2</text><text x=\"96\" y=\"166\" font-size=\"20\" text-anchor=\"end\" fill=\"currentColor\" font-family=\"system-ui\" >f/2</text><text x=\"277\" y=\"152\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">a</text><text x=\"100\" y=\"274\" font-size=\"16\" text-anchor=\"end\" fill=\"currentColor\" font-family=\"system-ui\" >O</text><text x=\"414\" y=\"256\" font-size=\"18\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" >C</text><text x=\"110\" y=\"58\" font-size=\"18\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >B</text></svg></div><div class=\"formula\">a² = (e/2)² + (f/2)²<span class=\"formula-note\">Do Pytagorovej vety patria polovice uhlopriečok, nie celé uhlopriečky.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Uhlopriečky: e = 16 cm, f = 12 cm. Polovice: 8 cm a 6 cm.</p><p>a² = 8² + 6² = 64 + 36 = 100</p><p>a = <strong>10 cm</strong>, teda o = 4·10 = <strong>40 cm</strong></p></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Strana a = 13 cm, uhlopriečka e = 24 cm. Hľadáme f.</p><p>(f/2)² = a² − (e/2)² = 13² − 12² = 169 − 144 = 25, teda f/2 = 5</p><p>f = <strong>10 cm</strong>, S = 24·10/2 = <strong>120 cm²</strong></p></div><p><strong>Postup:</strong></p><ol class=\"steps\"><li>Nakresli kosoštvorec a jeho uhlopriečky, vyznač pravý uhol.</li><li>Vypočítaj polovice uhlopriečok.</li><li>Zapíš Pytagorovu vetu pre pravouhlý trojuholník (prepona = strana).</li><li>Dopočítaj chýbajúcu stranu, potom obvod alebo obsah.</li></ol>",
-        "remember": "Pytagorova veta v kosoštvorci: strana² = (e/2)² + (f/2)²."
-      },
-      {
-        "id": "n-a1",
-        "type": "numberInput",
-        "phase": "PRECVIČ",
-        "skill": "strana z uhlopriečok",
-        "title": "Strana z uhlopriečok",
-        "prompt": "Kosoštvorec má uhlopriečky 16 cm a 12 cm. Aká dlhá je jeho strana v cm?",
-        "validate": "exact",
-        "answer": 10,
-        "success": "Polovice sú 8 a 6, a² = 64 + 36 = 100, a = 10 cm.",
-        "hint": "Najprv polovice uhlopriečok, potom Pytagorova veta.",
-        "reveal": "Správne je 10: polovice 8 a 6, 8² + 6² = 100."
-      },
-      {
-        "id": "c-pyt",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "Pytagorova veta",
-        "question": "Kosoštvorec má uhlopriečky 24 cm a 10 cm. Ktorá rovnica správne dáva jeho stranu a?",
-        "options": [
-          "a² = 24² + 10²",
-          "a = 24 + 10",
-          "a² = 12² + 5²",
-          "a² = 12 + 5"
-        ],
-        "answer": 2,
-        "correct": "Odvesny pravouhlého trojuholníka sú polovice uhlopriečok: 12 a 5. Preto a² = 12² + 5² = 169, a = 13 cm.",
-        "hint": "Pravouhlý trojuholník vznikne len v jednej štvrtine kosoštvorca — aké dlhé sú jeho odvesny?"
-      },
-      {
         "id": "n-o2",
         "type": "numberInput",
         "phase": "PRECVIČ",
@@ -313,45 +161,6 @@ MathPlatform.registerModule({
         "success": "Polovice 24 a 7, a² = 576 + 49 = 625, a = 25 cm, o = 4·25 = 100 cm.",
         "hint": "Najprv strana: polovice uhlopriečok a Pytagorova veta; potom ešte vynásob štyrmi.",
         "reveal": "Správne je 100: a = 25 cm, o = 4·25."
-      },
-      {
-        "id": "n-f1",
-        "type": "numberInput",
-        "phase": "PRECVIČ",
-        "skill": "chýbajúca uhlopriečka",
-        "title": "Chýbajúca uhlopriečka",
-        "prompt": "Kosoštvorec má stranu 13 cm a jednu uhlopriečku 24 cm. Aká dlhá je druhá uhlopriečka v cm?",
-        "validate": "exact",
-        "answer": 10,
-        "success": "e/2 = 12, (f/2)² = 169 − 144 = 25, f/2 = 5, f = 10 cm.",
-        "hint": "Strana je prepona. Z 13² − 12² dostaneš druhú odvesnu — a tá je len polovica uhlopriečky!",
-        "reveal": "Správne je 10: druhá odvesna je 5 cm, celá uhlopriečka 2·5 = 10 cm."
-      },
-      {
-        "id": "n-v1",
-        "type": "numberInput",
-        "phase": "PRECVIČ",
-        "skill": "obsah a výška",
-        "title": "Výška z obsahu",
-        "prompt": "Kosoštvorec má obsah 60 cm² a stranu 12 cm. Aká je jeho výška v cm?",
-        "validate": "exact",
-        "answer": 5,
-        "success": "Z S = a·v: v = S : a = 60 : 12 = 5 cm.",
-        "hint": "Vzorec S = a·v otoč: výšku dostaneš delením.",
-        "reveal": "Správne je 5: v = 60 : 12 = 5 cm."
-      },
-      {
-        "id": "n-f2",
-        "type": "numberInput",
-        "phase": "PRECVIČ",
-        "skill": "chýbajúca uhlopriečka",
-        "title": "Uhlopriečka z obsahu",
-        "prompt": "Kosoštvorec má obsah 96 cm² a jednu uhlopriečku 16 cm. Aká dlhá je druhá uhlopriečka v cm?",
-        "validate": "exact",
-        "answer": 12,
-        "success": "Z S = e·f/2: f = 2S/e = 192/16 = 12 cm.",
-        "hint": "Obsah = e·f/2, preto e·f = 2·S.",
-        "reveal": "Správne je 12: 2·96 = 192 a 192 : 16 = 12."
       },
       {
         "id": "m-formulas",
@@ -391,22 +200,6 @@ MathPlatform.registerModule({
             "answer": "o = 4a"
           }
         ]
-      },
-      {
-        "id": "err1",
-        "type": "choice",
-        "phase": "NÁJDI CHYBU",
-        "skill": "chyby v obsahu",
-        "question": "Žiak počítal obsah kosoštvorca s uhlopriečkami 10 cm a 8 cm takto: S = 10·8 = 80 cm². Aká je jeho chyba?",
-        "options": [
-          "Mal uhlopriečky sčítať, nie vynásobiť.",
-          "Mal použiť vzorec S = a², lebo ide o kosoštvorec.",
-          "Žiadna chyba, 80 cm² je správne.",
-          "Zabudol vydeliť dvoma; obsah je 10·8/2 = 40 cm²."
-        ],
-        "answer": 3,
-        "correct": "Súčin e·f je obsah celého obdĺžnika, kosoštvorec je jeho polovica.",
-        "hint": "Porovnaj s obrázkom kosoštvorca vpísaného do obdĺžnika."
       },
       {
         "id": "err2",
@@ -457,11 +250,6 @@ MathPlatform.registerModule({
         "items": [
           {
             "level": "zaklad",
-            "html": "Kosoštvorec má stranu a = 8 cm. Vypočítaj jeho obvod.",
-            "answer": "o = 4·8 = <strong>32 cm</strong>"
-          },
-          {
-            "level": "zaklad",
             "html": "Kosoštvorec má stranu a = 15 cm a výšku v = 9 cm. Vypočítaj obsah.",
             "answer": "S = 15·9 = <strong>135 cm²</strong>"
           },
@@ -469,11 +257,6 @@ MathPlatform.registerModule({
             "level": "zaklad",
             "html": "Kosoštvorec má uhlopriečky e = 12 cm a f = 7 cm. Vypočítaj obsah.",
             "answer": "S = 12·7/2 = 84/2 = <strong>42 cm²</strong>"
-          },
-          {
-            "level": "zaklad",
-            "html": "Obvod kosoštvorca je 44 cm. Aká je dĺžka jeho strany?",
-            "answer": "a = 44 : 4 = <strong>11 cm</strong>"
           },
           {
             "level": "zaklad",
@@ -492,23 +275,8 @@ MathPlatform.registerModule({
           },
           {
             "level": "rozsirenie",
-            "html": "Kosoštvorec má obsah 96 cm² a uhlopriečku 16 cm. Aká je druhá uhlopriečka, strana a obvod?",
-            "answer": "f = 2·96 : 16 = <strong>12 cm</strong>; polovice 8 a 6, <strong>a = 10 cm</strong>; o = <strong>40 cm</strong>"
-          },
-          {
-            "level": "rozsirenie",
             "html": "Záhon v tvare kosoštvorca má obvod 100 m a výšku 20 m. Koľko eur stojí vysiaty trávnik, ak 1 m² stojí 4 €?",
             "answer": "a = 100 : 4 = 25 m; S = 25·20 = 500 m²; cena = 500·4 = <strong>2 000 €</strong>"
-          },
-          {
-            "level": "rozsirenie",
-            "html": "Štvorec a kosoštvorec majú rovnakú stranu 10 cm, výška kosoštvorca je 6 cm. Porovnaj ich obvody a obsahy.",
-            "answer": "Obvody sú rovnaké: 4·10 = 40 cm. Obsahy: štvorec 100 cm², kosoštvorec 10·6 = 60 cm², teda štvorec má o <strong>40 cm²</strong> väčší obsah."
-          },
-          {
-            "level": "bonus",
-            "html": "Kosoštvorec má stranu 10 cm a ostrý uhol 30°. Vypočítaj výšku (použi sin 30° = ½) a obsah.",
-            "answer": "V pravouhlom trojuholníku APD je v = a·sin 30° = 10·½ = <strong>5 cm</strong>; S = a·v = 10·5 = <strong>50 cm²</strong>"
           },
           {
             "level": "bonus",
@@ -519,23 +287,8 @@ MathPlatform.registerModule({
             "level": "bonus",
             "html": "Kosoštvorec má strany 5 cm a uhlopriečku 8 cm. Vypočítaj druhú uhlopriečku, obsah a výšku na stranu.",
             "answer": "e/2 = 4, (f/2)² = 25 − 16 = 9, f/2 = 3, <strong>f = 6 cm</strong>; S = 8·6/2 = <strong>24 cm²</strong>; v = S : a = 24 : 5 = <strong>4,8 cm</strong>"
-          },
-          {
-            "level": "bonus",
-            "html": "Do obdĺžnika 80 cm × 60 cm vpíšeme kosoštvorec, ktorého vrcholy sú v stredoch strán. Aká je jeho strana a obsah? Aký obsah zostane po vystrihnutí?",
-            "answer": "Uhlopriečky sú 80 cm a 60 cm; polovice 40 a 30, <strong>a = 50 cm</strong>. S = 80·60/2 = <strong>2 400 cm²</strong>; zostane 80·60 − 2 400 = <strong>2 400 cm²</strong>"
           }
         ]
-      },
-      {
-        "id": "arg",
-        "type": "selfWrite",
-        "phase": "VYSVETLI",
-        "skill": "matematická komunikácia",
-        "title": "Prečo deliť dvoma",
-        "prompt": "Vlastnými slovami vysvetli, prečo sa pri vzorci S = e·f/2 súčin uhlopriečok delí dvoma. Pomôž si obrázkom kosoštvorca vpísaného do obdĺžnika.",
-        "model": "<strong>MOŽNÁ FORMULÁCIA:</strong> Kosoštvorec môžeme vpísať do obdĺžnika s rozmermi e a f tak, že jeho vrcholy ležia v stredoch strán. Štyri trojuholníky v rohoch obdĺžnika sú zhodné so štyrmi trojuholníkmi vnútri kosoštvorca, takže kosoštvorec je presne polovica obdĺžnika. Obsah obdĺžnika je e·f, preto obsah kosoštvorca je e·f/2.",
-        "placeholder": "Delíme dvoma, pretože..."
       },
       {
         "id": "reflection",

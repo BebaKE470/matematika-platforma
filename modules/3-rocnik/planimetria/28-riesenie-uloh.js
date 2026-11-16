@@ -19,7 +19,8 @@ MathPlatform.registerModule({
       "podľa textu úlohy rozhodnúť, či sa pýta na obvod (plot, lišta, obrubník) alebo obsah (podlaha, farba, trávnik, dlažba)",
       "vypočítať obvod a obsah štvorca, obdĺžnika a trojuholníka a z obsahu alebo obvodu dopočítať chýbajúcu stranu",
       "rozložiť zložený útvar (L-tvar, dom so strechou) na známe útvary, prípadne doplniť/odčítať, a vypočítať jeho obsah",
-      "určiť počet dlaždíc alebo litrov farby, pritom zjednotiť jednotky (m² ↔ cm²) a zapísať odpoveď vetou s jednotkou"
+      "určiť počet dlaždíc alebo litrov farby, pritom zjednotiť jednotky (m² ↔ cm²) a zapísať odpoveď vetou s jednotkou",
+      "modul je zameraný na obsah písomky: priradenie vzorca k útvaru, pravda/nepravda, viackrokový výpočet, slovná úloha s jednotkami (skrátená verzia, bez odbočiek)"
     ],
     "competencies": [
       "modelovanie: zo slovnej úlohy vytvoriť náčrt s označenými rozmermi",
@@ -33,11 +34,11 @@ MathPlatform.registerModule({
       "maturitný formát: viackrokové slovné úlohy s odpoveďou vetou; autentické maturitné zadania až po prebratí celej planimetrie"
     ],
     "flow": [
-      "0–5 min: opakovanie vzorcov pre štvorec, obdĺžnik a trojuholník; otázka „Čo potrebuješ na plot a čo na podlahu?“",
-      "5–15 min: postup riešenia slovnej úlohy, rozlíšenie obvodu a obsahu, zložený útvar (L-tvar a dom so strechou), dlaždice a jednotky",
-      "15–27 min: platforma: voľby, číselné výpočty, priraďovanie, hľadanie chyby (zabudnutá konverzia jednotiek, odčítanie dĺžok namiesto obsahov)",
-      "27–38 min: úloha BEZ MOBILU a zbierka podľa úrovní (základ, rozšírenie, bonus)",
-      "38–45 min: spoločný rozbor najčastejších chýb podľa živých výsledkov"
+      "0–3 min: opakovanie vzorcov pre štvorec, obdĺžnik a trojuholník",
+      "3–10 min: postup slovnej úlohy, obvod alebo obsah, zložený útvar a dlaždice s jednotkami",
+      "10–20 min: platforma: voľba, priraďovanie, pravda/nepravda, číselné výpočty, jedna chyba v riešení",
+      "20–35 min: úloha BEZ MOBILU a zbierka podľa úrovní (základ, rozšírenie, bonus)",
+      "35–45 min: spoločný rozbor najčastejších chýb podľa živých výsledkov; modul je zameraný na obsah písomky"
     ],
     "diagnostics": [
       "zamieňa obvod a obsah alebo píše nesprávnu jednotku (m namiesto m²)",
@@ -46,16 +47,16 @@ MathPlatform.registerModule({
       "pri dlaždiciach delí m² hodnotou v cm² bez prevodu jednotiek"
     ],
     "partialUse": [
-      "pri nedostatku času vynechať bonusové položky zbierky a časť o trojuholníkovej streche",
+      "pri nedostatku času vynechať bonusové položky zbierky",
       "mobil nahrádza výpočet iba pri kontrole; náčrt a výpočet ostávajú v zošite",
-      "pri ŠVVP ponechať postup z úvodu viditeľný a znížiť počet položiek zbierky"
+      "pri ŠVVP ponechať postup viditeľný a znížiť počet položiek zbierky"
     ]
   },
   "student": {
     "title": "Riešenie úloh",
     "subtitle": "Hodina 28 · Planimetria · Štvorec, obdĺžnik, trojuholník a zložené útvary",
     "intro": "Dnes riešiš slovné úlohy s plotmi, podlahami, dlaždicami a zloženými útvarmi. Najprv sa rozhodni, či ide o obvod alebo obsah, potom rozlož útvar na známe časti. Počítaj na papieri, výsledky zapisuj do aplikácie.",
-    "estimatedTime": "25–35 min",
+    "estimatedTime": "20–25 min",
     "activities": [
       {
         "id": "recap",
@@ -97,19 +98,6 @@ MathPlatform.registerModule({
         "answer": 1,
         "correct": "Správne: pletivo ide po okraji, teda ide o obvod: 2 · (15 + 9) = 48 m.",
         "hint": "Pletivo vedie po okraji pozemku. Pýta sa teda úloha na dĺžku hranice, alebo na veľkosť plochy?"
-      },
-      {
-        "id": "n1",
-        "type": "numberInput",
-        "phase": "OVER SI",
-        "skill": "štvorec",
-        "title": "Štvorcová záhrada",
-        "prompt": "Štvorcová záhrada má obvod 36 m. Aký má obsah v m²? (Najprv zisti dĺžku strany.)",
-        "validate": "exact",
-        "answer": 81,
-        "success": "Správne: strana je 36 : 4 = 9 m, obsah S = 9 · 9 = 81 m².",
-        "hint": "Obvod štvorca je 4 · a. Z neho vypočítaj stranu a a potom obsah a · a.",
-        "reveal": "Správne je 81: a = 36 : 4 = 9 m, S = 9 · 9 = 81 m²."
       },
       {
         "id": "m1",
@@ -196,41 +184,12 @@ MathPlatform.registerModule({
         ]
       },
       {
-        "id": "n2",
-        "type": "numberInput",
-        "phase": "PRECVIČ",
-        "skill": "zložené útvary",
-        "title": "Pozemok s domom",
-        "prompt": "Pozemok má tvar obdĺžnika 12 m × 7 m. V jednom rohu stojí garáž tvaru obdĺžnika 5 m × 3 m, ktorá k pozemku nepatrí. Aký obsah v m² má pozemok bez garáže?",
-        "validate": "exact",
-        "answer": 69,
-        "success": "Správne: 12 · 7 − 5 · 3 = 84 − 15 = 69 m².",
-        "hint": "Od obsahu celého obdĺžnika odčítaj obsah garáže (5 · 3), nie jej rozmery.",
-        "reveal": "Správne je 69: 12 · 7 = 84, 5 · 3 = 15, 84 − 15 = 69 m²."
-      },
-      {
         "id": "dom",
         "type": "explain",
         "phase": "NOVÝ POJEM",
         "title": "Zložený útvar s trojuholníkom",
         "html": "<p>Predná stena domu má tvar obdĺžnika, na ktorom stojí trojuholníkový štít. Obsah steny je <strong>súčet</strong> obsahu obdĺžnika a trojuholníka.</p><div class=\"logic-visual\"><svg viewBox=\"0 0 400 295\" role=\"img\" aria-label=\"Štít domu: obdĺžnik 8 m krát 5 m a trojuholník so základňou 8 m a výškou 3 m\"><g font-family=\"system-ui\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\"><polygon points=\"70,100 310,100 310,250 70,250\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"70,100 310,100 190,10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"190\" y1=\"10\" x2=\"190\" y2=\"100\" stroke=\"#9b6b2f\" stroke-width=\"2.5\" stroke-dasharray=\"7 5\"/><path d=\"M200,100 L200,90 L190,90\" fill=\"none\" stroke=\"#9b6b2f\" stroke-width=\"2\"/><text x=\"200\" y=\"62\" text-anchor=\"start\" font-size=\"16\">v = 3 m</text><text x=\"270\" y=\"52\" text-anchor=\"start\" font-size=\"14\">rameno 5 m</text><text x=\"190\" y=\"124\" text-anchor=\"middle\" font-size=\"14\">základňa 8 m</text><text x=\"190\" y=\"275\" text-anchor=\"middle\" font-size=\"16\">8 m</text><text x=\"60\" y=\"180\" text-anchor=\"end\" font-size=\"16\">5 m</text></g></svg></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD · stena domu</span><p>Obdĺžnik: S₁ = 8 · 5 = 40 m²</p><p>Trojuholník: základňa 8 m, výška <strong>3 m</strong>: S₂ = <span class=\"frac\"><span class=\"frac-num\">8 · 3</span><span class=\"frac-den\">2</span></span> = 12 m²</p><p>Spolu: S = 40 + 12 = <strong>52 m²</strong></p></div><div class=\"warning\"><strong>Pozor:</strong> V trojuholníku sa dosádza <strong>výška</strong> (kolmá na základňu, tu 3 m), nie rameno (šikmá strana, tu 5 m). Rameno 5 m sa použije len do obvodu.</div>",
         "remember": "Trojuholník: S = základňa · výška : 2. Výška je kolmá na základňu, nie šikmá strana."
-      },
-      {
-        "id": "c2",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "trojuholník v útvare",
-        "question": "Štít strechy je rovnoramenný trojuholník so základňou 8 m, ramenami 5 m a výškou na základňu 3 m. Aký má obsah?",
-        "options": [
-          "20 m²",
-          "24 m²",
-          "12 m²",
-          "40 m²"
-        ],
-        "answer": 2,
-        "correct": "Správne: S = 8 · 3 : 2 = 12 m². Dosadzuje sa základňa a výška na ňu kolmá.",
-        "hint": "Použi základňu a výšku na túto základňu. Šikmá strana (rameno) nie je výška."
       },
       {
         "id": "n3",
@@ -265,54 +224,6 @@ MathPlatform.registerModule({
         "success": "Správne: podlaha 27 m², dlaždica 0,09 m², 27 : 0,09 = 300. (Aj 600 : 30 = 20 stĺpcov a 450 : 30 = 15 riadkov, 20 · 15 = 300.)",
         "hint": "Zjednoť jednotky: 30 cm = 0,3 m. Alebo preveď podlahu na cm a spočítaj, koľko dlaždíc sa zmestí do dĺžky a koľko do šírky.",
         "reveal": "Správne je 300: 6 m = 600 cm, 4,5 m = 450 cm, 600 : 30 = 20, 450 : 30 = 15, 20 · 15 = 300."
-      },
-      {
-        "id": "c3",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "obvod z obsahu",
-        "question": "Obdĺžniková podlaha má obsah 54 m² a jedna jej strana má 6 m. Aký je obvod tejto podlahy?",
-        "options": [
-          "54 m",
-          "15 m",
-          "30 m",
-          "21 m"
-        ],
-        "answer": 2,
-        "correct": "Správne: druhá strana je 54 : 6 = 9 m, obvod 2 · (6 + 9) = 30 m.",
-        "hint": "Najprv z obsahu a jednej strany dopočítaj druhú stranu (S = a · b), potom až počítaj obvod. Pozor, 15 m je len a + b."
-      },
-      {
-        "id": "c4",
-        "type": "choice",
-        "phase": "PRENES",
-        "skill": "dlaždice a jednotky",
-        "question": "Izba má podlahu 3 m × 2 m a pokladajú sa dlaždice 20 cm × 20 cm. Koľko dlaždíc treba (bez zvyškov)?",
-        "options": [
-          "15 dlaždíc",
-          "1,5 dlaždice",
-          "1 500 dlaždíc",
-          "150 dlaždíc"
-        ],
-        "answer": 3,
-        "correct": "Správne: 300 cm · 200 cm = 60 000 cm² a 60 000 : 400 = 150. (Alebo 6 m² : 0,04 m² = 150.)",
-        "hint": "Obe plochy musia byť v rovnakých jednotkách. Použi 1 m² = 10 000 cm², alebo rozmery daj najprv do cm."
-      },
-      {
-        "id": "ce1",
-        "type": "choice",
-        "phase": "NÁJDI CHYBU",
-        "skill": "chyby v riešení",
-        "question": "Žiak riešil: „Pozemok je obdĺžnik 20 m × 12 m, v rohu je dom 6 m × 5 m. Obsah pozemku bez domu: 20 · 12 − 6 − 5 = 229 m².“ Čo je v riešení chybné?",
-        "options": [
-          "Odčítal dĺžky strán domu (6 a 5) namiesto jeho obsahu 6 · 5 = 30 m².",
-          "Mal vypočítať obvod, nie obsah.",
-          "Obsah obdĺžnika sa počíta ako 2 · (20 + 12).",
-          "Správne bolo 20 · 12 + 6 · 5."
-        ],
-        "answer": 0,
-        "correct": "Presne tak: správne je 240 − 30 = 210 m². Odčítava sa plocha domu, nie dĺžky jeho strán.",
-        "hint": "Pozri, aké veličiny sú 6 a 5 (dĺžky, alebo plochy) a čo sa má od obsahu pozemku odčítať."
       },
       {
         "id": "ce2",
@@ -361,11 +272,6 @@ MathPlatform.registerModule({
             "answer": "S = 20 m², dlaždica 0,5 · 0,5 = 0,25 m²<br>20 : 0,25 = <strong>80 dlaždíc</strong>"
           },
           {
-            "level": "zaklad",
-            "text": "Trojuholník má základňu 12 cm a výšku na ňu 7 cm. Vypočítaj jeho obsah.",
-            "answer": "S = 12 · 7 : 2 = 84 : 2 = <strong>42 cm²</strong>"
-          },
-          {
             "level": "rozsirenie",
             "text": "Pozemok 30 m × 20 m sa oplotí trojitým radom drôtu. Koľko metrov drôtu treba?",
             "answer": "o = 2 · (30 + 20) = 100 m<br>3 · 100 = <strong>300 m</strong>"
@@ -381,11 +287,6 @@ MathPlatform.registerModule({
             "answer": "b² = 10² − 8² = 36, b = 6 cm<br>S = 8 · 6 = <strong>48 cm²</strong>, o = 2 · (8 + 6) = <strong>28 cm</strong>"
           },
           {
-            "level": "rozsirenie",
-            "text": "Stenu 6 m × 2,5 m treba natrieť, okno 2 m × 1 m sa netrie. Jeden liter farby stačí na 5 m². Koľko celých litrov treba kúpiť?",
-            "answer": "S = 15 − 2 = 13 m²; 13 : 5 = 2,6 l → kúpime <strong>3 litre</strong>"
-          },
-          {
             "level": "bonus",
             "text": "Štvorec a obdĺžnik majú rovnaký obvod 40 cm. Obdĺžnik má jednu stranu 14 cm. Ktorý útvar má väčší obsah a o koľko?",
             "answer": "Štvorec: a = 10 cm, S = 100 cm². Obdĺžnik: druhá strana 20 − 14 = 6 cm, S = 84 cm².<br>Väčší obsah má štvorec, o <strong>16 cm²</strong>."
@@ -394,21 +295,8 @@ MathPlatform.registerModule({
             "level": "bonus",
             "text": "Jedna strana obdĺžnika je o 3 cm dlhšia ako druhá a obvod je 34 cm. Vypočítaj jeho obsah.",
             "answer": "a + b = 17 a a = b + 3, teda 2b + 3 = 17, b = 7 cm, a = 10 cm<br>S = 10 · 7 = <strong>70 cm²</strong>"
-          },
-          {
-            "level": "bonus",
-            "text": "Štvorcová záhrada má stranu 12 m. Pozdĺž celého jej okraja vnútri vedie cestička široká 1 m. Aký obsah má cestička?",
-            "answer": "Zostávajúca záhrada je štvorec 10 m × 10 m = 100 m²<br>Cestička: 144 − 100 = <strong>44 m²</strong>"
           }
         ]
-      },
-      {
-        "id": "arg",
-        "type": "selfWrite",
-        "phase": "VYSVETLI",
-        "title": "Obvod a obsah po vyrezaní rohu",
-        "prompt": "Z obdĺžnika vyrežeme v rohu menší obdĺžnik. Vysvetli vlastnými slovami, prečo sa obsah zmenší, ale obvod zostane rovnaký.",
-        "model": "Vzor: Obsah sa zmenší o plochu vyrezaného rohu. Obvod ostane rovnaký, lebo dve nové strany vyrezaného rohu majú dokopy rovnakú dĺžku ako dve pôvodné strany, ktoré sme odstránili."
       },
       {
         "id": "reflection",

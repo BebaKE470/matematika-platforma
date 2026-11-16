@@ -5,7 +5,6 @@ MathPlatform.registerModule({
     "prerequisites": [
       "definícia kosodĺžnika a ďalších štvoruholníkov (hodina 25)",
       "obvod a obsah obdĺžnika a kosoštvorca (hodiny 27, 31)",
-      "sínus ostrého uhla v pravouhlom trojuholníku (2. ročník) a sin 30° = ½, sin 90° = 1",
       "úpravy vzorca (vyjadrenie neznámej zo súčinu)"
     ],
     "planContent": [
@@ -16,10 +15,10 @@ MathPlatform.registerModule({
       "Poznať a vedieť použiť vzťahy pre výpočet obvodov a obsahov základných rovinných útvarov."
     ],
     "goals": [
+      "Modul je zameraný na obsah písomky (vzorce, vlastnosti útvarov, viackrokové výpočty s Pytagorovou vetou, slovná úloha s jednotkami); digitálna časť je skrátená na približne 20–25 minút.",
       "opísať vlastnosti kosodĺžnika a odlíšiť ho od obdĺžnika (uhly, uhlopriečky, výška)",
       "vypočítať obvod o = 2(a + b)",
-      "odvodiť a použiť obsah S = a·vₐ = b·v_b; vysvetliť, prečo nie S = a·b",
-      "použiť S = a·b·sin α, ak je zadaný uhol medzi stranami"
+      "odvodiť a použiť obsah S = a·vₐ = b·v_b; vysvetliť, prečo nie S = a·b"
     ],
     "competencies": [
       "prepájať obrázok (výška, uhol) so vzorcom a so slovným zadaním",
@@ -28,15 +27,16 @@ MathPlatform.registerModule({
       "zvoliť vzorec podľa zadaných údajov a uviesť správne jednotky"
     ],
     "enrichment": [
+      "Obsah cez sínus S = a·b·sin α sa v skrátenom module nepoužíva (nie je v písomke); možno ho zaradiť ako obohatenie.",
       "Dve výšky toho istého kosodĺžnika: dlhšej strane prislúcha kratšia výška (súčin je stály).",
       "Návrh maturitného štandardu je použitý iba ako obohatenie: modelovanie, presný matematický jazyk a argumentácia („prečo nie S = a·b“)."
     ],
     "flow": [
-      "0–5 min opakovanie: kosoštvorec, definícia kosodĺžnika, výška",
-      "5–12 min vlastnosti kosodĺžnika z obrázka a triedenie tvrdení (aplikácia)",
-      "12–24 min aplikácia: S = a·vₐ, dve výšky, obvod, S = a·b·sin α s okamžitou spätnou väzbou",
-      "24–35 min zápis do zošita: samostatná úloha a = 15 cm, b = 9 cm, vₐ = 6 cm (bez mobilu)",
-      "35–45 min zbierka podľa úrovní a spoločná syntéza: kosodĺžnik vs. obdĺžnik"
+      "0–3 min: úvod a zhrnutie vlastností a vzorcov (explain)",
+      "3–10 min: triedenie tvrdení a priradenie vzorca (zameranie na písomku)",
+      "10–18 min: obsah, obvod, dve výšky; porovnanie kosodĺžnika a obdĺžnika; nájdi chybu",
+      "18–30 min: samostatná úloha na papieri (bez mobilu)",
+      "zbierka podľa úrovní ako domáca úloha alebo na ďalšiu hodinu"
     ],
     "diagnostics": [
       "Žiak násobí dve susedné strany (S = a·b) namiesto strany a výšky.",
@@ -45,7 +45,7 @@ MathPlatform.registerModule({
       "Chyba pri vyjadrení výšky: delí obsah nesprávnou stranou alebo násobí."
     ],
     "partialUse": [
-      "Na krátku hodinu stačí časť do „dve strany, dve výšky“ a úlohy Nájdi chybu; vzorec so sínusom je voliteľný.",
+      "Na krátku hodinu stačí zhrnutie, triedenie tvrdení a priradenie vzorca; zbierka ide ako domáca úloha.",
       "Zbierka je trojúrovňová; podľa triedy sa môže použiť iba základ alebo iba bonus."
     ]
   },
@@ -56,29 +56,21 @@ MathPlatform.registerModule({
     "estimatedTime": "28–35 min",
     "activities": [
       {
-        "id": "recap",
-        "type": "explain",
-        "phase": "OPAKUJ",
-        "title": "Čo už vieme",
-        "html": "<p>Z hodín 26–31 poznáš obvod a obsah štvorca, obdĺžnika, lichobežníka a kosoštvorca. Pri kosoštvorci si videla/videl, že na obsah nestačí len strana — potrebujeme aj <strong>výšku</strong> (alebo uhlopriečky). Dnes sa to isté ukáže pri všeobecnejšom útvare.</p><p><span class=\"hl\">Kosodĺžnik</span> je štvoruholník, ktorý má <strong>protiľahlé strany rovnobežné</strong>. Má dve rôzne dlhé susedné strany a, b a uhly, ktoré nemusia byť pravé. Obdĺžnik, štvorec aj kosoštvorec sú jeho zvláštne prípady.</p>"
-      },
-      {
         "id": "topic-intro",
         "type": "intro",
         "goals": [
-          "opísať vlastnosti kosodĺžnika a odlíšiť ho od obdĺžnika",
-          "vypočítať obvod o = 2(a + b)",
-          "vypočítať obsah S = a·vₐ = b·v_b a pochopiť, prečo nie je S = a·b",
-          "použiť S = a·b·sin α, ak poznáme uhol"
+          "vlastnosti kosodĺžnika (odlíšenie od obdĺžnika)",
+          "obvod o = 2(a + b) a obsah S = a·vₐ = b·v_b",
+          "chýbajúca výška alebo strana z obsahu"
         ]
       },
       {
-        "id": "observe",
-        "type": "info",
-        "phase": "NAJPRV OBRÁZOK",
-        "title": "Kosodĺžnik, jeho strany a výška",
-        "html": "<p>Kosodĺžnik ABCD má strany a = AB a b = BC. Z vrcholu D sme spustili <strong>výšku vₐ</strong> na stranu a — je to úsečka DP kolmá na AB.</p><div class=\"logic-visual\"><svg viewBox=\"0 0 520 300\" role=\"img\" aria-label=\"Kosodĺžnik ABCD so stranami a a b, uhlom α pri vrchole A a výškou va na stranu a\"><polygon points=\"90,260 340,260 440,90 190,90\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\" /><line x1=\"190\" y1=\"90\" x2=\"190\" y2=\"260\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/><polyline points=\"204,260 204,246 190,246\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"74\" y=\"268\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >A</text><text x=\"356\" y=\"268\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >B</text><text x=\"456\" y=\"88\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >C</text><text x=\"184\" y=\"78\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >D</text><text x=\"190\" y=\"284\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >P</text><text x=\"255\" y=\"290\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">a</text><text x=\"410\" y=\"183\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">b</text><text x=\"202\" y=\"182\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">v<tspan font-size=\"14\" dy=\"5\">a</tspan></text><text x=\"142\" y=\"252\" font-size=\"20\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" >α</text></svg></div><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Strany</div><p class=\"term-rule\">Protiľahlé strany sú rovnobežné a rovnako dlhé: AB = CD = a, BC = DA = b.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Uhly</div><p class=\"term-rule\">Protiľahlé uhly sú rovnaké a susedné uhly majú súčet 180° (pri vrchole A je α, pri B je 180° − α).</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Uhlopriečky</div><p class=\"term-rule\">Navzájom sa polia, ale sú <span class=\"hl\">rôzne dlhé</span> a vo všeobecnosti nie sú kolmé.</p></div><div class=\"term-item no-symbol\"><div class=\"term-name\">Výška</div><p class=\"term-rule\">Kolmá vzdialenosť dvoch rovnobežných strán. Nie je to bočná strana — výška je <span class=\"hl\">kratšia</span> než šikmá strana medzi rovnobežkami (vₐ &lt; b); rovnaká je len pri obdĺžniku.</p></div></div>",
-        "remember": "Výška kosodĺžnika je kolmá na rovnobežné strany. Bočná strana b nie je výška."
+        "id": "ex-summary",
+        "type": "explain",
+        "phase": "POUČKA",
+        "title": "Kosodĺžnik: vlastnosti a vzorce",
+        "html": "<p><span class=\"hl\">Kosodĺžnik</span> má protiľahlé strany rovnobežné a rovnako dlhé (a, b). Obdĺžnik, štvorec aj kosoštvorec sú jeho zvláštne prípady.</p><div class=\"logic-visual\"><svg viewBox=\"0 0 520 300\" role=\"img\" aria-label=\"Kosodĺžnik ABCD so stranami a a b, uhlom α pri vrchole A a výškou va na stranu a\"><polygon points=\"90,260 340,260 440,90 190,90\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\" /><line x1=\"190\" y1=\"90\" x2=\"190\" y2=\"260\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/><polyline points=\"204,260 204,246 190,246\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"74\" y=\"268\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >A</text><text x=\"356\" y=\"268\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >B</text><text x=\"456\" y=\"88\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >C</text><text x=\"184\" y=\"78\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >D</text><text x=\"190\" y=\"284\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >P</text><text x=\"255\" y=\"290\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">a</text><text x=\"410\" y=\"183\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">b</text><text x=\"202\" y=\"182\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">v<tspan font-size=\"14\" dy=\"5\">a</tspan></text><text x=\"142\" y=\"252\" font-size=\"20\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" >α</text></svg></div><div class=\"term-list\"><div class=\"term-item no-symbol\"><div class=\"term-name\">Uhly a uhlopriečky</div><p class=\"term-rule\">Protiľahlé uhly sú rovnaké, susedné majú súčet 180°. Uhlopriečky sa navzájom polia, ale nie sú rovnako dlhé ani kolmé (to platí až pri obdĺžniku, resp. kosoštvorci).</p></div></div><div class=\"formula\">o = 2·(a + b) &nbsp;&nbsp; S = a · vₐ = b · v_b<span class=\"formula-note\">vₐ je výška na stranu a, v_b výška na stranu b. Do obsahu patrí výška, nie druhá strana.</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Kosodĺžnik: a = 12 cm, b = 15 cm, vₐ = 5 cm.</p><p>o = 2·(12 + 15) = <strong>54 cm</strong>; S = 12·5 = <strong>60 cm²</strong></p><p>Výška na stranu b: v_b = S : b = 60 : 15 = <strong>4 cm</strong></p></div><div class=\"warning\"><strong>Pozor:</strong> Šikmá strana b je dlhšia než výška, preto S = a·b platí len pri obdĺžniku. Dlhšej strane prislúcha kratšia výška.</div>",
+        "remember": "Obvod: 2(a + b). Obsah: strana × výška na túto stranu."
       },
       {
         "id": "sort-props",
@@ -130,30 +122,6 @@ MathPlatform.registerModule({
         ]
       },
       {
-        "id": "ex-cut",
-        "type": "explain",
-        "phase": "NOVÝ POJEM",
-        "title": "Prečo S = a · vₐ",
-        "html": "<p>Z kosodĺžnika vieme urobiť obdĺžnik: <strong>odrežeme</strong> pravouhlý trojuholník APD naľavo a <strong>pripojíme</strong> ho napravo. Obsah sa tým nezmení, lebo sme nič nepridali ani neubrali — len sme presunuli kus plochy.</p><div class=\"logic-visual\"><svg viewBox=\"0 0 540 310\" role=\"img\" aria-label=\"Odrezaním pravouhlého trojuholníka naľavo a jeho pripojením napravo vznikne z kosodĺžnika obdĺžnik so stranami a a va\"><polygon points=\"90,260 190,260 190,90\" fill=\"currentColor\" fill-opacity=\"0.2\" stroke=\"none\"/><polygon points=\"340,260 440,260 440,90\" fill=\"currentColor\" fill-opacity=\"0.2\" stroke=\"none\"/><polygon points=\"190,90 440,90 440,260 190,260\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"8 6\"/><polygon points=\"90,260 340,260 440,90 190,90\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\" /><line x1=\"190\" y1=\"90\" x2=\"190\" y2=\"260\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/><line x1=\"440\" y1=\"90\" x2=\"440\" y2=\"260\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/><polyline points=\"204,260 204,246 190,246\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><polyline points=\"426,260 426,246 440,246\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"74\" y=\"268\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >A</text><text x=\"356\" y=\"268\" font-size=\"20\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" >B</text><text x=\"456\" y=\"88\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >C</text><text x=\"184\" y=\"78\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >D</text><text x=\"265\" y=\"190\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\" font-weight=\"600\" font-family=\"system-ui\" font-style=\"italic\">v<tspan font-size=\"14\" dy=\"5\">a</tspan></text><text x=\"315\" y=\"78\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">a</text><text x=\"110\" y=\"190\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >①</text><text x=\"412\" y=\"190\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >①</text><text x=\"265\" y=\"290\" font-size=\"17\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\">trojuholník ① presunieme zľava doprava → obdĺžnik a × v<tspan font-size=\"12\" dy=\"4\">a</tspan></text></svg></div><p>Z obdĺžnika vidíme: jeho strany sú a (základňa) a vₐ (výška). Preto platí:</p><div class=\"formula\">S = a · vₐ<span class=\"formula-note\">strana krát výška na túto stranu; obsah v cm²</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Kosodĺžnik má stranu a = 12 cm a výšku na ňu vₐ = 5 cm.</p><p>S = a·vₐ = 12·5 = <strong>60 cm²</strong></p></div><div class=\"warning\"><strong>Pozor:</strong> Dosadzuješ <span class=\"hl\">výšku</span>, nie druhú stranu b. Pri obdĺžniku sú strana b aj výška rovnaké, pri kosodĺžniku nie.</div>",
-        "remember": "Obsah kosodĺžnika = strana × výška na túto stranu."
-      },
-      {
-        "id": "ex-two",
-        "type": "explain",
-        "phase": "NOVÝ POJEM",
-        "title": "Dve strany, dve výšky, ten istý obsah",
-        "html": "<p>Kosodĺžnik má dve rôzne dlhé strany, a preto aj dve výšky: <strong>vₐ</strong> patrí k strane a a <strong>v_b</strong> k strane b. Obsah je ten istý, nech ho počítame ktorýmkoľvek spôsobom.</p><div class=\"logic-visual\"><svg viewBox=\"0 0 520 300\" role=\"img\" aria-label=\"Kosodĺžnik ABCD s dvoma výškami z vrcholu D: va na stranu a a vb na stranu b\"><polygon points=\"80,255 310,255 420,95 190,95\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\" /><line x1=\"190\" y1=\"95\" x2=\"190\" y2=\"255\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/><line x1=\"190\" y1=\"95\" x2=\"346.2\" y2=\"202.4\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/><polyline points=\"203,255 203,242 190,242\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><polyline points=\"335.5,195 328.1,205.7 338.8,213.1\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"64\" y=\"263\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >A</text><text x=\"314\" y=\"283\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >B</text><text x=\"436\" y=\"93\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >C</text><text x=\"184\" y=\"83\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >D</text><text x=\"165\" y=\"285\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">a</text><text x=\"387\" y=\"197\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">b</text><text x=\"200\" y=\"190\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">v<tspan font-size=\"14\" dy=\"5\">a</tspan></text><text x=\"254.1\" y=\"144.7\" font-size=\"22\" text-anchor=\"end\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">v<tspan font-size=\"14\" dy=\"5\">b</tspan></text></svg></div><div class=\"formula\">S = a · vₐ = b · v_b</div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Kosodĺžnik: a = 12 cm, b = 15 cm, vₐ = 5 cm.</p><p>S = a·vₐ = 12·5 = <strong>60 cm²</strong></p><p>Výška na stranu b: S = b·v_b, teda v_b = S : b = 60 : 15 = <strong>4 cm</strong></p><p>Skúška: b·v_b = 15·4 = 60 cm² ✔</p></div><p>Dlhšia strana má kratšiu výšku (15 cm → 4 cm, 12 cm → 5 cm), pretože súčin musí ostať 60 cm².</p>",
-        "remember": "Dlhšej strane prislúcha kratšia výška. Súčin strana·výška je vždy rovnaký — obsah."
-      },
-      {
-        "id": "ex-perim",
-        "type": "explain",
-        "phase": "NOVÝ POJEM",
-        "title": "Obvod kosodĺžnika",
-        "html": "<p>Obvod je súčet všetkých štyroch strán. Protiľahlé strany sú rovnaké, preto dve strany a a dve strany b:</p><div class=\"formula\">o = 2·(a + b)<span class=\"formula-note\">výška v obvode nefiguruje</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Kosodĺžnik: a = 12 cm, b = 15 cm, vₐ = 5 cm.</p><p>o = 2·(12 + 15) = 2·27 = <strong>54 cm</strong></p></div><div class=\"compare\"><div class=\"bad\"><span class=\"mini-label\">ČASTÁ CHYBA</span><p>o = 4a</p><p>Platí iba pre kosoštvorec — kosodĺžnik má dve rôzne strany.</p></div><div class=\"good\"><span class=\"mini-label\">SPRÁVNE</span><p>o = 2(a + b)</p><p>Platí pre každý kosodĺžnik, aj pre obdĺžnik.</p></div></div><div class=\"warning\"><strong>Pozor:</strong> Obvod a obsah nie sú prepojené: dva kosodĺžniky s rovnakým obvodom môžu mať rôzne obsahy a naopak.</div>",
-        "remember": "Obvod kosodĺžnika: o = 2(a + b). Obsah: S = a·vₐ."
-      },
-      {
         "id": "n-s1",
         "type": "numberInput",
         "phase": "PRECVIČ",
@@ -178,64 +146,6 @@ MathPlatform.registerModule({
         "success": "o = 2·(8 + 5) = 26 cm.",
         "hint": "Dve strany a a dve strany b.",
         "reveal": "Správne je 26: 2·(8 + 5) = 26 cm."
-      },
-      {
-        "id": "c-area",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "obsah kosodĺžnika",
-        "question": "Kosodĺžnik má strany a = 9 cm a b = 5 cm. Výška na stranu a je 4 cm. Aký je jeho obsah?",
-        "options": [
-          "45 cm²",
-          "20 cm²",
-          "18 cm²",
-          "36 cm²"
-        ],
-        "answer": 3,
-        "correct": "S = a·vₐ = 9·4 = 36 cm². Číslo 45 by bol súčin strán a·b (to je obdĺžnik), 20 vznikne, keď sa výška vynásobí nesprávnou stranou.",
-        "hint": "Výška 4 cm patrí k strane a, preto ju násobíme práve touto stranou."
-      },
-      {
-        "id": "c-formula",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "voľba vzorca",
-        "question": "Kosodĺžnik má strany a, b a výšku vₐ na stranu a. Ktorý vzorec dáva jeho obsah?",
-        "options": [
-          "S = a·b",
-          "S = a·vₐ",
-          "S = 2·(a + b)",
-          "S = a·b/2"
-        ],
-        "answer": 1,
-        "correct": "Obsah je strana krát príslušná výška. S = a·b je obdĺžnik a 2(a + b) je obvod.",
-        "hint": "Z obdĺžnika, ktorý vznikne presunutím trojuholníka, má strany a a vₐ."
-      },
-      {
-        "id": "n-vb1",
-        "type": "numberInput",
-        "phase": "PRECVIČ",
-        "skill": "obsah a výšky",
-        "title": "Výška na druhú stranu",
-        "prompt": "Kosodĺžnik má obsah 60 cm² a stranu b = 12 cm. Aká je výška v_b na stranu b v cm?",
-        "validate": "exact",
-        "answer": 5,
-        "success": "S = b·v_b, teda v_b = 60 : 12 = 5 cm.",
-        "hint": "Vzorec S = b·v_b prepíš na delenie.",
-        "reveal": "Správne je 5: v_b = 60 : 12 = 5 cm."
-      },
-      {
-        "id": "n-a1",
-        "type": "numberInput",
-        "phase": "PRECVIČ",
-        "skill": "obsah a výšky",
-        "title": "Strana z obsahu",
-        "prompt": "Kosodĺžnik má obsah 70 cm² a výšku vₐ = 7 cm. Aká dlhá je strana a v cm?",
-        "validate": "exact",
-        "answer": 10,
-        "success": "a = S : vₐ = 70 : 7 = 10 cm.",
-        "hint": "Obsah delíme výškou, nie opačne.",
-        "reveal": "Správne je 10: a = 70 : 7 = 10 cm."
       },
       {
         "id": "n-vb2",
@@ -267,56 +177,6 @@ MathPlatform.registerModule({
         "hint": "Aké údaje vstupujú do vzorca pre obsah?"
       },
       {
-        "id": "c-rect",
-        "type": "choice",
-        "phase": "OVER SI",
-        "skill": "rozdiel od obdĺžnika",
-        "question": "Obdĺžnik má strany 12 cm a 5 cm. Kosodĺžnik má strany 12 cm a 6 cm a výšku 5 cm na stranu 12 cm. Čo platí?",
-        "options": [
-          "Obsahy sú rovnaké, obvod kosodĺžnika je väčší.",
-          "Kosodĺžnik má väčší obsah aj väčší obvod.",
-          "Obsahy aj obvody sú rovnaké.",
-          "Obsahy sú rovnaké, obvod obdĺžnika je väčší."
-        ],
-        "answer": 0,
-        "correct": "Obsahy: 12·5 = 60 cm² oba. Obvody: obdĺžnik 2(12 + 5) = 34 cm, kosodĺžnik 2(12 + 6) = 36 cm. Šikmá strana je dlhšia ako výška.",
-        "hint": "Porovnaj obsahy (strana × výška) a obvody (súčet strán) zvlášť."
-      },
-      {
-        "id": "ex-sin",
-        "type": "explain",
-        "phase": "NOVÝ POJEM",
-        "title": "Obsah z dvoch strán a uhla",
-        "html": "<p>Niekedy výšku nepoznáme, ale poznáme stranu b a uhol α medzi stranami a, b. V pravouhlom trojuholníku APD je b prepona a vₐ je odvesna oproti uhlu α:</p><div class=\"logic-visual\"><svg viewBox=\"0 0 520 300\" role=\"img\" aria-label=\"Kosodĺžnik ABCD so stranami a a b, uhlom α pri vrchole A a výškou va na stranu a\"><polygon points=\"90,260 190,260 190,90\" fill=\"currentColor\" fill-opacity=\"0.16\" stroke=\"none\"/><polygon points=\"90,260 340,260 440,90 190,90\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linejoin=\"round\" /><line x1=\"190\" y1=\"90\" x2=\"190\" y2=\"260\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-dasharray=\"7 6\"/><polyline points=\"204,260 204,246 190,246\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><text x=\"74\" y=\"268\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >A</text><text x=\"356\" y=\"268\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >B</text><text x=\"456\" y=\"88\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >C</text><text x=\"184\" y=\"78\" font-size=\"20\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >D</text><text x=\"190\" y=\"284\" font-size=\"16\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" >P</text><text x=\"255\" y=\"290\" font-size=\"22\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">a</text><text x=\"410\" y=\"183\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">b</text><text x=\"202\" y=\"182\" font-size=\"22\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" font-style=\"italic\">v<tspan font-size=\"14\" dy=\"5\">a</tspan></text><text x=\"142\" y=\"252\" font-size=\"20\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"system-ui\" >α</text></svg></div><p>Z definície sínusu: sin α = vₐ / b, teda <span class=\"hl\">vₐ = b · sin α</span>. Dosadením do S = a·vₐ dostaneme:</p><div class=\"formula\">S = a · b · sin α<span class=\"formula-note\">α je uhol medzi stranami a a b</span></div><div class=\"example\"><span class=\"mini-label\">PRÍKLAD</span><p>Kosodĺžnik: a = 10 cm, b = 6 cm, α = 30° (sin 30° = ½).</p><p>vₐ = 6·½ = 3 cm</p><p>S = 10·3 = <strong>30 cm²</strong></p></div><p>Kontrola so známym: pri α = 90° je sin 90° = 1, takže S = a·b — obdĺžnik. Susedný uhol má 180° − α a rovnaký sínus (napr. sin 150° = sin 30° = ½), preto je obsah rovnaký, nech vezmeme ktorýkoľvek z dvoch uhlov.</p>",
-        "remember": "S = a·b·sin α. Pri α = 90° dostaneme obdĺžnik: S = a·b."
-      },
-      {
-        "id": "n-sin1",
-        "type": "numberInput",
-        "phase": "PRECVIČ",
-        "skill": "obsah cez sínus",
-        "title": "Obsah zo strán a uhla",
-        "prompt": "Kosodĺžnik má strany a = 10 cm a b = 6 cm, ktoré zvierajú uhol 30°. Použi sin 30° = ½. Aký je jeho obsah v cm²?",
-        "validate": "exact",
-        "answer": 30,
-        "success": "S = 10·6·½ = 30 cm².",
-        "hint": "S = a·b·sin α, kde sin 30° = 0,5.",
-        "reveal": "Správne je 30: 10·6 = 60, a polovica z toho je 30."
-      },
-      {
-        "id": "n-sin2",
-        "type": "numberInput",
-        "phase": "PRECVIČ",
-        "skill": "výška cez sínus",
-        "title": "Výška z uhla",
-        "prompt": "V kosodĺžniku má strana b = 8 cm a so stranou a zviera uhol 30°. Použi sin 30° = ½. Aká je výška vₐ v cm?",
-        "validate": "exact",
-        "answer": 4,
-        "success": "vₐ = b·sin α = 8·½ = 4 cm.",
-        "hint": "Výška je odvesna oproti uhlu α a b je prepona.",
-        "reveal": "Správne je 4: vₐ = 8·½ = 4 cm."
-      },
-      {
         "id": "m-formulas",
         "type": "matrix",
         "phase": "OVER SI",
@@ -326,32 +186,32 @@ MathPlatform.registerModule({
           "S = a·b",
           "S = a·vₐ",
           "S = e·f/2",
-          "S = a·b·sin α"
+          "o = 2(a + b)"
         ],
         "items": [
           {
-            "text": "obdĺžnik so stranami a, b",
+            "text": "obdĺžnik: obsah zo strán a, b",
             "answer": "S = a·b"
           },
           {
-            "text": "kosodĺžnik: strana a a výška na ňu",
+            "text": "kosodĺžnik: obsah zo strany a výšky na ňu",
             "answer": "S = a·vₐ"
           },
           {
-            "text": "kosoštvorec: obe uhlopriečky",
+            "text": "kosoštvorec: obsah z uhlopriečok",
             "answer": "S = e·f/2"
           },
           {
-            "text": "kosodĺžnik: strany a, b a uhol medzi nimi",
-            "answer": "S = a·b·sin α"
+            "text": "kosodĺžnik: obvod zo strán a, b",
+            "answer": "o = 2(a + b)"
           },
           {
-            "text": "kosoštvorec: strana a výška na ňu",
+            "text": "kosoštvorec: obsah zo strany a výšky na ňu",
             "answer": "S = a·vₐ"
           },
           {
-            "text": "štvorec: strana a (je to obdĺžnik s b = a)",
-            "answer": "S = a·b"
+            "text": "obdĺžnik: obvod zo strán a, b",
+            "answer": "o = 2(a + b)"
           }
         ]
       },
@@ -370,38 +230,6 @@ MathPlatform.registerModule({
         "answer": 0,
         "correct": "Pri kosodĺžniku nie je bočná strana výškou. Súčin a·b je obsah obdĺžnika s rovnakými stranami, nie kosodĺžnika.",
         "hint": "Ktorý z údajov je kolmý na stranu a?"
-      },
-      {
-        "id": "err2",
-        "type": "choice",
-        "phase": "NÁJDI CHYBU",
-        "skill": "chyby v obvode",
-        "question": "Žiak počítal obvod kosodĺžnika s a = 12 cm, b = 8 cm: o = 12 + 8 = 20 cm. Kde je chyba?",
-        "options": [
-          "Mal strany vynásobiť: 12·8 = 96 cm.",
-          "Obvod je súčet všetkých štyroch strán: 2·(12 + 8) = 40 cm.",
-          "Mal použiť vzorec o = 4a.",
-          "Žiadna chyba, obvod je 20 cm."
-        ],
-        "answer": 1,
-        "correct": "Kosodĺžnik má štyri strany: dve dlhé 12 cm a dve kratšie 8 cm.",
-        "hint": "Koľko strán má štvoruholník a koľko z nich si započítal?"
-      },
-      {
-        "id": "c-multi",
-        "type": "choice",
-        "phase": "PRENES",
-        "skill": "viackrokové úlohy",
-        "question": "Kosodĺžnik má obvod 36 cm, stranu a = 10 cm a výšku na ňu 6 cm. Aký je jeho obsah?",
-        "options": [
-          "48 cm²",
-          "80 cm²",
-          "30 cm²",
-          "60 cm²"
-        ],
-        "answer": 3,
-        "correct": "Druhú stranu (b = 8 cm z obvodu) pre obsah nepotrebujeme: S = a·vₐ = 10·6 = 60 cm². Údaj o obvode bol „navyše“.",
-        "hint": "Ktoré dva údaje vstupujú do vzorca pre obsah?"
       },
       {
         "id": "work",
@@ -425,11 +253,6 @@ MathPlatform.registerModule({
           },
           {
             "level": "zaklad",
-            "html": "Kosodĺžnik má strany a = 14 cm a b = 6 cm. Vypočítaj obvod.",
-            "answer": "o = 2·(14 + 6) = <strong>40 cm</strong>"
-          },
-          {
-            "level": "zaklad",
             "html": "Kosodĺžnik má a = 11 cm, b = 7 cm a vₐ = 5 cm. Vypočítaj obvod aj obsah.",
             "answer": "o = 2·(11 + 7) = <strong>36 cm</strong>; S = 11·5 = <strong>55 cm²</strong>"
           },
@@ -450,11 +273,6 @@ MathPlatform.registerModule({
           },
           {
             "level": "rozsirenie",
-            "html": "Kosodĺžnik má strany a = 14 cm a b = 10 cm, ktoré zvierajú uhol 30° (sin 30° = ½). Vypočítaj výšku vₐ a obsah.",
-            "answer": "vₐ = 10·½ = <strong>5 cm</strong>; S = 14·5 = <strong>70 cm²</strong>"
-          },
-          {
-            "level": "rozsirenie",
             "html": "Záhon tvaru kosodĺžnika má a = 6 m, b = 5 m, vₐ = 4 m. Koľko eur stojí osadenie 1 m² trávnika za 5 €? Koľko metrov oplotenia treba na celý obvod?",
             "answer": "S = 6·4 = 24 m²; cena 24·5 = <strong>120 €</strong>.<br>o = 2·(6 + 5) = <strong>22 m</strong>"
           },
@@ -464,36 +282,11 @@ MathPlatform.registerModule({
             "answer": "S = 10·4 = <strong>40 cm²</strong>; v_b = 40 : 8 = <strong>5 cm</strong>"
           },
           {
-            "level": "rozsirenie",
-            "html": "Kosodĺžnik má obsah 120 cm². Nájdi aspoň tri dvojice (strana, výška), ktoré by to mohli byť, v celých cm.",
-            "answer": "Súčin musí byť 120, napr. 12·10, 15·8, 20·6, 24·5, 30·4. Odpovedá každá dvojica s týmto súčinom."
-          },
-          {
-            "level": "bonus",
-            "html": "Kosodĺžnik má strany 12 cm a 8 cm a uhol 30° medzi nimi. Vypočítaj obsah. Ako sa zmení, ak by uhol bol 150°?",
-            "answer": "S = 12·8·½ = <strong>48 cm²</strong>. Pri 150°: sin 150° = sin 30° = ½, obsah sa <strong>nezmení</strong> (48 cm²) — ide o ten istý kosodĺžnik, uhol 150° je jeho susedný uhol."
-          },
-          {
             "level": "bonus",
             "html": "Obsah kosodĺžnika je 96 cm², výšky sú vₐ = 6 cm a v_b = 8 cm. Vypočítaj obvod.",
             "answer": "a = 96 : 6 = 16 cm; b = 96 : 8 = 12 cm; o = 2·(16 + 12) = <strong>56 cm</strong>"
-          },
-          {
-            "level": "bonus",
-            "html": "Kosodĺžnik má strany 10 cm a 6 cm. Aký bude obsah pri uhle 30°, pri 90° a pri 150°? Pri ktorom uhle je obsah najväčší?",
-            "answer": "30°: 10·6·½ = <strong>30 cm²</strong>; 90°: 10·6·1 = <strong>60 cm²</strong>; 150°: <strong>30 cm²</strong>. Najväčší je pri 90° (obdĺžnik)."
           }
         ]
-      },
-      {
-        "id": "arg",
-        "type": "selfWrite",
-        "phase": "VYSVETLI",
-        "skill": "matematická komunikácia",
-        "title": "Prečo nie S = a · b",
-        "prompt": "Vlastnými slovami vysvetli, prečo sa obsah kosodĺžnika nerovná súčinu jeho dvoch susedných strán. Pomôž si obrázkom alebo príkladom s číslami.",
-        "model": "<strong>MOŽNÁ FORMULÁCIA:</strong> Kosodĺžnik sa dá premeniť na obdĺžnik so stranami a a vₐ (odrežem trojuholník a presuniem ho), nie a a b. Šikmá strana b je dlhšia ako výška vₐ, preto by súčin a·b bol väčší než skutočný obsah. Napríklad pre a = 12 cm, b = 15 cm a vₐ = 5 cm je skutočný obsah 60 cm², nie 180 cm².",
-        "placeholder": "Obsah nie je a·b, pretože..."
       },
       {
         "id": "reflection",
