@@ -99,3 +99,6 @@
 .exam-mark-filter .selected, .exam-mark.selected { background: var(--soft); border-color: var(--ink); font-weight: 700; }
 .exam-mark-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin-bottom: 10px; }
 .exam-note { flex: 1 1 220px; min-width: 0; }
+.an-wrap { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 10px; }
+.an-wrap > summary { cursor: pointer; }
+.an-wrap h3 { margin: 14px 0 4px; }

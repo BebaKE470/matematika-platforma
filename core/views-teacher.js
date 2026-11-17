@@ -240,6 +240,63 @@
       }).join('');
   }
 
+  // Spoločný výpočet pre analýzu na obrazovke aj v CSV: pre každú bodovanú
+  // aktivitu počet odpovedí, úspešnosť v % (priemer bodov z maxima) a počet
+  // zvládnutých na prvý pokus; pre reflexiu počty 🟢🟡🔴 po zručnostiach.
+  function liveAnalysisStats(activities, students, included) {
+    const arr = Object.values(students).filter(Boolean);
+    const rows = [];
+    activities.forEach((a, i) => {
+      if (a.type === 'reflection' || (included && !included.has(i))) return;
+      const max = MathScore.maxPoints(a);
+      if (!max) return;
+      const got = arr.map(x => (x.answers || []).find(r => r.id === a.id)).filter(Boolean);
+      const pct = got.length ? Math.round(100 * got.reduce((sum, g) => sum + (g.points || 0), 0) / (max * got.length)) : null;
+      rows.push({ a, i, n: got.length, pct, firstTry: got.filter(g => g.correct && g.attempts <= 1).length });
+    });
+    const refl = activities.find(a => a.type === 'reflection');
+    const self = ((refl && Array.isArray(refl.skills)) ? refl.skills : []).map(sk => {
+      const c = { green: 0, yellow: 0, red: 0 };
+      arr.forEach(x => { const v = (x.self || {})[sk]; if (c[v] !== undefined) c[v]++; });
+      return { sk, c };
+    });
+    return { rows, self };
+  }
+
+  // Analýza triedy podľa úloh pre živú hodinu: z odpovedí, ktoré žiaci posielajú
+  // (answers: id, correct, attempts, points) sa pre každú bodovanú aktivitu
+  // spočíta úspešnosť (priemer získaných bodov z maxima), koľkí ju zvládli na
+  // prvý pokus a priemer pokusov. Sebahodnotenie sa spočíta po zručnostiach.
+  // Nič sa neukladá, všetko sa prepočíta z aktuálneho stavu `students`.
+  function liveAnalysisHtml(activities, students, included) {
+    const cls = pct => pct >= 75 ? 'good' : pct >= 50 ? 'mid' : 'low';
+    const bar = (pct, text) => `<span class="an-bar ${cls(pct)}"><span class="an-fill" style="width:${Math.max(0, Math.min(100, pct))}%"></span></span><span class="an-pct">${pct} %${text ? ' · ' + text : ''}</span>`;
+    const { rows, self } = liveAnalysisStats(activities, students, included);
+    if (!rows.length) return '<p class="muted">Táto hodina nemá bodované úlohy.</p>';
+    const answered = rows.filter(r => r.n);
+    const label = r => `${r.i + 1}. ${esc(r.a.title || r.a.skill || r.a.phase || r.a.id)}`;
+    const hard = answered.slice().sort((x, y) => x.pct - y.pct).slice(0, 2).filter(r => r.pct < 75).map(r => `${label(r)} (${r.pct} %)`);
+    const summary = answered.length
+      ? `<p class="an-summary">${hard.length ? `<strong>Najviac problémov:</strong> ${hard.join(', ')}.` : '<strong>Všetky úlohy zatiaľ trieda zvláda dobre</strong> (nad 75 %).'}</p>`
+      : '<p class="muted">Analýza sa zobrazí, keď žiaci odošlú prvé odpovede.</p>';
+    const lines = rows.map(r => {
+      if (!r.n) return `<div class="an-step"><span class="an-step-label">${label(r)}</span><span class="muted">zatiaľ bez odpovedí</span></div>`;
+      const tries = ['choice', 'numberInput'].includes(r.a.type) ? ` · na prvý pokus ${r.firstTry} z ${r.n}` : '';
+      return `<div class="an-step"><span class="an-step-label">${label(r)} <span class="tag">${esc(r.a.type)}</span></span>${bar(r.pct, `odpovedalo ${r.n}${tries}`)}</div>`;
+    }).join('');
+    let selfHtml = '';
+    if (self.length) {
+      const rl = self.map(({ sk, c }) => {
+        const tot = c.green + c.yellow + c.red;
+        if (!tot) return `<div class="an-step"><span class="an-step-label">${esc(sk)}</span><span class="muted">bez odpovedí</span></div>`;
+        const w = k => Math.round(100 * c[k] / tot);
+        return `<div class="an-step"><span class="an-step-label">${esc(sk)}</span><span class="an-stack" title="Sebahodnotenie"><span class="an-g" style="width:${w('green')}%"></span><span class="an-y" style="width:${w('yellow')}%"></span><span class="an-r" style="width:${w('red')}%"></span></span><span class="an-pct">🟢${c.green} 🟡${c.yellow} 🔴${c.red}</span></div>`;
+      }).join('');
+      selfHtml = `<h3>Sebahodnotenie triedy</h3><p class="muted small-note">Porovnaj s úspešnosťou vyššie: kde je rozdiel, tam si žiaci buď neveria, alebo svoje chyby nevidia.</p>${rl}`;
+    }
+    return summary + '<p class="muted small-note">Úspešnosť = priemer získaných bodov z maxima za žiakov, ktorí úlohu odoslali. U úloh bez automatickej kontroly (zbierka, vlastné slová) ide o účasť, nie o správnosť.</p>' + lines + selfHtml;
+  }
+
   function exportResultsCsv(m, code, grading, students, mod) {
     const arr = Object.values(students).sort((a, b) => String(a.nick || '').localeCompare(String(b.nick || ''), 'sk'));
     if (!arr.length) { alert('Zatiaľ nie sú žiadne výsledky na export.'); return; }
@@ -287,6 +344,23 @@
         ...answerIds.map(id => { const a = answerById.get(id); return a ? `${a.correct ? 'správne' : 'nesprávne'}; pokusy: ${a.attempts || 0}; body: ${a.points || 0}` : ''; }),
       ]);
     });
+
+    // Analýza triedy podľa úloh (rovnaké čísla ako panel na obrazovke).
+    const an = liveAnalysisStats(activities, students, null);
+    if (an.rows.length) {
+      rows.push([], ['Analýza triedy podľa úloh'], ['Úloha', 'Typ', 'Odpovedalo žiakov', 'Úspešnosť (%)', 'Na prvý pokus (choice, numberInput)']);
+      an.rows.forEach(r => rows.push([
+        `${r.i + 1}. ${r.a.title || r.a.skill || r.a.phase || r.a.id}`,
+        r.a.type,
+        r.n,
+        r.pct === null ? '' : r.pct,
+        ['choice', 'numberInput'].includes(r.a.type) ? r.firstTry : '',
+      ]));
+    }
+    if (an.self.some(x => x.c.green + x.c.yellow + x.c.red > 0)) {
+      rows.push([], ['Sebahodnotenie triedy'], ['Zručnosť', 'Zelená – rozumiem', 'Žltá – ešte si nie som istý/istá', 'Červená – potrebujem pomoc']);
+      an.self.forEach(({ sk, c }) => rows.push([sk, c.green, c.yellow, c.red]));
+    }
 
     const safe = window.MathUtil.asciiSlug(m.topic || 'vysledky', 50);
     const stamp = window.MathUtil.dateStamp();
@@ -399,6 +473,10 @@
         <p class="muted small-note">Hodí sa, keď chceš sledovať, či niekto neuviazol na úlohe, bez toho, aby ťa rozptyľovali priebežné výsledky. Týka sa iba tejto obrazovky – žiaci svoje body a percentá vidia bez ohľadu na toto nastavenie.</p>
         <div id="summary" class="muted">Zatiaľ bez výsledkov.</div>
         <div id="students" class="live-list"></div>
+        <details id="classAn" class="an-wrap spaced">
+          <summary><strong>Analýza triedy podľa úloh</strong></summary>
+          <div id="classAnBody"><p class="muted">Analýza sa zobrazí, keď žiaci odošlú prvé odpovede.</p></div>
+        </details>
       </div>
     `;
 
@@ -411,6 +489,13 @@
 
     let students = {};
     let handle = null;
+
+    function drawAnalysis() {
+      const body = $('#classAnBody');
+      if (!body || !activities.length) return;
+      const included = (!reflectOnly && selectedActs.size > 0 && selectedActs.size < activities.length) ? selectedActs : null;
+      body.innerHTML = liveAnalysisHtml(activities, students, included);
+    }
 
     const readGradingFromForm = () => ({
       enabled: $('#gradingEnabled').checked,
@@ -437,7 +522,7 @@
       else if (selectedActs.size === 0) info.textContent = 'Nie je vybraná žiadna aktivita — žiaci preto uvidia celý modul. Zaškrtni aspoň jednu.';
       else info.textContent = `Vybraných ${selectedActs.size} z ${activities.length} aktivít.`;
     }
-    function onActsChanged() { updateActsInfo(); redrawQr(); }
+    function onActsChanged() { updateActsInfo(); redrawQr(); drawAnalysis(); }
     updateActsInfo();
     $$('.actCheck').forEach(cb => {
       cb.onchange = () => {
@@ -486,6 +571,7 @@
         onStudent: msg => {
           students[msg.nick] = Object.assign({}, students[msg.nick], msg);
           drawStudents(students, grading, hideScores, reflectOnly);
+          drawAnalysis();
           // A newly-joined student doesn't yet know whether today's lesson is
           // graded, nor (if they typed the code by hand) which module/activity
           // subset this lesson actually is — let them know right away.
