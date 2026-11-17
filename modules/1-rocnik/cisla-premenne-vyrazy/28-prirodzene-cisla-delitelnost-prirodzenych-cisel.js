@@ -190,7 +190,7 @@ MathPlatform.registerModule({
         "type": "info",
         "phase": "SAMOSTATNÁ PRÁCA",
         "title": "Samostatná práca",
-        "html": "<p>Teraz pracuješ <strong>sám/sama</strong>. Čaká ťa niekoľko úloh, ktoré sa podobajú na úlohy z overovania vedomostí.</p><ol class=\"steps\"><li>Počítaj a zapisuj na papier.</li><li>Do aplikácie zapíš len výsledok, <strong>bez medzier</strong> (napr. 12345).</li><li>Učiteľ vidí, ako ti ide. Pracuj vlastným tempom.</li></ol><p>Pomôcka: pri 6, 12 a 15 vždy overuj obe podmienky.</p>",
+        "html": "<p>Teraz pracuješ <strong>sám/sama</strong>. Čaká ťa niekoľko úloh, ktoré sa podobajú na úlohy z overovania vedomostí.</p><ol class=\"steps\"><li>Počítaj a zapisuj na papier.</li><li>Do aplikácie zapíš len výsledok, <strong>bez medzier</strong> (napr. 12345).</li><li>Učiteľ vidí, ako ti to ide. Pracuj vlastným tempom.</li></ol><p>Pomôcka: pri 6, 12 a 15 vždy overuj obe podmienky.</p>",
         "continueLabel": "Začať"
       },
       {
@@ -247,6 +247,60 @@ MathPlatform.registerModule({
         "answer": 3,
         "correct": "L je pravdivý (3 a 4 sú nesúdeliteľné). M je pravdivý (kritérium pre 9). K je nepravdivý, napr. 4 je deliteľné 2 aj 4, ale nie 8. N je nepravdivý, napr. 6 je deliteľné 2 aj 6, ale nie 12.",
         "hint": "Pri každom výroku skús nájsť číslo, pre ktoré neplatí (kontrapríklad). Sú čísla vo výroku nesúdeliteľné?"
+      },
+      {
+        "id": "s-mixed",
+        "type": "sortChoice",
+        "phase": "SAMOSTATNÁ PRÁCA",
+        "skill": "kritériá 6, 12, 15",
+        "title": "Úloha 5 · Rôzne deliteľe",
+        "question": "Je číslo deliteľné uvedeným deliteľom? Pri každom riadku použi vhodné kritérium, nie delenie.",
+        "labels": [
+          "Je deliteľné",
+          "Nie je deliteľné"
+        ],
+        "items": [
+          {
+            "text": "4 612 je deliteľné 6",
+            "answer": false,
+            "why": "Číslo je párne, ale ciferný súčet 13 nie je deliteľný 3, preto nie je deliteľné 6."
+          },
+          {
+            "text": "1 890 je deliteľné 15",
+            "answer": true,
+            "why": "Končí 0 (deliteľné 5) a ciferný súčet 18 je deliteľný 3, preto je deliteľné 15."
+          },
+          {
+            "text": "5 274 je deliteľné 6",
+            "answer": true,
+            "why": "Číslo je párne a ciferný súčet 18 je deliteľný 3, preto je deliteľné 6."
+          },
+          {
+            "text": "2 715 je deliteľné 12",
+            "answer": false,
+            "why": "Ciferný súčet 15 je deliteľný 3, ale číslo je nepárne, takže 15 nie je deliteľné 4 a číslo nie je deliteľné 12."
+          },
+          {
+            "text": "3 648 je deliteľné 12",
+            "answer": true,
+            "why": "48 je deliteľné 4 a ciferný súčet 21 je deliteľný 3, preto je deliteľné 12."
+          },
+          {
+            "text": "7 420 je deliteľné 15",
+            "answer": false,
+            "why": "Končí 0 (deliteľné 5), ale ciferný súčet 13 nie je deliteľný 3, preto nie je deliteľné 15."
+          },
+          {
+            "text": "8 136 je deliteľné 15",
+            "answer": false,
+            "why": "Ciferný súčet 18 je deliteľný 3, ale číslo nekončí 0 ani 5, preto nie je deliteľné 5 a ani 15."
+          },
+          {
+            "text": "5 940 je deliteľné 15",
+            "answer": true,
+            "why": "Končí 0 (deliteľné 5) a ciferný súčet 18 je deliteľný 3, preto je deliteľné 15."
+          }
+        ]
       },
       {
         "id": "w-why",
