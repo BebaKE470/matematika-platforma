@@ -114,14 +114,29 @@ MathPlatform.registerModule({
         ],
         "items": [
           {
+            "text": "1 164",
+            "answer": true,
+            "why": "Ciferný súčet 12 je deliteľný 3 a 64 je deliteľné 4, preto je číslo deliteľné 12."
+          },
+          {
+            "text": "7 236",
+            "answer": true,
+            "why": "Ciferný súčet 18 je deliteľný 3 a 36 je deliteľné 4, preto je číslo deliteľné 12."
+          },
+          {
             "text": "5 214",
             "answer": false,
             "why": "Ciferný súčet 12 je deliteľný 3, ale 14 nie je deliteľné 4, preto číslo nie je deliteľné 12."
           },
           {
-            "text": "1 164",
+            "text": "8 436",
             "answer": true,
-            "why": "Ciferný súčet 12 je deliteľný 3 a 64 je deliteľné 4, preto je číslo deliteľné 12."
+            "why": "Ciferný súčet 21 je deliteľný 3 a 36 je deliteľné 4, preto je číslo deliteľné 12."
+          },
+          {
+            "text": "9 010",
+            "answer": false,
+            "why": "Ciferný súčet 10 nie je deliteľný 3 a ani 10 nie je deliteľné 4, takže číslo nie je deliteľné 12."
           },
           {
             "text": "6 128",
@@ -137,21 +152,6 @@ MathPlatform.registerModule({
             "text": "3 450",
             "answer": false,
             "why": "Ciferný súčet 12 je deliteľný 3, ale 50 nie je deliteľné 4, preto číslo nie je deliteľné 12."
-          },
-          {
-            "text": "7 236",
-            "answer": true,
-            "why": "Ciferný súčet 18 je deliteľný 3 a 36 je deliteľné 4, preto je číslo deliteľné 12."
-          },
-          {
-            "text": "9 010",
-            "answer": false,
-            "why": "Ciferný súčet 10 nie je deliteľný 3 a ani 10 nie je deliteľné 4, takže číslo nie je deliteľné 12."
-          },
-          {
-            "text": "8 436",
-            "answer": true,
-            "why": "Ciferný súčet 21 je deliteľný 3 a 36 je deliteľné 4, preto je číslo deliteľné 12."
           }
         ]
       },
